@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Functions</title>
+  </head>
+  <body>
+    <h1>Arrow Functions</h1>
+    <button onclick="addTwoNumbers(10, 2)">Calculate</button>
+    <script>
+      // write a function to add two numbers
+
+      // regular function
+      function addTwoNumbers(a, b) {
+        console.log(a + b);
+      }
+      // function expression
+      let sum = function (a, b) {
+        return a + b;
+      };
+
+      // arrow function
+      let addNumbers = (a, b) => a + b;
+
+      // write an arrow function to multiply 2 numbers
+      let multiply = (a, b) => a * b;
+
+      // write an arrow function to find the squareroot of a number
+      let sqrt = (a) => a ** 0.5;
+
+      console.log(sqrt(25));
+
+      // write a function print in console and return sum of two numbers
+
+      let sum1 = (a, b) => {
+        console.log(a + b);
+        return a + b;
+      };
+    </script>
+  </body>
+</html>

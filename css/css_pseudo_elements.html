@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Elements</title>
+    <style>
+      p {
+        color: green;
+      }
+      .para::before {
+        content: "\2728";
+        color: blue;
+      }
+      /* p::before {
+        content: "\20B9";
+        color: blue;
+      } */
+      ul {
+        list-style-type: none;
+      }
+      li::before {
+        content: "\1F3AF";
+        padding-right: 10px;
+      }
+
+      li::after {
+        content: "\1F44c";
+        padding-left: 10px;
+      }
+
+      .menu {
+        height: 3px;
+        width: 20px;
+        background-color: black;
+        border-radius: 5px;
+        position: relative;
+      }
+      .menu::before,
+      .menu::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        border-radius: 5px;
+      }
+      .menu::before {
+        width: 15px;
+        top: -5px;
+        background-color: blue;
+      }
+
+      .menu::after {
+        width: 25px;
+        top: 5px;
+        background-color: rgb(243, 52, 52);
+      }
+
+      .para1 {
+        color: blue !important;
+      }
+      .para1::first-letter {
+        font-size: 50px;
+        background-color: antiquewhite;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .para1::first-line {
+        padding: 5px;
+        border-radius: 5px;
+        color: brown;
+        background-color: antiquewhite;
+      }
+      .para1::selection {
+        background-color: yellow;
+      }
+      input::placeholder {
+        color: blue;
+        font-size: 10px;
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Elements</h1>
+    <div>
+      <label for="fn">First Name:</label>
+      <input id="fn" type="text" placeholder="Enter your first name" />
+    </div>
+    <p class="para">This is a para &midast;&nbsp;&midast;</p>
+    <p>1000</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+    <div class="menu"></div>
+    <p class="para1">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi
+      perspiciatis quis, cum, possimus asperiores tempora maiores ex iste
+      laboriosam magni quidem animi dignissimos. Officia tenetur obcaecati vero,
+      accusamus beatae sit?
+    </p>
+  </body>
+</html>

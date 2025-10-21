@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Switch case</h1>
+    <script>
+      // let day = Number(prompt("Enter number from 0 to 6"));
+
+      // switch (day) {
+      //   case 0:
+      //     console.log("sunday");
+      //     break;
+      //   case 1:
+      //     console.log("monday");
+      //     break;
+      //   case 2:
+      //     console.log("tuesday");
+      //     break;
+      //   case 3:
+      //     console.log("wednesday");
+      //     break;
+      //   case 4:
+      //     console.log("thursrday");
+      //     break;
+      //   case 5:
+      //     console.log("friday");
+      //     break;
+      //   case 6:
+      //     console.log("saturday");
+      //     break;
+      //   default:
+      //     console.log("Enter a number from 0 to 6");
+
+      //     break;
+      // }
+
+      let score = Number(prompt("enter score"));
+      switch (true) {
+        case score <= 100 && score > 90:
+          console.log("Grade A");
+          break;
+        case score <= 90 && score > 80:
+          console.log("Grade B");
+          break;
+        case score <= 80 && score > 70:
+          console.log("Grade C");
+          break;
+        case score <= 70 && score > 60:
+          console.log("Grade D");
+          break;
+        case score <= 60 && score > 40:
+          console.log("Grade E");
+          break;
+        case score <= 40 && score > 0:
+          console.log("Grade F");
+          break;
+        default:
+          console.log("invalid score");
+      }
+    </script>
+  </body>
+</html>

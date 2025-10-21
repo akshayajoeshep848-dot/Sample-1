@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Array iteration methods</title>
+  </head>
+  <body>
+    <h1>JS Array Iteration Methods</h1>
+    <p>
+      forEach(), map(), filter(), reduce(), some(), every(), find(), and
+      findIndex()
+    </p>
+
+    <h2>Foreach()</h2>
+    <p>array.forEach(callback)</p>
+
+    <script>
+      let array = [1, 2, 3, 4, 5];
+      let arr1 = [1, 2];
+      let arr2 = [3, 4];
+
+      //   let arr3 = arr1.concat(arr2);
+      //   console.log(arr3);
+      //   console.log(array);
+      //   array.forEach((num, index, arr) => {
+      //     console.log(`the element at index: ${index} is ${num}`);
+      //     arr[index] = num * num;
+      //   });
+
+      array.forEach((num) => console.log(num));
+      //   array.forEach((num) => console.log(num * 2));
+      //   array.forEach((num) => console.log(num * num));
+
+      //   array.forEach((value, index, array) => {
+      //     array[index] = array[index] * 2;
+      //     array[index] = array[index] ** 2;
+      //   });
+
+      let newArray = array.map((num) => num * 2);
+      //   console.log(newArray);
+
+      //   console.log(array);
+
+      let nestedArray = [[1, 2], [3, 4], [5]];
+
+      let flatArray = nestedArray.reduce((iv, cv) => iv.concat(cv), []);
+      console.log(flatArray);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS MediaQuery</title>
+    <style>
+      h1 {
+        font-size: 50px;
+      }
+      @media (width >= 500px) {
+        h1 {
+          font-size: 24px;
+        }
+      }
+
+      @media screen and (min-width: 500px) and (max-width: 1000px) {
+        h1 {
+          background-color: rgb(23, 243, 89);
+          font-size: 35px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS MediaQuery</h1>
+  </body>
+</html>

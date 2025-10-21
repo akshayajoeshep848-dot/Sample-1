@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Classes Inheritance</title>
+  </head>
+  <body>
+    <script>
+      class Pet {
+        constructor(petType, name) {
+          this.petType = petType;
+          this.name = name;
+        }
+
+        eat() {
+          console.log(`${this.name} is eating`);
+        }
+      }
+
+      class Dog extends Pet {
+        constructor(petType, name, breed) {
+          super(petType, name);
+          this.breed = breed;
+        }
+      }
+
+      let dog1 = new Dog("Dog", "Chimtu", "Oorakukka");
+
+      console.log(dog1.petType);
+      console.log(dog1.name);
+      console.log(dog1.breed);
+
+      dog1.eat();
+    </script>
+  </body>
+</html>

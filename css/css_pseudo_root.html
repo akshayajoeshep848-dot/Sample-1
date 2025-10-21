@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --primary-color: rgb(229, 68, 68);
+        --border-radius: 10px;
+        --padding: 20px;
+        --box-shadow: 5px 5px 5px 5px lightgray;
+      }
+      /* p {
+        color: var(--primary-color);
+      } */
+      h1:hover {
+        background-color: var(--primary-color);
+        color: black;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+      h1 {
+        color: var(--primary-color);
+        /* background-color: transparent; */
+      }
+      /* li:nth-child(2n + 1) {
+        color: var(--primary-color);
+      }
+
+      li:nth-last-child(-n + 3) {
+        color: black;
+      } */
+      p:nth-of-type(2n) {
+        color: var(--primary-color);
+      }
+      li:first-child {
+        background-color: var(--primary-color);
+      }
+      .para:empty {
+        background-color: rgb(31, 153, 254);
+        height: 50px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="para"></p>
+    <h2>Mixed List</h2>
+    <ul>
+      <li>Item 1</li>
+      <p>Para 1</p>
+      <li>Item 2</li>
+      <p>Para 2</p>
+      <li>Item 3</li>
+      <p>Para 3</p>
+      <li>Item 4</li>
+      <p>Para 4</p>
+      <li>Item 5</li>
+      <p>Para 5</p>
+    </ul>
+    <h2>Unordered List</h2>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+      <li>Item 11</li>
+    </ul>
+  </body>
+</html>

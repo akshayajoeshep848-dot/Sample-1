@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // grade A - 100 - 90
+      // grade B - 90 - 80
+      // grade C - 80 - 70
+      // grade D - 70 - 60
+      // grade E - 60 - 40
+      // grade F - 40 - 0
+
+      // 0 - Sunday
+      // 1 - Monday
+      // 2 - Tuesday
+      // 3 - Wednesday
+      // 4 - Thursday
+      // 5 - Friday
+      // 6- Saturday
+
+      let dayNumber = Number(prompt("enter number between 0 and 6"));
+      switch (dayNumber) {
+        case 0:
+          console.log("Sunday");
+          break;
+        case 1:
+          console.log("Monday");
+          break;
+        case 2:
+          console.log("Tuesday");
+          break;
+        case 3:
+          console.log("Wednesday");
+          break;
+        case 4:
+          console.log("Thursday");
+          break;
+        case 5:
+          console.log("Friday");
+          break;
+        case 6:
+          console.log("Saturday");
+          break;
+        default:
+          console.log("Enter a value from 0 to 6");
+          dayNumber = prompt("enter number between 0 and 6");
+      }
+
+      // Temperature conditions
+      // -40 to 0 -> Weather is too cold, don't go outside
+      // 0 - 10 -> weather is cold, wear warm clothes while going outside
+      // 10 - 20 -> Weather is some what cool, wear a sweater while going out
+      // 20 - 30 -> Weather is awesome today, enjoy outdoors
+      // 30 40 -> wheather is little bit hot, be cautious and drink water
+      // 40 - 50 -> Wheater is very hot, avoid going outside
+      // 50 and above. -> Dig a hole underground and hide
+      // cuz you will be paper roast outside
+    </script>
+  </body>
+</html>

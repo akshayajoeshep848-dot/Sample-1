@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors 2</title>
+    <style>
+        /* child selector */
+        div > p {
+            color: blue;
+        }
+        
+        /* descendant selector */
+
+      .layer1 li {
+        background-color: bisque;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .layer2 li {
+        background-color: blueviolet;
+      }
+
+    /* general sibling */
+      /* h1 ~ p {
+        color: green;
+      } */
+
+    /* adjacent sibling */
+      h1 + p {
+        color: red;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    
+
+    <div>
+        <p>para 1</p>
+        <h1>Heading 1</h1>
+        <p>para 1</p>
+        <h2>Heading 2</h2>
+      <p>para 2</p>
+      <p>para 3</p>
+      <section>
+        <p>Para - 1</p>
+        <p>Para - 2</p>
+        <p>Para - 3</p>
+        <p>Para - 4</p>
+      </section>
+    </div>
+    <p>para 1
+        <ul class="layer1">
+            <li>Sub para 1</li>
+            <li>Sub para 2</li>
+            <li>Sub para 3</li>
+        </ul>
+    </p>
+    <p>para 2</p>
+    <p>para 3</p>
+    <p>para 4</p>
+    <p>para 5</p>
+    <p>para 6</p>
+    <p>para 7</p>
+    <p>para 8</p>
+    <p>para 9</p>
+    <p>para 10</p>
+
+    <ul class="layer1">
+      <li>
+        Item 1
+        <ul class="layer2">
+          <li>sub item 1</li>
+          <li>sub item 2</li>
+          <li>sub item 3</li>
+        </ul>
+      </li>
+      <li>
+        Item 2
+        <ul class="layer2">
+          <li>sub item 1</li>
+          <li>sub item 2</li>
+          <li>sub item 3</li>
+        </ul>
+      </li>
+      <li>
+        Item 3
+        <ol>
+          <li>sub item 1</li>
+          <li>sub item 2</li>
+          <li>sub item 3</li>
+          <li>sub item 4</li>
+          <li>sub item 5</li>
+        </ol>
+      </li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+    </ul>
+  </body>
+</html>

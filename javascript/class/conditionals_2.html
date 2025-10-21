@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPSC Age validation</title>
+  </head>
+  <body>
+    <h1>UPSC Age validation</h1>
+    <script>
+      // check if UG or PG
+      // check year 4 or 2
+      // 1 year - 10%, 15%, 20%
+      // 2 year - 10%, 15%, 22%
+      // 3 year - 10%, 15%, 25%
+      // 4 year - 20%, 25%, 30%
+      // check if pass %
+      // 70-80 - 10%
+      // 80 - 90 - 15%
+      // 90 - 100 - 25%
+
+      // Example 1:
+      // Check if a person age > 18
+      // then check if they have license
+      // has licence -> print eligible to drive
+      // don't have license -> not eligible to drive(no license)
+      // age < 18 -> print -> not eligible to drive (too young)
+
+      let personAge = prompt("Enter your age");
+      let hasLicense = prompt(
+        "Enter 'Yes' if you have license, 'No' if you don't have license"
+      );
+
+      if (personAge >= 18 && personAge <= 70) {
+        if (hasLicense == "Yes") {
+          console.log("Eligible to drive");
+        } else if (hasLicense == "No") {
+          console.log("Not eligible to drive (no license)");
+        } else {
+          console.log("invalid input");
+        }
+      } else if (personAge >= 0 && personAge < 18) {
+        console.log("not eligible to drive (too young)");
+      } else if (personAge > 70 && personAge < 140) {
+        console.log("You are too old to drive");
+      } else if (personAge < 0) {
+        console.log("Enter a positive number for age");
+      } else {
+        console.log("Enter a valid age");
+      }
+
+      // ------------------------------------------------------------
+      // Example 2:
+      // student applying for UPSC exam
+      // Question 1: what category are you?
+      // Question 2: what is your age?
+
+      // conditions
+      // General - 21 to 32
+      // SC/ST - 21 to 37
+      // OBC - 21 to 35
+      // PD - 21 to 42
+      let category = prompt("Enter your category");
+      let age = prompt("Enter your age");
+      if (category == "General") {
+        console.log(`You are in ${category} category`);
+      } else if (category == "SC" || category == "ST") {
+        console.log(`You are in ${category} category`);
+        // age verification block
+        if (age < 0 || age > 140) {
+          console.log("Enter a valid age");
+        } else if (age >= 0 && age < 21) {
+          console.log("you are not eligible to write UPSC exam");
+        } else if (age >= 21 && age <= 37) {
+          console.log("You are eligible to write the exam");
+        } else {
+          console.log(
+            `You have exceeded your age limit for ${category} category`
+          );
+        }
+      } else if (category == "OBC") {
+        console.log(`You are in ${category} category`);
+        // age verification block
+        if (age < 0 || age > 140) {
+          console.log("Enter a valid age");
+        } else if (age >= 0 && age < 21) {
+          console.log("you are not eligible to write UPSC exam");
+        } else if (age >= 21 && age <= 35) {
+          console.log("You are eligible to write the exam");
+        } else {
+          console.log(
+            `You have exceeded your age limit for ${category} category`
+          );
+        }
+      } else if (category == "PD") {
+        console.log(`You are in ${category} category`);
+        // age verification block
+        if (age < 0 || age > 140) {
+          console.log("Enter a valid age");
+        } else if (age >= 0 && age < 21) {
+          console.log("you are not eligible to write UPSC exam");
+        } else if (age >= 21 && age <= 42) {
+          console.log("You are eligible to write the exam");
+        } else {
+          console.log(
+            `You have exceeded your age limit for ${category} category`
+          );
+        }
+      } else {
+        console.log("Please enter a valid category");
+      }
+    </script>
+  </body>
+</html>

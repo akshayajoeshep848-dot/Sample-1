@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --gap: 5px;
+      }
+      .main {
+        border: 1px solid blue;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+      }
+      .section {
+        display: flex;
+        gap: var(--gap);
+        padding: 3px;
+        border: 2px solid yellow;
+      }
+      .section-1 {
+        background-color: orange;
+        height: 10%;
+      }
+      .section-2 {
+        background-color: rgb(152, 154, 154);
+        height: 40%;
+      }
+      .section-3,
+      .section-4 {
+        background-color: blueviolet;
+        height: 25%;
+      }
+      .column-1 {
+        background-color: aqua;
+      }
+      .column-1,
+      .column-2 {
+        flex: 1;
+      }
+      .column-2 {
+        display: flex;
+        flex-direction: column;
+
+        background-color: burlywood;
+      }
+      .row-1,
+      .row-2 {
+        flex: 1;
+        background-color: azure;
+      }
+
+      .column1,
+      .column2,
+      .column3 {
+        flex: 1;
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="section section-1">Flex Container</div>
+      <div class="section section-2">
+        <div class="column-1">Flex Item 1</div>
+        <div class="column-2 section">
+          <div class="row-1">Flex Item 1</div>
+          <div class="row-2">Flex Item 2</div>
+        </div>
+      </div>
+      <div class="section section-3">
+        <div class="column1">Flex Item 1</div>
+        <div class="column2">Flex Item 2</div>
+      </div>
+      <div class="section section-4">
+        <div class="column1">Flex Item 1</div>
+        <div class="column2">Flex Item 2</div>
+        <div class="column3">Flex Item 3</div>
+      </div>
+    </div>
+  </body>
+</html>

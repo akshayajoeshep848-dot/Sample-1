@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .student {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: antiquewhite;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <script>
+      const students = [
+        {
+          id: 101,
+          firstName: "Alice",
+          lastName: "Johnson",
+          age: 20,
+          major: "Computer Science",
+        },
+        {
+          id: 102,
+          firstName: "Bob",
+          lastName: "Smith",
+          age: 22,
+          major: "Electrical Engineering",
+        },
+        {
+          id: 103,
+          firstName: "Charlie",
+          lastName: "Brown",
+          age: 19,
+          major: "Biology",
+        },
+        {
+          id: 104,
+          firstName: "Diana",
+          lastName: "Prince",
+          age: 21,
+          major: "Physics",
+        },
+        {
+          id: 105,
+          firstName: "Ethan",
+          lastName: "Hunt",
+          age: 20,
+          major: "Mathematics",
+        },
+      ];
+
+      let container = document.querySelector(".container");
+      students.forEach((student, index) => {
+        let parentDiv = document.createElement("div");
+
+        let firstName = document.createElement("div");
+        let lastName = document.createElement("div");
+        let age = document.createElement("div");
+        let major = document.createElement("div");
+
+        parentDiv.classList.add("student");
+        firstName.textContent = student.firstName;
+        lastName.textContent = student.lastName;
+        age.textContent = student.age;
+        major.textContent = student.major;
+        parentDiv.appendChild(lastName);
+        parentDiv.appendChild(firstName);
+        parentDiv.appendChild(age);
+        parentDiv.appendChild(major);
+        container.appendChild(parentDiv);
+      });
+    </script>
+  </body>
+</html>

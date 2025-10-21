@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Sticky Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Body & Layout Styles */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f7fafc; /* Equivalent to bg-gray-100 */
+        color: #2d3748; /* Equivalent to text-gray-800 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 1rem; /* Add some padding for smaller screens */
+        box-sizing: border-box;
+      }
+
+      /* Main content card */
+      .main-container {
+        background-color: #fff; /* bg-white */
+        border-radius: 0.75rem; /* rounded-xl */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+        padding: 1.5rem; /* p-6 */
+        width: 100%;
+        max-width: 42rem; /* max-w-2xl */
+      }
+
+      /* Responsive padding for the main container */
+      @media (min-width: 768px) {
+        .main-container {
+          padding: 2rem; /* md:p-8 */
+        }
+      }
+
+      /* Typography */
+
+      .subtitle {
+        text-align: center; /* text-center */
+        color: #718096; /* text-gray-600 */
+        margin-bottom: 1.5rem; /* mb-6 */
+      }
+
+      .content-section p:not(:last-child) {
+        margin-bottom: 1rem; /* mb-4 */
+      }
+
+      /* Scrollable container */
+      .scroll-container {
+        height: 90vh; /* h-96 */
+        background-color: #f9fafb; /* bg-gray-50 */
+        border: 1px solid #e5e7eb; /* border border-gray-200 */
+        border-radius: 0.5rem; /* rounded-lg */
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+      }
+
+      /* The actual sticky element */
+      .sticky-header {
+        position: sticky;
+        top: 0;
+        background-color: #4f46e5; /* bg-indigo-600 */
+        color: #fff; /* text-white */
+        padding: 1rem; /* p-4 */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+      }
+
+      .sticky-header p {
+        text-align: center; /* text-center */
+        font-size: 0.875rem; /* text-sm */
+        color: #c7d2fe; /* text-indigo-200 */
+        margin: 0;
+      }
+
+      /* Content sections inside the scroll box */
+      .content-section {
+        padding: 1.5rem; /* p-6 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- The scrolling container -->
+    <div class="scroll-container">
+      <!-- Some content before the sticky element -->
+      <div class="content-section">
+        <h2>Top Content Section</h2>
+
+        <p>
+          This is the content at the beginning. As you scroll down, the header
+          below will move up with the content.
+        </p>
+        <p>Keep scrolling...</p>
+        <p>A little more...</p>
+        <p>Almost there...</p>
+      </div>
+
+      <!-- The sticky element -->
+      <div class="sticky-header">
+        <h3>I am the Sticky Header!</h3>
+        <p>I will stick to the top of this container once I reach it.</p>
+      </div>
+
+      <!-- Content after the sticky element -->
+      <div class="content-section">
+        <h2>Main Content Area</h2>
+        <p>
+          Notice how the blue header is now "stuck" to the top of this scrolling
+          container. It will remain there as long as you scroll within its
+          parent container.
+        </p>
+        <p>
+          This is useful for navigation bars, table headers, or any UI element
+          that should remain visible while the user scrolls through a specific
+          section of content.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+        <p>
+          Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam
+          varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus
+          magna felis sollicitudin mauris.
+        </p>
+        <p>
+          Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus
+          vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut
+          ullamcorper, ligula eu tempor congue, eros est euismod turpis, id
+          tincidunt sapien risus a quam.
+        </p>
+        <p>
+          The sticky behavior is constrained to the parent element that has the
+          scrolling context (the gray box in this case).
+        </p>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime
+          itaque eaque quis quaerat odit excepturi eum dolorem dolores sequi
+          consequuntur tempore similique distinctio architecto ipsam deserunt
+          numquam id nostrum, illum soluta tempora aliquam ut magni rem?
+          Molestias aspernatur sit consectetur. Nesciunt earum atque officiis
+          ratione veniam minima, dicta ab possimus. Nesciunt dolores minima
+          architecto, magnam qui, nostrum sequi dolor incidunt et nulla nihil
+          facere alias ratione ut. Accusantium veritatis, mollitia ipsum, omnis
+          numquam at dolorum, est iusto error possimus accusamus similique
+          alias! Impedit, obcaecati? Enim quibusdam earum facilis itaque animi?
+          Rerum, voluptatem blanditiis incidunt facere temporibus esse molestiae
+          quia molestias sed iusto in praesentium amet expedita ratione totam
+          provident quis nisi ab aspernatur alias modi pariatur? Cumque dolore
+          nulla natus officiis ut, repellendus exercitationem veritatis ipsa
+          corrupti incidunt nisi quam cupiditate nobis numquam doloremque
+          eligendi et. Nemo, culpa vero officiis a inventore sit, maiores quos
+          dicta hic neque ratione doloremque! Asperiores dolorum temporibus
+          commodi sit perspiciatis voluptate tempora labore at architecto quo
+          aliquid reprehenderit, praesentium cupiditate deleniti modi nesciunt.
+          Adipisci molestias qui officiis earum blanditiis vel sit nostrum est.
+          Molestias ad minima voluptatum. Animi sed cupiditate qui repudiandae
+          magnam obcaecati excepturi nostrum eum perspiciatis vitae possimus,
+          impedit temporibus quisquam ipsum doloremque minima error fugiat in
+          molestiae? Ratione ab ad deleniti magni quidem velit perferendis
+          nostrum odio, repellendus reprehenderit a eligendi iure, cupiditate
+          maiores pariatur voluptates possimus vitae non beatae labore nihil
+          illum, illo voluptate placeat. Vitae quaerat totam ab perferendis enim
+          possimus, neque tempore in, quidem repellat, rerum fugiat. Animi ullam
+          libero consectetur, dolore reprehenderit optio ipsam nulla temporibus
+          laudantium perferendis sed a ab ducimus porro hic, similique odio
+          voluptates at labore. Sunt voluptatum quis provident nesciunt sit
+          suscipit rem quaerat quod reiciendis quidem, dicta ducimus tempore
+          excepturi culpa quasi voluptatem minima quos obcaecati voluptates
+          harum facilis sequi repudiandae. Et molestias quam atque eligendi nam
+          esse dicta vitae soluta, sed facilis repellat, temporibus blanditiis
+          illo reprehenderit, labore vel enim cumque in hic culpa doloribus!
+          Aliquid vel qui, at labore natus nam fugiat dolores nulla sed itaque
+          corporis eligendi! Optio culpa iusto facilis accusamus, ratione
+          commodi quas sequi reiciendis laboriosam nam possimus ea magni!
+          Possimus sit atque voluptates veniam modi eligendi excepturi tenetur
+          consectetur incidunt, nobis nesciunt similique, deleniti architecto
+          voluptatem blanditiis. Accusamus, magnam soluta dolore quo ab eaque
+          harum iste amet molestias deleniti quisquam accusantium ex dolor
+          dolores tenetur provident quidem ut ad error veritatis animi. In
+          ratione consequatur voluptatum impedit porro fuga provident vitae
+          explicabo? Quae aut eveniet aliquam? Officia quibusdam odio iste error
+          veniam libero repellendus, est perferendis pariatur saepe iure eum!
+          Nemo aut nobis, temporibus incidunt porro dicta deleniti cumque
+          pariatur ratione adipisci eaque illo ipsum quae quo iusto culpa quos
+          libero eos. Explicabo cumque rerum facilis sunt ex labore ipsa ea vel.
+          Vero asperiores maxime, quaerat numquam rerum aliquam repudiandae
+          cupiditate? Alias quasi ad quisquam consequatur, maiores omnis
+          pariatur cum et? Dolor magni rem assumenda nemo, dolorum inventore,
+          aperiam repellat ex, sint maxime sapiente odit? Explicabo eos enim
+          magnam. Modi non ipsa optio consectetur facilis a recusandae, animi
+          assumenda et culpa eum necessitatibus dignissimos eaque magnam facere,
+          voluptates veniam soluta consequatur. Voluptatum, alias laudantium
+          error, perferendis, nulla nesciunt atque pariatur possimus omnis quos
+          quisquam labore commodi? Placeat, natus. Vero magnam, ipsum nulla
+          fugit maxime enim dolore autem ducimus nam tenetur, rerum praesentium
+          aspernatur optio perspiciatis numquam sapiente officia quidem eligendi
+          esse pariatur assumenda sequi asperiores omnis? Velit eum quisquam,
+          architecto officiis iure magni repellat fugit dolor ipsa adipisci
+          doloribus illo et voluptatum enim. Nam aperiam quod, sequi repellendus
+          ipsum cumque accusantium laborum saepe odit. Fuga similique at placeat
+          modi esse omnis quos reiciendis perspiciatis itaque odio. Culpa fugit
+          recusandae atque voluptatibus, unde asperiores officiis aliquam, illo
+          officia deleniti, soluta consequatur quaerat ipsum! Veniam praesentium
+          numquam iste alias culpa animi ipsum hic eligendi ipsa, ullam sapiente
+          totam rem quam amet deleniti excepturi ratione. Consequuntur eveniet,
+          eum magnam doloremque facere, fugit possimus fuga odio ipsam id minus
+          non earum maiores numquam vel similique est debitis quaerat sunt quas!
+          Dolorem sit explicabo cupiditate dicta nam pariatur saepe nihil
+          asperiores. Quis natus molestiae nihil nisi corrupti aspernatur
+          reprehenderit fuga nemo distinctio, temporibus provident molestias,
+          totam omnis quidem eveniet et quo perferendis obcaecati. Vitae
+          delectus fugiat provident quas at impedit id sit, minus quidem sequi
+          iure ipsum libero odio, cumque non consectetur repudiandae eligendi
+          eius aliquam quaerat illum voluptate? Commodi, quos minus, in error
+          odit, aliquid minima officia laboriosam nostrum eveniet culpa
+          accusantium repudiandae aliquam corrupti repellendus eaque quam
+          veritatis quibusdam. Iusto, nemo voluptates vitae sed ullam explicabo
+          tempora sit omnis minima perferendis vero sapiente repellat atque
+          exercitationem tempore, cumque culpa earum laudantium. Voluptatem qui
+          quibusdam praesentium ab consequuntur corrupti, molestiae fuga
+          aspernatur distinctio unde quisquam eum. Ipsam temporibus neque
+          repudiandae, voluptates cumque magni odit reprehenderit debitis
+          incidunt officia optio, nam earum autem distinctio explicabo, et
+          doloremque magnam eligendi exercitationem! Dolor, placeat dolorem.
+          Aliquam quasi autem non. Optio quia eligendi id ex exercitationem
+          incidunt mollitia nobis inventore ipsa sapiente. Dolorem eveniet hic
+          odio facilis quod nostrum atque explicabo corporis voluptatibus. Nulla
+          perspiciatis molestiae facilis rerum nobis reiciendis animi blanditiis
+          quia, modi, impedit porro eveniet eius incidunt ipsam magni quasi et.
+          Dicta mollitia distinctio harum tenetur eos ullam, facilis eum iusto
+          quaerat laboriosam nemo rerum accusamus! Magnam eligendi explicabo ex
+          cupiditate, dolorum corporis consequuntur esse vero deserunt, porro
+          est, ducimus libero quaerat nihil aut dolorem eaque error amet?
+          Dolorum doloremque qui similique! Tenetur laborum in animi quisquam.
+          Aspernatur, laudantium quia. Quae itaque non ullam eos delectus illo
+          porro dolores ex commodi distinctio, at excepturi aliquam, sed totam
+          quia eius! Ut officiis ullam facilis, unde accusantium minima, autem,
+          fugit tempore doloribus odit aliquam? Voluptatibus labore omnis
+          laboriosam, quam accusantium at facere. Totam nisi minima qui dolor
+          nam quidem cumque, quisquam dolorem nihil saepe ex et laboriosam rem
+          tempore quam facilis molestias eum assumenda itaque sit sapiente.
+          Iusto accusantium provident soluta aut iste! Eveniet voluptates ad
+          natus deserunt alias pariatur tempora placeat doloremque quis harum
+          illum fugit ea molestias, repellendus, deleniti, at officiis quae
+          laborum rem odit? Doloribus rerum qui necessitatibus odio quia eius.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

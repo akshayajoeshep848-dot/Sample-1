@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    this is body
+    <h1>HEading</h1>
+    <div id="div"></div>
+    <ul id="ul">
+      <li id="li-1">Item 1</li>
+      <li id="li-2">Item 2</li>
+      <li id="li-3">Item 3</li>
+      <li id="li-4">Item 4</li>
+      <li id="li-5">Item 5</li>
+    </ul>
+    <script>
+      let div = document.getElementById("div");
+
+      let anchor = document.createElement("a");
+      anchor.setAttribute("href", "https://www.google.com");
+      anchor.textContent = "GOOGLE";
+
+      div.append(anchor);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity</title>
+    <style>
+      * {
+        color: brown;
+      }
+
+      #li1 {
+        color: blue !important;
+      }
+      #li2 {
+        color: green;
+      }
+      #li3 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Specificity</h1>
+    <p id="para1" class="para">This is a para</p>
+    <ul class="ul" type="square">
+      <li id="li1" style="color: green">item 1</li>
+      <li id="li2">item 2</li>
+      <li id="li3">item 3</li>
+    </ul>
+  </body>
+</html>

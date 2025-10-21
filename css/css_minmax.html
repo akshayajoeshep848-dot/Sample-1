@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS MinMax Function</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .grid-container {
+        background-image: url("images/walkway.jpg");
+        background-size: contain;
+        display: grid;
+        grid: repeat(5, 1fr) / repeat(5, 1fr);
+        /* grid-template-columns: 100px repeat(2, minmax(200px, 1fr));
+        grid-template-rows: 1fr 10fr 1fr; */
+        height: 100vh;
+
+        grid-template-areas:
+          "grid-item1 grid-item1 grid-item1 grid-item1 grid-item2"
+          "grid-item8 grid-item3 grid-item3 grid-item4 grid-item2"
+          "grid-item8 grid-item6 grid-item5  grid-item4 grid-item2"
+          "grid-item8 grid-item6 grid-item7 grid-item7 grid-item2"
+          "grid-item8 grid-item9 grid-item9 grid-item9 grid-item9";
+      }
+      .grid-item {
+        background-color: transparent;
+        /* border-radius: 10px; */
+        /* margin: 10px; */
+        border: 5px solid white;
+      }
+      .grid-item1 {
+        grid-area: grid-item1;
+      }
+      .grid-item2 {
+        grid-area: grid-item2;
+      }
+      .grid-item3 {
+        grid-area: grid-item3;
+      }
+      .grid-item4 {
+        grid-area: grid-item4;
+      }
+      .grid-item5 {
+        grid-area: grid-item5;
+        background-color: white;
+        text-align: center;
+        place-content: center;
+      }
+      .grid-item6 {
+        grid-area: grid-item6;
+      }
+      .grid-item7 {
+        grid-area: grid-item7;
+      }
+      .grid-item8 {
+        grid-area: grid-item8;
+      }
+      .grid-item9 {
+        grid-area: grid-item9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item grid-item1">Grid Item 1</div>
+      <div class="grid-item grid-item2">Grid Item 2</div>
+      <div class="grid-item grid-item3">Grid Item 3</div>
+      <div class="grid-item grid-item4">Grid Item 4</div>
+      <div class="grid-item grid-item5">Logicwhile</div>
+      <div class="grid-item grid-item6">Grid Item 6</div>
+      <div class="grid-item grid-item7">Grid Item 7</div>
+      <div class="grid-item grid-item8">Grid Item 8</div>
+      <div class="grid-item grid-item9">Grid Item 9</div>
+      <!-- <div class="grid-item grid-item10">Grid Item 10</div> -->
+    </div>
+  </body>
+</html>

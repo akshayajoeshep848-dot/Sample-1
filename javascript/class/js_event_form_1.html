@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS FORM Events - Input</title>
+  </head>
+  <body>
+    <form action="submit" id="form">
+      <label for="firstname">First Name</label>
+      <input id="firstname" type="text" name="firstname" />
+      <label for="lastname">Last Name</label>
+      <input id="lastname" type="text" name="lastname" />
+      <select name="gender" id="gender">
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+    <div id="record-list"></div>
+
+    <script>
+      let form = document.getElementById("form");
+      let firstname = document.getElementById("firstname");
+      let lastname = document.getElementById("lastname");
+      let gender = document.getElementById("gender");
+      let recordList = document.getElementById("record-list");
+      let formObject = {};
+      let formArray = [];
+
+      firstname.addEventListener("change", (event) => {
+        console.log(event.target.value);
+        formObject[event.target.name] = event.target.value;
+        console.log(formObject);
+      });
+
+      lastname.addEventListener("change", (event) => {
+        console.log(event.target.value);
+        formObject[event.target.name] = event.target.value;
+        console.log(formObject);
+      });
+
+      gender.addEventListener("change", (event) => {
+        console.log(event.target.value);
+        formObject[event.target.name] = event.target.value;
+        console.log(formObject);
+      });
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log("submitted successfully");
+        console.log(formObject);
+        formArray.push(formObject);
+        formObject = {};
+        console.log(formArray);
+        form.reset();
+      });
+
+      form.addEventListener("reset", (event) => {
+        console.log("resetting the form");
+        console.log(formObject);
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

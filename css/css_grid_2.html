@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid 2</title>
+    <style>
+      .grid-container {
+        /* background-image: url("images/walkway.jpg"); */
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 100px 8fr 2fr;
+        grid-template-rows: 1fr 8fr 1fr;
+        height: 100vh;
+        gap: 12px;
+        grid-template-areas:
+          "header header rightnav "
+          "sidenav content rightnav "
+          "sidenav footer footer ";
+      }
+      .grid-item {
+        background-color: blueviolet;
+        /* border-radius: 10px; */
+        /* background-color: transparent; */
+        /* border: 5px solid white; */
+      }
+
+      .grid-item1 {
+        grid-area: header;
+      }
+      .grid-item2 {
+        grid-area: sidenav;
+      }
+
+      .grid-item3 {
+        grid-area: content;
+      }
+      .grid-item4 {
+        grid-area: footer;
+      }
+
+      .grid-item5 {
+        grid-area: rightnav;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="grid-item grid-item1">Header</div>
+      <div class="grid-item grid-item2">Side Nav bar</div>
+      <div class="grid-item grid-item3">Content</div>
+      <div class="grid-item grid-item4">Footer</div>
+      <div class="grid-item grid-item5">Right Nav bar</div>
+    </div>
+  </body>
+</html>

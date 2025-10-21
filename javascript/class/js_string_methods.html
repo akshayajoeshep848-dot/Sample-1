@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods</title>
+  </head>
+  <body>
+    <h1>String Methods</h1>
+    <script>
+      let str = "Hello, World";
+      // charAt()
+      console.log(str.charAt(0) == "H");
+      console.log(str.charAt(9));
+      // concat()
+      let greeting = str.concat("!");
+      console.log(greeting);
+      // includes()
+
+      let shortestSentence = "A quick brown fox jumps over the lazy dog.";
+      console.log(shortestSentence.includes(""));
+
+      // replace
+      let newGreeting = greeting.replace("World", "Universe");
+      console.log(newGreeting);
+
+      let sub = greeting.substring(5, 9);
+      console.log(sub);
+
+      let js = "javascript";
+      console.log(js.toLowerCase());
+
+      // write a function to capitalise first letter of a string
+      // write a function to capitalise first letter of every word in a sentence
+    </script>
+  </body>
+</html>

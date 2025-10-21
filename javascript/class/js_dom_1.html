@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM 1</title>
+  </head>
+  <body>
+    <h1 id="head-1">Selecting DOM Elements</h1>
+    <div id="div-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, rerum?
+    </div>
+    <div class="div1">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus,
+      recusandae! Eum id, architecto assumenda explicabo aspernatur temporibus
+      distinctio reiciendis excepturi.
+    </div>
+
+    <script>
+      // write a function to print sum of two numbers in html
+      //   let num1 = Number(prompt("Enter first number"));
+      //   let num2 = Number(prompt("Enter second number"));
+
+      //   function sum(a, b) {
+      //     console.log(a + b);
+      //     return a + b;
+      //   }
+
+      //   let div1 = document.getElementById("div-1");
+      //   div1.innerText = sum(num1, num2);
+
+      // document.querySelector('css selector')
+      let div_1 = document.querySelector("#div-1");
+      console.log(div_1.innerText);
+      div_1.innerText = `This is div 1`;
+      div_1.style.color = "blue";
+      div_1.style.backgroundColor = "aqua";
+
+      let div_2 = document.querySelector(".div1");
+      console.log(div_2.innerText);
+      div_2.innerText = `This is div 2`;
+      div_2.style.color = "#00ffff";
+    </script>
+  </body>
+</html>

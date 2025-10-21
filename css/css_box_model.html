@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <style>
+      h1 {
+        background-color: aqua;
+        height: 100px;
+        padding: 10px 50px;
+        margin: 20px;
+        border-radius: 0px 20px 30px 50px;
+      }
+      .para1 {
+        background-color: bisque;
+        color: white;
+        background-image: url("images/Pink_flower.jpg"),
+          url("images/walkway.jpg");
+        background-repeat: no-repeat;
+        background-position: -100px -30px;
+        /* background-size: 100% 350px; */
+        /* align text vertically */
+        place-content: end;
+        /* align text horizontally */
+        text-align: justify;
+        /* width: 300px; */
+        height: 700px;
+        padding: 10px;
+        margin: 30px;
+        /* border: 3px solid blueviolet; */
+        border-width: 2px;
+        border-style: outset;
+        border-color: blue;
+        border-radius: 20px;
+      }
+      .para2 {
+        background-color: bisque;
+        padding: 10px 30px;
+        margin: 30px 10px;
+        /* border-top: 3px solid blueviolet; */
+        border-top-width: 10px;
+        border-top-style: ridge;
+        border-top-color: brown;
+      }
+      .para3 {
+        border-radius: 10px 30px;
+        background-color: bisque;
+        padding: 10px 200px 30px;
+        margin: 10px 2px 20px;
+        border-bottom: 3px solid blueviolet;
+      }
+      .para4 {
+        background-color: bisque;
+        /* padding: 10px 20px 30px 50px; */
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 30px;
+        padding-left: 40px;
+        /* margin: 10px 20px 30px 40px; */
+        margin-top: 50px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        margin-left: 40px;
+        border-left: 3px solid blueviolet;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>heading 1</h1>
+    <p class="para1">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur itaque
+      numquam doloremque, aliquid doloribus sed maiores et at ex dolorum eum
+      nobis nesciunt recusandae illum saepe assumenda quam eaque commodi.
+    </p>
+    <p class="para2">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur itaque
+      numquam doloremque, aliquid doloribus sed maiores et at ex dolorum eum
+      nobis nesciunt recusandae illum saepe assumenda quam eaque commodi.
+    </p>
+    <p class="para3">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur itaque
+      numquam doloremque, aliquid doloribus sed maiores et at ex dolorum eum
+      nobis nesciunt recusandae illum saepe assumenda quam eaque commodi.
+    </p>
+    <p class="para4">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur itaque
+      numquam doloremque, aliquid doloribus sed maiores et at ex dolorum eum
+      nobis nesciunt recusandae illum saepe assumenda quam eaque commodi.
+    </p>
+  </body>
+</html>

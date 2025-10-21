@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM CreateElement method</title>
+  </head>
+  <body>
+    <h1>JS DOM document.createElement() method</h1>
+    <div id="container"></div>
+    <button id="btn1" onclick="getItems(fruits)">Get Fruits</button>
+    <button id="btn2" onclick="getItems(vegetables)">Get Vegetables</button>
+    <script>
+      let fruits = [
+        "Apple",
+        "Banana",
+        "Kiwi",
+        "Orange",
+        "Mango",
+        "Watermelon",
+        "Guava",
+        "Pineapple",
+        "Sapota",
+        "Mosambi",
+        "Grapes",
+      ];
+      let vegetables = [
+        "Vankaya",
+        "Bendakaya",
+        "Dondakaya",
+        "Dosakaya",
+        "Chikkudukaya",
+        "Sorakaya",
+        "Potlakaya",
+        "Gummadikaya",
+        "Beerakaya",
+        "Kakarakaya",
+      ];
+      //creating h1 element
+      let heading2 = document.createElement("h2");
+      heading2.innerText = "h2 created by createElement method";
+      let container = document.getElementById("container");
+      container.append(heading2);
+
+      // creating list element
+      let orderedList = document.createElement("ol");
+
+      // write a for loop to create 5 li elements and append
+      function getItems(arr) {
+        for (let i = 0; i < arr.length; i++) {
+          let listItem = document.createElement("li");
+          listItem.innerText = arr[i];
+          orderedList.append(listItem);
+        }
+      }
+
+      document.body.append(orderedList);
+    </script>
+  </body>
+</html>

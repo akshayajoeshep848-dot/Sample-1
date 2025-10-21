@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Complete Simple Calculator</title>
+    <style>
+      #display {
+        font-family: sans-serif;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ddd;
+        margin-bottom: 10px;
+      }
+      button {
+        margin: 5px;
+        padding: 5px 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Complete Simple Calculator</h1>
+    <div id="display">
+      <p id="result"></p>
+    </div>
+    <button onclick="appendNumber('7')">7</button>
+    <button onclick="appendNumber('8')">8</button>
+    <button onclick="appendNumber('9')">9</button>
+    <br /><br />
+    <button onclick="add('.')">.</button>
+    <button onclick="subtract('')">&times;</button>
+    <script>
+      let currentInput = "";
+      let lastOperation = null;
+      let isCalculating = false;
+
+      function appendNumber(num) {
+        currentInput += num;
+        display();
+      }
+
+      function display() {
+        const displayElement = document.getElementById("display");
+        displayElement.textContent = currentInput;
+      }
+
+      function add(num) {
+        currentInput += num;
+        display();
+      }
+
+      function subtract(num) {
+        if (lastOperation !== "." && lastOperation !== "") {
+          let result = parseFloat(currentInput) - parseFloat(num);
+          if (isNaN(result)) {
+            display("Error");
+          } else {
+            currentInput = result;
+            lastOperation = num;
+          }
+        } else {
+          display("Error");
+        }
+      }
+
+      function reset() {
+        currentInput = "";
+        lastOperation = null;
+        isCalculating = false;
+        display();
+      }
+
+      // Handle backspace
+      document
+        .getElementById("display")
+        .addEventListener("keydown", function (event) {
+          if (event.key === "Backspace") {
+            currentInput = currentInput.slice(0, -1);
+            display();
+          }
+        });
+
+      // Event listeners for buttons
+      document.querySelectorAll(".button").forEach((button) => {
+        button.addEventListener("click", function () {
+          if (isCalculating) return; // Prevent multiple calculations
+          reset(); // Clear previous input
+          let num = parseFloat(button.textContent.replace(".", ""));
+          if (!isNaN(num)) {
+            if (num === "." && !isCalculating) {
+              display("Error: Cannot add decimal to an invalid number");
+            } else {
+              appendNumber(num);
+            }
+          } else {
+            display("Error: Invalid input");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

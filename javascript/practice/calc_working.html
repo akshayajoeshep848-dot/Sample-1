@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .calculator {
+        width: 320px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        padding: 20px;
+      }
+
+      .display {
+        background-color: #f8f8f8;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: right;
+        color: #333;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+
+      .previous-operand {
+        font-size: 1rem;
+        color: #888;
+        margin-bottom: 5px;
+        height: 20px;
+      }
+
+      .current-operand {
+        font-size: 2rem;
+        min-height: 40px;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .button {
+        padding: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+
+      .button:hover {
+        background-color: #e0e0e0;
+      }
+
+      .button:active {
+        transform: scale(0.95);
+      }
+
+      .button.operator {
+        background-color: #ff9800;
+        color: white;
+      }
+
+      .button.function {
+        background-color: #607d8b;
+        color: white;
+      }
+
+      .button[data-value="C"] {
+        background-color: #ff5252;
+        color: white;
+      }
+
+      .button[data-value="="] {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      .button[data-value="0"] {
+        grid-column: span 2;
+      }
+
+      @media (max-width: 480px) {
+        .calculator {
+          width: 95%;
+          margin: 10px;
+        }
+
+        .button {
+          font-size: 1rem;
+          padding: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <div class="previous-operand" id="previous-operand"></div>
+        <div class="current-operand" id="current-operand">0</div>
+      </div>
+
+      <div class="buttons">
+        <button class="button function" data-value="C">C</button>
+        <button class="button function" data-value="±">±</button>
+        <button class="button function" data-value="%">%</button>
+        <button class="button operator" data-value="÷">÷</button>
+
+        <button class="button" data-value="7">7</button>
+        <button class="button" data-value="8">8</button>
+        <button class="button" data-value="9">9</button>
+        <button class="button operator" data-value="×">×</button>
+
+        <button class="button" data-value="4">4</button>
+        <button class="button" data-value="5">5</button>
+        <button class="button" data-value="6">6</button>
+        <button class="button operator" data-value="−">−</button>
+
+        <button class="button" data-value="1">1</button>
+        <button class="button" data-value="2">2</button>
+        <button class="button" data-value="3">3</button>
+        <button class="button operator" data-value="+">+</button>
+
+        <button class="button" data-value="0">0</button>
+        <button class="button" data-value=".">.</button>
+        <button class="button" data-value="=">=</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- DOM Element Selection ---
+        // Get references to the display elements to update them later.
+        const currentOperandDisplay =
+          document.getElementById("current-operand");
+        const previousOperandDisplay =
+          document.getElementById("previous-operand");
+        // Get a collection of all buttons to attach event listeners.
+        const buttons = document.querySelectorAll(".button");
+
+        // --- State Variables ---
+        // These variables hold the calculator's internal state.
+
+        // `currentOperand`: Stores the number currently being typed or the result of a calculation.
+        // This is what's shown on the main (bottom) display.
+        let currentOperand = "0";
+
+        // `previousOperand`: Stores the first number in a two-number operation (e.g., in '5 + 3', it stores '5').
+        let previousOperand = "";
+
+        // `operation`: Stores the selected mathematical operator ('+', '−', '×', '÷').
+        let operation = null;
+
+        // `shouldResetDisplay`: A boolean flag that is crucial for correct logic.
+        // It's set to `true` after an operator is pressed or after a calculation is completed ('=').
+        // This tells the `inputDigit` function to start a new number instead of appending to the current one.
+        // This is the primary fix for the bug where '5 + 3' became '53'.
+        let shouldResetDisplay = false;
+
+        // --- Core Functions ---
+
+        /**
+         * Updates the calculator's display (both upper and lower) with the current state.
+         * This function is the single source of truth for what the user sees.
+         */
+        function updateDisplay() {
+          currentOperandDisplay.textContent = currentOperand;
+          // This logic improves the user experience by showing the pending operation.
+          // For example, if `previousOperand` is "123" and `operation` is "+", the upper display will show "123 +".
+          // If no operation is pending, the upper display is cleared.
+          if (operation != null) {
+            previousOperandDisplay.textContent = `${previousOperand} ${operation}`;
+          } else {
+            previousOperandDisplay.textContent = "";
+          }
+        }
+
+        /**
+         * Resets all state variables to their default values.
+         * Called when the 'C' (Clear) button is pressed.
+         */
+        function clearAll() {
+          currentOperand = "0";
+          previousOperand = "";
+          operation = null;
+          shouldResetDisplay = false;
+          updateDisplay();
+        }
+
+        /**
+         * Handles the input of a numeric digit.
+         * @param {string} digit - The number (0-9) that was pressed.
+         */
+        function inputDigit(digit) {
+          // If `shouldResetDisplay` is true, it means we just pressed an operator or '=',
+          // so the current display should be overwritten with the new digit.
+          if (shouldResetDisplay) {
+            currentOperand = digit;
+            shouldResetDisplay = false; // Reset the flag so subsequent digits can be appended.
+          } else {
+            // If the current display is '0', replace it with the new digit. Otherwise, append.
+            // This prevents numbers from starting with a zero, like "07".
+            currentOperand =
+              currentOperand === "0" ? digit : currentOperand + digit;
+          }
+          updateDisplay();
+        }
+
+        /**
+         * Handles the input of a decimal point.
+         */
+        function inputDecimal() {
+          // If the display needs to be reset, start a new number with "0."
+          if (shouldResetDisplay) {
+            currentOperand = "0.";
+            shouldResetDisplay = false;
+            updateDisplay();
+            return; // Exit the function
+          }
+          // Prevents adding more than one decimal point to a number.
+          if (!currentOperand.includes(".")) {
+            currentOperand += ".";
+          }
+          updateDisplay();
+        }
+
+        /**
+         * Toggles the sign of the number in the current display (positive/negative).
+         * Called by the '±' button.
+         */
+        function toggleSign() {
+          if (currentOperand === "0" || currentOperand === "Error") return;
+          currentOperand = (parseFloat(currentOperand) * -1).toString();
+          updateDisplay();
+        }
+
+        /**
+         * Converts the current number to its percentage value (divides by 100).
+         * Called by the '%' button.
+         */
+        function handlePercent() {
+          if (currentOperand === "Error") return;
+          currentOperand = (parseFloat(currentOperand) / 100).toString();
+          updateDisplay();
+        }
+
+        /**
+         * Manages what happens when an operator button ('+', '−', '×', '÷') is pressed.
+         * This function correctly handles both single and chained operations.
+         * @param {string} selectedOperation - The operator that was pressed.
+         */
+        function handleOperation(selectedOperation) {
+          if (currentOperand === "Error") return;
+
+          // This is the logic for chained operations (e.g., '5 + 3 - 2').
+          // If an operation is already pending AND we haven't just pressed another operator,
+          // it means we have a complete expression (like '5 + 3') that needs to be calculated first.
+          if (operation && !shouldResetDisplay) {
+            calculate();
+          }
+
+          // Stage the next operation:
+          // 1. Move the current number to be the `previousOperand`.
+          previousOperand = currentOperand;
+          // 2. Set the new operation.
+          operation = selectedOperation;
+          // 3. Set the reset flag to `true`, so the next digit input will start a new number.
+          shouldResetDisplay = true;
+          updateDisplay();
+        }
+
+        /**
+         * Performs the actual mathematical calculation.
+         * This is called by the '=' button or by `handleOperation` for chained calculations.
+         */
+        function calculate() {
+          // Do nothing if there's no operation selected or if no second number has been entered.
+          if (operation === null || shouldResetDisplay) return;
+
+          const prev = parseFloat(previousOperand);
+          const current = parseFloat(currentOperand);
+
+          // If for any reason the numbers are not valid, stop.
+          if (isNaN(prev) || isNaN(current)) return;
+
+          // Handle division by zero, which is an invalid operation.
+          if (operation === "÷" && current === 0) {
+            currentOperand = "Error";
+            operation = null;
+            previousOperand = "";
+            shouldResetDisplay = true; // Reset state after error
+            updateDisplay();
+            return;
+          }
+
+          let result;
+          // Use a switch statement to perform the correct calculation based on the stored operator.
+          switch (operation) {
+            case "+":
+              result = prev + current;
+              break;
+            case "−":
+              result = prev - current;
+              break;
+            case "×":
+              result = prev * current;
+              break;
+            case "÷":
+              result = prev / current;
+              break;
+            default:
+              return; // Should never happen
+          }
+
+          // Update the current operand with the result, formatted to avoid floating point inaccuracies.
+          currentOperand = parseFloat(result.toPrecision(12)).toString();
+
+          // Reset the operation state, leaving the result on the screen.
+          operation = null;
+          previousOperand = "";
+          shouldResetDisplay = true; // Prepare for a new calculation to start on the next digit press.
+        }
+
+        // --- Event Listeners ---
+        // Attaches a click event listener to every button.
+        buttons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const value = button.getAttribute("data-value");
+
+            // A switch statement provides a clean way to direct the button's value to the correct function.
+            // This is more efficient and readable than a long 'if/else if' chain.
+            switch (value) {
+              case "C":
+                clearAll();
+                break;
+              case "±":
+                toggleSign();
+                break;
+              case "%":
+                handlePercent();
+                break;
+              case "÷":
+              case "×":
+              case "−":
+              case "+":
+                handleOperation(value);
+                break;
+              case "=":
+                calculate();
+                updateDisplay(); // Explicitly update display after '='
+                break;
+              case ".":
+                inputDecimal();
+                break;
+              default:
+                // The default case handles all numeric buttons (0-9),
+                // avoiding the need for individual checks.
+                inputDigit(value);
+                break;
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datatypes JS</title>
+  </head>
+  <body>
+    <h1>JS Datatypes</h1>
+    <script>
+      let age = 45;
+      let firstName = "Prabhas";
+      let lastName = `Uppalapati`;
+      let bool = true;
+      let unDefined = undefined;
+      let sym = Symbol();
+      let bigInt = 10n;
+
+      console.log("age:", typeof age);
+      console.log("firstName:", typeof firstName);
+      console.log("lastName:", typeof lastName);
+      console.log("bool", typeof bool);
+
+      // String concatenation
+      let fullName1 = firstName + " " + lastName;
+      let fullName2 = `${firstName} ${lastName}`;
+
+      let address1 = "First Floor, MIG-87, Rd Number 1, ";
+      let address2 = "beside AED Hospital, K P H B Phase 1, ";
+      let address3 = "Kukatpally, Hyderabad, Telangana - 500072";
+
+      console.log("type of fullName1:", typeof fullName1);
+
+      console.log("string concatenation:", address1 + address2 + address3);
+
+      console.log("template literal:", `${address1}${address2}${address3}`);
+
+      console.log("fullName1:", fullName1);
+      console.log("fullName2:", fullName2);
+
+      console.log("age:", age);
+      console.log("firstName:", firstName);
+      console.log("bool:", bool);
+      console.log("unDefined:", unDefined);
+      // template literal
+      console.log(`My name is ${firstName} ${lastName}, and my age is ${age}`);
+      // string concatenation
+      console.log(
+        "My name is " + firstName + " " + lastName + ", and my age is " + age
+      );
+      // comma seperated values
+      console.log("My name is", firstName, lastName, ", and my age is", age);
+    </script>
+  </body>
+</html>

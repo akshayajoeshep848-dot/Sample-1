@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      * {
+        color: rgb(149, 32, 0);
+        margin: 0;
+        font-family: "Courier New", Courier, monospace;
+      }
+      .heading {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      #para1 {
+        background-color: blueviolet;
+        color: rgb(148, 159, 251);
+        padding: 10px;
+        margin: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 5px rgb(251, 215, 215);
+      }
+      #para2 {
+        background-color: rgb(235, 241, 252);
+        padding: 20px;
+        margin: 20px;
+        border: 1px solid blue;
+        border-radius: 10px;
+      }
+
+      .border-styling {
+        background-color: blanchedalmond;
+        padding: 20px;
+        margin: 20px;
+        border: 3px dashed rgb(21, 34, 2);
+      }
+
+      .green-shadow {
+        box-shadow: 5px 5px greenyellow;
+      }
+      .blue-shadow {
+        box-shadow: 5px 5px rgb(160, 150, 251);
+      }
+
+      [type="text"] {
+        border: 5px solid blue;
+      }
+      div {
+        padding: 10px;
+        border: 1px solid lightblue;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="border-styling green-shadow heading">Heading</h1>
+    <div>
+      <label for="fn-1">First Name</label><input type="text" id="fn-1" />
+    </div>
+    <div>
+      <label for="ln-1">Last Name </label><input type="text" id="ln-1" />
+    </div>
+
+    <div>
+      <label for="input-1">First Name</label>
+      <input type="text" id="input-1" />
+    </div>
+    <div>
+      <label for="input-2">Last Name</label>
+      <input type="text" id="input-2" />
+    </div>
+    <div>
+      <label for="">Date of Birth</label>
+      <input type="date" />
+    </div>
+    <div>
+      <label for="">Email </label>
+      <input type="email" />
+    </div>
+    <input type="text" />
+    <input type="email" />
+    <input type="number" />
+    <input type="date" />
+    <input type="month" />
+
+    <input type="button" value="Submit" />
+
+    <!-- <p id="para1" class="blue-shadow">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita magni
+      corporis unde ad debitis, illo aliquid provident nesciunt eos nisi aliquam
+      recusandae consequatur nemo quis eveniet iste mollitia dolore explicabo.
+    </p>
+    <p id="para2" class="blue-shadow green-shadow">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+      reprehenderit.
+    </p>
+
+    <p class="border-styling blue-shadow green-shadow">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima tempore
+      nesciunt, quia fugit, molestiae, nulla aliquam possimus pariatur neque
+      doloremque quos! Eaque quis qui quam dolore rem rerum laborum sit.
+    </p> -->
+  </body>
+</html>

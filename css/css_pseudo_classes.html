@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pseudo Classes</title>
+    <style>
+      p {
+        background-color: rgb(255, 237, 230);
+        color: salmon;
+        width: 100px;
+        padding: 20px;
+        border: 1px solid lightsalmon;
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 3px 3px 5px 5px rgb(228, 227, 227);
+        font-size: 30px;
+      }
+
+      /* change state when user does mouseover action */
+      /* p:hover {
+        background-color: blueviolet;
+        color: white;
+        box-shadow: 13px 13px 5px 5px rgb(228, 227, 227);
+      } */
+
+      /* change state when user clicks on the element */
+      p:active {
+        transform: translate(10px, 10px) scale(0.9);
+        /* background-color: blueviolet; */
+        /* color: white; */
+        /* box-shadow: 13px 13px 5px 5px rgb(228, 227, 227); */
+      }
+      a {
+        text-decoration: none;
+      }
+
+      /* a:link {
+        color: green;
+        font-size: 25px;
+      }
+
+      a:visited {
+        color: red;
+        font-size: 16px;
+      } */
+
+      input {
+        border: 3px solid green;
+      }
+
+      input:focus {
+        border: 3px solid blue;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 12px 12px lightgrey;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Classes</h1>
+    <p>Para</p>
+    <a href="https://www.logicwhile.com" target="_blank">LogicWhile</a>
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <br />
+    <div>
+      <label for="fn">First Name:</label>
+      <input type="text" id="fn" />
+    </div>
+    <div>
+      <label for="ln">Last Name:</label>
+      <input type="text" id="ln" />
+    </div>
+  </body>
+</html>

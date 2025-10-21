@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS THIS</title>
+  </head>
+  <body>
+    <script>
+      // no context - this refers to window object
+      // in strict mode - undefined
+      function obj() {
+        console.log(this);
+        this.alert("Hi");
+        // this.close();
+      }
+
+      // 2. implicit binding of 'this'
+
+      let person = {
+        name: "NTR",
+        age: 42,
+        location: "Hyderabad",
+        walk() {
+          //this is implicit binding of 'this'
+          console.log(`${this.name} is walking`);
+        },
+        eat: function () {
+          //this is implicit binding of 'this'
+          console.log(`${this.name} is eating`);
+        },
+        sleep: () => {
+          //this is undefined
+          console.log(`${this.name} is sleeping`);
+        },
+      };
+
+      //   person.walk();
+      //   person.eat();
+      //   person.sleep();
+
+      //   obj();
+
+      // explicit binding of this
+      function greet() {
+        console.log(`Hello, ${this.name}`);
+      }
+
+      const alice = { name: "Alice" };
+      greet.call(alice); // "Hello, Alice"
+    </script>
+  </body>
+</html>

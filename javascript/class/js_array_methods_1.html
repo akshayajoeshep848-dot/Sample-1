@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Array methods 1</title>
+    <style>
+      body {
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let arr1 = [1, 2, 3];
+      let arr2 = [4, 5, 6];
+
+      let arr3 = arr1.concat(arr2);
+      //   console.log(arr3);
+      let arr4 = arr3.concat(7);
+      //   console.log(arr4);
+
+      // flatten arr1
+      let arr5 = [1, 2, 3, [4, [5], 6], [7, 8], [9]];
+      //   console.log(arr5);
+
+      let flatArray = arr5.reduce(
+        (initialValue, currentValue) => initialValue.concat(currentValue),
+        []
+      );
+      //   console.log(flatArray);
+
+      // join
+
+      let greeting = ["Hello", "World"];
+      // add comma after each letter
+      let str = greeting.join("").split("").reverse().join();
+      console.log(typeof str, str);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Arrays</title>
+  </head>
+  <body>
+    <script>
+      let emptyArray = []; // An empty array
+      let fruits = ["Apple", "Banana", "Cherry"]; // Array of strings
+      let numbers = [1, 2, 3, 4, 5]; // Array of numbers
+      let mixedArray = [10, "Hello", true, { name: "Alice" }, [6, 7]]; // Array with mixed data types
+
+      // console.log(fruits[0]);
+      // console.log(fruits.length);
+      // console.log(mixedArray[3].name);
+      // console.log(mixedArray[3]["name"]);
+      // console.log(mixedArray[4][0]);
+
+      // create array using constructor
+      let arr1 = new Array(); // this will create an empty array
+      let arr2 = new Array("Apple", "Banana", "Cherry");
+      let arr3 = new Array(4);
+
+      // print arrays
+      // console.log(arr1);
+      // console.log(arr2);
+      // console.log(arr3);
+      console.log(arr3[1]);
+
+      arr3[0] = "Kalakandh";
+      console.log(arr3);
+      console.log(arr3[0]);
+      arr3[1] = "Kaaju Laddu";
+      arr3[2] = "Dry Fruit Laddu";
+      arr3[3] = "Palakova";
+      console.log(arr3);
+
+      let student = {
+        name: "NTR",
+        age: 23,
+        college: "Chalapathi Engg College",
+        id: "0001",
+        address: {
+          line1: "H.NO 553, ",
+          line2: "Jubilee Hills road no 29",
+          city: "Hyderabad",
+          state: "Telangana",
+          pincode: 500034,
+        },
+        movies: ["Devara", "War 2", "Temper", "Janatha Garrage"],
+        awards: [
+          {
+            name: "Best Dancer",
+            type: "",
+            year: 1996,
+            movie: "",
+          },
+          {
+            name: "Best Actor",
+            type: "Nandi awards",
+            year: 2016,
+            movie: "Nanna Ki Prematho",
+          },
+          {
+            name: "Best Actor",
+            type: "SIIMA awards",
+            year: 2007,
+            movie: "Simhadri",
+          },
+        ],
+      };
+
+      // console.log(student.awards[0].name);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Functions with return</title>
+  </head>
+  <body>
+    <h1>JS functions with return statement</h1>
+    <script>
+      // write a function to return sum of two numbers
+      //   function addTwoNumbers(num1, num2) {
+      //     return num1 + num2;
+      //   }
+
+      //   console.log(addTwoNumbers(10, 20));
+
+      //   let sum = addTwoNumbers(20, 40);
+      //   console.log(sum);
+
+      // write a function to multiply 3 numbers
+
+      //   function multiplyNumbers(num1, num2, num3) {
+      //     return num1 * num2 * num3;
+      //   }
+
+      //   let value = multiplyNumbers(8, 4, 5);
+      //   console.log(value);
+      //   console.log(multiplyNumbers(2, 4, 6));
+
+      // write a function to return a boolean
+      // take 2 numbers, return true if a > b
+      // else false
+
+      function compareTwoNums(a, b) {
+        return a > b;
+      }
+
+      console.log(compareTwoNums(10, 9));
+
+      // write a function expression to add two numbers
+
+      let sum = function (a, b) {
+        return a + b;
+      };
+
+      console.log(sum(10, 4));
+
+      // write a function to return factorial value
+
+      //   function factorialValue(n) {
+      //     let factorial = 1;
+      //     for (let i = 1; i <= n; i++) {
+      //       factorial *= i;
+      //     }
+
+      //     return factorial;
+      //   }
+
+      //   console.log(factorialValue(5));
+
+      // Recursion - using/calling same function inside a function
+      // f(n)   = n * f(n-1)
+      //        = n * n-1 * f(n-2) ...
+
+      let factorial = function fac(n) {
+        if (n == 1 || n == 0) {
+          return 1;
+        } else if (n > 1) {
+          return n * fac(n - 1);
+          // 10 * f(9)
+          // 10 * 9 * f(8) 
+          // 10 * 9 * 8 * f(7)
+          // 10 * 9 * 8 * 7 * f(6)
+
+        } else {
+          return undefined;
+        }
+      };
+
+      console.log(factorial(5));
+    </script>
+  </body>
+</html>

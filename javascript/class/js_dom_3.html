@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS DOM example</title>
+    <style>
+      .item {
+        margin: 10px;
+        padding: 10px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>vegetables</h1>
+    <ul class="container">
+      <li class="item">Item 1</li>
+      <li class="item">Item 2</li>
+      <li class="item">Item 3</li>
+      <li class="item">Item 4</li>
+      <li class="item">Item 5</li>
+      <li class="item">Item 6</li>
+      <li class="item">Item 7</li>
+      <li class="item">Item 8</li>
+      <li class="item">Item 9</li>
+      <li class="item">Item 10</li>
+    </ul>
+    <button onclick="getItems(itemArray, vegetables)">Get Vegetables</button>
+    <button onclick="getItems(itemArray, fruits)">Get Fruits</button>
+    <script>
+      let fruits = [
+        "Apple",
+        "Banana",
+        "Kiwi",
+        "Orange",
+        "Mango",
+        "Watermelon",
+        "Guava",
+        "Pineapple",
+        "Sapota",
+        "Mosambi",
+      ];
+      let vegetables = [
+        "Vankaya",
+        "Bendakaya",
+        "Dondakaya",
+        "Dosakaya",
+        "Chikkudukaya",
+        "Sorakaya",
+        "Potlakaya",
+        "Gummadikaya",
+        "Beerakaya",
+        "Kakarakaya",
+      ];
+
+      let itemCollection = document.getElementsByClassName("item");
+      let itemArray = Array.from(itemCollection);
+
+      function getItems(arr1, arr2) {
+        arr1.forEach((e, i) => {
+          console.log(e.innerText);
+          e.innerText = arr2[i];
+          console.log(e.innerText);
+        });
+      }
+    </script>
+  </body>
+</html>
