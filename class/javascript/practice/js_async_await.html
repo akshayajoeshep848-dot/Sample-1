@@ -8,22 +8,19 @@
   <body>
     <h1>Async Await</h1>
     <script>
-      const myPromise = new Promise((resolve, reject) => {
-        // asynchronous operation
-        let success = Number(prompt("Enter 0 or 1"));
-        success == 0 ? resolve("Success") : reject("This is a failure error");
-      });
+      async function delayedLog() {
+        console.log("Async function started...");
+        new Promise((resolve) =>
+          setTimeout(() => {
+            resolve({ id: 1, name: "John Doe" });
+          }, 2000)
+        ); // Wait for 2 seconds
+        console.log("Async function finished!");
+      }
 
-      myPromise
-        .then((result) => {
-          console.log(result);
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-        .finally(() => {
-          console.log("Operation Completed.");
-        });
+      console.log("Script started.");
+      delayedLog();
+      console.log("Script finished.");
     </script>
   </body>
 </html>
