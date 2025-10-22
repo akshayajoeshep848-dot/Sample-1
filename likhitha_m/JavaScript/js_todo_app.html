@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TODO App</title>
+    <style>
+        body {
+            background-color: rgba(135, 206, 250, 0.244);
+        }
+        .box {
+            display: flex;
+            justify-content:center;
+        }
+        .main {
+            height: 350px;
+            width: 500px;
+            border-radius: 20px;
+            background-color: white;
+        }
+        #head {
+            color: rgba(0, 0, 255, 0.596);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-top: 20px;
+            text-align: center;
+        } 
+        #task, #time, #add {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+        #task {
+            margin-left: 15px;
+        }
+        #time {
+            margin-left: 10px;
+        }
+        #add {
+            width: 60px;
+            background-color: rgba(0, 0, 255, 0.596);
+            margin-left: 20px;
+        }
+        .taskdiv {
+            padding-top: 15px;
+        }
+        .timediv {
+            position: relative;
+            top: 11px;
+            padding: 3px;
+            text-align: center;
+            border-radius: 50%;
+            height: 25px;
+            width: 60px;
+            margin-left: 150px;
+            background-color: rgba(128, 128, 128, 0.363);
+        }
+        .del {
+            margin-left: 50px;
+            height: 30px;
+            width: 50px;
+        }
+        .taskitem {
+            display: flex;
+            gap: 10px;
+            height: 50px;
+            width: 400px;
+            padding-left: 20px;
+            margin-left: 30px;
+            margin-top: 50px;
+            border-radius: 5px;
+            border: 1px solid grey;
+            background-color: rgba(128, 128, 128, 0.126);
+        }
+        .timeitem {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mainbutt {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons {
+            display: flex;
+            margin-top: 30px;
+            margin-left: 15px;
+            gap: 20px;
+        }
+        .clear {
+            margin-right: 20px;
+            display: flex;
+            border-radius: 5px;
+            border: 1px solid grey;
+            margin-top: 30px;
+            gap: 20px;
+            padding: 10px;
+            background-color: white;
+        }
+        .clear:hover{
+        background-color: rgba(0, 0, 255, 0.596);
+        }
+        .all {
+            border: 1px solid grey;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+        } 
+        .all:hover {
+            
+         background-color: rgba(0, 0, 255, 0.596);
+         }
+         .delete {
+            margin-left: 30px;
+         }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <form action="submit" id="form">
+        <div class="main">
+        <h1 id="head">My To-Do App</h1>
+        <input type="text" name="task" id="task" placeholder="Add a task..."  required>
+        <input type="tel" name="time" id="time" placeholder="Duration (e.g.,30m)"  required>
+        <button id="add">Add</button>
+        <div class="mainbutt">
+        <div class="buttons">
+            <button class="all">All</button>
+            <button class="all">Active</button>
+            <button class="all">Completed</button>
+        </div>
+        <div>
+        <button class="clear">Clear Completed</button></div>
+        </div>
+        <div id="mainList">
+            <div id="taskList"></div>
+            <div id="timeList"></div>
+        </div>
+        </div>
+    </form>
+    </div>
+    <script>
+        let task = document.getElementById("task");
+        let time = document.getElementById("time");
+        let form = document.getElementById("form");
+        let taskList = document.getElementById("taskList");
+        let emptyObj = {};
+        let emptyArray = [];
+        task.addEventListener("change", (event) => {
+          emptyObj[event.target.name] = event.target.value;
+        });
+    
+        time.addEventListener("change", (event) => {
+          emptyObj[event.target.name] = event.target.value;
+        });
+    
+        form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        emptyArray.push({ ...emptyObj });
+        form.reset();
+        emptyObj = {};
+        displayTasks();
+        });
+        function displayTasks() {
+            let mainlist = document.querySelector("mainList")
+            let tasklist = document.querySelector("taskList")
+            let timelist = document.querySelector("timeList")
+        
+          emptyArray.forEach((element, index) => {
+
+            let div1 = document.createElement("div");
+            div1.classList.add("taskitem");
+
+            let checkBox = document.createElement("input");
+            checkBox.setAttribute("type", "checkbox")
+            checkBox.setAttribute("name", "check");
+            checkBox.classList = "check"
+            checkBox.setAttribute("id", "check")
+
+            let taskDiv = document.createElement("div");
+            taskDiv.setAttribute("name", "check")
+            taskDiv.setAttribute("for", "check")
+            taskDiv.classList = "taskdiv"
+            taskDiv.textContent = `${element.task}`;
+
+            let timeDiv = document.createElement("div");
+            timeDiv.setAttribute("name", "check")
+            timeDiv.classList = "timediv";
+            timeDiv.textContent = `${element.time}`;
+            
+            let del = document.createElement("button")
+            del.textContent = "Delete";
+            del.classList.add("delete")
+
+            del.addEventListener("click", function () {
+                document.getElementById("task").value = "";
+                document.getElementById("time").value = "";
+            })
+
+            
+            div1.appendChild(checkBox)
+            div1.appendChild(taskDiv);
+            div1.appendChild(timeDiv);
+            div1.appendChild(del)
+            taskList.appendChild(div1);
+            timeList.appendChild(div2);
+          });
+        }
+        </script>
+</body>
+</html>
+
+
+
+<!-- 
+    taskArray.forEach ((task) => {
+    let parentDiv = document.creteElement("div");
+    let taskDiv = document.createlement("div");
+    let duration = document.createelement("div");
+    
+    parentDiv.classList.add("task-div");
+
+    taskDiv.textContent = task.task;
+    durationDiv.textContent = task
+    
+    
+    
+    })
+-->

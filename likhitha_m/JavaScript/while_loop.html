@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While Loop</title>
+</head>
+<body>
+    <h1>While Loop</h1>
+    <script>
+        // While Loop
+        // let i = 0;
+        // while (i < 3){
+        // console.log(`Current value of 1 : ${i}`);
+        // i++;
+        // }
+
+        // Do while Loop
+        // let j = 0;
+        // do {
+        //     console.log(`j is ${j}`);
+        //     j++;
+        // }while (j < 0);
+
+        // let i = 0;
+        // while (i <= 10){
+        //     if (i % 2 == 0){
+        //         console.log(`loop ${i}`)
+        //         i++;
+        //         break; or continue
+        //     }else {
+        //         console.log(`printing: ${i}`)
+        //     }
+        //     i++;
+        // }
+
+        // Do while Loop
+        // let j = 0;
+        // do {
+        //     console.log(j);
+        //     j++;
+        // }while (j < 0);
+
+
+        // Prime Number are not
+        let nmbr =Number(Prompt(`Enter A Number`));
+        let isPrime = true;
+        if (nmbr <= 0 ){
+            isPrime = false;
+        }else if (nmbr == 1){
+            isPrime = false;
+        }else if (nmbr == 2){
+            isPrime = true;
+        }else if (nmbr % 2 == 0){
+            isPrime = false
+        } else {
+        for (let i = 3; i <= Math.floor(nmbr**0.5); i += 2){
+            if (nmbr % i == 0){
+                isPrime = false;
+                break;
+               }
+            }
+        }
+        
+
+
+    </script>
+</body>
+</html>

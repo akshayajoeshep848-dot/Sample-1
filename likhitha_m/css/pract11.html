@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice 11</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .mainbox {
+            height: 800px;
+            padding: 20px;
+            background-color: rgba(0, 255, 255, 0.125);
+        }
+
+        .toptwo {
+            display: flex;
+            gap: 20px;
+        }
+
+        .first {
+            margin-left: 30px;
+            height: 300px;
+            width: 200px;
+            box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.267);
+            display: flex;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            flex-direction: column;
+            /* justify-content: space-between; */
+            gap: 10px;
+        }
+        .homeflex {
+            display: flex;
+            gap: 5px;
+            color: rgba(0, 0, 255, 0.677);
+        }
+        .homeflex1 {
+            display: flex;
+            gap: 5px;
+            color: rgba(128, 128, 128, 0.686);
+        }
+        .letters {
+            font-size: 12px;
+            margin-top: 140px;
+            color: rgba(128, 128, 128, 0.516);
+        }
+        .second {
+            display: flex;
+            flex-direction: column;
+            height: 200px;
+            width: 600px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.267);
+            justify-content: space-between;
+        }
+        .middle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .third {
+            height: 200px;
+            width: 630px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.267);
+        }
+        .topseller {
+            font-size: 20px;
+            color: blue;
+        }
+        .topseller::before {
+            content: "\1F525";
+        }
+        .filter {
+            font-size: 16px;
+        }
+        .filter::after {
+            content: "\2630";
+            padding-left: 10px;
+        }
+        .sellers {
+            display: flex;
+            justify-content: space-between;
+        }
+        .image1 {
+            background-image: url("./man.png");
+            background-size:contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+        .image2 {
+            background-image: url("./man.png");
+            background-size:contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+        .image3 {
+            background-image: url("./man.png");
+            background-size:contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+        .image4 {
+            background-image: url("./man.png");
+            background-size:contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+        }
+        .body {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: space-evenly;
+        }
+        .body1, .body2, .body3, .body4 {
+            display: flex;
+            gap: 5px;
+        }
+        .orders {
+            color: grey;
+        }
+        .fourth {
+            height: 100px;
+            width: 630px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.267);
+        }
+        .fifth {
+            height: 200px;
+            width: 630px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.267);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+        <div class="toptwo">
+            <div class="first">
+                <div class="homeflex">
+                    <i class='fas fa-house-user'></i>
+                    <div class="home">Home</div>
+                </div>
+                <div class="homeflex1">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div class="cart">Cart</div>
+                </div>
+                <div class="homeflex1">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                    <div class="coupons">Coupons</div>
+                </div>
+                <div class="homeflex1">
+                    <i class="fa-solid fa-star"></i>
+                    <div class="favourite">Favourite items</div>
+                </div>
+                <div class="homeflex1">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="settings">Settings</div>
+                </div>
+                    <div class="letters">iShadeed &#169 2019<br>
+                    Privacy Policy . Terms and Conditions
+                </div>
+            </div>
+            <div class="middle">
+            <div class="second">
+                <div class="sellers">
+                    <div class="topseller">Top sellers</div>
+                    <div class="filter">Filter By</div>
+                </div>
+                 <div class="body">
+                        <div class="body1">
+                            <div class="image1"></div>
+                            <div class="orders">
+                            <div>Jhon Smith</div>
+                            <div>154 orders</div></div>
+                    </div>
+                        <div class="body2">
+                            <div class="image2"></div>
+                            <div class="orders">
+                            <div class="jhon">Jhon Smith</div>
+                            <div class="smith">154 orders</div></div>
+                        </div>
+                        <div class="body3">
+                            <div class="image3"></div>
+                            <div class="orders">
+                            <div class="jhon">Jhon Smith</div>
+                            <div class="smith">154 orders</div></div>
+                        </div>
+                        <div class="body4">
+                            <div class="image4"></div>
+                            <div class="orders">
+                            <div class="jhon">Jhon Smith</div>
+                            <div class="smith">154 orders</div></div>
+                        </div>
+            </div>
+                 <div class="body">
+                        <div class="body1">
+                            <div class="image1"></div>
+                            <div class="orders">
+                            <div>Jhon Smith</div>
+                            <div>154 orders</div></div>
+                    </div>
+                        <div class="body2">
+                            <div class="image2"></div>
+                            <div class="orders">
+                            <div class="jhon">Jhon Smith</div>
+                            <div class="smith">154 orders</div></div>
+                        </div>
+                        <div class="body3">
+                            <div class="image3"></div>
+                            <div class="orders">
+                            <div class="jhon">Jhon Smith</div>
+                            <div class="smith">154 orders</div></div>
+                        </div>
+                        <div class="body4">
+                            <div class="image4"></div>
+                            <div class="orders">
+                            <div class="jhon">Jhon Smith</div>
+                            <div class="smith">154 orders</div></div>
+                        </div>
+            </div>
+        </div>
+        <div class="third">
+            <div></div>
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="fourth">
+            <div class="latest">Latest Bla Bla</div>
+            <div class="searchbar">
+                <div class="search"></div>
+                <div class="boxsearch"></div>
+            </div>
+        </div>
+        <div class="fifth">
+            <div class="boxes">
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</body>
+
+</html>

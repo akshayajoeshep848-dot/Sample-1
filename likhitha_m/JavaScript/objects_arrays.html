@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects with Arrays</title>
+</head>
+<body>
+    <h1>Arrays, objects and array Constructor </h1>
+    <script>
+        let student = {
+            name: "NTR",
+            age: 45,
+            college: "Andhra University",
+            id: 8572,
+            address: {
+                line1: "Near metro road no 1",
+                line2: "kphb colony", 
+                city: "Hyderabad",
+                state: "Telangana",
+            },
+            movies: ["Simhadri", "Temper", "War 2", "Devara"],
+            awards: [
+                {
+                    name: "Best Dancer",
+                    type: "SIIMA" ,
+                    year: 2004,
+                    movie: "Student NO1",
+                },
+                {
+                    name: "Best Actor",
+                    type: "Nandhi Award" ,
+                    year: 2007,
+                    movie: "Simhadri",
+                },
+                {
+                    name: "Best Actor",
+                    type: "SIIMA" ,
+                    year: 2016,
+                    movie: "Janatha Garrage",
+                },
+            ],
+        };
+
+        console.log(student.awards[0]);
+
+
+    //     // Array Constructor
+    //     let arr1 = new Array ();    //this will create an empty array
+    //     let arr2 = new Array ("Apple", "Banana", "Cherry");
+    //     let arr3 = new Array (4);
+
+    //     // print Arrays
+    //     console.log(arr1);
+    //     console.log(arr2);
+    //     console.log(arr3[4]);
+    //     arr3[0] = "Jilebi",
+    //     console.log(arr3)
+    //     arr3[1] = "palakova",
+    //     console.log(arr3)
+    //     arr3[2] = "palakkad",
+    //     console.log(arr3)
+
+    //     // Mutator Methods
+    //     // push
+    //     // adds on more element to the end of an array returns the new length of the array
+    //     const fruits = ["Apple", "Banana", "pomegrante", "Kiwi"];
+    //     fruits.push ("Mango");
+        
+    //     console.log(fruits);
+        
+    //     // pop
+    //     // removes on more element to the end of an array returns the new length of the array
+    //     const fruits1 = ['apple', 'banana', 'kiwi', 'pineapple'];
+    //     // console.log(fruits1)
+    //     const lastFruit = fruits1.pop();
+
+    //     console.log(fruits1)
+
+    //     // Unshift()
+    //     //  adds one or more elements to the begining of an array and returns the 
+    //     // new length of the array
+
+    //     // const numbers = [""]
+    //     const fruits2 = ["Apple", "Banana", "pomegrante", "Kiwi"];
+    //     fruits2.unshift('Mango');
+    //     console.log(fruits2)
+        
+    //     // shift ()
+    //     // will removes the first element of the array object
+        
+    //     const fruits3 = ["Apple", "Banana", "pomegrante", "Kiwi"];
+    //    const nextTask = fruits3.shift ();
+    //    console.log(fruits3, nextTask)
+
+    //     // Reverse ()
+    //     // reverse the order of the element in an array in place.
+    //     // the first array element become last , and the last element becomes the first.
+    //     const items = ['2', '6', '8', '4'];
+    //     console.log(items)
+    //     items.reverse();
+    //     console.log(items);
+
+    //     // Reverse the name letters
+    //     let name = "Prasanna";
+    //     console.log(name)
+    //     console.log(name.split("").reverse().join(""));
+        
+    //     // removing one by one name
+        
+    //     let nm = "Prabhas";
+    //     console.log(nm);
+    //     console.log(nm.split("").reverse().join(""));
+    //     console.log(nm.length);
+
+    //     for (let i = 0; i < name.length; i ++);
+        
+        // const nm1 = ["P", "R", "A", "B", "H", "A", "S"];
+        // console.log(nm1.join(""));
+        // console.log(nm1.shift(""));
+        // console.log(nm1.join(""))
+        // console.log(nm1.shift(""));
+        // console.log(nm1.join(""))
+        // console.log(nm1.shift(""));
+        // console.log(nm1.join(""))
+        // console.log(nm1.shift(""));
+        // console.log(nm1.join(""))
+        // console.log(nm1.shift(""));
+        // console.log(nm1.join(""))
+        // console.log(nm1.shift(""));
+        // console.log(nm1.join(""))
+
+
+    </script>
+</body>
+</html>

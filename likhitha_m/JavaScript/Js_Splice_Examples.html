@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Splice Examples</title>
+</head>
+<body>
+    <h1>Js Splice Examples</h1>
+    <script>
+        // Removing elements
+        // first argument - index
+        // second argument - number of elements
+
+        // Removing the 3 from the array [1,2,3,4,5].
+        let array = [1,2,3,4,5];
+        console.log(array)
+        let copy = array.splice(2,1);
+        console.log(copy)
+        console.log(array);
+
+        //  Add the number 6 between 5 and 7 in the array [1, 2, 3, 4, 5, 7, 8]
+        let array1 = [1,2,3,4,5,7,8];
+        console.log(array1);
+        array1.splice(5,0, 6)
+        console.log(array1)
+
+        // Replace 4 with 40 in the array [1, 2, 3, 4, 5].
+        let replace = [1,2,3,4,5];
+        console.log(replace);
+        replace.splice(3,1, 40);
+        console.log(replace);
+
+        // Remove 30 and 40 from the array [10, 20, 30, 40, 50].
+        let remove = [10,20,30,40,50];
+        console.log(remove);
+        remove.splice(2,2);
+        console.log(remove);
+
+        // Add a and b at the beginning of the array [c, d, e].
+        let add = ["c","d","e"];
+        console.log(add);
+        add.splice(0,0, "a","b");
+        console.log(add);
+
+        // Replace banana and orange with grape and kiwi in the array ['apple', 'banana', 'orange', 'pear'].
+        let fruits = ["apple","banana","orange","pear"];
+        console.log(fruits);
+        fruits.splice(1,2, "grape", "kiwi");
+        console.log(fruits)
+
+        // Remove the last element from the array ['one', 'two', 'three'].
+        let last = ["one","two","three"];
+        console.log(last);
+        last.splice(2,1);
+        console.log(last)
+
+        // Add d at the end of the array ['a', 'b', 'c'] without using push().
+        let end = ["a","b","c"];
+        console.log(end);
+        end.splice(3,1, "d");
+        console.log(end);
+
+        // Remove all elements from index 2 to the end of the array [1, 2, 3, 4, 5].
+        let all = [1,2,3,4,5];
+        console.log(all);
+        all.splice(2,3);
+        console.log(all)
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice</title>
+    <style>
+        .mainbox {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            color:white;
+        }
+        .header, .footer {
+            height: 50px;
+            width: 400px;
+            text-align: center;
+            place-content: center;
+            background-color: rgba(0, 139, 139, 0.63);
+        }
+        .middle {
+            display: flex;
+            gap: 10px;
+            text-align: center;
+        }
+        .aside {
+            height: 200px;
+            width: 120px;
+            place-content: center;
+            background-color: rgb(111, 192, 29);
+        }
+        .article {
+            height: 200px;
+            width: 270px;
+            background-color: orange;
+        }
+        .art {
+            margin-top: 90px;
+        }
+        .image {
+            /* margin-top: 10px; */
+            display: flex;
+            gap: 5px;
+            padding: 10px;
+            justify-content:space-evenly;
+        }
+        .img1, .img2, .img3 {
+            place-content: center;
+            height: 65px;
+            width: 80px;
+            background-color:rgba(255, 255, 0, 0.742);
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <div class="header">Header</div>
+        <div class="middle">
+            <div class="aside">Aside</div>
+            <div class="article">
+                <div class="art">Article</div>
+                <div class="image">
+                <div class="img1">Image</div>
+                <div class="img2">Image</div>
+                <div class="img3">Image</div></div>
+            </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

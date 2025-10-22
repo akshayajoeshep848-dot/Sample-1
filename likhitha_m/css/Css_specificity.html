@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        /* !important */
+        * {
+            color: cornflowerblue ;
+        }
+        #para + ul {
+            color: blueviolet;
+        }
+        p + [type="square"]{
+            color: deeppink;
+        }
+        span{
+            color: darkblue;
+        }
+        li{
+            color: darkseagreen;
+        }
+        /* li:hover{
+            color: yellow;
+        } */
+    </style>
+</head>
+<body>
+    <h1>Css Specificity</h1>
+    <p id="para" class="para1">This is ParaGraph</p>
+    <ul class="ul" type="square">
+        <span>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        </span>
+    </ul>
+</body>
+</html>

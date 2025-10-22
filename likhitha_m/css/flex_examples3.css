@@ -1,0 +1,44 @@
+.box2 {
+    margin: 70px;
+    display: flex;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: space-between;
+    background-color:darkseagreen;
+    color: white;
+}
+.miriui2 {
+    display: flex;
+    gap: 50px;
+    position: relative;
+    top: 15px;
+}
+.flex-container2 {
+    gap: 20px;
+    position: relative;
+    top: 8px;
+    font-size: 20px;
+}
+.miri2::before {
+    content: "\229A";
+    font-size: 23px;
+    padding-right: 10px;/
+}
+.image {
+    display: flex;
+    gap: 30px;
+}
+.flex-iv{
+    background-color: blue;
+    padding: 15px;
+    position: relative;
+    top: -15px;
+    border-radius: 10px;  
+}
+/* .flex-iv::before {
+    content: "\2658";
+    padding-right: 8px;
+} */
+/* .fa fa-address-book {
+    gap: 20px;
+} */

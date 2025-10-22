@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Selectors</title>
+    <style>
+        *{
+            color: darkgray;
+            margin: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .dtn {
+            background-image: url("animal.png");
+            background-color: aqua;
+            margin: 20px;
+            background-repeat: no-repeat;
+            height: 170px;
+            width: 200px;
+        }
+
+        #para-1 {
+            background-color: aquamarine;
+            padding: 20px;
+            margin: 20px;
+            /* color: blueviolet; */
+            border-radius: 20px;
+            box-shadow: 3px 3px 10px grey;
+        }
+        h1{
+            color: blueviolet;
+            margin: 20px;
+            background-color: rgb(131, 199, 201);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .para {
+            background-color: blanchedalmond;
+            padding: 20px;
+            /* color: blueviolet; */
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: 3px 3px 10px grey;
+        }
+        .para-3{
+            background-color: blanchedalmond;
+            padding: 20px;
+            /* color: blueviolet; */
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: 3px 3px 10px grey;
+        }
+        .color {
+            /* color: darkblue; */
+            background-color: chocolate;
+        }
+        [type]{
+            border: 2px solid red;
+        }
+        [type="text"]{
+            border: 2px solid goldenrod;
+        }
+    </style>
+</head>
+
+<body>
+    <label>First Name</label>
+    <input type="text">
+
+    <input type="email">
+    
+    <input type="number">
+    <input type="date">
+    <input type="month">
+    <input type="datetime-local">
+    <br>
+    <br><br>
+    <input type="email">
+    <input type="number">
+    <input type="date">
+    <div class="dtn"></div>
+    <h1>Css Selector</h1>
+    <p id="para-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente beatae quibusdam sequi sunt
+        expedita ut at dolores libero numquam ratione.</p>
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus eum incidunt blanditiis vel?
+        Ullam sint nobis mollitia tenetur rem culpa.</p>
+    <p class="para-3 color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, animi.</p>
+</body>
+
+</html>
+
+
+
+
+

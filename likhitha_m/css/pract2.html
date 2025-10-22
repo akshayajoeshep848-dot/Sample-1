@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Boxes</title>
+    <style>
+        .mainbox {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 400px;
+            padding: 10px;
+            background-color: aqua;
+        }
+        .item {
+            height: 50px;
+            width: 400px;
+            background-color:orange;
+        }
+        .middle {
+            display: flex;
+            text-align: center;
+            /* gap: 5px; */
+        }
+        .item1 {
+            height: 130px;
+            width: 280px;
+            place-content: center;
+            border: 4px solid orange;
+            background-color: rgba(137, 43, 226, 0.596);
+        }
+        .item2 {
+            height: 61px;
+            width: 105px;
+            place-content: center;
+            border: 4px solid orange;
+            background-color: rgba(137, 43, 226, 0.605);
+        }
+        .item3 {
+            height: 61px;
+            width: 105px;
+            place-content: center;
+            border: 4px solid orange;
+            background-color: rgba(137, 43, 226, 0.605);
+        }
+        .middle2 {
+            display: flex;
+            text-align: center;
+        }
+        .item4 {
+            height: 50px;
+            width: 195px;
+            place-content: center;
+            border: 4px solid orange;
+            background-color: rgba(137, 43, 226, 0.605);
+        }
+        .item5 {
+            height: 50px;
+            width: 190px;
+            place-content: center;
+            border: 4px solid orange;
+            background-color: rgba(137, 43, 226, 0.605);
+        }
+        .middle3 {
+            display: flex;
+            text-align: center;
+        }
+        .item6 {
+            height: 50px;
+            width: 125px;
+            place-content: center;
+            border: 4px solid orange;
+            background-color: rgba(137, 43, 226, 0.605);
+        }
+        .item7 {
+            height: 50px;
+            width: 125px;
+            place-content: center;
+            border: 4px solid orange;
+            background-color: rgba(137, 43, 226, 0.605);
+        }
+        .item8 {
+            height: 50px;
+            width: 125px;
+            place-content: center;
+            border: 4px solid orange;
+            background-color: rgba(137, 43, 226, 0.605);
+        }
+    </style>
+</head>
+<body>
+   <div class="mainbox">
+    <div class="item">Flex-container</div>
+    <div class="middle">
+        <div class="item1">Flex-item 1</div>
+        <div class="middle1">
+            <div class="item2">flex-item 1</div>
+            <div class="item3">flex-item 2</div>
+        </div>
+    </div>
+    <div class="middle2">
+        <div class="item4">flex-item 1</div>
+        <div class="item5">flex-item 2</div>
+    </div>
+    <div class="middle3">
+        <div class="item6">flex-item 1</div>
+        <div class="item7">flex-item 2</div>
+        <div class="item8">flex-item 3</div>
+    </div>
+   </div>
+</body>
+</html>

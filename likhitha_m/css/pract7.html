@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice</title>
+    <style>
+        .mainbox {
+            display: flex;
+            border: 5px solid black;
+            flex-direction: column;
+            gap: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .css {
+            text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            background-color: aquamarine;
+        }
+        
+        .flex {
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+            background-color: black;
+        }
+        .middle {
+            display: flex;
+            padding-left: 50px;
+            padding-right: 50px;
+            gap: 20px;
+            justify-content: center;
+        }
+        button {
+            margin-left: 40px;
+            margin-bottom: 10px; 
+            border: none;
+            font-size: 17px;
+            padding: 10px;
+            width: 150px;
+            color: white;
+            background-color: rgba(255, 0, 0, 0.599);
+        }
+        .read {
+            height: 100px;
+            width: 233px;
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            place-content: center;
+            background-color: rgba(255, 0, 0, 0.625);
+        }
+        .you {
+            height: 100px;
+            width: 233px;
+            color: white;
+            font-size: 25px;
+            text-align: center;
+            place-content: center;
+            background-color: rgba(255, 0, 0, 0.625);
+        }
+        .ang {
+            color: white;
+            font-size: 25px;
+            height: 100px;
+            width: 233px;
+            text-align: center;
+            place-content: center;
+            background-color: rgba(255, 0, 0, 0.625);
+        }
+        .query {
+            color: white;
+            font-size: 25px;
+            height: 100px;
+            width: 233px;
+            text-align: center;
+            place-content: center;
+            background-color: rgba(255, 0, 0, 0.625);
+        }
+        .react {
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px 5px rgba(128, 128, 128, 0.164);
+        }
+        .vue {
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px 5px rgba(128, 128, 128, 0.164);
+        }
+        .angular {
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px 5px rgba(128, 128, 128, 0.164);
+        }
+        .jquery {
+            border: 1px solid white;
+            box-shadow: 0px 0px 10px 5px rgba(128, 128, 128, 0.164);
+        }
+        .empty {
+            height: 40px;
+            background-color:aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+        <div class="top">
+            <div class="css">Css Responsive</div>
+            <div class="flex">FlexBox Cards</div>
+        </div>
+        <div class="middle">
+            <div class="react"><div class="read">React</div>
+                <div style="padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Lorem ipsum dolor sit, amet <br>consectetur adipisicing elit.<br> Ullam nulla at necessitatibus<br> similique
+                    quae numquam sint<br> dolorum aperiam minus beatae!</div>
+                    <button>Read More</button>
+                </div>
+            <div class="vue"><div class="you">Vue</div> 
+                 <div style="padding: 15px ; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Lorem ipsum dolor sit, amet <br>consectetur adipisicing elit.<br> Ullam nulla at necessitatibus<br> similique
+                    quae numquam sint<br> dolorum aperiam minus beatae!</div>
+                    <button>Read More</button>
+            </div>
+            <div class="angular"><div class="ang">Angular</div>
+                 <div style="padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Lorem ipsum dolor sit, amet <br>consectetur adipisicing elit.<br> Ullam nulla at necessitatibus<br> similique
+                    quae numquam sint<br> dolorum aperiam minus beatae!</div>
+                    <button>Read More</button>
+            </div>
+            <div class="jquery"><div class="query">JQuery</div>
+                 <div style="padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Lorem ipsum dolor sit, amet <br>consectetur adipisicing elit.<br> Ullam nulla at necessitatibus<br> similique
+                    quae numquam sint<br> dolorum aperiam minus beatae!</div>
+                    <button>Read More</button>
+            </div>
+        </div>
+        <div class="empty"></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Grid 2</title>
+    <style>
+        .grid-container {
+            display: grid;
+            background-image: url('./nature.png');
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            grid-template-columns: 1fr 8fr 2fr;
+            grid-template-rows: 1fr 8fr 1fr;
+            height: 100vh;  
+            /* gap: 10px; */
+            grid-template-areas: 
+            "header header content1"
+            "sidenav content content1"
+            "sidenav footer footer";
+        }
+        .grid-item {
+            /* background-image: url('./animal.png'); */
+            background-repeat: no-repeat;
+            background-size: contain;
+            /* border-radius: 10px; */
+            text-align: center;
+            color: white;
+            border: 5px solid white;
+            place-content: center;
+            /* color: white; */
+            background-color: transparent;
+            /* background-color: lightblue; */
+        }
+        .grid-item1 {
+            grid-area: header;
+        }
+        .grid-item2 {
+            grid-area: sidenav;
+        }
+        .grid-item3 {
+            grid-area: content;
+        }
+        .grid-item4 {
+            grid-area: content1;
+        }
+        .grid-item5 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item1">Header</div>
+        <div class="grid-item grid-item2">Side Nav Bar</div>
+        <div class="grid-item grid-item3">Content</div>
+        <div class="grid-item grid-item4">Content1</div>
+        <div class="grid-item grid-item5">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM class2</title>
+    <style>
+        /* h1 {
+            box-shadow: 0px 0px 10px grey;
+        } */
+    </style>
+</head>
+<body>
+    <!-- <h1>sjfgh</h1> -->
+    <div id="div-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, expedita!</div>
+    <div class="div-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet atque numquam aliquam, alias molestias porro.</div>
+    <script>
+        // document.querySelector (css_selector)
+        let div1 = document.querySelector("#div-1");
+        console.log(div1.innerText);
+        div1.innerText = `This is div 1`;
+        div1.style.backgroundColor = "lightblue";
+        div1.style.padding = "20px";
+        div1.style.color = "#00ff";
+        div1.style.border = "1px dashed red";
+        div1.style.margin = "10px";
+        div1.style.fontSize = "30px";
+        div1.style.boxShadow = "5px 5px 10px #00ffff";
+        div1.style.textDecoration = "underline";
+        div1.style.textDecorationColor = "yellow"
+
+        let div2 = document.querySelector(".div-2");
+        console.log(div2.innerText);
+        // div2.innerText = (div2.innerText)
+        div2.innerText = `This is div tag 2`;
+        div2.style.color = "#00ff00";
+        div2.style.border = "2px solid green"
+        div2.style.backgroundColor = "#ff00ff";
+        div2.style.padding = "20px"
+    </script>
+</body>
+</html>

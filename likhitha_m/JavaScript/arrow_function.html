@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <h1>Arrow function</h1>
+    <button onclick="addTwoNmbr(5,5)">Calculate</button>
+    <button onclick="sum1(3,5)">Calculate</button>
+    <script>
+        // Write a function to add two numbers
+
+        // Regular function
+        function addTwoNmbr (a, b){
+            // return a + b;
+            console.log(a +b)
+        };
+
+        // Function Expression or anonymus function
+        let sum = function (a,b) {
+            return a + b;
+        }
+
+        // Arrow function 
+        let arrowFunction = (a , b) => a + b;
+
+        // Multiply two numbers
+        let multiply = (a, b) => a * b;
+
+        // console.log(multiply(13,4));
+
+        // Square root of a function
+        let squareRoot = (a) => a ** 0.5 ;
+        console.log(squareRoot(25));
+
+        // write a function print in console and return sum of two numbers
+        let sum1 = (a, b) => {
+            console.log(a + b);
+            return a + b;
+        };
+        console.log(a +b)
+    </script>
+</body>
+</html>

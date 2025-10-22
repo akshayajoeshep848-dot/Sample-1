@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice 1</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr) ;
+            grid-template-rows: repeat(4, 1fr) ;
+            height: 100vh;
+            gap: 10px;
+            grid-template-areas: 
+            "header header header"
+            "sidebar content1 content1"
+            "sidebar content2 content3"
+            "footer footer footer";
+        }
+        .grid-item {
+            background-color: blueviolet;
+            text-align: center;
+            place-content: center;
+            color: white;
+            box-shadow: 0px 0px 70px 0px rgba(240, 128, 128, 0.637) inset;
+        }
+        .grid-items1 {
+            grid-area: header;
+        }
+        .grid-items2 {
+            grid-area: sidebar;
+        }
+        .grid-items3 {
+            grid-area: content1;
+        }
+        .grid-items4 {
+            grid-area: content2;
+        }
+        .grid-items5 {
+            grid-area: content3;
+        }
+        .grid-items6 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <grid-items class="grid-item grid-items1">header</grid-items>
+        <grid-items class="grid-item grid-items2">sidebar</grid-items>
+        <grid-items class="grid-item grid-items3">content1</grid-items>
+        <grid-items class="grid-item grid-items4">content2</grid-items>
+        <grid-items class="grid-item grid-items5">content3</grid-items>
+        <grid-items class="grid-item grid-items6">footer</grid-items>
+    </div>
+</body>
+</html>

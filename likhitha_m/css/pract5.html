@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice</title>
+    <style>
+        .mainbox {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align:center;
+        }
+        .header {
+            height: 60px;
+            width: 400px;
+            background-color: greenyellow;
+        }
+        .first {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .ads {
+            height: 100px;
+            width: 100px;
+            background-color: greenyellow;
+        }
+        .nav {
+             height: 200px;
+            width: 100px;
+            background-color: greenyellow;
+        }
+        .middle {
+            display: flex;
+            gap: 10px;
+        }
+        .second {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .article {
+            height: 230px;
+            width: 290px;
+            background-color: greenyellow;
+        }
+        .footer {
+            height: 70px;
+            width: 290px;
+            background-color:greenyellow ;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <div class="header">Header</div>
+        <div class="middle">
+            <div class="first">
+                <div class="ads">Ads</div>
+                <div class="nav">Nav</div>
+            </div>
+            <div class="second">
+                <div class="article">Article</div>
+                <div class="footer">Footer</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

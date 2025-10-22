@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        .mainbox {
+            background-color: blueviolet;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 550px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 1000px;
+        }
+        h3 {
+            text-align: center;
+            position: relative;
+            top: 30px;
+            color: white;
+        }
+        p {
+            padding-left: 180px;
+            color: white;
+        }
+        .cards {
+            display: flex;
+            flex-direction: row;
+            padding-left: 120px;
+            gap: 20px;
+        }
+        .card1, .card2 ,.card3 {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 300px;
+            
+        }
+        span {
+            font-weight: bold;
+            color: rgb(23, 160, 160);
+        }
+        .month {
+            font-size: 15px;
+        }
+        .dollar  {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <h3 class="choose">CHOOSE YOUR PLAN</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            Consequuntur corporis inventore<br>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            rem, tempore placeat consequatur ipsum?
+             Atque veritatis at consequatur ?</p>
+        <div class="cards">
+            <div class="card1">
+            <div><span>STARTUP</span>
+                <div>Perfect for small less than 10<br> team</div>
+                <br>
+                <div style="font-size: 45px; font-weight: bold;"><sup class="dollar">$</sup>16<sub class="month">/month</sub></div>
+                <br>
+                <div>-1 GB of Space</div>
+                <div>-Support at $25/hour</div>
+                <div>-Small social media</div>
+                <br>
+                <button style="border: none; background-color: rgb(20, 187, 131); color: white; padding: 10px; border-radius: 20px; width: 200px;">CHOOSE YOUR PLAN </button>
+            </div>
+            </div>
+            <div class="card2">
+            <div><span>ENTERPRICE</span>
+                <br>
+                <div>Perfect for small less than 10<br> team</div>
+                <br>
+                <div style="font-size: 45px; font-weight: bold;"><sup class="dollar">$</sup>49<sub class="month">/month</sub></div>
+                <br>
+                  <div>-1 GB of Space</div>
+                  <div>-Support at $25/hour</div>
+                  <div>-Small social media</div>
+                  <br>
+                <button style="border: none; background-color: rgb(20, 187, 131); color: white; padding: 10px; border-radius: 20px; width: 200px;">CHOOSE YOUR PLAN </button>
+                </div>
+            </div>
+            <div class="card3">
+            <div><span>DEVELOPER</span>
+                  <div>Perfect for small less than 10<br> team</div>
+                  <br>
+                  <div style="font-size: 45px; font-weight: bold;"><sup class="dollar">$</sup>99<sub class="month">/month</sub></div>
+                  <br>
+                  <div>-1 GB of Space</div>
+                  <div>-Support at $25/hour</div>
+                  <div>-Small social media</div>
+                  <br>
+                <button style="border: none; background-color: rgb(20, 187, 131); color: white; padding: 10px; border-radius: 20px; width: 200px;">CHOOSE YOUR PLAN </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

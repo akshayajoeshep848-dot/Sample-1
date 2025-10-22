@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Flex</title>
+    <style>
+        .mainbox {
+            display: flex;
+            background-color: rgba(128, 128, 128, 0.449);
+            width: 410px;
+            padding: 10px;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .header {
+            height: 60px;
+            width: 400px;
+            text-align: center;
+             place-content: center;
+            background-color: rgba(137, 43, 226, 0.855);
+            border: 4px solid black;
+        }
+        .sidebar {
+            display: flex;
+            gap: 15px;
+        }
+        .side {
+            height: 200px;
+            width: 100px;
+            text-align: center;
+             place-content: center;
+            background-color: aquamarine;
+            border: 4px solid black;
+        }
+        .one {
+            height: 90px;
+            width: 280px;
+            text-align: center;
+             place-content: center;
+            background-color: blueviolet;
+            border: 4px solid black;
+        }
+        .content1 {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .content2 {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            gap: 10px;
+        }
+        .two {
+            height: 86px;
+            width: 130px;
+            place-content: center;
+            background-color: blueviolet;
+            border: 4px solid black;
+        }
+        .three {
+            height: 86px;
+            width: 130px;
+             place-content: center;
+            background-color: blueviolet;
+            border: 4px solid black;
+        }
+        .footer {
+            height: 60px;
+            width: 400px;
+            text-align: center;
+            place-content: center;
+            background-color: rgba(137, 43, 226, 0.855);
+            border: 4px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <div class="header">Header</div>
+        <div class="sidebar">
+            <div class="side">Side Bar</div>
+            <div class="content1">
+            <div class="one">Content-1</div>
+            <div class="content2">
+            <div class="two ">Content-2</div>
+            <div class="three">Content-3</div>
+                 </div>
+             </div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

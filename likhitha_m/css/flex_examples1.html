@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Examples</title>
+    <link rel="stylesheet" href="flex_examples2.css">
+    <link rel="stylesheet" href="flex_examples3.css">
+    <link rel="stylesheet" href="flex_examples4.css">
+    <link rel="stylesheet" href="flex_examples5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .flex-container {
+            display: flex;
+            margin: 70px;
+            justify-content: start;
+            background-color: black;
+            color: white;
+            /* font-size: 19px; */
+            padding: 20px;
+            gap: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .flex-item-5 {
+            background-color: white;
+            color: green;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .flex-item-6 {
+            background-color: crimson;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+
+        }
+
+        .button {
+            display: flex;
+            font-size: 16px;
+            justify-items: end;
+            position: relative;
+            left: 600px;
+            gap: 50px;
+        }
+
+        .miriui {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: flex;
+            gap: 40px;
+            position: relative;
+            top: 15px;
+            left: 20px;
+            font-size: 14px;
+            /* justify-content: space-evenly; */
+
+        }
+
+        .miri {
+            position: relative;
+            top: 10px;
+            font-size: 20px;
+        }
+
+        .miri::before {
+            content: "\229A";
+            /* content: "\e10c"; */
+            padding-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Navigation</h1>
+    <div class="flex-container">
+        <div class="flex-item miri ">Miri UI</div>
+
+        <div class="miriui ">
+            <div class="flex-item flex-item-1">Home</div>
+            <div class="flex-item flex-item-2">Templates</div>
+            <div class="flex-item flex-item-3">Pages</div>
+            <div class="flex-item flex-item-4">Elements</div>
+        </div>
+        <div class="button ">
+            <div class="flex-item flex-item-5">Buy Now</div>
+            <div class="flex-item flex-item-6">Discover</div>
+
+        </div>
+    </div>
+    <div class="box">
+        <div class="flex-container1">
+            <div class="flex-item miri1">Miri UI</div>
+        </div>
+        <div class=" miriui1">
+            <div class="flex-item flex-1">Home</div>
+            <div class="flex-item flex-2">Templates</div>
+            <div class="flex-item flex-3">Pages</div>
+            <div class="image">
+                <div class="flex-item flex-4"></div>
+                <div class="flex-item flex-5"></div>
+                <div class="flex-item flex-6"></div>
+                <!-- <i class="fa fa-car"></i> -->
+                 <i class="fa-brands fa-linkedin"></i>
+                 <i class="fa-brands fa-square-twitter"></i>
+                 <i class="fa-brands fa-facebook"></i>
+                 <i class="fa-brands fa-youtube"></i>
+                 <i class="fa-brands fa-instagram"></i>
+                 
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="flex-container2">
+                <div class="flex-item miri2">Miri UI</div>
+            </div>
+            <div class=" miriui2">
+                <div class="flex-item flex-i">Home</div>
+                <div class="flex-item flex-ii"><select style="border: none; background-color:darkseagreen; color: white;">
+                <option>Templates</option>
+            </select></div>
+            <div class="flex-item flex-iii"><select style="border: none; background-color:darkseagreen; color: white;">
+                <option>Pages</option>
+            </select></div>
+            <div class="flex-item flex-iv"><i class="fa fa-address-book" aria-hidden="true"></i>Sign In</div>
+            <div class="image">
+                <!-- <i class="fa fa-car"></i> -->
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                <div class="flex-item flex-v"></div>
+                <div class="flex-item flex-vi"></div>
+            </div>
+        </div>
+    </div>
+             <div class="box3">
+                 <div class="flex-container4">
+                     <div class="flex-item miri4">Miri UI</div>
+        </div>
+        <div class=" miriui4">
+            <i class="fa-brands fa-facebook"></i>
+            <div class="flex-item flex-A">Facebook</div>
+            <i class="fa-brands fa-square-twitter"></i>
+            <div class="flex-item flex-B">Twitter</div>
+            <i class="fa-brands fa-instagram"></i>
+            <div class="flex-item flex-C">Instagram</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="combine">
+        <div class="line"></div>
+        <div class="lead">LEAD</div>
+        </div>
+        <div class="lead1">
+            <div class="overview">Overview</div>
+            <div class="components">Components</div>
+            <div class="resources">Resources</div>
+            <div class="faq">FAQ</div>
+            <div class="dot">...</div>
+        </div>
+        <button style="border: none; padding: 20px; border-radius: 50px;">Button</button>
+    </div>
+</body>
+            
+</html>

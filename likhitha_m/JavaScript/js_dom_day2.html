@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Class 2</title>
+</head>
+
+<body>
+    <h1>getElementByClassName</h1>
+    <div class="container">
+        <div class="menu-item menu-item1">Menu Items 1</div>
+        <div class="menu-item menu-item2">Menu Items 2</div>
+        <div class="menu-item menu-item3">Menu Items 3</div>
+        <div class="menu-item menu-item4">Menu Items 4</div>
+    </div>
+
+    <!-- <div class="para-container">
+        <p>This is para 1</p>
+        <p>This is para 2</p>
+        <p>This is para 3</p>
+        <p>This is para 4</p>
+    </div> -->
+
+    <!-- <div class="button-container">
+        <button class="button-item">Button 1</button>
+        <button class="button-item">Button2</button>
+        <button class="button-item">Button 3</button>
+        <button class="button-item">Button 4</button>
+        <button class="button-item">Button 5</button>
+    </div> -->
+    <script>
+        // getElementsByClassName
+
+        let menuItems = document.getElementsByClassName("menu-item");
+        // console.log(typeof menuItems);
+        console.log(Array.isArray(menuItems));
+        console.log(menuItems);
+        console.log(Array.isArray(Array.from(menuItems) ));
+        console.log(Array.from(menuItems))
+        let menuItemsArray = Array.from(menuItems);
+        menuItemsArray.forEach((item) => (item.innerText = "Likhitha"))
+
+        // getElementsByTagName
+        // let paraItems = document.getElementsByTagName("p");
+        // let actorArray = [
+        //     {
+        //         name: "Prabhas",
+        //         profession: "Acting",
+        //         movies: ["Mirchi", "Rebal"],
+        //     },
+        //     {
+        //         name: "N.T.R",
+        //         profession: "Acting",
+        //         movies: ["Adhi", "RRR"],
+        //     },
+        //     {
+        //         name: "Sai Pallavi",
+        //         profession: "Acting, Doctor",
+        //         movies: ["fidaa", "Love Story"],
+        //     },
+        //     {
+        //         name: "Anushka",
+        //         profession: "Acting, Modelling",
+        //         movies: ["Arundathi", "Billa"],
+        //     },
+        // ];
+        // // let arr = ["Likhitha", "Akshaya", "Jimmikku", "Gummikku"]
+        // Array.from(paraItems).forEach((element,index) => {
+        //     // element.innerText = arr[index];
+        //     element.innerText = `Actor Name: ${actorArray[index].profession}`;
+        // });
+
+
+        // querySelector All
+        // Nodelist - Static list
+        // let styleArray = [
+        //     {
+        //         name: "Click Me",
+        //         backgroundColor: "lightpink",
+        //         width: "100px",
+        //         padding: "10px",
+        //         border: "none",
+        //         margin : "10px",
+        //         color: "white",
+        //         borderRadius: "10px",
+        //         boxShadow: "2px 2px 10px lightgrey",
+        //     },
+        //     {
+        //         name: "Submit",
+        //         backgroundColor: "lightblue",
+        //         width: "100px",
+        //         border: "none",
+        //         padding: "10px",
+        //         margin : "10px",
+        //         color: "white",
+        //         borderRadius: "10px",
+        //         boxShadow: "2px 2px 10px lightgrey",
+        //     },
+        //     {
+        //         name: "Login",
+        //         backgroundColor: "lightgreen",
+        //         border: "none",
+        //         padding: "10px",
+        //         width: "100px",
+        //         margin : "10px",
+        //         color: "white",
+        //         borderRadius: "10px",
+        //         boxShadow: "2px 2px 10px lightgrey",
+        //     },
+        //     {
+        //         name: "Register",
+        //         backgroundColor: "orange",
+        //         width: "100px",
+        //         padding: "10px",
+        //         border: "none",
+        //         margin : "10px",
+        //         color: "white",
+        //         borderRadius: "10px",
+        //         boxShadow: "2px 2px 10px lightgrey",
+        //     },
+        //     {
+        //         name: "Apply",
+        //         backgroundColor: "magenta",
+        //         padding: "10px",
+        //         width: "100px",
+        //         margin : "10px",
+        //         border: "none",
+        //         color: "white",
+        //         borderRadius: "10px",
+        //         boxShadow: "2px 2px 10px lightgrey",
+        //     },
+        // ];
+        // let buttonItems = document.querySelectorAll(".button-item")
+        // buttonItems.forEach((item, index) => {
+        //     item.innerText = styleArray[index].name;
+        //     // item.style.backgroundColor = "lightpink";
+        //     item.style.backgroundColor = styleArray[index].backgroundColor;
+        //     // item.style.border = "none";
+        //     item.style.border = styleArray[index].border;
+        //     // item.style.width = "100px";
+        //     item.style.width = styleArray[index].width;
+        //     // item.style.margin = "10px";
+        //     item.style.margin = styleArray[index].margin;
+        //     // item.style.color = "white";
+        //     item.style.color = styleArray[index].color;
+        //     // item.style.padding = "15px";
+        //     item.style.padding = styleArray[index].padding;
+        //     // item.style.borderRadius = "10px";
+        //     item.style.borderRadius = styleArray[index].borderRadius;
+        //     // item.style.boxShadow = "2px 2px 10px lightgrey";
+        //     item.style.boxShadow = styleArray[index].boxShadow;
+        // });
+    </script>
+</body>
+</html>

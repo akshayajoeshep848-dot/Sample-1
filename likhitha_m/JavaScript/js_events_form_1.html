@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Listener Form</title>
+    <style>
+        .focus {
+            color: blue;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit" id="form">
+        <label for="firstname">First Name</label>
+        <input type="text" id="firstname" name="firstname">
+        <label for="Lastname">Last Name</label>
+        <input type="text" id="lastname" name="lastname">
+
+        <select name="gender" id="gender">
+            <option value="choose">Choose</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            <option value="others">Others</option>
+        </select>
+        <br><br>
+        <button type="submit">submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    <div id="record-list"></div>
+    <script>
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+        let gender = document.getElementById("gender");
+        let submit = document.getElementById("submit");
+        let recordList = document.getElementById("record-list")
+        let formobj = {};
+        let formArray = [];
+        
+        // Input
+        firstname.addEventListener('change', (event) => {
+            console.log(event.target.value)
+            formobj[event.target.name] = event.target.value;
+            console.log(formobj);
+        });
+
+        // focus
+        // firstname.addEventListener("focus", (event) => {
+        //     event.target.style.backgroundColor = "lightpink"
+            // event.target.style.border = "5px double grey"
+        // });
+        // blur
+        // firstname.addEventListener("blur", (event) => {
+        //     event.target.style.backgroundColor = "grey";
+        //     event.target.style.border = "5px dotted green"
+        // })
+        lastname.addEventListener('input', (event) => {
+            console.log(event.target.value)
+            formobj[event.target.name] = event.target.value;
+            console.log(formobj);
+        }); 
+
+        // Change
+        gender.addEventListener("change", (event) => {
+            console.log(event.target.value)
+            formobj[event.target.name] = event.target.value;
+        });
+
+        // gender.removeEventListener("change", (event) => console.log(event.target.value));
+
+        // submit
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            console.log(formobj)
+            formArray.push(formobj)
+            formobj = {};
+            // console.log(form)
+            console.log("Submit Successfully")})
+            form.reset();
+            // reset
+            form.addEventListener("reset", (event) => {
+                console.log(formobj)
+                console.log("Reseting the form")
+                form.reset();
+        })
+
+
+        formArray.forEach((element, index) => {
+            document.createElement("div");
+        })
+        // recordList.innerHTML= `<p> This is ${formArray} </p>`
+        // div.append(recordList)
+        </script>
+</body>
+</html>

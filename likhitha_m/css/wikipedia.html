@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WikiPedia</title>
+    <style>
+        [type="action"]{
+            background-image: url("wikipedia2.html");
+        }
+    </style>
+</head>
+
+<body>
+    <form action="wikipedia2.html">
+        <h1>Wikipedia</h1>
+        <label for="fn">First Name:</label>
+        <input type="text" id="fn" placeholder="Enter Name" name="fn" required>
+        <br><br>
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" placeholder="Enter Email" name="mail" required>
+        <br><br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass" required placeholder="Enter Password">
+        <br><br>
+        <label for="dt">Date:</label>
+        <input type="datetime-local" required name="dt" id="dt">
+        <br><br>
+        <label for="gn">Gender:</label>
+        <input type="radio" name="gn" required><label for="gn">Male</label>
+        <input type="radio" name="gn" required><label for="gn">Female</label>
+        <input type="radio" name="gn" required><label for="gn">Others</label>
+        <br><br>
+        <label for="ct">City:</label>
+        <select name="ct" id="ct" required>
+            <option value="ct">Select</option>
+            <option value="ct">Sivapuram</option>
+            <option value="ct">Chinnampeta</option>
+            <option value="ct">Chinthalapudi</option>
+        </select>
+        <br><br>
+        <label for="ta">Enter Address:</label>
+        <textarea name="ta" id="ta" required placeholder="Enter Address"></textarea>
+        <br><br>
+        <button>Reset</button>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <input type="submit" name="submit" value="submit">
+    </form>
+</body>
+
+</html>

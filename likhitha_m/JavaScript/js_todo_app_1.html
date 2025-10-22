@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS TO-DO App</title>
+  <style>
+    body {
+      background-color: rgba(135, 206, 250, 0.518);
+    }
+    #head {
+      text-align: center;
+    }
+      #main {
+        background-color: rgba(255, 255, 255, 0.639);
+        height: 250px;
+        width: 450px;
+        border-radius: 5px;
+      }
+      #task {
+        margin-left: 10px;
+        padding: 6px;
+        border: 1px solid grey;
+        border-radius: 5px;
+      }
+      #time {
+        margin-left: 10px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 6px;
+      }
+      #add {
+        margin-left: 10px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        padding: 6px;
+      }
+      #record {
+        margin-top: 50px;
+        border-radius: 10px;
+        background-color: rgba(128, 128, 128, 0.169);
+      }
+      
+  </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="head">My To-Do App</h1>
+        <input type="text"  id="task" name="task" placeholder="Add a new task...">
+        <input type="tel" id="time" name="time" placeholder="Duration (e.g.,30m)">
+        <button id="add">Add</button>
+
+        <div id="box">
+        <div id="icon-record">
+          <div id="check"></div>
+          <div id="record"></div>
+        </div>
+        <div id="edit-delete">
+          <div id="edit"></div>
+          <div id="delete"></div>
+        </div>
+        </div>
+      </div>
+    <script>
+      const task = document.getElementById("task");
+      const time = document.getElementById("time");
+      const add = document.getElementById("add");
+      const record = document.getElementById("record");
+      
+
+      let emptyArray = [];
+
+      add.addEventListener("click", () => {
+        const taskValue = task.value.trim();
+        const timeValue = time.value.trim();
+
+
+        if (taskValue === "" || timeValue === "") {
+          alert("Please enter both task and time!");
+          return;
+        }
+
+        const obj = {
+          task: taskValue,
+          time: timeValue
+        };
+
+        emptyArray.push(obj);
+
+        task.value = "";
+        time.value = "";
+
+        displayRecords();
+      });
+
+      function displayRecords() {
+
+        record.innerHTML = "";
+
+        emptyArray.forEach((item, index) => {
+          const div = document.createElement("div");
+          div.style.padding = "10px";
+          div.style.display = "flex";
+          div.style.justifyContent =  "spaceBetween"
+          div.textContent = `${item.task}  ${item.time}`;
+          record.appendChild(div);
+        });
+      }
+    </script>
+  </body>
+</html>

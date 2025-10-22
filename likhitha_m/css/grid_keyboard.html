@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .up {
+            background-color: rgba(0, 0, 0, 0.61);
+            height: 60px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .grid-container {
+            display: grid;
+            /* margin-top: 50px; */
+            height: 310px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.621);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            grid-template-columns: repeat(20, 1fr);
+            grid-template-rows: 30px repeat(5, 50px);
+            gap: 5px;
+        }
+        .fs {
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 10px;
+            justify-content: end;
+            position: relative;
+            right: 5px;
+        }
+        .middle {
+            display: flex;
+            height: 55px;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .lock {
+            display: flex;
+            font-family:Verdana, Geneva, Tahoma, sans-serif ;
+            /* top: 5px; */
+            justify-content: start;
+            position: relative;
+            left: 5px;
+            font-size: 17px;
+        }
+        .grid-item {
+            background-color: rgba(128, 128, 128, 0.658);
+            border-radius: 7px;
+        }
+        .grid-item:hover {
+            background-color: rgba(255, 255, 255, 0.822);
+            /* color: black; */
+        }
+        .grid-item:active {
+            background-color:rgba(0, 0, 255, 0.248);
+        }
+        .grid-item97 {
+            height: 30px;
+        }
+        .grid-item98 {
+            height: 30px;
+        }
+        .grid-item1 {
+            grid-area: 1/1/2/2;
+        }
+        .grid-item2 {
+            display: flex;
+            flex-direction: column;
+            grid-area: 1/2/2/3;
+        }
+        .grid-item3 {
+            grid-area: 1/3/2/4;
+        }
+        .grid-item4 {
+            grid-area: 1/4/2/5;
+        }
+        .grid-item5 {
+            grid-area: 1/5/2/6;
+        }
+        .grid-item6 {
+            grid-area: 1/6/2/7;
+        }
+        .grid-item7 {
+            grid-area: 1/7/2/8;
+        }
+        .grid-item8 {
+            grid-area: 1/8/2/9;
+        }
+        .grid-item9 {
+            grid-area: 1/9/2/10;
+        }
+        .grid-item10 {
+            grid-area: 1/10/2/11;
+        }
+        .grid-item11 {
+            grid-area: 1/11/2/12;
+        }
+        .grid-item12 {
+            grid-area: 1/12/2/13;
+        }
+        .grid-item13 {
+            grid-area: 1/13/2/14;
+        }
+        .grid-item14 {
+            grid-area: 1/14/2/15;
+        }
+        .grid-item15 {
+            grid-area: 1/15/2/16;
+        }
+        .grid-item16 {
+            grid-area: 1/16/2/17;
+        }
+        .grid-item17 {
+            grid-area: 1/17/2/18;
+        }
+        .grid-item18 {
+            grid-area: 1/18/2/19;
+        }
+        .grid-item19 {
+            grid-area: 1/19/2/20;
+        }
+        .grid-item20 {
+            grid-area: 1/20/2/21;
+        }
+        .grid-item21 {
+            grid-area: 2/1/3/2;
+        }
+        .grid-item22 {
+            grid-area: 2/2/3/3;
+        }
+        .grid-item23 {
+            grid-area: 2/3/3/4;
+        }
+        .grid-item24 {
+            grid-area: 2/4/3/5;
+        }
+        .grid-item25 {
+            grid-area: 2/5/3/6;
+        }
+        .grid-item26 {
+            grid-area: 2/6/3/7;
+        }
+        .grid-item27 {
+            grid-area: 2/7/3/8;
+        }
+        .grid-item28 {
+            grid-area: 2/8/3/9;
+        }
+        .grid-item29 {
+            grid-area: 2/9/3/10;
+        }
+        .grid-item30 {
+            grid-area: 2/10/3/11;
+        }
+        .grid-item31 {
+            grid-area: 2/11/3/12;
+        }
+        .grid-item32 {
+            grid-area: 2/12/3/13;
+        }
+        .grid-item33 {
+            grid-area: 2/13/3/14;
+        }
+        .grid-item34 {
+            grid-area: 2/14/3/17;
+        }
+        .grid-item35 {
+            grid-area: 2/17/3/18;
+        }
+        .grid-item36 {
+            grid-area: 2/18/3/19;
+        }
+        .grid-item37 {
+            grid-area: 2/19/3/20;
+        }
+        .grid-item39 {
+            grid-area: 3/1/4/3;
+        }
+        .grid-item40 {
+            grid-area: 3/3/4/4;
+        }
+        .grid-item41 {
+            grid-area: 3/4/4/5;
+        }
+        .grid-item42 {
+            grid-area: 3/5/4/6;
+        }
+        .grid-item43 {
+            grid-area: 3/6/4/7;
+        }
+        .grid-item44 {
+            grid-area: 3/7/4/8;
+        }
+        .grid-item45 {
+            grid-area: 3/8/4/9;
+        }
+        .grid-item46 {
+            grid-area: 3/9/4/10;
+        }
+        .grid-item47 {
+            grid-area: 3/10/4/11;
+        }
+        .grid-item48 {
+            grid-area: 3/11/4/12;
+        }
+        .grid-item49 {
+            grid-area: 3/12/4/13;
+        }
+        .grid-item50 {
+            grid-area: 3/13/4/14;
+        }
+        .grid-item51 {
+            grid-area: 3/14/4/15;
+        }
+        .grid-item52 {
+            grid-area: 3/15/4/17;
+        }
+        .grid-item53 {
+            grid-area: 3/17/4/18;
+        }
+        .grid-item54 {
+            grid-area: 3/18/4/19;
+        }
+        .grid-item55 {
+            grid-area: 3/19/4/20;
+        }
+        .grid-item56 {
+            grid-area: 3/20/5/21;
+        }
+        .grid-item57 {
+            grid-area: 4/1/5/3;
+        }
+        .grid-item58 {
+            grid-area: 4/3/5/4;
+        }
+        .grid-item59 {
+            grid-area: 4/4/5/5;
+        }
+        .grid-item60 {
+            grid-area: 4/5/5/6;
+        }
+        .grid-item61 {
+            grid-area: 4/6/5/7;
+        }
+        .grid-item62 {
+            grid-area: 4/7/5/8;
+        }
+        .grid-item63 {
+            grid-area: 4/8/5/9;
+        }
+        .grid-item64 {
+            grid-area: 4/9/5/10;
+        }
+        .grid-item65 {
+            grid-area: 4/10/5/11;
+        }
+        .grid-item66 {
+            grid-area: 4/11/5/12;
+        }
+        .grid-item67 {
+            grid-area: 4/12/5/13;
+        }
+        .grid-item68 {
+            grid-area: 4/13/5/14;
+        }
+        .grid-item69 {
+            grid-area: 4/14/5/17;
+        }
+        .grid-item70 {
+            grid-area: 4/17/5/18;
+        }
+        .grid-item71 {
+            grid-area: 4/18/5/19;
+        }
+        .grid-item72 {
+            grid-area: 4/19/5/20;
+        }
+        .grid-item73 {
+            grid-area: 5/1/6/4;
+        }
+        .grid-item74 {
+            grid-area: 5/4/6/5;
+        }
+        .grid-item75 {
+            grid-area: 5/5/6/6;
+        }
+        .grid-item76 {
+            grid-area: 5/6/6/7;
+        }
+        .grid-item77 {
+            grid-area: 5/7/6/8;
+        }
+        .grid-item78 {
+            grid-area: 5/8/6/9;
+        }
+        .grid-item79 {
+            grid-area: 5/9/6/10;
+        }
+        .grid-item80 {
+            grid-area: 5/10/6/11;
+        }
+        .grid-item81 {
+            grid-area: 5/11/6/12;
+        }
+        .grid-item82 {
+            grid-area: 5/12/6/13;
+        }
+        .grid-item83 {
+            grid-area: 5/13/6/14;
+        }
+        .grid-item84 {
+            grid-area: 5/14/6/17;
+        }
+        .grid-item85 {
+            grid-area: 5/17/6/18;
+        }
+        .grid-item86 {
+            grid-area: 5/18/6/19;
+        }
+        .grid-item87 {
+            grid-area: 5/19/6/20;
+        }
+        .grid-item88 {
+            grid-area: 5/20/8/21;
+        }
+        .grid-item89 {
+            grid-area: 6/1/8/2;
+        }
+        .grid-item90 {
+            grid-area: 6/2/8/3;
+        }
+        .grid-item91 {
+            grid-area: 6/3/8/4;
+        }
+        .grid-item92 {
+            grid-area: 6/4/8/5;
+        }
+        .grid-item93 {
+            grid-area: 6/5/8/12;
+        }
+        .grid-item94 {
+            grid-area: 6/12/8/13;
+        }
+        .grid-item95 {
+            grid-area: 6/13/8/14;
+        }
+        .grid-item96 {
+            grid-area: 6/14/8/15;
+        }
+        .grid-item96 ::after {
+            content: "\1F808";
+        }
+        .grid-item97 {
+            grid-area: 6/15/8/16;
+        }
+        .grid-item98 {
+            grid-area: 6/15/8/16;
+        }
+        .grid-item99 {
+            grid-area: 6/16/8/17;
+        }
+        .grid-item100 {
+            grid-area: 6/17/8/19;
+        }
+        .grid-item101 {
+            grid-area: 6/19/8/20;
+        }
+       .fn {
+        font-size: 11px;
+        position: relative;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        top: -6px;
+        left: 5px;
+       }
+       .end {
+        position: relative;
+        left: 25px;
+       }
+       
+    </style>
+</head>
+<body>
+    <div class="up"></div>
+    <div class="grid-container">
+        <div class="grid-item grid-item1"><span class="lock">Esc <span class="end">.</span></span><span class="fn">FnLock</span></div>
+        <div class="grid-item grid-item2"><i class='fas fa-volume-mute' style="position: relative; left: 5px;"></i><span class="fs">F1</span></div>
+        <div class="grid-item grid-item3"><i class="fa fa-volume-off" style="position: relative; left: 5px;"></i><span class="fs">F2</span></div>
+        <div class="grid-item grid-item4"><i class="fa fa-volume-up" style="position: relative; left: 5px;"></i><span class="fs">F3</span></div>
+        <div class="grid-item grid-item5"><i class='fas fa-microphone-alt-slash' style="position: relative; left: 5px;"></i><span class="fs">F4</span></div>
+        <div class="grid-item grid-item6"><span class="fs">F5</span></div>
+        <div class="grid-item grid-item7"><span class="fs">F6</span></div>
+        <div class="grid-item grid-item8"><span class="fs">F7</span></div>
+        <div class="grid-item grid-item9"><i class="fa fa-plane" style="position: relative; left: 5px;"></i><span class="fs">F8</span></div>
+        <div class="grid-item grid-item10"><i class="fa fa-gear" style="position: relative; left: 5px;"></i><span class="fs">F9</span></div>
+        <div class="grid-item grid-item11"><i class="fa fa-lock" style="position: relative; left: 5px"></i><span class="fs">F10</span></div>
+        <div class="grid-item grid-item12"><span class="fs">F11</span></div>
+        <div class="grid-item grid-item13"><span class="fs">F12</span></div>
+        <div class="grid-item grid-item14"><span class="fs">Insert</span></div>
+        <div class="grid-item grid-item15"><i class="fa fa-scissors" style="position: relative; left: 5px"></i><span class="fs">prtSc</span></div>
+        <div class="grid-item grid-item16" style="text-align: center; place-content: center;">Delete</div>
+        <div class="grid-item grid-item17" style="text-align: center; place-content: center;">&#9199</div>
+        <div class="grid-item grid-item18" style="text-align: center; place-content: center;"> &#9209</div>
+        <div class="grid-item grid-item19" style="text-align: center; place-content: center;">&#9198</div>
+        <div class="grid-item grid-item20" style="text-align: center; place-content: center;">&#9197</div>
+        <div class="grid-item grid-item21"><span class="lock">~</span>`</div>
+        <div class="grid-item grid-item22"><span class="lock">!</span>1</div>
+        <div class="grid-item grid-item23"><span class="lock">@</span>2</div>
+        <div class="grid-item grid-item24"><span class="lock">#</span>3</div>
+        <div class="grid-item grid-item25"><span class="lock">$</span>4</div>
+        <div class="grid-item grid-item26"><span class="lock">%</span>5</div>
+        <div class="grid-item grid-item27"><span class="lock">^</span>6</div>
+        <div class="grid-item grid-item28"><span class="lock">&</span>7</div>
+        <div class="grid-item grid-item29"><span class="lock">*</span>8</div>
+        <div class="grid-item grid-item30"><span class="lock">(</span>9</div>
+        <div class="grid-item grid-item31"><span class="lock">)</span>0</div>
+        <div class="grid-item grid-item32"><span class="lock">_</span>-</div>
+        <div class="grid-item grid-item33"><span class="lock">+</span>=</div>
+        <div class="grid-item grid-item34">Backspace</div>
+        <div class="grid-item grid-item35">Num <br>Lock</div>
+        <div class="grid-item grid-item36">/</div>
+        <div class="grid-item grid-item37">*</div>
+        <div class="grid-item grid-item38">-</div>
+        <div class="grid-item grid-item39">Tab</div>
+        <div class="grid-item grid-item40"><span class="lock">Q</span></div>
+        <div class="grid-item grid-item41"><span class="lock">W</span></div>
+        <div class="grid-item grid-item42"><span class="lock">E</span></div>
+        <div class="grid-item grid-item43"><span class="lock">R</span></div>
+        <div class="grid-item grid-item44"><span class="lock">T</span></div>
+        <div class="grid-item grid-item45"><span class="lock">Y</span></div>
+        <div class="grid-item grid-item46"><span class="lock">U</span></div>
+        <div class="grid-item grid-item47"><span class="lock">I</span></div>
+        <div class="grid-item grid-item48"><span class="lock">O</span></div>
+        <div class="grid-item grid-item49"><span class="lock">P</span></div>
+        <div class="grid-item grid-item50"><span class="lock">{</span> [</div>
+        <div class="grid-item grid-item51"><span class="lock">}</span> ]</div>
+        <div class="grid-item grid-item52"><span class="lock">|</span>\</div>
+        <div class="grid-item grid-item53"><span class="lock">7</span><span class="fs">Home</span></div>
+        <div class="grid-item grid-item54"><span class="lock"><i class="fas fa-arrow-up"></i>8</span><span class="fs"></span></div>
+        <div class="grid-item grid-item55"><span class="lock">9</span><span class="fs">PgUp</span></div>
+        <div class="grid-item grid-item56">+</div>
+        <div class="grid-item grid-item57">CapsLk</div>
+        <div class="grid-item grid-item58"><span class="lock">A</span></div>
+        <div class="grid-item grid-item59"><span class="lock">S</span></div>
+        <div class="grid-item grid-item60"><span class="lock">D</span></div>
+        <div class="grid-item grid-item61"><span class="lock">F</span></div>
+        <div class="grid-item grid-item62"><span class="lock">G</span></div>
+        <div class="grid-item grid-item63"><span class="lock">H</span></div>
+        <div class="grid-item grid-item64"><span class="lock">J</span></div>
+        <div class="grid-item grid-item65"><span class="lock">K</span></div>
+        <div class="grid-item grid-item66"><span class="lock">L</span></div>
+        <div class="grid-item grid-item67"><span class="lock">:</span>;</div>
+        <div class="grid-item grid-item68"><span class="lock">"</span>'</div>
+        <div class="grid-item grid-item69">Enter</div>
+        <div class="grid-item grid-item70"><span class="lock"><span class="fs"><i class="fas fa-arrow-left"></i></span>4</span><span class="fs"></span></div>
+        <div class="grid-item grid-item71"><span class="lock">5</span></div>
+        <div class="grid-item grid-item72"><span class="lock"><span class="fs"><i class="fas fa-arrow-right"></i></span>6</span><span class="fs"></span></div>
+        <div class="grid-item grid-item73">Shift</div>
+        <div class="grid-item grid-item74"><span class="lock">Z</span></div>
+        <div class="grid-item grid-item75"><span class="lock">X</span></div>
+        <div class="grid-item grid-item76"><span class="lock">C</span></div>
+        <div class="grid-item grid-item77"><span class="lock">V</span></div>
+        <div class="grid-item grid-item78"><span class="lock">B</span></div>
+        <div class="grid-item grid-item79"><span class="lock">N</span></div>
+        <div class="grid-item grid-item80"><span class="lock">M</span></div>
+        <div class="grid-item grid-item81"><span class="lock"><</span>,</div>
+        <div class="grid-item grid-item82"><span class="lock">></span>.</div>
+        <div class="grid-item grid-item83"><span class="lock">?</span>/</div>
+        <div class="grid-item grid-item84">Shift</div>
+        <div class="grid-item grid-item85"><span class="lock">1</span><span class="fs">End</span></div>
+        <div class="grid-item grid-item86"><span class="lock"><span class="fs"><i class="fas fa-arrow-down "></i></span>2</span><span class="fs"></span></div>
+        <div class="grid-item grid-item87"><span class="lock">3</span><span class="fs">PgDn</span></div>
+        <div class="grid-item grid-item88" style="text-align: center; place-content: center;">Enter</div>
+        <div class="grid-item grid-item89">Ctrl</div>
+        <div class="grid-item grid-item90">fn</div>
+        <div class="grid-item grid-item91"></div>
+        <div class="grid-item grid-item92">Alt</div>
+        <div class="grid-item grid-item93">SpaceBar</div>
+        <div class="grid-item grid-item94">Alt</div>
+        <div class="grid-item grid-item95">Ctrl</div>
+        <div class="grid-item grid-item96"><i class="fas fa-arrow-left "></i>Home</div>
+        <div class="middle">
+            <div class="grid-item grid-item97"><i class="fas fa-arrow-up"></i>Pgup</div>
+            <div class="grid-item grid-item98"><i class="fas fa-arrow-down"></i>Pgdn</div>
+        </div>
+        <div class="grid-item grid-item99"><i class="fas fa-arrow-right"></i>End</div>
+        <div class="grid-item grid-item100"><span class="lock">0</span><span class="fs">Ins</span></div>
+        <div class="grid-item grid-item101"><span class="lock">.</span><span class="fs">Del</span></div>
+        <div class="grid-item grid-item102"></div>
+    </div>
+</body>
+</html>

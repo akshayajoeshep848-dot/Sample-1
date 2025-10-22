@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spruha Dashboard</title>
+    <style>
+        * {
+            margin: 0px;
+            /* background-color: rgba(0, 255, 255, 0.159); */
+        }
+        .grid-container {
+            background-color: white;
+            position: sticky;
+            box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.138);
+        }
+        .up{
+            display: flex;
+        }
+        .item1 {
+            width: 200px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-weight: bold; */
+            font-size: 25px;
+            height: 60px;
+            background-color: black;
+           text-align: center;
+           place-content: center;
+            color: white;
+        }
+        .item2 {
+            border: 1px solid black;
+            width: 17px;
+            top: 30px;
+            position: absolute;
+            left: 210px;
+        }
+        .item2::after {
+            border: 1px solid black;
+            width: 25px;
+            left: -1px;
+            top: -7px;
+            position: absolute;
+            content: " ";
+        }
+        .item2::before {
+            content: " ";
+            left: -1px;
+            border: 1px solid black;
+            position: absolute;
+            top: 5px;
+            width: 25px;
+        }
+        select {
+            border: 0.1px solid rgba(128, 128, 128, 0.277);
+            padding: 10px;
+            margin: 10px;
+            color: grey;
+            background-color: white;
+        }
+        .item3 { 
+            padding-left: 40px;
+        }
+        #search {
+            position: absolute;
+            left: 400px;
+            top: 10px;
+            width: 250px;
+            border: 1px solid rgba(128, 128, 128, 0.436);
+            padding: 11px;
+            background-color: white;
+        }
+        .search {
+            background-image: url("./search.png");
+            height: 30px;
+            position: absolute;
+            top: 15px;
+            color: white;
+            left: 660px;
+            width: 40px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .main-container {
+            display: grid;
+            grid-template-columns: 250px repeat(1,150px) 350px;
+            grid-template-rows: 130px repeat(11,1fr);
+            height: 250vh;
+            gap: 10px;
+            background-color:rgba(0, 0, 255, 0.084);
+        }
+        .grid-element {
+            border-radius: 20px;
+            background-color: rgba(32, 178, 171, 0.491);
+        }
+        .element1 {
+            grid-area: 1/1/11/2;
+            position: sticky;
+            /* top: 10px; */
+        }
+        .element2 {
+            grid-area: 2/2/3/6;
+        }
+        .element3 {
+            grid-area: 2/6/3/9;
+        }
+        .element4 {
+            grid-area: 3/2/4/4;
+        }
+        .element5 {
+            grid-area: 3/4/4/6;
+        }
+        .element6 {
+            grid-area: 3/6/4/8;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="up">
+        <div class="grid-item item1">SPRUHA</div>
+        <div class="grid-item item2"></div>
+        <div class="grid-item item3"></div><select name="choose" id="choose" >
+            <option value="choose">Choose One</option>
+            <option value="choose">Microsoft Project</option>
+            <option value="choose">Risk Management</option>
+            <option value="choose">Team Building</option>
+            <option value="choose">T Projects...</option>
+        </select></div>
+        <input type="search" placeholder="Enter something" id="search">
+        <div class="search"></div>
+    </div>
+        <div class="container">
+            <div class="item child1"></div>
+            <div class="item child2"></div>
+            <div class="item child3"></div>
+            <div class="item child4"></div>
+            <div class="item child5"></div>
+            <div class="item child6"></div>
+            <div class="item child7"></div>
+            <div class="item child8"></div>
+            <div class="item child9"></div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="grid-element element1">1</div>
+        <div class="grid-element element2">2</div>
+        <div class="grid-element element3">3</div>
+        <div class="grid-element element4">4</div>
+        <div class="grid-element element5">5</div>
+        <div class="grid-element element6">6</div>
+        <div class="grid-element element7">7</div>
+        <div class="grid-element element8">8</div>
+        <div class="grid-element element9">9</div>
+        <div class="grid-element element10">10</div>
+        <div class="grid-element element11">11</div>
+        <div class="grid-element element12">12</div>
+    </div>
+</body>
+</html>

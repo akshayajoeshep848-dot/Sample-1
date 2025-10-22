@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+    <script>
+        // Example with an element
+        let heading = document.createElement('h1');
+        // console.log('Node type of h1:', heading.nodeType)
+        heading.innerHTML = "<h4> Heading </h4>";
+        document.body.append(heading);
+
+        // Example with an text node
+        let text = document.createTextNode ('Hello');
+        console.log('Node type of text:', text.nodeType);
+        document.body.append(text)
+        
+        // Example with a comment node
+        let comment = document.createComment ('This is Comment');
+        console.log('Node type of commentt:', comment.nodeType);
+        document.body.append(comment)
+    </script>
+</body>
+</html>

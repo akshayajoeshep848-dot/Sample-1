@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadows</title>
+    <style>
+        div{
+            background-color: blueviolet;
+            color: whitesmoke;
+            padding: 20px;
+            width: 100px;
+            text-align: center;
+            border: 3px solid grey;
+            box-shadow: 10px 10px rgba(128, 128, 128, 0.575);
+            border-radius: 20px;
+        }
+        div:hover{
+            /* transform: scale(0.95); */
+            color: brown;
+            background-color: chartreuse;
+            /* box-shadow: none; */
+            box-shadow: 0px 0px 10px 3px rgba(128, 128, 128, 0.575) inset;
+            
+        }
+        p{
+            background-color: blueviolet;
+            color: whitesmoke;
+            padding: 20px;
+            width: 100px;
+            text-align: center;
+            border: 3px solid grey;
+            box-shadow: 3px 3px rgba(128, 128, 128, 0.575),6px 6px burlywood,8px 8px red,10px 10px lawngreen;
+            border-radius: 20px;
+        }
+        /* div:active{
+            transform: scale(0.95);
+            color: aqua;
+            background-color: chartreuse;
+            box-shadow: 0px 0px 10px 3px rgba(128, 128, 128, 0.575) inset;
+        } */
+    </style>
+</head>
+<body>
+    <div>Element</div>
+    <br><br>
+    <p>Element</p>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadow Excercises</title>
+    <style>
+         .parent{
+            display: flex;
+            margin: 50px;
+            text-align: center;
+            font-size: 13px;
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+           cursor: pointer;
+        }
+        .div1{
+           width: 80px;
+           padding: 10px;
+           margin:30px;
+           border-radius: 15px; 
+           box-shadow: 0px -10px 4px rgba(135, 206, 250, 0.727) inset;
+        }
+        .div1:hover{
+             background-color:gold;
+              box-shadow:0px -5px 10px rosybrown inset;
+              transform: scale(1.126);
+            /* transform: scale(0.95) translate(5px 5px); */
+        }
+        .div2{
+            border: 1px solid black;
+            width: 100px;
+            height: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            margin:30px;
+            box-shadow: 10px 10px 0px rgba(255, 217, 0, 0.815);
+        }
+        .div2:hover{
+            background-color:rgba(255, 217, 0, 0.803);
+            box-shadow: none;
+            transform: scale(1.145);
+        }
+        .div3{
+            background-color: rgba(0, 128, 0, 0.648);
+            width: 70px;
+            padding: 10px;
+            border-radius: 5px;
+            margin:30px;
+        }
+        .div3:hover{
+            background-color: rgba(0, 128, 0, 0.825);
+        }
+        .div4{
+            background-color: rgba(128, 128, 128, 0.071);
+            width: 70px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(128, 128, 128, 0.285);
+            margin:30px;
+        }
+        .div4:hover{
+            background-color: rgba(128, 128, 128, 0.158);
+        }
+        .div5{
+            background-color: rgba(128, 128, 128, 0.09);
+            width: 80px;
+            padding: 10px;
+            border-radius:3px;
+            border: 1px solid rgba(128, 128, 128, 0.249);
+            margin:30px;
+        }
+        .div5:hover{
+            box-shadow: 0px 0px 10px 2px rgba(128, 128, 128, 0.23);
+        }
+        .div6{
+            background-color:cornflowerblue;
+            width: 60px;
+            padding: 10px;
+            border-radius: 3px;
+            box-shadow: 0px -1.5px rgba(0, 0, 255, 0.658);
+            margin:30px;
+        }
+        .div6:hover{
+            background-color:dodgerblue;
+        }
+        .div7{
+            background-color:rgba(0, 139, 139, 0.179);
+            width: 60px;
+            padding: 10px;
+            border: 1px solid rgba(0, 139, 139, 0.274);
+            margin:30px;
+            border-radius: 5px;
+        }
+        .div7:hover{
+            background-color:rgba(0, 139, 139, 0.338);
+        }
+        .div8{
+            background-color: black;
+            color: white;
+            width: 90px;
+            height: 20px;
+            padding: 8px 12px 8px 12px;
+            margin:30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 5px greenyellow;
+        }
+        .div8:hover{
+            box-shadow: 0px 0px 10px 5px red;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+    <div class="div1">Button 1</div>
+     <div class="div2">Button 2</div>
+     <div class="div3">Button 3</div>
+     <div class="div4">Button 4</div>
+     <div class="div5">Button 5</div>
+     <div class="div6">Button 6</div>
+     <div class="div7">Button 7</div>
+     <div class="div8">Button 8</div>
+    </div>
+</body>
+</html>

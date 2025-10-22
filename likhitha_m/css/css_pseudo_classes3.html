@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        details:open>summary {
+            background-color: pink;
+        }
+
+        select:open>option {
+            background-color: aqua;
+        }
+
+        input:open>date {
+            background-color: blueviolet;
+        }
+
+        .element {
+            background-color: lightcoral;
+        }
+
+        .element:fullscreen {
+            background-color: lightskyblue;
+        }
+        .element{
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            height: 200px;
+            justify-content: center;
+            font-family: cursive;
+            padding: 10px;
+            overflow:scroll;
+        }
+        /* model */
+        button{
+            display: block;
+            margin: auto;
+            width: 100px;
+            height: 50px;
+        }
+        :modal {
+            background-color: bisque;
+            border: 2px solid darkmagenta;
+            border-radius: 5px;
+        }
+        .p1{
+            color: black;
+            border: 2px solid;
+            height: 200px;
+            /* display: flex;
+            flex-direction: column; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Full Screen -->
+    <div class="element">
+    <h1><code>:fullscreen</code> pseudo classes</h1>
+    <p>Lorem ipsum dolor sit  <code>:fullscreen</code> amet consectetur <code>.element</code>adipisicing elit. Provident, doloribus?</p> 
+    <p>Lorem ipsum dolor sit :fullscreen amet consectetur element adipisicing elit. Provident, doloribus?</p> 
+    <button class="toggle">Toggle Fullscreen</button>
+    </div> 
+    <!-- Open -->
+      <details>
+        <summary> Details </summary>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Tempore harum id pariatur eveniet animi
+        quo velit non quidem earum omnis.
+    </details>
+    <br>
+    <label for="select">Choose A City:</label>
+    <select name="select" id="select" style="border: none;">
+        <option value="select">Sivapuram</option>
+        <option value="select">Chintalapudi</option>
+        <option value="select">Pothunuru</option>
+        <option value="select">Eluru</option>
+    </select>
+    <br><br>
+    <label for="date">Date:</label>
+    <input type="date" name="date" id="date">
+    <!-- Model -->
+     <p class="p1">Would you like to see a new random number?</p>
+     <button id="show">Show me</button>
+     <dialog id="fav">
+        <form method="dialog">
+            <p>Lucky numberis: <b id="number"></b></p>
+            <button>Close dialog</button>
+        </form>
+     </dialog>
+</body>
+
+</html>

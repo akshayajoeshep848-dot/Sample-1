@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            height: 600px;
+            /* background-color: bisque; */
+            border: 1px solid;
+            width: 500px;
+        }
+
+        .head {
+            text-align: center;
+            text-decoration: wavy;
+            font-size: 23px;
+            text-decoration: underline;
+            /* text-transform:uppercase; */
+            height: 30px;
+        }
+
+        .datejoining {
+            margin-left: 20px;
+        }
+
+        .datejoining-1 {
+            margin-top: 10px;
+            margin-top: 20px;
+            padding: 5px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .datejoining-1:hover,
+        .select1:hover,
+        .firstname-1:hover,
+        .email-1:hover,
+        .contact-1:hover,
+        .address-1:hover,
+        .city-1:hover,
+        .register:hover {
+            border: 1px solid rgba(0, 255, 255, 0.418);
+            box-shadow: 0px 0px 2px rgba(0, 255, 255, 0.621);
+            color: blueviolet;
+        }
+
+        .blood {
+            margin-left: 30px;
+        }
+
+        .select1 {
+            margin-left: 10px;
+            width: 100px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .firstname,
+        .email,
+        .contact,
+        .address,
+        .city,
+        .gender {
+            margin-left: 20px;
+        }
+
+        .firstname-1 {
+            margin-top: 10px;
+            padding: 5px;
+            margin-left: 10px;
+            width: 365px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .email-1 {
+            margin-top: 10px;
+            margin-left: 45px;
+            padding: 5px;
+            width: 365px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .contact-1 {
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 5px;
+            width: 365px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .address-1 {
+            margin-top: 10px;
+            margin-left: 30px;
+            padding: 5px;
+            width: 365px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .city-1 {
+            margin-top: 10px;
+            margin-left: 55px;
+            padding: 5px;
+            width: 375px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .gender-1 {
+            margin-top: 10px;
+            margin-left: 35px;
+        }
+
+        .register {
+            margin-left: 200px;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1 id="form">Student Form</h1> -->
+    <!-- <input type="text" placeholder="Enter Name"> -->
+    <script>
+        let form = document.createElement("form");
+        // form.setAttribute("action", "console.log(form()");
+        // console.log(form)
+        form.classList = "form";
+        document.body.append(form)
+
+        let head = document.createElement("h1");
+        head.innerHTML = "<h3> Hospital Registration Form </h3>";
+        head.classList = "head"
+        form.append(head);
+
+        let hr = document.createElement("hr");
+        form.append(hr)
+
+        let label22 = document.createElement("label");
+        label22.innerText = "Date of Joining:";
+        label22.setAttribute("for", "date")
+        label22.classList = "datejoining"
+        form.append(label22)
+        let input22 = document.createElement("input");
+        input22.setAttribute("type", "date");
+        input22.setAttribute("id", "date");
+        input22.setAttribute("required", true)
+        input22.classList = "datejoining-1"
+        form.append(input22)
+
+        let label33 = document.createElement("label");
+        label33.textContent = "Blood Group:";
+        label33.classList = "blood"
+        label33.setAttribute("for", "blood")
+        form.append(label33)
+        let select1 = document.createElement("select");
+        select1.classList = "select1"
+        select1.setAttribute("id", "blood")
+        let optgroup = document.createElement("option");
+        optgroup.classList = "option"
+        form.append(select1)
+        let opt1 = document.createElement("option");
+        opt1.text = "select"
+        select1.append(opt1)
+        let opt2 = document.createElement("option");
+        opt2.text = "A+"
+        select1.append(opt2)
+        let opt3 = document.createElement("option");
+        opt3.text = "A-"
+        select1.append(opt3)
+        let opt4 = document.createElement("option");
+        opt4.text = "AB+"
+        select1.append(opt4)
+        let opt5 = document.createElement("option");
+        opt5.text = "AB-"
+        select1.append(opt5)
+        let opt6 = document.createElement("option");
+        opt6.text = "O+"
+        select1.append(opt6)
+        let opt7 = document.createElement("option");
+        opt7.text = "O-"
+        select1.append(opt7)
+        let opt8 = document.createElement("option");
+        opt8.text = "B+"
+        select1.append(opt8)
+        let opt9 = document.createElement("option");
+        opt9.text = "B-"
+        select1.append(opt9)
+
+        let gap = document.createElement("br");
+        form.append(gap)
+        let gap1 = document.createElement("br");
+        form.append(gap1)
+
+
+        let label = document.createElement("label")
+        label.innerText = "First Name:";
+        label.setAttribute("for", "firstname")
+        label.classList = "firstname"
+        form.append(label);
+        let input = document.createElement("input");
+        input.classList = "firstname-1"
+        input.setAttribute("id", "firstname")
+        input.setAttribute("type", "text")
+        input.setAttribute("required", "")
+        input.setAttribute("placeholder", "Enter your Name")
+        form.append(input);
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+
+        let label1 = document.createElement("label")
+        label1.innerText = "Email:";
+        label1.setAttribute("for", "email")
+        label1.classList = "email";
+        form.append(label1);
+        let input1 = document.createElement("input");
+        input1.classList = "email-1";
+        input1.setAttribute("id", "email");
+        input1.setAttribute("required", "")
+        input.type = "email";
+        input1.placeholder = "Enter Email Adress"
+        form.append(input1);
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let label3 = document.createElement("label");
+        label3.innerText = "Contact No:";
+        label3.setAttribute("for", "contact")
+        label3.classList = "contact"
+        form.append(label3);
+        let input2 = document.createElement("input")
+        input2.type = "number";
+        input2.setAttribute("id", "contact");
+        input2.setAttribute("required", "")
+        input2.classList = "contact-1"
+        input2.placeholder = "Enter Contact No"
+        form.append(input2)
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let label4 = document.createElement("label");
+        label4.innerText = "Address:";
+        label4.setAttribute("for", "address")
+        label4.classList = "address"
+        form.append(label4);
+        let textarea = document.createElement("textarea");
+        textarea.placeholder = "Enter Address";
+        textarea.setAttribute("id", "address");
+        textarea.setAttribute("required", "")
+        textarea.classList = "address-1"
+        form.append(textarea);
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let label5 = document.createElement("label");
+        label5.innerText = "City:";
+        label5.setAttribute("for", "city")
+        label5.classList = "city"
+        form.append(label5);
+        let select = document.createElement("select");
+        select.classList = "city-1"
+        select.setAttribute("id", "city")
+        select.setAttribute("required", "")
+        let option = document.createElement("option");
+        // option1.value = "USA";
+        option.text = "Select";
+        select.append(option)
+
+        let option1 = document.createElement("option");
+        // option1.value = "USA";
+        option1.text = "Hyderabad";
+        select.append(option1)
+        let option2 = document.createElement("option");
+        // option2.value = "sp";
+        option2.text = "Vijayawada";
+        select.append(option2)
+
+        let option3 = document.createElement("option");
+        option3.text = "Guntur";
+        select.append(option3)
+
+        let option4 = document.createElement("option");
+        option4.text = "Nuzvid";
+        select.append(option4)
+        form.append(select)
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let label0 = document.createElement("label");
+        label0.innerText = "Gender:";
+        label0.setAttribute("for", "gender");
+        label0.setAttribute("required", "")
+        label0.classList = "gender";
+        form.append(label0)
+        let gender = document.createElement("input")
+        gender.type = "radio";
+        gender.classList = "gender-1"
+        gender.setAttribute("name", "gender")
+        let labegen = document.createElement("label");
+        labegen.innerText = "Male";
+        labegen.setAttribute("id", "gender")
+        form.append(gender)
+        form.append(labegen)
+
+        let gender1 = document.createElement("input")
+        gender1.type = "radio";
+        gender1.classList = "gender-1"
+        gender1.setAttribute("name", "gender")
+        let labegend = document.createElement("label");
+        labegend.innerText = "Female";
+        labegend.setAttribute("id", "gender")
+        form.append(gender1)
+        form.append(labegend)
+
+        let gender2 = document.createElement("input")
+        gender2.type = "radio";
+        gender2.classList = "gender-1"
+        gender2.setAttribute("name", "gender")
+        let labeg = document.createElement("label");
+        labeg.innerText = "Others";
+        labeg.setAttribute("id", "gender")
+        form.append(gender2)
+        form.append(labeg)
+
+        let gap2 = document.createElement("br");
+        form.append(gap2)
+        let gap3 = document.createElement("br");
+        form.append(gap3);
+
+
+        let labelsub = document.createElement("button");
+        labelsub.textContent = "Register Now"
+        labelsub.classList = "register";
+        labelsub.setAttribute("type", "button")
+        labelsub.setAttribute("required", "")
+        form.append(labelsub)
+
+        labelsub.onclick = hospital;
+
+        function hospital() {
+            date = document.getElementById("date").value;
+            blood = document.getElementById("blood").value;
+            //firstname = document.getElementById("firstname").value;
+        }
+
+        let obj = {
+            date1: `Date of joining: ${date}`,
+            blood: `Blood Group: ${blood}`
+        }
+        console.log(obj)
+
+        //  form.append(document.createElement("hr"));
+    </script>
+</body>
+
+</html>

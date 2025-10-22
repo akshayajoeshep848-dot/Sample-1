@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class Day3</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">fruit1</div>
+        <div class="item item2">fruit2</div>
+        <div class="item item3">fruit3</div>
+        <div class="item item4">fruit4</div>
+        <div class="item item5">fruit5</div>
+        <div class="item item6">fruit6</div>
+        <div class="item item7">fruit7</div>
+        <div class="item item8">fruit8</div>
+        <div class="item item9">fruit9</div>
+        <div class="item item10">fruit10</div>
+    </div>
+    <button onclick="getItems(vegetables)">Get vegetables</button>
+    <button onclick="getItems(fruits)">Get Fruits</button>
+    <script>
+        let fruits = [
+            'Apple',
+            'Banana',
+            'kiwi',
+            'Papayya',
+            'Tomato',
+            'Mango',
+            'Sugarcane',
+            'Orange',
+            'Avacado',
+            'pineapple'
+        ];
+        let vegetables = [
+            "vankaya",
+            "Bendakaya",
+            "Dondakaya",
+            "Dosakaya",
+            "Chikkudukaya",
+            "Sorakaya",
+            "Potlakaya",
+            "Gummadikaya ",
+            "kakarakaya",
+            "beerakaya"
+        ];
+        let vegCollection = document.querySelectorAll(".item");
+        let vegArray = Array.from(vegCollection);
+        function getItems(arr) {
+        vegArray.forEach((item, index) => {
+            item.innerText = arr[index];
+            item.style.backgroundColor = "lightpink",
+            item.style.margin = "10px",
+            item.style.padding = "10px",
+            item.style.width = "200px",
+            item.style.color = "white"
+        });
+        }
+        // function getFruits() {
+        // vegArray.forEach((item, index) => {
+        //     item.innerText = fruits[index];
+        //     item.style.backgroundColor = "lightblue";
+        //     item.style.margin = "10px",
+        //     item.style.padding = "10px",
+        //     item.style.width = "200px",
+        //     item.style.color = "white"
+        //     });
+        // }
+    </script>
+</body>
+
+</html>

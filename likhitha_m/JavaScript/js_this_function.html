@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS This Keyword</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name: "NTR",
+            age: 42,
+            location: "Hyderabad",
+            eat: () => console.log(`${this.name} is eating`),
+            walk: function() {
+                    console.log(`${this.name} is walking`)
+                },
+        };
+        person.eat();
+        person.walk();
+
+        // in this Above function lo this keyword anedhi person ane object lo unna name ni represent chesthundhi so ntr is walking ani op vasthundhi
+        //  kani above arrow function lo unn this keyword represents window obj or browser object
+
+        // key Characterstics
+        //  this is determined at call time , not definition time 
+        //  its value depends on how the function is called
+        //  in Scrict mode , global this is undefined
+        // Arrow function dont have their own this bonding 
+
+
+
+        // 1.Default object for this
+
+        // no context - this refers to windows object.
+        // "use strict";
+        // // in stirct mode- undefined
+        // function obj () {
+        //     console.log(this);
+        //     this.alert("hi");
+        //     this.close();
+        //     // this.fetch();
+        // }
+        // obj(); // window (browser ) or global (node)
+
+        // 2. Implict object to "this"
+
+        // "use strict";
+        // let person = {
+        //     name: "Likhitha",
+        //     age: 21,
+        //     location: "Sivapuram",
+        //     walk () {
+        //         //  this is implicit binding of "this"
+        //         console.log(`${this.name} is walking`);
+        //     },
+        //     eat: function () {
+        //         //  this is implicit binding of "this"
+        //         console.log(`${this.name} is eating`);
+        //     },
+        //     sleep: () => {
+        //         // this is undefined
+        //         console.log(`${person.name} is sleeping`);
+        //     },
+        // };
+        // person.walk ();
+        // person.eat ();
+        // person.sleep ();
+        // sleep ane arrow function ki this ane keyword use avvadhu because that is window obj kabatti
+
+        // Explicit binding of "this"
+
+        // function greet () {
+        //     console.log(`Hello, ${this.name}`);
+        // }
+
+        // const alice = {name: "Alice"};
+        // greet.call(alice);    //"Hello, Alice"
+
+    </script>
+</body>
+</html>

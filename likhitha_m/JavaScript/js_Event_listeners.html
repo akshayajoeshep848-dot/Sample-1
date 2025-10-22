@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Listeners</title>
+    <style>
+        .idea {
+            background-color: aqua;
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+        .idea1 {
+            background-color: white;
+            border: none;
+            border-radius: 0px;
+        }
+        .btn {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">JS Event Listener</h1>
+    <div>
+        <label for="firstname">First Name:</label>
+        <input id="firstname" type="text" name="firstname" >  <!--//value ivvali --> 
+    </div>
+    <br>
+    <div>
+        <label for="lastname">Last Name:</label>
+        <input id="lastname" type="text" name="lastname" >  <!--//value ivvali -->
+    </div> 
+    <button id="button" >Click Me</button>
+    <script>
+        let button = document.getElementById("button");
+        let h1 = document.getElementById("h1");
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+        let formObject = {};
+
+        // button.addEventListener("click", onclick)
+        // button.addEventListener("click", (event) =>
+        // console.log("Button Clicked"));
+
+        button.addEventListener("click", (event) =>{
+        formObject[`${firstname.name}`] = firstname.value;
+        formObject[`${lastname.name}`] = lastname.value;
+
+        console.log(formObject);
+    });
+
+    firstname.addEventListener("keydown", (event) =>
+    console.log(event.key, event.code))
+        
+        // button.onclick = function(evet) {
+        //         button.classList = "btn"
+        //         console.log(`Button is being clicked`)
+        //     }
+            
+            // function onClick() {
+                //     console.log(`Button is Clicked`);
+                // }
+                
+                h1.addEventListener("click", (event) => console.log(event.target))
+
+                // h1.addEventListener("mouseover", (event) => console.log(event.target.style.backgroundColor = "orange"))
+                
+                h1.addEventListener("mouseover", (event) => console.log(event.target.classList = "idea"))
+
+                h1.addEventListener("mouseout", (event) => console.log(event.target.classList = "idea1"))
+
+                // input.addEventListener("keydown", (event) => console.log(event.target.value))
+    </script>
+</body>
+</html>

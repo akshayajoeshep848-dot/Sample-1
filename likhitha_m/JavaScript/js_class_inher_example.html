@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Example</title>
+</head>
+<body>
+    <script>
+        class Parent {
+            constructor (name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+        class Child1 extends Parent {
+            constructor (name, age, childname) {
+                super(name, age)
+                this.childname = childname;
+            }
+        }
+        class Child2 extends Parent {
+            constructor (name, age, count) {
+                super(name, age);
+                this.count = count;
+            }
+        }
+
+        let generation = new Child1 ("Kantha Rao", "43", "Likhitha");
+        console.log(generation.name);
+        console.log(generation.age);
+        console.log(generation.childname);
+
+        let gen = new Child2 ("")
+    </script>
+</body>
+</html>

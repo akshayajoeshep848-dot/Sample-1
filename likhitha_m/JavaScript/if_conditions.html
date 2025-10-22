@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Conditions</title>
+</head>
+<body>
+    <h1>JS Conditions IF</h1>
+    <script>
+        let age = prompt("please enter your age");
+        console.log(typeof age);
+        if (age < 0){
+            console.log("please Enter a Valid age")
+        } else if (age >= 0 && age < 18) {
+            console.log("You are Not Eligible to Vote");
+        }else if (age >= 18 && age < 21){
+            console.log("You are eligible to vote, but not eligible to get Marriage")
+        } else {
+            console.log("you are eligible to vote and also to get married legally");
+        }
+    </script>
+</body>
+</html>

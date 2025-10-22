@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Methods</title>
+</head>
+
+<body>
+    <h1>JS String Methods</h1>
+    <script>
+        // charAt is used to check where is the value and unna value true or false ani
+        let str = "Hello, World";
+        console.log(str.charAt(0));
+        console.log(str.charAt(0)=="H");
+        console.log(str.charAt(9));
+
+        // Concat
+        let str1 = "hello,World";
+        let greet = str1.concat("!");
+        console.log(greet)
+
+        // includes
+        const sentence = "The quick brown fox jumps over the lazy dog.";
+        console.log(sentence.includes(""));
+
+        // replace
+        let greeting = "Hello, World!";
+        let newgreet = greeting.replace("World!", "Universe!");
+        console.log(newgreet);
+
+        // subString
+        let strr = "JavaScript";
+        let sub = strr.substring(4, 9);
+        console.log(sub)
+
+        // toUpperCase ()
+        let js = "javascript"
+        uppr = js.toUpperCase();
+        // console.log(uppr)
+        // toLowerCase ()
+        let js1 = "JAVASCRIPT"
+        uppr1 = js1.toLowerCase();
+        // console.log(uppr1)
+
+        // in a single string first letter will bbe capital and in every word first letter will be capital.
+    </script>
+</body>
+
+</html>

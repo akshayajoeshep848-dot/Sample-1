@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom CreateElement</title>
+</head>
+<body>
+    <h1>JS DOM document.createElement() methos</h1>
+    <div class="container"></div>
+    <button id="btn-1" onclick="getItems(fruits)">Get Fruits</button>
+    <button id="btn-2" onclick="getItems(vegetables)">Get Vegetables</button>
+    <script>
+         let fruits = [
+            'Apple',
+            'Banana',
+            'kiwi',
+            'Papayya',
+            'Tomato',
+            'Mango',
+            'Sugarcane',
+            'Orange',
+            'Avacado',
+            'pineapple',
+            'grapes',
+            'Narinja'
+        ];
+        let vegetables = [
+            "vankaya",
+            "Bendakaya",
+            "Dondakaya",
+            "Dosakaya",
+            "Chikkudukaya",
+            "Sorakaya",
+            "Potlakaya",
+            "Gummadikaya ",
+            "kakarakaya",
+            "beerakaya"
+        ];
+        // creating h1 element
+        let heading2 = document.createElement("h2")
+        heading2.innerText = 'H2 created by createElement method';
+        // document.body.append(heading2);
+
+        // creating list element
+        let orderedList = document.querySelectorAll("ol");
+        let order = Array.from(orderedList  );
+        function getItems (arr) {
+            order.forEach((item, index) => {
+            for (let i=0; i<arr.length; i++){
+            let listItem  = document.querySelectorAll("li");
+            listItem.innerText = arr[i];
+            orderedList.append(listItem);
+            listItem.style.backgroundColor = "magenta"
+            listItem.style.margin = "10px"
+            listItem.style.width = "100px"
+            listItem.style.padding = "5px"}
+        });
+        }
+        // getItems(fruits);
+        // getItems(veg++/etables);
+        // document.body.append(orderedList);
+
+        // let orderedList = document.createElement("ol");
+        // for (let i=0; i<5; i++){
+        //     let listItem  = document.createElement("li");
+        //     listItem.innerText = `Item ${i +1}`;
+        //     orderedList.append(listItem)
+        // }
+        // document.body.append(orderedList);
+
+
+        // let listItem1 = document.createElement("li");
+        // let listItem2 = document.createElement("li");
+        // listItem1.innerText = "Item 1";
+        // listItem2.innerText = "Item 2";
+        // orderedList.append(listItem1);
+        // orderedList.append(listItem2);
+        
+
+
+
+
+
+
+
+
+
+        // creating list element
+        let container = document.getElementById("container");
+        container.body.append(heading2);
+        </script>
+</body>
+</html>

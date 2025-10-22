@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice 2</title>
+    <style>
+        .grid-container {
+            display: grid;
+            padding: 10px;
+            border: 2px dashed goldenrod;
+            background-color: rgba(255, 255, 0, 0.241);
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 50px 100px;
+            height: 150px;
+            /* gap: px; */
+            grid-template-areas: 
+            "Row1 Row1"
+            "Row2 Row2";
+        }
+        .grid-item {
+            text-align: center;  
+            place-content: center;
+            border: 1px solid goldenrod;
+            background-color:rgba(218, 165, 32, 0.44);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item1">Row1(50px)</div>
+        <div class="grid-item grid-item2">Row1(50px)</div>
+        <div class="grid-item grid-item3">Row2(100px)</div>
+        <div class="grid-item grid-item4">Row2(100px)</div>
+    </div>
+</body>
+</html>

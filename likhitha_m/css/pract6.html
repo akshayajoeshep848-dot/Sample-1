@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex practice 6</title>
+    <style>
+        .mainbox {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            color: white;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .header {
+            height: 50px;
+            width: 400px;
+            text-align: center;
+            place-content: center;
+            background-color: cyan;
+        }
+        .middle {
+            display: flex;
+            gap: 5px;
+        }
+        .first {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .hero {
+            text-align: center;
+            height: 100px;
+            width: 120px;
+            background-color: rgba(153, 50, 204, 0.31);
+        }
+        .sidebar {
+            text-align: center;
+            height: 155px;
+            width: 120px;
+            background-color:rgba(100, 154, 8, 0.789);
+        }
+        .second {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .main {
+            height: 180px;
+            width: 275px;
+            text-align: center;
+            background-color: rgba(255, 166, 0, 0.7);
+        }
+        .extra {
+            height: 75px;
+            width: 275px;
+            text-align: center;
+            background-color:rgba(128, 128, 128, 0.788);
+        }
+        .three {
+            display: flex;
+            gap: 5px;
+        }
+        .images {
+            height: 80px;
+            width: 300px;
+            text-align: center;
+            background-color:rgba(0, 100, 0, 0.715);
+        }
+        .posts {
+            height: 80px;
+            width: 95px;
+            text-align: center;
+            background-color: pink;
+        }
+        .footer {
+             height: 50px;
+            width: 400px;
+            text-align: center;
+            place-content: center;
+            background-color:orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <div class="header">Header</div>
+        <div class="middle">
+            <div class="first">
+            <div class="hero">Hero</div>
+            <div class="sidebar">Sidebar</div>
+            </div>
+            <div class="second">
+                <div class="main">Main content</div>
+                <div class="extra">Extra Content</div>
+            </div>
+        </div>
+        <div class="three">
+            <div class="images">Related Images</div>
+            <div class="posts">Related Posts</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spruha Box</title>
+    <style>
+        * {
+            margin: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* width: 0px; */
+        }
+        .header {
+            font-size: 23px;
+            font-weight: bold;
+        }
+        .footer {
+            color: grey;
+            font-size: 18px;
+        }
+        .mainbox {
+            display: flex;
+            padding: 20px;
+            /* height: 500px; */
+            width: 93vw;
+            flex-direction: column;
+            /* gap: 30px; */
+        }
+        .side {
+            display: flex;
+            font-size: 25px;
+            justify-content: space-between;
+        }
+        .side1 {
+            display: flex;
+            color: grey;
+            position: relative;
+            top: -25px;
+            justify-content: space-between;
+        }
+        .middle, .middle1, .middle2, .middle3, .middle4 {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            left: 70px;
+        }
+        .middle1 {
+            position: relative;
+            top: -40px;
+        }
+        .middle2 {
+            position: relative;
+            top: -80px;
+        }
+        .middle3 {
+            position: relative;
+            top: -120px;
+        }
+        .middle4 {
+            position: relative;
+            top: -160px;
+        }
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .dolar {
+            position: relative;
+            top: -25px;
+        }
+        .dolar::after {
+            content: "\2934";
+            font-weight: bold;
+            font-size: 40px;
+            padding-left: 5px;
+            color: green;
+        }
+        .dolar1::after {
+            content: "\2935";
+            font-weight: bold;
+            font-size: 40px;
+            padding-left: 5px;
+            color: red;
+        }
+        .image {
+            background-image: url("./girl.png");
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-size: contain;
+        }
+        .image1 {
+            background-image: url("./lehanga.png");
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-size: contain;
+        }
+        .image2 {
+            background-image: url("./girl.png");
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-size: contain;
+        }
+        .image3 {
+            background-image: url("./man.png");
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-size: contain;
+        }
+        .image4 {
+            background-image: url("./man.png");
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            background-size: contain;
+        }
+        .image {
+            position: relative;
+            top: 50px;
+        }
+        .image1 {
+            position: relative;
+            top: 10px;
+        }
+        .image2 {
+            position: relative;
+            top: -30px;
+        }
+        .image3 {
+            position: relative;
+            top: -70px;
+        }
+        .image4 {
+            position: relative;
+            top: -110px;
+        }
+        .box {
+            position: relative;
+            top: -10px;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="mainbox">
+        <div class="top">
+            <div class="header">RECENT TRANSCATIONS</div>
+            <div class="footer">Projects where delevelopment work is on completion</div>
+        </div>
+        <div class="box">
+        <div class="image"></div>
+        <div class="middle">
+            <div class="side">
+                    <div class="flicker">Flicker</div>
+                    <div class="dolar">$45.234</div>
+                </div>
+                <div class="side1">
+                <div>App improvement</div>
+                <div>12 Jan 2020</div>
+            </div>
+        </div>
+        <div class="image1"></div>
+        <div class="middle1">
+                <div class="side">
+                    <div class="flicker">Intoxica</div>
+                    <div class="dolar dolar1">$23.452</div>
+                </div>
+                <div class="side1">
+                    <div>Milestone</div>
+                <div>23 Jan 2020</div>
+            </div>
+        </div>
+        <div class="image2"></div>
+        <div class="middle2">
+                <div class="side">
+                    <div class="flicker">Digiwatt</div>
+                    <div class="dolar dolar1 ">$78.001</div>
+                </div>
+                <div class="side1">
+                    <div>Sales Executive</div>
+                    <div>04 Apr 2020</div>
+                </div>
+            </div>
+            <div class="image3"></div>
+            <div class="middle3">
+                <div class="side">
+                    <div class="flicker">Flicker</div>
+                    <div class="dolar">$37.282</div>
+                </div>
+                <div class="side1">
+                    <div>Milestone2</div>
+                    <div>4 Apr 2020</div>
+                </div>
+            </div>
+            
+        <div class="image4"></div>
+        <div class="middle4">
+                <div class="side">
+                    <div class="flicker">Flicker</div>
+                    <div class="dolar dolar1">$23.451</div>
+                </div>
+                <div class="side1">
+                <div>App improvement</div>
+                <div>04 Apr 2020</div>
+            </div>
+        </div>
+        </div>
+
+    </div>
+</body>
+</html>

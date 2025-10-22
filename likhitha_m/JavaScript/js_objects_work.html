@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Objects Work</title>
+    <style>
+        button {
+            color: darkmagenta;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            background-color: beige;
+            border-radius: 10px;
+        }
+        
+        button:hover {
+            /* transition: background-color 0.5s;
+            transition-timing-function: ease-in-out;
+             */
+            /* transform:translate(1px) scale(0.35); */
+            border-radius: 10px;
+            transition: ease-in-out 2s; 
+            rotate: 270deg;
+            background-color: aqua;
+            /* transition-duration: 2s;
+            transition-property: margin-right; */
+            translate: 50px 50px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Profile</h1>
+    <button onclick="student.profile();">Student Profile</button>
+    <hr>
+    <h1>Project Manager Department</h1>
+    <button onclick="team.manager.work()">Project Manager</button>
+    <br><br>
+    <button onclick="team.teamLead.work()">Team Lead</button>
+    <br><br>
+    <button onclick="team.senior.work()">Senior Developer</button>
+    <br><br>
+    <button onclick="team.junior.work()">Junior Developer</button>
+    <br><br>
+    <button onclick="team.business.work()">Business Analyst</button>
+    <br><br>
+    <button onclick="team.ui.work()">UI Designer</button>
+
+    <hr>
+    <h1>Testing Department</h1>
+    <button onclick="testing.testingManager.work()">Testing Manager</button>
+    <br><br>
+    <button onclick="testing.team_lead.work()">Team Lead</button>
+    <br><br>
+    <button onclick="testing.senior.work()">Senior Developer</button>
+    <br><br>
+    <button onclick="testing.junior.work()">Junior Developer</button>
+    <script>
+
+        // Company
+        // Project Manager, Team lead, senior Developer, Junior Developper, Business Analyst, Ui developer,
+        // Testing Manager, Team lead, senior Developer, Junior Developper
+        // Role , Employ id, Name
+
+        const team = {
+            manager: {
+                name: "Uday Kiran",
+                age: 45,
+                officeId: 3745,
+                salary: "",
+                role: "Project Manager",
+                work: function () {
+                    console.log(`Our "${this.role}" is a "${this.name}" his age is "${this.age}" and his id is "${this.officeId}"`);
+                },
+            },
+            teamLead: {
+                name: "Prasanna",
+                age: 34,
+                officeId: 5896,
+                role: "Team Lead",
+                work: function () {
+                    console.log(`The "${this.role}" is a "${this.name}" her age is "${this.age}" and her office id is "${this.officeId}"`);
+                },
+            },
+            senior: {
+                name: "Surya",
+                age: 30,
+                officeId: 5892,
+                role: "Senior Manager",
+                work: function () {
+                    console.log(`The "${this.role}" is a "${this.name}" his age is "${this.age}" and his office id is "${this.officeId}"`);
+                },
+            },
+            junior: {
+                name: "Pavan",
+                age: 32,
+                officeId: 8432,
+                role: "Junior Manager",
+                work: function () {
+                    console.log(`The "${this.role}" is a "${this.name}" his age is "${this.age}" and his office id is "${this.officeId}"`);
+                },
+            },
+            business: {
+                name: "Ravi Teja",
+                age: 38,
+                officeId: 6454,
+                role: "Business Analyst",
+                work: function () {
+                    console.log(`The "${this.role}" is a "${this.name}" his age is "${this.age}" and his office id is "${this.officeId}"`);
+                },
+            },
+            ui: {
+                name: "Sujitha",
+                age: 28,
+                officeId: 8534,
+                salary: "10 lpa",
+                role: "UI Designer",
+                work: function () {
+                    console.log(`The "${this.role}" is a "${this.name}" his age is "${this.age}" and his office id is "${this.officeId}" and her salary is "${this.salary}"`);
+                },
+            },
+        }
+        // team.manager.work();
+        // team.teamLead.work();
+        // team.senior.work();
+        // team.junior.work();
+        // team.business.work();
+        // team.ui.work();
+
+        const testing = {
+            testingManager: {
+                name: "Ashok",
+                age: 41,
+                officeId: 8785,
+                role: "Testing Manager",
+                work: function () {
+                    console.log(`The "${this.name}" is our "${this.role}" his age is "${this.age}" and his office id is "${this.officeId}"`);
+                },
+            },
+            team_lead: {
+                name: "Gurijala Ajay",
+                age: 31,
+                officeId: 5721,
+                role: "Team Lead",
+                work: function () {
+                    console.log(`The "${this.name}" is our "${this.role}" his age is "${this.age}" and his office id is "${this.officeId}"`);
+                },
+            },
+            senior: {
+                name: "Bhanu",
+                age: 36,
+                officeId: 5989,
+                role: "Senior Developer",
+                work: function () {
+                    console.log(`The "${this.name}" is our "${this.role}" his age is "${this.age}" and his office id is "${this.officeId}"`);
+                },
+            },
+            junior: {
+                name: "Sagar",
+                age: 48,
+                officeId: 6878,
+                role: "Junior Developer",
+                work: function () {
+                    console.log(`The "${this.name}" is our "${this.role}" his age is "${this.age}" and his office id is "${this.officeId}"`);
+                },
+            },
+        };
+        // testing.testingManager.work();
+        // testing.team_lead.work();
+        // testing.senior.work();
+        // testing.junior.work();
+
+
+        // Student Object 
+        // name, branch,roll no, department, fathername, mothername , college name
+        const student = {
+            name: "Likhitha",
+            age: 22,
+            rollNo: "22ND5A5403",
+            fatheName: "Kantha Rao",
+            motherName: "Jhansi",
+            branch: "AI & DS",
+            department: "CSE",
+            collegeName: "St. Mary's Women's Engineering College",
+            profile: function () {
+                console.log(`My Name is "${this.name}" and my roll No is "${this.rollNo}" and Father name is "${this.fatheName}" , my mother name is "${this.motherName}" , My branch is "${this.branch}" and my Department is "${this.department}", I'm Studied in "${this.collegeName}"`);
+            },
+        };
+        // student.profile();
+    </script>
+</body>
+
+</html>

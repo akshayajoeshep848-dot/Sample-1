@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Array Iteration Methods</title>
+</head>
+<body>
+    <h1>JS Array Iteration Methods</h1>
+    <p>
+        forEach (), map (), filter (),reduce (), sum (), every (), find (), and findIndex ()
+     </p>
+     <h2>forEach</h2>
+     <p>array.forEach(callback)</p>
+    <script>
+        let array = [1, 2, 3, 4, 5]
+        
+        // console.log(array);
+        // array.forEach(print);
+        
+        // array.forEach ((num, index, arr) => {
+        //     console.log(`the element at index: ${index} is ${num}`)
+        //     arr[index] = num * num;
+        // });
+        
+        // array.forEach((num) => console.log(num));
+        // array.forEach((num) => console.log(num * 2));
+        // array.forEach((num) => console.log(num * num));
+        
+        
+        // array.forEach(operation);
+        // function array(value, index, array){
+            //     console.log(array.value)
+            // }
+            
+            // array.forEach((value, index, array) => {
+                //     array[index] = index * 2;
+                //     array[index] = index ** 2;
+                //     array[index] = index * 0.05;
+                // })
+                // console.log(array)
+                
+                
+                
+                // map ()
+                
+                let newArray = array.map ((num) => num* 2);
+                console.log(newArray);
+                console.log(array);
+                
+                // filter ()
+                // let array = [1,2,3,4,5,6,7,8,9,10]
+                // let newArray = array.filter ((num) => num > 5);
+                // // console.log(typeof(newArray))
+                // console.log(newArray);
+                // console.log(array)
+
+        //  Reduce ()
+        // const number = [1,2,3,4,5];
+        
+        // const sum = number.reduce((accumulator, current) => accumulator + current );
+        // console.log(sum);
+        
+        // Flat ()
+        // let nestedArray = [[1,2], [3,4],[5]];
+        // let flatArray = nestedArray.reduce(
+            //         (initialValue, currentValue) => initialValue.concat(currentValue),[])
+            //     console.log(flatArray)
+            // console.log(array);
+            // console.log(array.toString());
+            
+            // Concat
+           let arr1 = [1,2,3];
+           let arr2 = [4,5,6];
+
+           let arr3 = arr1.concat(arr2);
+        //    console.log(arr3);
+           let arr4 = arr3.concat(7);
+        //    console.log(arr4)
+           //flattern
+           let arr5 = [1,2,3,[4,[5],6],[7,8],[9]];
+        //    console.log(arr5);
+
+            let flatArray = arr5.reduce(
+                (initialValue,currentValue) => initialValue.concat(currentValue),[] );
+                // console.log(flatArray)/
+
+        let greeting = ['Hello',"World"];
+        // Using of one method another one method with dot notation is called Chaining
+        let string = greeting.join(" ").split("").reverse().join("-");
+        console.log(string)
+
+        let greet = [1,2,3,4];
+        let str = greet.join(" ")
+        console.log(typeof str, str)
+
+
+
+            // array.forEach((array) => console.log(array));
+            // console.log(typeof (forEach));
+            // array.map((array) => console.log(array));
+            // console.log(typeof(map));
+            </script>
+</body>
+</html>

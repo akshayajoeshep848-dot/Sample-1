@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Items Examples</title>
+    <style>
+        .flex-container{
+            background-color: rgba(100, 148, 237, 0.505);
+            display: flex;
+            gap: 10px;
+            height: 20vh;
+            padding: 20px;
+            border: 2px dashed cornflowerblue
+        }
+        .flex-item-1{
+            background-color: cornflowerblue;
+            height: 70px;
+            width: 100px;
+            flex: 0 1 audo;
+            text-align: center;
+            color: white;
+            border: 1px solid rgba(0, 0, 139, 0.422);
+        }
+        .flex-item-2{
+            background-color:rgba(144, 238, 144, 0.77);
+            height: 70px;
+            width: 200px;
+            flex: 0 1 audo;
+            color: white;
+            /* place-content: ; */
+            text-align: center;
+            border: 1px solid rgba(0, 0, 139, 0.422);
+        }
+        .flex-item-3{
+             background-color:rgba(218, 165, 32, 0.626);
+            height: 70px;
+            width: 150px;
+            flex: 0 1 audo;
+            color: white;
+            /* place-content: ; */
+            text-align: center;
+            border: 1px solid rgba(0, 0, 139, 0.422);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Flex items</h1>
+    <div class="flex-container">
+        <div class="flex-item flex-item-1">Item A</div>
+        <div class="flex-item flex-item-2">Item B</div>
+        <div class="flex-item flex-item-3">Item C</div>
+        <div class="flex-item flex-item-4">Item D</div>
+    </div>
+</body>
+</html>
+

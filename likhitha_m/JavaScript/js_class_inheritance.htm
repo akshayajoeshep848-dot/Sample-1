@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Class Inheritance</title>
+</head>
+<body>
+    <script>
+        // class Pet {
+        //     constructor (type, name) {
+        //         this.type = type;
+        //         this.name = name;
+        //     }
+        //     eat () {
+        //         console.log(`${this.name} moruguthundhi`)
+        //     }
+        // }
+
+        // class Dog extends Pet {
+        //     constructor (type, name, breed) {
+        //         super (type, name)
+        //         this.breed = breed;
+
+        //     }
+        // }
+
+        // let dog1 = new Dog ("Male", "Chimtu", "Chithakarthikukka");
+        // console.log(dog1.type)
+        // console.log(dog1.name)
+        // console.log(dog1.breed)
+
+        // dog1.eat();
+
+
+        // class Car {
+        //     constructor (model, company, color){
+        //         this.model = model;
+        //         this.company = company;
+        //         this.color = color;
+        //     }
+
+        // }
+
+        // let car = new Car ("Recently Launched", "Tesla","Black")
+        // console.log(car.model)
+        // console.log(car.company)
+        // console.log(car.color)
+
+
+        // class Dog {
+        //     constructor (name, breed = "mutt"){
+        //         this.name = name;
+        //         this.breed = "Mutt";
+        //     }
+        // }
+
+        // let dog = new Dog();
+        // console.log(dog.breed)
+
+
+
+        class Vehicle {
+            constructor (name, color){
+                this.name = name;
+                this.color = color;
+            }
+        }
+
+        class Motorcycle extends Vehicle {
+            constructor (name, color, milage){
+                super(name, color);
+                this.milage = milage;
+            }
+        }
+
+        let vehicle = new Motorcycle ("Lorry", "Brown", "300km per Hour");
+        console.log(vehicle.name);
+        console.log(vehicle.color);
+        console.log(vehicle.milage);
+
+    </script>
+</body>
+</html>

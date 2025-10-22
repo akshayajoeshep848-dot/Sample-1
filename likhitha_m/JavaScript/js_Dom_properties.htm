@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Properties</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 id="h1">Unorder List</h1>
+    <ul id="ul">
+        <li id="li-1">item1</li>
+        <li id="li-2">item2</li>
+        <li id="li-3">item3</li>
+        <li id="li-4">item4</li>
+        <li id="li-5">item5</li>
+    </ul>
+    <a href="https://www.google.com"  value="targetblank">Google</a>
+    <div id="div"></div>
+
+    <script>
+        let div = document.getElementById("div");
+        let anchor = document.createElement("a");
+        anchor.style.fontSize = "30px"
+        anchor.style.textDecoration = "none"
+        anchor.value = "targetblank"
+        anchor.setAttribute("href", "https://www.google.com");
+        anchor.textContent = "Google"
+        div.append(anchor);
+
+        // div.textContent = "This is LIKHITHA"
+
+        // let ul = document.getElementById("ul");
+        
+        // console.log(ul.parentNode);
+        // console.log(ul.childNodes);
+        // console.log(ul.children);
+        // console.log(ul.firstChild);
+        // console.log(ul.lastChild);
+        // console.log(ul.firstElementChild)
+        // console.log(ul.lastElementChild)
+        // console.log(ul.nextSibling);
+        // console.log(ul.previousSibling)
+        // console.log(ul.previousElementSibling)
+        // console.log(ul.nextElementSibling)
+
+
+        // ul.firstElementChild.style.backgroundColor = "lightpink";
+        // ul.lastElementChild.style.backgroundColor = "orange";
+        // ul.children[1].style.backgroundColor = "yellowgreen"
+        // ul.children[2].style.backgroundColor = "grey"
+        // ul.children[3].style.backgroundColor = "lightblue";
+        </script>
+</body>
+</html>

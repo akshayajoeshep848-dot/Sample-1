@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Basis</title>
+    <style>
+        .flex-container{
+            background-color: darksalmon;
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            /* flex-direction: column; */
+        }
+        .flex-items{
+            background-color:rgba(169, 169, 169, 0.662);
+            color: white;
+            height: 100px;
+            /* width: 100px; */
+            padding: 10px;
+            text-align: center;
+            /* box-shadow: -10px -10px 10px inset; */
+            border-radius: 10px;
+            place-content: center;
+
+            flex-grow: 1;
+            flex-basis: 200px;
+        }
+        .flex-items1{
+            /* flex-basis: 300px;
+            flex-grow: 1;
+            flex-shrink: 1; */
+            flex:1 1 300px;
+        }
+        .flex-items2{
+            /* flex-basis: 300px;
+            flex-grow: 2;
+            flex-shrink: 2; */
+            flex: 2 2 300px;
+        }
+        .flex-items3{
+            /* flex-basis: 300px;
+            flex-grow: 0;
+            flex-shrink: 0; */
+            flex: 3 3 300px;
+        }
+        </style>
+</head>
+<body>
+    <h1>Flex Basis</h1>
+    <!-- it have flex grow and flex shrink -->
+    <div class="flex-container">
+        <div class="flex-items flex-items1">item 1</div>
+        <div class="flex-items flex-items2">item 2</div>
+        <div class="flex-items flex-items3">item 3</div>
+    </div>
+</body>
+</html>

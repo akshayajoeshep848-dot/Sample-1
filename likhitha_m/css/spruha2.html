@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spruha Box2</title>
+    <style>
+        .mainbox {
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            width: 800px;
+            gap: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .up {
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(128, 128, 128, 0.404);
+            height: 120px;
+            width: 220px;
+        }
+
+        .child1 {
+            font-weight: bold;
+        }
+
+        .child2 {
+            color: grey;
+        }
+
+        .dolar1 {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .dolar2 {
+            margin-top: 20px;
+            color: grey;
+        }
+
+        .image {
+            background-image: url('./bar.png');
+            height: 30px;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            border-radius: 50%;
+            background-size: contain;
+        }
+
+        .image1 {
+            background-image: url("./contact.png");
+        }
+
+        .image2 {
+            background-image: url("./dolar.png");
+        }
+
+        .img {
+            background-color: rgba(0, 0, 255, 0.078);
+            height: 50px;
+            border-radius: 50%;
+            padding: 5px;
+            width: 50px;
+            position: relative;
+            top: -55px;
+            left: 150px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbox">
+        <div class="up">
+            <div class="top">
+                <div class="child child1">TOTAL REVENUE</div>
+                <div class="child child2">Previous month vs this months</div>
+            </div>
+            <div class="bottom">
+                <div class="dolar dolar1">$5,900.00</div>
+                <div class="dolar2"><span style="color: green;">55%</span>Higher</div>
+                <div class="img">
+                    <div class="image"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="up">
+            <div class="top">
+                <div class="child child1">NEW EMPLOYEES</div>
+                <div class="child child2">Employees joined this month</div>
+            </div>
+            <div class="bottom">
+                <div class="dolar dolar1">15</div>
+                <div class="dolar2"><span style="color: green;">5%</span>Increased</div>
+                <div class="img">
+                    <div class="image image1"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="up">
+            <div class="top">
+                <div class="child child1">TOTAL EXPENSES</div>
+                <div class="child child2">Previous month vc this month</div>
+            </div>
+            <div class="bottom">
+                <div class="dolar dolar1">$8,500</div>
+                <div class="dolar2"><span style="color: red;">12%</span>Decrease</div>
+                <div class="img">
+                    <div class="image image2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

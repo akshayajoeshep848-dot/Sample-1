@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS BMI Calculator</title>
+    <style>
+        .big {
+            background-image: url('./background.jpg');
+            height: 94vh;
+            width: 99vw;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #head {
+            /* background-color: lightgreen; */
+            text-align: center;
+            color: white;
+        }
+
+        #head1 {
+            background-color: rgba(255, 160, 122, 0.584);
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+            top: 15px;
+            left: -3px;
+        }
+
+        #head1:hover {
+            border: 2px solid grey;
+            background-color: rgba(119, 136, 153, 0.315);
+        }
+
+        #head2 {
+            background-color: rgba(119, 136, 153, 0.315);
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+            top: 15px;
+        }
+
+        #head2:hover {
+            background-color: rgba(245, 245, 245, 0.644);
+            border: 2px solid grey;
+        }
+
+        #head3 {
+            background-color: rgba(255, 160, 122, 0.584);
+            padding: 10px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            position: relative;
+            top: 15px;
+            right: 6px;
+        }
+
+        #head3:hover {
+            border: 2px solid grey;
+            background-color: rgba(119, 136, 153, 0.315);
+        }
+
+        #three {
+            place-content: center;
+            display: flex;
+            gap: 38px;
+            font-size: 12px;
+        }
+
+        .main {
+            background-color: rgba(119, 136, 153, 0.315);
+            box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.443);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            font-size: 16px;
+            width: 350px;
+            height: 270px;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-left: 560px;
+        }
+
+        #age {
+            width: 50px;
+            padding: 3px;
+            border: 1px solid rgba(128, 128, 128, 0.537);
+            border-radius: 5px;
+        }
+
+        #age1 {
+            margin-left: 150px;
+        }
+
+        #height,
+        #weight {
+            padding: 7px;
+            width: 270px;
+            border: 1px solid rgba(128, 128, 128, 0.589);
+            border-radius: 5px;
+        }
+
+        #gender,
+        #gender1,
+        #gender2 {
+            position: relative;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+        }
+
+        #gender1 {
+            margin-left: 25px;
+        }
+
+        #gender2 {
+            margin-left: 25px;
+        }
+
+        #result {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* margin-top: 15px; */
+            /* background-color: rgba(128, 128, 128, 0.4); */
+            border-radius: 10px;
+            font-size: 23px;
+            font-weight: bold;
+            color: #222;
+            text-align: center;
+        }
+
+        #button {
+            margin-left: 125px;
+            padding: 10px;
+            width: 100px;
+            border-radius: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.644);
+        }
+        .under, .normal, .over, .obesity, .invalid {
+            width: 150px;
+            /* margin-top: 10px; */
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .under {
+            background-color: rgba(255, 0, 0, 0.495);
+        }
+        .normal {
+            background-color: rgba(0, 128, 0, 0.473);
+        }
+        .over {
+            background-color: rgba(255, 166, 0, 0.678);
+        }
+        .obesity {
+            background-color: rgba(255, 255, 0, 0.628);
+        }
+        .invalid {
+            background-color: rgba(173, 216, 230, 0.696);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big">
+        <h1 id="head">BMI Calculator</h1>
+        <div id="div11"></div>
+        <div id="three">
+            <h2 id="head1">US Units</h2>
+            <h2 id="head2">Metric Units</h2>
+            <h2 id="head3">Other Units</h2>
+        </div>
+        <div class="main">
+            <label for="age">Age:</label>
+            <input type="number" id="age" , name="age">
+
+            <label for="age1" id="age1">Age: 2 - 120</label>
+            <br><br>
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="radio" id="gender" name="gender" required>
+                <label for="gender">Male</label>
+                <input type="radio" id="gender1" name="gender" required>
+                <label for="gender1">Female</label>
+                <input type="radio" id="gender2" name="gender" required>
+                <label for="gender2">Others</label>
+            </div>
+            <div>
+                <br>
+                <label for="height">Height:</label>
+                <input type="number" name="height" , id="height" placeholder="Enter Height in CMS" required>
+            </div>
+            <br>
+            <div>
+                <label for="weight">Weight:</label>
+                <input type="number" name="weight" id="weight" placeholder="Enter weight in KGS" required>
+            </div>
+            <br>
+            <div>
+                <button id="button">Calculate</button>
+            </div>
+            <br><br><br>
+            <h2 id="instruction"></h2>
+            
+        </div>
+        <div id="result"></div>
+    </div>
+    <script>
+        let head = document.getElementById("head")
+        let head1 = document.getElementById("head1")
+        let head2 = document.getElementById("head2")
+        let head3 = document.getElementById("head3")
+
+        let weight = document.getElementById("weight");
+        let height = document.getElementById("height");
+        let button = document.getElementById("button");
+        let instruction = document.getElementById('instruction')
+
+        let emobj = {};
+
+        button.addEventListener("click", (event) => {
+            emobj[`${weight.name}`] = weight.value;
+            emobj[`${height.name}`] = height.value;
+
+            let hght = height.value / 100;
+            let height1 = hght * hght;
+            let bmi = weight.value / height1;
+            document.getElementById("result").textContent = `Result BMI : ${bmi.toFixed(1)} kg/m2`;
+            if (bmi >= 1 && bmi <= 17) {
+                instruction.classList = "under"
+                instruction.textContent = `UnderWeight`;
+            } else if (bmi >= 17 && bmi <= 25) {
+                instruction.classList = "normal"
+                instruction.textContent = `Normal`;
+            } else if (bmi >= 25 && bmi <= 35) {
+                instruction.classList = "over"
+                instruction.textContent = "OverWeight";
+            } else if (bmi >= 35) {
+                instruction.classList = "obesity"
+                instruction.textContent = "Obesity";
+            } else {
+                instruction.classList = "invalid"
+                instruction.textContent = "Invalid";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

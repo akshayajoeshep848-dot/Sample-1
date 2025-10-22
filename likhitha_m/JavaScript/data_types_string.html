@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types JS</title>
+</head>
+<body>
+    <h1>JS DataTypes String</h1>
+    <script>
+        let age = 20;
+        let firstName = "Likhitha";
+        let lastName = `Molugumati`;
+        let bool = true;
+        let unDefined = undefined;
+        let sym = Symbol();
+        let bigInt = 10n;
+
+        console.log('Age:',typeof age)
+
+        console.log("Age:",age);
+        console.log("FirstName:",firstName);
+        console.log("bool:",bool);
+        console.log("Undefined:",undefined);
+        console.log("Symbol:",sym);
+        console.log(bigInt);
+        // template literal
+        console.log(`My name is ${firstName} ${lastName},and my age is ${age}`);
+        // string concatenation
+        console.log("My name is " + firstName + " " +lastName + ", and my age is" + age);
+        // comma seperated values
+        console.log("My name is", firstName, lastName, ", and my age is", age);
+
+        // string concatenation
+        let fullName1 = firstName + " "+ lastName;
+        // Template literal
+        let fullName2 = `${firstName} ${lastName}`; 
+
+        console.log("fullName1:",fullName1);
+        console.log("fullName2",fullName2);
+
+        let address1 = `Lakshmi Ganapathi Pg`;
+        let address2 = `Road NO-2`;
+        let address3 = `Kukatpally Housing Board, Phase-1`;
+        // template literal
+        console.log("Template literal:",`I Live in ${address1} it is in ${address2} at ${address3}`);
+        // string Concatenation
+        console.log("String Concatenation:","I live in ", address1 + " " + "it is in", address2 + " " + "at", address3);
+        
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO Do App</title>
+</head>
+<body>
+    <h1>MY To-Do App</h1>
+    <form action="submit" class="container"></form>
+    <div class="display-list"></div>
+
+    <script>
+        let container = document.querySelector(".container");
+        let taskItem = document.createElement("input");
+        let duration = document.createElement("input");
+        let add = document.createElement("button");
+        let displayList = document.querySelector("display-list");
+
+        let taskobject = {};
+        let taskArray = [];
+
+
+        // set classes
+        taskItem.classList.add("task");
+        duration.classList.add("duration");
+        add.classList.add("add");
+        add.textContent = "add";
+
+        // set Attributes
+        taskItem.setAttribute("type", "text");
+        taskItem.setAttribute("name", "task");
+        duration.setAttribute("type", "number");
+        duration.setAttribute("name", "duration");
+        add.setAttribute("type", "submit");
+
+        // append Children
+        container.appendChild(taskItem);
+        container.appendChild(duration);
+
+    </script>
+</body>
+</html>

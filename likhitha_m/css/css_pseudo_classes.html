@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        p{
+            background-color: lightpink;
+            width: 100px;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid grey;
+            border-radius: 15px;
+            box-shadow: 7px 7px lightgrey;
+        }
+        /* change state when user does mouseover action */
+        /* p:hover{
+            background-color: rgba(100, 148, 237, 0.463);
+            box-shadow: 3px 3px 5px inset;
+            color: wheat;
+        } */
+         /* change state when user click the element */
+        p:active{
+            /* background-color: rgba(100, 148, 237, 0.463); */
+            box-shadow: 3px 3px 5px rgba(211, 211, 211, 0.174) inset;
+            transform:translate(10px)scale(0.35);
+            
+        }
+        a:link{
+            color: chocolate;
+            font-size: 20px;
+            text-decoration: overline;
+        }
+
+        a:visited{
+            color: chartreuse;
+            /* font-family:cursive;
+            text-decoration: line-through; */
+        }
+       input{
+            border: 3px solid blue;
+        }
+        input:focus{
+                border: 5px solid blue;
+                box-shadow: 12px 12px lightgrey;
+                padding: 10px;
+                border-radius: 10px;
+        }
+
+        </style>
+</head>
+<body>
+    <h1>Pseudo Classes</h1>
+    <p>para</p>
+    <a href="https://www.logicWhile.com">Logic While</a>
+    <br><br>
+    <label for="fn">First Name:</label>
+    <input type="text" id="fn">
+    <br><br>
+    <label for="ln">Last Name:</label>
+    <input type="text" id="ln">
+</body>
+</html>

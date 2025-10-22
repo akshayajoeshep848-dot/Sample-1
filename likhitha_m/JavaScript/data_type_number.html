@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataType Number</title>
+</head>
+<body>
+    <h1>JS DataType Number</h1>
+    <script>
+        let age1 = 21;
+        let age2 = 21.5;
+        let bigNumber1 = 1e40;
+        let bigNumber2 = 3e41; 
+
+        let crores = 10_00_00_000.00
+        let billion = 1_000_000_000;
+        let sum = crores + billion;
+        console.log(sum);
+
+        console.log("Combined Number:", bigNumber1 + bigNumber2);
+
+        console.log(bigNumber1);
+
+        let infinity = 1/0;
+        let neginfinity = -1/0;
+        console.log(infinity);
+        console.log(neginfinity);
+
+        let age3 = "Twenty one";
+
+        let str = age1 + age3;
+        let notANumber = age1 - age3;
+        
+        console.log("not A Number: ", notANumber);
+        console.log(typeof notANumber);
+
+        console.log("Typeof Age1:",typeof age1,"\nvalue:", age1);
+        console.log("Typeof Age2:", typeof age2,"\nvalue:", age2);
+        console.log(str);
+        console.log(typeof str);
+
+
+    </script>
+</body>
+</html>

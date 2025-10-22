@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Callback function</title>
+</head>
+<body>
+    <h1>JS Callback function</h1>
+    <script>
+        // function greet (name, Callback) {
+        //     console.log("Hello," + name + "!");
+        //     Callback ();
+        // }
+        // function sayGoodBye (){
+        //     console.log("GoodBye!", name);
+        // }
+        // function sayHello (){
+        //     console.log("Hello!", name)
+        // } 
+        // greet ("Alice", sayGoodBye)
+        // greet ("Alice", sayHello)
+
+
+
+        // Example 2
+        function operator (num1, num2, oper) {
+            console.log(`You have given ${num1, num2}`);
+            oper (num1, num2);
+        }
+        function sum (num1, num2) {
+            console.log(num1 + num2);
+        }
+        function multiply (num1, num2) {
+            console.log( num1 * num2 );
+        }
+        function division (num1, num2) {
+            console.log(num1 / num2) ;
+        }
+        function modulus (num1, num2) {
+            console.log(num1 % num2) ;
+        }
+        console.log(operator(10,4, sum));
+        console.log(operator(3, 5, multiply));
+        console.log(operator(5,10,division));
+        console.log(operator(10,4, modulus));
+    </script>
+</body>
+</html>

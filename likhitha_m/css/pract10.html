@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Practice</title>
+    <style>
+        .mainbox {
+            display: flex;
+            height: 530px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: blue;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .top {
+            margin-top: 40px;
+        }
+        .start {
+            display: flex;
+            color: white;
+            justify-content: center;
+        }
+        .plan {
+            display: flex;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            justify-content: center;
+        }
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .starter, .team {
+            border-radius: 10px;
+            width: 200px;
+            height: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+        .personal {
+            height: 335px;
+            border-radius: 10px;
+            width: 200px;
+            padding: 10px;
+            background-color: white;
+        }
+        .emoji {
+            display: flex;
+            font-size: 35px;
+            justify-content: center;
+        }
+        .heading, .matter{
+            display: flex;
+            margin-top: 10px;
+            justify-content: center;
+        }
+        .number {
+            display: flex;
+            margin-top: 15px;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        sub {
+            font-size: 20px;
+        }
+        span {
+            color: blue;
+        }
+        span1 {
+            color: goldenrod;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .button {
+            display: flex;
+            padding: 5px;
+            background-color: blue;
+            width: 130px;
+            color: white;
+            text-decoration: underline;
+            justify-content: center;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .first {
+            margin-top: 35px;
+        }
+        button {
+            position: relative;
+            top: -10px;
+            border: none;
+            padding: 10px;
+            color: blue;
+            background-color: bisque;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mainbox">
+        <div class="top">
+            <div class="start">START NOW</div>
+            <div class="plan">Your Plan, your choice.</div>
+            </div>
+        <div class="cards">
+            <div class="starter first">
+                <div class="emoji">&#128522</div>
+                <div class="heading"><span1>Starter</span1></div>
+                <div class="number"><span><sub>$</sub>49</span></div>
+                <div class="matter">&nbsp &nbsp No setup fee<br> Unlimited products<br>
+                &nbspMobile Storefront<br>&nbsp &nbsp &nbsp Mobile app</div>
+                <a href="https//:www.getStarted.com"><span>Get Started</span></a>
+            </div>
+
+            <div class="personal second">
+                <button>Most Popular</button>
+                <div class="emoji">&#128519</div>
+                <div class="heading"><span1>Personal</span1></div>
+                <div class="number"><span><sub>$</sub>99</span></div>
+                <div class="matter">&nbsp &nbsp No setup fee<br> Unlimited products<br>
+                    &nbspMobile Storefront<br>&nbsp &nbsp &nbsp Mobile app</div>
+                    <div class="button">Get Started</div>
+                </div>
+                
+                <div class="team first">
+                    <div class="emoji">&#128526</div>
+                    <div class="heading"><span1>Team</span1></div>
+                    <div class="number"><span><sub>$</sub>299</span></div>
+                    <div class="matter">&nbsp &nbsp No setup fee<br> Unlimited products<br>
+                    &nbspMobile Storefront<br>&nbsp &nbsp &nbsp  Mobile app</div>
+                    <a href="https//:www.getStarted.com"><span>Get Started</span></a>
+                </div>
+        </div>
+    </div>
+</body>
+</html>

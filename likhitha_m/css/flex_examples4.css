@@ -1,0 +1,25 @@
+.box3{
+    background-color: red;
+    margin: 70px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.flex-container4{
+    padding: 20px;
+    font-size: 20px;
+}
+.miriui4{
+    display: flex;
+    font-size: 16px;
+    justify-content: end;
+    gap: 20px;
+    position: relative;
+    top: 25px;
+}
+.miri4::before {
+    content: "\229A";
+    padding-right: 10px;
+    font-size: 22px;
+}
