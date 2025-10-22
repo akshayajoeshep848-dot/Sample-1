@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Fetch api</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      .heading {
+        margin: 20px;
+        text-align: center;
+      }
+      .container {
+        background-color: aliceblue;
+        width: 80vw;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 10px lightgray;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .dog-container {
+        border: 1px solid coral;
+        /* padding: 10px; */
+      }
+
+      .dog-breed {
+        background-color: rgb(252, 224, 214);
+        padding: 10px;
+      }
+      .dogbreed-description {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">List of dog breeds</h1>
+    <div class="container"></div>
+    <script>
+      let dogsDataArray = [];
+
+      let response = fetch("https://dogapi.dog/api/v2/breeds")
+        .then((data) => data.json())
+        .then((value) => {
+          let array = value.data;
+          console.log(array);
+
+          let container = document.querySelector(".container");
+          array.forEach((dog) => {
+            let dogContainer = document.createElement("div");
+            let dogbreed = document.createElement("h3");
+            let dogbreedDescription = document.createElement("p");
+
+            // set classes
+            dogContainer.classList.add("dog-container");
+            dogbreed.classList.add("dog-breed");
+            dogbreedDescription.classList.add("dogbreed-description");
+
+            // assign values
+
+            dogbreed.textContent = dog.attributes.name;
+            dogbreedDescription.textContent = dog.attributes.description;
+
+            dogContainer.append(dogbreed);
+            dogContainer.append(dogbreedDescription);
+            container.appendChild(dogContainer);
+          });
+        })
+        .catch((error) => console.log(error));
+    </script>
+  </body>
+</html>
