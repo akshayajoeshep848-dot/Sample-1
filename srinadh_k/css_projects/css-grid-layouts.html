@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-layout</title>
+    <style>
+        body {
+            background-color: #e6e9f5; 
+        }
+
+        .container {
+            width: 650px;
+            height: 498px;
+            background-color: #ffffff;
+        }
+
+        .para {
+            color: #a5a5c1;
+            font-size: small;
+        }
+
+        .task {
+            margin: 10px;
+            font-weight: bolder;
+
+        }
+
+        .para {
+            margin: 10px;
+        }
+
+        .sub-1 {
+            padding: 10px;
+        }
+
+        .images {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        .complete{
+            color: #7169cf;
+            background-color: #efeefa;
+            border-radius: 200px;
+            font-size: 12px;
+            place-content: center;
+            text-align: center;
+        }
+        .number{
+            place-content: center;
+            text-align: center;
+        }
+        .pending{
+            color: orange;
+            font-size: 12px;
+             place-content: center;
+            text-align: center;
+        }
+        .completed{
+            color: #7169cf;
+            font-size: 12px;
+             place-content: center;
+            text-align: center;
+        }
+        .rejected{
+            color: #fd7889;
+             font-size: 12px;
+             place-content: center;
+            text-align: center;
+            box-shadow: #f24794;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="sub-1">
+
+                <h4 class="task">Tasks</h4>
+                <p class="para">A task is accomplished by a set deadline, and must contribute toward work-related
+                    objectives.</p>
+            </div>
+            <div>
+
+            </div>
+            <div class="table">
+                <table border="1">
+                    <thead>
+                        <th>TASK</th>
+                        <th>TEAM</th>
+                        <th>OPENTASK</th>
+                        <th>PRIORITY</th>
+                        <th>STATUS</th>
+                    </thead>
+                    <!-- row-1 -->
+                    <tr>
+                        <td style="padding: 10px;"><input type="radio"> Evaluating the design </td>
+                        <td>
+
+                            <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt="image"><img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                                alt="img"> <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                                alt=""> <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                                alt="">
+                        </td>
+                        <td class="number">18</td>
+                        <td style="color: #827bd5;">High</td>
+                        <td><div class="complete">complted</div></td>
+
+                         
+                    </tr>
+                    <!-- row-2 -->
+                    <tr>
+                        <td style="padding: 10px;"><input type="radio"> Evaluating the design </td>
+                        <td>
+
+                            <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt="image"><img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                                alt="img"> <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                                alt=""> <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                                alt="">
+                        </td>
+                        <td class="number">34</td>
+                        <td style="color: #f24794;">Normal</td>
+                        <td><div class="pending">pending</div></td>
+
+
+                    </tr>
+                    <!-- row-3 -->
+                    <tr>
+                        <td style="padding: 10px;"><input type="radio"> Evaluating the design </td>
+                        <td>
+
+                            <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt="image"><img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                                alt="img"> <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                                alt=""> <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                                alt="">
+                        </td>
+                        <td class="number">25</td>
+                        <td style="color: orange;">Low</td>
+                        <td><div class="completed">completed </div></td>
+
+
+                    </tr>
+                    <!-- row-4 -->
+                    <tr>
+                        <td style="padding: 10px;"><input type="radio"> Evaluating the design </td>
+                        <td>
+
+                            <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt="image"><img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                                alt="img"> <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                                alt=""> <img class="images"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                                alt="">
+                        </td>
+                        <td class="number">37</td>
+                        <td style="color: #827bd5;">High</td>
+                        <td><div class="rejected">rejected</div></td>
+
+
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

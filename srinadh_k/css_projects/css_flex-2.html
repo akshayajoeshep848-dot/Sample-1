@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .parent-1{
+            display: flex;
+            justify-content: center;
+        }
+       .child-1{
+            height: 100px;
+            width: 100px;
+            background-color: antiquewhite;
+            text-align: center;
+            place-content: center;
+
+       }
+        .parent-2{
+            display: flex;
+            justify-content: center;
+        }
+           .child-2{
+            height: 100px;
+            width: 100px;
+            background-color: antiquewhite;
+            margin-right: 100px;
+             place-content: center;
+             text-align: center;
+           }
+            .child-3{
+            height: 100px;
+            width: 100px;
+            background-color: antiquewhite;
+            text-align: center;
+            place-content: center;
+            }
+    </style>
+</head>
+<body>
+    <div class="parent-2">
+        <div class="child-2">chlid</div>
+        <div class="child-3">chlid</div>
+    </div>
+   <div class="parent-1">
+    <div class="child-1">child</div>
+   </div>
+   <div class="parent-2">
+        <div class="child-2">chlid</div>
+        <div class="child-3">chlid</div>
+    </div>
+</body>
+</html>

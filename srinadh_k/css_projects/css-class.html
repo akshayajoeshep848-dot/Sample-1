@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-pseudo class</title>
+    <style>
+        p{
+            color: red;
+             border: 2px solid black;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px lightgray;
+            border-radius: 20px;
+        }
+        p:hover{
+            color: blue ;
+           border-radius: 0px;
+           display: flex;
+           flex-direction: column;
+        }
+        button {
+            border: none;
+            background-color: red;
+            color: white;
+            padding: 10px 30px;
+            box-shadow: 2px 2px 5px 5px lightgray; 
+        }
+        button:hover{
+            transform: scale(1.05) rotate(-180deg)
+        }
+        button:active{
+            /* box-shadow: 2px 2px 2px 2px lightgray inset,2px 2px 2px 2px lightgray; */
+             transform: scale(0.95);
+        }
+        .form{
+            padding: 20px;
+            border: 1px solid lightblue;
+        }
+        input{
+            border: 2px solid coral;
+           
+        }
+        input:focus{
+            border: 2px ;
+        }
+        a:link{
+            text-decoration: none;
+        
+        }
+        a:visited{
+            text-decoration: line-through;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css pseudo classes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic commodi, exercitationem aut a voluptates quis.
+        Laudantium totam dolor ratione asperiores repellendus, eum quos quasi nemo explicabo temporibus odit itaque
+        inventore nisi tempora, at obcaecati fuga tempore tenetur corrupti provident id odio excepturi! Vitae voluptatum
+        rem beatae sed aspernatur hic dicta.</p>
+        <button>submit</button>
+        <div class="form">
+            <label for="fn"></label>
+            <input type="text" id="fn">
+        </div>
+        <div class="form">
+            <a href="https//www.logicwhile.com" >logicwhile</a>
+            <a href="https://www.google.com" target="_blank" >google</a>
+        </div>
+</body>
+
+</html>
+

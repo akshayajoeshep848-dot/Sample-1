@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_fetch</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 80vw;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: 0 0 10px 10px lightseagreen;
+        border-radius: 10px;
+        display:grid ;
+        grid-template-columns:repeat(3,1fr);
+        gap: 10px;
+    }
+    .dog-container{
+        
+       border: 2px solid orange;
+      
+
+    }
+    .dog-breed{
+        background-color: rgb(247, 195, 174);
+        margin-top: 0px;
+        padding: 10px;
+
+    }
+
+    .dogbreed-description{
+        padding: 10px;
+    }
+</style>
+<body>
+    <h1>List of  dog  breeds</h1>
+    <div class="container"></div>
+    <script>
+        let dogsDataArray = [];
+        let response = fetch("https://dogapi.dog/api/v2/breeds")
+        .then((data) =>  data.json())
+        .then((value) => {  
+            let array = value.data;
+            console.log(array);         
+            let container = document.querySelector(".container");
+               
+            array.forEach((dog) =>{
+            let dogContainer = document.createElement("div");
+            let dogbreed = document.createElement("h3");
+            let dogbreedDescription = document.createElement("p");
+            //classes
+            dogContainer.classList.add("dog-container");
+            dogbreed.classList.add("dog-breed");
+            dogbreedDescription.classList.add("dogbreed-description")
+            //assign values
+             dogbreed.textContent = dog.attributes.name;
+             dogbreedDescription.textContent = dog.attributes.description;
+             dogContainer .append(dogbreed);
+             dogContainer.append(dogbreedDescription);
+             container.append(dogContainer)
+            });
+        })
+        .catch((error) => console.log(error));
+        console.log('dogsDataArray', dogsDataArray);
+    </script>
+</body>
+</html>

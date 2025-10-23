@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let prm=new Promise((resolve,reject)=>{
+      //     // resolve("Operation is successful");
+      //     reject("operatin is fail")
+      // })
+      // // console.log(prm);
+      // // prm.then((res)=>{
+      // //     console.log(res);
+      // // })
+      // prm.catch((res1)=>{
+      //     console.log(res1);
+      // })
+
+      // let prm = new Promise((resolve)=>{
+      //     setTimeout(()=>{
+      //         resolve("operation is successful")
+      //     },3000)
+      // });
+      // console.log(prm);
+      // prm.then((res1)=>{
+      //     console.log(res1);
+      // })
+      let prm = new Promise((resolve,reject) => {
+        setTimeout(() => {
+          reject("operation is failed");
+        }, 3000);
+      });
+      console.log(prm);
+      prm.catch((res1) => {
+        console.log(res1);
+      });
+    </script>
+  </body>
+</html>

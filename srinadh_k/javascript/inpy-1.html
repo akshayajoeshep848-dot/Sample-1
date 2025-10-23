@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button</title>
+  </head>
+  <body>
+    <input type="text" id="inpt" />
+    <button id="sub">submit</button>
+    <h1 id="h1"></h1>
+    <script>
+      document.getElementById("sub").onclick =  () => {
+        let Inpt = document.getElementById("inpt").value;
+        document.getElementById("h1").textContent = Inpt;
+      };
+    </script>
+  </body>
+</html>

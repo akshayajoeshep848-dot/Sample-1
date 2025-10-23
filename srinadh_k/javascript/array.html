@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Object Example</title>
+</head>
+<body>
+    <div>
+        <label for="firstname">First Name:</label>
+        <input id="firstname" type="text" name="firstname">
+        <div>
+            <label for="lastname">Last Name:</label>
+            <input id="lastname" type="text" name="lastname">
+        </div>
+    </div>
+    <button id="button">Click Me</button>
+    <button id="rest">reset</button>
+
+    <script>
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+        let button = document.getElementById("button");
+        let rest = document.getElementById("rest");
+        let formObject = {};
+
+        button.addEventListener("click", (event) => {
+            
+            formObject["firstname"] = firstname.value;
+            formObject["lastname"] = lastname.value;
+
+        
+            console.log(formObject);
+        });
+    </script>
+</body>
+</html>
+
+    </script>
+</body>
+</html>

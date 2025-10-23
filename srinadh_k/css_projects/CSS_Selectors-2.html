@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>attribute selectors</title>
+    <style>
+        input[type="text"] {
+            border: 1px solid blue;
+            height: 30px;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        div {
+            margin: 10px;
+
+        }
+        .container{
+            border: 1px solid lightgray;
+            box-shadow: 1px 2px 3px 4px rgb(178, 187, 141);
+            width: 350px;
+
+           
+
+        }
+        h1{
+            background-color:  red;
+            border-radius: 10px;
+            
+        }
+        #input2{
+            border: 1px dotted red;
+            border-radius: 5px;
+        }
+       
+    </style>
+</head>
+<div class="container">
+    <div>
+        <h1>CSS selectors</h1>
+        <label for="input1">First Name:</label>
+        <input type="text" id="input1" />
+    </div>
+    <div>
+        <label for="input1">Last Name:</label>
+        <input type="text" id="input1" />
+    </div>
+    <div>
+        <label  for="input2">Date Of Birth:</label>
+        <input type="date" id="input2">
+    </div>
+    <div>
+        
+        <button style="border: 1px solid blue;">submit</button>
+    </div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+     <h1>js Async</h1>
+     <script>
+    //     console.log("start");
+    //    setTimeout(()=> console.log("middle"),1000);
+    //     console.log("end")
+
+    function getPizza(callback){
+        console.log("Ordering Pizza")
+        setTimeout(()=>{
+            console.log("Pizza has arrived");
+            callback();
+        },2000);
+    }
+
+    function doDishes(){
+        console.log("washing dishes...");
+
+    }
+
+    getPizza(doDishes);
+    console.log("Watching instagram while i wait");
+     </script>
+</body>
+</html>

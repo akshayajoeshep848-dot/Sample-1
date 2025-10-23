@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog Details</title>
+  <style>
+    body {
+      background-color: #f3f3f3;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      color: darkgreen;
+      text-align: center;
+    }
+    div {
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 18px;
+      letter-spacing: 1px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dog Details</h1>
+
+  <script>
+    let obj = {
+      data: [
+        {
+          id: "036feed0-da8a-42c9-ab9a-57449b530b13",
+          type: "breed",
+          attributes: {
+            name: "Affenpinscher",
+            description:
+              "The Affenpinscher is a small and playful breed of dog that was originally bred in Germany for hunting small game. They are intelligent, energetic, and affectionate, and make excellent companion dogs.",
+            life: { max: 16, min: 14 },
+            male_weight: { max: 5, min: 3 },
+            female_weight: { max: 5, min: 3 },
+            hypoallergenic: true,
+          },
+        },
+        {
+          id: "dd9362cc-52e0-462d-b856-fccdcf24b140",
+          type: "breed",
+          attributes: {
+            name: "Afghan Hound",
+            description:
+              "The Afghan Hound is a large and elegant breed of dog that was originally bred in Afghanistan for hunting small game. They are intelligent, independent, and athletic, and make excellent companion dogs.",
+            life: { max: 14, min: 12 },
+            male_weight: { max: 27, min: 23 },
+            female_weight: { max: 25, min: 20 },
+            hypoallergenic: false,
+          },
+        },
+        {
+          id: "1460844f-841c-4de8-b788-271aa4d63224",
+          type: "breed",
+          attributes: {
+            name: "Airedale Terrier",
+            description:
+              "The Airedale Terrier is a large and powerful breed of dog that was originally bred in England for hunting small game. They are intelligent, energetic, and determined, and make excellent hunting dogs.",
+            life: { max: 14, min: 12 },
+            male_weight: { max: 23, min: 20 },
+            female_weight: { max: 20, min: 18 },
+            hypoallergenic: false,
+          },
+        },
+        {
+          id: "e7e99424-d514-4b56-9f0c-05736f6dd22d",
+          type: "breed",
+          attributes: {
+            name: "Akita",
+            description:
+              "The Akita is a large, muscular dog breed that originated in Japan. They are known for their loyalty and courage.",
+            life: { max: 12, min: 10 },
+            male_weight: { max: 60, min: 35 },
+            female_weight: { max: 50, min: 35 },
+            hypoallergenic: false,
+          },
+        },
+      ],
+    };
+
+    let arrobj = obj.data;
+
+    arrobj.forEach((detail) => {
+      let div = document.createElement("div");
+
+      let p1 = document.createElement("p");
+      let p2 = document.createElement("p");
+      let p3 = document.createElement("p");
+      let p4 = document.createElement("p");
+      let p5 = document.createElement("p");
+      let p6 = document.createElement("p");
+      let p7 = document.createElement("p");
+      let p8 = document.createElement("p");
+
+      p1.textContent = `ID: ${detail.id}`;
+      p2.textContent = `Type: ${detail.type}`;
+      p3.textContent = `Name: ${detail.attributes.name}`;
+      p4.textContent = `Description: ${detail.attributes.description}`;
+      p5.textContent = `Life Span: ${detail.attributes.life.min} - ${detail.attributes.life.max} years`;
+      p6.textContent = `Male Weight: ${detail.attributes.male_weight.min} - ${detail.attributes.male_weight.max} kg`;
+      p7.textContent = `Female Weight: ${detail.attributes.female_weight.min} - ${detail.attributes.female_weight.max} kg`;
+      p8.textContent = `Hypoallergenic: ${detail.attributes.hypoallergenic ? "Yes" : "No"}`;
+
+      div.append(p1, p2, p3, p4, p5, p6, p7, p8);
+      document.body.append(div);
+    });
+  </script>
+</body>
+</html>

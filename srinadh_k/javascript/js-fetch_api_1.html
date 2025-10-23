@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    <script>
+        let dogsDataArray =[];
+        let data = fetch("https://dogapi.dog/api/v2/breeds")
+        .then((data)=> data.json())//conver json
+       .then((value)=>{
+        let array =value.data;
+        console.log(array);
+        
+        let container = document.querySelector(".container");
+        array.forEach((dog)=>{
+            let dogContainer = document.createElement("div");
+            let dogbreed = document.createElement("h3");
+            let dogbreedDescription = document.createElement("p");
+            //set class
+            dogContainer.classList.add("dog-container");
+            dogbreed.classList.add("dog-breed");
+            dogbreedDescription.classList.add("dogbreed-description");
+            
+            dogbreed.textContent = dog.attributes.name;
+            dogbreedDescription.textContent = dog.attributes.dogbreedDescription;
+            
+            // assign values
+            dogContainer.append(dogbreed);
+            dogContainer.append(dogbreedDescription);
+            container.appendC(dogContainer );
+            
+        })
+        
+    })
+       
+       
+         
+    </script>
+</body>
+</html>

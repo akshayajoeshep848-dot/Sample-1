@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .first-1 {
+            border: 1px solid blue;
+        }
+
+        #fn-2 {
+            border: 3px solid orangered;
+            background-color: bisque;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>CSS Specificity</h1>
+    <div class="main">
+        <div class="sub-1">
+            <input type="text" style="border: 3px solid red;" class="first-class" id="fn-1">
+
+        </div>
+
+        <input type="number" class="first-1" id="fn-2">
+        <input type="password" class="first-2" id="fn-3">
+        <input type="time" class="first-3" id="fn-4">
+        <input type="date" class="first-4" id="fn-5">
+    </div>
+</body>
+
+</html>

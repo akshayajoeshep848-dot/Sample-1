@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-item menu-iteml-1">Menu ITem 1</div>
+        <div class="menu-item menu-iteml-2">Menu ITem 2</div>
+        <div class="menu-item menu-iteml-3">Menu ITem 3</div>
+        <div class="menu-item menu-iteml-4">Menu ITem 4</div>
+    </div>
+    <div class="para-container">
+        <p>this is a para 1 </p>
+        <p>this is a para 2</p>
+        <p>this is a para 3</p>
+        <p>this is a para 4</p>
+    </div>
+    <div class="button-container">
+        <button class="button-item">button1</button>
+        <button class="button-item">button2</button>
+        <button class="button-item">button3</button>
+        <button class="button-item">button3</button>
+
+    </div>
+    <!-- there are some objects in array -->
+<script>
+    // let menuITems = document.getElementsByClassName("menu-item");
+    // // console.log(typeof(menuITems));
+    // console.log(Array.isArray(menuITems));
+    // console.log(Array.isArray(Array.from (menuITems)));
+    // console.log(Array.from(menuITems));
+    // let menuITemsArray = Array.from(menuITems);
+    // menuITemsArray.forEach((item) => (item.innerText = "hello"));
+    // Array.isArray is tell array or not
+    // arra from it will convert the array 
+
+    // let paraItems = document.getElementsByTagName("p")
+    // let actorsArray=[{
+    //     name:"prabhas",
+    //     profession:"Acting",
+    //     movies:["mirchi","bahubali"],
+    // },
+    // {
+    //     name:"N.T.R",
+    //     profession:"Acting,Enterprenuer",
+    //     movies:["adhi","temper"],
+    // },
+    // {
+    //     name:"sai Pallavi",
+        
+    //     profession:["acting","modelling"],
+
+    //     movies:["fida","love story"],
+    // },
+
+    // ];
+    // Array.from(paraItems).forEach((element,index) => {
+    //    element.innerText = `Actor Name: ${actorsArray[index].name}`;
+
+    // });
+        let styleArray =[
+        {
+            name:"apply",
+            backgroundColor:"red",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            borderRadius:"10px",
+            color:"red",
+            boxshadow:"3px 2px 3px light blue"
+        },
+        {
+            name:"apply",
+            backgroundColor:"red",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            borderRadius:"10px",
+            color:"red",
+            boxshadow:"3px 2px 3px light blue"
+        },
+        {
+            name:"apply",
+            backgroundColor:"red",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            borderRadius:"10px",
+            color:"red",
+            boxshadow:"3px 2px 3px light blue"
+        },
+        {
+            name:"apply",
+            backgroundColor:"red",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            borderRadius:"10px",
+            color:"red",
+            boxshadow:"3px 2px 3px light blue"
+        }
+    ]
+
+    let buttonItems = document.querySelectorAll(".button-item");
+    buttonItems.forEach((styleArray ,index) =>{
+    item.innerText = styleArray[index].color
+    item.style=styleArray[index].backgroundColor;
+    item.style.padding = "10px";
+    item.style.border = "none";
+    item.style.margin = "10px";
+    item.style.borderRadius = "10px";
+    item.style.color = "white";
+    item.style.boxshadow = "2px 3px 5px light gray"
+
+
+    });
+    
+
+</script>
+</body>
+</html>

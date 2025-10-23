@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1 id="h1">js events listener</h1>
+    <button id="button" onclick="onClick()">click me</button>
+    <input type="text" id="inpt">
+
+    <script>
+        let button=document.getElementById("button");
+        let h1=document.getElementById("h1");
+        let formobject = {};
+        button.addEventListener("click",(event)=>formobject[`${input.name}`]= input.value);
+        console.log(formobject);
+
+        h1.addEventListener("mouseover",(event)=>{
+            event.target.style.backgroundColor = "blue"
+            event.target.style.borderRadius = "10px"
+            event.target.style.textalign= "center"
+
+        });
+
+        h1.addEventListener("mouseout",(event)=>{
+            event.target.style.backgroundColor = "white"
+            event.target.style.borderRadius = "10px"
+        });
+        let input=document.getElementById("inpt");
+        input.addEventListener("keydown",(event) =>{
+            console.log(`key"${event.key} has been pressed`);
+            
+        });
+
+        
+    </script>
+    
+</body>
+</html>

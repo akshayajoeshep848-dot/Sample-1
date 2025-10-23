@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Patient</title>
+    <style>
+        
+      .head {
+        box-shadow: 1px 2px 3px 1px lightgray;
+        text-align: center;
+        color: cadetblue;
+        background-color: aquamarine;
+      }
+      .name {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .middle {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .last {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .address {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .DOB {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .phone {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .aadhar {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .ABHA {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .visit {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .conditions {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .medications {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .prescription {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .tests {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .date {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .food {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .allergies {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        align-items: center;
+        margin-left: 70px;
+      }
+      .header{
+        margin-left: 360px;
+      }
+    </style>
+  </head>
+  <body>
+   
+      <div class="head">
+        <h1>Patient Registration Form</h1>
+      </div>
+    <div class="header">
+       <div class="name">
+        <label for="first name">First Name:</label>
+        <input
+          id="first name"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="middle">
+        <label for="middle name">Middle Name:</label>
+        <input
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: black;
+            width: 400px;
+            height: 20px;
+          "
+          id="middle name"
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="last">
+        <label for="last name">Last Name:</label>
+        <input
+          id="last name"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="address">
+        <label for=" address">address:</label>
+        <input
+          id="address"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="DOB">
+        <label for="DOB">DOB:</label>
+        <input
+          id="DOB"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="date"
+        />
+      </div>
+      <br />
+      <div class="phone">
+        <label for="phone">Phone number:</label>
+        <input
+          id="phone"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="number"
+        />
+      </div>
+      <br />
+      <div class="aadhar">
+        <label for="Aadhar">Aadhar Number:</label>
+        <input
+          id="Aadhar"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="number"
+        />
+      </div>
+      <br />
+      <div class="ABHA">
+        <label for="ABHA">ABHA Number:</label>
+        <input
+          id="ABHA"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="number"
+        />
+      </div>
+      <br />
+      <div class="visit">
+        <label for="visit">Purpose of Visit:</label>
+        <input
+          id="visit"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="conditions">
+        <label for="conditons">Previous Conditions:</label>
+        <input
+          id="conditions"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="medications">
+        <label for="medications">Current Conditions:</label>
+        <input
+          id="medicatins"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="prescription">
+        <label for="prescription">Previous prescription:</label>
+        <input
+          id="perscription"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="tests">
+        <label for="tests">previous tests:</label>
+        <input
+          id="tests"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="date">
+        <label for="date">Visit Date:</label>
+        <input
+          id="date"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="date"
+        />
+      </div>
+      <br />
+      <div class="food">
+        <label for="food">Food allergies:</label>
+        <input
+          id="food"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+      <div class="allergies">
+        <label for="allergies">Medication allergies:</label>
+        <input
+          id="allergies"
+          style="
+            box-shadow: 1px 1px 1px 1px lightgoldenrodyellow;
+            border-radius: 5px;
+            background-color: aquamarine;
+            color: blue;
+            width: 400px;
+            height: 20px;
+          "
+          type="text"
+        />
+      </div>
+      <br />
+    </div>
+  </body>
+</html>

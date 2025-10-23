@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors 4</title>
+    <style>
+        h1+p{
+            color: red;
+           
+        }
+        p+h1{
+            border: 1px solid blue;
+            border-radius: 10px;
+            background-color: burlywood;
+        }
+        h1{
+            border: 1px solid blue;
+            border-radius: 10px;
+            background-color: blanchedalmond;
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors - adjecent sibling</h1>
+    <p> 
+        h1 + p{} <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, impedit?
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa natus quos magnam non voluptatum consectetur, repudiandae ullam, iusto quo tenetur possimus quidem, nemo provident nihil est officiis. Voluptates, nisi alias.
+    </p>
+    <h1>
+        General sibling selector
+    </h1>
+    <p> h1 ~ p {} <br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, nesciunt?</p>
+
+</body>
+</html>

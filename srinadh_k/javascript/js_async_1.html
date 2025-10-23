@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+
+</head>
+<body>
+    <!-- an async is a function that implicitly returns a promise .This syntax is a syntactic over promise,desined to improve readabilty and simplify chainng asynchronous operations. -->
+     <!-- the await keyword is only v alid inside async functions and is used to pause the execution of the function until the promise it awaits resolves or rejects .it allows writing asynchronous code thats synchronous-->
+      <div id="container"></div>
+      <button id="sub">submit</button>
+    <script>
+        // async function hello(){
+        //     return "hello , async"
+        // }
+        // console.log(hello())
+        // hello().then((value)=> console.log(value));
+        // hello().then(console.log);
+
+        async function fetchdata(url){
+            let response = await fetch(url)
+            let breeds = await response.json()
+        console.log(breeds)
+        console.log("end fetch call.....")
+        return breeds;
+
+        }
+        fetchdata("https://dogapi.dog/api/v2/breeds").then((value)=> console.log(value))
+        fetchdata("https://jsonplaceholder.typicode.com/users/1").then((value)=>{  
+        let con= document.getElementById("container");
+        let sub=document.getElementById("sub")
+        let name = document.createElement("p")
+        let email = document .createElement("p")
+        let job= document.createElement("p")
+        name.classList.add("name");
+        email.classList.add("email");
+        job.classList.add("job")
+        name.textContent = `Name:${value.name}`;
+        email.textContent=`Email:${value.email}`;
+        job.textContent=`Job:${value.job}`;
+       con.appendChild(name);
+       con.appendChild(email);
+       con.appendChild(job);
+       })
+        </script>
+</body>
+</html>

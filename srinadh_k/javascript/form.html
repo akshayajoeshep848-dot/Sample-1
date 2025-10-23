@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body style="display:flex;justify-content:center;align-items:center;height:100vh;background:#f2f2f2;">
+    <div id="main"></div>
+
+    <script>
+      let main = document.getElementById("main");
+      main.style.backgroundColor = "#fff";
+      main.style.padding = "30px 40px";
+      main.style.borderRadius = "15px";
+      main.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.2)";
+      main.style.width = "350px";
+      main.style.color = "#333";
+
+    
+      const heading = document.createElement("h1");
+      heading.innerText = "Student Registration Form";
+      heading.style.textAlign = "center";
+      heading.style.color = "#333";
+      heading.style.fontSize = "22px";
+      heading.style.marginBottom = "25px";
+      main.append(heading);
+
+      const form = document.createElement("form");
+      form.id = "student";
+      main.append(form);
+
+      
+      function styleInput(input) {
+        input.style.width = "100%";
+        input.style.padding = "8px";
+        input.style.marginTop = "6px";
+        input.style.marginBottom = "12px";
+        input.style.border = "1px solid #ccc";
+        input.style.borderRadius = "6px";
+        input.style.outline = "none";
+      }
+
+      
+      let label1 = document.createElement("label");
+      label1.innerText = "Student Name:";
+      form.append(label1);
+
+      const name = document.createElement("input");
+      name.type = "text";
+      name.placeholder = "Enter your Name : ";
+      name.id = "name";
+      styleInput(name);
+      form.append(name);
+
+      
+      let label2 = document.createElement("label");
+      label2.innerText = "Email:";
+      form.append(label2);
+
+      const email = document.createElement("input");
+      email.type = "email";
+      email.placeholder = "Enter your Email";
+      email.id = "email";
+      styleInput(email);
+      form.append(email);
+
+      
+      const label3 = document.createElement("label");
+      label3.innerText = "DOB:";
+      form.append(label3);
+
+      const dob = document.createElement("input");
+      dob.type = "date";
+      styleInput(dob);
+      form.append(dob);
+
+      
+      const genderLabel = document.createElement("label");
+      genderLabel.innerText = "Gender:";
+      form.append(genderLabel);
+      form.append(document.createElement("br"));
+
+      const male = document.createElement("input");
+      male.type = "radio";
+      male.name = "gender";
+      male.value = "Male";
+      const maleLabel = document.createElement("label");
+      maleLabel.innerText = "Male ";
+      maleLabel.append(male);
+
+      const female = document.createElement("input");
+      female.type = "radio";
+      female.name = "gender";
+      female.value = "Female";
+      const femaleLabel = document.createElement("label");
+      femaleLabel.innerText = "Female ";
+      femaleLabel.append(female);
+
+      form.append(maleLabel, femaleLabel);
+
+  
+      const mobile = document.createElement("label");
+      mobile.innerText = "Mobile:";
+      form.append(document.createElement("br"));
+      form.append(mobile);
+
+      const number = document.createElement("input");
+      number.type = "number";
+      styleInput(number);
+      form.append(number);
+
+      
+      const add = document.createElement("label");
+      add.innerText = "Address:";
+      
+      form.append(add);
+
+      const address = document.createElement("input");
+      address.type = "textarea";
+      address.placeholder = "Enter your address";
+      styleInput(address);
+      form.append(address);
+       const submitBtn = document.createElement("button");
+      submitBtn.type = "submit";
+      submitBtn.innerText = "Submit";
+      submitBtn.style.width = "100%";
+      submitBtn.style.padding = "10px";
+      submitBtn.style.backgroundColor = "#4CAF50";
+      submitBtn.style.color = "white";
+      submitBtn.style.border = "none";
+      submitBtn.style.borderRadius = "8px";
+      submitBtn.style.cursor = "pointer";
+      submitBtn.style.fontSize = "16px";
+      submitBtn.style.marginTop = "10px";
+
+      
+      submitBtn.addEventListener("mouseover", () => {
+        submitBtn.style.backgroundColor = "#45a049";
+      });
+      submitBtn.addEventListener("mouseout", () => {
+        submitBtn.style.backgroundColor = "#4CAF50";
+      });
+
+      form.append(submitBtn);
+
+      // Simple form action
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Form submitted successfully!");
+      });
+    </script>
+  </body>
+</html>

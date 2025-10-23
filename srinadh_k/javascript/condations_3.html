@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // garde A - 100 - 90
+        // grade B - 90 - 80
+        // grade C - 70 - 70
+        // grade E - 60 - 60
+        // grade F - 40 -0
+        // let mrks=prompt("enter your marks")
+        // if(mrks>90 && mrks<=100){
+        //     console.log("GRADE-A,GOOD")
+        // }else if(mrks>80 && mrks<=90){
+        //     console.log("GRADE-B")
+        // }else if(mrks>70 && mrks<=80){
+        //     console.log("GRADE-c")
+        // }else if(mrks>=60 && mrks<=70){
+        //     console.log("GRADE-d")
+        // }else if(mrks>=0 && mrks<=40){
+        //     console.log("GRADE-e")
+        // }
+        /// 
+        let week=prompt("enter day")
+        if(week == 0){
+            console.log("monday");
+
+        }else if(week == 1){
+            console.log("tuesday")
+        }else if(week==2){
+            console.log("wednesday")
+        }else if(week == 3){
+            console.log("thursday")
+        }else if(week == 4){
+            console.log("friday")
+        }else if (week == 5){
+            console.log("saturday")
+        }else if(week == 6){
+            console.log("sunday")
+        }else{
+            console.log("no more days")
+        }
+        // temperature condations 
+
+        let temp=prompt("enter temperature conditions")
+        if(temp>=-40 && temp<=0){
+            console.log("Weather is too cold , don't go outside")
+        }else if(temp>0 && temp<=10){
+            console.log("Weather is cold , wear warm clothes while going outside")
+        }else if(temp>10 && temp<=20){
+            console.log("Weather is some what cool , wear a sweater while going out")
+        }else if(temp>20 && temp<=30){
+            console.log("Weather is awsome today , enjoy outdoors")
+        }else if(temp>30 && temp<=40){
+            console.log("")
+        }
+
+
+        let age =Number(prompt("enter your age"))
+      if (age > 18){
+        let license=prompt("yes or no")
+        if (license == "no"){
+          console.log("not eligible to drive ")
+        }else{
+          console.log("eligible for drive")
+        }
+      }else if(age<18){ 
+        console.log("too young")
+       }
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <style>
+        body {
+            background-color: #e5e8f6;
+            ;
+        }
+
+        .container {
+            height: 165px;
+            width: 203px;
+            background-color: white; 
+            border-radius: 20px;
+
+        }
+
+        .header {
+            place-content: center;
+
+
+        }
+
+        .head {
+            place-content: center;
+            justify-content: center;
+            text-align: center;
+            margin-right: 75px;
+
+
+        }
+
+        .previous {
+            margin-left: 15px;
+            margin-top: -19px;
+
+            color: #c3c0cc;
+
+        }
+
+        .month {
+            margin-left: 15px;
+            margin-top: -19px;
+
+            color: #c3c0cc;
+        }
+
+        .num {
+            margin-left: 1.5px;
+            margin-top: -1px;
+            font-weight: bold;
+        }
+        .higher{
+            display: flex;
+            flex-direction: row;
+            margin-right: -15px;
+            margin-top: -1px;
+            color: #c3c0cc ;
+        }
+        .number{
+            margin-left: 15px;
+            margin-top: -1px;
+            
+        }
+        .icon{
+                 background-color: blue;
+                 border-radius: 50%;
+                margin-left: 40px;
+                
+                 
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h4 class="head">Total Revenue</h4>
+            <p class="previous">Previous month vs this</p>
+            <p class="month">months</p>
+        </div>
+        <div class="number">
+            <h3 class="num">$5,900.00</h3>
+            <div class="higher">
+                <p class="higher">
+                <p class="number" style="color: green;margin-left: 15px;
+             margin-top:-1px ; ">55% </p> higher</p>
+             <div class="icon">cricle</div>
+            </div>
+         </div>
+
+
+    </div>   
+</body>
+
+</html>
