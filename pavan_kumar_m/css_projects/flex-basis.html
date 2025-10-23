@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex basis</title>
+    <style>
+        .parent {
+            background-color: darkkhaki;
+            height: 50vh;
+            display: flex;
+            gap: 10px;
+
+
+        }
+
+        .child {
+            background-color: darkorange;
+            height: 100px;
+            width: 100px;
+            flex-basis: 300px;
+
+
+        }
+
+        .child-1 {
+            flex-shrink: 1;
+
+        }
+
+        .child-2 {
+            flex-shrink: 2;
+        }
+
+        .child-3 {
+            flex-shrink: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flex basis</h1>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">Lorem ipsum dolor sit amet isci?</div>
+    </div>
+</body>
+
+</html>

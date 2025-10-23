@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>closures</title>
+  </head>
+  <body>
+    <h1>Closures</h1>
+    <p>
+      A closure is created when a function remembers the variables from its
+      outer scope even after the outer function has finished executing.
+    </p>
+    <p>
+      In simple terms: A closure is when an inner function has access to the
+      outer function’s variables, even after the outer function is done running.
+    </p>
+
+    <script>
+        function outerFunction(){
+            let counter=0
+            function InnerFunction(){
+                counter++
+                console.log(counter)
+            }
+            return InnerFunction;
+        }
+        let mycounter=outerFunction()
+        mycounter()
+        // outerFunction()()
+
+
+
+        
+    </script>
+  </body>
+</html>

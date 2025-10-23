@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css selectors</title>
+    <style>
+        input[type="text"] {
+            border-radius: 5px;
+            border: 2px solid green;
+            padding: 3px;
+        }
+
+        input[type="date"] {
+            width: 150px;
+            border-radius: 5px;
+            border: 2px dotted green;
+            padding: 3px;
+        }
+
+        div {
+            margin-bottom: 7px;
+        }
+
+        .container {
+            border: 1px solid none;
+            padding: 20px;
+            width: 400px;
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1), -1px -1px 1px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        input[type="submit"] {
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 255, 0.536);
+            color: white;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .heading {}
+
+        hr {
+            border: 1px solid rgba(0, 0, 255, 0.387);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 class="heading">Css selectors</h1>
+        <hr>
+        <div>
+            <label for="name1">First Name:</label>
+            <input type="text" id="name1" placeholder="Enter First Name">
+        </div>
+        <div>
+            <label for="name2">Last Name:</label>
+            <input type="text" id="name2" placeholder="Enter First Name">
+        </div>
+        <div>
+            <label for="date">D.O.B:</label>
+            <input type="date" id="date">
+        </div>
+        <hr>
+        <div>
+            <input type="submit">
+        </div>
+    </div>
+
+    
+    
+</body>
+
+</html>

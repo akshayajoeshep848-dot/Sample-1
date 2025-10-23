@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=           , initial-scale=1.0" />
+    <title>Arrow functions</title>
+  </head>
+  <body>
+    <h1>Arrow functions</h1>
+    <button onclick="sqrt(25)">Calculate sqrt</button>
+    <button onclick="console.log(fact(5))">Calculate factorial</button>
+    <script>
+      //   let first = (name) => name;
+      //   console.log(first("pavan"))
+
+      // Arrow function to multiply two numbers
+      //   let multiply=(a,b)=>a*b;
+      //   console.log(multiply(5,3))
+
+      let multiply = (a, b) => [a * b, a - b];
+      console.log(multiply(5, 3));
+
+      //   arrow function to find the square root of a number
+      // let sqrt=(n)=>n**0.5
+      // console.log(sqrt(25))
+
+      // sqrt function for button
+      let sqrt = (n) => console.log(n ** 0.5);
+
+    //   Factorial using arrow
+    let fact=(n)=>{
+        if (n==0){
+            return 1
+        }
+        return n*fact(n-1)
+    }
+    // console.log(fact(5))
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div"></div>
+    <form action="" id="form">
+      <label for="firstname">First Name</label>
+      <input name="firstname" type="text" id="firstname" required /><br />
+      <label for="lastname">Last Name</label>
+      <input name="lastname" type="text" id="lastname" required />
+      <select name="gender" required id="gender">
+        <option value="Select option">Select option</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Others">Others</option>
+      </select>
+      <button id="btn">Submit</button>
+    </form>
+
+    <!-- <div id="div">No data is submitted</div> -->
+
+    <script>
+      let firstname = document.getElementById("firstname");
+      // console.log(firstname)
+      let lastname = document.getElementById("lastname");
+      let select = document.getElementById("gender");
+      //   let display = document.getElementById("div");
+      let formobject = {};
+      let formarray = [];
+
+      //   firstname.addEventListener("change", (event) => {
+      //     console.log(event.target.value);
+      //     formobject[event.target.name] = event.target.value;
+      //     console.log(formobject);
+      //   });
+      //   lastname.addEventListener("change", (event) => {
+      //     console.log(event.target.value);
+      //     formobject[event.target.name] = event.target.value;
+      //     console.log(formobject);
+      //   });
+
+      //   select.addEventListener("change", (event) => {
+      //     console.log(event.target.value);
+      //     formobject[event.target.name] = event.target.value;
+      //     console.log(formobject)
+      //   });
+      //   firstname.addEventListener("focus", (event) => {
+      //     event.target.style.border = "2px dotted red";
+      //     event.target.style.backgroundColor = "cyan";
+      //     console.log("color of border changed");
+      //   });
+
+      //   lastname.addEventListener("blur", (event) => {
+      //     event.target.style.border = "3px dashed green";
+      //     console.log("color of border changed");
+      //   });
+      let elem = [firstname, lastname, select];
+      //   elem.forEach((item) => {
+      //     console.log(item);
+      //   });
+      elem.forEach((item) => {
+        item.addEventListener("change", (event) => {
+          console.log(event.target.value);
+          formobject[event.target.name] = event.target.value;
+          console.log(formobject);
+        });
+      });
+      let btn = document.getElementById("btn");
+      let form = document.getElementById("form");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        console.log("data submitted");
+
+        console.log(formobject);
+        formarray.push(formobject);
+        console.log(formarray);
+        formarray.forEach((elemnt, index) => {
+          let div = document.createElement("div");
+          let p1 = document.createElement("p");
+          let p2 = document.createElement("p");
+          let p3 = document.createElement("p");
+          p1.textContent = `${elemnt.firstname}`;
+          p2.textContent = `${elemnt.lastname}`;
+          p3.textContent = `${elemnt.gender}`;
+          div.append(p1);
+          div.append(p2);
+          div.append(p3);
+          document.body.append(div);
+        });
+        formarray=[]
+        form.reset();
+      });
+      form.addEventListener("reset", () => {
+        form.reset();
+        console.log("Form resseted successfully");
+      });
+    </script>
+  </body>
+</html>

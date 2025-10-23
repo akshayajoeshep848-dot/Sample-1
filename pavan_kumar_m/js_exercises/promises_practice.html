@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <h1>Promises</h1>
+    <script>
+      let mypromise1 = new Promise((resolve, reject) => {
+        let foodready = false;
+        if (foodready) {
+          resolve("Your food is ready");
+        } else {
+          reject("Sorry , your order is cancelled");
+        }
+      });
+      mypromise1
+        .then((msg) => {
+          console.log("msg : ", msg);
+        })
+        .catch((err) => {
+          console.log("error : ", err);
+        });
+
+      let mypromise2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Data fetched successfully");
+        }, 3000);
+      });
+      mypromise2.then((result) => {
+        console.log(result);
+      });
+
+      function orderFood(food) {
+        return new Promise((success, failure) => {
+          console.log(`Ordering ${food} ....`);
+          setTimeout(() => {
+            let available = Math.random() > 0.3;
+            if (available) {
+              success(`${food} is delivered`);
+            } else {
+              failure(`${food} is out of stock`);
+            }
+          }, 3000);
+        });
+      }
+      orderFood("Pizzza")
+        .then((result) => console.log("Success", result))
+        .catch((err) => console.log("error", err));
+
+      function fetchData(userid) {
+        return new Promise((success, failure) => {
+          console.log(`Fetching the data from user ${userid}...`);
+          setTimeout(() => {
+            if (userid === 1) {
+              success({ id: 1, name: "Pavan", age: 21 });
+            } else {
+              failure("Sorry user not found");
+            }
+          }, 2000);
+        });
+      }
+      fetchData(1)
+        .then((result) => console.log(result))
+        .catch((error) => console.log("msg :", error));
+      fetchData(2)
+        .then((result) => console.log(result))
+        .catch((error) => console.log("msg :", error));
+
+      function createAtm() {
+        let balance = 5000;
+        return function atmWithdrawal(amount) {
+          return new Promise((success, failure) => {
+            setTimeout(() => {
+              if (amount < balance) {
+                balance = balance - amount;
+                success(
+                  `withdrawal is successful remaining balance is ${balance}`
+                );
+              } else {
+                failure(`Insufficirnt funds`);
+              }
+            }, 3000);
+          });
+        };
+      }
+      let myAtm = createAtm();
+      myAtm(500)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+      myAtm(500)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+
+      function bookTicket(movieName, seatsavailable) {
+        return new Promise((booked, failed) => {
+          if (seatsavailable > 0) {
+            booked(`Ticket booked for ${movieName} movie`);
+          } else {
+            failed(`No seats available for ${movieName} movie`);
+          }
+        });
+      }
+
+      bookTicket("Bahubali", 10)
+        .then((msg) => console.log(msg))
+        .catch((err) => console.log(err));
+      bookTicket("Avengers", 0)
+        .then((msg) => console.log(msg))
+        .catch((err) => console.log(err));
+
+      function getResult(marks) {
+        return new Promise((passed, failed) => {
+          if (marks >= 35) {
+            passed(`Passed the exam with marks ${marks}`);
+          } else {
+            failed(`Failed the exam with marks ${marks}`);
+          }
+        });
+      }
+
+      getResult(90)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+      getResult(20)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+
+      function getWeather(city) {
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (city === "Hyderabad") {
+              resolve("☀️ Sunny in Hyderabad");
+            } else {
+              reject("❌ City not found");
+            }
+          }, 5000);
+        });
+      }
+      getWeather("Hyderabad")
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+      getWeather("Bangalore")
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+
+
+        
+    </script>
+  </body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+    <title>Tasks</title>
+    <style>
+        * {
+            font-family: Roboto;
+        }
+
+        body {
+            background-color: rgb(234, 237, 247);
+
+        }
+
+        .container {
+            width: 821.59px;
+            height: 453.86px;
+            background-color: #fff;
+            border-radius: 13.008px;
+            padding: 25.008px;
+        }
+
+        label {
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .search {
+            width: 16px;
+            height: 16px;
+
+        }
+
+        input {
+            border: 1px solid #e8e8f7;
+            color: #8f8fb1;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.75;
+            border-radius: 5.6px;
+        }
+
+        .search-icon {
+            border: none;
+            background-color: #fff;
+            position: absolute;
+            left: 690px;
+            top: 100px;
+        }
+
+        select {
+            border: none;
+            background-color: #7b34d9;
+            color: #fff;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #e8e8f7;
+            border-collapse: collapse;
+        }
+
+
+        th {
+            padding: 9.008px 19.008px;
+            font-size: 13.008px;
+
+        }
+
+        td {
+            padding: 0px 19px;
+            place-content: center;
+            /* text-align: center; */
+
+        }
+
+        .img-icon {
+            position: absolute;
+            left: 380px;
+        }
+
+        .img-icon-1 {
+            position: absolute;
+            left: 320px;
+        }
+
+        .img-icon-2 {
+            position: absolute;
+            left: 340px;
+        }
+
+        .img-icon-3 {
+            position: absolute;
+            left: 360px;
+            
+        }
+
+        label {
+            margin-left: 10px;
+        }
+
+        th,
+        td {
+            border-right: none;
+            border-left: none;
+        }
+        td:nth-child(3),td:nth-child(4),td:nth-child(5){
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <label for="">Tasks</label>
+            <p style="font-size: 12px;color: #8f8fb1;margin-left: 10px;">A task is accomplished by a set deadline, and must contribute toward work-related objectives.
+
+            </p>
+        </div>
+        <div style="display: flex;gap: 25px;justify-content: end;">
+            <div>
+                <button class="search-icon"><img class="search" src="images/search.png" alt=""></button>
+                <input style="height: 37px;width: 180px;box-sizing: border-box;padding: 15px;" type="text"
+                    placeholder="Search here....">
+            </div>
+            <div>
+                <button
+                    style="background-color: #7b34d9;width: 101px;height: 38.1px;border-color: rgb(98,89,202);font-size: 13.6px;border-radius: 3.008px;padding: 8px 13px;font-weight: 400;"><select
+                        name="" id="">
+                        <option value="">Sort By</option>
+                        <option value="">Task</option>
+                        <option value="">Team</option>
+                        <option value="">status</option>
+                        <option value="">Settings</option>
+                    </select></button>
+            </div>
+        </div>
+        <table style="width: 771px;height: 239px;margin-top: 10px ;">
+            <thead>
+                <th style="display: flex;justify-content: left;">TASK</th>
+                <th>TEAM</th>
+                <th>OPEN TASK</th>
+                <th>PRIORITY</th>
+                <th>STATUS</th>
+            </thead>
+            <tr>
+                <td>
+                    <div>
+                        <input type="radio"><label for="">Evaluating the design</label>
+                    </div>
+                </td>
+                <td>
+                    <div style="display: flex;width: 144px;height: 50px;align-items: center;justify-content: center;">
+                        <div class="img-icon" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-1" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-2" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-3" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                    </div>
+                </td>
+                <td>18</td>
+                <td>High</td>
+                <td><span
+                        style="background-color: rgba(98,89,202,0.1);padding: 9px 13px;color: rgb(98,89,202);border-radius: 50rem;box-sizing: border-box;font-size: 10.5px;line-height: 1.2;color: rgb(98,89,202);font-weight: 700;">Completed</span>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio"><label for="">Generate ideas for design</label></td>
+                <td>
+                    <div style="display: flex;width: 144px;height: 50px;align-items: center;">
+                        <div class="img-icon" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-1" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-2" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-3" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                    </div>
+                </td>
+                <td>34</td>
+                <td>Normal</td>
+                <td><span
+                        style="background-color: rgba(255, 155, 33, .1);padding: 9px 13px;color: rgb(255, 155, 33);border-radius: 50rem;box-sizing: border-box;font-size: 10.5px;line-height: 1.2;font-weight: 700;">Pending</span>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio"><label for="">Define the problem</label></td>
+                <td>
+                    <div style="display: flex;width: 144px;height: 50px;align-items: center;">
+                        <div class="img-icon" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-1" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-2" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-3" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                    </div>
+                </td>
+                <td>25</td>
+                <td>Low</td>
+                <td><span
+                        style="background-color: rgba(98,89,202,0.1);padding: 9px 13px;color: rgb(98,89,202);border-radius: 50rem;box-sizing: border-box;font-size: 10.5px;line-height: 1.2;color: rgb(98,89,202);font-weight: 700;">Completed</span>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="radio"><label for="">Empathize with users</label></td>
+                <td>
+                    <div style="display: flex;width: 144px;height: 50px;align-items: center;">
+                        <div class="img-icon" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-1" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-2" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                        <div class="img-icon-3" style="height: 28px;width: 28px;border-radius: 50%;"><img
+                                style="height: 100%;width: 100%;border-radius: 50%;"
+                                src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                alt=""></div>
+                    </div>
+                </td>
+                <td>37</td>
+                <td>high</td>
+                <td><span
+                        style="padding: 9px 13px;color: rgb(253,96,116);border-radius: 50rem;box-sizing: border-box;font-size: 10.5px;line-height: 1.2;background-color: rgba(253, 96, 116,.1);font-weight: 700;">Rejected</span>
+                </td>
+            </tr>
+        </table>
+        <div style="display: flex; justify-content: end;margin-top: 10px;padding: 10px;margin-right: 60px;">
+            <label for="">Prev</label>
+            <label for="">1</label>
+            <label for="">2</label>
+            <label for="">...</label>
+            <label for="">16</label>
+            <label for="">Next</label>
+        </div>
+    </div>
+</body>
+
+</html>

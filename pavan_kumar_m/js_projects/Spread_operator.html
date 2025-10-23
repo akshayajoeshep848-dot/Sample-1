@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Spread operator</h1>
+    <script>
+    //   let arr = [1, 2, 3, 4, 5];
+    //   console.log(...arr);
+    //   let arr2 = [...arr];
+    //   console.log(arr2);
+
+    //   // function two add three numbers
+    //   let arr3 = [1, 2, 3];
+    //   function sum(a, b, c) {
+    //     return a + b + c;
+    //   }
+    //   console.log(sum(...arr3));
+    //   let arr4 = [1, 2, 3, 4];
+    //   let arr5 = [5, 6, 7, 8];
+    //   let combined = [...arr4, ...arr5];
+    //   console.log(combined);
+
+    //   // Shallow copy example
+
+    //   const original_arr = [1, 2, { key: "value" }];
+    //   const copiedarr = [...original_arr];
+    //   console.log(copiedarr);
+    //   console.log(original_arr === copiedarr);
+    //   console.log(original_arr[2] === copiedarr[2]);
+    //   copiedarr[0] = 99;
+    //   console.log(original_arr);
+    //   console.log(copiedarr);
+    //   copiedarr[2].key = "new key";
+    //   copiedarr[2].value = "new value5";
+    //   console.log(original_arr);
+    //   console.log(copiedarr);
+
+    //   const original_object = {
+    //     first: 1,
+    //     second: 2,
+    //     third: 3,
+    //     fourth: 4,
+    //     five: { six: 6 },
+    //   };
+    //   const copied_object = { ...original_object };
+    //   console.log("Original object", original_object);
+    //   console.log("Copied object", copied_object);
+    //   console.log(original_object === copied_object);
+    //   console.log(original_object.fourth === copied_object.fourth);
+    //   copied_object.first="one"
+    //   copied_object.five.six="six"
+    //   console.log("Original object", original_object);
+    //   console.log("Copied object", copied_object);
+
+    //   Merging the iterables using the spread operator
+    const a=[1,2]
+    const b=[2,3]
+    const c=[3,4]
+    const objj={1:"one"}
+    const d=[...a,...b,...c]
+    console.log(d)
+
+    const obja={x:1,y:2};
+    const objb={y:1,z:4};
+    const objc={a:5}
+    // const arrra=[1,23,3]
+    const merged_object={...obja,...objb,...objc}
+    console.log(merged_object)
+    </script>
+  </body>
+</html>

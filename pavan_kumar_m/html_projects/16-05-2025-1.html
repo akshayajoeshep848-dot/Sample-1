@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <style>
+        *{
+            /* margin: 0; */
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background: black;
+            color: #fff;
+        }
+        header{
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        a:link{
+            text-decoration: none;
+            color:#f0f0f0;
+        }
+        input{
+            width: 25%;
+            padding: 5px;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .container{
+            display: flex;
+        }
+        .sidebar{
+            width: 200px;
+            padding: 10px;
+            height: auto;
+            background-color: #1a1a1aa4;
+        }
+        .sidebar ul{
+            list-style: none;
+            
+        }
+        .sidebar ul li{
+            padding: 10px;
+            cursor: pointer;
+        }
+        header{
+            background-color: gray;
+            border: 0px solid white;
+            border-radius: 5px;
+    
+        }
+        header input{
+            border: none;
+            width: 40%;
+            padding: 10px;
+            color:black;
+        }
+        .navbar-links a{
+            text-decoration: none;
+            margin: 0 5px;
+            color: white;
+        }
+        .user{
+            color: #f0f0f0;
+            margin-right: 15px;
+        }
+        .song-list{
+            list-style: none;
+            display: flex;
+            gap: 20PX;
+            margin-top: 15PX;
+        }
+        .song-card{
+           text-align: center;
+           background-color: #1a1a1a;
+           padding: 10px; 
+           border-radius: 10px;
+        }
+        .section-header{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .song-img{
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .main-content{
+            margin-left: 10px;
+            /* width: 100%; */
+        }
+        .view-all{
+            text-decoration: none;
+            color: white;
+            margin-right: 5px;
+        }
+        .search{
+            margin-left: 20px;
+        }
+        .user a{
+            text-decoration: none;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+              <ul>
+                <li>Home</li>
+                <li>Home One</li>
+                <li>Home Two</li>
+                <li>Explore</li>
+                <li>Music</li>
+                <li>Albums</li>
+                <li>Podcasts</li>
+                <li>Event</li>
+                <li>Pages</li>
+              </ul>  
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header>
+            <input class="search" type="text" placeholder="Search songs,podcasts,">
+            <div class="navbar-links">
+                <a href="#">Genres</a>
+                <a href="#">Moods</a>
+                <a href="#">Trending</a>
+                <a href="#">Popular</a>
+                <a href="#">...</a>
+            </div>
+            <div class="user">
+                <a href="17-05-25-3.html">Signin/Register</a>
+                
+            </div>
+        </header>
+        <section class="trending">
+            <div class="section-header">
+                <h2>English Trending Songs</h2>
+                <a class="view-all" href="#">View All</a>
+            </div>
+            <div class="song-list">
+                <div class="song-card">
+                    <div class="song-img"><img src="https://i.scdn.co/image/ab67616d00001e0295c503f1de8a9c978dca2209" alt=""></div>
+                    
+                    <p>Space Melody <small>NLE Chappa</small></p>
+                </div>
+                <div class="song-card">
+                    <div class="song-img"><img src="https://i.scdn.co/image/ab67616d00001e0253f2d998838adb02dda39391" alt=""></div>
+                    
+                    <p>Space Melody <small>NLE Chappa</small></p>
+                </div>
+                <div class="song-card">
+                    <div class="song-img"><img src="https://i.scdn.co/image/ab67616d00001e02caee3f6563eb76d2fa902561" alt=""></div>
+                    
+                    <p>Space Melody <small>NLE Chappa</small></p>
+                </div>
+                
+            </div>
+        </section>
+        <section class="trending">
+            <div class="section-header">
+                <h2>Telugu Trending Songs</h2>
+                <a class="view-all" href="#">View All</a>
+            </div>
+            <div class="song-list">
+                <div class="song-card">
+                    <div class="song-img"><img src="https://i.scdn.co/image/ab67616d00001e0295c503f1de8a9c978dca2209" alt=""></div>
+                    
+                    <p>Space Melody <small>NLE Chappa</small></p>
+                </div>
+                <div class="song-card">
+                    <div class="song-img"><img src="https://i.scdn.co/image/ab67616d00001e0253f2d998838adb02dda39391" alt=""></div>
+                    
+                    <p>Space Melody <small>NLE Chappa</small></p>
+                </div>
+                <div class="song-card">
+                    <div class="song-img"><img src="https://i.scdn.co/image/ab67616d00001e02caee3f6563eb76d2fa902561" alt=""></div>
+                    
+                    <p>Space Melody <small>NLE Chappa</small></p>
+                </div>
+                
+            </div>
+        </section>
+        </main>
+        
+    </div>
+</body>
+</html>

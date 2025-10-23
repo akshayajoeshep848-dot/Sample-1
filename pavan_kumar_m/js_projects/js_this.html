@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>this in js</h1>
+    <script>
+      // no context : this refers to window
+      // in strict mode : this refers to undefined
+      "use strict";
+      const person = {
+        name: "Kumar",
+        greet: () => {
+          console.log(`Hi ${this.name} `);
+        },
+        eat() {
+          console.log(`Hi ${this.name} is eating`);
+        },
+        walk: function () {
+          console.log(`Hi ${this.name} is walking`);
+        },
+      };
+      person.greet();
+      person.eat();
+      person.walk();
+      function obj() {
+        console.log(this);
+        // this.alert("Hi");
+        // this.close()
+      }
+      obj();
+
+      function greet1() {
+        console.log(`Hello ${this.name} your age is ${this.age}`);
+      }
+      const alice = { name: "alice", age: 10 };
+      greet1.call(alice);
+    </script>
+  </body>
+</html>

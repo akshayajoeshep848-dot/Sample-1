@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // grade A -> 100-90
+        // grade B -> 90-80
+        // grade C -> 80-70
+        // grade D -> 70-60
+        // grade E -> 40-0
+
+
+        // let mrks=prompt("Enter Marks:");
+        // if (mrks>90 && mrks<=100){
+        //     console.log("A")
+        // }
+        // else if (mrks>80 && mrks<=90){
+        //     console.log("B")
+        // }
+        // else if (mrks>70 && mrks<=80){
+        //     console.log("C")
+        // }
+        // else if (mrks>60 && mrks<=70){
+        //     console.log("D")
+        // }
+
+        // else if (mrks>0 && mrks<=40){
+        //     console.log("E")
+        // }
+
+
+        // 0 - Sunday
+        // 1 - Monady
+        // 2 - Tuesday
+        // 3 - Wednesday
+        // 4 - Thursday
+        // 5 - Friday
+        // 6 - Saturday
+
+        // let choice = prompt("Enter number:")
+        // if (choice >= 0 && choice <= 6) {
+        //     if (choice == 0) {
+        //         console.log("Sunday")
+        //     }
+        //     else if (choice == 1) {
+        //         console.log("Monday")
+        //     }
+        //     else if (choice == 2) {
+        //         console.log("Tuesday")
+        //     }
+        //     else if (choice == 3) {
+        //         console.log("Wednesday")
+        //     }
+        //     else if (choice == 4) {
+        //         console.log("Thursday")
+        //     }
+        //     else if (choice == 5) {
+        //         console.log("Friday")
+        //     }
+        //     else if (choice == 6) {
+        //         console.log("Saturday")
+        //     }
+        // }
+        // else {
+        //     console.log("Enter valid number.")
+        // }
+
+
+        // Temperature conditions
+        // -40 to 0 -> Weather is too cold,don't go outside.
+        // 0-10 -> weather is cold ,wear warm clothes while going outside.
+        // 10-20 -> weather is somewhat cool,wear a sweater while going out.
+        // 20-30 -> Weather is awesome today,enjoy outdoors
+        // 30 -40 -> weather is little bit hot,avoid going outside.
+        // 40-50 -> weather is very hot,avoid going outside.
+        // 50 and above -> Dig a hole underground and hide because you will be paper roast outside.
+
+
+        let temperature = prompt("Enter Temperature:");
+        if (temperature <= 0 && temperature >= -40) {
+            console.log("Weather is too cold,don't go outside.")
+        }
+        else if (temperature >= 0 && temperature <= 10) {
+            console.log("weather is somewhat cool,wear a sweater while going out.")
+        }
+        else if (temperature > 10 && temperature <= 20) {
+            console.log("weather is somewhat cool,wear a sweater while going out.")
+        }
+        else if (temperature > 20 && temperature <= 30) {
+            console.log("Weather is awesome today,enjoy outdoors")
+        }
+        else if (temperature > 30 && temperature <= 40) {
+            console.log("weather is little bit hot,avoid going outside.")
+        }
+        else if (temperature > 40 && temperature <= 50) {
+            console.log("weather is very hot,avoid going outside.")
+        }
+        else if (temperature > 50) {
+            console.log("Dig a hole underground and hide because you will be paper roast outside.")
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .parent-cont {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+      }
+      /* .h{
+        
+      } */
+    </style>
+  </head>
+  <body>
+    <div id="parent-cont" class="parent-cont"></div>
+    <script>
+      let res = fetch("https://dogapi.dog/api/v2/breeds")
+        .then((res) =>
+          res.json().then((data) => {
+            console.log(data.data);
+            let arr = data.data;
+            arr.forEach((item) => {
+              // console.log(item.attributes.name)
+              h3 = document.createElement("h3");
+              h3.textContent = item.attributes.name;
+              let divcontainer = document.createElement("div");
+              divcontainer.append(h3);
+              let parent_con = document.getElementById("parent-cont");
+              parent_con.append(divcontainer);
+              //   console.log(item.attributes);
+
+              div = document.createElement("div");
+              divcontainer.append(div);
+              div.textContent = item.attributes.description;
+              divcontainer.style.backgroundColor = "#a0cef5";
+              divcontainer.style.borderRadius = "10px";
+              divcontainer.style.marginBottom = "10px";
+              divcontainer.style.color = "black";
+              divcontainer.style.padding = "10px";
+              divcontainer.style.fontSize = "15px";
+              h3.classList.add("h")
+            });
+          })
+        )
+        .catch((err) => console.log("Error : ", err));
+    </script>
+  </body>
+</html>

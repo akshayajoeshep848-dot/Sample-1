@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Js inheritance</h1>
+    <script>
+      class pet {
+        constructor(type, name) {
+          this.type = type;
+          this.name = name;
+        }
+        eat() {
+          console.log(`${this.name} is eating`);
+        }
+      }
+      class dog extends pet {
+        constructor(type, name, breed) {
+          super(type, name);
+          this.breed = breed;
+        }
+      }
+      let dog1 = new dog("Dog", "chintu", "Husky");
+      console.log(dog1.type);
+      console.log(dog1.name);
+      console.log(dog1.breed);
+      dog1.eat();
+
+      class Car {
+        constructor(make, name) {
+          this.make = make;
+          this.name = name;
+        }
+        details() {
+          console.log(`${this.name} is made by ${this.make}`);
+        }
+      }
+      let car = new Car("carmy", "benz");
+      car.details();
+
+      class Dog {
+        constructor(breed = "Muttt") {
+          this.breed = breed;
+        }
+      }
+      let dogg = new Dog();
+      console.log(dogg.breed);
+
+      class Carr {
+        constructor(name, price, manufacturedby, color, companyname) {
+          this.name = name;
+          this.price = price;
+          this.manufacturedby = manufacturedby;
+          this.companyname = companyname;
+          this.color = color;
+        }
+        getDescription() {
+          console.log(
+            `Car name is ${this.name}, Price is ${this.price}, color is ${this.color}`
+          );
+        }
+      }
+      let carr = new Carr("abc", 1000000, "xyz", "blue", "Audi");
+      carr.getDescription();
+
+      class Vehicle {
+        constructor(name, color) {
+          this.name = name;
+          this.color = color;
+        }
+      }
+      class Motorcycle extends Vehicle {
+        constructor(name, color, type) {
+          super(name, color);
+          this.type = type;
+        }
+      }
+      let motorcycle = new Motorcycle("GT 650", "Red", "Own");
+      console.log(motorcycle.name);
+      console.log(motorcycle.color);
+      console.log(motorcycle.type);
+    </script>
+  </body>
+</html>

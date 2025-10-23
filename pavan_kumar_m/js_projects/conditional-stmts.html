@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional statements</title>
+</head>
+
+<body>
+    <h1>conditional statements</h1>
+    <script>
+        let age = prompt("Please enter your age:");
+        console.log(typeof age)
+        if (age >= 140) {
+            console.log("Enter valid age");
+        }
+        else if (age < 0) {
+            console.log("No negative age is allowed.");
+        }
+        else if (age > 0 && age < 18) {
+            console.log("Not elisgible for vote");
+        }
+        else if (age > 18 && age < 21) {
+            console.log("You are eligible for vote but not eligible for marriage.");
+        }
+        else {
+            console.log("You are eligible for vote and also eligible for marriage.")
+        }
+    </script>
+</body>
+
+</html>

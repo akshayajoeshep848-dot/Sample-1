@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listeners</title>
+  </head>
+  <body>
+    <button id="btn1">Click me</button>
+    <button id="btn2">double click me</button>
+    <br /><br />
+    <div
+      id="box"
+      style="width: 100px; height: 100px; background-color: green"
+    ></div>
+    <br />
+    <input type="text" id="input" placeholder="Type something..." />
+
+    <select id="city">
+      <option value="Hyderabadd">Hyderabad</option>
+      <option value="Bangaloree">Bangalore</option>
+      <option value="Delhii">Delhi</option>
+    </select>
+
+    <br /><br />
+    <form action="" id="form">
+      <input type="text" required />
+      <button type="submit">submit</button>
+    </form>
+
+    <img
+      style="width: 100px; height: 100px"
+      id="img"
+      src="https://4.img-dpreview.com/files/p/E~C667x0S5333x4000T1200x900~articles/3925134721/0266554465.jpeg"
+    />
+
+<button id="tgl-btn">start</button>
+
+    <script>
+      let button1 = document.getElementById("btn1");
+      button1.addEventListener("click", function () {
+        console.log("Button was clicked");
+        button1.innerHTML = "You clicked me";
+      });
+      let button2 = document.getElementById("btn2");
+      button2.addEventListener("dblclick", function () {
+        console.log("Button was clicked");
+        button2.innerHTML = "You clicked me two times";
+        this.style.color = "red";
+      });
+
+      let box = document.getElementById("box");
+      box.addEventListener("mouseover", function () {
+        box.innerHTML = "You hovered on me";
+        this.style.background = "red";
+      });
+      box.addEventListener("mouseout", function () {
+        box.innerHTML = "You mouse outed on me";
+        this.style.background = "blue";
+        this.style.color = "white";
+      });
+
+      let inpt = document.getElementById("input");
+      inpt.addEventListener("keydown", function (e) {
+        console.log("key Down", e.key);
+      });
+      inpt.addEventListener("keyup", function (e) {
+        console.log("key up", e.key);
+      });
+      inpt.addEventListener("keypress", function (e) {
+        console.log("key pressed", e.key);
+      });
+
+      let slct = document.getElementById("city");
+      slct.addEventListener("change", function (e) {
+        console.log(this.value);
+        alert("you selected " + this.value);
+      });
+
+      let form = document.getElementById("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        alert("Form submitted");
+        console.log("Form submitted");
+      });
+
+      window.addEventListener("load", function () {
+        console.log("Page loaded successfully");
+      });
+      let image = document.getElementById("img");
+      image.addEventListener("load", function () {
+        console.log("Image loaded successfully");
+      });
+
+      window.addEventListener("resize", function () {
+        console.log("Window width ", window.innerWidth);
+      });
+
+      window.addEventListener("scroll", function () {
+        console.log("You are scrolling at Y:", window.scrollY);
+      });
+
+      let toggle_btn=document.getElementById("tgl-btn")
+      toggle_btn.addEventListener("click",function(){
+        if (toggle_btn.innerText==="Start"){
+          toggle_btn.innerText="Stop"
+        }
+        else{
+          toggle_btn.innerHTML="Start"
+        }
+      })
+    </script>
+  </body>
+</html>

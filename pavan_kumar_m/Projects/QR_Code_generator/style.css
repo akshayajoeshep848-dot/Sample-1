@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #7fffd4, #00bfff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 400px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+.container p {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.container input {
+  width: 100%;
+  height: 45px;
+  border: 2px solid #6c63ff;
+  border-radius: 8px;
+  outline: none;
+  padding: 12px;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.container input:focus {
+  border-color: #00bfff;
+  box-shadow: 0 0 6px rgba(0, 191, 255, 0.4);
+}
+
+.container button {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  background: linear-gradient(135deg, #6c63ff, #00bfff);
+  color: #fff;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.container button:hover {
+  background: linear-gradient(135deg, #5a52e0, #0090d6);
+  transform: translateY(-2px);
+}
+
+#qr-img {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  width: 180px;
+  height: 180px;
+  border: 3px solid #eee;
+  border-radius: 10px;
+  padding: 8px;
+  background: #fafafa;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+#download-btn {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+  color: #fff;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+#download-btn:hover {
+  background: linear-gradient(135deg, #e76b35, #cc3700);
+  transform: translateY(-2px);
+}
+
+.shake {
+  animation: shake 0.3s;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-5px);
+  }
+  50% {
+    transform: translate(5px);
+  }
+  75% {
+    transform: translate(-5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Displaying the dog images using the fetch()</h1>
+    <div id="container"></div>
+    <script>
+      fetch("https://dog.ceo/api/breed/hound/images")
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          console.log(data.message);
+          let urls = data.message;
+          console.log(urls);
+          urls.forEach((url) => {
+            // let container = document.createElement("div");
+
+            let image = document.createElement("img");
+            image.src = url;
+            image.alt = "image loading";
+            image.style.height = "200px";
+            image.style.width = "200px";
+            image.style.margin = "10px";
+            container.append(image);
+            document.body.append(container);
+          });
+        });
+    </script>
+  </body>
+</html>

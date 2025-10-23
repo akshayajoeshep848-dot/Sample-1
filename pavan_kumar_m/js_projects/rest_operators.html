@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Rest operator</h1>
+    <script>
+      let sum = (a = 0, b = 0, ...arr) => {
+        console.log(arr);
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+          sum = sum + arr[i];
+        }
+        return sum + a + b;
+      };
+      let arr = [1, 2, 3, 4];
+      console.log(...arr);
+      console.log(sum(...arr));
+      console.log(sum());
+
+      let arrr = [1, 2, 3, 4];
+      let objj = { one: 1, two: 2, three: 3 };
+      console.log(objj);
+      console.log(...objj)
+      console.log(arrr);
+      console.log(...arrr);
+    </script>
+  </body>
+</html>

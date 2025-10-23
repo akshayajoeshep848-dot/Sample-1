@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="icon" href="icon.ico">
+    <style>
+        .reg-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:aqua;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            border-radius: 10px;
+            display: flex;
+            align-content: center;
+        }
+        input{
+            margin: 10px;
+            border-radius: 5px;
+            font-size:large;
+            padding: 5px;
+        }
+        .submitt{
+            background-color: rgb(234, 129, 224);
+            color:aliceblue;
+            cursor: pointer;
+            width: 100px;
+        }
+        label{
+            font-size: large;
+            
+        }
+        a{
+            text-decoration: none;
+            margin-left: 5px;
+            color:chocolate;
+            font-weight: bold;
+        }
+        input:hover{
+            border: 3px solid rgb(28, 15, 169);
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="reg-form">
+        <h3>Login Form</h3>
+        <div>
+        <label style="margin-right: 15px;" for="">Name</label>
+        <input type="text" required placeholder="Enter your name">
+        </div>
+        
+        <!-- <div>
+            <label for="" style="margin-right: 30px;">Age</label>
+        <input type="number" required placeholder="Enter age">
+        </div> -->
+        <div>
+            <label style="margin-right: 20px;" for="">Email</label>
+        <input type="email" required placeholder="Enter email">
+        </div>
+        <div>
+            <label for="">Password</label>
+        <input type="password" required placeholder="Enter Password">
+        </div>
+        <!-- <div>
+            <label for=""> Password</label>
+        <input type="password" required placeholder="Conform Password">
+        </div> -->
+        <div style="display: flex;margin: 10px;">
+            <input type="submit" class="submitt">
+        </div>
+        <p>Don't have an account<span><a href="17-05-25-3.html">Signup</a></span> </p>
+    </form>
+</body>
+</html>

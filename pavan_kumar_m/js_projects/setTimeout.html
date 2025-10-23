@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setTimeout</title>
+  </head>
+  <body>
+    <h1>setTimeout()</h1>
+    <h3>setTimeout(function, delay, param1, param2, ...);</h3>
+
+    <script>
+      console.log("start");
+      setTimeout(() => {
+        console.log("This message is printed after the two seconds");
+      }, 2000);
+      console.log("end");
+
+      console.log("User logged in");
+      setTimeout(() => {
+        console.log("Welcome back pavan");
+      }, 3000);
+      console.log("Loading Data....");
+      setTimeout(() => {
+        console.log("Data loaded successfully");
+      }, 5000);
+
+      //   Using the settimeout
+      let count = 5;
+      function countdown() {
+        if (count > 0) {
+          console.log(count);
+          count--;
+          setTimeout(countdown, 1000);
+        } else {
+          console.log("Go ...");
+        }
+      }
+      countdown();
+
+      //    Using the setInterval
+      let count2 = 5;
+      
+      let item=setInterval(function() {
+        console.log(count2);
+        count2--
+        if (count2===0){
+            console.log("Goo ..")
+            clearInterval(item)
+        }
+      },1000)
+    </script>
+  </body>
+</html>

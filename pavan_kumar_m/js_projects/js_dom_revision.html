@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <p id="p">hi hello how are you ?</p>
+    <ul id="ul">
+      <li id="li1">item 1</li>
+      <li id="li2">item 2</li>
+      <li id="li3">item 3</li>
+      <li id="li4">item 4</li>
+      <li id="li5">item 5</li>
+    </ul>
+
+    <div id="div"></div>
+    <script>
+      let ul = document.getElementById("ul");
+      console.log(ul);
+      console.log(ul.parentNode);
+      console.log(ul.childNodes);
+      console.log(ul.children);
+      console.log(ul.firstChild);
+      console.log(ul.lastChild);
+      console.log(ul.firstElementChild);
+      console.log(ul.lastElementChild);
+      console.log(ul.previousSibling);
+      console.log(ul.nextSibling);
+      console.log(ul.previousElementSibling);
+      console.log(ul.nextElementSibling);
+      ul.firstElementChild.style.backgroundColor = "red";
+      ul.lastElementChild.style.backgroundColor = "green";
+      ul.children[2].style.backgroundColor = "yellow";
+      let para = document.getElementById("p");
+      para.innerText = "hiii";
+      let divv = document.getElementById("div");
+      let a = document.createElement("a");
+      divv.append(a);
+      a.setAttribute("href", "https://www.google.com");
+      a.setAttribute("target", "_blank");
+      a.textContent = "google.com";
+    </script>
+  </body>
+</html>

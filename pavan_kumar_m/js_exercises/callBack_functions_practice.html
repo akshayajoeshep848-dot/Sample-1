@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call back functions</title>
+  </head>
+  <body>
+    <script>
+      let numbers2 = [1, 2, 3, 4, 5];
+      numbers2.forEach((number) => {
+        console.log(number);
+      });
+      let numbers3 = [1, 2, 3, 4, 5];
+      let ress = numbers3.map((number) => {
+        console.log(number);
+        // return num;
+      });
+      console.log(ress);
+
+      // Write a higher-order function named operate that takes two numbers and a callback function. The callback function should perform a mathematical operation (e.g., addition, subtraction), and operate should return the result.
+      function operate(n1, n2, operation) {
+        return operation(n1, n2);
+      }
+      function add(a, b) {
+        return a + b;
+      }
+      function sub(a, b) {
+        return a - b;
+      }
+      function mul(a, b) {
+        return a * b;
+      }
+      function div(a, b) {
+        return a / b;
+      }
+      console.log(operate(10, 2, add));
+      console.log(operate(10, 2, sub));
+      console.log(operate(10, 2, mul));
+      console.log(operate(10, 2, div));
+
+      // Create a function greet that takes a name and a callback function. The callback function should format the greeting message. Call greet with a callback that makes the message uppercase.
+      function greet(name, callback) {
+        return callback(name);
+      }
+      function greetperson(name) {
+        console.log(`Hi hello ${name.toUpperCase()}`);
+      }
+      greet("Pavan", greetperson);
+
+      //  Write a function processData that simulates fetching data. It should accept a callback function that will be executed after a delay of 2 seconds (use setTimeout). The callback should receive a sample data object.
+      function processData(callback) {
+        setTimeout(function () {
+          let data = { id: 1, name: "Sample data" };
+          return callback(data);
+        }, 2000);
+      }
+
+      processData((data) => {
+        console.log("Data received : ", data);
+      });
+
+      //   Can a callback function be an anonymous function? Provide an example.
+      // Yes, a callback function can be an anonymous function
+      let numbers = [1, 2, 3];
+      let squred = numbers.map(function (n) {
+        return n * n;
+      });
+      console.log(squred);
+
+      // Create a function doSomething that takes a callback. The callback should be executed only if a certain condition is met (e.g., a random number is greater than 0.5).
+      function dosomething(callback) {
+        let random_number = Math.random();
+        if (random_number > 0.5) {
+          callback();
+        } else {
+          console.log("Condition not met");
+        }
+      }
+      dosomething(() => console.log("Callback is executed"));
+
+      // Using forEach, iterate over let fruits = ['apple', 'banana', 'cherry']; and print each fruit along with its index.
+      let fruits = ["apple", "banana", "cherry"];
+      fruits.forEach((item, index) => {
+        console.log(`Index ${index} : ${item}`);
+      });
+      //   Write a function sumArray that takes an array of numbers and uses forEach to calculate and return their sum.
+      let sumarr = [1, 2, 3, 4, 5];
+      function sumarray(sumarr) {
+        let sum = 0;
+        sumarr.forEach((item) => {
+          sum += item;
+        });
+
+        return sum;
+      }
+      console.log(sumarray(sumarr));
+
+      //   Create a new array of strings from an array of objects. For example, from [{ name: 'Alice' }, { name: 'Bob' }], create ['Alice', 'Bob'].
+      let people = [
+        { name: "Pavan" },
+        { name: "Kumar" },
+        { name: "Rakesh" },
+        { name: "Chotu" },
+      ];
+      let names = people.map((item) => item.name);
+      console.log(names);
+
+      //   Use map to convert an array of Fahrenheit temperatures to Celsius. The formula is (F - 32) * 5/9.
+      let Fahrenheit = [30, 20, 40, 50];
+      let celsius = Fahrenheit.map((item) => {
+        return ((item - 32) * 5) / 9;
+      });
+      console.log(celsius);
+
+      // Given let strings = ['hello', 'world'];, use map to return a new array with the strings in uppercase.
+      let strings = ["hello", "world"];
+      let newStrings = strings.map((strng) => {
+        return strng.toUpperCase();
+      });
+      console.log(newStrings);
+
+      // Given let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];, use filter to create a new array containing only the even numbers.
+      let numbers__filter = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let even = numbers__filter.filter((num) => num % 2 === 0);
+      console.log(even);
+
+      //   From an array of objects representing people, filter out those who are younger than 18. The objects have name and age properties.
+      let ppl_obj = [
+        { name: "Pavan", age: 21 },
+        { name: "Kumar", age: 20 },
+        { name: "Chotu", age: 17 },
+      ];
+      let nw_ppl_obj = ppl_obj.filter((person) => {
+        return person.age > 18;
+      });
+      console.log(nw_ppl_obj);
+
+      //   Given let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];, use filter to get words with a length greater than 6.
+      let words = [
+        "spray",
+        "limit",
+        "elite",
+        "exuberant",
+        "destruction",
+        "present",
+      ];
+      let new_words = words.filter((word) => {
+        // console.log(word.length>6)
+        return word.length > 6;
+      });
+      console.log(new_words);
+
+      // can you use filter to remove null or undefined values from an array? Provide an example.
+      // Yes, you can. You can filter based on the truthiness of the values.
+      let mixedArray = [1, null, "hello", undefined, 0, false, "world", NaN];
+      let cleaned_arr = mixedArray.filter(Boolean);
+      console.log(cleaned_arr);
+
+      //   Use filter to find all prime numbers in an array of numbers.
+      let all_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+      function isprime(num) {
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return num > 1;
+      }
+      let prime_numbers = all_numbers.filter(isprime);
+      console.log(prime_numbers);
+
+      //   Given let numbers = [1, 2, 3, 4, 5];, use reduce to find the sum of all the numbers.
+      let sum_numbers = [1, 2, 3, 4, 5];
+      let sum = sum_numbers.reduce((acc, curr) => {
+        return (acc += curr);
+      }, 0);
+      console.log("Sum is", sum);
+
+      // Use reduce to find the product of all numbers in an array
+      let product_numbers = [1, 2, 3];
+      let product = product_numbers.reduce((acc, curr) => {
+        return (acc *= curr);
+      }, 1);
+      console.log("Product is : ", product);
+
+      //   Given an array of strings, use reduce to concatenate them into a single string.
+      let wordss = ["Hello", " ", "World", "!"];
+      let sentence = wordss.reduce((acc, curr) => {
+        return (acc += curr);
+      });
+      console.log(sentence);
+
+      let x=[3,3,6,3]
+      console.log(x)
+      console.log(x.toString())
+    </script>
+  </body>
+</html>

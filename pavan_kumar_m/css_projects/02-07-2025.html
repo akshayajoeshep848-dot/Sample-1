@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css flex</title>
+    <style>
+        .parent {
+            background-color: blanchedalmond;
+            height: 400px;
+            width: 100vh;
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            /* justify-content: center; */
+            /* justify-content: space-evenly; */
+            align-items: baseline;
+
+        }
+
+        .child {
+            background-color: blue;
+            height: 100px;
+            padding: 10px;
+            width: 100px;
+            color: aliceblue;
+            /* place-content: center;
+            text-align: center; */
+        }
+
+        .child-1 {
+            height: 100px;
+            place-content: center;
+            align-items: center;
+        }
+
+        .child-2 {
+            height: 150px;
+            place-content: start;
+            align-items: center;
+        }
+
+        .child-3 {
+            height: 200px;
+            place-content: end;
+            align-items: center;
+        }
+
+        .parent-wrap {
+            background-color: rgb(237, 161, 9);
+            height: 700px;
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            /* overflow: auto; */
+            flex-wrap: wrap;
+            /* justify-content: space-between; */
+            justify-content: center;
+        }
+
+        .child-wrap-1 {
+            /* order: 1; */
+            text-align: center;
+        }
+
+        .child-wrap-4 {
+            /* order: 2; */
+            text-align: start;
+        }
+
+        .child-wrap-2,
+        .child-wrap-3,
+        .child-wrap-5,
+        .child-wrap-7,
+        .child-wrap-11,
+        .child-wrap-17 {
+            /* order: 3; */
+            text-align: end;
+        }
+
+        .child-wrap-7 {
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Css Display flex</h1>
+    <div class="parent">
+        <div class="child child-1">Child-1</div>
+        <div class="child child-2">Child-2</div>
+        <div class="child child-3">Child-3</div>
+    </div>
+    <h1>Css Display flex wrap</h1>
+    <div class="parent-wrap">
+        <div class="child child-wrap-1">child-1</div>
+        <div class="child child-wrap-2">child-2</div>
+        <div class="child child-wrap-3">child-3</div>
+        <div class="child child-wrap-4">child-4</div>
+        <div class="child child-wrap-5">child-5</div>
+        <div class="child child-wrap-6">child-6</div>
+        <div class="child child-wrap-7">child-7</div>
+        <div class="child child-wrap-8">child-8</div>
+        <div class="child child-wrap-9">child-9</div>
+        <div class="child child-wrap-10">child-10</div>
+        <div class="child child-wrap-11">child-11</div>
+        <div class="child child-wrap-12">child-12</div>
+        <div class="child child-wrap-13">child-13</div>
+        <div class="child child-wrap-14">child-14</div>
+        <div class="child child-wrap-15">child-15</div>
+        <div class="child child-wrap-16">child-16</div>
+        <div class="child child-wrap-17">child-17</div>
+        <div class="child child-wrap-18">child-18</div>
+        <div class="child child-wrap-19">child-19</div>
+        <div class="child child-wrap-20">child-20</div>
+    </div>
+</body>
+
+</html>

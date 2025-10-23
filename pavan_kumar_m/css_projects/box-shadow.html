@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-shadow</title>
+    <style>
+        *{
+            font-family: cursive;
+        }
+        .div1 {
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: -5px -5px gray;
+            margin-bottom: 20px;
+        }
+
+        .div2 {
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 5px 5px 3px 1px rgba(205, 240, 6, 0.603);
+            margin-bottom: 20px;
+        }
+
+        .div3 {
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: -5px 5px rgba(6, 108, 217, 0.484);
+            margin-bottom: 20px;
+        }
+
+        .div4 {
+            border: 2px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: -5px 5px rgba(118, 14, 245, 0.484);
+            margin-bottom: 20px;
+        }
+
+        .div4:hover {
+            box-shadow: -5px 5px rgba(118, 14, 245, 0.484) inset, 5px -5px rgba(232, 225, 10, 0.484) inset;
+        }
+
+        li {
+            font-size: large;
+            background-color: azure;
+            border-radius: 5px;
+            margin: 20px;
+            height: 40px;
+            padding: 20px;
+            list-style-type: none;
+            box-shadow: 3px 3px 5px rgba(147, 229, 4, 0.484), -3px -3px 5px rgba(147, 229, 4, 0.484)
+        }
+
+        .div5 {
+            height: 100px;
+            width: 100px;
+            /* border: 2px solid black; */
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow:  -2px 2px 0px 0px rgb(17, 7, 216) inset,2px -2px 0px 0px rgb(17, 7, 216) inset,
+               6px -6px rgba(255, 255, 255),
+               5px -5px 0px 3px rgb(14, 232, 7),
+               12px -12px rgba(255, 255, 255), 
+               11px -11px 0px 3px rgb(205, 85, 10), 
+               18px -18px rgba(255, 255, 255), 
+               17px -17px 0px 3px rgba(9, 144, 235, 0.932),
+               24px -24px rgba(255, 255, 255), 
+               23px -23px 0px 3px rgba(9, 24, 235, 0.961);
+            margin-bottom: 20px;
+            /* border-top: none;
+            border-right: none; */
+        }
+
+        #para-1 {
+            color: rgb(28, 12, 210);
+        }
+
+        #para-2 {
+            color: rgb(18, 219, 148);
+        }
+
+        #para-3 {
+            color: rgb(230, 245, 16);
+        }
+
+        #para-4 {
+            color: rgb(226, 179, 10);
+        }
+
+        #para-5 {
+            color: rgba(65, 8, 210, 0.45);
+        }
+        .para{
+            background-color: aqua;
+            height: 50px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+            
+        }
+        .para1{
+            background-color: beige;
+            color: brown;
+        }
+        .dis{
+            margin-bottom: 50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Css box shadow</h1>
+    <div class="div1">
+        <h3>some content</h3>
+    </div>
+    <div class="div2">
+        <h3>some content</h3>
+    </div>
+    <div class="div3">
+        <h3>some content</h3>
+    </div>
+    <div class="div4">
+        <h3>some content</h3>
+    </div>
+    <div>
+        <ol>
+            <li>Horizontal offset</li>
+            <li>Vertical offset</li>
+            <li>Blur radius</li>
+            <li>Spread radius</li>
+            <li>Color</li>
+            <li class="dis">Inset</li>
+        </ol>
+    </div>
+    <div class="div5">
+        <h3>some content</h3>
+    </div>
+    <h1>Selectors</h1>
+    <h2>ID selectors</h2>
+    <p id="para-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, exercitationem.</p>
+    <p id="para-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, exercitationem.</p>
+    <p id="para-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, exercitationem.</p>
+    <p id="para-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, exercitationem.</p>
+    <p id="para-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, exercitationem.</p>
+    <h2>Class selectors</h2>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, animi.</p>
+    <p class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, animi.</p>
+    <p class="para para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, animi.</p>
+    <span class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, iusto?</span>
+</body>
+
+</html>

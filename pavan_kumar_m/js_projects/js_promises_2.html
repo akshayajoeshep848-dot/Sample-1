@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <script>
+      //   let promise1 = Promise.resolve("Success");
+      //   console.log(promise1);
+      //   promise1.then((res) => {
+      //     console.log(res);
+      //   });
+
+      //   let promise2 = Promise.reject("Failure");
+      //   console.log(promise2);
+      //   promise2.catch((error) => {
+      //     console.log("Error : ", error);
+      //   });
+
+      let p1 = Promise.resolve("Success");
+      let p2 = 63;
+      let p3 = new Promise((resolve, reject) => {
+        const succes = Math.random()>0.6
+        setTimeout(() => {
+          succes ? resolve("Success") : reject("Failure");
+        });
+      });
+    //   let p=Promise.all([p1,p2,p3])
+    //   console.log(p)
+      Promise.all([p1, p2, p3])
+        .then((values) => {
+          console.log(values);
+        })
+        .catch((err) => console.log("Error : ", err));
+    </script>
+  </body>
+</html>

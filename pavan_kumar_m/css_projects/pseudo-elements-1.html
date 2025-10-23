@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-elements</title>
+    <style>
+        /* li {
+            list-style-type: none;
+        } */
+
+        /* li::before {
+            content: "\20B9";
+        }
+
+        li:after {
+            content: "\1F4AB";
+            padding: 10px;
+            /* margin-left: 5px; 
+        } */
+
+        .burger-menu {
+            background-color: black;
+            width: 15px;
+            height: 3px;
+            border-radius: 3px;
+        }
+
+         .burger-menu::before {
+            content: "";
+            background-color: black;
+            width: 15px;
+            height: 3px;
+            border-radius: 3px;
+            position: absolute;
+            transform: translateY(5px);
+        }
+
+        .burger-menu::after {
+            content: "";
+            background-color: black;
+            width: 15px;
+            height: 3px;
+            border-radius: 3px;
+            position: absolute;
+            transform: translateY(10px);
+        } 
+
+        .cross-icon {
+            margin-top: 40px;
+            background-color: black;
+            width: 15px;
+            height: 3px;
+            border-radius: 3px;
+            transform: rotate(45deg);
+        }
+
+        .cross-icon:after {
+            content: "";
+            background-color: black;
+            width: 15px;
+            height: 3px;
+            border-radius: 3px;
+            position: absolute;
+            transform: rotate(-90deg);
+        }
+
+        .p1::selection {
+            background-color: aqua;
+        }
+
+        .p2::first-letter {
+            background-color: aqua;
+        }
+
+        .p3::first-line {
+            background-color: aqua;
+        }
+        .name::placeholder{
+            color: red;
+        }
+       ul li::marker{
+            color: rgb(255, 196, 0);
+            font-size: 30px;
+            content: "\2b9e";
+           position: relative;
+
+        }
+        /* li{
+            list-style: square;
+        } */
+         p::grammar-error{
+            text-decoration: underline;
+            color: red;
+         }
+    </style>
+</head>
+
+<body>
+    <h1>pseudo elements</h1>
+    <ul>
+        <li>list-item 1</li>
+        <li>list-item 2</li>
+        <li>list-item 3</li>
+        <li>list-item 4</li>
+        <li>list-item 5</li>
+    </ul>
+    <div>
+        <div class="burger-menu">
+
+        </div>
+    </div>
+    <div>
+        <div class="cross-icon">
+
+        </div>
+    </div>
+    <div>
+        <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, illum.</p>
+        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, illum.</p>
+        <p class="p3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam in laborum delectus repellendus <br>
+            reprehenderit autem nisi officia, doloremque minima totam ea maiores suscipit provident recusandae odit fuga
+            vero, incidunt corrupti?</p>
+        <p class="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, illum.</p>
+        <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, illum.</p>
+        <label for="">Name</label>
+        <input class="name" type="text" placeholder="Enter Name">
+    </div>
+    <ul>
+        <li class="item-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, eligendi?</li>
+        <li class="item-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, eligendi?</li>
+        <li class="item-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, eligendi?</li>
+        <li class="item-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, eligendi?</li>
+        <li class="item-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, eligendi?</li>
+    </ul>
+    <p contenteditable="true" spellcheck="true">my frends is coming to party tonight.</p>
+</body>
+
+</html>

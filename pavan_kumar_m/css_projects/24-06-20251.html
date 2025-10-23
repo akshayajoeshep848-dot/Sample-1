@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendant selectors</title>
+    <style>
+        div p {
+            color: brown;
+        }
+
+        p span {
+            color: brown;
+            font-family: cursive;
+            background-color: burlywood;
+            border-radius: 5px;
+            padding: 1px;
+            cursor: pointer;
+        }
+
+        .heading2+p {
+            color: rgba(219, 110, 15, 0.788);
+        }
+
+        p+h1 {
+            color: brown;
+            background-color: rgba(127, 255, 212, 0.631);
+            padding: 2px;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        p~h1 {
+            color: brown;
+
+        }
+        .chld-selector > p{
+            border: 1px solid blue;
+            color: green;
+        }
+        .h-1 ,.para, .anchor{
+            text-decoration: none;
+            color: rgba(210, 105, 30, 0.805);
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        th{
+            color: rgba(255, 0, 0, 0.731);
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="color: blueviolet;">Css Descendant selectors</h2>
+    <div>
+        <div>
+            <p>child</p>
+        </div>
+        <div>
+            <div>
+                <p>Grand child</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <p>Great Grand child</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p>Lorem ipsum dolor sit <span>amet</span> consectetur adipisicing elit. Facere consequatur accusamus explicabo fuga
+        autem eius, laboriosam sunt, harum id minima, <span>reiciendis</span> sit. Ratione dignissimos veniam hic odit
+        eum illum
+        sunt!</p>
+    <h2 class="heading2">Sibling selector -adjacent</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed dignissimos obcaecati odio quos libero,
+        perspiciatis quisquam culpa? Qui doloribus voluptatum quisquam neque expedita ab inventore ut quibusdam,
+        nesciunt reiciendis atque.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur sapiente atque iusto quisquam reprehenderit
+        unde obcaecati. Aliquid, fuga cumque dolore optio ipsa eius laboriosam architecto qui, ullam placeat inventore
+        ut?</p>
+    <h1>content</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reiciendis, quidem mollitia, accusantium iusto
+        quia vitae culpa officia natus sit optio ipsa iure nisi similique voluptates molestias quos doloremque possimus.
+    </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga consequatur libero nisi eos, ea pariatur voluptas
+        amet at nam minima rem sunt tempora vero nesciunt consequuntur dolores eaque adipisci modi.</p>
+    <h2>content</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, praesentium impedit! Blanditiis illum ea amet,
+        placeat tenetur, similique corporis consequatur corrupti mollitia dolor molestias quas, est culpa dignissimos.
+        Eius, laudantium.</p>
+    <h1>content1</h1>
+    <h1>content2</h1>
+    <h1>child selector</h1>
+    <div class="chld-selector">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi modi molestiae quo fugiat sunt corporis
+            quia perferendis ad harum cumque eos officiis, excepturi, quaerat totam dicta consectetur reiciendis ut
+            temporibus!</p>
+        <article>content</article>
+        <input type="text">
+    </div>
+    <h1 class="h-1">Grouping selectors</h1>
+    <p class="para">Lorem ipsum dolor sit amet.</p>
+    <a class="anchor" href="">click</a>
+    <table>
+        <thead>
+            <th>heading1</th>
+            <th>heading2</th>
+            <th>heading3</th>
+            <th>heading4</th>
+            <th>heading5</th>
+        </thead>
+        <tr>
+            <td>cell1</td>
+            <td>cell2</td>
+            <td>cell3</td>
+            <td>cell4</td>
+            <td>cell5</td>
+        </tr>
+        <tr>
+            <td>cell1</td>
+            <td>cell2</td>
+            <td>cell3</td>
+            <td>cell4</td>
+            <td>cell5</td>
+        </tr>
+        <tr>
+            <td>cell1</td>
+            <td>cell2</td>
+            <td>cell3</td>
+            <td>cell4</td>
+            <td>cell5</td>
+        </tr>
+        <tr>
+            <td>cell1</td>
+            <td>cell2</td>
+            <td>cell3</td>
+            <td>cell4</td>
+            <td>cell5</td>
+        </tr>
+        <tr>
+            <td>cell1</td>
+            <td>cell2</td>
+            <td>cell3</td>
+            <td>cell4</td>
+            <td>cell5</td>
+        </tr>
+        <tr>
+            <td>cell1</td>
+            <td>cell2</td>
+            <td>cell3</td>
+            <td>cell4</td>
+            <td>cell5</td>
+        </tr>
+    </table>
+</body>
+
+</html>

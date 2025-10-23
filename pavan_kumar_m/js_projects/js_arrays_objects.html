@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and objects</title>
+    <style>
+      button {
+        width: 100px;
+        height: 40px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: cyan;
+        font-size: 15px;
+        border-radius: 5px;
+        transition: 1000ms;
+      }
+      button:hover {
+        background-color: burlywood;
+        transform: rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Arrays and objects</h1>
+    <div style="display: flex">
+      <button onclick="dog.getdetails()">Get details</button>
+      <button onclick="dog.bark()">Bark</button>
+      <button onclick="dog.eat()">Eat</button>
+    </div>
+    <div style="display: flex">
+      <button onclick="dog.getsoda()">Get soda</button>
+      <button onclick="dog.liedown()">liedown</button>
+      <button onclick="dog.rollover()">Roll over</button>
+      <button onclick="dog.run()">Run</button>
+    </div>
+    <div style="display: flex">
+      <button onclick="dog.shakeHand()">Get shakeHand</button>
+      <button onclick="dog.sit()">Sit</button>
+      <button onclick="dog.sleep()">Sleep</button>
+      <button onclick="dog.walk()">Walk</button>
+    </div>
+
+    <script>
+            // const person = {
+            //   "name": "abcd",
+            //   age: 21,
+            //   is_student: true,
+            //   greet: function () {
+            //     console.log(`Hello your name is ${this.name}`);
+            //     if (this.is_student) {
+            //       console.log(`${this.name} you are a student`);
+            //     } else {
+            //       console.log(`${this.name} you are not a student`);
+            //     }
+            //   },
+            // };
+            // console.log(person.name);
+            // console.log(person.age);
+            // console.log(person.is_student);
+            // person.greet();
+            // console.log(person["name"]);
+            // console.log(person["age"]);
+            // console.log(person["is_student"]);
+            // console.log(person["greet"]());
+
+            // Create an object called dog
+            const dog = {
+              name: "lucy",
+              age_In_Months: 6,
+              breed: "husky",
+              gender: "Male",
+              registration_nm: "123",
+              bark: function () {
+                console.log(`${this.name} bark`);
+              },
+              walk: function () {
+                console.log(`${this.name}  Walk`);
+              },
+              run: function () {
+                console.log(`${this.name} run`);
+              },
+              shakeHand: function () {
+                console.log(`${this.name} give shakehand`);
+              },
+              smell: function () {
+                console.log(`${this.name} smeel this`);
+              },
+              eat: function () {
+                console.log(`${this.name} eat`);
+              },
+              sleep: function () {
+                console.log(`${this.name} sleep`);
+              },
+              rollover: function () {
+                console.log(`${this.name} rollover`);
+              },
+              sit: function () {
+                console.log(`${this.name} sit`);
+              },
+              liedown: function () {
+                console.log(`${this.name} liedown`);
+              },
+              getsoda: function () {
+                console.log(`${this.name} get the soda from fridge`);
+              },
+              getdetails: function () {
+                console.log(`
+      Name is ${this.name},
+      Age is ${this.age_In_Months} months,
+      registration number is ${this.registration_nm},
+      breed is ${this.breed},
+      gender is ${this.gender}`);
+              },
+            };
+            // dog.getdetails();
+            // dog.bark();
+            // dog.eat();
+            // dog.getsoda();
+            // dog.liedown();
+            // dog.rollover();
+            // dog.run();
+            // dog.shakeHand();
+            // dog.sit();
+            // dog.sleep();
+            // dog.walk();
+
+            // Create an object called adress
+
+            const adress = {
+              name: "LogicWhile",
+              adress_line1: "First Floor",
+              adress_line2: "Beside MRO Office",
+              adress_line3: "Kphb Phase 1",
+              city: "Hyderabad",
+              state: "Telangana",
+              pincode: 500072,
+              getAdress:function(){
+                console.log(`
+      ${this.name}
+      ${this.adress_line1}
+      ${this.adress_line2}
+      ${this.adress_line3}
+      ${this.city}
+      ${this.state}
+      ${this.pincode}`)
+              }
+            };
+
+        adress.getAdress()
+    </script>
+  </body>
+</html>

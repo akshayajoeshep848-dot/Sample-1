@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+       
+        .first_name{
+            border: 1px solid green;
+        }
+         .first_name[type="date"]{
+            border: 2px solid rgb(224, 11, 33);
+        }
+        /* #fn-name2{
+            border: 1px solid salmon;
+        } */
+        
+    </style>
+</head>
+
+<body>
+    <input type="text" class="first_name" id="fn-name1">
+    <input type="date" class="first_name" id="fn-name2">
+    <input type="number" class="first_name" id="fn-name3">
+    <input type="password" class="first_name" id="fn-name4">
+    <input type="button" class="first_name" id="fn-name5">
+    <input type="tel" class="first_name" id="fn-name6">
+    <!-- <input type="text" class="first_name" id="fn-name5"> -->
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-7</title>
+    <style>
+        *{
+            color: white;
+            font-size: 20px;
+        }
+        .main {
+            width: 800px;
+            height: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header {
+            width: 780px;
+            height: 60px;
+            background-color: skyblue;
+            margin-bottom: 10px;
+            place-content: center;
+            text-align: center;
+
+        }
+
+        .footer {
+            width: 780px;
+            height: 60px;
+            background-color: orange;
+            margin-top: 10px;
+             place-content: center;
+            text-align: center;
+
+        }
+        .hero{
+           height: 200px; 
+           width: 270px;
+           background-color: rgba(148, 51, 66, 0.307);
+           margin-bottom: 10px;
+            place-content: center;
+            text-align: center;
+        }
+        .sidebar{
+            height: 370px;
+            width: 270px;
+            background-color: rgba(0, 128, 0, 0.645);
+            margin-bottom: 10px;
+             place-content: center;
+            text-align: center;
+        }
+        .main-content{
+            width: 500px;
+            height: 420px;
+            background-color: orange;
+             margin-left: 10px;
+             margin-bottom: 10px;
+              place-content: center;
+            text-align: center;
+        }
+        .extra-content{
+            width: 500px;
+            height: 150px;
+            background-color: gray;
+            margin-left: 10px;
+             place-content: center;
+            text-align: center;
+        }
+        .rel-images{
+            height: 70px;
+            width: 520px;
+            background-color: aquamarine;
+            margin-right: 10px;
+             place-content: center;
+            text-align: center;
+        }
+        .rel-posts{
+            height: 70px;
+            width: 250px;
+            background-color: rgba(255, 192, 203, 0.745);
+             place-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">Header</header>
+        <div style="display: flex;">
+            <div>
+                <div class="hero">Hero</div>
+                <div class="sidebar">Sidebar</div>
+            </div>
+            <div>
+                <div class="main-content">Main Content</div>
+                <div class="extra-content">Extra Content</div>
+            </div>
+        </div>
+        <div style="display: flex;">
+            <div class="rel-images">Related Images</div>
+            <div class="rel-posts">Related Posts</div>
+        </div>
+
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+
+</html>

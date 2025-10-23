@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 3</title>
+    <style>
+        .child{
+            background-color: rgba(8, 181, 8, 0.621);
+
+        }
+        .header{
+            background-color: rgba(8, 181, 8, 0.621);
+            margin-bottom: 10px;
+            height: 60px;
+        }
+        .main{
+            display: flex;
+            gap: 10px;
+        }
+        .ads{
+            height: 200px;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+        .nav{
+            width: 300px;
+            height: 500px;
+        }
+        .article{
+            width: 460px;
+            height: 620px;
+            margin-bottom: 10px;
+        }
+        .footer{
+            height: 80px;
+        }
+        .child,.header{
+            place-content: center;
+            text-align: center;
+            color: aliceblue;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">Header</header>
+    <div class="main">
+        <div class="side-1">
+            <div class="child ads">Ads</div>
+            <nav class="child nav">Nav</nav>
+        </div>
+        <div class="side-2">
+            <article class="child article">Article</article>
+            <footer class="child footer">Footer</footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

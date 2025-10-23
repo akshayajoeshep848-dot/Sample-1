@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-2</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .parent{
+            box-sizing: border-box;
+            background-color: #fff;
+            height: 100vh;
+            width: 100vw;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(4,1fr);
+            grid-template-areas: "header header"
+                                  "ads article"
+                                  "nav article"
+                                  "nav footer";
+        }
+        .child{
+            height: 100px;
+            width: 100%;
+            background-color: rgba(13, 255, 0, 0.544);
+            color: black;
+            place-content: center;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .chil-1{
+            grid-area: header;
+            height: 100px;
+        }
+        .chil-2{
+            grid-area: ads;
+            width: 200px;
+            height: 220px;
+        }
+        .chil-3{
+            grid-area: article;
+            width: 1400px;
+            height: 450px;
+        }
+        .chil-4{
+            grid-area: nav;
+            height: 330px;
+            width: 200px;
+        }
+        .chil-5{
+            grid-area: footer;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child chil-1">Header</div>
+        <div class="child chil-2">Ads</div>
+        <div class="child chil-3">Article</div>
+        <div class="child chil-4">Nav</div>
+        <div class="child chil-5">Footer</div>
+    </div>
+</body>
+</html>

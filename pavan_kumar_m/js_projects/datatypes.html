@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datatypes</title>
+</head>
+
+<body>
+    <h1>javascript datatypes</h1>
+    <script>
+        let age = 21;
+        let firstName = "Pavan";
+        let middleName = 'kumar'
+        let lastName = `Maruboina`
+        let bool = true;
+        let unDefined = undefined;
+        let sym = Symbol();
+        let bigInt = 63n;
+        let fullName1 = `${firstName} ${middleName} ${lastName}`;
+        let fullName2 = firstName + middleName + lastName;
+        address1="Road number 1";
+        address2="Phase 1" ;
+        address3="Kphb hyderabad";
+        fulladress1=`${address1} ${address2} ${address3}`;
+        fulladress2=address1+" "+address2+" "+address3;
+
+
+
+
+
+        console.log("Age:",age)
+        console.log('Age type:',typeof age)
+        console.log("FirstName:",firstName)
+        console.log("FirstName type:",typeof firstName)
+        console.log("Boolean:",bool)
+        console.log("Boolean type:",typeof bool)
+        console.log("Undefined:",undefined)
+        console.log("Undefined type:",typeof undefined)
+        console.log("Symbol:",sym)
+        console.log("Symbol type:",typeof sym)
+        console.log("Big int",bigInt)
+        console.log("Big int type:",typeof bigInt)
+        console.log(age == bigInt)
+        console.log(age === bigInt)
+        console.log(`My name is ${firstName} ${middleName} ${lastName} ,and  my age is ${age}`) //Template literal
+        console.log("My name is " + firstName + " " + middleName + " " + lastName + " " + ",and  my age is " + age) //String concatenation
+        console.log("My name is", firstName, middleName, lastName, ",and  my age is", age) //Comma seperated values (only works in console)
+        console.log("FirstName:", firstName)
+        console.log("MiddleName:", middleName)
+        console.log("LastName:", lastName)
+        console.log(fullName1)
+        console.log(fullName2)
+        console.log("Using Template literal:",fulladress1)
+        console.log("Using String concatenation:",fulladress2)
+
+
+
+        let age1=30;
+        let price=9.9000;
+        let temperature=0;
+
+
+
+
+
+    </script>
+</body>
+
+</html>

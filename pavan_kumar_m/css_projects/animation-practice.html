@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+    <style>
+        .div1 {
+            margin-top: 30px;
+            margin-left: 20px;
+            border: 1px solid black;
+            background-color: gold;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation-name: box1;
+            animation-duration: 4s;
+            animation-delay: 1sec;
+            animation-iteration-count: 2;
+            animation-direction:alternate;
+            transition: transform 2s ease;
+            transform: rotate(2turn);
+            transform: skew(10deg);
+            transform: translate(20px);
+            transform: skewX(10deg);
+            
+            
+        }
+        .div1:hover{
+            transform: scale(1.5);
+        }
+
+        @keyframes box1 {
+            0% {
+                background-color: aqua;
+                top: 0px;
+                left: 0px;
+                border-radius: 50%;
+            }
+
+            25% {
+                background-color: dodgerblue;
+                left: 500px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: red;
+                left: 500px;
+                top: 500px;
+                border-radius: 50%;
+            }
+
+            75% {
+                background-color: chartreuse;
+                right: 0px;
+                top: 500px;
+            }
+
+            100% {
+                background-color: green;
+                right: 0px;
+                bottom: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1"></div>
+</body>
+
+</html>

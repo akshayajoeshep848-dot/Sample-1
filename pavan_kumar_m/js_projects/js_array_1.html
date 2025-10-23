@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <h1>Arrays</h1>
+    <script>
+      let emptyArray = [];
+      let fruits = ["Apple", "Banana", "Cherry"];
+      let numbers = [1, 2, 3, 4, 5];
+      let mixedArray = [10, "Hello", true, { name: "Alice" }, [6, 7]];
+      //   console.log(fruits)
+      //   console.log(mixedArray)
+      //   console.log(mixedArray.length)
+      //   console.log(mixedArray[4][0])
+      //   console.log(mixedArray[3])
+      //   console.log(mixedArray[3].name)
+      //   console.log(mixedArray[3]["name"])
+
+      let student = {
+        name: "Ntr",
+        age: 23,
+        college: "Chalapathi engineering college",
+        id: "0001",
+        adress: {
+          line1: "H.NO 553, ",
+          line2: "jubilee hills road n0 29",
+          city: "hyderabad",
+          pincode: 520003,
+        },
+        movies: ["Devara", "war2", "Temper", "Janatha Garage"],
+        awards: [
+          {
+            name: "Best Dancer",
+            type: "",
+            year: 1996,
+            movie: "",
+          },
+          {
+            name: "Best Actor",
+            type: "Nandi awards",
+            year: 2016,
+            movie: "Nanna ki Prematho",
+          },
+          {
+            name: "Best actor",
+            type: "SIIMA awards",
+            year: 2007,
+            movie: "Simhadri",
+          },
+        ],
+      };
+      console.log(Object.keys(student));
+      console.log(Object.values(student));
+      console.log(Object.entries(student));
+      console.log(Object.keys(student).length);
+      console.log(student.awards[0].name);
+
+      let arrr3 = new Array();
+      let arrr1 = new Array(1, 2, 3, 4, 6, 7);
+      let arrr2 = new Array(4);
+      let arrr4 = new Array(3, 4);
+      console.log(arrr1);
+      console.log(arrr2);
+      console.log(arrr3);
+      console.log(arrr4);
+      console.log(arrr2[0]);
+      arrr2[0] = "Hi";
+      console.log(arrr2[0]);
+      console.log(arrr2);
+
+      const fruitts = ["Apple", "Banana"];
+      // fruitts.push("orange", "grape");
+      // console.log(fruitts);
+      // fruitts.pop();
+      // console.log(fruitts);
+      // fruitts.unshift("kiwi");
+      // console.log(fruitts);
+      // fruitts.shift();
+      // console.log(fruitts);
+      // console.log(fruitts.reverse());
+      // console.log(fruitts);
+      console.log(fruitts.push());
+      console.log(fruitts.pop());
+      console.log(fruitts.pop());
+      // console.log(fruitts.pop())
+      console.log(
+        fruitts.push("apple", "kiwi", "grapes", ["abc", "def", "ghi"])
+      );
+      console.log(fruitts);
+      console.log(fruitts.pop());
+      let nme = "Pavan";
+      //   nme=nme.split("")
+      //   console.log(nme)
+      //   nme=nme.reverse()
+      //   console.log(nme)
+      //   nme=nme.join("")
+      //   console.log(nme)
+      // console.log(nme.split("").reverse().join(""));
+      // let hero = "prabhas";
+      // let hero_arr = hero.split("");
+      // for (let i = 0; i < hero.length; i++) {
+      //   console.log(hero_arr.join(""));
+      //   hero_arr.shift();
+      // }
+
+      let a1 = [1, 2, 2, 3];
+      let a2 = ["p", "a", "v", "a", "n"];
+      let ress = a1.concat(a2);
+      console.log(ress);
+      let nested = [1, 2, [3, 4, 5], [6, [7, 8, 9]]];
+      let flatted = nested.reduce((acc, curr) => {
+        return acc.concat(curr);
+      }, []);
+      console.log(flatted);
+
+      let greeting = ["Hello", "World", 5, true];
+      console.log(greeting.join());
+      console.log(greeting.join(","));
+      console.log(greeting.join("-"));
+      console.log(greeting.join(", "));
+      let strng = "Hello";
+      let splt = strng.split("");
+      console.log(splt.reverse().join(","));
+    </script>
+  </body>
+</html>

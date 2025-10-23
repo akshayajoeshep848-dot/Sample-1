@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Js string methods</h1>
+    <script>
+      let str = "Hello, World";
+      console.log(str.charAt(0));
+      console.log(str.charAt(6) == " ");
+      console.log(str.charAt(7));
+      console.log(str.charAt(8));
+      console.log(str.concat("!"));
+      // includes()
+      let sntnc = "The quick brown fox jumps over the lazy dog";
+      console.log(sntnc.includes("hi"));
+      console.log(sntnc.includes("fox"));
+      console.log(sntnc.includes("Fox"));
+      console.log(sntnc.includes(""));
+
+      //   replace()
+      let grtng = "Hello, world";
+      console.log(grtng.replace("world", "Pavan"));
+
+      // substring
+      let strng1 = "JavaScript";
+      console.log(strng1.substring());
+      console.log(strng1.substring(0));
+      console.log(strng1.substring(1, 4));
+      console.log(strng1.substring(4, 10));
+      console.log(strng1.substring(4, 4));
+      //   toLowerCase()
+      //  toUpperCase()
+      //
+      let crse = "javascript";
+      console.log(crse.charAt(0).toUpperCase() + crse.slice(1));
+
+      let sntnce = "hi hello how are you";
+      let nw_sntnc = sntnce.split(" ").map((word) => {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      }).join(" ");
+      console.log(nw_sntnc);
+    </script>
+  </body>
+</html>

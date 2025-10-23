@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Js Promises</h1>
+    <script>
+      //   function getpizza(callback) {
+      //     console.log("Ordering the pizaa....");
+      //     setTimeout(() => {
+      //       console.log("Pizaa has arrived");
+      //     },3000);
+      //     callback();
+      //   }
+      //   function dodishes() {
+      //     console.log("Arranged the dishes");
+      //   }
+      //   getpizza(dodishes);
+      //   console.log("watcing mobile")
+
+      // let promise = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     const success = Math.random() > 0.5;
+      //     let data = { name: "Pavan", age: 21, gender: "M" };
+      //     if (success) {
+      //       resolve(data);
+      //     } else {
+      //       reject("No data available");
+      //     }
+      //   }, 2000);
+      // });
+      // console.log(promise);
+      // promise
+      //   .then((res) => console.log("Data is : ", res))
+      //   .catch((error) => console.log("Error: ", error));
+
+      // function getsuccess() {
+      //   return new Promise((resolve, reject) => {
+      //     resolve("Operation Successful");
+      //   });
+      // }
+      // getsuccess().then((res) => console.log("res is : ", res));
+
+      // function getfailure() {
+      //   return new Promise((resolve, reject) => {
+      //     reject("Operation Failed");
+      //   });
+      // }
+      // getfailure().catch((res) => console.log("Error : ", res));
+
+      // function delayedresolve(ms) {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve(`Resolved after ${ms} ms`);
+      //     }, ms);
+      //   });
+      // }
+      // delayedresolve(3000).then((res) => console.log(res));
+
+      // function delayedreject(ms) {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       reject(`Rejected after ${ms} ms`);
+      //     }, ms);
+      //   });
+      // }
+      // delayedreject(3000).catch((res) => console.log(res));
+
+      // function checkvalue(val) {
+      //   return new Promise((resolve, reject) => {
+      //     if (val) {
+      //       resolve("Value is true");
+      //     } else {
+      //       reject("Value is false");
+      //     }
+      //   });
+      // }
+
+      // checkvalue(true).then((res)=>console.log(res)).catch((err)=>console.log(err))
+
+      // function asresolved(data) {
+      //   return Promise.resolve(data);
+      // }
+      // let data = { name: "Pavan", age: 21, gender: "M" };
+      // asresolved(data).then((res) => console.log(res));
+
+      // function asrejected(data) {
+      //   return Promise.reject("No data found");
+      // }
+      // let data = { name: "Pavan", age: 21, gender: "M" };
+      // asrejected(data).catch((res) => console.log(res));
+
+      // function fetchallresources() {
+      //   const fetchusers = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve(["Alice", "Bob"]);
+      //     }, 500);
+      //   });
+
+      //   const fetchposts = new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       resolve([{ id: 1, title: "Hello" }]);
+      //     }, 700);
+      //   });
+      //   return Promise.all([fetchusers, fetchposts]);
+      // }
+      // fetchallresources().then((res) => {
+      //   console.log(res);
+      // });
+
+      function racedata() {
+        const sourcea = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Data from source A");
+          }, 1000);
+        });
+        const sourceb = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("Data from source B");
+          }, 800);
+        });
+        return Promise.race([sourcea, sourceb]);
+      }
+      racedata().then((res)=>console.log(res))
+    </script>
+  </body>
+</html>

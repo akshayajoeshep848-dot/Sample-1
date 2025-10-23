@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-6</title>
+    <style>
+        *{
+            color: white;
+            font-size: 30px;
+        }
+        .main {
+            width: 750px;
+            height: 750px;
+            padding: 30px;
+            background-color: rgba(135, 207, 235, 0.603);
+
+        }
+
+        .header {
+            width: 750px;
+            height: 50px;
+            background-color: rgba(0, 174, 255, 0.677);
+            margin-bottom: 10px;
+            place-content: center;
+            text-align: center;
+        }
+
+        .navbar {
+            width: 750px;
+            height: 50px;
+            background-color: rgba(44, 220, 5, 0.597);
+            margin-bottom: 10px;
+            place-content: center;
+            text-align: center;
+
+        }
+
+        .footer {
+            width: 750px;
+            height: 50px;
+            background-color: rgba(0, 174, 255, 0.677);
+            place-content: center;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .aside {
+            height: 530px;
+            width: 250px;
+            background-color: rgba(44, 220, 5, 0.597);
+            place-content: center;
+            text-align: center;
+            margin-right: 10px;
+        }
+
+        .content {
+            height: 260px;
+            width: 490px;
+            background-color: rgba(0, 174, 255, 0.677);
+            place-content: center;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .section {
+            height: 260px;
+            width: 490px;
+            background-color: rgb(3, 58, 152);
+            place-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header class="header">Header</header>
+        <nav class="navbar">Navigation</nav>
+        <div style="display: flex;">
+            <aside class="aside">Aside</aside>
+            <div>
+                <div class="content">Content</div>
+                <div class="section">Section</div>
+            </div>
+        </div>
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
+
+</html>

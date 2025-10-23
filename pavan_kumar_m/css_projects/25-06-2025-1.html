@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css units</title>
+    <style>
+        .parent{
+            width: 50%;
+            background-color: beige;
+            place-content: center;
+            text-align: center;
+        }
+        .child{
+            width: 50%;
+            color: brown;
+            background-color: aqua;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: large;
+            height: 30px;
+        }
+        .child-2{
+            background-color: rgb(255, 0, 0);
+            color: white;
+        }
+        .parent-1{
+            background-color: rgba(137, 43, 226, 0.504);
+            width: 90vw;
+            place-content: center;
+            text-align: center;
+        }
+        .chld{
+            color: brown;
+        }
+        .chld-1{
+            background-color: aqua;
+            width: 90vw;
+            margin-bottom: 4px;
+            height: 20vh;
+            border-radius: 5px;
+        }
+         .chld-2{
+            background-color: rgba(199, 232, 13, 0.84);
+            width: 80vw;
+            margin-bottom: 4px;
+            height: 10vh;
+            border-radius: 5px;
+        }
+         .chld-3{
+            background-color: rgb(14, 34, 254);
+            width: 70vw;
+            margin-bottom: 4px;
+            color: white;
+            height: 5vh;
+            border-radius: 5px;
+        }
+        table,th,td{
+            border: 1px solid brown;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Css units percentages</h1>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+    <h1>Css units viewport heightand width</h1>
+    <div class="parent-1">
+        <div class="chld chld-1">cild -1</div>
+        <div class="chld chld-2">cild -2</div>
+        <div class="chld chld-3">cild -3</div>
+    </div>
+
+    <h1>Emmet Practice</h1>
+    <table>
+        <thead>
+            <th>header 1</th>
+            <th>header 2</th>
+            <th>header 3</th>
+            <th>header 4</th>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+                <td>cell 4</td>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+                <td>cell 4</td>
+            </tr>
+        </thead>
+    </table>
+    <!-- table>thead>(tr>th*5{header $}+tr>th*5{header $})+tr*5>td{cell $}*5 -->
+     <table>
+        <thead>
+            <tr>
+                <th>header 1</th>
+                <th>header 2</th>
+                <th>header 3</th>
+                <th>header 4</th>
+                <th>header 5</th>
+                <tr>
+                    <th>header 1</th>
+                    <th>header 2</th>
+                    <th>header 3</th>
+                    <th>header 4</th>
+                    <th>header 5</th>
+                </tr>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+                <td>cell 4</td>
+                <td>cell 5</td>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+                <td>cell 4</td>
+                <td>cell 5</td>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+                <td>cell 4</td>
+                <td>cell 5</td>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+                <td>cell 4</td>
+                <td>cell 5</td>
+            </tr>
+            <tr>
+                <td>cell 1</td>
+                <td>cell 2</td>
+                <td>cell 3</td>
+                <td>cell 4</td>
+                <td>cell 5</td>
+            </tr>
+        </thead>
+     </table>
+</body>
+</html>

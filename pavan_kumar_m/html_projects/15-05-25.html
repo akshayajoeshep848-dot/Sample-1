@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+    <style>
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+        table,th,tr,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            padding: 20px;
+            
+        }
+        button{
+            padding: 10px;
+            background-color:cadetblue;
+            border-radius: 5px;
+            color: azure;
+            
+        }
+        button:hover{
+            background-color: aqua;
+            cursor: pointer;
+            border-radius: 6px;
+            color: black;
+        }
+        a{
+            color: aliceblue;
+            text-decoration: none;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        
+    </style>
+</head>
+<body>
+    <table>
+        <caption style="margin-bottom: 5px; font-size: large;">
+            <b>Movie Ticket Booking</b>
+        </caption>
+        <tr>
+            <th><i>Movie name</i></th>
+            <th><i>Type</i></th>
+            <th><i>Image</i></th>
+            <th><em>Duration</em></th>
+            <th><em>Show times</em></th>
+            <th><em>Ticket Booking</em></th>
+
+        </tr>
+        <tr>
+            <td>Jersey</td>
+            <td>Sports-drama</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/en/1/10/Jersey_2019_poster.jpg" alt="Jersy"></td>
+            <td>2h 30m</td>
+            <td><del>7:00</del>,14:00,17:00</td>
+            <td><a href="https://in.bookmyshow.com/explore/movies-hyderabad" target="_blank"><button>Book Ticket</button></a></td>
+        </tr>
+        <tr>
+            <td>Agent Sai Srinivasa Athreya</td>
+            <td>Action Comedy</td>
+            <td><img src="https://m.media-amazon.com/images/M/MV5BOTljNDVhYTUtMzMyNi00NzEzLTgxYjQtODVlZDc1MGU3ZmMyXkEyXkFqcGc@._V1_.jpg" alt="Agent Sai Srinivasa Athreya"></td>
+            <td>2h 27m</td>
+            <td>7:00,<del>14:00</del>,17:00</td>
+            <td><a href="https://in.bookmyshow.com/explore/movies-hyderabad" target="_blank"><button>Book Ticket</button></a></td>
+        </tr>
+        <tr>
+            <td>Mahanati</td>
+            <td>Biographical Drama</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/en/1/1d/Mahanati_poster.jpg" alt="Mahanati"></td>
+            <td>2h 57m</td>
+            <td>7:00,14:00,<del>17:00</del></td>
+            <td><a href="https://in.bookmyshow.com/explore/movies-hyderabad" target="_blank"><button>Book Ticket</button></a></td>
+        </tr>
+        <tr>
+            <td>Baahubali 2: The Conclusion</td>
+            <td>Action/Historical</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/93/Baahubali_2_The_Conclusion_poster.jpg/250px-Baahubali_2_The_Conclusion_poster.jpg" alt="Baahubali 2: The Conclusion"></td>
+            <td>2h 50m</td>
+            <td>7:00,14:00,17:00</td>
+            <td><a href="https://in.bookmyshow.com/explore/movies-hyderabad" target="_blank"><button>Book Ticket</button></a></td>
+        </tr>
+        <tr>
+            <td>kalki 2898-AD</td>
+            <td>Adventure</td>
+            <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Kalki_2898_AD.jpg/250px-Kalki_2898_AD.jpg" alt="kalki 2898-AD"></td>
+            <td>3h</td>
+            <td>7:00,14:00,17:00</td>
+            <td><a href="https://in.bookmyshow.com/explore/movies-hyderabad" target="_blank"><button>Book Ticket</button></a></td>
+        </tr>
+    </table>
+</body>
+</html>

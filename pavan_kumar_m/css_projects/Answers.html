@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answers</title>
+    <style>
+        div {
+            background-color: beige;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+            border-left: 4px solid black;
+            border-right: 4px solid black;
+            box-shadow: 4px 6px 10px gray;
+            margin-bottom: 25px;
+
+        }
+
+        summary {
+            color: rgb(111, 6, 248);
+            font-weight: bold;
+            cursor: pointer;
+            padding-left: 10px;
+        }
+
+        h3 {
+            color: rgba(250, 5, 250, 0.856);
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        h5,
+        p,
+        code,
+        li {
+            font-size: large;
+
+        }
+
+        h5 {
+            color: brown;
+        }
+
+        code {
+            background-color: #eee;
+            border-radius: 3px;
+            font-family: courier, monospace;
+            padding: 0 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>Css ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Css stands for cascading style sheets</p>
+            <p>It is used to design and style the webpages - like setting colors ,fonts,layouts,sizes and etc.</p>
+            <h5>Usage</h5>
+            <p>To make the websites look beautiful and userfriendly</p>
+            <p>To apply styles to multiple pages with one file</p>
+            <p>To separate content (HTML) from design (CSS)</p>
+            <h5> Types of CSS:</h5>
+            <p><b>1.Inline CSS :</b>Writing the CSS directly inside an HTML tag using the style attribute.It applies the
+                style to just one specific element.</p>
+            <h5>Usage</h5>
+            <p>For overriding the other css styles</p>
+            <p>For quick testing or small changes</p>
+            <code>
+                &lt;p style="color: red; font-size: 18px;"&gt;This is a red paragraph.&lt;/p&gt;
+            </code>
+            <p><b>2.Internal CSS :</b>Writing the CSS styles inside &lt;style&gt; in the head section of the document.It
+                applies the
+                styles to single web page.</p>
+            <h5>Usage</h5>
+            <p>When our styles are only for one page</p>
+            <p>For small projects or simple web pages</p>
+            <code>
+               &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                &lt;head&gt;
+                &lt;style&gt;
+    h1 {
+      color: blue;
+      font-size: 30px;
+    }
+    p {
+      color: gray;
+    }
+            &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;h1&gt;Hello!&lt;/h1&gt;
+            &lt;p&gt;This is a paragraph.&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+
+    </code>
+            <p><b>3.External CSS :</b>Writing the CSS code in seperate .css file.
+                and linking it to our html file using the &lt;link&gt; tag in the &lt;head&gt; section</p>
+            <h5>Advantages:</h5>
+            <p>Code is clean and organized</p>
+            <p>Styles can be reused across many pages</p>
+            <p> Keeps HTML and CSS separate</p>
+
+        </details>
+    </div>
+    <div>
+        <h3>What is font?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>In CSS, font is used to control how the text looks on a web page. It includes the type of font (like
+                Arial,sans-serif etc), size of the text, boldness of text, italic style, and spacing between lines etc.
+            <h5>Usage</h5>
+            <p>We use css font properties to style the text to look better and readability</p>
+            </p>
+            <h5>Example</h5>
+            <code>
+                p {
+                    font-family: 'Arial', sans-serif;
+                    font-size: 16px;
+                    font-weight: bold;
+                    font-style: italic;
+}
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Font shorthand property?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Font short hand property is a shortcut used to set multiple font properties in a single line instead of
+                writing the each line seperately</p>
+            <h5>Usage</h5>
+            <p>It saves time and makes the code cleaner.</p>
+            </p>
+            <h5>Example</h5>
+            <code>
+                p {
+            font: italic bold 16px/1.5 Arial,
+             sans-serif;
+            }
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Font Family?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Font family is used to set the type of font to be displayed on webpage </p>
+            <h5>Usage</h5>
+            <p>We use font family to modify the existing text to new font styles</p>
+            </p>
+            <h5>Example</h5>
+            <p>
+                <code>
+                p {
+            font-family: "Times New Roman",
+             Georgia, serif;
+            }
+            </code>
+            <h5>This means:</h5>
+
+            <p>First choice: Times New Roman</p>
+            <p>If not available: Georgia</p>
+            <p>If none available: use any serif font as a backup</p>
+
+
+            </p>
+
+
+
+
+        </details>
+    </div>
+    <div>
+        <h3>Font Size?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Font size is used to set the size to text like how big or small text appears on webpage</p>
+            <h5>Usage</h5>
+            <p>It helps to control the readability and visual appearance of text</p>
+            </p>
+            <h5>Example</h5>
+            <code>
+               selector {
+                font-size: value;
+            }
+
+        </code>
+
+        </details>
+    </div>
+    <div>
+        <h3>Font-Weight?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Font Weight is used to set how thick or bold our text to appears on webpage</p>
+
+            <h5>Example</h5>
+            <code>
+               selector {
+                font-weight: value;
+            }
+
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Font-Style?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Font Style is used to make text italic,oblique(slant),normal etc</p>
+
+            <h5>Example</h5>
+            <code>
+               selector {
+                    font-style: value;
+                }
+
+
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Font-Variant?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Font Variant is used to control the display style of text like to show small-caps---where lowercase
+                letters looks like smaller versions of capital letters</p>
+
+            <h5>Example</h5>
+            <code>
+               selector {
+                    font-variant: value;
+               }
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Letter-Spacing?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>letter spacing is used to set the space between letters in the text</p>
+            <h5>Usage</h5>
+            <p> It helps to improve readability</p>
+            <h5>Example</h5>
+            <code>
+               selector {
+                    letter-spacing: value;
+                }
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>line-height?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Line height is used to set the vertical space between the lines of text</p>
+            <h5>Usage</h5>
+            <p> Make the content more readable and avoids lines looking too crowded</p>
+            <h5>Example</h5>
+            <code>
+              p {
+                font-size: 16px;
+                line-height: 24px;
+                }
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>word-spacing?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>word-spacing in CSS is used to increase or decrease the space between words in a line of text.</p>
+            <h5>Usage</h5>
+            <p> It helps improve readability or add styling effects.</p>
+            <h5>Example</h5>
+            <code>
+              selector {
+                word-spacing: value;
+            }
+
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>text-decoration?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>text decoration is a short hand property used to style the text with lines like -underlines
+                ,overlines,strikethroughs and also controls the colors of these lines</p>
+
+            <h5>Example</h5>
+            <code>
+              h2 {
+                text-decoration: underline wavy red;
+            }
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>text-decoration-line?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>text decoration line is used to specify which line decoration to apply to text
+                ---- such as underline ,overline,line-through(strikethrough).
+            </p>
+
+            <h5>Example</h5>
+            <code>
+              selector {
+                text-decoration-line: value;
+            }
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>text-decoration-color?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>text decoration color is used to set the color to the text decoration lines.
+
+            </p>
+
+            <h5>Example</h5>
+            <code>
+              selector {
+                text-decoration-color: color;
+            }
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>text-decoration-style?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>text decoration style is used to set the appearance of lines applied to the text--- like
+                solid,dotted,dashed,double,wavy etc.
+
+            </p>
+
+            <h5>Example</h5>
+            <code>
+              selector {
+                text-decoration-style: value;
+            }
+
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>text-decoration-thickness?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>text decoration thickness is used to set the thickness to text decoration lines such as
+                underlines,overlines,line-through etc.
+                it controls how thin or thick of text decoration lines
+
+            </p>
+
+            <h5>Example</h5>
+            <code>
+              selector {
+                text-decoration-thickness: value;
+            }
+
+
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Box model?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Box model defines that every html element is surrounded or wrapped by a rectangular box and made up of
+                four layers</p>
+            <p>Box Model Layers (From Inside, Out):</p>
+            <img style="width: 650px;height: 350px;" src="https://alejandro-ao.com/img/css-box-model.svg" alt="">
+            <ol>
+                <li>Content: The actual text or image inside the html element</li>
+                <li>Padding: Space between the content and border(inside space)</li>
+                <li>Border: A line which is visible around the content or padding</li>
+                <li>Margin: Space outside of the border(space between this box and other boxes)</li>
+            </ol>
+            <h5>Example</h5>
+            <code>
+              div {
+                width: 200px;
+                padding: 10px;
+                border: 5px solid black;
+                margin: 20px;
+            }
+
+
+
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Padding Shorthand?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Padding shorthand prperty is used to apply the space between the content and border for all four sides
+                (top,right,bottom,left) in single line.
+            </p>
+            <p>How Values Work:</p>
+            <ol>
+                <li><code>padding:10px;</code>--- All sides get 10px</li>
+                <li><code>padding:10px 20px;</code>--- Top & Bottom =10px, Left & right=20px</li>
+                <li><code>padding:10px 20px,30px;</code>--- Top=10px,Left & Right =20px,Bottom=30px</li>
+                <li><code>padding:10px 20px 30px 40px;</code>--- Top=10px,Right=20px,Bottom=30px,Left=40px</li>
+            </ol>
+            <p><b>Note: </b>It follows the clockwise rule: Top &rarr; Right &rarr; Bottom &rarr; Left</p>
+            <h5>Example</h5>
+            <code>
+              p {
+                padding: 5px 10px 15px 20px;
+            }
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Margin Shorthand?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Margin short hand property is used to set the space outside of an element's border
+                on all four sides (top,right,bottom,left) in a single line
+            </p>
+            <h5>Use:</h5>
+            <p>It helps to control the spacing between the elements on a webpage</p>
+            <p>How Values Work:</p>
+            <ol>
+                <li><code>margin: 10px;</code> --- All sides get 10px</li>
+                <li><code>margin: 10px 20px;</code> --- Top & Bottom =10px, Left & right=20px</li>
+                <li><code>margin: 10px 20px 30px;</code> --- Top=10px,Left & Right =20px,Bottom=30px</li>
+                <li><code>margin: 10px 20px 30px 40px;</code> --- Top=10px,Right=20px,Bottom=30px,Left=40px</li>
+            </ol>
+            <p><b>Note: </b>It follows the clockwise rule: Top &rarr; Right &rarr; Bottom &rarr; Left</p>
+            <h5>Example</h5>
+            <code>
+              p {
+                margin: 5px 10px 15px 20px;
+            }
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Border Width?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>
+                Border width is used to set the thickness(width) of an element's border.
+                We can control all the sides at once or each side individually.
+                It works along with the border style(solid ,dotted,dashed etc) and border-color
+            </p>
+
+            <p>How Values Work:</p>
+            <ol>
+                <li><code>border-width: 1px;</code> --- All sides get 1px</li>
+                <li><code>border-width: 1px 2px;</code> --- Top & Bottom =1px, Left & right=2px</li>
+                <li><code>border-width: 1px 2px 3px;</code> --- Top=1px,Left & Right =2px,Bottom=3px</li>
+                <li><code>border-width: 1px 2px 3px 4px;</code> --- Top=1px,Right=2px,Bottom=3px,Left=4px</li>
+            </ol>
+            <h5>Accepted Units</h5>
+            <p>px, em, rem, etc</p>
+            <p><b>Note: </b>It follows the clockwise rule: Top &rarr; Right &rarr; Bottom &rarr; Left</p>
+            <h5>Example</h5>
+            <code>
+              div {
+                border-width: 4px;
+                border-style: solid;
+                }
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Border Style?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>
+                Border Style is used to define the appearance of the border like whether it is
+                dotted,dashed,double,inset,outset,ridge,none etc.
+            </p>
+
+            <p>How Values Work:</p>
+            <ol>
+                <li><code>border-style: solid;</code> --- All sides solid</li>
+                <li><code>border-style: solid dashed;</code> --- Top & Bottom: solid, Left & Right: dashed</li>
+                <li><code>border-style: solid dotted double;</code> --- Top: solid, Left & Right: dotted, Bottom: double
+                </li>
+                <li><code>border-style: solid dotted dashed double;</code> ---
+                    Top=solid,Right=dotted,Bottom=dashed,Left=double</li>
+            </ol>
+            <h5>Accepted Units</h5>
+            <p>px, em, rem, etc</p>
+            <p><b>Note: </b>It follows the clockwise rule: Top &rarr; Right &rarr; Bottom &rarr; Left</p>
+            <h5>Example</h5>
+            <code>
+              p {
+                border-style: solid dotted dashed double;
+            }
+
+
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>Border Color?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>
+                Border Color is used to set colour of an elemnt's border.
+                It can apply same colour to all four sides or different colours for each side -top,right,bottom,left.
+                To make the color visible, we must also define a border-style (like solid, dashed, etc.).
+            </p>
+
+            <p>How Values Work:</p>
+            <ol>
+                <li><code>border-color: red;</code> --- All 4 sides = red</li>
+                <li><code>border-color: red green;</code> --- Top & Bottom = red, Left & Right = green</li>
+                <li><code>border-color: red green blue;</code> --- Top → red, Left & Right = green, Bottom = blue</li>
+                <li><code>border-color: red green blue black;</code> --- Top = red, Right = green, Bottom = blue, Left =
+                    black
+                </li>
+            </ol>
+            <h5>Accepted Units</h5>
+            <p>px, em, rem, etc</p>
+            <p><b>Note: </b>It follows the clockwise rule: Top &rarr; Right &rarr; Bottom &rarr; Left</p>
+            <h5>Example</h5>
+            <code>
+             p {
+                border-style: solid;
+                border-width: 2px;
+                border-color: red green blue yellow;
+            }
+
+        </code>
+        </details>
+    </div>
+    <div>
+        <h3>Box Sizing?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>
+                Box sizing is used to define how the total width and height of an elemnt is claculated
+                --- whether it includes the padding and border or not
+            </p>
+
+            <h5>Usage</h5>
+            <p>It helps us to control layout more easily,when working with elements that have padding and border
+                or It helps to avoid layout overflow and makes spacing easier to manage
+            </p>
+            <h5>Example</h5>
+            <code>
+              selector {
+                box-sizing: value;
+            }
+
+
+
+            </code>
+            <h5>Values for Padding</h5>
+            <p>content-box ->(Default) width/height Includes only content(not includes padding and border)</p>
+            <p>border-box -> width/height includes content+padding+border</p>
+        </details>
+    </div>
+    <div>
+        <h3>Box Shadow ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>
+                Box shadow is used to add the shadow effects to elements
+                It creates a shadow behind a box (like a div, button, or card)</p>
+
+
+            <h5>Example</h5>
+            <code>
+              selector {
+            box-shadow: h-offset v-offset blur spread color;
+        }
+        
+</code>
+            <ol>
+                <li>h-offset -> Horizontal shadow offset (right if positive, left if negative)</li>
+                <li>v-offset -> Vertical shadow offset (down if positive, up if negative)</li>
+                <li>blur -> Blur radius </li>
+                <li>spread -> Optional -> how much the shadow expands/shrinks</li>
+                <li>color -> Shadow color (e.g. black, rgba(0,0,0,0.5))</li>
+                <li>inset -> (Optional) places shadow inside the element</li>
+
+            </ol>
+
+        </details>
+    </div>
+    <div>
+        <h3>Css Selectors ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>
+                Css selectors is used to identify the html elements on webpage</p>
+
+
+            <h5>Types</h5>
+            <p>Universal-selector</p>
+            <code>
+            *{
+
+            }
+           </code>
+            <p>Class selector</p>
+
+            <code>.classname{
+           }
+           </code>
+            <p>Id selectors</p>
+            <code>#idname{
+           }
+           </code>
+            <p>Descendant Selector</p>
+            <code>div p {}</code>
+            <p>child selector</p>
+            <code>div >p{
+           }
+           </code>
+            <p>attribute selector</p>
+            <code>element[attribute=""]</code>
+            <p>adjacent sibling selector</p>
+            <code>div+p{}</code>
+            <p>General sibling selector</p>
+            <code>div~p{}</code>
+            <p>Grouping selector</p>
+            <code>div,p,h1{}</code>
+        </details>
+    </div>
+    <div>
+        <h3>Units ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>CSS units define the measurement values used in styling properties like width, height, padding, margin,
+                font-size, etc.
+            </p>
+
+
+            <h5>Types(Absolute - Fixed size)</h5>
+            <ol>
+                <li>px(pixels)</li>
+                <li>pt(points)</li>
+                <li>cm(centimeter)</li>
+                <li>mm(millimeter)</li>
+                <li>inch(inches)</li>
+            </ol>
+            <h5>Types(Relative - flexible/responsive)</h5>
+            <ol>
+                <li>em-relative font size to the parent element</li>
+                <li>rem- relative font size to root element-(1 rem=16px)</li>
+                <li>% - Relative To Parent element</li>
+                <li>vh-viewport height</li>
+                <li>vw-viewport width</li>
+                <li>vmin</li>
+                <li>vmax</li>
+
+
+
+            </ol>
+
+
+
+        </details>
+
+    </div>
+
+    <div>
+        <h3>px ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>px stands for pixels, and it is the most commonly used absolute CSS unit.
+                1px equals to one dot on the screen (based on the device resolution)
+            </p>
+            <h5>Example</h5>
+            <code>p {
+                    font-size: 16px;
+                    margin: 20px;
+                    padding: 10px;
+                }
+</code>
+        </details>
+    </div>
+    <div>
+        <h3>pt ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>pt stands for points it is one of the absolute unit.
+
+            </p>
+            <p>1 pt = 1/72 of an inch (approx. 0.35 mm)</p>
+            <h5>Example</h5>
+            <code>
+                p {
+                font-size: 12pt;
+            }
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>rem ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>rem stands for root em and it is relative css unit that is scaled based on the root element's
+                (&lthtml&gt;) font size
+            </p>
+            <p>1 rem=font-size of the &lthtml&gt; element</p>
+            <p>Default browser font size=16px, so:</p>
+            <p>1rem = 16px</p>
+            <h5>Example</h5>
+            <code>
+                html {
+                    font-size: 16px;
+                }
+                </code><br>
+            <code>
+                     p {
+                    font-size: 1.5rem;   }
+                    /* = 24px (1.5 × 16px) */
+              
+                </code>
+
+
+
+        </details>
+    </div>
+    <div>
+        <h3>em ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>em is a relative css unit used for font size ,spacing, and layout.</p>
+            <p>It is based on the font size of the element itself or its parent element</p>
+            <p>1em = current element's font size</p>
+            <p>If not set directly, it inherits from the parent’s font size</p>
+            <h5>Example</h5>
+            <code>
+                body {
+                font-size: 16px;
+            }
+
+        p {
+            font-size: 1.5em;  /* = 24px */
+        }
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>vh ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>vh stands for viewport height. It’s a relative CSS unit that refers to 1% of the height of the browser's
+                viewport (visible area of the screen).</p>
+            <p>So:</p>
+            <p>100vh = 100% of the screen height</p>
+            <p>50vh = half the screen height</p>
+            <h5>Example</h5>
+            <code>
+                section {
+                height: 100vh;
+                background-color: lightblue;
+            }
+</code>
+        </details>
+    </div>
+    <div>
+        <h3>vw ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>vw stands for viewport width. It is a relative CSS unit based on the width of the browser’s viewport (the
+                visible part of the screen).</p>
+            <p>1vw = 1% of the viewport width</p>
+            <p>100vw = full width of the screen</p>
+            <h5>Example</h5>
+            <code>
+                div {
+                    width: 50vw;
+                    background-color: orange;
+                }
+
+            </code>
+        </details>
+    </div>
+    <div>
+        <h3>%(Percentage) ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>The % is a relative css unit relative to its parent's element.</p>
+            <p>It is responsive and adapts to the different screen sizes.</p>
+            <h5>Example</h5>
+            <code>
+                .container {
+                    width: 80%;
+                    margin: 0 auto;
+                    }
+</code>
+        </details>
+    </div>
+    <div>
+        <h3>min-width?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>min-width is used to set the minimum width to an element.</p>
+            <p>
+                Even if the screen becomes smaller,the element won't get smaller than the value we set as min-width
+            </p>
+            <h5>Example</h5>
+            <code>
+                .element {
+                min-width: 300px;
+                }
+</code>
+        </details>
+    </div>
+    <div>
+        <h3>max-width?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>max-width is used to set the maximum width to an element.</p>
+            <p>
+                Even if the screen becomes wider,the element won't become bigger than the value we set as max-width
+            </p>
+            <h5>Example</h5>
+            <code>
+                    .element {
+                    max-width: 600px;
+                }
+
+</code>
+        </details>
+    </div>
+    <div>
+        <h3>position?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>position property is used to control how an element is placed on the web page</p>
+            <p>
+                It tells the browser that where and how the element should appear by using top,right,bottom and left
+                values
+            </p>
+            <h5>Values for position :</h5>
+            <ol>
+                <li>static: Default Position</li>
+                <li>relative: Moves the element relative to its original position</li>
+                <li>absolute : Positions the element relative to its nearest positioned ancestor</li>
+                <li>fixed : makes the element fixed on the screen even when scroling</li>
+                <li>sticky : scrolls normally but sticks at a point when reaching a position</li>
+            </ol>
+            <h5>Example</h5>
+            <code>
+                   .element {
+                        position: value;
+                        top: 10px;
+                        left: 20px;
+                }
+
+
+</code>
+        </details>
+    </div>
+    <div>
+        <h3>position-relative ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Position relative means the element stays in its normal position ,but we can move it using
+                top,right,bottom,left.</p>
+            <h5>Example</h5>
+            <code>
+            .box {
+                position: relative;
+                top: 10px;
+                left: 20px;
+            }
+
+        </code>
+            <p>The element moves 10px down and 20px to the right but its original space is reserved</p>
+        </details>
+    </div>
+    <div>
+    <h3>Position-absolute?</h3>
+    <details>
+        <summary>Answer</summary>
+        <h5>Definition</h5>
+        <p>Absolute allows you to place an element exactly where you want on the page or inside a container.</p>
+        <p>It is positioned relative to its nearest positioned ancestor (an element with position: relative, absolute,
+            or fixed). </p>
+        <p>The element is removed from the normal layout flow and positioned using top, right, bottom, left
+        </p>
+        <p>If no such ancestor exists, it’s positioned relative to the root element (<html>)</p>
+        <h5>Example</h5>
+        <code>.box {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+</code>
+
+    </details>
+</div>
+<div>
+        <h3>position-fixed ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>Position fixed means the element fixed in its original position ,it stays same place on the screen even when the user scrolls.</p>
+            <p>It is always positioned relative to the viewport, not any container.</p>
+            <h5>Example</h5>
+            <code>
+            .navbar {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: black;
+                    color: white;
+            }
+        </code>
+            
+        </details>
+    </div>
+    <div>
+        <h3>position-sticky ?</h3>
+        <details>
+            <summary>Answer</summary>
+            <h5>Definition</h5>
+            <p>position: sticky(relative+fixed)</p>
+            <p>Position sticky means the element scrolls normally with page until it reaches to the certain position.</p>
+            <p>Then it sticks and stays fixed at that position even when scroling the page.</p>
+            <h5>Example</h5>
+            <code>
+            .header {
+                position: sticky;
+                top: 0;
+                background: white;
+                padding: 10px;
+            }
+            </code>
+            <p>The element moves 10px down and 20px to the right but its original space is reserved</p>
+        </details>
+    </div>
+</body>
+
+</html>
+<!-- div>h3{px}+details>summary{Answer}+h5{Definition}+p+h5{Example}+code -->

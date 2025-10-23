@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dom</title>
+  </head>
+  <body>
+    <h1>Dom</h1>
+    <h1 id="first">how are you</h1>
+    <div id="div-1"></div>
+    <div class="div-2">this is div 2</div>
+    <div id="div-3">this is div 3</div>
+    <input type="text" id="inp" value="pavan" />
+    <button onclick="clickk()">Click me to access text</button>
+    <script>
+      //   console.log(document);
+      //   let heading = document.createElement("h1");
+      //   console.log(heading);
+      //   console.log("Node type of h1:", heading.nodeType);
+      //   let text = document.createTextNode("hiiiiii");
+      //   console.log(text);
+      //   console.log("Node type of text:", text.nodeType);
+      let ele = document.getElementById("first");
+      console.log(ele);
+      ele.innerText = "How are you man";
+      let div1 = document.getElementById("div-1");
+      console.log(div1);
+      div1.innerHTML = "<p>This is a para</p>";
+      let inpu = document.getElementById("inp");
+      //   console.log(div1.id)
+      function clickk() {
+        console.log(inpu.value);
+      }
+
+      let nm1 = 5;
+      let nm2 = 6;
+      function sum(a, b) {
+        return a + b;
+      }
+      let divv = document.getElementById("div-1");
+      divv.innerText = sum(nm1, nm2);
+      let div2 = document.querySelector(".div-2");
+      let div3 = document.querySelector("#div-3");
+      div3.style.color = "red";
+      div3.style.backgroundColor = "yellow";
+      console.log(div2.innerText);
+      console.log(div3.innerText);
+    </script>
+  </body>
+</html>

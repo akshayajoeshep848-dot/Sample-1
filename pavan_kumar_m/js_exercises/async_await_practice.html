@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Async and await</h1>
+    <p>
+      The async keyword is placed before a function declaration, transforming a
+      regular function into an asynchronous function.
+    </p>
+    <p>
+      An async function always returns a Promise. If the function's return value
+      is not explicitly a Promise, it will be implicitly wrapped in a Promise
+      that resolves with the returned value.
+    </p>
+    <p>The await keyword can only be used inside an async function.</p>
+    <p>It is used before a Promise-returning expression.</p>
+    <p>
+      When await is encountered, the execution of the async function is paused
+      until the awaited Promise settles (either resolves or rejects).
+    </p>
+    <p>
+      If the Promise resolves, the await expression evaluates to the resolved
+      value of the Promise.
+    </p>
+    <p>
+      If the Promise rejects, the rejected value is thrown, and can be caught
+      using a try...catch block.
+    </p>
+
+    <script>
+      //   async function getData() {
+      //     return "Pavan";
+      //     // console.log("Pavan");
+      //   }
+      //   let data = getData();
+      //   console.log(data);
+      //   data.then((res) => console.log(res));
+      //   //   getData();
+
+      //   let promise = new Promise((resolve, reject) => {
+      //     resolve("Promise is resolved");
+      //   });
+      //   async function p() {
+      //     return promise;
+      //   }
+      //   let rss = p();
+      //   rss.then((p) => console.log(p));
+
+      const p = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Promise is resolved");
+        }, 10000);
+      });
+      function dataGet() {
+        // js engine wiil not wait promise is to be resolved it imediately move to the next line and starts executing remaining lines of code
+        p.then((res) => console.log(res));
+        console.log("After promise (older way)");
+      }
+      dataGet();
+
+      async function handlePromise() {
+        const val = await p;
+        console.log("After promise (newer way)");
+        console.log(val);
+      }
+      handlePromise();
+    </script>
+  </body>
+</html>

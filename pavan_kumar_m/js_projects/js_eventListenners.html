@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="hh1">js Event Listeners</h1>
+    <h2 id="text"></h2>
+    <button id="btn">Click me to display</button>
+    <input type="text" id="inp" name="firstname" />
+    <script>
+      let button = document.getElementById("btn");
+      let text = document.getElementById("text");
+      let count = 0;
+      button.addEventListener("click", (eventt) => {
+        count++;
+        text.innerText = `You clicked me ${count} times`;
+        console.log(eventt.type);
+        console.log(eventt.target);
+        console.log(eventt.timeStamp);
+        // console.log(inp.name);
+        // console.log(inp.value);
+        objj[`${inp.name}`] = inp.value;
+        console.log(objj);
+      });
+      button.onclick = () => {
+        console.log("Button is being clicked");
+      };
+      let hh1 = document.getElementById("hh1");
+      hh1.addEventListener("mouseover", (eventt) => {
+        hh1.textContent = `you hovered me`;
+        hh1.style.backgroundColor = "Green";
+        hh1.style.color = "white";
+        console.log(eventt.target);
+        eventt.target.style.borderRadius = "5px";
+      });
+      hh1.addEventListener("mouseout", () => {
+        hh1.textContent = `mouse outed from me`;
+        hh1.style.backgroundColor = "pink";
+        hh1.style.color = "black";
+      });
+      let objj = {};
+
+      inp = document.getElementById("inp");
+
+      inp.addEventListener("keypress", (eventt) => {
+        // console.log(eventt)
+        // console.log(`${eventt.key} is pressed`);
+        console.log(eventt.target.value);
+      });
+    </script>
+  </body>
+</html>

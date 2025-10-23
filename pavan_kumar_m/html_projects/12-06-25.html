@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        form{
+            background-color: aliceblue;
+            border-radius: 5px;
+            width: 410px;
+            height: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input{
+            margin-left: 10px;
+            margin-top: 5px;
+            padding: 3px;
+            border-radius: 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            
+        }
+        label{
+            margin-left: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        input:hover{
+            border-color: aqua;
+            border-radius: 10px;
+
+            
+        }
+        .btn:hover{
+            color: blue;
+            
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form action="submit">
+        <div>
+        <label for="fn">First Name :</label>
+    <input style="" type="text" id="fn" name="" placeholder="Enter First Name">
+    </div>
+    <div>
+        <label for="ln">Last Name :</label>
+    <input type="text" id="ln" name="" placeholder="Enter last Name">
+    </div>
+    <div>
+        <label for="dt">DOB :</label>
+    <input type="date" id="dt" name="">
+    </div>
+    <div>
+        <label for="tn">Phone Number :</label>
+    <input type="tel" id="tn" name="" placeholder="Enter Phone Number">
+    </div>
+    <div>
+        <label for="mail">Email :</label>
+        <input type="email" id="mail" name="" placeholder="Enter Email">
+    </div>
+    <div>
+        <label for="pass">Password :</label>
+        <input type="password" id="pass" name="" maxlength="10" minlength="8" placeholder="Enter Password">
+    </div>
+    <div>
+        <h5>Gender</h5>
+        <input type="radio" id="m" name="gender">
+        <label for="m">Male</label>
+        <input type="radio" id="f" name="gender">
+        <label for="f">Female</label>
+        <input type="radio" id="o" name="gender">
+        <label for="o">Other</label>
+    </div>
+    <div>
+        <h5>Education</h5>
+        <input type="checkbox" id="edd1" name="edd">
+        <label for="edd1">Tenth</label>
+        <input type="checkbox" id="edd2" name="edd">
+        <label for="edd2">Intermediate</label>
+        <input type="checkbox" id="edd3" name="edd">
+        <label for="edd3">Btech</label>
+    </div>
+    <div>
+        <label for="joi">Time Of Joining :</label>
+        <input type="time" id="joi" name="" maxlength="10" minlength="8" placeholder="Enter Password">
+    </div>
+    <div>
+        <label for="pass">Upload  Marks Memo:</label>
+        <input type="file" id="pass" name="" maxlength="10" minlength="8" placeholder="Enter Password">
+    </div>
+    <div>
+        <label for="im">Upload Image :</label>
+        <input type="file" id="im" name="" maxlength="10" minlength="8" placeholder="Enter Password">
+    </div>
+    <div>
+        <input class="btn" style="background-color: aquamarine; border: none; border-radius: 5px; width: 80px;height: 25px; font-weight: bold; cursor: pointer;" type="button" id="ln" value="submit" name="">
+    </div>
+    
+    </form>
+    
+</body>
+</html>

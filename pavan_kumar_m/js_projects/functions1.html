@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Functions</h1>
+    <script>
+      //   function greet(name) {      // Function definition
+      //     console.log(`hi hello ${name}`);
+      //     console.log("How are you ?");
+      //   }
+      //   greet("pavan");  // function calling
+      //   greet("kumar");  // function calling
+
+      // write a function to display if a user is eligible to vote or not
+
+      // function without arguments and without return
+      //   function vote1() {
+      //     age1 = 19;
+      //     if (age1 < 18) {
+      //       console.log("Not eligible");
+      //     } else {
+      //       console.log("Eligible");
+      //     }
+      //   }
+      //   vote1();
+
+      //   // function with arguments and without return
+
+      //   function vote2(age2) {
+      //     if (age2 < 18) {
+      //       console.log("Not eligible");
+      //     } else {
+      //       console.log("Eligible");
+      //     }
+      //   }
+      //   age2 = 19;
+      //   vote2(age2);
+
+      //   // function without arguments and with return
+      //   function vote3() {
+      //     age3 = 19;
+      //     if (age3 < 18) {
+      //       return "Not eligible";
+      //     } else {
+      //       return "Eligible";
+      //     }
+      //   }
+      //   console.log(vote3());
+
+      //   // function with arguments and with return
+      //   function vote4(age4) {
+      //     if (age4 < 18) {
+      //       return "Not eligible";
+      //     } else {
+      //       return "Eligible";
+      //     }
+      //   }
+      //   age4 = 20;
+      //   console.log(vote4(age4));
+      //   console.log(vote4(5));
+
+      //   //   Function to print full name
+      //   function fullName(fn, mn, ln) {
+      //     console.log(`Hi ${fn} ${mn} ${ln}`);
+      //   }
+      //   fn = "Pavan";
+      //   mn = "Kumar";
+      //   ln = "Maruboina";
+      //   fullName(fn, mn, ln);
+
+      //   //   Program to print numbers from 1 to n
+      //   function printNum(n) {
+      //     // let i=1
+      //     // while(i<=n){
+      //     //     console.log(i)
+      //     //     i++
+      //     // }
+      //     console.log("Printing i value:", i);
+      //     for (var i = 1; i <= n; i++) {
+      //       console.log(i);
+      //     }
+      //     console.log("Printing i value:", i);
+      //   }
+      //   printNum(10);
+
+      //   function to print factorial
+      // function facto(n) {
+      //   let fact = 1;
+      //   for (let i = 1; i <= n; i++) {
+      //     fact *= i;
+      //   }
+      //   console.log(`Factorial of ${n} is ${fact}`);
+      // }
+      // facto(5);
+
+      // Function with return stmnts to add the two numbers
+
+      // function add(a, b) {
+      //   let sum=a+b;
+      //   return sum
+      // }
+      // console.log(add(3,4))
+      // let sum=add(2,3)
+      // console.log(sum)
+
+      // function to return mutiplication of three numbers
+      // function multiply(n1, n2, n3) {
+      //   return n1 * n2 * n3;
+      // }
+      // console.log(multiply(2,2,3))
+
+      // Using arrow function
+      // let multiply = (n1, n2, n3) => n1 * n2 * n3;
+      // console.log(multiply(3, 4, 5));
+
+      // function to return boolean values
+      // function bool(a, b) {
+      //   // if (a < b) {
+      //   //   return false;
+      //   // } else {
+      //   //   return true;
+      //   // }
+      //   return a > b;
+
+      // }
+      // console.log(bool(2, 3));
+
+      // Recursion
+
+      // function fact(n) {
+      //   if (n == 0 || n == 1) {
+      //     return 1;
+      //   } else {
+      //     return n * fact(n - 1);
+      //   }
+      // }
+      // console.log(fact(5));
+
+      // Without recursion
+      function nthfibo1(n) {
+        if (n <= 1) {
+          return n;
+        }
+        a = 0;
+        b = 1;
+        let next;
+        for (let i = 2; i <= n; i++) {
+          next = a + b;
+          a = b;
+          b = next;
+        }
+        return next;
+      }
+      console.log(nthfibo1(7));
+
+      // With recursion
+      function nthfibo2(n) {
+        if (n <= 1) {
+          return n;
+        }
+        return nthfibo2(n - 1) + nthfibo2(n - 2);
+      }
+      console.log(nthfibo2(4));
+
+      // // print n to 1 using recursion
+
+      // function printnto1(n) {
+      //   if (n==1){
+      //     return n
+      //   }
+      //   console.log(n)
+      //   return printnto1(n-1)
+      // }
+      // console.log(printnto1(10));
+
+      // print 1 to n using recursion
+
+      // function print1ton(n) {
+      //   if (n==0){
+      //     return n
+      //   }
+
+      //   print1ton(n-1)
+      //   console.log(n)
+      // }
+      // console.log(print1ton(10));
+    </script>
+  </body>
+</html>

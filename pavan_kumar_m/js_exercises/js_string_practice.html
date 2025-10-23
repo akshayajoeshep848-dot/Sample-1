@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>JS Strings Practice</h1>
+    <script>
+      // Write a function countVowels(str) that counts the number of vowels (a, e, i, o, u) in a string.
+      function countvowels() {
+        let strng = "pavan kumar";
+        let vowels = "aeiouAEIOU";
+        let count = 0;
+        for (let i = 0; i < strng.length; i++) {
+          if (vowels.includes(strng[i])) {
+            count++;
+          }
+        }
+        console.log(count);
+      }
+      countvowels();
+
+      // Write a function reverseString(str) that reverses a given string.
+      function reverse() {
+        let strng = "hello";
+        let reversed = strng.split("").reverse().join("");
+        console.log(reversed);
+      }
+      reverse();
+
+      // Write a function isPalindrome(str) that checks if a string is a palindrome (reads the same forwards and backwards).
+      function isPalindrome() {
+        let strng = "hellolleh";
+        let reversed = strng.split("").reverse().join("");
+        return strng === reversed;
+      }
+      console.log(isPalindrome());
+
+      // Capitalize First Letter
+      function capitalize(str) {
+        if (!str) return "";
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
+      console.log(capitalize("logicwhile"));
+
+      //   Capitalize Each Word
+      function capitalizeWords(str) {
+        let sntnce = "hi hello how are you";
+        let nw_sntnc = sntnce
+          .split(" ")
+          .map((word) => {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          })
+          .join(" ");
+        console.log(nw_sntnc);
+      }
+      capitalizeWords();
+
+      //   Write a function truncate(str, num) that shortens a string to a specified length and adds an ellipsis (...).
+      function truncate(str, num) {
+        if (str.length <= num) {
+          console.log(str);
+        } else {
+          console.log(str.slice(0, num) + "...");
+        }
+      }
+      truncate("Hello", 2);
+
+      //   Write a function removeWhitespace(str) that removes all spaces from a string.
+      function removeWhitespace(str) {
+        console.log(str.split(" ").join(""));
+      }
+      removeWhitespace(" pavan kumar ");
+
+      //   Write a function countWords(str) that counts the number of words in a sentence.
+      function countWords(str) {
+        return str.split(" ").reduce((acc, word) => {
+          return acc + 1;
+        }, 0);
+      }
+      console.log(countWords("hi hello how are you"));
+
+      //    Write a function containsSubstring(mainStr, subStr) that checks if a string contains a specific substring.
+      function containsSubstring(mainStr, subStr) {
+        return mainStr.includes(subStr);
+      }
+
+      //   Write a function replaceAll(str, search, replace) that replaces all occurrences of a substring with another.
+      
+    </script>
+  </body>
+</html>

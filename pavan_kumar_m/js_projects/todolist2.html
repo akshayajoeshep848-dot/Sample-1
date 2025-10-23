@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: #f7f9fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+      .title {
+        text-align: center;
+        color: #5d3f9b;
+        margin-bottom: 25px;
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+      .input-section {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+      #taskinp,
+      #durationinp {
+        padding: 10px 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+      }
+      #durationinp {
+        width: 120px;
+      }
+      .addbtn {
+        background-color: #5d3f9b;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+      }
+      .buttons button {
+        background: none;
+        border: 1px solid #e0e0e0;
+        color: #555;
+        padding: 8px 15px;
+        margin-right: 5px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .clearbtn {
+        background: none;
+        border: none;
+        color: #5d3f9b;
+        cursor: pointer;
+        padding: 8px 0;
+        font-size: 0.95rem;
+      }
+      .clearbtn:hover {
+        text-decoration: underline;
+      }
+      .taskcheck {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        border-radius: 50%;
+        margin-right: 15px;
+        cursor: pointer;
+      }
+      .tasktime {
+        background-color: #f0f0f0;
+        color: #555;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        margin-right: 15px;
+        flex-shrink: 0;
+      }
+      .taskactions button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-left: 5px;
+        padding: 5px;
+        opacity: 0.6;
+        transition: opacity 0.2s;
+        flex-shrink: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">My To-Do List</h1>
+      <div class="input-section">
+        <form action="" id="form">
+          <input type="text" id="taskinp" />
+          <input type="text" id="durationinp" />
+          <button class="addbtn" type="submit" id="addbtn">Add</button>
+        </form>
+      </div>
+      <div style="display: flex; margin-bottom: 20px">
+        <div class="buttons">
+          <button>All</button>
+          <button>Active</button>
+          <button>Completed</button>
+        </div>
+        <div class="">
+          <button class="clearbtn">Clear Completed</button>
+        </div>
+      </div>
+      <div style="display: flex; margin-bottom: 20px">
+        <div>
+          <input type="checkbox" class="taskcheck" />
+          <label for="">Interview Preparation</label>
+        </div>
+        <div class="taskactions">
+          <button class="tasktime">time</button>
+
+          <button>edit</button>
+          <button>delete</button>
+        </div>
+      </div>
+      <div>
+        <p>0 tasks left</p>
+      </div>
+    </div>
+    <script>
+      let taskinp = document.getElementById("taskinp");
+      let durationinp = document.getElementById("durationinp");
+      let addbtn = document.getElementById("addbtn");
+    //   console.log(taskinp, durationinp, addbtn);
+
+
+    let taskarr=[];
+    let taskobj={};
+    </script>
+  </body>
+</html>
