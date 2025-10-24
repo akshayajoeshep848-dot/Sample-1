@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>objects</h1>
+    <h2>Person functionlities</h2>
+    <h2>Dog Functionlities</h2>
+    <button onclick="dog.bark()">Bark</button>
+    <button onclick="dog.walk()">Walk</button>
+    <button onclick="dog.run()">Run</button>
+    <button onclick="dog.shakeshand()">shakeshand</button>
+    <button onclick="dog.smell()">Smell</button>
+    <button onclick="dog.bark()">Bark</button>
+    <button onclick="dog.bark()">Bark</button>
+    <button onclick="dog.bark()">Bark</button>
+    <script>
+        //const person ={
+        //    firstName: "barigala",
+        //    last_name: "pradeep",
+        //    name: 'Ailce',
+        //    age : 25,
+        //    isStudent: true,
+        //    //greet: function (){
+        //       return `Hello, my name is ${this.name}`;
+        //    },
+        //   };
+
+        //dot notation
+        //console.log(person.firstName);
+        //console.log(person.last_name);
+        //console.log(person.name);
+        //console.log(person.age);
+        //console.log(person.isStudent);
+        //console.log(person.greet());
+
+        //[] bracket notation
+        //console.log(person["name"]);
+        //console.log(person["age"]);
+        //console.log(person["isStudent"]);
+        //console.log(person["green"]);
+
+        //create an object called dog
+        // name,breed,color,age,gender, petID
+        //bark,walk,run,shakeshand
+        //smell,eat, sleep,rollover,sit
+
+        const dog = {
+            person: 'thif',
+            name: 'rocky',
+            breed: 'German Shepherd',
+            color: 'black',
+            age: 5,
+            gender: 'male',
+            petID: 12345678,
+            bark: function () {
+                console.log(`${this.name} is barking`)
+                return `${this.name} is barking`
+            },
+            walk: function () {
+                console.log(`${this.name} is walking`)
+                return `${this.name} is walking`
+            },
+            run: function () {
+                console.log(`${this.name} is runing`)
+                return `${this.name} is runing`
+            },
+            shakeshand: function () {
+                console.log(`${this.name} is barking`)
+                return `${this.name} is barking`
+            },
+            smell: function () {
+                console.log(`${this.name} is smelling`)
+                return `${this.name} is smelling`
+            },
+            eat: function () {
+                console.log(`${this.name} is eating`)
+                return `${this.name} is eating`
+            },
+            sleep: function () {
+                console.log(`${this.name} is sleeping`)
+                return `${this.name} is sleeping`
+            },
+            rollover: function () {
+                console.log(`${this.name} is rolling over`)
+                return `${this.name} is rolling over`
+            },
+            sit: function () {
+                console.log(`${this.name} is sat`)
+                return `${this.name} is sat`
+            },
+            liedown: function () {
+                console.log(`${this.name} is lie dowm`)
+                return `${this.name} is lie dowm`
+            },
+            getSodaFromFridge: function () {
+                console.log(`${this.name} is brougth soda from the fridge`)
+                return `${this.name} is brougth soda from the fridge`
+
+            },
+            bite: function () {
+                console.log(`${this.name} is biting ${this.person}`)
+                return `${this.name} is biting ${this.person}`
+            },
+            wag: function () {
+                console.log(`${this.name} is biting ${this.person}`)
+                return `${this.name} is biting ${this.person}`
+            },
+
+        };
+        // console.log(dog.bark());
+        // console.log(dog.walk());
+        // console.log(dog.run());
+        // console.log(dog.shakeshand());
+        // console.log(dog.smell());
+        // console.log(dog.eat());
+        // console.log(dog.sleep());
+        // console.log(dog.rollover());
+        // console.log(dog.sit());
+        // console.log(dog.getSodaFromFridge());
+        // console.log(dog.bite());
+        // console.log(dog.wag());
+
+        //create object adderess
+        //mic-87 ,first floor road no.1,kphb phase-1
+        //beside aed hospital hyderabad - 500072
+
+       // const address = {
+       //     adderss_line1:"MIG-87",
+       //     adderss_line2:"First Floor, Road No. 1",
+       //     adderss_line3:"KPHB Phase-1",
+       //     landmark:"Beside AED Hospital",
+       //     city:"Hyderabad",
+       //     state:"Telangana",
+       //     pincode: 500072,
+       //     getAddress : function (){
+       //         console.log(
+       //             `${this.adderss_line1},${this.adderss_line2},${this.adderss_line3},${this.landmark},${this.city},${this.},${this.pincode}`
+       //         );
+       //     }
+       // };
+    </script>
+</body>
+
+</html>

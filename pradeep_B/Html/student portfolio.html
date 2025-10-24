@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student website</title>
+    <style>
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>student website</h1>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#profile">PROFILE</a></li>
+                <li><a href="#academics">ACADEMICS</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Home</h1>
+        <p>welcome to my student website.</p>
+    </section>
+    <section id="profile">
+        <h2>profile</h2>
+        <p>I am pradeep I am form CSE(AI&ML) in gist from nellore </p>
+    </section>
+    <section id="academics">
+        <h3>Academics</h3>
+        <p>I completed my schooling at sri vivekananda emglish medium school(ssc) and my intermediate education at
+            Narayan junior college.I pursued and successfully completed my B.Tech at Geethanjail Institute of Science
+            and Technology </p>
+    </section>
+    <section id="gallery">
+        <h4>Gallery</h4>
+        <img src="./pict.jpg" alt="" width="200px" height="200px">
+    </section>
+    <section id="contact">
+        <h5>Contact</h5>
+        <P>Email: pradeepbarigala2003@gmail.com <br> contact: 7842898519</P>
+    </section>
+    <table>
+        <caption>Academic Details</caption>
+        <thead>
+            <tr>
+                <th>Qualification</th>
+                <th>Institution Name</th>
+                <th>Year</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>10th (SSC)</td>
+                <td>Sri Vivekananda English Medium School</td>
+                <td>2019</td>
+                <td>8.3%</td>
+            </tr>
+            <tr>
+                <td>12th (Intermediate)</td>
+                <td>Narayana Junior College</td>
+                <td>2021</td>
+                <td>642%</td>
+            </tr>
+            <tr>
+                <td>B.Tech (CSE - AIML)</td>
+                <td>Geethanjali Institute of Science and Technology</td>
+                <td>2025</td>
+                <td>7.5%</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2><mark>Achievements</mark></h2>
+    <ol>
+        <li>completed a <em>certified course</em> in full stack development</li>
+        <li>Completed a <em>certified course</em> on Machine Learning by Google.</li>
+        <li>Presented a paper on <strong>AI in Healthcare</strong> at a national seminar.</li>
+        <li><em>Interned</em> as a Web Developer at a reputed startup.</li>
+        <li><strong>Top scorer</strong> in Computer Networks subject.</li>
+    </ol>
+
+    <h2><mark>Technical Skills</mark></h2>
+    <ul>
+        <li><strong>Python</strong> programming</li>
+        <li><em>HTML</em> & CSS</li>
+        <li><strong>JavaScript</strong> (React basics)</li>
+        <li><em>MySQL</em> & basic database design</li>
+        <li>Version control using <strong>Git</strong> and GitHub</li>
+    </ul>
+    <section>
+        <h2>My Projects and Achievements</h2>
+        <section>
+            <figure>
+                <img src="./tap.png" alt="tapt">
+                <figcaption>full stack development</figcaption>
+            </figure>
+
+        </section>
+    </section>    
+        <h1>youtube</h1>
+        <iframe src="https://www.youtube.com/watch?v=PmPoS5oyuBw" title="youtube video player" width="550"
+            height="550px"></iframe>
+
+        <h1>srimathi garu song</h1>
+        <audio src="./Srimathi Garu.mp3" controls type="mp3">srimathi</audio>
+
+        <h1>golden video song</h1>
+        <video src="./Golden .mp4" controls type="mp4"></video>
+        <form>
+            <fieldset>
+                <legend>Personal Details</legend>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mobile">Mobile:</label>
+                <input type="tel" id="mobile" name="mobile" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Information</legend>
+
+                <label>Gender:</label><br><br>
+                <label class="inline" for="male">Male</label>
+                <input class="inline" type="radio" name="gender" value="Male">&nbsp;
+                <label class="inline" for="female">Female</label>
+                <input class="inline" type="radio" name="gender" value="Female"><br><br>
+
+                <label for="course">Course:</label>
+                <select id="course" name="course">
+                    <option value="">--Select Course--</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="MECH">MECH</option>
+                    <option value="CIVIL">CIVIL</option>
+                </select><br><br>
+
+                <label>Hobbies:</label>
+                <input class="inline" type="checkbox" id="reading" name="hobbies" value="Reading">
+                <label class="inline" for="reading">Reading</label>
+                <input class="inline" type="checkbox" id="coding" name="hobbies" value="Coding">
+                <label class="inline" for="coding">Coding</label>
+                <input class="inline" type="checkbox" id="music" name="hobbies" value="Music">
+                <label class="inline" for="music">Music</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Message</legend>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        <main>
+
+            <article>
+                <h2>About Me</h2>
+                <p>I am a B.Tech CSE (AI & ML) student passionate about building intelligent systems and python
+                    full-stack applications.</p>
+            </article>
+
+
+
+            <section>
+                <h2>My projects</h2>
+                <details>
+                    <summary>View My Projects & Certifications</summary>
+                    <ul>
+                        <li>Web Development Certificate</li>
+                        <li>AI & ML Workshop Certificate</li>
+                    </ul>
+                </details>
+            </section>
+
+            <footer>
+                <p>Barigala pradeep </p>
+            </footer>
+        </main>
+        <footer>
+            <p><strong>Geethanjali Institute of Science and Technology</strong></p>
+            <address>
+                Kovur, Nellore, Andhra Pradesh - 524137<br>
+                Email: gistcollege.edu.in
+            </address>
+
+        </footer>
+        <h2>Download My Resume</h2>
+        <p>You can download my resume in PDF format by clicking the link below:</p>
+        <a href="./resume.pdf" download class="download-link"> Download Resume</a>
+
+        <hr>
+
+        <h3>Additional Info</h3>
+        <p>I completed my <abbr title="Bachelor of Technology">B.Tech</abbr> in CSE (AI & ML) from Geethanjali Institute
+            of Science and Technology.</p>
+
+        <p>My favorite programming language is <code>Python</code> due to its simplicity and wide use in AI/ML.</p>
+
+        <p>I participated in a coding contest where I solved complex expressions like H<sub>2</sub>O simulation and E =
+            mc<sup>2</sup>.</p>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="head-1">selecting DOM Elements</h1>
+    <div id="div-1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero animi laudantium mollitia rem! Nihil, dolor iste! Id molestias, maxime, voluptas illo officiis soluta quidem nostrum laborum, labore aliquam aperiam ullam.
+    </div>
+    <div id="div-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse suscipit quaerat dicta, nesciunt expedita natus voluptas mollitia consequuntur voluptates doloribus nisi necessitatibus ratione ducimus fugiat. Nemo inventore voluptatem quia eum!
+    </div>
+    <input type="text" id="in-1" value="pradeep">
+    <button onclick="showData()">Submit</button>
+
+    <script>
+        let head1 = document.getElementById("head-1");
+        console.log(head1.innerText);
+        head1.innerText = "Hello";
+        //let div1 = document.getElementById("div-1");
+        //2console.log(div1);
+        //div1.innerHTML = "<p>This is a para </p>";
+        function showData (){
+        let input1 = document.getElementById("in-1").value;
+        console.log(input1);
+        }
+       // let num1 = Number(prompt("Enter first number"));
+       // let num2 = Number(prompt("Enter second number"));
+
+        function sum(a,b){
+           
+            return a+b;
+        }
+       // let div1 = document.getElementById("div-1")
+       // div1.innerText = sum (num1,num2);
+        //let heading = document.createElement('h1')
+        //console.log('Node type of h1 :',heading.nodeType);
+        //
+        //let text = document.createTextNode('Hello')
+        //console.log('Node type of text:', text.nodeType);
+
+
+        //document,querySelector('css selector')
+        let div1 = document.querySelector('#div-1')
+        console.log(div1.innerText);
+        div1.innerText = 'This is div-1';
+        div1.style.color ="blue";
+        div1.style.background="aqua"
+
+        let div2 = document.querySelector('#div-2')
+        console.log(div2.innterText);
+        div2.innerText = 'This is div-2'
+
+
+
+       
+    </script>
+</body>
+</html>

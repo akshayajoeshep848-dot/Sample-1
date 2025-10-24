@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js rest operator</h1>
+    <p>create an array of parameterd</p>
+    <script>
+        let a =[1,2,3,4,5,6,7,8,9,10];
+        let sum = function (a=0,b=0,...c){
+            console.log(c);
+            let s = 0;
+            for (let i = 0; i<c.length; i++){
+                s+=c[i];
+            }
+            return s+a+b;
+        };
+        console.log(sum (3,4,5,6));
+        console.log(sum());
+        console.log(sum(...a));
+    </script>
+</body>
+</html>

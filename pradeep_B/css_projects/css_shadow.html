@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 60px;
+        }
+        .parent1{
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 90px;
+            border-radius: 15px;
+        }
+        .child1{
+            border: 2px solid white;
+            padding: 60px;
+            box-shadow: rgba(72, 107, 143, 0.2) 0px 8px 24px;
+            
+           
+        }
+        .child2{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(55, 55, 152, 0.2) 0px 7px 29px 0px;
+        }
+        .child3{
+            border: 2px solid white;
+            padding: 60px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .child4{
+            border: 2px solid white;
+            padding: 60px;
+            box-shadow: rgba(111, 7, 7, 0.16) 0px 1px 4px;
+           
+        }
+        .child5{
+            border: 2px solid white;
+            padding: 60px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+           
+        }
+        .child6{
+            border: 2px solid white;
+            padding: 60px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+           
+        }
+        .child7{
+            border: 2px solid white;
+            padding: 60px;
+            box-shadow: black  0px 0px 0px 3px;
+           
+        }
+        .child8{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: 0px 0px 1px 0px inset;
+        }
+        .child9{
+            border: 2px solid white;
+            padding: 60px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+           
+        }
+        .child10{
+            border: 2px solid white;
+            padding: 60px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+           
+        }
+        .child11{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+        .child12{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+        .child13{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+        .child14{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        .child15{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .child16{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .child17{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .child18{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .child19{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+        .child20{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+        .child21{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        }
+        .child22{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        .child23{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .child24{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        }
+        .child25{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        .child26{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .child27{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+        .child28{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+        .child29{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        .child30{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+        .child31{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        .child32{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+        .child33{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        .child34{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        }
+        .child35{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        }
+        .child36{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        }
+        .child37{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        .child38{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        }
+        .child39{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        }
+        .child40{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        }
+        .child41{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+        }
+        .child42{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+        }
+        .child43{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+        .child44{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+        .child45{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        }
+        .child46{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        }
+        .child47{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+        }
+        .child48{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        }
+        .child49{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+        }
+        .child50{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+        }
+        .child51{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        }
+        .child52{
+            border: 2px solid white;
+            padding: 60px;
+           box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+        }
+       
+    </style>
+</head>
+<body>
+        <div class="parent">
+            <div class="child1">1</div>
+            <div class="child2">2</div>
+            <div class="child3">3</div>
+            <div class="child4">4</div>
+        </div>
+        <div class="parent1">
+            <div class="child5">5</div>
+            <div class="child6">6</div>
+            <div class="child7">7</div>
+            <div class="child8">8</div>
+        </div>
+        <div class="parent1">
+            <div class="child9">9</div>
+            <div class="child10">10</div>
+            <div class="child11">11</div>
+            <div class="child12">12</div>
+        </div>
+        <div class="parent1">
+            <div class="child13">13</div>
+            <div class="child14">14</div>
+            <div class="child15">15</div>
+            <div class="child16">16</div>
+        </div>
+        <div class="parent1">
+            <div class="child17">17</div>
+            <div class="child18">18</div>
+            <div class="child19">19</div>
+            <div class="child20">20</div>
+        </div>
+        <div class="parent1">
+            <div class="child21">21</div>
+            <div class="child22">22</div>
+            <div class="child23">23</div>
+            <div class="child24">24</div>
+        </div>
+        <div class="parent1">
+            <div class="child25">25</div>
+            <div class="child26">26</div>
+            <div class="child27">27</div>
+            <div class="child28">28</div>
+        </div>
+        <div class="parent1">
+            <div class="child29">29</div>
+            <div class="child30">30</div>
+            <div class="child31">31</div>
+            <div class="child32">32</div>
+        </div>
+        <div class="parent1">
+            <div class="child33">33</div>
+            <div class="child34">34</div>
+            <div class="child35">35</div>
+            <div class="child36">36</div>
+        </div>
+        <div class="parent1">
+            <div class="child37">37</div>
+            <div class="child38">38</div>
+            <div class="child39">39</div>
+            <div class="child40">40</div>
+        </div>
+        <div class="parent1">
+            <div class="child41">41</div>
+            <div class="child42">42</div>
+            <div class="child43">43</div>
+            <div class="child44">44</div>
+        </div>
+        <div class="parent1">
+            <div class="child45">45</div>
+            <div class="child46">46</div>
+            <div class="child47">47</div>
+            <div class="child48">48</div>
+        </div>
+        <div class="parent1">
+            <div class="child49">49</div>
+            <div class="child50">50</div>
+            <div class="child51">51</div>
+            <div class="child52">52</div>
+        </div>   
+        
+</body>
+</html>

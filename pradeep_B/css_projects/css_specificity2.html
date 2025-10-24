@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>specificity</title>
+    <style>
+        h1{
+            color: red ;
+        }
+        #header-1{
+            color: aqua;
+        }
+        .container p {
+            color: blue;
+        }
+        #para-1{
+            color: rgb(132, 7, 132);
+        }
+        .special{
+            color: brown;
+        }
+        .special[id="para-1"]{
+            color: rgb(218, 142, 27);
+        }
+    </style>
+    <link rel="stylesheet" href="css_specificity2.css">
+</head>
+<body>
+    <h1 class="header" id="header-1">specificity</h1>
+    <div class="container">
+        <p class="special">this is a paragraph</p>
+        <div >
+            <p class="special" id="para-1">this is a  special paragraph</p>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .parent{
+            background-color:beige;
+            display: grid;
+            grid-auto-flow: row;
+            gap: 1vw;
+            
+            grid-template-columns:repeat(4,minmax(100px,1fr)) ;
+            grid-template-rows: 200px 100px 1fr 2fr 300px  3fr 100px;
+        }
+        .child{
+            background-color: aqua;
+           /* height: 10hv;*/
+
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS GRID</h1>
+    <div class="parent">
+        
+        <div class="child child-1">child1</div>
+        <div class="child child-2">Lorem ipsum dolor sit amet.</div>
+        <div class="child child-3">child3</div>
+        <div class="child child-4">Lorem ipsum dolor sit amet.</div>
+        <div class="child child-5">child5</div>
+        <div class="child child-6">child6</div>
+        <div class="child child-7">child7</div>
+        <div class="child child-8">child8</div>
+        <div class="child child-9">child9</div>
+        <div class="child child-10">child10</div>
+        <div class="child child-11">child11</div>
+        <div class="child child-12">child12</div>
+        <div class="child child-13">child13</div>
+        <div class="child child-14">child14</div>
+        <div class="child child-15">child15</div>
+        <div class="child child-16">child16</div>
+        <div class="child child-17">child17</div>
+        <div class="child child-18">child18</div>
+        <div class="child child-19">child19</div>
+        <div class="child child-20">child20</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css box-shadow2</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0px;
+            border-radius: 10px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            
+        }
+        input[type="text"] {
+            border: 1px solid lightgreen;
+            height: 20px;
+            border-radius: 5px;
+            width: 300px;
+            margin: 10px;
+
+        }
+
+        input {
+            border: 1px dotted red;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        div {
+            margin: px;
+        }
+        .container{
+            width: 500px;
+            margin: 20px;
+            
+            box-shadow: 1px 3px 3px 4px gray;
+
+        }
+        hr{
+            border:0.1px solid rgb(109, 111, 108);
+            margin:5px
+        }
+        button{
+            margin: 10px;
+            background-color: aquamarine;
+            color: rgb(201, 10, 10);
+            border-radius:10px ;
+            box-shadow: 2px 3px;
+        }
+        .s{
+            
+            background-color: rgb(99, 242, 204);
+            height: 50px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="s"  align="center" >Css Selectors</h1><hr>
+        <div>
+            <label for="input">First Name :</label>
+            <input type="text" id="input">
+        </div>
+        <div>
+            <label for="input">Last Name :</label>
+            <input type="text" id="input">
+        </div>
+        <div>
+            <label for="input">Date of Time :</label>
+            <input type="Date" id="Date of Time">
+        </div><hr>
+        <div>
+            <button>Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>

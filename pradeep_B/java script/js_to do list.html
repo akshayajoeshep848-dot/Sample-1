@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(220, 219, 219);
+           
+        }
+        ul li {
+            text-align: left;
+            font-size: 18px;
+            margin: 8px 0;
+            cursor: pointer;
+            position: relative;
+                        
+        }
+        
+    </style>
+</head>
+
+
+<body>
+    <div id="div"></div>
+    
+        
+    
+    <script>
+        let div = document.getElementById("div");
+        div.style.textAlign = "center"
+        div.style.backgroundColor = "#fff";
+        div.style.borderRadius = "15px";
+        div.style.width = "500px";
+        div.style.height = "auto";
+        div.style.justifyContent = "center";
+        div.style.alignItems = "center";
+        div.style.padding = "20px";
+        let h1 = document.createElement("h1");
+        h1.innerText = "My To-Do List";
+        h1.style.fontFamily="Roboto, sans-serif";
+        h1.style.color="blue";
+        div.append(h1);
+        let formObject = {};
+        let formArray = [];
+
+        //input for task
+        let inputBox = document.createElement("input");
+        inputBox.type = "text";
+        inputBox.id = "input-box";
+        inputBox.placeholder = "Add a new task";
+        inputBox.style.marginRight = "10px";
+        inputBox.style.padding = "5px";
+
+        div.append(inputBox);
+
+        inputBox.addEventListener("change", (event) => {
+            formObject[event.target.name] = event.target.value;
+            console.log(formObject);
+        });
+        
+
+        //input for duration
+        let input1 = document.createElement("input");
+        input1.type = "number";
+        input1.id = "input1-box";
+        input1.placeholder = "Duration (e.g.,30 m)";
+        input1.style.marginRight = "10px";
+        input1.style.padding = "5px";
+        div.append(input1);
+
+        input1.addEventListener("change", (event) => {
+            formObject[event.target.name] = event.target.value;
+            console.log(formObject);
+        });
+        
+
+
+        //add button
+        let addButton = document.createElement("button");
+        addButton.id = "add-button";
+        addButton.innerText = "Add";
+        addButton.style.padding = "5px 10px";
+        addButton.style.backgroundColor = "blue";
+        addButton.style.color = "white";
+        addButton.style.border = "none";
+        addButton.style.borderRadius = "10px"; 
+        div.append(addButton);
+        let br = document.createElement("br");
+        let br1 = document.createElement("br");
+        div.append(br);
+        div.append(br1);
+
+
+        let div1 = document.createElement("div");
+        div1.id = "div1";
+        div1.style.display = "flex";
+        div1.style.marginLeft = "45px";
+        div1.style.gap = "10px";
+        div.append(div1);
+        let div2 = document.createElement("div");
+        div2.id = "div2";
+        div2.style.display = "flex";
+        div2.style.justifyContent = "end";
+        div2.style.marginTop = "-20px";
+        div2.style.marginRight = "50px";
+        div.append(div2);
+
+        //all buttons
+        let allbutton = document.createElement("button");
+        allbutton.id = "all-button";
+        allbutton.innerText = "All ";
+        allbutton.style.padding = "10px 15px";
+        allbutton.style.backgroundColor = "blue";
+        allbutton.style.color = "white";
+        allbutton.style.border = "none";
+        allbutton.style.borderRadius = "10px"; 
+        allbutton.addEventListener("click", () => {
+            let ul = document.getElementById("ul");
+            let items = ul.getElementsByTagName("li");
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.display = "list-item";
+            }
+           
+
+        });
+        div1.append(allbutton);
+
+
+
+        //active button
+        let activebutton = document.createElement("button");
+        activebutton.id = "active-button";
+        activebutton.innerText = "Active ";
+        activebutton.style.marginLeft = "10px";
+        activebutton.addEventListener("click", () => {
+            let ul = document.getElementById("ul");
+            let items = ul.getElementsByTagName("li");
+            for (let i = 0; i < items.length; i++) {
+                let checkbox = items[i].previousSibling;
+                if (checkbox && !checkbox.checked) {
+                    items[i].style.display = "list-item";
+                    
+                } else {
+                    items[i].style.display = "none";
+                  
+                }
+            }
+        });
+        div1.append(activebutton);
+
+
+        //completed button
+        let completedbutton = document.createElement("button");
+        completedbutton1 = document.querySelector("li input[type='checkbox']");
+        completedbutton.id = "completed-button";
+        completedbutton.innerText = "Completed ";
+        completedbutton.style.marginLeft = "10px";
+        completedbutton.addEventListener("click", () => {
+            let ul = document.getElementById("ul");
+            let items = ul.getElementsByTagName("li");
+            for (let i = 0; i < items.length; i++) {
+                let checkbox = items[i].previousSibling;
+                if (checkbox && checkbox.checked) {
+                    items[i].style.display = "list-item";
+                } else {
+                    items[i].style.display = "none"
+                    
+                }
+            }
+        });
+        div1.append(completedbutton);
+
+        //clear completed button
+        let clearbutton = document.createElement("button");
+        clearbutton.id = "clear-button";
+        clearbutton.innerText = "Clear Completed";
+        clearbutton.style.padding = "10px 15px";
+        clearbutton.style.marginTop = "-15px";
+        clearbutton.addEventListener("click", () => {
+            let ul = document.getElementById("ul");
+            let items = ul.getElementsByTagName("li");
+            for (let i = items.length - 1; i >= 0; i--) {
+                let checkbox = items[i].previousSibling;
+                if (checkbox && checkbox.checked) {
+                   ul.removeChild(items[i]);
+                    ul.removeChild(checkbox);
+                    
+                   
+                }
+            }
+        });
+        div2.append(clearbutton);
+
+        let ul = document.createElement("ul");
+        ul.id = "ul";
+        ul.style.listStyle = "none";
+        ul.style.display="flex"
+        ul.type = "checkbox";
+        
+        div.append(ul);
+
+
+
+
+        addButton.addEventListener("click", () => {
+            let taskText = inputBox.value;
+            let durationText = input1.value;
+            if (taskText === "") {
+                alert("Please enter a task");
+                return;
+            }
+            let checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            ul.append(checkbox);
+            let li = document.createElement("li");
+            
+            li.innerText = `${taskText} - ${durationText}`;
+
+
+            
+        
+            
+            checkbox.addEventListener("change", () => {
+                if (checkbox.checked) {
+                    li.style.textDecoration = "line-through";
+                } else {
+                    li.style.textDecoration = "none";
+                }
+                
+            });
+            ul.append(li);
+
+           
+            inputBox.value = "";
+            input1.value = "";
+            
+        });
+
+
+         formArray.forEach((element,index)=>{
+            let div =  document.createElement("div");
+            div.innerHTML = `<p>${element.Addlist} ${element.duration}</p>`;
+            recordList.appendChild(div);
+            
+            
+        });
+       
+        
+
+    
+
+
+
+    </script>
+</body>
+
+</html>

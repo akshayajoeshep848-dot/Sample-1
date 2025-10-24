@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Spruha Grid Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(248, 242, 242);
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr 10fr 1fr;
+            grid-template-rows: 10vh auto 10vh;
+            grid-template-areas:
+                "logo header header"
+                "nav main main"
+                "nav main main";
+            gap: 5px;
+            height: 100vh;
+        }
+
+        .logo {
+            grid-area: logo;
+            background: #0E0E23;
+            color: white;
+            font-size: 30px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header {
+            background-color: white;
+            /* Spruha style */
+            padding: 10px;
+            width: 90vw;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .menu-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-right: 16px;
+        }
+
+        .text {
+            border: 1px solid black;
+        }
+
+        .search-bar {
+            flex: 1;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 50%;
+            padding: 6px 36px 6px 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-left: 16px;
+            color: black;
+
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 10px;
+            color: white;
+        }
+
+        .nav {
+            grid-area: nav;
+            background: #0E0E23;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 60px;
+            z-index: 10;
+            width: 200px;
+
+        }
+
+        .main {
+            grid-area: main;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(7, 200px);
+            grid-template-areas:
+                "weldas weldas weldas weldas"
+                "sonia sonia sonia rectrans"
+                "tolrev newemp totexp rectrans"
+                "probud probud probud prolan"
+                "todtsk topenq topenq ongpro"
+                "task task task webdes"
+
+
+            ;
+            gap: 10px;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .weldas {
+            grid-area: weldas;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgb(248, 242, 242);
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .wtd {
+            text-align: left;
+        }
+
+        .hp {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .button {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 8px 13px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(22, 100, 180);
+        }
+
+        .sonia {
+            grid-area: sonia;
+            background: #6259ca;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+            align-items: center !important;
+            font-size: 18px;
+            display: flex !important;
+            color: white;
+        }
+
+        .sonit {
+            padding: 90px;
+
+            color: hsla(0, 0%, 100%, .7);
+            ;
+        }
+
+        .warning {
+            color: #ff9b21 !important;
+        }
+
+
+        .tolrev {
+            grid-area: tolrev;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+            font-size: 18px;
+            padding: 25px;
+        }
+
+        .hero {
+            color: black;
+            margin: 0px 0px 4px;
+            text-transform: uppercase;
+            line-height: 1;
+            letter-spacing: .2px;
+            font-size: 13px;
+        }
+
+        .rev1 {
+            align-items: center;
+
+
+
+        }
+
+        .hii {
+            color: #19B159;
+        }
+
+        .items {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+        }
+
+        .newemp {
+            grid-area: newemp;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+
+
+            font-size: 18px;
+            padding: 25px;
+        }
+
+        .totexp {
+            grid-area: totexp;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 25px;
+
+            font-size: 18px;
+        }
+
+        .hii3 {
+            color: #f16d75;
+        }
+
+
+        .rectrans {
+            grid-area: rectrans;
+            height: 500px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+
+            font-size: 18px;
+        }
+
+        .probud {
+            grid-area: probud;
+            height: 350px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 25px;
+
+            font-size: 18px;
+        }
+
+        .item-body {
+            width: 814px;
+            height: 350px;
+            padding: 25px;
+
+        }
+
+        .item-body1 {
+            height: 300px;
+            width: 764px;
+            margin-top: -50px;
+        }
+
+        .prolan {
+            grid-area: prolan;
+            height: 150px;
+            margin-top: 90px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+
+            font-size: 18px;
+        }
+
+        .todtsk {
+            grid-area: todtsk;
+            margin-top: 150px;
+            height: 200px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+
+            font-size: 18px;
+        }
+
+        .hop {
+            display: flex;
+
+        }
+
+        .hop1 {
+            display: flex;
+            padding: 20px;
+        }
+
+        .topenq {
+            grid-area: topenq;
+            margin-top: 150px;
+            height: 200px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+
+            font-size: 18px;
+        }
+
+        .ongpro {
+            grid-area: ongpro;
+            margin-top: 40px;
+            height: 390px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+
+            font-size: 18px;
+        }
+
+        .task {
+            grid-area: task;
+            margin-top: 150px;
+            height: 379px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+
+            font-size: 18px;
+        }
+
+        /* table{
+            border: 1px solid silver;
+            box-sizing: content-box;
+            
+        } */
+
+
+        .webdes {
+            grid-area: webdes;
+            margin-top: 230px;
+            height: 300px;
+
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+
+            font-size: 18px;
+        }
+
+         .footer {
+            grid-area: footer;
+            
+            background: white;
+            border-radius: 6px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            place-content: center;
+            align-items: center;
+            margin-bottom: -200px !important;
+            height: 30vh;
+            position: relative;
+            margin-left: 100px;
+            
+        } 
+
+        .dr {
+            display: flex;
+            gap: 9px;
+            background-color: rgb(33, 131, 230);
+            color: aliceblue;
+        }
+
+        .fil {
+            display: flex;
+            gap: 9px;
+            background-color: rgb(253, 254, 254);
+            color: black;
+        }
+
+        .imp {
+            display: flex;
+            gap: 9px;
+            background-color: rgb(252, 252, 253);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="logo">
+            <img src="images/logo1.png">
+        </div>
+        <div class="header" style="padding: 20px; background-color: white">
+            <header class="navbar" style="display: flex; align-items: center; justify-content: space-between;">
+
+                <button class="menu-btn" aria-label="Open menu" style="background: none; border: none;">
+                    <svg width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+                        <path d="M3 6h18M3 12h18M3 18h18" stroke="#fff" stroke-width="2" />
+                    </svg>
+                </button>
+
+
+                <div class="search-bar"
+                    style="display: flex; align-items: center; background-color: white; border-radius: 8px; gap: 8px;">
+                    <img src="images/menu.png" style="height: 20px; width: 20px;">
+                    <!--             
+            <select style="background: transparent; color: white; border: none; outline: none; font-size: 14px; "> -->
+                    <input placeholder="Choose" style="margin: 0px;">
+
+                    </select>
+
+                    <img src="images/drop down.png" style="height: 12px; width: 12px;">
+
+                    <input type="search" placeholder="Search..."
+                        style=" border: 1px solid Black;  color: rgb(120, 36, 36); font-size: 14px; width: 120px;">
+
+                    <button type="submit" aria-label="Search" style="background: blue; border: none; border-radius:40%; ">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#F3F3F3">
+                            <path
+                                d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                        </svg>
+                    </button>
+                </div>
+
+
+                <div class="nav-actions" style="display: flex; align-items: center; gap: 12px;">
+                    <img src="images/moon.png">
+                    <img src="images/english-flag.png" style="height: 27px; width: 27px;">
+                    <img src="images/fullscreen.png">
+                    <img src="images/notifications.png">
+                    <img src="images/message.png">
+                    <img src="images/img1.jpg" style="height: 36px; width: 36px; border-radius: 50%;">
+                    <img src="images/format.png">
+                    <img src="images/system.png">
+                </div>
+            </header>
+        </div>
+
+        <div class="nav">Sidebar Navigation</div>
+        <div class="main">
+            <div class="weldas">
+                <div class="wtd">
+                    <h1>Welcome to Dashboard</h1>
+                    <p class="hp">Home / Project Dashboard</p>
+                </div>
+                <div class="button">
+                    <button class="imp"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            width="24px" fill="">
+                            <path
+                                d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z" />
+                        </svg>Import</button>
+                    <button class="fil"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            width="24px" fill="">
+                            <path
+                                d="M440-160q-17 0-28.5-11.5T400-200v-240L168-736q-15-20-4.5-42t36.5-22h560q26 0 36.5 22t-4.5 42L560-440v240q0 17-11.5 28.5T520-160h-80Zm40-308 198-252H282l198 252Zm0 0Z" />
+                        </svg>Filter</button>
+                    <button class="dr"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                            width="24px" fill="#F3F3F3">
+                            <path
+                                d="M260-160q-91 0-155.5-63T40-377q0-78 47-139t123-78q17-72 85-137t145-65q33 0 56.5 23.5T520-716v242l64-62 56 56-160 160-160-160 56-56 64 62v-242q-76 14-118 73.5T280-520h-20q-58 0-99 41t-41 99q0 58 41 99t99 41h480q42 0 71-29t29-71q0-42-29-71t-71-29h-60v-80q0-48-22-89.5T600-680v-93q74 35 117 103.5T760-520q69 8 114.5 59.5T920-340q0 75-52.5 127.5T740-160H260Zm220-358Z" />
+                        </svg>Download Report</button>
+                </div>
+            </div>
+            <div class="sonia">
+                <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/pngs/29.png">
+                <div class=" sonit">
+                    <p style="color: white;">Sonia Taylor!</p>
+                    <br>
+                    <p> You have two projects to finish, you had completed <b class="warning">57%</b> from your montly
+                        level, Keep going to your level</p>
+                </div>
+            </div>
+            <div class="tolrev">
+                <div class="rev1">
+                    <p class="hero">Total Revenue</p>
+
+                    <p style="font-size:12px; color:#6c757d!important; margin: 0px 0px 8px;">Previous month vs this
+                        months</p>
+
+                    <div class="items">
+                        <div>
+                            <p style="font-size: 21px; color: #1D212F;margin: 0px 0px 8px; font-weight: bold; ">
+                                $5,900.00</p>
+                            <p style="font-size: 11.9px; margin: 0px 0px 11px;"><b class="hii">55%</b>Higher</p>
+                        </div>
+                        <img src="./images/stats.png" >
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="newemp">
+                <p
+                    style="margin:0px 0px 4px; color: #1D212F; font-size: 13px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                    New Employees</p>
+                <p style="font-size:12px; color:#6c757d!important; margin: 0px 0px 8px;">Employees joined this month</p>
+                <div class="items">
+                    <div>
+
+                        <p style="font-size: 21px; color: #1D212F;margin: 0px 0px 8px; font-weight: bold; ">
+                            15</p>
+                        <p style="font-size: 11.9px; margin: 0px 0px 11px;"><b class="hii">5%</b>Increased</p>
+                    </div>
+                    <img src="images/portrait.png">
+                </div>
+
+
+            </div>
+            <div class="totexp">
+                <p
+                    style="margin:0px 0px 4px; color: #1D212F; font-size: 13px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                    Total Expenses</p>
+                <p style="font-size:12px; color:#6c757d!important; margin: 0px 0px 8px;">Previous month vs this month
+                </p>
+                <div class="items">
+                    <div>
+                        <p style="font-size: 21px; color: #1D212F;margin: 0px 0px 8px; font-weight: bold; ">$8,500</p>
+
+                        <p style="font-size: 11.9px; margin: 0px 0px 11px;"><b class="hii3">12%</b>Decreased</p>
+                    </div>
+                    <img src="images/usd-circle.png">
+                </div>
+
+
+            </div>
+
+
+            <div class="rectrans" style="padding: 40px;">
+                <p
+                    style="margin: 0 0 8px; color: #1D212F; font-size: 13px; text-transform: uppercase; line-height: 1; letter-spacing: .2px;">
+                    Recent Transactions</p>
+                <p style="font-size:12px; color:#6c757d; margin: 0 0 16px;">
+                    Projects where development work is on completion
+                </p>
+
+                <table style="width: 100%; border-collapse: separate; border-spacing: 0 15px;">
+                    <tbody>
+
+                        <tr style=" border-radius: 12px;">
+                            <td style="padding: 12px; display: flex; align-items: center; border-radius: 12px;">
+                                <img src="images/img1.jpg"
+                                    style="border-radius: 50%; width: 40px; height: 40px; margin-right: 15px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 500;">Flicker</div>
+                                    <div style="font-size: 13px; color: #6c757d;">App improvement</div>
+                                </div>
+                            </td>
+                            <td style="text-align: right; padding: 12px; font-weight: 500; font-size: 15px;">
+                                $45.234<img src="images/up.png">
+                            </td>
+                        </tr>
+
+
+                        <tr style=" border-radius: 12px;">
+                            <td style="padding: 12px; display: flex; align-items: center; border-radius: 12px;">
+                                <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/6.jpg"
+                                    style="border-radius: 50%; width: 40px; height: 40px; margin-right: 15px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 500;">Flicker</div>
+                                    <div style="font-size: 13px; color: #6c757d;">App improvement</div>
+                                </div>
+                            </td>
+                            <td style="text-align: right; padding: 12px; font-weight: 500; font-size: 15px;">
+                                $45.234<img src="images/down.png">
+                            </td>
+                        </tr>
+
+
+                        <tr style=" border-radius: 12px;">
+                            <td style="padding: 12px; display: flex; align-items: center; border-radius: 12px;">
+                                <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/7.jpg"
+                                    style="border-radius: 50%; width: 40px; height: 40px; margin-right: 15px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 500;">Intoxica</div>
+                                    <div style="font-size: 13px; color: #6c757d;">Milestone</div>
+                                </div>
+                            </td>
+                            <td style="text-align: right; padding: 12px; font-weight: 500; font-size: 15px;">
+                                $45.234<img src="images/down.png">
+                            </td>
+                        </tr>
+
+
+                        <tr style="border-radius: 12px;">
+                            <td style="padding: 12px; display: flex; align-items: center; border-radius: 12px;">
+                                <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/8.jpg"
+                                    style="border-radius: 50%; width: 40px; height: 40px; margin-right: 15px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 500;">Digiwatt</div>
+                                    <div style="font-size: 13px; color: #6c757d;">Sales executive</div>
+                                </div>
+                            </td>
+                            <td style="text-align: right; padding: 12px; font-weight: 500; font-size: 15px;">
+                                $78.001<img src="images/up.png">
+                            </td>
+                        </tr>
+
+
+                        <tr style="border-radius: 12px;">
+                            <td style="padding: 12px; display: flex; align-items: center; border-radius: 12px;">
+                                <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/4.jpg"
+                                    style="border-radius: 50%; width: 40px; height: 40px; margin-right: 15px;">
+                                <div>
+                                    <div style="font-size: 15px; font-weight: 500;">Intoxicad</div>
+                                    <div style="font-size: 13px; color: #6c757d;">Milestone 2</div>
+                                </div>
+                            </td>
+                            <td style="text-align: right; padding: 12px; font-weight: 500; font-size: 15px;">
+                                $37.285<img src="images/down.png">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="probud">
+                <p
+                    style="margin:0px 0px 8px; color: #1D212F; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                    Project Budget</p>
+                <p style="font-size:12px; color:#6c757d!important; margin: 0px 0px 8px;">The Project Budget is a tool
+                    used by project managers to estimate the total cost of a project</p>
+                <div class="item-body">
+                    <div class="item-body1">
+                        <img src="images/graph1.png" style="width: 1000px; height:250px;margin-top:25px">
+                    </div>
+                </div>
+            </div>
+            <div class="prolan">
+                <div style="display: flex; gap: 100px;">
+                    <div>
+
+                        <p
+                            style="margin:0px 0px 8px; color: #1D212F; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                            Project Launch</p>
+                        <p style="font-size:12px; color:#6c757d!important; margin: 0px 0px 8px;">the project is going to
+                            launch</p>
+                        <div>
+
+                            <p style="font-size: 18px;color:#6259ca; font-weight: bold; ">145 Days
+                            </p>
+                            <p style="color: #6c757d!important; font-size: 14px;">12 Monday, Oct 2020</p>
+
+                        </div>
+
+
+
+                    </div>
+                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/pngs/28.png"
+                        style="height: 135px; width: 147px;">
+
+
+
+                </div>
+            </div>
+            <div class="todtsk">
+                <div class="hop">
+                    <p
+                        style="margin-left:14px;margin-top:10px; color: #1D212F; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                        Today tasks</p>
+                    <div class="hop1">
+                        <div style="display: flex;">
+                            <p style=" background-color: #6259ca; border-radius: 8px; height: 8px; width: 8px; "></p>
+                            <p style="color: #8f8fb1; margin: 0px 16px 0px 0px; font-size: 13px; ">Project</p>
+                        </div>
+                        <div style="display: flex;">
+                            <p style=" background-color: #f4f4fd; border-radius: 8px; height: 8px; width: 8px; "></p>
+                            <p style="color: #8f8fb1; margin: 0px 16px 0px 0px; font-size: 13px; "> Ongoing Project</p>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-size:12px; color:#6c757d!important; margin-left:14px ;">UX UI & Backend Developement.
+                </p>
+                <br>
+                <div style="width: 377px; height: 178px; display: flex;">
+                    <div style="margin: 40px 0px; padding: 0px 15px; margin-top: -1px;">
+                        <p style="color: #1d212f; margin: 0px 0px 16px; font-size: 14px;">Project-Budget</p>
+                        <p style="font-size: 21px; color: #6259ca;margin: 0px 16px 8px 0px; font-weight: bold; ">$5,240
+                        </p>
+                        <p style="color: #6c757d!important;; margin: 0px 0px 16px; font-size: 14px;">May 28 - June 01
+                            (2018)</p>
+                    </div>
+                    <div style="position: relative; width: 100px; height: 70px;  margin-top: -80px; margin-left:40px">
+                        <img src="images/cr1.png">
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="topenq">
+
+                <p
+                    style="margin:20px 25px 0px; color: #1D212F; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                    Top Inquiries</p>
+                <p style="font-size:12px; color:#6c757d!important; margin:16px 0px 0px;;">project work involves a group
+                    of students investigating</p>
+                <div>
+
+
+                    <img src="images/bar.png" style="width: 400px; height: 125px;">
+
+
+
+                </div>
+
+            </div>
+            <div class="ongpro">
+                <div>
+                    <p
+                        style="margin:10px 10px 0px; color: #1D212F; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                        On goiong projects</p>
+                    <p
+                        style="margin:10px 10px 0px; color: #6c757d; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                        Projects where development work is on completion</p>
+
+                </div>
+                <br>
+                <div
+                    style="padding: 14px 18px; background-color: rgba(98, 89, 202,0.05); display: flex; gap: 120px;width: 400px; height:100px;  ">
+                    <div>
+                        <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/1.jpg"
+                            style="width: 24px; height: 24px; border-radius: 10px;">
+                        <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/2.jpg"
+                            style="width: 20px; height: 20px; border-radius: 10px;margin-left: -5px;">
+                        <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/3.jpg"
+                            style="width: 20px; height: 20px; border-radius: 10px;margin-left: -5px;">
+                        <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/4.jpg"
+                            style="width: 20px; height: 20px;border-radius: 10px; margin-left: -5px;">
+                        <span style="color: #1D212F; font-size: 14px; margin:0px 0px 8px ;align-items: center;">Design
+                            team</span>
+                        <p style="color: #6259ca!important;; margin: 0px 0px 16px; font-size: 14px; padding: 10px;">25
+                            August 2020</p>
+                        <p style="color: #1D212F; font-size: 14px; margin-top: -20px;">Mobile app design</p>
+
+                    </div>
+                    <p>....</p>
+
+
+                </div>
+                <br>
+                <div
+                    style="padding: 14px 18px; background-color: rgba(98, 89, 202,0.05); display: flex; gap: 120px;width: 400px; height:100px;  ">
+                    <div>
+                        <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/12.jpg" style="width: 24px; height: 24px; border-radius: 10px;">
+                        <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/9.jpg"
+                            style="width: 20px; height: 20px; border-radius: 10px;margin-left: -5px;">
+                        <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/11.jpg"
+                            style="width: 20px; height: 20px; border-radius: 10px;margin-left: -5px;">
+                        <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/11.jpg"
+                            style="width: 20px; height: 20px;border-radius: 10px; margin-left: -5px;">
+                        <span style="color: #1D212F; font-size: 14px; margin:0px 0px 8px ;align-items: center;">Design
+                            team</span>
+                        <p style="color: #6259ca!important;; margin: 0px 0px 16px; font-size: 14px; padding: 10px;">12
+                            JUNE 2020</p>
+                        <p style="color: #1D212F; font-size: 14px; margin-top: -20px;">Website Redesign</p>
+
+                    </div>
+                    <p>....</p>
+
+
+                </div>
+
+            </div>
+            <div class="task">
+
+                <p
+                    style="margin:10px 10px 0px; color: #1D212F; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                    Tasks</p>
+
+                <div style="display: flex; gap: 90px; ">
+                    <p
+                        style="margin:10px 10px 0px; color: #6c757d; font-size: 12px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                        A task is accomplished by a set deadline, and must contribute toward work-related objectives.
+                    </p>
+                    <p>:</p>
+                </div>
+                <div style="padding: 40px; margin-top: -40px;">
+                    <table style="border-collapse: separate; border-spacing: 0 12px; width: 100%;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: left; font-weight: 600; color: #4b4b5a; font-size: 14px;">TASK
+                                </th>
+                                <th style="font-weight: 600; color: #4b4b5a; font-size: 14px;">TEAM</th>
+                                <th style="font-weight: 600; color: #4b4b5a; font-size: 14px;">OPEN TASK</th>
+                                <th style="font-weight: 600; color: #4b4b5a; font-size: 14px;">PRIORITY</th>
+                                <th style="font-weight: 600; color: #4b4b5a; font-size: 14px;">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr style="background-color: #f9f9fb; border-radius: 12px; height: 60px;">
+                                <td style="padding: 15px; display: flex; align-items: center; border-radius: 10px;">
+                                    <span
+                                        style="display: inline-block; width: 16px; height: 16px; background-color: white; border: 1.5px solid #ccc; border-radius: 50%; margin-right: 12px;"></span>
+                                    Evaluating the design
+                                </td>
+                                <td>
+                                    <img src="images/img1.jpg"
+                                        style="width: 24px; height: 24px; border-radius: 50%;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/1.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/2.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/3.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                </td>
+                                <td>37</td>
+                                <td style="color: #6259ca;"><b>High</b></td>
+                                <td>
+                                    <span
+                                        style="background-color: #e4e7fb; color: #6259ca; font-size: 12px; padding: 4px 12px; border-radius: 999px;">Completed</span>
+                                </td>
+                            </tr>
+
+
+                            <tr style="background-color: #f9f9fb; border-radius: 12px; height: 60px;">
+                                <td style="padding: 15px; display: flex; align-items: center; border-radius: 10px;">
+                                    <span
+                                        style="display: inline-block; width: 16px; height: 16px; background-color: white; border: 1.5px solid #ccc; border-radius: 50%; margin-right: 12px;"></span>
+                                    Generate ideas for design
+                                </td>
+                                <td>
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/5.jpg"
+                                        style="width: 24px; height: 24px; border-radius: 50%;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/6.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/7.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/8.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                </td>
+                                <td>37</td>
+                                <td style="color: #f1388b;"><b>Normal</b></td>
+                                <td>
+                                    <span
+                                        style="background-color: #fff1db; color: #ebb322; font-size: 12px; padding: 4px 12px; border-radius: 999px;">Pending</span>
+                                </td>
+                            </tr>
+
+
+                            <tr style="background-color: #f9f9fb; border-radius: 12px; height: 60px;">
+                                <td style="padding: 15px; display: flex; align-items: center; border-radius: 10px;">
+                                    <span
+                                        style="display: inline-block; width: 16px; height: 16px; background-color: white; border: 1.5px solid #ccc; border-radius: 50%; margin-right: 12px;"></span>
+                                    Define the problem
+                                </td>
+                                <td>
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/11.jpg"
+                                        style="width: 24px; height: 24px; border-radius: 50%;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/12.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/9.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/10.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                </td>
+                                <td>37</td>
+                                <td style="color: #ebb322;"><b>Low</b></td>
+                                <td>
+                                    <span
+                                        style="background-color: #e4e7fb; color: #6259ca; font-size: 12px; padding: 4px 12px; border-radius: 999px;">Completed</span>
+                                </td>
+                            </tr>
+
+
+                            <tr style="background-color: #f9f9fb; border-radius: 12px; height: 60px;">
+                                <td style="padding: 15px; display: flex; align-items: center; border-radius: 10px;">
+                                    <span
+                                        style="display: inline-block; width: 16px; height: 16px; background-color: white; border: 1.5px solid #ccc; border-radius: 50%; margin-right: 12px;"></span>
+                                    Empathize with users
+                                </td>
+                                <td>
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/7.jpg"
+                                        style="width: 24px; height: 24px; border-radius: 50%;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/9.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/11.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/12.jpg"
+                                        style="width: 20px; height: 20px; border-radius: 50%; margin-left: -6px;">
+                                </td>
+                                <td>37</td>
+                                <td style="color: #6259ca;"><b>High</b></td>
+                                <td>
+                                    <span
+                                        style="background-color: #ffe3e6; color: #f16d75; font-size: 12px; padding: 4px 12px; border-radius: 999px;">Rejected</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+            <div class="webdes">
+                <div style="display: flex; gap: 190px;">
+                    <p
+                        style="margin:10px 10px 0px; color: #1D212F; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                        Website Design</p>
+                    <p
+                        style="margin:10px 10px 0px; color: #6c757d; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                        Running</p>
+
+                </div>
+                <p style="font-size:12px; color:#6c757d!important; margin:10px 10px 0px;;">Task completed : 7/10</p>
+                <img src="images/wed.png" width="315px">
+                <div style="display: flex; gap: 190px;">
+                    <div>
+
+                        <p
+                            style="margin:10px 10px 0px; color: #6c757d; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                            Client :<b style="color: black;">John Deo</b></p>
+                        <p
+                            style="margin:10px 10px 0px; color: #6c757d; font-size: 14px; text-transform: uppercase;line-height: 1; letter-spacing: .2px; ">
+                            Deadline :25 Dec 2020</p>
+                    </div>
+                    <img src="images/wed1.png" height="50px" width="50px">
+
+                </div>
+      <div style="
+    height: 50px;
+    background: white;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left:-1200px;
+">
+    Copyright © 2025 <strong>Spruha</strong>. Designed with ❤️ by <strong>Spruko</strong>. All rights reserved.
+</div>
+
+
+
+
+
+</body>
+
+</html>

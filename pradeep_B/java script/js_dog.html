@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dogs</h1>
+    <div id="div"></div>
+    <script>
+        let div = document.getElementById("div");
+        let Array1 = [
+            data= {
+                id: "036feed0-da8a-42c9-ab9a-57449b530b13",
+                type: "breed",
+                attributes: {
+                    name: "Affenpinscher",
+                    description:"The Affenpinscher is a small and playful breed of dog that was originally bred in Germany for hunting small game. They are intelligent, energetic, and affectionate, and make excellent companion dogs.",
+                    life: { max: 16, min: 14 },
+                    male_weight: { max: 5, min: 3 },
+                    female_weight: { max: 5, min: 3 },
+                    hypoallergenic: true,
+                },
+                relationships: {
+                    group: {
+                        data: {
+                            id: "f56dc4b1-ba1a-4454-8ce2-bd5d41404a0c",
+                            type: "group",
+                        },
+                    },
+                },
+            },
+             {
+            id: "dd9362cc-52e0-462d-b856-fccdcf24b140",
+            type: "breed",
+            attributes: {
+              name: "Afghan Hound",
+              description:
+                "The Afghan Hound is a large and elegant breed of dog that was originally bred in Afghanistan for hunting small game. They are intelligent, independent, and athletic, and make excellent companion dogs.",
+              life: { max: 14, min: 12 },
+              male_weight: { max: 27, min: 23 },
+              female_weight: { max: 25, min: 20 },
+              hypoallergenic: false,
+            },
+            relationships: {
+              group: {
+                data: {
+                  id: "be0147df-7755-4228-b132-2518c0c6d10d",
+                  type: "group",
+                },
+              },
+            },
+            },
+
+        ]
+
+        Array1.forEach((element) => {
+            let div1 = document.createElement("div");
+            div1.style.border = "2px solid black";
+            div1.style.margin = "10px";
+            div1.style.padding = "10px";
+            let p6 = document.createElement("p");
+            p6.innerText = `ID: ${element.id}`;
+            let p7 = document.createElement("p");
+            p7.innerText = `Type: ${element.type}`;
+
+            let h2 = document.createElement("h2");
+            h2.innerText = element.attributes.name;
+            let p1 = document.createElement("p");
+            p1.innerText = element.attributes.description;
+            let p2 = document.createElement("p");
+            p2.innerText = `Life Span: ${element.attributes.life.min} - ${element.attributes.life.max} years`;
+            let p3 = document.createElement("p");
+            p3.innerText = `Male Weight: ${element.attributes.male_weight.min} - ${element.attributes.male_weight.max} kg`;  
+            let p4 = document.createElement("p");
+            p4.innerText = `Female Weight: ${element.attributes.female_weight.min} - ${element.attributes.female_weight.max} kg`;
+            let p5 = document.createElement("p");       
+            p5.innerText = `Hypoallergenic: ${element.attributes.hypoallergenic ? "Yes" : "No"}`;
+            div1.appendChild(h2);
+            div1.appendChild(p6);
+            div1.appendChild(p7);
+            div1.appendChild(p1);
+            div1.appendChild(p2);
+            div1.appendChild(p3);
+            div1.appendChild(p4);
+            div1.appendChild(p5);
+            div.appendChild(div1);
+
+        });
+    </script>
+</body>
+
+</html>

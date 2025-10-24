@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>arrow function</h1>
+    <button onclick="addTwoNumber(3,5)">calculate</button>
+    <button onclick="sum1(4,5)">calculate</button>
+    <script>
+        //write a function  to add two function 
+        // regulatr function 
+        function addTwoNumber(a , b){
+            console.log(a +b);
+           // return a+b;
+        }
+        // function expression 
+        let sum = function (a,b){
+            return a+b;
+        } ;
+        // arrow function 
+        let addNumber = (a ,b) => a+b;
+        //console.log(addNumber(2,4));
+
+        //write a function to multiply 2 number
+
+        let multiply = (a,b) => a*b;
+       // console.log(multiply(2,5));
+
+        //write a function to find the squareroot of a number
+        let squareRoot = (a) => a**0.5;
+       // console.log(squareRoot(25));
+
+       //write a function print in console and return  sum of two number 
+       let sum1 = (a,b) =>{
+           console.log(a + b);
+           // return a + b;
+        };
+        console.log(sum1(2,4));
+    </script>
+</body>
+</html>

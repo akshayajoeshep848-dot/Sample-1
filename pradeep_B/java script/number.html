@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Js Number</h1>
+    <script>
+        let age1 = 45;
+        let age2 = 45.5;
+        let bigNumber1 = 1e40;
+        let bigNumber2 = 3e41;
+        let infinity = 1/0;
+        let neginfinity = -1/0;
+        let age3 = "forty five";
+        let str = age1 + age3;
+        let notANumber = age1 - age3;
+        let crores = 10_00_00_000.0;
+        let billion = 1_000_000_000;
+        let sum = crores + billion;
+
+
+        console.log('sum:',sum );
+
+        console.log("combined number:",bigNumber1 + bigNumber2 );
+        console.log("not A Number:", notANumber);
+        console.log(typeof notANumber);
+        console.log("bignumber:",bigNumber1);
+
+        console.log("type of age1 :",typeof age1,"\nvalue:",age1);
+        console.log("type of age2 :",typeof age1,"\nvalue:",age2);
+        console.log(infinity);
+        console.log(neginfinity);
+        console.log(str);
+        console.log(typeof str);
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css pseudo classes</title>
+    <style>
+        p{
+            color:red;
+            border: 1px solid black;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px lightgray;
+            border-radius:10px ;
+        }
+        p:hover{
+            color: green;
+            border-radius: 20px;
+            box-shadow: 10px 10px 10px 10px lightgray;
+            
+        }
+        button{
+            border:none;
+            background-color: blue;
+            color: white;
+            padding: 10px 30px ;
+            box-shadow: 2px 2px 5px 5px lightgray;
+        }
+        button:hover{
+            transform: scale(1.05) skew(-20deg,20deg);
+        }
+        button:active{
+           
+            transform:scale(0.9);
+            
+        }
+        .form{
+            padding: 20px;
+            border: 1px solid lightblue;
+        }
+        input{
+            border: 1px solid lightcoral;
+        }
+        input:form{
+            border: 2px solid blue;
+            height: 30px;
+            
+            
+        }
+        a:link{
+            text-decoration: none;
+            color: rgb(55, 165, 21);
+        }
+        a:visited{
+            text-decoration: line-through;
+            color: coral;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>css pseudo classes</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum labore neque fugiat vero, vitae excepturi quisquam, voluptatem ipsam repellendus corrupti nihil sint error, officia hic quaerat? Ex voluptate quis sapiente a vero assumenda quas ea cum necessitatibus quisquam maxime, reiciendis animi error, quasi aperiam, enim libero illo rem illum. Impedit.</p>
+    <button>Submit</button>
+    <div class="form">
+        <label for="fn">First Name</label>
+        <input type="text" id="fn"/>
+    </div>
+    <div class="form">
+        <a href="https://logicwhile.com/"> logic while</a>
+        <a href="https://google.com/">Google</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This function</h1>
+    <script>
+        //no context - this refers to window object 
+       //in strict mode  - undefined
+       //function odj(){
+       // console.log(this);
+       // this.alert("hi");
+        //this.close();
+       //}
+       //odj()
+
+
+      //2. implicit binding of `this`
+      // let person = {
+      //     name:"NTR ",
+      //     age:42,
+      //     location:"hyderabad",
+      //     walk() { 
+      //         //this is implicit binding of 'this'
+      //         console.log(`${this.name} is walking`);
+      //     },
+      //     eat : function (){
+      //         //this is implicit binding of 'this'
+      //         console.log(`${this.name}is eating`);
+      //     },
+      //     sleep: () => {
+      //         //this is underfind
+      //         console.log(`${this.name}is sleeping`);
+      //     },
+
+      // };
+      // person.eat();
+      // person.walk();
+      // person.sleep();
+
+       
+      //explipcit binding of this 
+      function greet(){
+        console.log(`Hello, ${this.name}`);
+
+      }
+
+      const alice = { name: "Alice"};
+      greet.call(alice);//"Hello, Alice"
+
+    </script>
+</body>
+</html>

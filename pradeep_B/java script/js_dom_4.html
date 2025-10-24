@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+    <style>
+        
+        li{
+            background-color: rgb(153, 219, 219);
+            border-radius: 20px;
+            margin: 10px;
+            padding: 10px;
+           width: 300px;
+           align-items: center;                 
+        }
+        span{
+            background-color: rgb(230, 116, 246);
+            padding: 10px;
+            border-radius: 10px;
+        
+            
+        }
+        .item{
+            display: flex;
+            justify-content:space-between;
+        }
+    </style>
+</head>
+<body>
+    <div id="head-1">selecting DOM Elements</div>
+    <ul class="ul">
+        <li class="item">items1</li>
+        <li class="item">items2</li>
+        <li class="item">items3</li>
+        <li class="item">items4</li>
+        <li class="item">items5</li>
+    </ul>
+    <script>
+       //getElementById - output single HTML ELEMENT
+        //let head1 = document.getElementById("head-1");
+        //head1.innerText = "hi";
+        //head1.style.color = "blue"
+
+        //querySelector - output single element
+        //let head1 = document.querySelector("#head-1")
+        //head1.innerHTML="<p> pradeep </p>"
+
+        //get multiple elements
+        //getElementsClassName
+        //let listItems = document.getElementsByClassName("item");
+        //let listArray = Array.from(listItems);
+        //listArray.forEach((element)=> (element.style.backgroundColor = "brown"));
+
+        //getElementsByTagName
+       //let arr = ["Apple","Banana","Orange","Mango","Grapes"]
+       //let listItems = document.getElementsByTagName("li");
+       //Array.from(listItems).forEach((element,index) => {
+       //    element.innerText = arr[index];
+       //});
+
+        //querySlectorALL
+        let fruitsInventory = [
+        {
+            name:"Apple",
+            quantity:10
+        },
+        {
+            name:"Banana",
+            quantity:40
+        },
+        {
+            name:"Orango",
+            quantity:50
+        },
+        {
+            name:"Grapes",
+            quantity:15
+        },
+        {
+            name:"Mango",
+            quantity:20
+        },
+        
+        ];
+        let listItems = document.querySelectorAll(".item");
+        listItems.forEach((element,index)=>{
+            element.innerHTML=`${fruitsInventory[index].name} <span>${fruitsInventory[index].quantity}</span>`
+        })
+         
+    </script>
+</body>
+</html>

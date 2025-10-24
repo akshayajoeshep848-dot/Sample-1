@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <title>css spruha</title>
+    <style>
+        *{
+            font-family: Roboto;
+            font-size: 14px;
+        }
+        body{
+            background-color: rgb(234,237,247);;
+        }
+        .parent{
+            width: 821.59px;
+            height: 499.66px;
+            padding: 25px;
+            background-color: #fff;
+        }
+        .para-2{
+            color:gray;
+            margin: 0px 0px 16px;
+
+        }
+        input{
+            border-radius: 5px;
+            padding: 8px;
+            margin-left: 510px;
+        }
+        .search{
+            margin-left: -40px;
+            margin-bottom: -7px;
+            
+        }
+        .child{
+            display: flex;
+        }
+        .setting{
+            background-color: blue;
+           margin-left: 20px;
+           position:;
+        }
+        select{
+            margin-right: ;
+            padding: 8px;
+            padding-left: 30px;
+            margin-left: 0px;
+           
+            background-color: blue;
+            color: white;
+        }
+        img{
+            height: 28.8px;
+            width: 28.8px;
+            border-radius: 50%;
+            margin-right: -10px;
+        }
+        table ,th, td{
+            margin-top: 20px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 20px;
+            text-align: center;
+            
+        }
+        th,td{
+            border-left: none;
+            border-right: none;
+        }
+        .qwe{
+            border-radius: 20px;
+            
+        }
+        table{
+            width: 771.59px;
+            height: 239.09px;
+        }
+        input[type="radio"]{
+            margin-left: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <div  class="parent">
+    <h1 class="para-1">TASKS</h1>
+    <P class="para-2">A task is accomplished by a set deadline,and must contribute toward work-related objectives.</P>
+    <div class="child">
+        <input  type="text" placeholder="search here....">
+        <img class="search" src="./images/search.png" alt="search">
+        <div class="child1">
+        <img class="setting" src="./images/settings.png" alt="">
+        <select  >
+            <option value="">sort by</option>
+            <option value="">Task</option>
+            <option value="">Team</option>
+            <option value="">status</option>
+            
+        </select>
+        </div>
+        </div>
+        <table>
+            <thead>
+                <th>TASK</th>
+                <th></th>
+                <th>TEAM</th>
+                <th>OPEN TASK</th>
+                <th>PRIORITY</th>
+                <th>STATUS</th>
+            </thead>
+            <tr>
+                <td><input type="radio"></td>
+                <td>Evaluating the design</td>
+                <td><div>
+                    <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/1.jpg" alt="">
+                <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/2.jpg" alt="">
+                <img src="	https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/3.jpg" alt="">
+                <img src="https://demo.spruko.com/html/bootstrap/spruha/dist/assets/images/faces/4.jpg" alt="">
+                </div>
+                </td>
+                <td>18</td>
+                <td style="color: blue; ">High</td>
+                <td class="qwe" style="color: blue; background-color:lightblue ;">completed</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Generate ideas for desidn</td>
+                <td></td>
+                <td>34</td>
+                <td style="color: red;">Normal</td>
+                <td style="color: orange; background-color:;">Pending</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Define the problem</td>
+                <td></td>
+                <td>25</td>
+                <td style="color:orange;">Low</td>
+                <td style="color:blue;">Completed</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>empathize with users</td>
+                <td></td>
+                <td>37</td>
+                <td style="color:blue">High</td>
+                <td style="color:red;">Rejected</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

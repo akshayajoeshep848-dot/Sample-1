@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>js method</h1>
+    <script>
+        let fruits = ["Apple", "Banana", "Cherry"];
+        const fruit = ['apple', 'banana'];
+        fruit.push('orange', 'grape');//push
+        console.log(fruit);
+        const lastfruitss = fruit.pop();//pop
+        console.log(fruit);
+        fruit.unshift('mango');//unshift
+        console.log(fruit);
+        fruit.shift();//shift
+        console.log(fruit);
+        fruit.reverse();//reverse
+        console.log(fruit);
+
+
+
+
+        let name = "pradeep"; //reveser
+        console.log(name);
+        console.log(name.split("").reverse().join(""));
+
+        //write a function to remove first letters
+        //const name1 ="prabhas";
+        //for (let i =0; i< name1.length;
+        //console.log(name1.slice(i)));
+
+        //concat()
+        let array1 = [1, 2, 3];
+        let array2 = [4, 5, 6];
+        let combined = array1.concat(array2);
+        // let combined1 = array2.concat(array1);
+        console.log(combined);
+        // console.log(combined1);
+        let array3 = array2.concat(7);
+        console.log(array3);
+        let array5 = [1, 2, 3[4, [5], 6], [7, 8], [9]];
+
+        let flatArray = array5.reduce(
+            (initialvalue, currentvalue) => initialvalue.concat(currentvalue),
+            []
+        );
+        console.log(flatArray);
+
+        //join 
+
+        let greeting = ["Hello", "world"];
+        let str = greeting.join("").split('').reverse().join();
+        console.log(typeof str, str);
+
+    </script>
+</body>
+
+</html>

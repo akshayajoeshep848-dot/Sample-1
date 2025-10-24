@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>js arraya splice </h1>
+    <script>
+        let fruits = ["apple", "banana", "kiwi", "orange", "mango", "watermelon", "guava", "pineapple"];
+        console.log(fruits);
+        // removing elements
+        //frist argument - index
+        //second argument - number of elements
+        //splice - cut ,remove,add,joint 
+        let copy1 = fruits.splice(-2, 2);
+        console.log(copy1);
+        console.log(fruits);
+
+        // let colors=["red","blue","yellow","green"];
+        // let copy2 = colors.splice(-2,2)
+        // console.log(copy2);
+        // console.log(colors);
+
+        const colors = ["red", "green", "blue", "yellow"];
+        colors.splice(-1, 0, "purple");
+
+        console.log(colors);
+
+        //let arr = [1, 2, 3, 4, 5];
+        //arr.splice(2, 1);
+        //console.log(arr);
+
+        //let arr = [1, 2, 3, 4, 5, 7, 8];
+        //arr.splice(5, 0, 6);
+        //console.log(arr);
+
+        //let arr = [1, 2, 3, 4, 5];
+        //arr.splice(3, 1, 40);
+        //console.log(arr);
+
+        // let arr = ["c", "d", "e"];
+        // arr.splice(0, 0, "a", "b");
+        // console.log(arr);
+
+        //let arr = ["apple", "banana", "orange", "pear"];
+        //arr.splice(1, 2, "grape", "kiwi");
+        //console.log(arr);
+
+        //let arr = ["one", "two", "three"];
+        //arr.splice(-1, 1);
+        //console.log(arr);
+
+        //let arr = ["a", "b", "c"];
+        //arr.splice(arr.length, 0, "d");
+        //console.log(arr);
+
+        // let arr = [1, 2, 3, 4, 5];
+        // arr.splice(2);
+        // console.log(arr);
+
+        let arr = [1, 2, 3, 4, 5];
+        let removed = arr.splice(2, -1, 10, 11);
+        console.log(arr);
+        console.log(removed);
+        
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css specificity</title>
+    <style>
+        * {
+            color: rgb(201, 19, 214);
+        }
+
+        .para {
+            color: green;
+        }
+
+        #para-1 {
+            color: red;
+        }
+        text[type]{
+            border: 3px solid yellow;
+        }
+        .type{
+            border: 3px solid orange;
+        }
+        #text-1{
+            border: 3px soild red;
+        }
+        input{
+            border: 3px solid violet;
+        }
+        input[type]{
+            border: 3px solid greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css specificity</h1>
+    <P style="color: blue " class="para " id="para-1">Lorem ipsum dolor sit amet .</P>
+    <input type="text" id="text-1" class="text">
+
+</body>
+
+</html>

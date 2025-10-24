@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading1">Hello,World</h1>
+    <p>This is a paragraph</p>
+    hi
+    <div id="div"></div>
+    <ul id="ul">
+        Unorderlist
+        <li id="item">items1</li>
+        <li id="item">items2</li>
+        <li id="item">items3</li>
+        <li id="item">items4</li>
+        <li id="item">items5</li>
+    </ul>
+    <script>
+       // let ul = document.getElementById("ul")
+        //console.log(ul.parentNode);
+        //console.log(ul.childNodes);
+        //console.log(ul.children);
+        //console.log(ul.firstChild);
+        //console.log(ul.lastChild);
+        //console.log(ul.firstElementChild);
+        //console.log(ul.lastElementChild);
+        //console.log(ul.previousSibling);
+        //console.log(ul.previousElementSibling);
+        //console.log(ul.nextElementSibling);
+        //console.log(ul.nextSibling);
+        //ul.firstElementChild.style.backgroundColor="blue"
+        //ul.lastElementChild.style.backgroundColor="red"
+        //ul.children[2].style.backgroundColor="pink"
+        //ul.children[3].style.backgroundColor="orange"
+        //ul.children[1].style.backgroundColor="skyblue"
+
+        let div = document.getElementById("div");
+    
+    let anchor = document.createElement("a");
+    anchor.setAttribute("href", "https://www.google.com"); 
+    anchor.textContent = "Google";
+
+    div.append(anchor);
+    </script>
+
+</body>
+
+</html>

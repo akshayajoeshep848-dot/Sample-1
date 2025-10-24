@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">js Event Listener</h1>
+    <label for="firstname">FirstName :</label>
+    <input type="text" id="firstname" name="Firstname"><br>
+    <label for="lastname">Lastname :</label>
+    <input type="text" id="lastname" name="lastname"><br>
+    <button id="button" onclick="onClick()">Click Me</button>
+    <button id="button1" value="reset" onclick="onClick()">reset</button>
+    <script>
+        let button = document.getElementById("button");
+        let h1 = document.getElementById("h1");
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+        let formObject = {};
+
+
+        
+        //button.addEventListener("click",(event) => 
+       // console.log("Button clicked")
+        //);
+
+
+        button.onclick = function(event) {
+            formObject[`${firstname.name}`] = firstname.value;
+            formObject[`${lastname.name}`] = lastname.value;
+            console.log(formObject);
+        };
+        button1.onclick = function(event) {
+            formObject = {};
+            firstname.value = "";
+            lastname.value = "";
+            console.log(formObject);
+        };
+
+        firstname.addEventListener("keydown",(event) =>
+        console.log(event.key,event.code)
+        );
+        
+        // Mouseover event
+       // h1.addEventListener("mouseover",(event) =>{
+        //console.log(event.type) // the type of event (e.g., "click"))
+       // event.target.style.backgroundColor="blue"; // the element that triggered the event (e.g., the button element)
+       // event.target.style.borderRadius= "10px";
+        // console.log(event.timeStamp) // the time when the event occurred (in milliseconds since the epoch) 
+       // });
+        // Mouseout event
+       // h1.addEventListener("mouseout",(event) =>{
+       //     event.target.style.backgroundColor="white"; // the element that triggered the event (e.g., the button element)
+       //     event.target.style.borderRadius= "0px";
+       // });
+
+        // Keydown event
+       // input.addEventListener("keydown",(event) =>{
+       //     console.log(`${event.key}`);
+       // });
+       // //keypress event
+       // input.addEventListener("keypress",(event) =>{
+       //     console.log( `${event.key}` );
+       // });
+
+
+
+        
+    
+    </script>
+    
+</body>
+</html>

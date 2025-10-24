@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Async</title>
+</head>
+<body>
+    <div class="container"></div>
+
+    <script>
+
+       // async function hello(){
+       //     return "Hello , Async!";
+       // }
+
+       // console.log(hello());
+       // hello().then((value)=> console.log(value));
+       // hello().then(console.log)
+        
+       async function fetchData (url){
+        console.log("starting fetch call...");
+        let response = await fetch (url);
+        let data = await response.json();
+        console.log(data);
+        console.log("End Fetch call..");
+        return data;
+       }
+      // fetchData("https://dogapi.dog/api/v2/breeds").then((value)=>console.log(value));
+       fetchData("https://jsonplaceholder.typicode.com/users/1")//.then((data)=> data.json())
+       .then((value)=>{
+        
+        let container = document.getElementById("container");
+        let name = document.createElement("p");
+        let email = document.createElement("p");
+
+        name.classList.add("name");
+        email.classList.add("email");
+
+        name.textContent = `Name : ${value.name}`;
+        email.textContent = `Email : ${value.email}`;
+
+        container.appendChild(name);
+        cont.appendChild(eamil);
+        
+       });
+
+       
+
+    </script>
+    
+</body>
+</html>
+

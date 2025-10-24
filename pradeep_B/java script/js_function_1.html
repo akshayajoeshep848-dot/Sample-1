@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function </title>
+</head>
+<body>
+    <h1>function</h1>
+    <script>
+        //
+        function greet(name){
+            console.log(`hello, ${name}!`);
+        }
+        greet("pradeep")
+        greet(10)
+
+        //write a function to display if a user is eligible to vote based on age
+        function eligibleToVote(age){
+            age < 18
+            ? console.log("Not eligible to vote")
+            : console.log("eligible to vote");
+        }
+        eligibleToVote(18);
+
+        //write a function to print full name
+        function printFullName(firstname, middlename, lastname){
+            console.log(`you full name is: ${firstname} ${middlename} ${lastname}`);
+        }
+        printFullName("barigala", "pradeep", "nadu");
+    
+
+        var a = 10;
+        eligibleToVote(a);
+
+        let b = 19;
+        eligibleToVote(b);
+        //write a function to print 1 to 10
+
+        function printPositiveIntergers(positiveInteger){
+            console.log(`start of  function..`);
+            console.log(`Printing value of i:${i}`);
+ 
+            for (var i = 1; i <= positiveInteger; i++){
+                console.log(i);
+            }
+            
+            console.log(`end of function..`);
+        }
+        printPositiveIntergers(10);
+    
+        //write a function to print n factorial
+        function factorialOfNumber(positiveInteger){
+            console.log(`positive integer : ${positiveInteger}`);
+            let factorial = 1;
+            if (positiveInteger == 0) {
+
+            }
+            for (let i = 1; i <= positiveInteger; i++ ){
+                factorial *= i ;
+            }
+            console.log(`Factorial of  ${positiveInteger} is ${factorial}`);
+        }
+        factorialOfNumber(3)
+        
+    </script>
+</body>
+</html>

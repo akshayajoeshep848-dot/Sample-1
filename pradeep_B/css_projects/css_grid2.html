@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css geid 2</title>
+    <style>
+        .parent{
+            background-color: antiquewhite;
+            display: grid;
+            gap: 10px;
+            height: 100vh;
+            grid-template-columns:200px repeat(2,1fr);
+            grid-template-rows: 1fr 5fr 1fr;
+            grid-template-areas: 
+            "header header header"
+            "sidenav main main"
+            "footer footer footer";
+        }
+        .child{
+            background-color: blue;
+            color: white;
+        }
+        .child-1{
+            grid-area:header;
+        }
+        .child-2{
+            grid-area:sidenav;
+        }
+        .child-3{
+            grid-area:main;
+        }
+        .child-4{
+            grid-area:footer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Css Grid Template Areas</h1>
+    <div class="parent">
+    <div class="child child-1">child1</div>
+    <div class="child child-2">child2</div>
+    <div class="child child-3">child3</div>
+    <div class="child child-4">child4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js arrays</h1>
+    <script>
+        let emptyArray =[];
+        let fruits = ["Apple", "Banana", "Cherry"];
+        let numbers = [1,2,3,4,5];
+        let mixedArray = [10,"hello",true,{name: "Alice"},[6,7]];
+
+        console.log(fruits[0]);
+        console.log(fruits.length);
+        console.log(mixedArray[3].name);
+        console.log(mixedArray[3]["name"]);
+        console.log(mixedArray[4][0]);
+
+        let student ={
+            name :"NTR",
+            age:23,
+            college:"Chalapathi Engg College",
+            id:'0001',
+            address:{
+                line1 : "H.No 553,",
+                line2 :"jubilee Hills Road no 29",
+                city : "Hyderabad",
+                state: "Telangana",
+                pincode : 500034
+            },
+            movies :["Devara", "war 2", "Temper", "Janatha Garrage"],
+            awards :[{
+                name : "Best Dancer",
+                type : "",
+                year : 1996,
+                movie : ""
+            },{
+                name : "Best Dancer",
+                type : "Nandi awards",
+                year : 2016,
+                movie : "Nanna Ki Prematho"
+            
+            },{
+                name : "Best Actor",
+                type : "SIIMA awards",
+                year : 2007,
+                movie : "Simhadri"
+            
+            },
+            ],
+        }
+        console.log(student.address.line1);
+        console.log(student.movies[0]);
+        console.log(student.awards[0].name);
+
+        //to create a  array  using constructor
+    
+        let arr1 = new Array();//this will create an empty array
+        let arr2 = new Array("Apple","Banana","Cherry");
+        let arr3 = new Array(4);
+        //print arrays
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr3[1]);
+
+        arr3[0]= "kalakandh";
+        arr3[1]= "kaaju laddu";
+        arr3[2]= "Dry Fruit Laddu";
+        arr3[3]= "Palakove";
+ 
+        console.log(arr3);
+        
+        
+        //push
+        
+    </script>
+</body>
+</html>

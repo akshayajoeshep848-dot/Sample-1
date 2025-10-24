@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-item menu-item-1">Menu Item 1</div>
+        <div class="menu-item menu-item-2">Menu Item 2</div>
+        <div class="menu-item menu-item-3">Menu Item 3</div>
+        <div class="menu-item menu-item-4">Menu Item 4</div>
+    </div>
+    <div class="para-container">
+        <p>This is a para 1</p>
+        <p>This is a para 2</p>
+        <p>This is a para 3</p>
+        <p>This is a para 4</p>
+    </div>
+    <div class="button-container">
+        <button class="button-item">button1</button>
+        <button class="button-item">button2</button>
+        <button class="button-item">button3</button>
+        <button class="button-item">button4</button>
+        <button class="button-item">button5</button>
+    </div>
+    <script>
+        let menuItems = document.getElementsByClassName("menu-item");
+        //console.log(Array.isArray(menuItems));//there are some object is behave like a object
+        //console.log(menuItems);
+        //console.log(Array.isArray(Array.from(menuItems)));//array types
+        //console.log(Array.from(menuItems));
+        let menuItemsArray = Array.from(menuItems);
+        menuItemsArray.forEach((item) => (item.innerText = "Hello"));
+
+        //getElementsByTagName
+        let paraItems = document.getElementsByTagName("p");
+        <!-- let arr=[1,2,3,4] -->
+        let actorsArray = [{
+            name: "prabhas",
+            profession: "Acting",
+            movies: ["Mirchi", "Bahubali"],
+        },
+        {
+            name: "N.T.R jr",
+            profession: "Acting, EnterPrenur",
+            movies: ["Adhi", "Temper"],
+
+        },
+        {
+            name: "Sai Pallavi",
+            profession: "Acting,Doctor",
+            movies: ["Fida", "Love Story"]
+        },
+        {
+            name: "Anushka Shetty",
+            profession: "Acting,Modelling",
+            movies: ["Billa", "Arundhathi"]
+        },];
+        Array.from(paraItems).forEach((element, index) => {
+            element.innerText = `Actor movis: ${actorsArray[index].movies}`;
+        });
+
+        //querySelectorAll
+        //nodeList- static list
+        let styleArray = [
+        {
+            name:"click Me",
+            backgroundColor:"yellow",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            color:"blue",
+            borderRadius:"10px",
+            boxShadow:"2px 2px 5px 5px lightgray",
+
+        },
+        {
+            name:"Submit",
+            backgroundColor:"pink",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            color:"white",
+            borderRadius:"10px",
+            boxShadow:"2px 2px 5px 5px lightgray",
+
+        },
+        {
+            name:"Login",
+            backgroundColor:"green",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            color:"white",
+            borderRadius:"10px",
+            boxShadow:"2px 2px 5px 5px lightgray",
+
+        },
+        {
+            name:"Register",
+            backgroundColor:"silver",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            color:"white",
+            borderRadius:"10px",
+            boxShadow:"2px 2px 5px 5px lightgray",
+
+        },
+        {
+            name:"Apply",
+            backgroundColor:"red",
+            padding:"10px",
+            border:"none",
+            margin:"10px",
+            color:"white",
+            borderRadius:"10px",
+            boxShadow:"2px 2px 5px 5px lightgray",
+
+        },
+        ]
+        
+        let buttonItems = document.querySelectorAll(".button-item")
+        buttonItems.forEach((item,index) => {
+            item.innerText = styleArray[index].name;
+            item.style.backgroundColor = styleArray[index].backgroundColor;
+            item.style.padding =styleArray[index].padding;
+            item.style.border = styleArray[index].border;
+            item.style.margin = styleArray[index].margin;
+            item.style.color = styleArray[index].color;
+            item.style.borderRadius = styleArray[index].borderRadius;
+            item.style.boxShadow = styleArray[index].boxShadow;
+        });
+
+    </script>
+</body>
+
+</html>
