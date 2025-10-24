@@ -22,7 +22,24 @@
         // hello().then((value)=> console.log(value));
         // hello().then(console.log);
 
-        async function fetchdata(url){
+        let options ={
+            method:"GET",
+        headers:{
+            "content-type":"application/json"
+        },
+
+        };
+
+        let postOptions = {
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json,",
+                "Authorization":"bear token_name"
+            },
+            body:{}
+        };
+
+        async function fetchdata(url,options){
             let response = await fetch(url)
             let breeds = await response.json()
         console.log(breeds)
@@ -30,7 +47,7 @@
         return breeds;
 
         }
-        fetchdata("https://dogapi.dog/api/v2/breeds").then((value)=> console.log(value))
+        fetchdata("https://dogapi.dog/api/v2/breeds",GET).then((value)=> console.log(value))
         fetchdata("https://jsonplaceholder.typicode.com/users/1").then((value)=>{  
         let con= document.getElementById("container");
         let sub=document.getElementById("sub")
