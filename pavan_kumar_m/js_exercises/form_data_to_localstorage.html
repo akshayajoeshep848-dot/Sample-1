@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Info Form</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+      }
+
+      .form-box {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(1, 1, 1, 0.4);
+        text-align: left;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #555;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      .save-btn {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .clear-btn {
+        background-color: #dc3545;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-box">
+        <h1>My Info</h1>
+
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter Name"
+          required
+        />
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter Email"
+          required
+        />
+
+        <button class="btn save-btn" id="btn-1">Save to the Browser</button>
+        <button class="btn clear-btn" id="btn-2">Clear the Saved Data</button>
+      </div>
+    </div>
+    <script>
+      let data = {};
+      let name = document.getElementById("name");
+      let email = document.getElementById("email");
+      btn1 = document.getElementById("btn-1");
+      btn2 = document.getElementById("btn-2");
+      let inpelem = [name, email];
+      //   console.log(name,email)
+
+      function fetchdata() {
+        let saveddata = localStorage.getItem("data");
+        if (saveddata) {
+          saveddata = JSON.parse(saveddata);
+          name.value = saveddata.name || "";
+          email.value = saveddata.email || "";
+        }
+      }
+      fetchdata();
+
+      inpelem.forEach((item) => {
+        item.addEventListener("input", (event) => {
+          //   console.log(event.target.value);
+          //   console.log(event.target.name);
+          data[event.target.name] = event.target.value;
+        });
+        // console.log(data);
+      });
+
+      btn1.addEventListener("click", () => {
+        if (name.value.trim() === "" || email.value.trim() === "") {
+          alert("Please enter name and eamil");
+        } else {
+            data.name=name.value.trim();
+            data.email=email.value.trim()
+          localStorage.setItem("data", JSON.stringify(data));
+          alert("Data saved to local storage");
+        }
+      });
+      btn2.addEventListener("click", () => {
+        let saveddata = localStorage.getItem("data");
+        if (saveddata) {
+          localStorage.clear();
+          name.value = "";
+          email.value = "";
+          data = {};
+          alert("Data cleared from local storage");
+        } else {
+          alert("No saved data to clear");
+        }
+      });
+    </script>
+  </body>
+</html>
