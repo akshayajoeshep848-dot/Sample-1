@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local storage</title>
+  </head>
+  <body>
+    <h1>Local Storage</h1>
+    <script>
+      //   console.log(localStorage);
+      let usernme = "chimtu";
+      localStorage.setItem("user", usernme);
+      let user = localStorage.getItem("user");
+      console.log(user);
+      localStorage.removeItem("user");
+      let arr = [1, 2, 3, 4, 5, 6];
+      localStorage.setItem("Array1", arr);
+      localStorage.setItem("Array2", JSON.stringify(arr));
+      let arrdata1 = localStorage.getItem("Array1");
+      let arrdata2 = JSON.parse(localStorage.getItem("Array2"));
+      console.log(arrdata1);
+      console.log(arrdata2);
+      console.log(typeof arrdata1);
+
+      let student = {
+        name: "Chimtu",
+        age: "2 years",
+        gender: "Male",
+      };
+      localStorage.setItem("Chimtudata", JSON.stringify(student));
+      let returnstudent = JSON.parse(localStorage.getItem("Chimtudata"));
+      console.log(returnstudent);
+      console.log(typeof returnstudent);
+      localStorage.clear();
+    </script>
+  </body>
+</html>
