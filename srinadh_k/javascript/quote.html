@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ 
+   body {
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    height: 100vh;           
+    margin: 0;
+}
+
+
+    .container {
+        height: 400px;
+        width: 500px;
+        border-radius: 15px;
+        background-color: #ffffffcc;
+        text-align: center;
+        padding: 20px;
+        box-shadow: 0 4px 20px black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #quote {
+        background-color: #f0f8ff; 
+        color: black;
+       
+    }
+
+    #author {
+        font-size: 1rem;
+        font-style: italic;
+        color: #555;
+        margin-top: 10px;
+        background-color: rgb(235, 247, 245);
+    }
+
+    #click {
+        padding: 10px 25px;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        background-color: #007bff;
+        border: 1px solid black;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 10px;
+       
+    }
+
+    #click:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+    }
+    h1{
+      font-style: italic;
+        color: rgb(13, 59, 224);
+        margin-bottom: 50px;
+    }
+
+</style>
+<body>
+  <div class="container">     
+     <h1>the random quote display</h1>
+    <div id="quote"></div>
+    <div id="author"></div>
+    <button id="click" onclick={NK()}>click</button>
+    </div>
+
+    <script>
+      let quotes=[
+  {
+    quote: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs",
+  },
+  {
+    quote:
+      "In three words I can sum up everything I've learned about life: it goes on.",
+    author: "Robert Frost",
+  },
+  {
+    quote:
+      "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    author: "Ralph Waldo Emerson",
+  },
+  {
+    quote:
+      "The future belongs to those who believe in the beauty of their dreams.",
+    author: "Eleanor Roosevelt",
+  },
+  {
+    quote:
+      "It is our choices, Harry, that show what we truly are, far more than our abilities.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Don't cry because it's over, smile because it happened.",
+    author: "Dr. Seuss",
+  },
+  {
+    quote: "Be the change that you wish to see in the world.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    quote:
+      "If you want to live a happy life, tie it to a goal, not to people or things.",
+    author: "Albert Einstein",
+  },
+  {
+    quote:
+      "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "The purpose of our lives is to be happy.",
+    author: "Dalai Lama",
+  },
+  {
+    quote: "You only live once, but if you do it right, once is enough.",
+    author: "Mae West",
+  },
+  {
+    quote: "Get busy living or get busy dying.",
+    author: "Stephen King",
+  },
+  {
+    quote:
+      "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+    author: "Thomas A. Edison",
+  },
+  {
+    quote:
+      "If life were predictable it would cease to be life, and be without flavor.",
+    author: "Eleanor Roosevelt",
+  },
+  {
+    quote: "Life is what happens when you're busy making other plans.",
+    author: "John Lennon",
+  },
+  {
+    quote:
+      "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+    author: "Benjamin Franklin",
+  },
+  {
+    quote: "It does not do to dwell on dreams and forget to live.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "What we think, we become.",
+    author: "Buddha",
+  },
+  {
+    quote:
+      "Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.",
+    author: "Bill Keane",
+  },
+  {
+    quote: "That which does not kill us makes us stronger.",
+    author: "Friedrich Nietzsche",
+  },
+];
+
+// let containerDisplay=document.getElementById("container")
+let quoteDisplay=document.getElementById("quote")
+let authorDisplay=document.getElementById("author")
+// let btnDisplay=document.getElementById("click")
+  
+//  btnDisplay.onclick= 
+ function NK() {
+    const randomIndex=Math.floor(Math.random()*quotes.length);
+   const randomquote=quotes[randomIndex];
+    
+   quoteDisplay.textContent = randomquote.quote;
+   authorDisplay.textContent= randomquote.author;
+
+}
+  
+</script>
+</body>
+</html>
