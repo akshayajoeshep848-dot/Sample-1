@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Async</title>
+    <style>
+      :root {
+        --background-color: rgb(250, 223, 223);
+        --width: 500px;
+        --padding: 10px;
+        --margin: 10px;
+      }
+      #container {
+        width: 500px;
+        background-color: rgb(237, 237, 237);
+        padding: var(--padding);
+      }
+      .name,
+      .email {
+        background-color: var(--background-color);
+        /* width: var(--width); */
+        padding: var(--padding);
+        margin: var(--padding);
+      }
+      .email {
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      //   async function hello() {
+      //     return "Hello, Async!";
+      //   }
+
+      //   console.log(hello());
+
+      //   hello().then((value) => console.log(value));
+      //   hello().then(console.log);
+
+      let options = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      };
+
+      let postOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer token_name",
+        },
+        body: {}, // JSON.stringify({}),
+      };
+
+      async function fetchData(url, options) {
+        console.log("starting fetch call...");
+        let response = await fetch(url);
+        let data = await response.json();
+        console.log(data);
+        console.log("End fetch call..");
+        return data;
+      }
+
+      //   fetchData("https://dogapi.dog/api/v2/breeds").then((value) =>
+      //     console.log(value)
+      //   );
+      fetchData("https://jsonplaceholder.typicode.com/users/", options).then(
+        (value) => {
+          let container = document.getElementById("container");
+          let name = document.createElement("p");
+          let email = document.createElement("p");
+
+          name.classList.add("name");
+          email.classList.add("email");
+
+          name.textContent = `Name: ${value.name}`;
+          email.textContent = `email: ${value.email}`;
+
+          container.appendChild(name);
+          container.appendChild(email);
+        }
+      );
+    </script>
+  </body>
+</html>
