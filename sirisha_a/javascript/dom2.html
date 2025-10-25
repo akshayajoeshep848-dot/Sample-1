@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="menu-item menu-item1">Menu item 1</div>
+        <div class="menu-item menu-item2">Menu item 2</div>
+        <div class="menu-item menu-item3">Menu item 3</div>
+        <div class="menu-item menu-item4">Menu item 4</div>
+    </div>
+
+  <div class="para-container">
+    <p>this is para 1</p>
+    <p>this is para 2</p>
+    <p>this is para 3</p>
+    <p>this is para 4</p>
+  </div>
+    <script>
+    // get element by class name=>output array select all elements with a given class name.(returns html collection)
+    //accessed like an array but is not a true array.
+    //to convert to an array:array.form(items).
+   
+    // let menuItems=document.getElementsByClassName("menu-item");
+    // console.log(Array.isArray(menuItems));
+    // console.log(menuItems)
+    // // upon the line is array type this is not array this is called iterator object in js
+    // // array from is used to convert the array
+    // console.log(Array.isArray(Array.from(menuItems)));
+    // console.log(Array.from(menuItems));
+
+    // let menuItemsArray=Array.from(menuItems);
+    // menuItemsArray.forEach((item) => (item.innerText = "hello"));
+
+
+    // get element by tag name :output html collection and case insensitive
+ 
+   let paraItems=document.getElementsByTagName("p");
+    // let arr=["Prabhas","Anushka","Nayanathara","balayya"]
+    let actorsArray=[
+        {
+            name:"Prabhas",
+            profission:"Acting",
+            movies:["Mirchi",'bhahubali']  ,
+        },{
+            name:"N.T.R",
+            profession:"Acting,Entreprenuer",
+            movies:["Aadhi","Temper"],
+        },{
+            name:"saipallavi",
+            profession:"Acting,Doctor",
+            movies:["Fidha","Love story"],
+        },{
+            name:"Anushka Shetty",
+            profession:"Acting ,Modelling",
+            movies:["Billa","Arundhathi"]
+        }
+     ];
+       Array.from(paraItems) .forEach((element,index)=>{
+       element.innerText=`Actor name:${actorsArray[index].name}`
+       //actorsArray[index].name;
+     });
+
+     
+    </script>
+</body>
+</html>

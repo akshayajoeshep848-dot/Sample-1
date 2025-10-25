@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- name lo dhe obj lo ivvali -->
+<body>
+    <!-- form events 
+    1.submit
+    2.input   every change in the input
+    3.change  out of focus
+    4.blur  means out of focus
+    it is worked on input ki select ki textarea -->
+
+    <form action="submit" id="form">
+        <label for="firstname">Firstname</label>
+        <input type="text" id="firstname" name="firstname">
+
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname" name="lastname">
+        
+      
+      <select id="gender" name="gender">
+        <option value="select">select</option>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="other">other</option>
+      </select>
+
+       <button id="btn" type="submit">Submit</button>
+       <button type="reset">Reset</button>
+    </form>
+      <div id="record-list"></div>
+    <script>
+        let gender = document.getElementById("gender");
+
+
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+        let button=document.getElementById("btn")
+        let recordList=document.getElementById("record-list")
+        let formObject={}
+        let formArray=[]
+        // firstname.addEventListener("input",(event)=>console.log(event.target.value));
+        lastname.addEventListener("input", (event) =>{
+
+         console.log(event.target.value);
+         formObject[event.target.name]=event.target.value;
+            console.log(formObject)
+        });
+
+        // in focus and outfocus
+        // change focus out 
+        firstname.addEventListener("change", (event) => {
+            console.log(event.target.value);
+            formObject[event.target.name]=event.target.value;
+            console.log(formObject)
+        });
+
+        firstname.addEventListener("change", (event) => console.log(event.target.value));
+
+       gender.addEventListener("change",(event)=>{
+        console.log(event.target.value)
+        formObject[event.target.name]=event.target.value;
+            console.log(formObject)
+    }
+    )
+
+
+        
+        firstname.addEventListener("focus",(event)=>{
+            firstname.style.backgroundColor="red"
+            firstname.style.border="2px solid black"
+        })
+        firstname.addEventListener("blur",(event)=>{
+            firstname.style.backgroundColor="red"
+            firstname.style.border="2px dashed black"
+        })
+        form.addEventListener("submit",(event)=>{
+        event.preventDefault();
+         console.log("form submitted")
+        formArray.push(formObject)
+         formObject={}
+         console.log(formArray)
+         form.reset()
+        })
+
+        form.addEventListener("reset",(event)=>{
+         
+         console.log("form reset")
+         form.reset()
+         console.log(formObject)
+        })
+   
+        formArray.forEach((element,index)=>{
+           document.createElement("div").innerHTML=`<p>${element.firstname}</p>`
+           document.body.append(div)
+        })
+    </script>
+</body>
+
+</html>

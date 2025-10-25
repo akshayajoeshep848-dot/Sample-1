@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- local storage is a mechanism by which web applications can store 
+    .key-value pairs:data is stored as string key-value pairs
+
+    .persistent:Data remains in the browser even after the browser is closed and reopened
+
+    .origin-scoped:Data is tied to te domain(origin) that created it
+    example.com connot access another.com 's local storage'
+
+    limited-size:Typically 5MB to 10MB per origin,depending one the browser
+
+    synchronous:operations block the main thread,which can cause performance issues
+    if large amounts of data are processed -->
+    
+
+    limitations ans security concerns
+    .no security
+    .only stringfy.synchronous
+
+
+    when to use local storage
+    user preferences
+    offline data 
+    remembering user input : persisting form data across page reloads
+    client-side caching
+     
+    what is caching?
+    it stores the data on client side 
+    <h1>Local Storage</h1>
+    <script>
+
+        //set item and get item and update by using set item
+        // console.log(localStorage);
+
+
+        ///local storage is used to persist data
+        // let userName = "virat kohli";
+        // localStorage.setItem("userName",userName)
+        // console.log(localStorage);
+
+
+        // let userName = "virat kohli";
+        // localStorage.setItem("userName", "virat")
+        // console.log(localStorage);
+
+
+        // localStorage.setItem("userName", "virat")
+        // console.log(localStorage);
+        // let user = localStorage.getItem("userName")
+        // console.log("user 1" ,user)
+
+        // localStorage.removeItem("userName")
+        // console.log(localStorage)
+
+
+
+
+        // //set array
+        // let arr=[1,2,3,4,5]
+        // //convert it into string
+        // localStorage.setItem("array",JSON.stringify(arr))
+        // console.log(localStorage)
+
+
+        //parse is used to convert string to obj
+        let returnArr=JSON.parse(localStorage.getItem("array"));
+        console.log(typeof(returnArr))
+        console.log(Array.isArray(returnArr)) 
+
+
+        //set obj
+        let student={
+            name:"Virat kohli",
+            age:21,
+            college:"St.Mary's"
+        };
+
+        localStorage.setItem("student",JSON.stringify(student))
+        console.log(localStorage);
+        let returnStudent= JSON.parse(localStorage.getItem("student"))
+        console.log(typeof(returnStudent))
+        console.log(returnStudent)  
+
+        localStorage.clear()
+        console.log(localStorage)
+    
+    </script>
+
+    
+</body>
+
+</html>

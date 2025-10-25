@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+
+<body>
+     <h2>loops</h2>
+     <!-- for(intialization,condition,final-expression){
+
+    } -->
+     <!-- <script>
+    //print numbers from 0 to 10
+    for(let i=0;i<=10; i=i+1){
+          console.log(i);
+    }
+ </script> -->
+     <!-- <script>
+    //even numbers
+     for(let i=1;i<=10; i+2){
+          console.log(i);
+     }
+ </script>
+  <script>
+    //even numbers
+     for(let i=1;i<=10; i=i+2){
+          console.log(i,i+1);
+     }
+ </script>
+ <script>
+    //even numbers
+     for(let i=1;i<=10; i=i+1){
+          console.log(++i);
+     }
+ </script>
+  <script>
+   
+     for(let i=1;i<=10; i=i+2){
+          console.log(i);
+     }
+ </script> -->
+<!-- <script>
+     let sum=0;
+     for(let i=1;i<=15;i++ ){
+          sum+=i;
+     } 
+     console.log(sum)
+ </script> -->
+ <!-- <script>
+     let num=prompt("enter a num")
+     for(let i=1;i<=10;i=i+1){
+          console.log(`${num}*${i}=${num*1}`);
+     }
+ </script> -->
+
+     <!-- <script>
+          let str = "sirisha"
+          let count = 0;
+          for (let i = 0; i < str.length; i++) {
+               if (str[i] === "a" || str[i] === "e" || str[i] === "i" || str[i] === "o" || str[i] === "u") {
+                    count=count+1;
+               }
+          }
+          console.log(count)
+
+     </script> -->
+
+
+ <!-- <script>
+     //index=0 
+     //i=arr1.length
+     arr1=[1,2,3,4,5];
+     sum=0;
+     for(let i=0;i<arr1.length;i++){
+       sum=sum+arr1[i];
+    
+     }
+      console.log(sum);
+ </script>  -->
+
+ <!-- <script>
+     let str="sirisha";
+      let rev='';
+      for(let i=str.length-1;i>=0;i--){
+          rev=rev+str[i];
+      }
+      console.log(rev)
+ </script> -->
+ <!-- <script>
+     let str="mom";
+     let rev="";
+     for(let i=str.length-1;i>=0;i--){
+          rev=rev+str[i];
+     }
+     if(str==rev){
+          console.log("palindrome")
+     }else{
+          console.log("not")
+     }  
+     
+
+ </script> -->
+ 
+ <!-- <script>
+     //Prime numbers
+ let num=29;
+ let count=0;
+ for(let i=1;i<=num;i++){
+     console.log(`${i}`)
+   if(num%i===0){
+   count++;
+     }
+  }
+  if(count===2){
+     console.log(` is a prime number`);
+  }else{
+     console.log(`it is not a prime number`);
+  }
+ </script> -->
+
+<!-- <script>
+     //Factorial
+    let n=5;
+    result=1;
+    for(i=1;i<=5;i++){
+     result=result*i;
+    }
+    console.log(result)
+</script> -->
+<!-- <script>
+     //palindrome
+     let str="siri"
+     let rev="";
+     for(let i=str.length-1; i>=0;i--){
+          rev=rev+str[i];
+     }
+     if(str==rev){
+          console.log("palimdrome")
+     }
+     else{
+          console.log("not palindrome")
+     }
+</script> -->
+<!-- <script>
+     //reverse a string
+   let str="sujatha";
+   let rev='';
+   for(let i=str.length-1; i>=0; i--){
+          rev=rev+str[i];
+   }
+ console.log(rev);
+</script>
+ <script>
+     let str="sirisha";
+      let rev='';
+      for(let i=str.length-1;i>=0;i--){
+          rev=rev+str[i];
+      }
+      console.log(rev)
+ </script>  -->
+
+ <script>
+      // gm=multiples of some factors sq.n
+     let num=Number(prompt("enter a number"));
+     isPrime=true;
+     if(num==1){
+          isPrime=false;
+     }else if(num<=0){
+          isPrime=false;
+     }else if(num==2){
+          isPrime=true;
+     }else{
+         for(i=3;i<=Math.floor(num**0.5);i+=2){
+          console.log(`loop:${i}`);
+          console.log(Math.floor(num**0.5))
+               if(num%i==0){
+                    isPrime=false;
+                    break;
+               }
+          }
+      }
+      if(isPrime){
+           console.log("prime num")
+      } else {
+           console.log("not a prime")
+   }
+     
+ </script>
+</body>
+
+</html

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(14,40px);
+            grid-template-rows: repeat(14 ,25px);
+            height: 50vh;
+            gap:5px;
+            grid-template-areas:
+            "esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 delete "
+            " 1 2 3 4 5 6 7 8 9 0 11 12 13 14 "
+            ;
+        }
+        .grid-item1{
+             grid-area: esc;
+        }
+         .grid-item2{
+             grid-area: f1;
+        }
+         .grid-item3{
+             grid-area: f2;
+        } .grid-item4{
+             grid-area: f3;
+        } .grid-item5{
+             grid-area: f4;
+        }.grid-item6{
+             grid-area: f5;
+        }.grid-item7{
+             grid-area: f6;
+        }.grid-item8{
+             grid-area: f7;
+        }.grid-item9{
+             grid-area: f8;
+        }.grid-item10{
+             grid-area: f9;
+        }.grid-item11{
+             grid-area: f10;
+        }.grid-item12{
+             grid-area: f11;
+        }.grid-item13{
+             grid-area: f12;
+        }.grid-item14{
+             grid-area: delete;
+        }
+        .grid-item{
+            background-color: pink;
+
+        }
+         .grid-item15{
+             grid-area: 1;
+        }
+         .grid-item16{
+             grid-area: 2;
+        }
+         .grid-item17{
+             grid-area: 3;
+        } .grid-item18{
+             grid-area: 4;
+        } .grid-item19{
+             grid-area: 5;
+        }.grid-item20{
+             grid-area: 6;
+        }.grid-item21{
+             grid-area: 7;
+        }.grid-item22{
+             grid-area: 8;
+        }.grid-item23{
+             grid-area: 9;
+        }.grid-item24{
+             grid-area: 0;
+        }.grid-item25{
+             grid-area: 11;
+        }.grid-item26{
+             grid-area: 12;
+        }.grid-item27{
+             grid-area: 13;
+        }.grid-item28{
+             grid-area: 14;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item1">Esc</div>
+        <div class="grid-item grid-item2">F1</div>
+        <div class="grid-item grid-item3">F2</div>
+        <div class="grid-item grid-item4">F3</div>
+        <div class="grid-item grid-item5">F4</div>
+        <div class="grid-item grid-item6">F5</div>
+        <div class="grid-item grid-item7">F6</div>
+        <div class="grid-item grid-item8">F7</div>
+        <div class="grid-item grid-item9">F8</div>
+        <div class="grid-item grid-item10">F9</div>
+        <div class="grid-item grid-item11">F10</div>
+        <div class="grid-item grid-item12">F11</div>
+        <div class="grid-item grid-item13">F12</div>
+        <div class="grid-item grid-item14">Delete</div>
+
+        <div class="grid-item grid-item15">`<sup>~</sup></div>
+        <div class="grid-item grid-item16">1<sup>!</sup></div>
+        <div class="grid-item grid-item17">2<sup>@</sup></div>
+        <div class="grid-item grid-item18">3<sup>#</sup></div>
+        <div class="grid-item grid-item19">4<sup>$</sup></div>
+        <div class="grid-item grid-item20">5<sup>%</sup></div>
+        <div class="grid-item grid-item21">6<sup>^</sup></div>
+        <div class="grid-item grid-item22">7<sup>&</sup></div>
+        <div class="grid-item grid-item23">8<sup>*</sup></div>
+        <div class="grid-item grid-item24">9<sup>(</sup></div>
+        <div class="grid-item grid-item25">0<sup>)</sup></div>
+        <div class="grid-item grid-item26">-<sup>_</sup></div>
+        <div class="grid-item grid-item27">=<sup>+</sup></div>
+        <div class="grid-item grid-item28">Backspace</div>
+        
+
+    </div>
+</body>
+</html>

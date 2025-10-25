@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* font-family: "Poppins,sans-serif"; */
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: gainsboro;
+            min-height: 100vh;
+            width: 100%;
+            border-radius: 13px;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        .app {
+            width: 100%;
+            max-width: 540px;
+            background-color: white;
+            margin: 100px auto 20px;
+            padding: 40px 30px 70px;
+            border-radius: 10px;
+
+
+        }
+
+        h2 {
+            color: rgb(144, 44, 174);
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        img {
+            width: 50px;
+            margin-left: 10px;
+        }
+
+        .row {
+            display: flex;
+           align-items: center;
+            justify-content: space-between;
+            background: #edeef0;
+             border-radius: 60px;
+            padding-left: 20px; 
+            margin-bottom: 25px; 
+
+        }
+
+        input {
+            flex: 1;
+            border: none;
+            outline: none;
+            background: transparent;
+            background: #edeef0;
+            padding: 10px;
+            font-size: 14px;
+        }
+        /* #input1{
+            position: relative;
+            background-color: red;
+            bottom:66px;
+            left: 350px;
+            width: 100px;
+        } */
+
+        button {
+            border: none;
+            outline: none;
+            padding: 16px 50px;
+            background: rgb(144, 44, 174);
+            ;
+            color: white;
+            font-size: 16px;
+            border-radius: 40px;
+
+        }
+
+        ul li {
+            list-style: none;
+            font-size: 17px;
+            padding: 12px 8px 12px 50px;
+            /* user-select: none; */
+            cursor: pointer;
+            position: relative;
+
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            /* border-radius: 50%; */
+            background-image: url(./uncheck.png);
+            background-color: #ff5945;
+            background-size: cover;
+            background-position: center;
+            top: 12px;
+            left: 8px;
+
+        }
+
+
+        .checked {
+            color: #555;
+            text-decoration: line-through;
+        }
+
+        .checked::before {
+            background-image: url(./checked.jpg);
+
+        }
+
+        span {
+            position: absolute;
+            right: 0;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            font-size: 22px;
+            text-align: center;
+        }
+
+
+        span:hover {
+            background-color: #55555537;
+            border-radius: 20px;
+            height: 40px;
+            width: 40px;
+        }
+
+        #list-container {
+            background-color: rgba(128, 128, 128, 0.082);
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="app">
+            <h2> <img src="./todo1.png">To-Do-List</h2>
+            <div class="row">
+                <input type="text" id="input" placeholder="Add a new task">
+                <button id="btn">Add</button>
+            </div>
+            <!-- <input type="text" placeholder="duration" id="input1"> -->
+            <ul id="list-container">
+                <!-- <li class="checked">1</li>
+            <li>2</li>
+            <li>3</li> -->
+            </ul>
+
+        </div>
+    </div>
+    <script>
+        let input = document.getElementById("input")
+                // let input1 = document.getElementById("input1")
+        let button = document.getElementById("btn")
+        let listcontainer = document.getElementById("list-container")
+
+        button.addEventListener("click", () => {
+            if (input.value === "") {
+                alert("You must write something!")
+            } else {
+                let li = document.createElement("li")
+                li.innerHTML = input.value;
+                listcontainer.append(li);
+                let span = document.createElement("span")
+                span.innerText = "\u00d7";
+                li.appendChild(span)
+
+                let div = document.createElement("div")
+                li.appendChild(div)
+                div.innerHTML = "1hour"
+                div.style.position = "absolute"
+                div.style.left = "290px"
+                div.style.bottom = "14px"
+                div.style.backgroundColor = "lightgray"
+                div.style.borderRadius = "20px"
+                div.style.width = "70px"
+                div.style.textAlign = "center"
+
+
+
+
+                // btn1.style.marginLeft="140px"
+                // btn1.style.width="10px"
+
+                // font-size: 22px;
+                // text-align: center;
+            }
+            input.value = ""
+        })
+        listcontainer.addEventListener("click", (e) => {
+            if (e.target.tagName === "LI") {
+                e.target.classList.add("checked");
+            } else if (e.target.tagName === "SPAN") {
+                e.target.parentElement.remove();
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-container{
+            display: grid;
+            grid-template-columns: 50px repeat(15,54px);
+            grid-template-rows: 28px repeat(5,54px);
+            height: 60vh;
+            gap: 7px;
+            background-color: antiquewhite;
+            width: 180vh;
+            margin-left: 80px;
+            padding-left: 50px;
+            margin-top: 40px;
+          padding: 20px;
+        
+        }
+        .child{
+            background-color: gray;
+            color: white;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            text-align: center;
+           place-content: center;
+          
+        }
+         .child1{
+            grid-area: 1/1/2/2;
+         }
+          .child2{
+            grid-area: 1/2/2/3;
+         } .child3{
+            grid-area: 1/3/2/4;
+         } .child4{
+            grid-area: 1/4/2/5;
+         } .child5{
+            grid-area: 1/5/2/6;
+         } .child6{
+            grid-area: 1/6/2/7;
+         } .child7{
+            grid-area: 1/7/2/8;
+         } .child8{
+            grid-area: 1/8/2/9;
+         }
+         .child9{
+            grid-area: 1/9/2/10;
+         } .child10{
+            grid-area: 1/10/2/11;
+         } .child11{
+            grid-area: 1/11/2/12;
+         } .child12{
+            grid-area: 1/12/2/13;
+         } .child13{
+            grid-area: 1/13/2/14;
+         } .child14{
+            grid-area: 1/14/2/15;
+         } .child15{
+            grid-area: 1/15/2/16;
+         } .child16{
+            grid-area: 1/16/2/17;
+         }
+
+         
+
+          .child17{
+            grid-area: 2/1/3/2;
+         } .child18{
+            grid-area: 2/2/3/3;
+         } .child19{
+            grid-area: 2/3/3/4;
+         } .child20{
+            grid-area: 2/4/3/5;
+         } .child21{
+            grid-area: 2/5/3/6;
+         } .child22{
+            grid-area: 2/6/3/7;
+         } .child23{
+            grid-area: 2/7/3/8;
+         } .child24{
+            grid-area: 2/8/3/9;
+         } .child25{
+            grid-area: 2/9/3/10;
+         } .child26{
+            grid-area: 2/10/3/11;
+         } .child27{
+            grid-area: 2/11/3/12;
+         } .child28{
+            grid-area: 2/12/3/13;
+         } .child29{
+            grid-area: 2/13/3/14;
+         } .child30{
+            grid-area:2/14/3/17;
+         }
+
+         
+         .child31{
+            grid-area:3/1/4/3;
+         }
+         .child32{
+            grid-area:3/3/4/4;
+         }
+        .child33{
+            grid-area:3/4/4/5;
+         }
+        .child34{
+            grid-area:3/5/4/6;
+         }
+        .child35{
+            grid-area:3/6/4/7;
+         }
+        .child36{
+            grid-area:3/7/4/8;
+         }
+         .child37{
+            grid-area:3/8/4/9;
+         }
+        .child38{
+            grid-area:3/9/4/10;
+         }
+          .child39{
+            grid-area:3/10/4/11;
+         }
+          .child40{
+            grid-area:3/11/4/12;
+         }
+          .child41{
+            grid-area:3/11/4/12;
+         }
+         .child42{
+            grid-area:3/12/4/13;
+         }
+          .child43{
+            grid-area:3/13/4/14;
+         }
+          .child44{
+            grid-area:3/14/4/17;
+         }
+
+
+         .child45{
+            grid-area: 4/1/5/3;
+         }.child46{
+            grid-area: 4/3/5/4;
+         }.child47{
+            grid-area: 4/4/5/5;
+         }.child48{
+            grid-area: 4/5/5/6;
+         }.child49{
+            grid-area: 4/6/5/7;
+         }.child50{
+            grid-area: 4/7/5/8;
+         }.child51{
+            grid-area: 4/8/5/9;
+         }.child52{
+            grid-area: 4/9/5/10;
+         }.child53{
+            grid-area: 4/10/5/11;
+         }.child54{
+            grid-area: 4/11/5/12;
+         }.child55{
+            grid-area: 4/12/5/13;
+         }.child56{
+            grid-area: 4/13/5/14;
+         }.child57{
+            grid-area: 4/14/5/17;
+         }
+
+
+         .child58{
+            grid-area: 5/1/6/4;
+         }
+         .child59{
+            grid-area: 5/4/6/5;
+         }.child60{
+            grid-area: 5/5/6/6;
+         }.child61{
+            grid-area: 5/6/6/7;
+         }.child62{
+            grid-area: 5/7/6/8;
+         }.child63{
+            grid-area: 5/8/6/9;
+         }.child64{
+            grid-area: 5/9/6/10;
+         }.child65{
+            grid-area: 5/10/6/11;
+         }.child66{
+            grid-area: 5/11/6/12;
+         }.child67{
+            grid-area: 5/12/6/13;
+         }.child68{
+            grid-area: 5/13/6/14;
+         }.child69{
+            grid-area: 5/14/6/17;
+         }
+
+
+
+
+         .child70{
+            grid-area: 6/1/7/3;
+         }.child71{
+            grid-area: 6/3/7/4;
+         }.child72{
+            grid-area: 6/4/7/5;
+         }.child73{
+            grid-area: 6/5/7/6;
+         }.child74{
+            grid-area: 6/6/7/12;
+         }
+         .child75{
+            grid-area: 6/11/7/12;
+            
+         }.child75{
+            grid-area: 6/12/7/13;
+         }.child76{
+            grid-area: 6/13/7/13;
+         }.child77{
+            grid-area: 6/14/7/14;
+         }.child78{
+            grid-area: 6/15/7/14;
+         }.child79{
+            grid-area: 6/16/7/15;
+         }.child80{
+            grid-area: 6/17/7/16;
+         }
+
+         .s{
+            font-size: 14px;
+            position: relative;
+            bottom: 10px;
+         }
+    </style>
+</head>
+<body>
+    <div class="div-container">
+        <div class="child child1">Esc</div>
+        <div class="child child2">F1</div>
+        <div class="child child3">F2</div>
+        <div class="child child4">F3</div>
+        <div class="child child5">F4</div>
+        <div class="child child6">F5</div>
+        <div class="child child7">F6</div>
+        <div class="child child8">F7</div>
+        <div class="child child9">F8</div>
+        <div class="child child10">F9</div>
+        <div class="child child11">F10</div>
+        <div class="child child12">F11</div>
+        <div class="child child13">F12</div>
+        <div class="child child14">Insert</div>
+        <div class="child child15">PrtSc</div>
+        <div class="child child16">Delete</div>
+
+
+
+        <div class="child child17">`<sup class="s">~</sup></div>
+        <div class="child child18">1<sup class="s">!</sup></div>
+        <div class="child child19">2<sup class="s">@</sup></div>
+        <div class="child child20">3<sup class="s">#</sup></div>
+        <div class="child child21">4<sup class="s">$</sup></div>
+        <div class="child child22">5<sup class="s">%</sup></div>
+        <div class="child child23">6<sup class="s">^</sup></div>
+        <div class="child child24">7<sup class="s">&</sup></div>
+        <div class="child child25">8<sup class="s">*</sup></div>
+        <div class="child child26">9<sup class="s">(</sup></div>
+        <div class="child child27">0<sup class="s">)</sup></div>
+        <div class="child child28">-<sup class="s">_</sup></div>
+        <div class="child child29">=<sup class="s">+</sup></div>
+        <div class="child child30">Backspace</div>
+        
+        
+    
+        <div class="child child31">Tab</div>
+        <div class="child child32">Q</div>
+        <div class="child child33">W</div>
+        <div class="child child34">E</div>
+        <div class="child child35">R</div>
+        <div class="child child36">T</div>
+        <div class="child child37">Y</div>
+        <div class="child child38">U</div>
+        <div class="child child39">I</div>
+        <div class="child child40">O</div>
+        <div class="child child41">P</div>
+        <div class="child child42">{</div>
+        <div class="child child43">}</div>
+        <div class="child child44">|</div>
+
+
+
+        <div class="child child45">CapsLk</div>
+        <div class="child child46">A</div>
+        <div class="child child47">S</div>
+        <div class="child child48">D</div>
+        <div class="child child49">F</div>
+        <div class="child child50">G</div>
+        <div class="child child51">H</div>
+        <div class="child child52">J</div>
+        <div class="child child53">K</div>
+        <div class="child child54">L</div>
+        <div class="child child55">:</div>
+        <div class="child child56">"</div>
+        <div class="child child57">Enter</div>
+
+
+
+        <div class="child child58">Shift</div>
+        <div class="child child59">Z</div>
+        <div class="child child60">X</div>
+        <div class="child child61">C</div>
+        <div class="child child62">V</div>
+        <div class="child child63">B</div>
+        <div class="child child64">N</div>
+        <div class="child child65">M</div>
+        <div class="child child66">,</div>
+        <div class="child child67">></div>
+        <div class="child child68">?</div>
+        <div class="child child69">Shift</div>
+
+
+        
+        <div class="child child70">Ctrl</div>
+        <div class="child child71">Fn</div>
+        <div class="child child72">WIN</div>
+        <div class="child child73">Alt</div>
+        <div class="child child74"></div>
+        <div class="child child75">Alt</div>
+        <div class="child child76">Ctrl</div>
+        <div class="child child77">Home</div>
+        <div class="child child78">up</div>
+        <div class="child child79">dn</div>
+        <div class="child child80">End</div>
+      
+
+    </div>
+</body>
+</html>

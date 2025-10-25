@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a promise is an obj representing eventual ccmpletion(or failure)of an asynchronus operation
+
+    this promise obj allows you to register callback(using methods like .then() and .catch() that will be executed once 
+    the operation completes successfully or fails)
+
+    promise states
+    1.pending :the initial state ,the operation has not yet completed
+    2.fulfilled(or resolved):the operation completed sucessfully,and the promise has resulting value
+    3.Rejected:the operation failed,and the promise has a reason for the failure
+
+    unsettled state means 1 
+    settled states are 2&3
+    once a promise is setted its state cannot be changed again
+
+
+    creating 
+    1.resolve(value)
+    2.reject(reason) -->
+
+<script>
+    // console.log("Start")
+    // // console.log("middle")
+    // setTimeout(()=>console.log("middle"),2000)
+    // console.log("end")
+
+
+    function  getPizza(callback){
+      console.log("ordering pizza")
+      setTimeout(()=>{
+        console.log("pizza has arrived")
+        callback()
+      },2000)
+    }
+
+    function doDishes(){
+        console.log("Washing dishes")
+    }
+     getPizza(doDishes)
+     console.log("Watching insta while i waitS")
+</script>
+
+</body>
+</html>

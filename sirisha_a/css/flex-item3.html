@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 100vh;
+            width: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .m2{
+            display: flex;
+             gap: 20px;  
+            height: 40vh;
+          
+        }
+        .row1{
+            background-color: green;
+            padding: 10px;
+            color: white;
+            text-align: center;
+
+        }
+        .row2{
+            background-color: chartreuse;
+            width: 40vh;
+            text-align: center;
+            place-content: center;
+            color: white;
+        }
+        .m3{
+            background-color: orange;
+            height: 40vh;
+            width: 70vh;
+              display: flex; 
+            gap: 10px;
+            align-items: end;
+            justify-content: space-evenly; 
+        }
+        .row21{
+            background-color: yellow;
+            height: 90px;
+            width: 90px;
+           place-content: center;
+           text-align: center;
+           color: white;
+           margin-bottom: 20px;
+         }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="row1">Header</div>
+        <div class="m2">
+            <div class="row2">Aside</div>
+            <div>
+               <div class="m3">
+                <div style= "display: flex; gap: 30px;">
+                 <div class="row21">Image</div>
+                 <div class="row21">Image</div>
+                 <div class="row21">Image</div>
+                 </div>
+               </div>
+            </div>
+        </div>
+        <div class="row1">Footer</div>
+    </div>
+</body>
+</html>

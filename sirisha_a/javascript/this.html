@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let person = {
+        //     name: "NTR",
+        //     age: 42,
+        //     location: "Hyderabad",
+        //     walk: function () {
+        //         console.log(`${this.name} is walking`);
+        //     }
+        // };
+        // person.walk();
+
+
+
+        // function expression lo matrame this work avunthundhi (this refers to obj)
+        // in arrow fun this doesnot work
+
+
+        // this is determined at call time,not definition time
+        // its value depends on how the function is called
+        // in strict mode,global this is undefined
+        // Arrow function doesnot have their own this binding
+
+
+        // four binding ReadableStreamBYOBRequest
+        // 1.default binding
+        // when there is no context it refers to global
+
+
+
+        //  no context-this refers to window obj
+        //  in strict mode-undefined
+        // "use strict";
+        // function obj() {
+        //     console.log(this)
+        //     this.alert("hi");
+        //     // this.close();
+        // }
+        // obj()
+
+
+
+        //2.implicit binding of 'this'
+
+        let person = {
+            name: "NTR",
+            age: 42,
+            location: "Hyderabad",
+            walk() {
+                //this is implicit bnding of "this"
+                console.log(`${this.name} is walking`);
+            },
+            eat: function () {
+                //this is implicit bnding of "this"
+                console.log(`${this.name} is eating`);
+            },
+            sleep: () => {
+                //this is undefined
+                console.log(`${this.name} is sleeping`);
+            },
+        };
+        // person.walk();
+        // person.eat();
+        // person.sleep();
+
+
+        //3.explicit binding of this
+        function greet() {
+            console.log(`Hello,${this.name}`);
+        }
+        const alice = { name: "Alice" };
+        greet.call(alice)
+    </script>
+</body>
+
+</html>

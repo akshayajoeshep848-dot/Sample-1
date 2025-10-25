@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Age Validation</title>
+</head>
+<body>
+    <h2>UPSC Age Validation</h2>
+    <script>
+        let category=prompt("Enter your category")
+        let age=prompt("Enter your age")
+        if (category=="General"){
+          console.log(`You are in ${category} category`);
+         if( age<0 || age>140){
+            console.log("Enter valid age");
+         }else if(age>=0 && age<21){
+            console.log("You are not eligible")
+         }else if(age>=21 && age<=32){
+          console.log("You are eligible to write the UPSC exam")
+         }else{
+            console.log(`You are exceeded your age limit for ${category} category`)
+         }
+         }if (category=="SC"||"ST"){
+         console.log(`You are in ${category} category`);
+         if( age<0 || age>140){
+            console.log("Enter valid age");
+         }else if(age>=0 && age<21){
+            console.log("You are not eligible")
+         }else if(age>=21 && age<=37){
+          console.log("You are eligible to write the UPSC exam")
+         }else{
+            console.log(`You are exceeded your age limit for ${category} category`)
+         }
+         }if (category=="OBC"){
+         console.log(`You are in ${category} category`);
+         if( age<0 || age>140){
+            console.log("Enter valid age");
+         }else if(age>=0 && age<21){
+            console.log("You are not eligible")
+         }else if(age>=21 && age<=35){
+          console.log("You are eligible to write the UPSC exam")
+         }else{
+            console.log(`You are exceeded your age limit for ${category} category`)
+         }
+         }if (category=="PD"){
+         console.log(`You are in ${category} category`);
+         if( age<0 || age>140){
+            console.log("Enter valid age");
+         }else if(age>=0 && age<21){
+            console.log("You are not eligible")
+         }else if(age>=21 && age<=42){
+          console.log("You are eligible to write the UPSC exam")
+         }else{
+            console.log(`You are exceeded your age limit for ${category} category`)
+         }
+        }
+
+        // if(0)
+        // if("") is false null false undefined
+    </script>
+    
+</body>
+</html>

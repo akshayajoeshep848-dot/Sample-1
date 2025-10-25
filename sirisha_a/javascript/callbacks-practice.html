@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="123">click me</button>
+    <p id="para"></p>
+    <script>
+        // function a(b) {
+        //     b()
+        //     console.log("function a")
+        //     // console.log(c)
+        //     // b()
+
+        // }
+        // function b() {
+        //     console.log("function b")
+        // }
+        // // console.log(a)
+        // // console.log(b)
+
+
+        // a(b)
+
+
+
+        //     function main(subfun){
+        //         let name="abc"
+        //         subfun(name);
+        //     }
+        //     function subfunction(name){
+        //         console.log(`hi ${name}`)
+        //     }
+        //     main(subfunction)
+
+
+        // buttn = document.getElementById("123")
+        // para = document.getElementById("para")
+        // buttn.addEventListener("click", () => {
+        //     para.innerText = "Hi"
+        // })
+
+
+        // console.log("Start")
+        // setTimeout(()=>{
+        //     console.log("inside the set time out")
+        // },2000)
+        // console.log("End")
+
+
+        let callback = () => {
+            console.log("inside the set time out")
+        }
+        console.log("Start")
+        setTimeout(callback, 2000)
+        console.log("End")
+
+
+
+        setTimeout(() => {
+            console.log("fisrt set time out")
+            setTimeout(() => {
+                console.log("second set time out")
+                setTimeout(() => {
+                    console.log("second set time out")
+
+                }, 2000)
+            }, 2000)
+        }, 2000);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- create element method -->
+    <!-- the create element method creates an html element specified by tag neme
+    but it is not yet part of the dom tree -->
+    <h1>Js dom</h1>
+    <div id="container"></div>
+
+    <script>
+        //creating h1 element
+        let heading2 = document.createElement("h2");
+        heading2.innerText = "h2 create by createElement method"
+        let container = document.getElementById("container");
+        container.append(heading2)
+
+        // document.body.append(heading2)
+        //creating list element
+        let orderedList = document.createElement("ol");
+
+        // let listItem1=document.createElement("li");
+        // listItem1.innerText="Item 1";
+        // let listItem2=document.createElement("li");
+        // listItem2.innerText="Item 2";
+
+
+        //  orderedList.append(listItem1);
+        //   orderedList.append(listItem2);
+        //for loop to create 5 li element and append
+
+        for (let i = 0; i < 5; i++) {
+            let listItem = document.createElement("li");
+            listItem.innerText = `Item ${i + 1}`;
+            orderedList.append(listItem)
+        }
+
+        document.body.append(orderedList)
+        //  document.body.style.backgroundColor="red"
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-container{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(5,5fr);
+            gap: 10px;
+            grid-template-areas: 
+            "item1 . . . item2"
+            ". item3 . item4 ."
+            ". . item5 . ."
+            ". item6 . item7 ."
+            "item8 . . . item9";
+        }
+    .div-item{
+        background-color: brown;
+    }
+    .div-item1{
+        grid-area:item1;
+    } .div-item2{
+        grid-area:item2;
+    }
+     .div-item3{
+        grid-area:item3;
+    }
+     .div-item4{
+        grid-area:item4;
+    }
+     .div-item5{
+        grid-area:item5;
+    }
+     .div-item6{
+        grid-area:item6;
+    }
+     .div-item7{
+        grid-area:item7;
+    }
+     .div-item8{
+        grid-area:item8;
+    }
+     .div-item9{
+        grid-area:item9;
+    }
+    </style>
+</head>
+<body>
+     <div class="div-container">
+            <div class="div-item div-item1">Header</div>
+            <div class="div-item div-item2">Footer</div>
+            <div class="div-item div-item3">Header1</div>
+            <div class="div-item div-item4">Content</div>
+            <div class="div-item div-item5">Footer1</div>
+            <div class="div-item div-item6">Rightnav1</div>
+            <div class="div-item div-item7">Leftnav1</div>
+            <div class="div-item div-item8">Leftnav</div>
+            <div class="div-item div-item9">Rightnav</div>
+           </div>
+  
+</body>
+</html>

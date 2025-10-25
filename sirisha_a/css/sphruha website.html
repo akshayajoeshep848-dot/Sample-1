@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <style>
+         *{
+            margin:0
+        }
+        .main{
+            background-color: black;
+              width: 150px;
+              padding: 8px;
+             border-top-left-radius: 13px;
+             
+        }
+        .l2{
+            background-color:black;
+            width: 15px;
+            height: 1px;
+            position: relative;
+            display: flex;
+             left: 60px;
+            border: 1px solid ;
+            border-radius: 20px;
+             top: 20px;
+        }
+        .l2::before{
+            content: '';
+            background-color:black;
+            width: 22px;
+            height: 1px;
+            position: absolute;
+          top:6px;
+           border: 1px solid ;
+            border-radius: 20px;
+        }
+         .l2::after{
+            content: "";
+            background-color:black;
+            width: 22px;
+            height: 1px;
+            position: absolute;
+            top: -8px;
+            border: 1px solid ;
+            border-radius: 20px;
+         }
+
+         .input{
+            padding-left: 120px;
+        
+         }
+         .search{
+            position: relative;
+            background-color: blue;
+            width: 30px;
+           
+         }
+         button{
+            background-color: blue;
+            color: white;
+         }
+      .moon{
+        padding-left: 200px;
+        padding-top: 10px;
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.692);
+      }
+      .flag{
+        border-radius: 20px;
+       position: relative;
+       left: 27px;
+       top: 9px;
+      }
+      .screen{
+        position: relative;
+       left: 50px;
+       top: 9px;
+       font-size: 20px;
+     color: rgba(0, 0, 0, 0.532);
+      }
+      .bell{
+          position: relative;
+       left: 70px;
+       top: 9px;
+       font-size: 20px;
+     color: rgba(0, 0, 0, 0.692);
+      }
+      .img{
+        width: 40px;
+        height: 40px;
+           position: relative;
+       left: 90px;
+      
+      }
+    </style>
+    </style>
+</head>
+<body>
+</head>
+<body>
+    <div class="main" style="display: flex;">
+        <div class="c"><img src="./logo-light.fc55873e.png" class="logo"></div>
+        <div class="main1">
+            <div class="l2"></div>
+             <div class="input" style="display: flex;">
+              <select style="padding: 11px; padding-left: 30px; ">
+                <option >Choose One</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+            </select>
+            <input type="text">
+              <button><i class="fa fa-search"></i></button>
+             <div class="moon"> <i class="fa fa-moon header-icons"></i></div>
+               <img src="https://flagcdn.com/w320/us.png" width="20px" height="20px" alt="US Flag" class="flag">
+              <div class="screen"><i class="fa-solid fa-expand"></i></div>
+                <div class="bell"><i class="fa-solid fa-bell"></i></div>
+               
+             <div><img src="./msg.png"  class="img"></div>
+            </div>
+    
+            </div>
+    </div>        
+</body>
+</html>

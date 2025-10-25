@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    //classes inheritance
+    <script>
+        class Pet {
+            constructor(petType, name) {
+                this.petType = petType;
+                this.name = name;
+            }
+
+            eat() {
+                console.log(`${this.name} is eating`)
+            }
+        }
+        //create a class based on pet
+        //extends means use from another class pert is parent class and dog is child class
+        
+        class Dog extends Pet {
+            constructor(petType, name, breed) {
+                //parent lo anni child ki vastai by using super
+                super(petType, name);
+                this.breed = breed;
+            }
+
+        }
+
+        let dog1 = new Dog("Dog", "Luci", "kukka")
+        console.log(dog1.petType)
+        console.log(dog1.name);
+        console.log(dog1.breed)
+        dog1.eat()
+
+    </script>
+
+    <script>
+        class Car {
+            constructor(make, model) {
+                this.make = make;
+                this.model = model
+            }
+        }
+        let car1 = new Car("benz", "camry")
+        console.log(car1.model)
+        console.log(car1.make)
+    </script>
+
+    <script>
+        class Dog1 {
+            constructor(breed="Mutt") {
+                this.breed = breed;
+            }
+        }
+        let dog2 = new Dog1()
+        console.log(dog2.breed)
+    </script>
+
+
+<script>
+    class Vehicle{
+        constructor(name,colour){
+            this.name=name;
+            this.colour=colour
+        }
+    }
+    class Motorcycle extends Vehicle{
+        constructor(name,colour,milage){
+            super(name,colour)
+            this.milage=milage
+        }
+    }
+    let moter=new Motorcycle("bike","black","200km")
+    console.log(moter.name)
+     console.log(moter.colour)
+
+</script>
+</body>
+
+</html>

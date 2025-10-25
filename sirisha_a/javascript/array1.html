@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>let emptyarray=[];//empty array
+    let fruits=["Apple","Banana","Grapes"];//array of strings
+    fruits.push("pineapple")
+    let numbers=[1,2,3,4,5];//array of numbers
+    let mixedarray=[10,"hello",true,{name:"alice"},[6,7]];//array with mixed data types
+    console.log(fruits);
+    console.log(mixedarray.length)
+    console.log(mixedarray[3].name)
+     console.log(mixedarray[3]["name"])
+     console.log(mixedarray[4][0]);
+
+     let student={
+        name:"abc",
+        age:23,
+        college:"st marys",
+        id:'0001',
+        address:{
+            line1:"H.NO 553",
+            line2:"Jubilee hills road no 29",
+            city:"hyderabad",
+            state:"telangana",
+            pincode:500034
+        },
+        movies:["deavara","war2"],
+        awards:[{
+             name:"Best Dancer",
+             type:"",
+             year:1996,
+             movie:""
+
+        },{
+             name:"Best Actor",
+             type:"Nandi award",
+             year:2016,
+             movie:"Nanna ki prematho"
+        },{
+             name:"Best Actor",
+             type:"Nandi award",
+             year:2007,
+             movie:"Simhadri"
+        }
+    ]
+     }
+     console.log(student.movies[0]);
+     console.log(student.awards[0]["name"]);
+     console.log(student.address.line1)
+    </script>
+    <script>
+        //use array constructor
+        let arr1=new Array();//empty array
+        let arr2=new Array("red","white","green");
+        let arr3=new Array(4);//undefined
+        arr3[0]="gulab jamun";//add values
+        arr3[1]="kaju laddu";
+        arr3[2]="kaju"
+
+        console.log(arr2[0]);
+        console.log(arr1);
+        console.log(arr3);
+        console.log(arr3[0]);
+        console.log(arr3[1]);
+        console.log(arr3[2]);
+
+      
+    </script>
+
+    <script>
+        //push 
+      let fruit=["Apple","Banana","Grapes"];
+      fruit.push("pineapple","mango");
+      console.log(fruit)
+
+      let fruitss=["Apple","Banana","Grapes","pineapple"];
+      fruitss.pop();
+      console.log(fruitss)
+    
+     
+      let fruit3=["Apple","Banana","Grapes","pineapple"];
+      fruit3.unshift("mango")
+      console.log(fruit3);
+       
+      let fruit4=["Apple","Banana","Grapes","pineapple"];
+      fruit4.shift("Apple")
+      console.log(fruit4)
+    
+       let fruit5=["Apple","Banana","Grapes","pineapple"];
+      fruit5.reverse()
+      console.log(fruit5)
+
+      
+
+     
+    </script>
+ <script>
+      let nam="sirisha";
+       console.log(nam);
+       console.log(nam.split("").reverse().join(""));
+
+      let str="sirisha";
+       rev="";
+       for(let i=str.length-1 ;i>=0;i--){
+        rev=rev+str[i];
+       }
+       console.log(rev)
+
+ </script>
+
+  <script>
+       let hero="prabhas";
+       let hero_arr=hero.split("");
+      for(let i=0;i<hero.length;i++){
+        console.log(hero_arr.join(""));
+         hero_arr.shift();
+         
+      }
+  </script>
+
+    <!--input parameters
+        output parameters  
+        where to use -->
+
+</body>
+</html>

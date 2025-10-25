@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+    function getSuccess(){
+         return new Promise((resolve)=>{
+            resolve("Operation Successful!");
+         });
+     }
+     getSuccess().then((msg)=>console.log(msg))
+    </script> -->
+
+    <script>
+        function getFailure() {
+            return new Promise((resolve,reject) => {
+                reject("Operation Failed!")
+            })
+        }
+        getFailure()
+            // .then((msg) => console.log(msg))
+            .catch((err) => console.log(err))
+
+    </script>
+
+    <!-- <script>
+        function delayedResolve(ms){
+            return new Promise(resolve=>{
+                setTimeout(()=>{
+                   resolve(`resolved after ${ms} ms`)
+                },ms)
+               
+            })
+        }
+        delayedResolve(2000).then((msg)=>console.log(msg))
+    </script> -->
+
+
+<!-- <script>
+    function delayedRejecton(ms){
+        return new Promise((resolve,reject)=>{
+             reject(`Rejected after ${ms}ms`)
+        },ms)
+    }
+    delayedRejecton(2000).catch((err)=>console.log(err))
+</script> -->
+
+<!-- <script>
+    function checkValue(value){
+        return new Promise((resolve,reject)=>{
+       if(value){
+            resolve("Value is true")
+        }else{
+            reject("Value is false")
+        }
+        })
+    }
+    checkValue(3>3)
+    .then((msg)=>console.log(msg))
+    .catch((err)=>console.log(err))
+</script> -->
+
+<script>
+    function asResolved(data){
+        return Promise.resolve(data)
+    }
+
+    asResolved("This is static method").then((data)=>console.log(data))
+</script>
+
+<script>
+    function asRejected(errorMessage){
+        return Promise.reject(errorMessage)
+    }
+   
+    asRejected("hloo").catch((err)=>console.log(err))
+</script>
+
+
+<script>
+  const myPromise = new Promise((resolve,reject)=>{
+    let sucess=false;
+
+    if(sucess){
+        resolve("Operation succeeded")
+    }else{
+        reject("operation failed")
+    }
+  })
+
+  myPromise
+  .then(msg=>console.log(msg))
+  .catch(err=>console.log(err))
+</script>
+
+
+<script>
+    function wait(ms){
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+              resolve(`waited for ${ms} millisec`)
+            },ms)
+         
+        })
+    }
+    wait(200).then(console.log);
+
+</script>
+</body>
+
+
+
+
+
+</html>

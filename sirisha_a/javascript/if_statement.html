@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>if statement</h2>
+    <!-- decision making -->
+    <script>
+    // let age=21;
+    // 
+    </script>
+    <!-- <script>
+        let age1=prompt("please enter your age");
+        if(Number(age1)>0 && Number(age1)<18){
+        console.log("you are not eligible to vote")
+        }else if(Number(age1)>=18 && Number(age1)<21){
+            console.log("you are eligible to vote")
+        } else if(Number(age1)>=21){
+             console.log("you are eligible to mary")
+        }
+        else{
+            console.log("Enter a valid age")
+        }
+    </script> -->
+    
+    <script>
+         let age=prompt("please enter your age");
+         if (age<0){
+            console.log("Negative age is not allowed");
+          }else if(age>140){
+            console.log("please enter valid age");
+         }     //  if(age<0 || age<140){
+              // console.log("please enter a valid age" );
+             //  }
+         else if (age>=0 && age<18){
+         console.log("you are not eligible to vote");
+         }else if(age>=18 &&  age<21){
+         console.log("you are eligible to vote,but not eligible to get married");
+         }
+         else {
+            console.log("you are eligible to vote and also to get married legally");
+         }
+
+
+    </script>
+
+</body>
+</html>

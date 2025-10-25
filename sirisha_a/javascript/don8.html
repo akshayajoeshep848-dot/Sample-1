@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <button onclick="showitems(vegetables)">get vegetables</button>
+    <button onclick="showitems(fruits)">get fruits</button>
+
+    <script>
+       let fruits=["apple","banana","grapes","kiwi"];
+       let vegetables=["tomota","potato","cucumber","onion"];
+
+       let orderlist=document.createElement("ol");
+       document.body.append(orderlist);
+       function showitems(array){
+        orderlist.innerHTML=""
+        for(let i=0;i<array.length;i++){
+            let list=document.createElement("li");
+            list.innerText=array[i];
+            orderlist.append(list)
+        }
+       }
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 18px;
+        }
+
+        .main {
+            background-color: rgba(128, 128, 128, 0.336);
+            height: 300px;
+            width: 530px;
+            margin-left: 350px;
+            border: 1px solid rgba(0, 0, 0, 0.256);
+        }
+
+        #ages {
+            margin-top: 40px;
+            margin-left: 70px;
+            padding: 7px;
+            margin-bottom: 10px;
+        }
+
+
+        label {
+            margin-left: 60px;
+        }
+
+        .male {
+            margin-left: 60px;
+
+        }
+
+        .female {
+            margin-left: 40px;
+
+        }
+
+        #input1,
+        #input2 {
+            margin-left: 50px;
+            margin-top: 10px;
+            padding: 7px;
+
+        }
+
+        button {
+            margin-left: 170px;
+            margin-top: 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: none;
+            background-color: green;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        .b {
+            background-color: rgba(128, 128, 128, 0.653);
+            position: relative;
+            bottom: 62px;
+            padding: 9px;
+            left: 150px
+        }
+
+        h2 {
+            color: #003367;
+            font-weight: bolder;
+            margin-left: 480px;
+        }
+
+        .div2 {
+            display: flex;
+            margin-top: 30px;
+            gap: 15px;
+            color: white;
+            place-content: center;
+            text-align: center;
+
+        }
+
+        .c {
+            background-color: orange;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .c1 {
+            background-color: forestgreen;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .c2 {
+            background-color: rgba(255, 68, 0, 0.879);
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+        }
+
+        .c3 {
+            background-color: red;
+            padding-right: 30px;
+            padding-left: 3%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            /* place-content: center; */
+            text-align: center;
+        }
+
+        .bn {
+            background-color: palevioletred;
+            width: 300px;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>BMI Calculator</h2>
+    <div class="main">
+
+        <div>
+            <label for="age">Age</label>
+            <input id="ages" required></input>
+
+            <label for="age">Ages : 2-120</label>
+
+        </div>
+        <div>
+            <label for="gender">Gender</label>
+            <label for="male" class="male">Male</label>
+            <input id="male" type="radio" name="gender" required></input>
+            <label for="female" class="female">Female</label>
+            <input id="female" type="radio" name="gender" required></input>
+
+        </div>
+        <div>
+            <label for="input1">Height</label>
+            <input id="input1" required></input>
+
+        </div>
+
+        <div>
+            <label for="input2">Weight</label>
+            <input id="input2" required></input>
+        </div>
+        <div><button id="btn">Calculate</button></div>
+        <button class="b">Clear</button>
+    </div>
+
+    <div class="div2">
+        <div class="c">Underweight <span>&lt</span> 18.5</div>
+        <div class="c1">Normal Weight 18.5-25</div>
+        <div class="c2">Overweight 25-30</div>
+        <div class="c3">Obese <span>&gt</span> 30</div>
+    </div>
+    
+
+    <script>
+        // let heading=document.createElement("h2")
+        // heading.textContent="BMI Calculator"
+        // document.body.append(heading)
+
+        let age = document.getElementById("ages")
+
+        let gender = document.getElementById("gender")
+        let male = document.getElementById("male")
+        let female = document.getElementById("female")
+        let height = document.getElementById("input1")
+        let weight = document.getElementById("input2")
+        let button = document.getElementById("btn")
+       
+       
+
+
+        button.addEventListener("click", () => {
+            //  event.preventDefault();
+
+          
+            let h = parseFloat(height.value);
+            let w = parseFloat(weight.value);
+            let a=Number(age.value)
+             if(a>120 || a<2){
+            alert("please enter valid age")
+            return
+           }
+             if (h <= 0 || w <= 0) {
+                alert("Please enter valid height and weight!");
+                return;
+            }
+            h1 = h / 100
+            let bmi = w / (h1 * h1)
+            let bn = document.createElement("button")
+            bn.classList.add("bn")
+            document.body.append(bn)
+            bn.textContent = "BMI="
+            bn.append(bmi.toFixed(2))
+            // document.body.append("BMI=",bmi.toFixed(1))
+            //   console.log(bmi)
+
+          
+            if(bmi<18.5){
+               alert("You are underweight")
+               return;
+                
+            }
+            else if(bmi>=18.5 && bmi<25){
+               alert("You are Normal weight")
+               return;
+              
+            }
+             else if(bmi>=25 && bmi<30){
+               alert("You are Overweight")
+               return;
+            }
+            else{
+                alert("You are obese")
+                return;
+            }
+        })
+   
+     
+
+    </script>
+
+</body>
+
+</html>

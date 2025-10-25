@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css box model</title>
+    <style>
+       .s{
+        background-color: aquamarine;
+        color: red;
+        padding: 20px;
+        margin: 80px;
+       padding-left: 125px;
+        font-size: 30px;
+        border: 2px dotted green;
+        box-shadow: 20px 30px 50px 10px grey inset;
+       }
+       div:hover{
+       
+         box-shadow: 20px 30px 50px 10px grey;
+       }
+       div:active{
+        transform: scale(0.9) translate(10px,10px);
+       }
+
+     .s1{
+        background-color: aquamarine;
+        color: red;
+        padding: 20px;
+        margin: 80px;
+        padding-left: 125px;
+        font-size: 30px;
+        border: 2px solid green;
+        box-shadow: 4px 4px red, 6px 6px blue ,8px 8px gray,12px 12px yellow;
+     }
+    div{
+      
+        color: red;
+        padding: 20px;
+        margin: 80px;
+       padding-left: 125px;
+        font-size: 30px;
+        border: 2px solid blue;
+        box-shadow: 0 0px 20px 2px black inset;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="s">Element</div>
+    <div class="s1">Element</div>
+    <div>Element</div>
+
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>while loop</h3>
+    <!-- <script>
+       let i=0;
+       while(i<3){
+        console.log(`current value of i:${i}`);
+        i++;
+       }
+    </script> -->
+
+    //do while
+     <!-- <script>
+        let j=0;
+        do{
+            console.log(`j is ${j}`);
+            j++
+        }while(j<0);
+
+    </script>  -->
+
+    //break
+    //continue
+    <!-- <script>
+        let i=1
+        while(i<=10){
+            console.log(`loop${i}`)
+         if(i%2==0){
+            i++;
+            continue;
+        
+         }else{
+           console.log(`odd numbers:${i}`)
+         } 
+         i++;
+    }
+    </script> -->
+
+    <!-- <script>
+        let j=0;
+        do{
+            console.log(j);
+            j++;
+        }while(j<=10);
+    </script>
+     -->
+    <!-- <script>
+        //armstrong number
+        let num=153;
+        let len=num.toString().length;
+        sum=0;
+        temp=num;
+         while(temp>0){
+           let dig=temp%10;
+            sum=sum+dig**len;
+            temp=Math.floor(temp/10);
+        
+         } 
+         if(sum==num){
+            console.log("number is an armstrong num")
+         }else{
+            console.log("not an armstrong num")
+         }
+    </script> -->
+
+    <!-- <script>
+        //fibonocci series
+          let series=Number(prompt("enter the number of terms"));
+           let a=0; 
+           let b=1;
+         let nextTerm=0;
+        for(let i=0; i<=series;i++){
+            console.log(`loop : ${i}`)
+            // console.log(a)
+           nextTerm=a+b;
+        //    console.log(nextTerm)
+           a=b;
+        //   console.log(a);
+           b=nextTerm;
+           console.log(b)
+        }
+          
+    </script> -->
+<!-- 
+   <script>
+    let array=[1,2,3,5,6];
+     let n=array.length+1;
+    let original=(n*(n+1))/2;
+     console.log(original)
+    let actualsum=0;
+    for(let i=0;i<array.length;i++){
+        console.log(i);
+        actualsum+=array[i];
+        res=original-actualsum;   
+    }
+    console.log(res)
+   </script> -->
+   <!-- <script>
+  str="siri";
+  rev="";
+  for(let i=str.length-1;i>=0; i--){
+    rev+=str[i];
+
+  }
+  console.log(rev)
+   </script> -->
+   <!-- <script>
+    let str="madam"
+    // palindrome=true;
+   for(let i=str.length-1;i>=0;i--){
+    pali=str[i];
+   }
+   if(pali==str){
+    console.log("palindrame")
+   }
+   </script> -->
+</body>
+</html

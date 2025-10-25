@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        let x=(num)=>{
+           res=num>5?"hello":"no"
+        }
+        x(4)
+        console.log(res)
+    </script>
+    <script>
+        const y=(y)=> y>5?"hello":"goodbye"
+        console.log(y(9))
+    </script>
+   <script>
+      let fun=(b)=>{
+         return b==="dog"?"woof":"meow"
+      }
+      
+      console.log(fun("cat"))
+   </script>
+
+   <script>
+    let israin=(rain)=>{
+        return rain==="israining"?"take an umbrella":"leave the umbrella"
+    }
+    console.log(israin("notraining"))
+   </script>
+
+
+
+<script>
+    function upp(arr){
+       return arr.map(word => word.toUpperCase());
+    }
+    console.log(upp(["apple","banana","mango"]));
+</script>
+
+<script>
+
+    function squareNum(array){
+         return array.map(num=>num*num)
+    }
+    console.log(squareNum([1,2,3,4]));
+</script>
+
+<script>
+    function even(num){
+             return num.filter((num=>num%2==0))
+    }
+    console.log(even([2,4,5,6,7]))
+</script> -->
+
+    <script>
+        // function product(num){
+        //     let produ=num.reduce((acc,val) => acc*val)
+        // }
+        // product([1,4,6,8]);
+        // console.log(produ);
+
+        function outer() {
+            function inner() {
+                console.log("hello")
+            }
+            return inner();
+        }
+       console.log(outer()) 
+
+
+    </script>
+</body>
+
+</html>

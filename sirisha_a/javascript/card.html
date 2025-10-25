@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><script>
+//     let img = document.createElement("img");           // create an image element
+// img.src = "https://picsum.photos";             // set initial image
+// img.alt = "Random picture";                        // fallback text
+// img.style.display = "block";                       // makes it appear on its own line
+// img.style.margin = "20px auto";                    // centers it
+// document.body.append(img);                         // adds to page
+
+// let imgBtn = document.createElement("button");     // create another button
+// imgBtn.textContent = "Change Image";               // label it
+// document.body.append(imgBtn);                      // add to page
+
+// imgBtn.addEventListener("click", function() {      // on click of this button
+//     img.src = "https://picsum.photos/200?random=" + Math.random();
+//     // change image URL with random value to load a new picture
+// });
+
+
+
+let card = document.createElement("div");
+document.body.append(card);
+card.style.width = "300px";
+card.style.margin = "50px auto";
+card.style.padding = "20px";
+card.style.border = "2px solid gray";
+card.style.borderRadius = "15px";
+card.style.textAlign = "center";
+card.style.backgroundColor = "#f0f0f0";
+
+
+// let img = document.createElement("img");
+// img.src = "https://picsum.photos/200";
+// img.style.width = "200px";
+// img.style.borderRadius = "50%";
+// card.append(img);
+
+
+let name = document.createElement("h2");
+name.textContent = "John Doe";
+name.style.color = "darkblue";
+card.append(name);
+
+
+let about = document.createElement("p");
+about.textContent = "Web developer and tech enthusiast who loves coding with JavaScript.";
+card.append(about);
+
+
+let themeBtn = document.createElement("button");
+themeBtn.textContent = "Change Theme";
+themeBtn.style.padding = "10px 15px";
+themeBtn.style.borderRadius = "8px";
+themeBtn.style.cursor = "pointer";
+card.append(themeBtn);
+
+
+themeBtn.addEventListener("click", () => {
+  card.style.backgroundColor =
+    card.style.backgroundColor === "black" ? "#f0f0f0" : "black";
+  card.style.color =
+    card.style.color === "white" ? "black" : "white";
+});
+
+
+
+
+let products = [
+  { name: "Laptop", price: 55000 },
+  { name: "Headphones", price: 2000 },
+  { name: "Keyboard", price: 1200 }
+];
+
+
+let container = document.createElement("div");
+container.style.display = "flex";
+container.style.justifyContent = "center";
+container.style.gap = "20px";
+container.style.marginTop = "50px";
+document.body.append(container);
+
+
+products.forEach(item => {
+  let card = document.createElement("div");
+  card.style.border = "1px solid gray";
+  card.style.padding = "20px";
+  card.style.borderRadius = "10px";
+  card.style.width = "150px";
+  card.style.textAlign = "center";
+  card.style.backgroundColor = "#f9f9f9";
+
+  let name = document.createElement("h3");
+  name.textContent = item.name;
+
+  let price = document.createElement("p");
+  price.textContent = "Price: ₹" + item.price;
+
+  let btn = document.createElement("button");
+  btn.textContent = "Buy Now";
+  btn.style.padding = "5px 10px";
+
+  card.append(name, price, btn);
+  container.append(card);
+});
+
+</script>
+</body>
+</html>

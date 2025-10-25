@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    foreach(), map(), filter(),reduce(),some(),every(),find(),and findindex()
+
+    array literal
+    array constructor
+
+<script>
+ //forEach
+ //array.forEach(callback)
+ //array here is variable
+
+
+//   let array=[1,2,3,4,5];
+//   array.forEach(print);
+
+//   function print(num,index,arr){
+//        console.log(`The element at index:${index} is ${num}` )
+//        arr[index]=num*2;
+//         // arr[index]=num*num;
+//   }
+  
+
+// let array=[1,2,3,4,5];
+
+// array.forEach(operation);
+// function operation(value,index,array){
+//    console.log(index);  
+// }
+ 
+
+
+//  let arr1=[1,2,3,4];
+//  let forEach=((value,index,arr) =>  {
+//     console.log(arr1[index]=arr1[index]*2) 
+//  });
+// </script>
+
+
+<script>
+    //map()
+   const array=[1,2,3,4,5]
+    let newArray= array.map((num)=> num*2);
+    console.log(newArray);
+    console.log(array)
+    
+</script>
+<script>
+    //filter()
+    const arr=[1,2,3,4,5,6,7,8,9,10]
+    let odd=arr.filter((num)=>num%2!==0);
+    console.log(odd)
+</script>
+
+
+<script>
+    //reduce()
+    // accumulator,current
+  const numbers=[1,2,3,4,5];
+  let sum=numbers.reduce((accumulator,current)=>accumulator+current*current,0);
+  
+  console.log(sum)
+//   let sum=0;
+//   for(let i=0;i<numbers.length;i++){
+//     sum=sum+numbers[i]*numbers[i]
+//   }
+//   console.log(sum)
+</script>
+<!-- <script>
+    let number=[1,2,3]
+     let fac=number.reduce((accumulator,current)=>accumulator*current,1);
+     console.log(fac)
+</script>
+
+<script>
+    const nestedArray=[[1,2],[3,4],[5]]
+    let flatArray=nestedArray.reduce((a,c)=>a.concat(c),[]);
+    console.log(flatArray);
+</script>-->
+
+<script> 
+
+//forEach is a void function so it return undefined
+//map 
+    const numberss = [1,2,3,4,5]  
+    // numberss.forEach(print)
+    console.log( numberss.toString());
+     
+
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- check ug or pg
+    check year 4 or 2
+    l year-10%,15%,20%
+    2nd year-10%,15%,22%
+    3rd year-10%,15%,25%
+    4th year-20%,25%,30%
+    check if pass%
+    70-80-10%
+    80-90-15%
+    90-100-25%-->
+    <script>
+        let graduation=prompt("Enter you are a postgraduate or undergraduate");
+        let year=prompt("Which year you are studied")
+        let marks=prompt("Enter your marks")
+         if (marks < 0 || marks > 100) {
+         console.log("Invalid marks");
+          }else if(graduation==="undergraduate"){
+            if (year==="1st year"){
+               if(marks>70 && marks<=80){
+                console.log("you selected for B.TECH 2nd year with 10% discount in your fee")
+              }else if(marks>80 && marks<=90){
+                console.log("you selected for B.TECH 2nd year with 15% discount in your fee")
+              }else if(marks>90 && marks<=100){
+                console.log("you selected for B.TECH 2nd year with 20% discount in your fee")
+              } else if (marks>0 && marks<=70){
+                console.log("You have no discount")
+              }
+            else if(year==="2nd year"){
+                if(marks>70 && marks<=80){
+                  console.log("you selected for B.TECH 3rd  year with 10% discount in your fee");
+                }else if(marks>80 && marks<=90){
+                  console.log("you selected for B.TECH 3rd year with 15% discount in your fee");
+                }else if(marks>90 && marks<=100){
+                  console.log("you selected for B.TECH 3rd year with 22% discount in your fee")
+                }else if (marks>=0 && marks<=70){
+                  console.log("You have no discount")
+                }
+            }else if(year==="3rd year"){
+                if(marks>70 && marks<=80){
+                 console.log("you selected for B.TECH 4th year with 10% discount in your fee")
+                }else if(marks>80 && marks<=90){
+                 console.log("you selected for B.TECH 4th year with 15% discount in your fee")
+                }else if(marks>90 && marks<=100){
+                 console.log("you selected for B.TECH 4th year with 25% discount in your fee")
+                }else if (marks>=0 && marks<=70){
+                  console.log("You have no discount")
+               }
+            }else if(year==="4th year"){
+                if(marks>70 && marks<=80){
+                  console.log("you selected for 1st year M.TECH with 20% discount in your fee")
+                }else if(marks>80 && marks<=90){
+                  console.log("you selected for 1st year M.TECH  with 25% discount in your fee")
+                }else if(marks>90 && marks<=100){
+                  console.log("you selected for 1st year M.TECH with 30% discount in your fee")
+                }else if (marks>=0 && marks<=70){
+                  console.log("You have no discount")
+                }else {
+                console.log("Invalid year for undergraduate");
+                }
+              }
+          } else if(graduation==="pg") {
+              if(year==="m.tech 1"){
+                if(marks>70 && marks<=80){
+                  console.log("you selected for M.TECH 2nd year with 10% discount in your fee")
+                }else if(marks>80 && marks<=90){
+                  console.log("you selected for M.TECH 2nd year with 15% discount in your fee")
+                }else if(marks>90 && marks<=100){
+                  console.log("you selected for M.TECH 2nd year with 20% discount in your fee")
+                }else if (marks>=0 && marks<=70){
+                  console.log("You have no discount")
+                }
+            }
+          } 
+        }else if(year==="m.tech 2"){
+                if(marks>70 && marks<=80){
+                  console.log("you got 10% discount")
+                }else if(marks>80 && marks<=90){
+                  console.log("you got 15% discount")
+                }else if(marks>90 && marks<=100){
+                  console.log("you got 22% discount")
+                }else if (marks>=0 && marks<=70){
+                  console.log("You have no discount")
+                } else {
+            console.log("Invalid year for postgraduate");
+            }
+         }
+    </script>
+</body>
+</html>

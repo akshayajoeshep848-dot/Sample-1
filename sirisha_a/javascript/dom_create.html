@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- dom is document obj -->
+    
+    dom represents an html doc as a tree like structure , 
+    where each node represents a part of the document
+    it maintains 1-1 relation
+
+    <!--node means its a junction or end point -->
+    <!--document node=>    the root of the tree ,representing entire html doc
+      element node=>         <p><div><h1>
+      text node
+      attribute node=>       class="example",id="main"
+      comment node =>         represents comments in html-->
+
+
+    <!-- type of DOM nodes
+    which is an integer indicating the type of the nodes
+    1:ELEMENT_Node
+    3:TEXT_NODE
+    8:COMMENT NODE
+    9:DOCUMENT_NODE(the root doc obj)
+    10:DOCUMENT_TYPE_NODE(eg: <!doctype html> )
+    11:DOCUMENT_FRAGMENT_NODE(a light weight container for nodes) -->
+
+   why is dom important
+   The dom is essential for creating dynamic and interactive web page.without it js would
+   have no way to understand or modify the structure and conent of an html document.
+   
+   Dynamic content:
+        js can add,remove,or change html element and their content after 
+        the page has loaded
+   user interaction: 
+        js can react to user actions(click,mouse movements)
+   styling changes:
+        js can manupulate css styles of elemnts,chenge their appearence dynimically
+   data display:
+        js can fetch data from servers and use the dom to display this data on
+        the page without needing a full page reload
+
+
+    get elemnt by id 
+    
+    query selector=>identify css selector
+</body>
+</html>

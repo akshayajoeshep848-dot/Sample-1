@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgba(0, 255, 255, 0.411);
+            width: 180px;
+            padding: 10px;
+            margin:10px auto;
+        }
+        p{
+            background-color: rgba(0, 255, 255, 0.411);
+            padding: 10px;
+              width: 180px;
+              margin:10px auto;
+        }
+        button{
+            margin: 10px auto;
+            background-color: rgba(95, 158, 160, 0.589);
+            border:none;
+            padding: 10px;
+            border-radius: 20px;
+            min-width: 150px;
+            color: white;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- an async function is a function that implicitly returns a promise
+    designed to improve readability and simplify chaining asynchronous operations -->
+    <!-- <script>
+        async function fetchData(){
+            return "hello Async"
+        }
+        console.log(fetchData())
+        // fetchData().then((value)=>console.log(value))
+        fetchData().then(console.log)
+    </script>
+    //the await keyword is  only valid inside async function  ans is used to pause the execution
+    of the function until the promise it awaits resolves or rejects.it allows writing asynchronous
+    code that looks synchronous -->
+
+
+     <script>
+        async function fetchData(url){
+            console.log("starting fetch call..")
+           let response = await fetch(url)
+           let data = await response.json()
+           console.log(data)
+           console.log("End fetch call..")
+           return data;
+         
+           
+        }
+        //   fetchData("https://dogapi.dog/api/v2/breeds").then((value)=>console.log(value))  
+         fetchData("https://jsonplaceholder.typicode.com/users/1")
+         .then((value)=>{
+               let box=document.createElement("div")
+                let div=document.createElement("p")
+                let p=document.createElement("p")
+
+                // div.classList.add("container")
+                // div.textContent=`Name:${value.name}`
+                // p.textContent=`Email:${value.email}`
+                
+                // document.body.append(div)
+                // document.body.append(p)
+                
+
+                let button=document.createElement("button")
+                document.body.append(button)
+                button.innerHTML="click me"
+
+
+                button.addEventListener("click",()=>{
+                    div.classList.add("container")
+                div.textContent=`Name:${value.name}`
+                p.textContent=`Email:${value.email}`
+                
+                document.body.append(div)
+                document.body.append(p)
+
+               
+                
+                })
+                 
+               
+            })
+   
+          
+
+
+     
+    </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="form-container"></div>
+    <script>
+        let div = document.getElementById("form-container")
+        div.style.backgroundColor = "pink"
+        div.style.width = "600px"
+         div.style.height = "580px"
+        div.style.marginLeft = "60px"
+          div.style.marginTop = "0px"
+
+        div.style.border = "2px solid black"
+        div.style.boxShadow = "10px 40px 100px 1px white inset"
+
+        let h2 = document.createElement("h2")
+        h2.innerText = "Student Registration form"
+        h2.style.margin = "10px 50px 30px 70px"
+        h2.style.padding = "10px"
+        h2.style.textDecoration = "underline"
+        h2.style.textAlign = "center"
+        div.append(h2)
+        let form = document.createElement("form")
+        div.append(form)
+
+        let label = document.createElement("label")
+        label.textContent = "First Name"  
+        label.style.marginLeft = "20px"
+
+        form.append(label)
+        let space = document.createElement("br")
+        form.append(space)
+        let input = document.createElement("input")
+        label.append(input)
+        input.placeholder = "enter your name"
+        input.style.marginLeft = "50px"
+        console.log(input.value)
+
+        let space1 = document.createElement("br")
+        form.append(space1)
+
+
+        let form1 = document.createElement("form")
+        div.append(form1)
+        let label1 = document.createElement("label");
+        label1.textContent = "Last Name"
+        label1.style.marginLeft = "20px"
+
+        form.append(label1)
+        let input1 = document.createElement("input")
+        label1.append(input1)
+        input1.placeholder = "enter your name"
+        input1.style.marginLeft = "50px"
+        let space2 = document.createElement("br")
+        form.append(space2)
+        let space3 = document.createElement("br")
+        form.append(space3)
+
+
+        let form2 = document.createElement("form")
+        div.append(form2)
+        let label2 = document.createElement("label");
+        label2.textContent = "Father Name"
+        label2.style.marginLeft = "20px"
+        form.append(label2)
+        let input2 = document.createElement("input")
+        label2.append(input2)
+        input2.placeholder = ""
+        input2.style.marginLeft = "40px"
+        let space4 = document.createElement("br")
+        form.append(space4)
+        let space5 = document.createElement("br")
+        form.append(space5)
+
+
+        let form3 = document.createElement("form")
+        div.append(form3)
+        let label3 = document.createElement("label");
+        label3.textContent = "Dateofbirth"
+        label3.style.marginLeft = "20px"
+        form.append(label3)
+        let input3 = document.createElement("input")
+        input3.setAttribute("type", "date")
+
+        label3.append(input3)
+        input3.style.marginLeft = "49px"
+        input3.style.paddingRight = "55px"
+
+        let space6 = document.createElement("br")
+        form.append(space6)
+        let space7 = document.createElement("br")
+        form.append(space7)
+
+
+        let form4 = document.createElement("form")
+        div.append(form4)
+        let label4 = document.createElement("label");
+        label4.textContent = "Gender"
+        label4.style.marginLeft = "20px"
+        form.append(label4)
+
+        let label5 = document.createElement("label");
+        label5.textContent = "Female"
+        label5.style.marginLeft = "2px"
+        form.append(label5)
+
+        let input4 = document.createElement("input")
+        input4.setAttribute("type", "radio")
+        input4.style.marginLeft = "80px"
+        label4.append(input4)
+
+        let label6 = document.createElement("label");
+        label6.textContent = "Male"
+        label6.style.marginLeft = "2px"
+        label4.append(label6)
+        let input5 = document.createElement("input")
+        input5.setAttribute("type", "radio")
+        input5.style.marginLeft = "20px"
+        label6.append(input5)
+
+
+        let space8 = document.createElement("br")
+        form.append(space8)
+        let space9 = document.createElement("br")
+        form.append(space9)
+
+
+        let lab = document.createElement("label")
+        lab.textContent = "Couse"
+        form.append(lab)
+        lab.style.marginLeft = "20px"
+
+        let select = document.createElement("select")
+        lab.append(select)
+        select.style.marginLeft = "80px"
+        select.style.width = "170px"
+        select.style.padding = "4px"
+        let option = document.createElement("option")
+        option.textContent = "Select Course"
+        select.append(option)
+
+
+        let option1 = document.createElement("option")
+        option1.textContent = "AI&DS"
+        select.append(option1)
+
+        let option2 = document.createElement("option")
+        option2.textContent = "CSE"
+        select.append(option2)
+
+        let option3 = document.createElement("option")
+        option3.textContent = "AI&ML"
+        select.append(option3)
+        let gap = document.createElement("br")
+        form.append(gap)
+        let gap2 = document.createElement("br")
+        form.append(gap2)
+
+
+        let lab1 = document.createElement("label");
+        lab1.textContent = "Time slot"
+        lab1.style.marginLeft = "20px"
+        form.append(lab1)
+
+        let ipt1 = document.createElement("input")
+        ipt1.setAttribute("type", "checkbox")
+        lab1.append(ipt1)
+        ipt1.style.marginLeft = "67px"
+        let lab2 = document.createElement("label");
+        lab2.textContent = "9 AM"
+        lab1.append(lab2)
+        lab2.style.marginLeft = "1px"
+
+
+        let ipt2 = document.createElement("input")
+        ipt2.setAttribute("type", "checkbox")
+        lab1.append(ipt2)
+        ipt2.style.marginLeft = "20px"
+        let lab3 = document.createElement("label");
+        lab3.textContent = "12 PM"
+        lab1.append(lab3)
+        lab3.style.marginLeft = "1px"
+
+
+        let gap3 = document.createElement("br")
+        form.append(gap3)
+        let gap4 = document.createElement("br")
+        form.append(gap4)
+
+
+        let form5 = document.createElement("form")
+        div.append(form5)
+        let label7 = document.createElement("label");
+        label7.textContent = "Mobile Number"
+        label7.style.marginLeft = "20px"
+        form.append(label7)
+        let input7 = document.createElement("input")
+        label7.append(input7)
+        input7.setAttribute("type", "number")
+        input7.placeholder = "enter your number"
+        input7.style.width = "160px"
+        input7.style.marginLeft = "20px"
+        let space12 = document.createElement("br")
+        form.append(space12)
+        let space13 = document.createElement("br")
+        form.append(space13)
+
+
+        let form8 = document.createElement("form")
+        div.append(form8)
+        let label10 = document.createElement("label");
+        label10.textContent = "Email Address"
+        label10.style.marginLeft = "20px"
+        form.append(label10)
+        let input10 = document.createElement("input")
+        label10.append(input10)
+        input10.setAttribute("type", "email")
+        input10.style.marginLeft = "30px"
+        input10.style.width = "160px"
+
+
+        input10.placeholder = "Enter your email"
+        let space18 = document.createElement("br")
+        form.append(space18)
+        let space19 = document.createElement("br")
+        form.append(space19)
+
+
+
+
+
+        let form6 = document.createElement("form")
+        div.append(form6)
+        let label8 = document.createElement("label");
+        label8.textContent = "Student Photo "
+        label8.style.marginLeft = "20px"
+        form.append(label8)
+        let input8 = document.createElement("input")
+        label8.append(input8)
+        input8.style.marginLeft = "30px"
+        input8.setAttribute("type", "file")
+        let space14 = document.createElement("br")
+        form.append(space14)
+        let space15 = document.createElement("br")
+        form.append(space15)
+
+
+        let form7 = document.createElement("form")
+        div.append(form7)
+        let label9 = document.createElement("label");
+        label9.textContent = "Address "
+        label9.style.marginLeft = "20px"
+        form.append(label9)
+        let input9 = document.createElement("textarea")
+        label9.append(input9)
+        input9.style.marginLeft = "65px"
+        let space16 = document.createElement("br")
+        form.append(space16)
+        let space17 = document.createElement("br")
+        form.append(space17)
+
+        let button = document.createElement("button")
+        form.append(button)
+        button.textContent = "Register"
+        button.style.paddingLeft = "50px"
+        button.style.paddingRight = "50px"
+        button.style.marginLeft = "220px"
+        button.style.borderRadius="30px"
+       button.style.border="none"
+         button.style.paddingTop="5px"
+        button.style.paddingBottom="5px"
+         button.style.marginBottom = "60px"
+        let space20 = document.createElement("br")
+        form.append(space20)
+        let space21 = document.createElement("br")
+        form.append(space21)
+
+    
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

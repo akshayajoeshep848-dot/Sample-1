@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    class is a model
+    the class keyword is used to declare a new class
+    class names are typically written in pascalcase(first letter capital)
+
+
+    constructor method()
+    The constructor() method is a special method for creating and initializing an obj created with a class
+    its called automatically when a new instance of the class is created
+    a class can have one constructor()
+    it is used to set initial properties on the obj
+
+
+    to create an instance:
+    to create an obj from a class ,use the new keyword
+    <script>
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            greet() {
+                console.log(`Hi my name is ${this.name}`)
+            }
+        }
+        //here person1 is obj
+        let person1 = new Person("NTR", 42);
+
+
+        console.log(person1.name);
+        console.log(person1.age)
+        person1.greet()
+
+        let person2 = new Person("Allu Arjun", 41);
+        person2.greet()
+
+
+       
+    </script>
+</body>
+
+</html>

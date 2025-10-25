@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+  div{
+     background-color: white;
+      padding: 10px;
+      margin:10px auto;
+      width: 250px;
+      border-radius: 8px;
+      box-shadow: 0 2px 05px rgba(0, 0, 0, 0.2);
+    } 
+    </style>
+</head>
+<body>
+    <div id="leadership"></div>
+    <script>
+        const highScores = [
+      { rank: 1, user: "ACE", score: 95000 },
+      { rank: 2, user: "GMR", score: 87200 },
+      { rank: 3, user: "KID", score: 79000 },
+    ];
+
+
+    let leadership=document.getElementById("leadership")
+      highScores.forEach(game => {
+        let div=document.createElement("div")
+        div.innerHTML=`
+        <p>${game.rank}</p>
+         <p>${game.user}</p>
+           <p>${game.score}</p>`
+
+        leadership.append(div)
+      });
+      document.body.append(leadership)
+    </script>
+</body>
+</html>

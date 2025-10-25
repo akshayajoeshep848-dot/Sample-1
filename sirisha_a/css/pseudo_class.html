@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo classes</title>
+    <style>
+        p{
+            border: 1px solid black;
+            width: 100px;
+            padding: 15px;
+            border-radius: 25px;
+            text-align: center;
+            color:red;
+            font-size: 20px;
+            background-color: beige;
+            box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.322);
+        }
+        /* p:hover{
+            background-color: blueviolet;
+            color:black;
+        } */
+         /* change the state when user clicks */
+        p:active{
+            /* in scale 1 means 100%  it strinks*/ 
+            /* transform: scale(0.9); */
+            transform: translate(10px,10px) scale(0.9);
+            background-color: blueviolet;
+            color:black;
+        }
+        a{
+             text-decoration: none;
+        }
+        /* before visiting the link */
+        a:link{
+            color: green;
+            font-size: 20px;
+           
+        }
+        a:visited{
+            color: red;
+            font-size: 20px;
+        }
+        input{
+          border: 2px solid green;
+
+        }
+        input:focus {
+            border: 4px solid blue;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 12px 12px lightgray;
+
+        }
+        /* button:focus{
+            padding: 30px; 
+        } */
+        button:focus-within{
+            outline: 2px solid orange;
+    
+        }
+        /* button:focus-visible{
+            outline: 3px soild orange;
+        }
+         */
+    
+    </style>
+</head>
+<body>
+    <h3>pseudo classes will give you change the state</h3>
+    <button>submit</button>
+    <p>para</p>
+    <a href="https://www.logicwhile.com">Logicwhile</a>
+    <a href="https://www.google.com">Google</a><br><br>
+    <!-- focus -->
+     <div>
+    <label for="fn">First name</label>
+    <input type="text" id="fn">
+    </div>
+    <div>
+    <!-- we click tab on keyboard it goes to next field -->
+    <label for="ln">last name</label>&nbsp,&nbsp
+    <input type="text" id="ln">
+
+    </div>
+</body>
+</html>

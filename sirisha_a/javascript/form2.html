@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            margin-left: 20px
+        }
+
+        .form1 {
+            margin-left: 20px
+        }
+
+        .label {
+            padding-left: 20px;
+        }
+
+        /* label[for="email"]{
+            margin-left:20px
+         } */
+        #email {
+            margin-left: 44px;
+        }
+
+        #phone {
+            margin-left: 60px;
+        }
+
+        #conformpassword {
+            position: relative;
+            right: 20px
+        }
+
+        .gender {
+            margin-left: 60px
+        }
+
+        body {
+            background-color: rgba(137, 43, 226, 0.655);
+
+        }
+
+        .div-container {
+            background-color: white;
+            padding-left: 20px;
+            margin-top: 120px;
+            margin-left: 200px;
+            height: 400px;
+            width: 600px
+        }
+
+        button {
+            padding-right: 180px;
+            padding-left: 180px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-left: 100px;
+            margin-top: 30px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+
+        let div = document.createElement("div")
+        div.classList.add("div-container")
+        document.body.append(div)
+
+        let heading = document.createElement("h2")
+        heading.textContent = "Registration"
+        heading.classList.add("head")
+        div.append(heading)
+
+        let form = document.createElement("form")
+        form.classList.add("form-container")
+        form.setAttribute("id", "form-container")
+        div.append(form)
+
+
+        let fname = document.createElement("label")
+        fname.textContent = "Full Name"
+        fname.setAttribute("for", "fname")
+        form.append(fname)
+        let input = document.createElement("input")
+        input.setAttribute("placeholder", "Enter your name")
+        input.setAttribute("id", "fname")
+        input.setAttribute("required", "")
+        input.setAttribute("name", "fname")
+        input.setAttribute("type","text")
+        input.classList.add("form")
+        form.append(input)
+
+
+        let uname = document.createElement("label")
+        uname.textContent = "User Name"
+        uname.setAttribute("for", "uname")
+        uname.classList.add("label")
+        form.append(uname)
+        let input1 = document.createElement("input")
+        input1.setAttribute("placeholder", "Enter your username")
+        input1.setAttribute("id", "uname")
+        input1.setAttribute("required", "")
+        input1.setAttribute("name", "uname")
+         input1.setAttribute("type","text")
+        input1.classList.add("form1")
+        form.append(input1)
+
+        form.append(document.createElement("br"));
+        form.append(document.createElement("br"));
+
+
+        let email = document.createElement("label")
+        email.textContent = "Email"
+        email.setAttribute("for", "email")
+        form.append(email)
+        let input2 = document.createElement("input")
+        input2.setAttribute("placeholder", "Enter your email")
+        input2.setAttribute("id", "email")
+        input2.setAttribute("required", "")
+        input2.setAttribute("name", "email")
+         input2.setAttribute("type","email")
+        input2.classList.add("form")
+        form.append(input2)
+
+
+        let phone = document.createElement("label")
+        phone.setAttribute("for", "phone")
+        phone.textContent = "Phone"
+        phone.classList.add("label")
+        form.append(phone)
+        let input3 = document.createElement("input")
+        input3.setAttribute("placeholder", "Enter phone number")
+        input3.setAttribute("id", "phone")
+        input3.setAttribute("required", "")
+        input3.setAttribute("name", "phone")
+         input3.setAttribute("type","number")
+        input3.classList.add("form1")
+        form.append(input3)
+
+        form.append(document.createElement("br"));
+        form.append(document.createElement("br"));
+
+
+
+        let password = document.createElement("label")
+        password.setAttribute("for", "password")
+        password.textContent = "Password"
+        form.append(password)
+        let input4 = document.createElement("input")
+        input4.setAttribute("placeholder", "")
+        input4.setAttribute("id", "password")
+        input4.setAttribute("required", "")
+        input4.setAttribute("name", "password")
+         input4.setAttribute("type","password")
+        input4.classList.add("form")
+        form.append(input4)
+
+
+        let conformpassword = document.createElement("label")
+        conformpassword.setAttribute("for", "password")
+        conformpassword.textContent = "conformPassword"
+        conformpassword.classList.add("label")
+        form.append(conformpassword)
+        let input5 = document.createElement("input")
+        input5.setAttribute("placeholder", "")
+        input5.setAttribute("id", "conformpassword")
+        input5.setAttribute("required", "")
+        input5.setAttribute("name", "conformpassword")
+         input5.setAttribute("type","password")
+        input5.classList.add("form1")
+        form.append(input5)
+
+        form.append(document.createElement("br"));
+        form.append(document.createElement("br"));
+
+
+        let gender = document.createElement("label")
+        gender.textContent = "Gender"
+        gender.setAttribute("for", "gender")
+        form.append(gender)
+
+
+        let male = document.createElement("label")
+
+        male.textContent = "Male"
+        male.classList.add("gender")
+        form.append(male)
+        let input6 = document.createElement("input")
+        input6.setAttribute("type", "radio")
+        input6.setAttribute("required", "")
+        input6.setAttribute("name", "gender")
+        input6.setAttribute("id", "male")
+         input6.setAttribute("value", "male")
+
+        form.append(input6)
+
+        let Female = document.createElement("label")
+        Female.textContent = "Female"
+
+        Female.classList.add("gender")
+        form.append(Female)
+        let input7 = document.createElement("input")
+        input7.setAttribute("type", "radio")
+        input7.setAttribute("required", "")
+        input7.setAttribute("name", "gender")
+        input7.setAttribute("id", "female")
+         input7.setAttribute("value", "female")
+        form.append(input7)
+
+        let other = document.createElement("label")
+        other.textContent = "Others"
+        other.classList.add("gender")
+        form.append(other)
+        let input8 = document.createElement("input")
+        input8.setAttribute("type", "radio")
+        input8.setAttribute("required", "")
+        input8.setAttribute("name", "gender")
+        input8.setAttribute("id", "other")
+        input8.setAttribute("value", "other")
+
+        form.append(input8)
+
+
+        form.append(document.createElement("br"));
+        form.append(document.createElement("br"));
+
+        let button = document.createElement("button")
+        button.addEventListener("click", getdata);
+        button.textContent = "Register"
+        form.append(button)
+
+
+
+
+        function getdata(event) {
+            event.preventDefault();
+            let fullname = document.getElementById("fname").value
+            let username = document.getElementById("uname").value
+            let email = document.getElementById("email").value
+            let phone = document.getElementById("phone").value
+            let password = document.getElementById("password").value
+            let conformpassword = document.getElementById("conformpassword").value
+           let selectgender = document.querySelector('input[name="gender"]:checked').value;
+
+           if (!selectgender) {
+    alert("Please select your gender");
+    return; 
+  }
+
+  let gender = selectedgender.value;
+            const data = {
+                Fullname: fullname,
+                Username: username,
+                Email: email,
+                Phone: phone,
+                password: password,
+                conformpassword: conformpassword,
+                Gender:gender
+            }
+            console.log(data)
+
+        }
+
+    </script>
+</body>
+
+</html>

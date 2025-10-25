@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- dom properties
+    1.parent node- the parent node
+    2.childnodes-a nodelist of child nodes
+    3.children-an html collection of child Elements  
+    4.firstchild/last child-first/last child node
+    5.firstelementchild/last element child-first/last child element
+    6.next sibling/previous sibling-adjacent nodes
+    7.nextelementsibling/previouselement sibling-adjacent element nodes -->
+
+
+    <!-- attributes  -->
+     <!-- set attributes
+     get attributes
+     remove attributes -->
+
+  
+ <!-- node list means all type of nodes -->
+
+ <h1>heading</h1>
+  <ul id="ul" >
+    unordered list( this is text node)
+    <li id="id-1">item1</li>
+    <li id="id-2">item2</li>
+    <li id="id-3">item3</li>
+    <li id="id-4">item4</li>
+    <li id="id-5">item5</li>
+  </ul>
+  
+
+  <!-- <li>
+    <li id="id-1">item1</li>
+    <li id="id-2">item2</li>
+    <li  id="id-3">item3</li>
+    <li id="id-4">item4</li>
+    <li id="id-5">item5</li>
+  </li> -->
+
+  <script>
+    // let ul=document.getElementById("ul")
+   // // console.log(ul)
+    console.log(ul.parentNode)
+    console.log(ul.childNodes)
+    // // //it return html collection
+    console.log(ul.children)
+    // //  //it return node
+    console.log(ul.firstChild)
+    // //it return node
+    console.log(ul.lastChild)
+    // // //it gets elemnt
+    console.log(ul.firstElementChild)
+    console.log(ul.lastElementChild)
+    console.log(ul.previousSibling)
+    console.log(ul.previousElementSibling)
+    console.log(ul.nextSibling)
+    console.log(ul.nextElementSibling)
+    // ul.firstElementChild.style.backgroundColor="red"
+    // ul.lastElementChild.style.backgroundColor="red"
+    // ul.children[2].style.backgroundColor="blue"
+    // // ul.parentElement.style.color="grey"
+
+    
+
+
+    
+
+  </script>
+</body>
+</html>

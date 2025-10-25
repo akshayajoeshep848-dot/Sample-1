@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo elements</title>
+    <style>
+        .para{
+            color: green;
+        }
+        .para::before{
+             content:"\1F4AF"; 
+            color:blue;
+        }
+          p::before{
+            /* content: "\20B9"; */
+            color: blue;
+            margin: 20px;
+            
+         } 
+         li::before{
+            content:"\01F3B2";
+            padding-right: 10px;
+         }
+        ul{
+            list-style-type: none;
+        }li::after{
+            content: "\1F4Ad";
+            font-size: 20px;
+        }
+        .menu{
+           position: relative;
+            background-color: black;
+            height: 5px;
+            width: 30px;
+            border-radius: 5px;
+        }
+        .menu::before{ 
+            content: "";
+            position: absolute;
+            background-color:black;
+            top: -10px;
+            height: 5px;
+            width: 30px;
+            border-radius: 5px;
+             background-color: blue;
+
+        }
+        .menu::after{
+            content: "";
+            position: absolute;
+            background-color:black;
+            top: 10px;
+            height: 5px;
+            width: 30px;
+            border-radius: 5px;
+        }
+        /* .menu::before,.menu::after{
+             content: "";
+            position: absolute;
+            background-color:black;
+            height: 5px;
+            width: 30px;
+            border-radius: 5px;
+        }
+        .menu::after{
+            top: 10px;
+
+        }
+        .menu::before{
+             top: -10px;
+        } */
+
+       .s1::first-letter{
+        color: brown;
+        font-size: 50px;
+         background-color: bisque;
+
+       }
+       .s1::first-line{
+        background-color: bisque;
+        border-radius: 5px;
+        color: brown;
+       }
+       .s1::selection{
+           color: yellow ;
+       }
+       input::placeholder{
+        color: red;
+       }
+       .wrong{
+        background-color: black;
+        height: 3px;
+        width: 30px;
+        position: relative;
+        left: 220px;
+        transform: rotate(-60deg);
+
+       }
+       .w1{
+        background-color: black;
+        height: 3px;
+        width: 32px;
+        position: relative;
+        left: 220px;
+        bottom: 3px;
+        transform: rotate(44deg);
+
+       }
+    </style>
+</head>
+<body>
+    <h2>Pseudo elements</h2>
+    <p class="para">This is para &midast;&nbsp;&midast;</p>
+    <p>1000</p>
+    <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+    </ul>
+    <div class="menu"></div>
+    <div class="wrong"></div>
+    <div class="w1"></div>
+    <p class="s1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi velit consectetur dicta soluta quisquam voluptatum eligendi quibusdam provident. Quaerat, quod?</p>
+    <label>Name</label>
+    <input type="text" placeholder="enter your name">
+</body>
+</html>

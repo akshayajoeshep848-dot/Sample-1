@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    padding: 20px;
+    margin: 0;
+ font-family: "Poppins", sans-serif;
+    text-align: center;
+   
+  }
+
+  .main {
+    border: 2px solid rgba(128, 128, 128, 0.511);
+    padding: 10px;
+    background-color: rgba(95, 158, 160, 0.575);
+    /* background-color: lightcyan; */
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    box-shadow: 0 0 0px 5px rgba(128, 128, 128, 0.24);
+ /* border-radius: 30% 1% 40% 1%; */
+  }
+ 
+    </style>
+</head>
+<body>
+   
+    <script>
+ let user=[
+  {
+    "id": 1,
+    "first_name": "Sabina",
+    "last_name": "Dilgarno",
+    "email": "sdilgarno0@fda.gov",
+    "gender": "Female",
+    "phone_number": "978-810-9027"
+  },
+  {
+    "id": 2,
+    "first_name": "Raquela",
+    "last_name": "Skeggs",
+    "email": "rskeggs1@accuweather.com",
+    "gender": "Female",
+    "phone_number": "730-313-9390"
+  },
+  {
+    "id": 3,
+    "first_name": "Ashley",
+    "last_name": "Velden",
+    "email": "avelden2@w3.org",
+    "gender": "Female",
+    "phone_number": "237-932-6520"
+  },
+  {
+    "id": 4,
+    "first_name": "Patten",
+    "last_name": "Van Velde",
+    "email": "pvanvelde3@wix.com",
+    "gender": "Male",
+    "phone_number": "825-565-3847"
+  },
+  {
+    "id": 5,
+    "first_name": "Nikkie",
+    "last_name": "Glyssanne",
+    "email": "nglyssanne4@ustream.tv",
+    "gender": "Female",
+    "phone_number": "152-745-1500"
+  },
+  {
+    "id": 6,
+    "first_name": "Delainey",
+    "last_name": "Corriea",
+    "email": "dcorriea5@toplist.cz",
+    "gender": "Male",
+    "phone_number": "494-675-5404"
+  },
+  {
+    "id": 7,
+    "first_name": "Julee",
+    "last_name": "Danielsen",
+    "email": "jdanielsen6@time.com",
+    "gender": "Female",
+    "phone_number": "816-912-5086"
+  },
+  {
+    "id": 8,
+    "first_name": "Mercy",
+    "last_name": "Ruane",
+    "email": "mruane7@princeton.edu",
+    "gender": "Female",
+    "phone_number": "968-769-5394"
+  },
+  {
+    "id": 9,
+    "first_name": "Maighdiln",
+    "last_name": "Cholerton",
+    "email": "mcholerton8@artisteer.com",
+    "gender": "Female",
+    "phone_number": "767-286-3453"
+  },
+  {
+    "id": 10,
+    "first_name": "Merle",
+    "last_name": "Muckersie",
+    "email": "mmuckersie9@about.me",
+    "gender": "Female",
+    "phone_number": "487-128-8755"
+  },
+  {
+    "id": 11,
+    "first_name": "Lawton",
+    "last_name": "Lacroix",
+    "email": "llacroixa@bigcartel.com",
+    "gender": "Male",
+    "phone_number": "530-706-3546"
+  },
+  {
+    "id": 12,
+    "first_name": "Alethea",
+    "last_name": "Itzakovitz",
+    "email": "aitzakovitzb@last.fm",
+    "gender": "Female",
+    "phone_number": "424-752-1742"
+  },
+  {
+    "id": 13,
+    "first_name": "Gerik",
+    "last_name": "Brombell",
+    "email": "gbrombellc@tripadvisor.com",
+    "gender": "Male",
+    "phone_number": "549-590-6169"
+  },
+  {
+    "id": 14,
+    "first_name": "Ferdy",
+    "last_name": "Tambling",
+    "email": "ftamblingd@mashable.com",
+    "gender": "Male",
+    "phone_number": "284-172-5920"
+  },
+  {
+    "id": 15,
+    "first_name": "Coleen",
+    "last_name": "Touzey",
+    "email": "ctouzeye@rakuten.co.jp",
+    "gender": "Female",
+    "phone_number": "569-200-2049"
+  },
+  {
+    "id": 16,
+    "first_name": "Kirk",
+    "last_name": "Eakle",
+    "email": "keaklef@google.es",
+    "gender": "Agender",
+    "phone_number": "811-504-2506"
+  },
+  {
+    "id": 17,
+    "first_name": "Shawna",
+    "last_name": "Demcik",
+    "email": "sdemcikg@mit.edu",
+    "gender": "Female",
+    "phone_number": "345-647-4471"
+  },
+  {
+    "id": 18,
+    "first_name": "Viola",
+    "last_name": "Thornthwaite",
+    "email": "vthornthwaiteh@si.edu",
+    "gender": "Genderqueer",
+    "phone_number": "190-913-6644"
+  },
+  {
+    "id": 19,
+    "first_name": "Pen",
+    "last_name": "Stirley",
+    "email": "pstirleyi@omniture.com",
+    "gender": "Male",
+    "phone_number": "393-217-0774"
+  },
+  {
+    "id": 20,
+    "first_name": "Genna",
+    "last_name": "Ponting",
+    "email": "gpontingj@bluehost.com",
+    "gender": "Female",
+    "phone_number": "359-131-2236"
+  }
+]
+
+user.forEach(item=>{
+    let div=document.createElement("div");
+    div.innerHTML =`<div>
+        <p><span>ID <span>:${item.id}</p>
+         <p>FIRSTNAME: ${item.first_name}</p>
+          <p>LASTNAME: ${item.last_name}</p>
+           <p>EMAIL: ${item.email}</p>
+            <p>GENDER: ${item.gender}</p>
+             <p>PHONE: ${item.phone_number}</p>
+        </div>`
+document.body.append(div)
+div.classList.add("main")
+
+})
+
+    </script>
+</body>
+</html>

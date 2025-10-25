@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    length(),charAt(),concat(),includes(),replace(),slice(),replace(),split(),substring()
+    toLowercase(),toUppercase()
+
+    <script>
+        //charAt
+        //it takes zero based index
+        //output string
+        //it is used to check the char is there are not in particular position
+          let str="Hello, World"
+          console.log(str.charAt(9)=="p");
+    </script>
+
+    <script>
+        //concat
+        let str1="Hello, World";
+        let greet=str1.concat("!")
+        console.log(greet)
+    </script>
+
+    <script>
+        //includes important method
+        //output boolean
+        //case sensitive
+        const sentence="The quick brown fox jumps over the lazy dog.";
+        console.log(sentence.includes("cat"))
+    </script>
+<script>
+    const greeting="Hello, World";
+    const newgreeting=greeting.replace("World","universe");
+    console.log(newgreeting);
+</script>
+
+<script>
+    //substring
+    //it doesnot accept negative values
+    //it extracts char between two specified indices
+    const str2 ="JavaScript";
+    const sub=str2.substring(5);
+    console.log(sub)
+</script>
+
+<script>
+    const UPPERCASETEXT="javascript";
+    // const lowecasetext=UPPERCASETEXT.toUpperCase().toLowerCase()
+    // console.log(lowecasetext)
+   console.log()
+</script>
+<script>
+    // const user="javaScrIpt";
+    function user(str){
+    console.log(str.charAt(0).toUpperCase().concat(str.slice(1).toLowerCase()))
+   }
+   user("pyTHON")
+</script>
+<script>
+    function user(str){
+    return str.split("").map(str=>str.charAt(0).toUpperCase().concat(str.slice(1).toLowerCase())).join("");
+   }
+
+   console.log(user("pyTHON is a pROGramming laNGuage"));
+</script>
+              
+
+</body>
+</html>

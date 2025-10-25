@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            background-color: aqua;
+            gap: 10px;
+            padding: 10px;
+        }
+        .flex-item{
+            background-color: brown;
+            color: white;
+             height: 100px;
+            width: 100px; 
+            
+            text-align: center;
+            place-content: center;
+          
+        }
+        .flex-item-1{
+            /* flex-basis: 200px;
+            flex-grow: 1;
+            flex-shrink: 1; */
+            flex:1 1 300px
+        }
+        .flex-item-2{
+            /* flex-basis: 100px;
+              flex-grow: 2;
+              flex-shrink: 2; */
+               flex:1 1 300px
+        }
+          .flex-item-3{
+            /* flex-basis: 50px;
+            flex-grow: 3;
+            flex-shrink:3; */
+             flex:1 1 300px
+          }
+
+    </style>
+</head>
+<body>
+    <!-- .flex-container>(.flex-item.flex-item ${Item $})* -->
+   <div class="flex-container">
+    <div class="flex-item flex-item-1">Item 1</div>
+    <div class="flex-item flex-item-2">Item 2</div>
+    <div class="flex-item flex-item-3">Item 3</div>
+   </div>
+</body>
+</html>

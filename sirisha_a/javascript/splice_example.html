@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //remove 3 
+    let arr1=[1,2,3,4,5]
+    newarr= arr1.splice(2,1)
+    console.log(arr1)
+    console.log(newarr)
+</script>
+
+<script>
+    //add 6 betwwen 5 and 7
+    let arr2=[1,2,3,4,5,7,8]
+    let newarr=arr2.splice(5,0,6)
+     console.log(arr2)
+    console.log(newarr)
+</script>
+
+<script>
+    //replace an element
+    let arr3=[1,2,3,4,5];
+    let newarr3=arr3.splice(-2,1,40)
+    console.log(arr3)
+    console.log(newarr3)
+</script>
+
+
+<script>
+    //removing multiple elements
+    let arr4=[10,20,30,40,50]
+    let newarr4=arr4.splice(2,2)
+    console.log(arr4)
+    console.log(newarr4)
+</script>
+
+<script>
+    //add a,b at begining
+    let arr5=["c","d","e"];
+    let newarr5=arr5.splice(0,0,"a","b")
+    console.log(arr5)
+    console.log(newarr5)
+</script>
+
+
+<script>
+    //remove last element
+    let arr6=["one",'two',"three"];
+    let newarr6=arr6.splice(-1,1);
+    console.log(arr6)
+    console.log(newarr6)
+</script>
+
+<script>
+    //add d
+    let arr7=["a","b","c"];
+    let newarr7=arr7.splice(3,0,"d")
+    console.log(arr7)
+    console.log(newarr7)
+</script>
+
+<script>
+    //rremove all elements from index
+    let arr8=[1,2,3,4,5]
+    let newarr8=arr8.splice(2)
+    console.log(newarr8)
+    console.log(arr8)
+</script>
+<script>
+    //replace multiple elements
+    let arr=["apple","banan","orange","pear"];
+    let newarr9=arr.splice(1,2,"grape","kiwi")
+    console.log(arr)
+    console.log(newarr9)
+</script>
+
+<script>
+    // negative delete count act as 0
+    let arr10=[1,2,3,4,5];
+    let newarr10=arr10.splice(2,-1,10,11)
+    console.log(arr10)
+    console.log(newarr10)
+</script>
+</body>
+</html>

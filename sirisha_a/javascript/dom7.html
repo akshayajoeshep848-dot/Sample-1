@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button onclick="getItems(fruits)">Getfruits</button>
+     <button onclick="getItems1(vegetables)">Getvegetables</button>
+</head>
+
+<body>
+    <script>
+        let fruits = ["apple", "banana", "grapes", "orange", "kiwi", "sapota", "sithapal", "pineapple", "dragon", "papaya"];
+        let colours = ["red", "green", "pink", "white", "blue", "grey", "gold", "aqua", "gray", "yellow"]
+        let vegetables = [
+            "vankaya",
+            "bendakaya",
+            "dondakaya",
+            "dosakaya",
+            "chikkudukaya",
+            "sorakaya",
+            "patlakaya",
+            "gummadikaya",
+            "beerakaya",
+            "kakarakaya"]
+        let orderedList = document.createElement("ol");
+        function getItems(fruits) {
+            for (let i = 0; i < fruits.length; i++) {
+                let listItem = document.createElement("li");
+                listItem.innerText = fruits[i];
+                orderedList.append(listItem)
+                orderedList.style.color = "green"
+                listItem.style.backgroundColor = colours[i];
+                listItem.style.margin = "10px"
+
+            }
+        }
+        // getItems(fruits);
+        //  getItems(vegetables);
+        document.body.append(orderedList)
+
+
+        let orderedList1 = document.createElement("ol");
+        function getItems1(vegetables) {
+            for(let i= 0; i < vegetables.length; i++) {
+                let listItem = document.createElement("li");
+                listItem.innerText = vegetables[i];
+                orderedList1.append(listItem)
+                orderedList1.style.color = "green"
+                listItem.style.backgroundColor = colours[i];
+                listItem.style.margin = "10px"
+
+            }
+        }
+        // getItems(fruits);
+        //  getItems(vegetables);
+        document.body.append(orderedList1)
+    
+    </script>
+</body>
+
+</html>

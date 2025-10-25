@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add(10,2)">calculate</button>
+    <button onclick="sum1(3,6)">sum</button>
+    it provide shorter syntax
+    <!-- <script>
+        let sum=function(a,b){
+            return a+b;
+        }
+        console.log(sum(2,3))
+
+    </script>
+    <script>
+        function add(a,b){
+            return a+b;
+        };
+        console.log(add(2,3))
+      
+
+    </script> -->
+
+    <script>
+        let addnumbers=(a,b)=>a+b;
+        console.log(addnumbers(30,20))
+        let multiply=(a,b)=>a*b;
+        console.log(multiply(2,3))
+        let sq=(n)=>n**2;
+        console.log(sq(25))
+
+        function add(a,b){
+            console.log(a+b)
+        }
+    </script>
+      <script>
+        //write a function print in clg and return sum of two numbers
+        let sum1=(a,b)=>{
+            // console.log(a+b)
+            return a+b
+        }
+        console.log(sum1(3,6))
+      </script>
+    
+</body>
+
+</html>

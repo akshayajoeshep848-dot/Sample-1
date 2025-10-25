@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    // let str="sirisha";
+    // let count=0
+    function str(str){
+        let count=0;
+        for(let i=0;i<=str.length;i++){
+        if(str[i]=="a"||str[i]=="e"||str[i]=="i"||str[i]=="o"||str[i]=="u")
+    {
+        count+=1;
+     } 
+    } 
+  return count;
+}
+result=str("sirisha");
+console.log(result)
+   </script> 
+   <script>
+     function rever(str){
+       return str.split("").reverse().join("")
+     }
+     result=rever("siri")
+     console.log(result)
+   </script>
+  
+<script>
+    function palindrome(name){
+       const rev= name.split("").reverse().join("")
+    if(name==rev){
+       console.log("is palindrome")
+    }else{
+        console.log("not a palindrome")
+    }
+}
+    palindrome("abccbd")
+  
+</script>
+
+<script>
+    function first(name){
+        return name.charAt(0).toUpperCase()+name.slice(1).toLowerCase();
+    }
+    console.log(first("sirisHa"))
+</script>
+  <!-- <script>
+    const text = "Hello world, welcome to the universe.";
+    console.log(text.indexOf("welcome"));
+  </script> -->
+</body>
+</html>

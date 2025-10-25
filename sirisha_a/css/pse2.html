@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         p:first-of-type{
+            color: red;
+        }
+        li:first-child{
+            background-color: red;
+        } 
+        li:nth-of-type(2n){
+            color: rgb(41, 128, 0);
+        }
+        /* :only-of-type{
+            color:yellow;
+        }
+        :only-child{
+            color: yellow;
+        } */
+      .para:empty{
+        background-color:green;
+        height: 40px;
+        box-shadow: 5px 7px 6px 2px rgba(0, 0, 0, 0.546);
+        border-radius: 18px;
+      }
+    </style>
+</head>
+<body>
+    <p class="para"></p>
+     <h2>mixed list</h2>
+    <ul>
+        <li>item 1</li>
+        <p>para 1</p>
+        <li>item 2</li>
+        <p>para 2</p>
+        <li>item 3</li>
+        <p>para 3</p>
+        <li>item 4</li>
+        <p>para 4</p>
+        <li>item 5</li>
+        <p>para 5</p>
+    </ul>
+    
+</body>
+</html>

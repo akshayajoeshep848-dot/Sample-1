@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        let btn=document.createElement("button")
+        document.body.append(btn)
+        btn.textContent="checked"
+
+        btn.addEventListener("click",()=>{
+            btn.style.textDecoration="line-through"
+        })
+    </script> -->
+<script>
+let div = document.createElement("div");
+div.style.textAlign = "center";
+div.style.marginTop = "40px";
+document.body.append(div);
+
+let title = document.createElement("h2");
+title.textContent = "My To-Do List";
+title.style.color = "darkblue";
+div.append(title);
+
+
+let input = document.createElement("input");
+input.setAttribute("type", "text");
+input.setAttribute("placeholder", "Enter a task");
+input.style.padding = "8px";
+input.style.width = "200px";
+div.append(input);
+
+
+let addBtn = document.createElement("button");
+addBtn.textContent = "Add Task";
+addBtn.style.marginLeft = "10px";
+addBtn.style.padding = "8px 12px";
+addBtn.style.cursor = "pointer";
+div.append(addBtn);
+
+
+
+let list = document.createElement("ul");
+list.style.listStyleType = "none"; 
+list.style.padding = "0";
+list.style.marginTop = "20px";
+list.style.display="flex"
+list.style.flexDirection="column"
+list.style.marginLeft="480px"
+list.style.width="40px"
+div.append(list);
+
+
+
+addBtn.addEventListener("click", () => {
+  let taskText = input.value.trim();  
+
+  if (taskText === "") {
+    alert("Please enter a task!");
+  } else {
+ 
+    let li = document.createElement("li");
+    li.textContent = taskText;
+    li.style.marginTop = "10px";
+    li.style.padding = "6px";
+    li.style.fontSize = "18px";
+    li.style.backgroundColor = "#f2f2f2";
+    li.style.borderRadius = "8px";
+    li.style.display = "inline-block";
+    li.style.minWidth = "250px";
+
+  
+    let doneBtn = document.createElement("button");
+    doneBtn.textContent = "✔";            
+    doneBtn.style.marginLeft = "10px";
+    doneBtn.style.cursor = "pointer";
+    doneBtn.style.border = "none";
+    doneBtn.style.backgroundColor = "#d4edda";
+    doneBtn.style.borderRadius = "4px";
+    doneBtn.style.padding = "4px 6px";
+
+    
+     doneBtn.addEventListener("click", () => {
+      li.style.textDecoration = "line-through"; 
+      li.style.color = "gray";                 
+      li.style.backgroundColor = "#e9ecef";      
+    });
+
+ 
+    let delBtn = document.createElement("button");
+    delBtn.textContent = "✖";
+    delBtn.style.marginLeft = "10px";
+    delBtn.style.cursor = "pointer";
+    delBtn.style.border = "none";
+    delBtn.style.backgroundColor = "#f8d7da";
+    delBtn.style.borderRadius = "4px";
+    delBtn.style.padding = "4px 6px";
+
+ 
+    delBtn.addEventListener("click", () => {
+      li.remove();  
+    });
+
+    
+  
+    li.append(doneBtn);
+    li.append(delBtn);
+    list.append(li);
+
+    input.value = "";
+  }
+});
+</script>
+</body>
+</html>
+
+
+

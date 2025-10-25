@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="veg-btn">vegetables</button>
+    <button id="fruits-btn">fruits</button>
+    <script>
+      let fruits = [
+        "Apple",
+        "Banana",
+        "Orange",
+        "Mango",
+        "Grapes",
+        "Pineapple",
+        "Papaya",
+        "Watermelon",
+        "Guava",
+        "Pomegranate",
+        "Strawberry",
+        "Blueberry",
+        "Raspberry",
+        "Blackberry",
+        "Kiwi",
+        "Dragonfruit",
+        "Lychee",
+        "Cherry",
+        "Peach",
+        "Pear",
+        "Plum",
+        "Apricot",
+        "Fig",
+        "Date",
+        "Coconut",
+        "Jackfruit",
+        "Custard Apple",
+        "Tamarind",
+        "Passion Fruit",
+        "Mulberry",
+      ];
+
+      let vegetables = [
+        "Carrot",
+        "Potato",
+        "Onion",
+        "Tomato",
+        "Cabbage",
+        "Cauliflower",
+        "Spinach",
+        "Broccoli",
+        "Lettuce",
+        "Pumpkin",
+        "Radish",
+        "Beetroot",
+        "Turnip",
+        "Okra",
+        "Brinjal",
+        "Cucumber",
+        "Capsicum",
+        "Chili",
+        "Garlic",
+        "Ginger",
+        "Zucchini",
+        "Peas",
+        "Corn",
+        "Sweet Potato",
+        "Asparagus",
+        "Celery",
+        "Mushroom",
+        "Leek",
+        "Bitter Gourd",
+        "Drumstick",
+      ];
+
+      let OrderedList = document.createElement("ol");
+      let veg_btn = document.getElementById("veg-btn");
+      let fruit_btn = document.getElementById("fruits-btn");
+      document.body.append(OrderedList);
+      function showitems(items) {
+        OrderedList.innerHTML = "";
+        for (let i = 0; i < items.length; i++) {
+          let listItem = document.createElement("li");
+          listItem.innerText = `${items[i]}`;
+          OrderedList.append(listItem);
+        }
+      }
+      veg_btn.onclick = function () {
+        showitems(vegetables);
+      };
+      fruit_btn.onclick = function () {
+        showitems(fruits);
+      };
+    </script>
+  </body>
+</html>

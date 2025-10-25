@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- rest operator  it is used when we do not know how many parameters we passed
+     the rest syntax allows a function to accept an indefinite arguents as an array -->
+    <!-- rest operator function parameter lo use chestam
+       how to assign default value
+       to assign value in a function parameter -->
+
+<script>
+    let a=[1,2,3,4,5,6,7,8,9]
+   let sum= function(a=0,b=0,...c){
+    let s=0;
+    for(let i=0;i<c.length;i++){
+        s+=c[i];
+    }
+   return s+a+b;
+    
+   };
+   console.log(sum(2,3,4,5));
+   console.log(sum())
+//    console.log(sum(...a));
+
+</script>
+          
+</body>
+</html>

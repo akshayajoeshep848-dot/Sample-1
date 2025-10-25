@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+             margin: 0px;
+        }
+        .main{
+            background-color: white;
+              padding: 15px;
+            padding-left: 100px;
+            box-shadow: 0px 0px 50px 60px rgba(128, 128, 128, 0.194);
+            justify-content: space-between;
+            display: flex;
+        }
+        .line{
+            background-color: red;
+            width: 3px;
+            height: 20px;
+            position: relative;
+            display: flex;
+          
+            
+        }
+        .line::before{
+            content: '';
+            background-color:green;
+            width: 3px;
+            height: 20px;
+            position: absolute;
+            left: 4px;
+        }
+         .line::after{
+            content: "";
+            background-color:blue;
+            width: 3px;
+            height: 20px;
+            position: absolute;
+            left: -4px;
+
+        }.li{
+            padding-left:12px;
+            font-weight: 800;
+            font-size: 22px;
+        }.end{
+            display: flex;
+            gap: 20px;
+            position: relative;
+            right: 60px;
+           
+        }
+        select{
+            border: none;
+            font-weight: 600;  
+        }
+        button{
+            border-radius: 20px;
+            border: none;
+            background-color: orangered;
+            color: white;
+            width: 90px;
+            padding: 10px;
+            position: relative;
+            bottom: 6px;
+        
+        }
+        .main2{
+              background-color: white;
+           
+            box-shadow: 0px 0px 30px 50px rgba(128, 128, 128, 0.192);
+            justify-content: space-between;
+            display: flex;
+            place-items: center;
+            padding: 10px 100px;
+        }.line2{
+            display: flex;
+            gap: 20px;
+        }
+        .li3{
+            display: flex;
+            padding-left: 200px;
+            gap: 20px;
+          
+        }
+         .b2{
+            background-color: #9D00FF;
+            color: white;
+            border-radius: 0;
+         }
+         .menu3{
+            position: relative;
+            background-color: black;
+            height: 4px;
+            width: 30px;
+            border-radius: 5px;
+            top: 10px;
+         }
+         .menu3::after{
+            content: " ";
+           background-color: black;
+            height: 4px;
+            width: 30px;
+           bottom: 10px;
+              border-radius: 5px;
+            position: absolute;
+
+         }
+         .menu3::before{
+            content: " ";
+           background-color: black;
+            height: 4px;
+            width: 30px;
+          top: 10px;
+            border-radius: 5px;
+            position: absolute;
+
+         }
+         .main3{
+             background-color: white;
+            padding: 20px;
+            padding-left: 100px;
+            box-shadow: 0px 0px 50px 60px rgba(128, 128, 128, 0.194);
+            justify-content:space-between;
+            display: flex;
+
+         }
+         .line2{
+            background-color: red;
+            width: 3px;
+            height: 20px;
+            position: relative;
+            display: flex;
+          
+            
+        }
+        .line2::before{
+            content: '';
+            background-color:green;
+            width: 3px;
+            height: 20px;
+            position: absolute;
+            left: 4px;
+        }
+         .line2::after{
+            content: "";
+            background-color:blue;
+            width: 3px;
+            height: 20px;
+            position: absolute;
+            left: -4px;
+         }
+         .li2{
+            padding-left: 20px;
+            font-weight: 600;
+            font-size: 20px;
+         }.main4{
+            background-color: white;
+              padding:9px;
+            padding-left: 100px;
+            box-shadow: 0px 0px 50px 60px rgba(128, 128, 128, 0.194);
+            justify-content: space-between;
+            display: flex;
+           
+         }
+        .m{
+            background-color: red;
+            width: 3px;
+            height: 20px;
+            position: relative;
+            display: flex;
+          
+           gap: 20px;
+        }
+        .m::before{
+            content: '';
+            background-color:green;
+            width: 3px;
+            height: 20px;
+            position: absolute;
+            left: 4px;
+        }
+         .m::after{
+            content: "";
+            background-color:blue;
+            width: 3px;
+            height: 20px;
+            position: absolute;
+            left: -4px;
+
+        }
+        .bt4{
+             border-radius:30px;
+            background-color: #9D00FF;
+        }
+        .main5{
+            background-color: white;
+              padding:9px;
+            padding-left: 100px;
+            box-shadow: 0px 0px 50px 60px rgba(128, 128, 128, 0.194);
+            justify-content: space-around;
+            display: flex;
+           
+        }
+        .last{
+            display: flex;
+            gap: 20px;
+        }.l2{
+             background-color: red;
+            width: 3px;
+            height: 20px;
+            position: relative;
+            display: flex;
+          
+           gap: 20px;
+        }
+        .l2::before{
+            content: '';
+            background-color:green;
+            width: 3px;
+            height: 20px;
+            position: absolute;
+            left: 4px;
+        }
+         .l2::after{
+            content: "";
+            background-color:blue;
+            width: 3px;
+            height: 20px;
+            position: absolute;
+            left: -4px;
+
+        }.btn4{
+              border-radius:30px;
+            background-color: #9D00FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="line">
+            <div class="li">LEAD</div>
+        </div>
+        <div class="end">
+            <div style="font-weight: 600;">Overview</div>
+            <div><select><option>Pages</option></select></div>
+            <div><select><option>Resources</option></select></div>
+            <div style="font-weight: 600;">Docs</div>
+            <div><button>Buy Now</button></div>
+
+        </div>
+    </div>
+    <br><br><br>
+    <div class="main2">
+        <div class="line2">
+        <div class="line">
+            <div class="li">LEAD</div>
+        </div>
+        <div style="position: relative;left: 70px;">Overview</div>
+        <div style="position: relative;left: 80px;">Pages</div>
+        <div style="position: relative;left: 90px;">Resources</div>
+        <div style="position: relative;left: 100px;">Docs</div>
+        </div>
+        <div class="li3">
+            <div>Sign in</div>
+            <div><button class="b2">Buy Now</button></div>
+        </div>
+    </div><br><br><br>
+    <div class="main3">
+    <div class="menu3">
+        <div class="menu"></div>
+    </div>
+        <div class="line2">
+            <div class="li2">LEAD</div>
+        </div>
+        <div class="search">&#128793</div>
+    </div>
+    <br><br><br>
+    <div class="main4">
+        <div class="m">
+            <div style="padding-left: 20px; font-weight: 600; font-size: 22px;">LEAD</div>
+            <div>Overview</div>
+            <div>Pages</div>
+            <div>Resources</div>
+            <div>Docs</div>
+            <div style="position: relative; bottom: 20px;"><span style="color: red; font-size: 40px;">.</span><span style="color: red; font-size: 40px;">.</span><spam style="color: red; font-size: 40px;"">.</spam></div>
+        </div>
+        <div style="display: flex; padding-right: 120px; gap: 20px;">
+            <div style="font-size: 20px;">&#128793</div>
+             <div><button class="bt4">Buy Now</button></div>
+        </div>
+    </div><br><br>
+    <div class="main5">
+        <div class="l2">
+            <div class="li">LEAD</div>
+        </div>
+     <div class="last">
+        <div>Overview</div>
+        <div>Components</div>
+        <div>Resources</div>
+        <div>FAQ</div>
+     </div>
+     <div><button class="btn4">Buy Now</button></div>
+    </div>
+</body>
+</html>

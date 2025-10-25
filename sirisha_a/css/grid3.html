@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-container{
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(5,1fr);
+            height: 100vh;
+            /* background-image: url(./lion.jpg);
+            background-size: cover;
+            background-repeat: no-repeat; */
+            grid-template-areas:
+            "header header header header footer1"
+            "footer content content header2 footer1"
+            "footer header3 rightnav header2 footer1" 
+            "footer header3 rightnav1 rightnav1 footer1"
+            "footer header1 header1 header1 header1"
+        }
+        .div-item{
+            background-color: aqua;
+            place-content: center;
+            text-align: center;
+            /* background-color: transparent;
+            border: 7px solid white; */
+           
+        }
+        .div-item1{
+            grid-area: header;
+         }
+         .div-item2{
+            grid-area: header1;
+         }
+         .div-item3{
+            grid-area: content;
+            
+         }
+         .div-item4{
+            grid-area: footer;
+           
+         }
+         .div-item4{
+            grid-area: rightnav;
+         }
+          .div-item5{
+            grid-area: rightnav1;
+         }
+           .div-item6{
+            grid-area: header2;
+         }
+           .div-item8{
+            grid-area: footer;
+         }
+         .div-item9{
+            grid-area: footer1;
+         }
+          .div-item7{
+            grid-area: header3;
+         }
+    </style> 
+</head>
+<body>
+    
+        <div class="div-container">
+            <div class="div-item div-item1">Header</div>
+            <div class="div-item div-item2">Footer</div>
+            <div class="div-item div-item3">Header1</div>
+            <div class="div-item div-item4">Logic While</div>
+            <div class="div-item div-item5">Footer1</div>
+            <div class="div-item div-item6">Rightnav1</div>
+            <div class="div-item div-item7">Leftnav1</div>
+            <div class="div-item div-item8">Leftnav</div>
+            <div class="div-item div-item9">Rightnav</div>
+           </div>
+  
+</body>
+</html>

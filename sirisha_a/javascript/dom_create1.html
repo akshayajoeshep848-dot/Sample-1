@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="head-1">Selecting DOM Elements</h1>
+
+    <div id="div-1"></div>
+
+     <input type="text" id="in-1" value="siri"/>
+
+     <div id="div-2"></div>
+
+     <div class="div1">this is div1</div>
+     <div id="div2">this is div2</div>
+
+   
+     <script>
+        // let heading = document.createElement("h1");
+        // console.log("Node type of h1:",heading.nodeType)
+
+        //  let heading1 = document.createTextNode("Hello");
+        // console.log("Node type of hello:",heading1.nodeType)
+
+        //  let heading2 = document.createComment('This is a comment');
+        // console.log("Node type of comment:",heading2.nodeType)
+        // here document is entire html element
+        
+    //    let head1=document.getElementById("head-1");
+    //    //doc is common and selector is match to id
+    //    //here head1 is javascript obj
+    //    //it will fetch 
+    //    console.log(head1.innerText)
+    //    //we can access the element 
+    //    head1.innerText="Hello"
+    //    console.log(head1.innerText)
+    //   //we can chage
+    
+
+    //   let div1=document.getElementById("div-1")
+    //   console.log(div1.id)
+    //      console.log(div1.innerHTML)
+    //      div1.innerHTML="<p>This is a paragraph</p>"
+      
+    //  let input1=document.getElementById("in-1");
+    //  console.log(input1.value);
+
+    // let num1=Number(prompt("Enter first numbers"));
+    // let num2=Number(prompt("Enter sec numbers"))
+    //  function sum(a,b){
+    //     return a+b;
+    //  }
+    
+    //  let div2=document.getElementById("div-2");
+    //  //to identify html elemt and assign to variable
+    //   //div-2 nii div2 varaible lo pettali
+    //  div2.innerText=sum(num1,num2);
+       
+    let div3=document.querySelector(".div1");
+    console.log(div3.innerHTML);
+   
+     div3.innerHTML=`This is changed div1`;
+    div3.style.color="blue";
+    div3.style.backgroundColor="red";
+    div3.style.padding="12px"
+
+    let div4=document.querySelector("#div2");
+    console.log(div4.innerHTML);
+    div4.innerHTML=`This is changed div2`;
+    div4.style.color="#00ff00";
+    
+
+
+
+    
+    </script>
+</body>
+</html>

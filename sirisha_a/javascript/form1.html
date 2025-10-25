@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Registration</title>
+    <style>
+      /* General body and container styling */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .form-container {
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        margin: 20px;
+      }
+
+      .form-heading {
+        text-align: center;
+        color: #333;
+        margin-bottom: 24px;
+      }
+
+      form label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+        font-weight: bold;
+      }
+
+      form input[type="text"],
+      form input[type="date"],
+      form input[type="email"],
+      form input[type="tel"],
+      form select,
+      form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      form input[type="text"]:focus,
+      form input[type="date"]:focus,
+      form input[type="email"]:focus,
+      form input[type="tel"]:focus,
+      form select:focus,
+      form textarea:focus {
+        border-color: aqua;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+      }
+
+      .checkbox-container,
+      .radio-container {
+        margin-bottom: 20px;
+      }
+
+      .checkbox-container input,
+      .radio-container input {
+        margin-right: 8px;
+      }
+
+      .checkbox-container label,
+      .radio-container label {
+        display: inline;
+        font-weight: normal;
+        color: #555;
+      }
+
+      .radio-container label {
+        display: inline-block;
+        margin-right: 15px;
+      }
+
+      .submit-button {
+        width: 100%;
+        padding: 12px;
+        background-color: aqua;
+        color: black;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-button:hover {
+        background-color: #0057b3cc;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let div = document.createElement("div");
+      div.classList.add("form-container");
+      document.body.append(div);
+
+      let heading = document.createElement("h2");
+      heading.textContent = "Patient Registration";
+      heading.classList.add("form-heading");
+      div.append(heading);
+
+      let form = document.createElement("form");
+      form.setAttribute("id", "registrationform");
+      div.append(form);
+
+      // Full Name Field
+      let fnamelbl = document.createElement("label");
+      fnamelbl.textContent = "Full Name: ";
+      fnamelbl.setAttribute("for", "fullname");
+      form.append(fnamelbl);
+      let inputnme = document.createElement("input");
+      inputnme.setAttribute("placeholder", "Enter your Name");
+      inputnme.setAttribute("type", "text");
+      inputnme.setAttribute("id", "fullname");
+      inputnme.setAttribute("name", "fullname");
+      inputnme.setAttribute("required", "");
+      inputnme.classList.add("form-input");
+      form.append(inputnme);
+      form.append(document.createElement("br"));
+
+      // Date of Birth Field
+      let doblbl = document.createElement("label");
+      doblbl.textContent = "DOB : ";
+      doblbl.setAttribute("for", "dob");
+      form.append(doblbl);
+      let dob = document.createElement("input");
+      dob.setAttribute("type", "date");
+      dob.setAttribute("id", "dob");
+      dob.setAttribute("name", "dob");
+      dob.setAttribute("required", "");
+      dob.classList.add("form-input");
+      form.append(dob);
+      form.append(document.createElement("br"));
+
+      // Gender Field
+      let genlabel = document.createElement("label");
+      genlabel.setAttribute("for", "gender");
+      genlabel.textContent = "Gender:";
+      form.append(genlabel);
+      let select = document.createElement("select");
+      select.setAttribute("id", "gender");
+      select.setAttribute("name", "gender");
+      select.setAttribute("required", "");
+      select.classList.add("form-input");
+
+      let optionsData = [
+        { value: "", text: "Select Gender" },
+        { value: "male", text: "Male" },
+        { value: "female", text: "Female" },
+        { value: "other", text: "Other" },
+      ];
+
+      optionsData.forEach((option) => {
+        let optionn = document.createElement("option");
+        optionn.setAttribute("value", option.value);
+        optionn.textContent = option.text;
+        select.append(optionn);
+      });
+      form.append(select);
+      form.append(document.createElement("br"));
+
+      // Email Field
+      let emailLabel = document.createElement("label");
+      emailLabel.setAttribute("for", "email");
+      emailLabel.textContent = "Email:";
+      form.appendChild(emailLabel);
+      let emailInput = document.createElement("input");
+      emailInput.setAttribute("type", "email");
+      emailInput.setAttribute("name", "email");
+      emailInput.setAttribute("required", "");
+      emailInput.setAttribute("id", "email");
+      emailInput.classList.add("form-input");
+      form.appendChild(emailInput);
+      form.append(document.createElement("br"));
+
+      // Phone Number Field
+      let phoneLabel = document.createElement("label");
+      phoneLabel.setAttribute("for", "phone");
+      phoneLabel.textContent = "Phone Number:";
+      form.appendChild(phoneLabel);
+      let phoneInput = document.createElement("input");
+      phoneInput.setAttribute("type", "tel");
+      phoneInput.setAttribute("required", "");
+      phoneInput.setAttribute("id", "phone");
+      phoneInput.setAttribute("name", "phone");
+      phoneInput.classList.add("form-input");
+      form.appendChild(phoneInput);
+      form.append(document.createElement("br"));
+
+      // Address Field
+      let addressLabel = document.createElement("label");
+      addressLabel.textContent = "Address:";
+      addressLabel.setAttribute("for", "address");
+      form.append(addressLabel);
+      let addressInput = document.createElement("input");
+      addressInput.setAttribute("type", "text");
+      addressInput.setAttribute("id", "address");
+      addressInput.setAttribute("name", "address");
+      addressInput.classList.add("form-input");
+      form.append(addressInput);
+      form.append(document.createElement("br"));
+
+      // Insurance Status field
+      let insuranceLabel = document.createElement("label");
+      insuranceLabel.textContent = "Insurance Status:";
+      form.append(insuranceLabel);
+
+      let radioContainer = document.createElement("div");
+      radioContainer.classList.add("radio-container");
+
+      let insuredRadio = document.createElement("input");
+      insuredRadio.setAttribute("type", "radio");
+      insuredRadio.setAttribute("id", "insurance");
+      insuredRadio.setAttribute("name", "insuranceStatus");
+      insuredRadio.setAttribute("value", "insurance");
+      insuredRadio.setAttribute("required", "");
+
+      let insuredLabel = document.createElement("label");
+      insuredLabel.textContent = "Insured";
+      insuredLabel.setAttribute("for", "insured");
+      radioContainer.append(insuredRadio);
+      radioContainer.append(insuredLabel);
+
+      let notInsuredRadio = document.createElement("input");
+      notInsuredRadio.setAttribute("type", "radio");
+      notInsuredRadio.setAttribute("id", "notInsured");
+      notInsuredRadio.setAttribute("name", "insuranceStatus");
+      notInsuredRadio.setAttribute("value", "no Insurance");
+
+      let notInsuredLabel = document.createElement("label");
+      notInsuredLabel.textContent = "Not Insured";
+      notInsuredLabel.setAttribute("for", "notInsured");
+      radioContainer.append(notInsuredRadio);
+      radioContainer.append(notInsuredLabel);
+
+      form.append(radioContainer);
+      form.append(document.createElement("br"));
+
+      //  Comments Field
+      let commentsLabel = document.createElement("label");
+      commentsLabel.textContent = "Comments:";
+      commentsLabel.setAttribute("for", "comments");
+      form.append(commentsLabel);
+      let commentsTextarea = document.createElement("textarea");
+      commentsTextarea.setAttribute("id", "comments");
+      commentsTextarea.setAttribute("name", "comments");
+      commentsTextarea.setAttribute("rows", "4");
+      commentsTextarea.classList.add("form-input");
+      form.append(commentsTextarea);
+      form.append(document.createElement("br"));
+
+      // Checkbox Field
+      let checkboxDiv = document.createElement("div");
+      checkboxDiv.classList.add("checkbox-container");
+      let checkbox = document.createElement("input");
+      checkbox.setAttribute("type", "checkbox");
+      checkbox.setAttribute("id", "check");
+      checkbox.setAttribute("name", "terms");
+      checkbox.setAttribute("value", "agreed");
+      checkbox.setAttribute("required", "");
+      let chekboxLabel = document.createElement("label");
+      chekboxLabel.textContent = "I agree to the terms and conditions.";
+      chekboxLabel.setAttribute("for", "check");
+      checkboxDiv.append(checkbox);
+      checkboxDiv.append(chekboxLabel);
+      form.append(checkboxDiv);
+      form.append(document.createElement("br"));
+
+      // Submit Button
+      let registerButton = document.createElement("button");
+      registerButton.setAttribute("type", "submit");
+      registerButton.textContent = "Register Patient";
+      registerButton.classList.add("submit-button");
+      form.appendChild(registerButton);
+
+      let registrationform = document.getElementById("registrationform");
+      registrationform.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        let fullname = document.getElementById("fullname").value;
+        let dob = document.getElementById("dob").value;
+        let gender = document.getElementById("gender").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+        let address = document.getElementById("address").value;
+        let insuranceStatus = document.querySelector( 
+          'input[name="insuranceStatus"]:checked'
+        ).value;
+        let comments = document.getElementById("comments").value;
+        let terms = document.getElementById("check").checked;
+
+        const patientData = {
+          fullname: fullname,
+          dob: dob,
+          gender: gender,
+          email: email,
+          phone: phone,
+          address: address,
+          insuranceStatus: insuranceStatus,
+          comments: comments,
+          termsAgreed: terms,
+        };
+
+        console.log(patientData);
+      });
+    </script>
+  </body>
+</html>

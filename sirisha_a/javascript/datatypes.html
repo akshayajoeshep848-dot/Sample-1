@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>javascript datatypes</h2>
+    <script>
+        let age=10;
+        let firstName = "sirisha";
+        // template literal `` forming a string using back ticks
+        let lastName=`annapureddy`;
+        let bool=true;
+        let unDefined=undefined;
+        let sym=Symbol();
+        let bigInt=10n;
+        var fullName1=firstName+" "+lastName;
+        var fullName2=`${firstName} ${lastName}`
+         console.log("fullName:",fullName1);
+         console.log("fullName:",fullName2);
+
+        let fatherName=`krishna`
+        let motherName="radha"
+        console.log(`my father name is ${fatherName} my mother name is ${motherName}`)
+
+        console.log("age:",age);
+        console.log("firstName:",firstName);
+        console.log("bool:",bool);
+        console.log(unDefined);
+        console.log(sym);
+        console.log(bigInt);
+        // template literal
+        console.log(`M y name is ${firstName} ${lastName},and my age is ${age}`);
+        // string concatenation
+        console.log("my name is ", firstName+" " + lastName,"and my age is",+ age);
+        // comma seperated values
+        console.log("my name is",firstName,lastName,"and my age is",age);
+       
+
+
+
+
+        let address1="Havya womens pg";
+        let address2="Road no-3";
+        let address3="Hyderabad,Telangana"
+        console.log("typeof address1:",typeof(address1))
+        console.log(`template literal: ${address1} ${address2} ${address3}`)
+        console.log("string concatination:",address1+" "+address2+" "+address3);
+
+        console.log('age:', typeof age)
+        console.log("firstname:", typeof firstName)
+        
+
+
+        </script>
+
+
+</body>
+</html>

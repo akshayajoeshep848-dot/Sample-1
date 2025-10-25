@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    ==>A callback fun is simply a fun that is called another fun after fun has finished executing.This pattern is useful
+    when dealing with operators that take
+    an unknown amount of time, such as reading files,making HTTP req,or querying databases
+    ==>callback fun is a regular fun and passed as an argument to another fun.
+
+    <script>
+        //main fun is called higher order fun
+        function greet(name, callback) {
+            console.log("Hello," + name + "!");
+            callback();
+        }
+        function sayGoodbye() {
+            console.log("Goodbye!");
+        }
+
+        function sayhello() {
+            console.log("goodmrg");
+        }
+
+        greet("Alice", sayGoodbye)
+
+
+        //example 2
+
+        function operation(num1, num2, oper) {
+            console.log(`you have given ${num1},${num2}`);
+            oper(num1, num2)
+        }
+
+        function sum(num1, num2) {
+            console.log(num1 + num2) ;
+        }
+        function multiply(num1, num2) {
+            console.log(num1 * num2) ;
+        }
+
+        function division(num1,num2){
+           console.log(num1/num2);
+        }
+
+        function modulus(num1,num2){
+            console.log(num1%num2);
+        }
+        operation(10,2,multiply);
+        operation(10,2,sum);
+        operation(10,2,modulus);
+        operation(10,2,division);
+
+
+
+
+
+
+
+
+    </script>
+
+explain passed by value and passed by reference?
+what is an immediately invoked function in js?
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        //spread operator
+      
+        let arr=[1,2,3,4];
+        //to remove arr
+        console.log(...arr)
+        let arr2=[...arr]
+        console.log(arr2)
+    </script>
+
+
+<script>
+    //  function sum(){
+    //     let a=10;
+    //     let b=20;let c=30;
+    //       return a+b+c
+    //  }
+    //   console.log(sum())
+
+
+    function sum(a,b,c){
+        return a+b+c;
+    }
+    const numbers=[10,20,20];
+    console.log(sum(...numbers))
+</script>
+
+<script>
+    arr1=[1,2,3,4];
+    arr2=[5,6,7,8];
+    arr3=[...arr1,...arr2];
+    console.log(arr3)
+</script>
+
+<script>
+    // what is shallow copy and deep copy?
+      //shallow copy it has link ,it has only one location like chrome 
+      //reference it means second line only changes the copied item
+      //first layer deep copy it located in two locations
+     // and deep copy it has two diiferent memory locations
+
+      //shallow copy
+     const originalArray=[1,2,{key:"value"}] ;
+     const copiedArray=[...originalArray];
+     console.log(copiedArray);
+     console.log(originalArray==copiedArray);
+     console.log(originalArray[2]==copiedArray[2])
+
+
+     copiedArray[0]=99;
+     console.log(copiedArray[0]);
+     console.log(originalArray[0])
+
+
+     copiedArray[2].key='new value';
+     console.log(originalArray)
+     console.log(copiedArray);
+</script> -->
+<script>
+    const originalObject={a:1,b:{c:2}};
+    const copiedObject={...originalObject};
+    console.log(originalObject);
+    console.log(copiedObject);
+
+    copiedObject.a=2;
+    copiedObject.b.c=5;
+    console.log(originalObject);
+    console.log(copiedObject);
+</script>
+
+
+<script>
+    //merging arrays
+    const arr1=[1,2,3];
+    const arr2=[3,4,5];
+    const arr3=[5,6,7];
+    const mergeArray=[...arr1,...arr2,...arr3];
+    console.log(mergeArray)
+
+     const arr4=[1,2];
+    const arr5=[3,4];
+    const arr6=[5,6];
+    const mergeArray1=[...arr4,...arr5,...arr6];
+    console.log(mergeArray1)
+
+    //merging objects
+    //it will not take overwritten values
+    const objA={x:1,y:2};
+    const objB={y:3,z:4};
+    const objC={a:5};
+    const mixed={...objA,...objB,...objC};
+    console.log(mixed);
+
+    //spreading a string into an array of characters
+    const greeting="hello";
+    const chars=[...greeting];
+    console.log(chars);
+
+
+    //spreading a set into an array (to remove duplicates or convert)
+    const mySet=new Set([1,2,2,3,4,4]);
+    const uniqueNumbers=[...mySet];
+    console.log(uniqueNumbers)
+</script>
+</body>
+</html>

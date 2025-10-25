@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persistent Form Data</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 6px;
+      margin: 6px 0;
+      width: 250px;
+    }
+    button {
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Persist Form Data Example</h2>
+
+  <form id="userForm">
+    <label>Name:</label><br>
+    <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email"><br>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    const form = document.getElementById('userForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    // ✅ Load data from localStorage when page loads
+    window.addEventListener('load', () => {
+      const savedName = localStorage.getItem('name');
+      const savedEmail = localStorage.getItem('email');
+
+       nameInput.value = savedName;
+      emailInput.value = savedEmail;
+    });
+
+    // ✅ On form submit, save values in localStorage
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // stop the page from reloading
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+
+      if (name && email) {
+        localStorage.setItem('name', name);
+        localStorage.setItem('email', email);
+
+        message.textContent = "✅ Data saved successfull"
+      } else {
+        message.textContent ="⚠ Please fill all fields"
+      };
+    });
+  </script>
+</body>
+</html>

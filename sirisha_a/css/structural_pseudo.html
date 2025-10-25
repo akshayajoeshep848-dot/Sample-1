@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>structural pseudo classes</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table,th,td{
+            border: 1px solid blue;
+            padding: 8px;
+        }
+         td:first-child{
+            background-color: aquamarine; 
+        }
+        tbody>tr:first-child{
+            background-color:rgba(137, 43, 226, 0.479);
+        
+        }
+        td:nth-child(3){
+            /* in bracket what ever we give the value that is coloured even(2n),odd(2n+1) */
+            background-color: rgba(0, 128, 0, 0.532);
+        }
+        tr:nth-child(2){
+                background-color: aqua;
+        }
+        tbody>tr:last-child{
+            background-color: yellow;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>pseudo classe-structural </h1>
+    <table>
+        <thead>
+            <th>header 1</th>
+            <th>header 2</th>
+            <th>header 3</th>
+            <th>header 4</th>
+            <th>header 5</th>
+            <th>header 6</th>
+            <th>header 7</th>
+            <th>header 8</th>
+            <th>header 9</th>
+            <th>header 10</th>
+        </thead>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+        <tr>
+            <td>cell 1</td>
+            <td>cell 2</td>
+            <td>cell 3</td>
+            <td>cell 4</td>
+            <td>cell 5</td>
+            <td>cell 6</td>
+            <td>cell 7</td>
+            <td>cell 8</td>
+            <td>cell 9</td>
+            <td>cell 10</td>
+        </tr>
+    </table>
+</body>
+</html>

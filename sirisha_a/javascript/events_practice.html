@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Webpage Example</title>
+</head>
+<body>
+<script>
+
+let container = document.createElement("div");        
+document.body.append(container);                      
+
+
+container.style.textAlign = "center";                 
+container.style.backgroundColor = "#f0f0f0";          
+container.style.minHeight = "100vh";                 
+container.style.padding = "20px";                     
+
+
+let heading = document.createElement("h1");
+heading.textContent = "Welcome to My Page";           
+heading.style.color = "darkblue";                     
+container.append(heading);                            
+
+let para = document.createElement("p");           
+para.textContent = "This page is created entirely using JavaScript DOM methods!"; 
+para.style.fontSize = "20px";                        
+para.style.color = "black";                         
+container.append(para);                            
+
+
+let btn = document.createElement("button");           
+btn.textContent = "Change Text Color";                
+btn.style.padding = "10px 20px";                      
+btn.style.fontSize = "16px";                          
+btn.style.cursor = "pointer";                         
+container.append(btn);                             
+
+
+btn.addEventListener("click", function() {          
+    para.style.color = para.style.color === "black" ? "green" : "black";  
+});
+</script>
+</body>
+</html>
+
+</body>
+</html>

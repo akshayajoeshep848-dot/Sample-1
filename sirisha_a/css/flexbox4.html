@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+        }
+       .c{
+        background-color: blueviolet;
+        height: 9vh;
+        width: 90vh;
+        color: white;
+        place-content: center;
+        text-align: center;
+        border: 5px solid black;
+        box-shadow: 1px 1px 1px 10px gray;
+       }
+       .c1{
+        background-color: aquamarine;
+        height: 43vh;
+        width: 20vh;
+         border: 5px solid black;
+        color: white;
+        place-content: center;
+        text-align: center;
+         box-shadow: 1px 1px 1px 11px gray;
+       }
+       .c2{
+        background-color: blue;
+        height: 20vh;
+        width: 64.3vh;
+         border: 5px solid black;
+        color: white;
+        place-content: center;
+        text-align: center;
+         box-shadow: 1px 1px 1px 11px gray;
+       }
+       .c3{
+        background-color: blue;
+        height: 17vh;
+        width: 30.2vh;
+         border: 5px solid black;
+        color: white;
+        place-content: center;
+        text-align: center;
+         box-shadow: 1px 1px 1px 14px gray;
+       }
+       .c4{
+         background-color: blue;
+        height: 17vh;
+        width: 28.3vh;
+         border: 5px solid black;
+        color: white;
+        place-content: center;
+        text-align: center;
+         box-shadow: 1px 1px 1px 14px gray;
+       }
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="c">Header</div>
+        <div style="display: flex; gap: 20px;">
+            <div class="c1">Sidebar</div>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="c2">Content-1</div>
+                <div style="display: flex; gap: 20px;">
+                    <div class="c3">Content-2</div>
+                    <div class="c4">Content-3</div>
+                </div>
+            </div>
+        </div>
+        <div class="c">Footer</div>
+    </div>
+</body>
+</html>

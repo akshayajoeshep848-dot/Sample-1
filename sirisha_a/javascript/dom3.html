@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="button-container">
+        <button class="button-item">button 1</button>
+        <button class="button-item">button 2</button>
+        <button class="button-item">button 3</button>
+        <button class="button-item">button 4</button>
+        <button class="button-item">button 5</button>
+    </div>
+    <script>
+        //output nodelist
+        //static
+
+        let styleArray=[
+            {
+                name:"Click me",
+                backgroundColor:"blue",
+                padding:"10px",
+                border:"None",
+                margin:"10px",
+                borderRadius:"10px",
+                color:"white",
+                boxShadow:"0px 0px 2px 2px grey"
+            },{
+                 name:"Submit",
+                backgroundColor:"blue",
+                padding:"10px",
+                border:"None",
+                margin:"10px",
+                borderRadius:"10px",
+                color:"white",
+                boxShadow:"0px 0px 2px 2px grey"
+            },{
+                 name:"Register",
+                backgroundColor:"blue",
+                padding:"10px",
+                border:"None",
+                margin:"10px",
+                borderRadius:"10px",
+                color:"white",
+                boxShadow:"0px 0px 2px 2px grey"
+            },{
+                 name:"Apply",
+                backgroundColor:"blue",
+                padding:"10px",
+                border:"None",
+                margin:"10px",
+                borderRadius:"10px",
+                color:"white",
+                boxShadow:"0px 0px 2px 2px grey"
+            },{
+                 name:"Resend",
+                backgroundColor:"pink",
+                padding:"10px",
+                border:"None",
+                margin:"10px",
+                borderRadius:"10px",
+                color:"white",
+                boxShadow:"0px 0px 2px 2px grey"
+            }
+
+        ]//  buttonItems.forEach((item)=>{
+         let buttonItems=document.querySelectorAll(".button-item");
+           buttonItems.forEach((item,index) => {
+           item.innerText=styleArray[index].name;
+           item.style.backgroundColor=styleArray[index].backgroundColor,
+           item.style.border="None",
+           item.style.color="white",
+           item.style.padding="10px",
+           item.style.margin="10px",
+           item.style.boxShadow="0px 0px 2px 2px grey",
+           item.style.borderRadius="10px"
+       });
+
+
+
+    //   buttonItems.forEach((item)=>(item.style.backgroundColor="blue"));
+
+
+    </script>
+</body>
+</html>

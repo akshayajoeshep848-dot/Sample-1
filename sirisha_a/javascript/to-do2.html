@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>My To-Do List</h1>
+    <form action="submit" class="container"></form>
+    <div class="display-list"></div>
+    <script>
+        let container = document.querySelector(".container")
+        let taskItem = document.createElement("input")
+        let duration = document.createElement("input")
+        let add = document.createElement("button")
+        let displayList = document.querySelector(".display-list")
+        let taskObject = {}
+        let taskArray = []
+
+        taskItem.classList.add("task")
+        duration.classList.add("duration")
+        add.classList.add("add")
+        add.textContent = "Add"
+
+
+
+        taskItem.setAttribute("type", "text")
+        taskItem.setAttribute("name", "task")
+        duration.setAttribute("type", "number")
+        duration.setAttribute("name", "duration")
+        add.setAttribute("type", "submit")
+
+
+        container.appendChild(taskItem)
+        container.appendChild(duration)
+        container.appendChild(add)
+
+
+
+        taskItem.addEventListener("change", (event) => {
+        taskObject[event.target.name] = event.target.value;
+        console.log(taskObject);
+      });
+
+      // addeventListener duration
+      duration.addEventListener("change", (event) => {
+        taskObject[event.target.name] = event.target.value;
+        console.log(taskObject);
+      });
+
+      
+        container.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+
+
+            // let taskObject={
+            //     taskItem:taskItem.value,
+            //     duration:duration.value
+            // }
+            taskArray.push(taskObject)
+            taskObject = {}
+            console.log(taskArray)
+            container.reset()
+             taskArray.push(taskObject)
+            container.reset()
+            taskArray.forEach((task) => {
+                let parentDiv = document.createElement("div")
+                let taskDiv = document.createElement("div")
+                let durationDiv = document.createElement("div")
+
+                parentDiv.classList.add("task-div")
+
+                taskDiv.textContent = task.task;
+                durationDiv.textContent = task.duration
+                parentDiv.appendChild(taskDiv)
+                parentDiv.appendChild(durationDiv);
+                displayList.appendChild(parentDiv)
+            });
+        })
+    </script>
+</body>
+
+</html>

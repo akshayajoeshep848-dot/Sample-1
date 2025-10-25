@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: rgba(0, 255, 255, 0.573);
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:10px;
+            margin:10px auto;
+            width: 300px;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 20px;
+        }
+       
+    
+    </style>
+</head>
+<body>
+    <!-- <script>
+    function getData() {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve("Data received ✅"), 2000);
+  });
+}
+getData().then((val)=>console.log(val))
+async function fetchData() {
+  console.log("Fetching data...");
+  let result = await getData(); // waits for 2 seconds
+  console.log(result);
+  console.log("Done!");
+}
+fetchData();
+</script> -->
+
+<script>
+    async function hello(){
+        let response= await fetch("https://jsonplaceholder.typicode.com/todos/");
+        let result=await response.json()
+        console.log(result)
+     
+      
+
+        result.forEach((item)=>{
+        let div=document.createElement("div")
+        document.body.append(div)
+        div.innerHTML=`<p>user id:${item.userId}</p>
+        <p>id: ${item.id}</p>
+        <p>title: ${item.title}</p>`
+
+     
+    })
+}
+     hello()
+     
+</script>
+</body>
+</html>

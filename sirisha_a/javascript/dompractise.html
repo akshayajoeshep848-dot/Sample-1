@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="text">Hi</p>
+    <p class="text">Hello</p>
+
+    <div>One</div>
+    <div>Two</div>
+    <p class="msg">hi</p>
+    <p class="msg">hloo</p>
+    <p class="msg">hi</p>
+    <p class="msg">hloo</p>
+
+
+    <p class="m">practise</p>
+    <p class="m">practise</p>
+    <p class="m">practise</p>
+    <p class="m">practise</p>
+
+    <h1 id="demo">change text</h1>
+    <script>
+        let elements = document.getElementsByClassName("text");
+        let elementsArray = Array.from(elements);
+        console.log(elementsArray)
+        console.log(elements)
+        elementsArray[0].style.color = "red";
+        elementsArray[1].style.color = "green";
+
+        let divs = document.getElementsByTagName("div")
+        divs[0].style.color = "grey"
+        console.log(divs)
+
+
+        let query=document.querySelectorAll(".msg")
+        let colours=["green","yellow","red","pink"]
+        query.forEach((e,i)=>e.style.color=colours[i])
+
+
+
+        let change = document.getElementById("demo")
+        change.innerHTML = "Hello World!"
+            
+        let classname=document.getElementsByClassName("m");
+        let colours1=["green","yellow","red","pink"]
+        classname.forEach((e,i)=>e.style.colour=colours[index])
+        // classname[1].style.color="red";
+
+    </script>
+</body>
+
+</html>

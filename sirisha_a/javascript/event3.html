@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="input" name="firstname"></input>
+    <button id="button">Click me</button>
+
+    <script>
+        let formObject = {}
+        let input = document.getElementById("input")
+        input.addEventListener("keypress", (event) => {
+            console.log(event.key,event.code)
+        })
+
+        // let button = document.getElementById("button")
+        // button.addEventListener("click", (event) => {
+        //     // console.log(`${input.name}:${input.value}`);
+        //     formObject.FirstName = input.value
+        //     console.log(formObject)
+        // })
+
+
+    </script>
+</body>
+
+</html>

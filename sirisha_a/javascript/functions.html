@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- functions are used to call set of code
+      fun declaration or defination    
+      function fun name(parameters/argument){
+      fun call lo value vuntadhi
+
+
+    fun is a set of statements that perform a task or calculates a value.to use a function, you must define it somewhere in the 
+    scope from which you wish to call it.
+    reusability
+    modularity:seperate into sections based on logic or business req
+    readability: make code easier to understand
+
+
+     how to print 
+     order in which it is called
+
+     parameter is called fun variable it is only availble in fun block
+     Hoisting
+     variable hoisting -> use variable at anywhere in top but value is undefined(we can manipulate) that value is avaible below variable assign
+     we use let then it gets reference error
+      
+     block scope-> variable is available inside te block({})only for let ,const
+     global scope->var ,let ,const here var goes to function level hoisting
+     function scope-> var ,let,const
+       
+
+     //fun can return a value using the return statement
+     if a fun doesnot have a return statement it returns undefined
+    } -->
+
+  
+    <!-- <script>
+        function first(name){
+           console.log(`Hello ${name}!`)
+        }
+        first("everyone")
+        first(10)
+    
+    </script> -->
+
+
+<!-- <script>
+    // write a fun to display eligible to vote or not
+    // age=Number(prompt("enter age"))
+    function vote(age){
+       age<18
+       ? console.log("not eligible to vote")
+       : console.log("eligible to vote")
+    }
+     vote(18)
+
+</script> -->
+
+<!-- <script>
+    function hello(){
+        console.log("Hello")
+    }
+    hello()
+</script> -->
+<!-- <script>
+    function name(firstname,lastname){
+        console.log(`Full name:${firstname} ${lastname}`)
+    }
+    name("sirisha","annapureddy")
+   
+</script> -->
+<!-- <script>
+    let a=5;
+//    from 1 to n
+ // let i=1;
+    // while(i<=n){
+    //     console.log(`${i}`)
+    //     i++;
+    function positiveinteger(n){
+    console.log(`starting function`)
+     let i=1;
+    while(i<=n){
+        console.log(`${i}`)
+        i++;
+    // for(let i=1;i<=positiveinteger;i++){
+    //     console.log(i);
+    }
+      console.log(`end of function`)
+}
+      positiveinteger(10)
+      positiveinteger(a)
+    
+
+</script> -->
+
+<!-- <script>
+    function fact(n){
+        let i=1;
+        let fact=1;
+        while(i<=n){
+            fact=fact*i
+            i++;  
+        }
+        console.log(fact)
+    } fact(5)
+</script> -->
+<!-- <script>
+    //write a function to return sun of two numbers
+    function add(num1,num2){
+       let sum=num1+num2;
+       return sum;
+   
+    }
+    console.log(add(10,20))
+    //this is called function expression
+    //wharever we write in  return that will be print 
+    let sum=add(20,40);
+    console.log(sum);
+    
+</script> -->
+
+<!-- <script>
+    //multiples of 3 num
+    function mul(a,b,c){
+        let multiples=a*b*c;
+        return multiples
+    }
+    console.log(mul(2,3,4))
+  </script>
+
+  <script>
+    function mul(a,b,c){
+        return a*b*c;
+    }
+    console.log(mul(1,2,3))
+    //let value=mul(1,2,3)
+    console.log(value)
+</script> -->
+
+<!-- <script>
+    //a>b true else false 
+    function bool(num1,num2){
+        if (num1>num2){
+           return true;
+        }else{
+            return false;
+        }
+    }console.log(bool(5,3))
+</script> -->
+<script>
+    function compare(a,b){
+        return a>b;
+    }
+    console.log(compare(5,3))
+</script>
+
+FUNCTION EXPRESSION
+
+<script>
+    let add=function(x,y){
+        return x+y;
+    };
+    console.log(add(2,3));
+    
+</script>
+
+//the fun call inside the fun defination is called recursion
+// f(n)=n*f(n-1)
+<!-- <script>
+    function factorial(n){
+        let factorialvalue=1;
+        if(n>0){
+           factorialvalue=n*factorial(n-1);
+        } 
+        return factorialvalue;
+    }
+     console.log(factorial(5))
+</script> -->
+<script>
+    let factoial =function fac(n){
+        if(n==0||n==1){
+            return 1;
+        }else if(n>1){
+            return n*fac(n-1);
+            //10*f(9)
+            // 10*9*f(8)
+            //10*9*8*f(7)
+            //10*9*8*7*f(6)......
+        }else{
+            return undefined;
+        }
+    }
+   console.log(factoial(10))
+</script>
+</body>
+</html>

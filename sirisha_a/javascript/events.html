@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <button id="button" onclick="onClick()">Click me</button>
+</head>
+
+<body>
+    <!-- Events are actions 
+    events types
+    1.mouse events:click,dbclick,mousedown(means press),mouseup,mousemove,mouseover,mouseout
+    2.keyboard events:keydown,keyup,keypress
+    3.form events: submit,change,focus,blur   
+    4.window events:load,resize,scroll,upload
+    5.clipboard events:copy,cut,paste
+
+
+    Event Listeners:
+    is a fun which as a callback fun that handles the events
+
+    step1
+    Addeventlistener
+    2:
+    removeeventlistener
+    (purpose enti ante memory leaks avvakunda) -->
+
+    <script>
+        // let button = document.createElement("button")
+        // document.body.append(button)
+        // button.textContent = "Click Me"
+
+
+        let button=document.getElementById("button")
+
+        // button.addEventListener("click",onClick)
+        //  function onClick(event){
+        //     console.log("Button is clicked")
+        //  }
+
+
+        // button.addEventListener("click",function(event){
+        //     console.log("Button is clicked")
+        // })
+
+
+        button.addEventListener("click", (event) =>
+            console.log("Button is clicked")
+        )
+        
+        button.onclick = function (event) {
+            console.log("Button is being clicked")
+        }
+
+
+        function onClick() {
+            console.log("Button is click")
+        }
+
+
+    </script>
+</body>
+
+</html>

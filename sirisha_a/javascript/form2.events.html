@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{
+          margin-left: 40px;
+          font-size: 20px;
+        }
+        div{
+            background-color: rgba(220, 20, 60, 0.603);
+            width: 600px;
+            height: 400px;
+        }
+    .style{
+        margin-left: 70px;
+    }
+     .style1{
+        margin-left: 80px;
+    }
+    .style2{
+        margin-left: 143px;
+    }
+     .style3{
+        margin-left: 98px;
+    }
+
+ .style4{
+        margin-left: 125px;
+    }
+h2{
+    text-align: center;
+}
+button{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    margin-left: 240px;
+    margin-top: 40px;
+    border-radius: 20px;
+    color: brown;
+}
+
+    </style>
+</head>
+
+<body>
+    <script>
+        let div = document.createElement("div")
+        document.body.append(div)
+
+        let h2 = document.createElement("h2")
+        h2.textContent = "Registration form"
+        div.append(h2)
+
+
+        let form = document.createElement("form")
+        div.append(form)
+
+        let regno = document.createElement("label")
+        form.append(regno)
+        regno.setAttribute("for", "regno")
+        regno.textContent = "Registration no"
+        let regno1 = document.createElement("input")
+        form.append(regno1)
+        regno1.setAttribute("id", "regno")
+        regno1.setAttribute("type", "number")
+        regno1.setAttribute("name", "registerno")
+        regno1.classList.add("style")
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let stuname = document.createElement("label")
+        form.append(stuname)
+        stuname.setAttribute("for", "stuname")
+        stuname.textContent = "Student name"
+        let stuname1 = document.createElement("input")
+        form.append(stuname1)
+        stuname1.setAttribute("id", "stuname")
+        stuname1.setAttribute("type", "text")
+        stuname1.setAttribute("name", "studentname")
+        stuname1.classList.add("style1")
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let batch = document.createElement("label")
+        form.append(batch)
+        batch.setAttribute("for", "batch")
+        batch.textContent = "Batch"
+        let batch1 = document.createElement("input")
+        form.append(batch1)
+        batch1.setAttribute("id", "batch")
+        batch1.setAttribute("type", "number")
+        batch1.setAttribute("name", "batch")
+         batch1.classList.add("style2")
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let dpt = document.createElement("label")
+        form.append(dpt)
+        dpt.setAttribute("for", "dpt")
+        dpt.textContent = "Department"
+        let dpt1 = document.createElement("input")
+        form.append(dpt1)
+        dpt1.setAttribute("id", "dpt")
+        dpt1.setAttribute("type", "text")
+        dpt1.setAttribute("name", "department")
+        dpt1.classList.add("style3")
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let add = document.createElement("label")
+        form.append(add)
+        add.setAttribute("for", "add")
+        add.textContent = "Address"
+        let add1 = document.createElement("input")
+        form.append(add1)
+        add1.setAttribute("id", "add")
+        add1.setAttribute("type", "text")
+        add1.setAttribute("name", "address")
+        add1.classList.add("style4")
+
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let button = document.createElement("button")
+        form.append(button)
+        button.textContent = "submit"
+
+
+
+        let object={}
+
+        button.addEventListener("click",(event)=>{
+            event.preventDefault()
+        object[`${regno1.name}`] =regno1.value
+        object[`${stuname1.name}`] =stuname1.value
+        object[`${batch1.name}`] =batch1.value
+        object[`${dpt1.name}`] =dpt1.value
+        object[`${add1.name}`] =add1.value
+        console.log(object)
+        })
+
+    </script>
+</body>
+
+</html>

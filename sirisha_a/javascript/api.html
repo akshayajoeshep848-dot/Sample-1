@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    an api is a set a of rules and protocols that allows different software applications to communicate with eact other
+    api enable interface b/w client(such as mobile or web browser) and a server
+
+    types:
+    REST :(representational state transfer) GET,POST,PUT,DELETE,http protocol we used
+
+    get : retrieve data
+    post: create new data
+    put: updating existing data
+    delete: remove data
+
+
+    SOAP:(simple obj access protocol)
+    GraphQL:req exactly the data they need
+    RTC:
+    Websockets:
+
+    json
+    xml
+    bson
+
+    apl req and response structure
+    an api req typically consists of:
+    .url(endpoint):The address where the api is accessed
+    .method:the http method(get,put,...) get is default
+    .headers:metadata such as authentication tokens or content type
+    .body:Data sent to the server usually in (post or put req)
+
+
+
+    <script>
+        let options = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        };
+
+         let postOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer token_name"
+            },
+            body:{} //JSON.stringfy({})
+        };
+
+
+        async function fetchData(url, options) {
+            console.log("starting fetch call..")
+            let response = await fetch(url)
+            let data = await response.json()
+            console.log(data)
+            console.log("End fetch call..")
+            return data;
+
+        }
+
+        fetchData("https://jsonplaceholder.typicode.com/users/1", options)
+            .then((value) => {
+                let box = document.createElement("div")
+                let div = document.createElement("p")
+                let p = document.createElement("p")
+            })
+
+    </script>
+</body>
+
+</html>

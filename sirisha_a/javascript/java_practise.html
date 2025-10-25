@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  function palindrome(str){
+        //       let left=0,right=str.length-1;
+        //       while(left<right){
+        //         if(str[left]!==str[right])return false;
+        //         left++;
+        //         right--;
+        //       }
+        //       return true;
+        //  }
+        //  console.log(palindrome("m"));
+
+
+        function ispalindrome(str) {
+            return str == str.split("").reverse().join("");
+
+        }
+        console.log(ispalindrome("man"))
+
+
+
+
+        function factorial(n) {
+            if (n === 0) return 1;
+            return n * factorial(n - 1);
+        }
+        console.log(factorial(5));
+
+
+        
+        function fib(n){
+            let a=0;
+            let b=1;
+            for(let i=0;i<n;i++){
+            console.log(a)
+            let c=a+b;
+            a=b;
+            b=c;
+            
+            }
+        }
+       fib(7)
+    </script>
+</body>
+
+</html>

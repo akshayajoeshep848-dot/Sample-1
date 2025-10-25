@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">Events listeners</h1>
+    <button id="button">Mouseover</button>
+    <script>
+        let button=document.getElementById("button")
+        let h1=document.getElementById("h1")
+
+        // button.addEventListener("click",(event)=>console.log(event.type))
+        //the type of event
+        
+        button.addEventListener("click",(event)=>console.log(event.target))
+
+        h1.addEventListener("mouseover",(event)=>{
+            //hover has two mouse  events mouseover and mouseout
+        event.target.style.backgroundColor="red";
+        event.target.style.borderRadius="10px";
+
+        });
+         h1.addEventListener("mouseout",(event)=>{
+            //over means two events mouseover an mouseout
+        event.target.style.backgroundColor="white";
+        // event.target.style.borderRadius="10px";
+
+        });
+        //the element that triggered the event
+        // button.addEventListener("click",(event)=>console.log(event.currentTarget))
+        // //the element the event listener is attached to
+        
+        // button.addEventListener("click",(event)=>console.log(event.timeStamp))
+    </script>
+</body>
+</html>

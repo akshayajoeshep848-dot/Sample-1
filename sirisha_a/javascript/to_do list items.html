@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="todolist"></div>
+    <script>
+        const todoList = [
+            { id: 1, task: "Buy groceries", isComplete: false },
+            { id: 2, task: "Finish project report", isComplete: false },
+            { id: 3, task: "Call the dentist", isComplete: true },
+        ];
+
+        let container = document.getElementById("todolist")
+
+        todoList.forEach((item) => {
+            container.innerHTML +=`
+            <div style="margin:10px;padding:10px ;border:1px solid black">
+            <p><b>ID</b> : ${item.id}</p>
+             <p><b>TASK</b> : ${item.task}</p>
+             <p><b>Completed</b> : ${item.isComplete}</p>  
+            </div>
+            `;
+
+        });
+    
+    </script>
+
+</body>
+
+</html>

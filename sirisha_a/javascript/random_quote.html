@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-color:rgba(221, 160, 221, 0.874);
+            height: 60vh;
+            width: 70vh;
+            margin:10px auto;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 40px;
+            box-shadow: 0 0 10px 3px rgba(128, 128, 128, 0.361);
+
+        }
+        input{
+            padding: 20px;
+            width: 360px;
+            border-radius: 20px;
+            border: none;
+        }
+        #btn{
+            background-color: coral;
+            border: none;
+            width: 30vh;
+            padding: 10px;
+            align-items: center;
+            margin-left: 140px;
+            margin-top: 20px;
+            color: white;
+            font-size: 20px;
+            border-radius: 20px;
+        }
+        h2{
+            text-align: center;
+        }
+        .label1{
+            color: white;
+             margin-left: 150px;
+             font-size: 20px;
+        }
+         .label2{
+            color: white;
+             margin-left: 150px;
+             font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="main">
+        <h2>Random Quote Generator</h2>
+        <div>
+            <label for="quote" class="label1">Quote</label>
+            <input type="text" id="quote">
+        </div><br>
+        <div>
+            <label for="author" class="label2">Author Name</label>
+            <input type="text" id="author">
+        </div><br>
+        <button id="btn">
+           Quote Generator
+        </button>
+    </div>
+   
+    <script>
+    
+    const quotes = [
+  {
+    quote: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs"
+  },
+  {
+    quote: "In the middle of every difficulty lies opportunity.",
+    author: "Albert Einstein"
+  },
+  {
+    quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    author: "Winston Churchill"
+  },
+  {
+    quote: "Believe you can and you're halfway there.",
+    author: "Theodore Roosevelt"
+  },
+  {
+    quote: "Happiness is not something ready made. It comes from your own actions.",
+    author: "Dalai Lama"
+  },
+  {
+    quote: "Do what you can, with what you have, where you are.",
+    author: "Theodore Roosevelt"
+  },
+  {
+    quote: "Don’t watch the clock; do what it does. Keep going.",
+    author: "Sam Levenson"
+  },
+  {
+    quote: "It always seems impossible until it’s done.",
+    author: "Nelson Mandela"
+  },
+  {
+    quote: "You miss 100% of the shots you don’t take.",
+    author: "Wayne Gretzky"
+  },
+  {
+    quote: "Be yourself; everyone else is already taken.",
+    author: "Oscar Wilde"
+  }
+];
+
+let quote=document.getElementById("quote")
+let author=document.getElementById("author")
+let btn=document.getElementById("btn")
+
+
+btn.addEventListener("click", () => {
+           
+            const Index = Math.floor(Math.random() * quotes.length);
+            const randomQuote = quotes[Index]
+            
+            quote.value = randomQuote.quote;
+            author.value = randomQuote.author;
+        });
+window.addEventListener("load",()=>{
+    quote.value= "In the middle of every difficulty lies opportunity"
+    author.value="Albert Einstein"
+
+})
+</script>
+</body>
+</html>

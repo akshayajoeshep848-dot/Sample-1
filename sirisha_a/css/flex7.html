@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .h,.n,.a,.c,.s,.f{
+            color: white;
+            text-align: center;
+            place-content: center;
+
+        }
+       .h{
+        background-color: aqua;
+        height: 8vh;
+        width: 95vh;
+        
+       }
+       .n{
+        background-color: green;
+        height: 8vh;
+        width: 95vh;
+       }
+       .a{
+        background-color: green;
+        width: 25vh;
+        height: 40vh;
+       }
+       .c{
+         background-color: cadetblue;
+         height: 19vh;
+         width:70vh ;
+       }
+       .s{
+        background-color: blue;
+         height: 19vh;
+         width:70vh ;
+       }
+       .f{
+        background-color: skyblue;
+        height: 8vh;
+       }
+    </style>
+</head>
+<body>
+    <div style="display: flex; gap: 10px; flex-direction: column;">
+        <div class="h">Header</div>
+        <div class="n">Navigation</div>
+        <div style="display: flex; gap:10px">
+            <div class="a">Aside</div>
+            <div style="display: flex; flex-direction: column ; gap: 10px;">
+                <div class="c">Content</div>
+                <div class="s">Section</div>
+            </div>
+        </div>
+        <div class="f">Footer</div>
+    </div>
+</body>
+</html>

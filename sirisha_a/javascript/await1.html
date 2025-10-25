@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function fetchData(){
+            console.log("starting fetch call..")
+           let response = await fetch("https://dogapi.dog/api/v2/breeds")
+           let breeds = await response.json()
+           console.log(breeds)
+           console.log("End fetch call..")
+           return breeds;
+         
+           
+        }
+          fetchData().then((value)=>console.log(value)) 
+          let res=value.data 
+           res.forEach((dog)=>{
+            let div=document.createElement("div")
+            document.body.append(div)
+            div.innerHTML=dog.attributes.id
+           })
+     
+    </script>
+</body>
+</html>

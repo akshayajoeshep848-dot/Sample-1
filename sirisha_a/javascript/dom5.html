@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <div class="conatainer">
+    <div class="child">item1</div>
+    <div class="child">item2</div>
+    <div class="child">item3</div>
+    <div class="child">item4</div>
+    <div class="child">item5</div>
+    <div class="child">item6</div>
+    <div class="child">item7</div>
+    <div class="child">item8</div>
+    <div class="child">item9</div>
+    <div class="child">item10</div>
+   </div>
+   <button onclick="vege(vegArray,vegetables)">get veg</button>
+    <button onclick="vege(vegArray,fruits)">get fruits</button>
+</head>
+
+<body>
+    <script>
+        let fruits=["apple","banana","grapes","orange","kiwi","sapota","sithapal","pineapple","dragon","kii"]
+        let vegetables = [
+            "vankaya",
+            "bendakaya",
+            "dondakaya",
+            "dosakaya",
+            "chikkudukaya",
+            "sorakaya",
+            "patlakaya",
+            "gummadikaya",
+            "beerakaya",
+            "kakarakaya"]
+let veg=document.getElementsByClassName("child");
+let vegArray=Array.from(veg);
+// vegArray.forEach((elements,index)=>(elements.innerText=vegetables[index]));
+
+//  let vegarr=Array.from(veg).forEach((e,i)=>e.innerText=vegetables[i]);
+ function vege(arr1,arr2){
+//     let vegarr=Array.from(veg).forEach((e,i)=>e.innerText=vegetables[i]);
+     arr1.forEach((e,i)=>(e.innerText=arr2[i]));
+      arr1.forEach((e,i)=>(e.style.color="white"));
+        arr1.forEach((e,i)=>(e.style.backgroundColor="red"));
+}
+
+    </script>
+</body>
+
+</html>

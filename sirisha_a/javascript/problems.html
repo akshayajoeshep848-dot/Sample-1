@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>simple caluculator
+    </h3>
+    <!-- <script>
+        let num1=Number(prompt("enter a number1"));
+        let num2=Number(prompt("enter a number2"));
+        let operator=prompt("enter an operator");
+        if(operator=="+"){
+            console.log(num1+num2)
+        }else if(operator=="-"){
+            console.log(num1-num2)
+        }else if(operator=="*"){
+            console.log(num1*num2)
+        }else if(operator=="/"){
+            console.log(num1/num2)
+        }else if(operator=="%"){
+            console.log(num1%num2)
+        }else{
+            console.log("invalid operator")
+        }
+    </script> -->
+    <h3>
+        leap year
+    </h3>
+      <!-- <script>
+        let year=Number(prompt("Enter an year"));
+        switch(true){
+            case year%400==0 :
+                console.log("leap centuary year")
+            break;
+            case year%4==0 && year%100!==0:
+                 console.log("it is a leap year")
+                break;
+            default:
+                console.log("it is not a leap year")
+        }
+    </script> -->
+    <!-- <script>
+        if(year%4==0){
+            if(year%400==0){
+                console.log("leap centuary");
+            }else if(year%100!==0){
+                console.log("leap year");
+            }else{
+                console.log("not a leap year");
+            }
+        }else{
+            console.log("not a leap year");
+        }
+    </script> -->
+
+       <!-- <script>
+          let number1=(prompt("enter a number"));
+          let num=number1%10;
+          let num1=(number1/10);
+          let num3=parseInt(num1);
+          let num4=num3/10;
+          let num5=parseInt(num4);
+          let num6=num3%10;
+         console.log(num+num5+num6)        
+    </script>   -->
+     <!-- <script>
+        let str=prompt("Enter a number")
+        let sum=0;
+        let num=Number(str);
+        for(let i=0;i<str.length;i++){
+            console.log(`start of the loop ${i}`);
+            console.log("input:num",num);
+            //step 1:get last digit
+            console.log("sum",sum);
+            console.log(`step  1: sum=sum+(num%10)`);
+            sum=sum+(num%10);
+            console.log("output:sum=",sum)
+            // console.log(`step 2:num=num/10`)
+            //num=num/10;
+         
+
+            // console.log("output num=",num);
+            console.log(`step 2: num=Math.floor(num)`);
+            num=Math.floor(num/10);
+            // num=Math.floor(num),
+            console.log(" output num=",num);
+            console.log(`end of the loop ${i}`);
+        }
+        console.log(`sum of digits of given number${str}=${sum}`);
+     </script> -->
+
+     <!-- <script>
+         let price=Number(prompt("enter your price"));
+        if(price>5000){
+            dis=(5/100)*price;
+            console.log(`you get ${dis} discount so you paid ${price-dis}`)
+        }else if(price>2000 && price<=5000){
+            discount=price*(2/100);
+            console.log(`you get ${discount} discount so you paid ${price-discount}`)
+
+        }else{
+            console.log("no discount")
+        } 
+
+    </script>  -->
+  <!-- <script>
+      let num=Number(prompt("enter a number"));
+      if(num<=21){
+        diff=21-num;
+        console.log(diff)
+      }else if(num>21){
+           diff=num-21;
+           difference=diff*2;
+            console.log(difference)
+    }
+  </script> -->
+
+   <!-- <script>
+    let number1=Number(prompt("Enter any three digit number"));
+    let num=number1%10;
+    let num1=(number1/10);
+    let num3=parseInt(num1);
+    let num4=num3/10;
+    let num5=parseInt(num4);
+    let num6=num3%10;
+    if(num==num5 && num==num6){
+       console.log("All same");
+    }else if(num==num5|| number1==num6){
+      console.log("Two same");
+    }else{
+        console.log("All different")
+    }  
+  </script>   -->
+ 
+  <!--  <script>
+    let digit=Number(prompt("enter two digit number"));
+    let digit1=digit%10;
+    let digit2=digit/10;
+    let digit3=parseInt(digit2);
+    let digit4=digit1+digit3;
+     if (digit%7==0){
+        console.log("Lucky number")
+     }else{
+        console.log("Try again")
+     } 
+  </script>  -->
+  <!-- <script>
+    let fizz=Number(prompt("Enter a number"));
+    if(fizz<1 || fizz>=100){
+        console.log("Out of range")
+    }else if(fizz%3==0 && fizz%5==0){
+        console.log("FizzBuzz")
+    }else if(fizz%3==0){
+        console.log("Fizz")
+    }else if(fizz%5==0){
+        console.log("Buzz")
+    }else if(fizz%3!=0 || fizz%5!=0){
+        console.log(fizz)
+    } 
+  </script> -->
+   
+  <!-- <script>
+    let distance=Number(prompt("Enter distance travelled in kilometers"));
+    let timeOfDay=prompt("Enter day");
+    let fare=50;
+     if (timeOfDay==="day"){
+         daytimerate=10;
+        Fare=50+(distance*daytimerate);
+        Fare=Fare.toFixed(2);
+        console.log(Fare)
+     }if(timeOfDay==="night"){
+        daytimerate=15;
+        Fare=50+(distance*daytimerate);
+        Fare=Fare.toFixed(2);
+        //  console.log(Fare);
+         if(Fare>300){
+        discount=Fare-42.5;
+        discount=discount.toFixed(2);
+        console.log(`Discount was applied ${discount}`);
+     
+    }else{
+        console.log(Fare)
+    }
+}
+
+  </script> -->
+
+
+  <script>
+    let number=Number(prompt("enter a number"));
+    let position=Number(prompt("Enter position"));
+    //  let shift=position<<1;
+    //  let num=number&shift;
+     if((number&(1<<position))!==0){
+        console.log(number&(1<<position))
+        console.log("set")
+    }else{
+         console.log("not set")
+     }
+   
+  </script>
+</body>
+</html>

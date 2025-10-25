@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 100vh;
+            width: 90vh;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+        .h{
+            background-color: aqua;
+            height: 8vh;
+            text-align: center;
+            place-content: center;
+            color: white;
+        }
+        .he{
+            background-color: darksalmon;
+            height: 20vh;
+            width: 30vh;
+            color: white;
+            text-align: center;
+        }
+        .s{
+            background-color: rgba(0, 128, 0, 0.765);
+            height: 35vh;
+            color: white;
+            text-align: center;
+        }
+        .m{
+            background-color: orange;
+            height: 40vh;
+            width: 58.3vh;
+        }
+        .e{
+            background-color: grey;
+            height: 15vh;
+             color: white;
+            text-align: center;
+        }
+        .re{
+           background-color: chartreuse;
+           height: 12vh;
+           width: 60vh;
+           color: white;
+          text-align: center;
+        }
+        .re2{
+            background-color: pink;
+            width: 28vh;
+              color: white;
+          text-align: center;
+          place-content: center;
+        }
+        .f{
+            background-color: orange;
+            height: 8vh;
+           color: white;
+          text-align: center;
+          place-content: center;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="main" >
+        <div class="h">Header</div>
+        <div style="display: flex; gap: 7px;">
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+                <div class="he">Hero</div>
+                <div class="s">Sidebar</div>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 7px;">
+                <div class="m">Main Content</div>
+                <div class="e">Extra Content</div>
+            </div>
+        </div>
+        <div style="display: flex; gap:7px">
+            <div class="re">Related images</div>
+            <div class="re2">Related posts</div>
+        </div>
+        <div class="f">Footer</div>
+    </div>
+</body>
+</html>
