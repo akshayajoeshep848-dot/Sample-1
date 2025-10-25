@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>rest operator</h1>
+    <p>create an array of parameters</p>
+    <script>
+       //rest parameters = (...rest) allow a function work with a variable number of arruguments bundling into an array
+
+                    //spread= expand an array into seperate elements
+                    //rest = bundles seperate elements into an array
+
+                //example--1
+                // function openFridge(...items){
+                //     return items;
+                // }
+                // const food1='pizza';
+                // const food2='pizza';
+                // const food3='pizza';
+                // const food4='pizza';
+                // const foods=openFridge(food1,food2,food3,food4);
+                // console.log(foods);
+
+                //example---2
+                // function getAverage(...numbers){
+                //     let result=0;
+                //     for (let number of numbers){
+                //         result=result+number;
+                //     }
+                //     return result/numbers.length;
+                // }
+                // const total = getAverage(75,100,85,90,50);
+                // console.log(total);
+
+                //example---3
+                // function combineString(...strings){
+                //     return strings.join(" ");
+                // }
+
+                // const fullName=combineString('Rakesh','chowdary');
+                // console.log(fullName);
+
+                //example--4
+                let sum=function(a,b,...c){
+                    console.log(a,b,c);
+                };
+                sum(1,2,3,4,5);
+
+                //example--5
+            //     let a=[1,2,3,4,5,6,7,8,9,10];
+            //     function sum(a,b,...c){
+            //         let s=0;
+            //         for(i=0;i<c.length;i++){
+            //             s=s+c[i];
+            //         }
+            //         return s+a+b;
+            //     }
+            //    console.log(sum(3,4,5,6));
+            //     console.log(sum(...a))
+
+            //example--6
+            // let a=[1,2,3,4,5,6,7,8,9,10];
+            //     function sum(...c){
+            //         let s=0;
+            //         for(i=0;i<c.length;i++){
+            //             s=s+c[i];
+            //         }
+            //         return s;
+            //     }
+            //    console.log(sum(3,4,5,6));
+            //     console.log(sum(...a))
+
+
+            //example--7
+            //     function sum(a=0,b=0,...c){
+            //         let s=0;
+            //         for(i=0;i<c.length;i++){
+            //             s=s+c[i];
+            //         }
+            //         return s+a+b;
+            //     }
+            //    console.log(sum(3,4,5,6));
+            //     console.log(sum());
+    </script>
+</body>
+</html>

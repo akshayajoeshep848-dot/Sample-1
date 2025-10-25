@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="dog.bark()" >bark</button>
+    <button onclick="dog.walk()" >walk</button>
+    <button onclick="dog.run()" >run</button>
+    <button onclick="dog.shakehand()" >shakehand</button>
+    <button onclick="dog.smell()" >smell</button>
+    <button onclick="dog.eat()" >eat</button>
+    <h1>js objects</h1>
+    <script>
+        //In JavaScript, an object is a data structure that allows you to store and organize data
+        //  in the form of key–value pairs, where keys are property names and values can be any type of data.
+
+        // const person={
+        //     name:"Rakesh",
+        //     age:21,
+        //     isStudent:false,
+        //     greet:function(){
+        //         return `Hello my name is ${this.name}`;
+        //     }
+        // };
+        // //dot notation
+        // console.log(person.name);
+        // console.log(person.age);
+        // console.log(person.isStudent);
+        // console.log(person.greet());
+
+        // //[] bracket notation
+        // console.log(person["name"]);
+        // console.log(person["age"]);
+        // console.log(person["isStudent"]);
+        // console.log(person["greet"]());
+
+        //create an object called dog
+        //name,breed,color,age,gender,petID
+        //bark,walk,run,shakehand,smell,eat,sleep,rollover,sit,liedown
+        // const dog={
+        //     name:"sweaty",
+        //     breed:"german sherpad",
+        //     color:"black",
+        //     age:3,
+        //     gender:"male",
+        //     petId:1234,
+        //     bark:function(){
+        //        console.log(`${this.name} is barking`);
+        //     },
+        //     walk:function(){
+        //         console.log(`${this.name} is walking`);
+        //     },
+        //     run:function(){
+        //         console.log (`${this.name} is runing`);
+        //     },
+        //     shakehand:function(){
+        //         console.log (`${this.name} is giving shakehand`);
+        //     },
+        //     smell:function(){
+        //         console.log (`${this.name} is smelling`);
+        //     },
+        //     eat:function(){
+        //         console.log (`${this.name} is eating`);
+        //     }
+        // }
+
+        //     console.log(dog.name);
+        //     console.log(dog.breed);
+        //     console.log(dog.color);
+        //     console.log(dog.age);
+        //     console.log(dog.gender);
+        //     console.log(dog.petId);
+            // dog.bark();
+            // dog.walk();
+            // dog.run();
+            // dog.shakehand();
+            // dog.smell();
+            // dog.eat()
+
+
+        //create an adress
+        const adress={
+            adress_line1:"MIG-87",
+            adress_line2:"first floor,road no.1",
+            adress_line3:'KPHB phase-1',
+            landMark:"besides AED hospitals",
+            city:"hyderbad",
+            state:"Telangana",
+            pincode:500072,
+
+            getAddress:function(){
+                console.log(`${this.adress_line1} ${this.adress_line2} ${this.adress_line3} ${this.landMark} ${this.city} ${this.state} ${this.pincode}`)
+            }
+        };
+
+        adress.getAddress();
+    </script>
+</body>
+</html>

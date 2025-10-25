@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            background-color: aqua;
+            height: 500px;
+            display: flex;
+             flex-direction: row;/* row,row-reverse,column,column-reverse */  
+            gap: 20px; 
+             justify-content: space-between ;/*flex-start,flex-end,center,space-between,space-around,space-evenly*/
+             /*justify-content is used for main-axis*/
+             /*flex row--x axis is main axis and y-axis is cross axis*/
+             /*flex coloum--x axis is cross axis and y-axis is main axis*/
+        }
+
+        .child{
+            height: 100px;
+            background-color: blueviolet;
+            width: 100px;
+            color: aliceblue;
+            place-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Display-flex</h1>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+
+</body>
+</html>

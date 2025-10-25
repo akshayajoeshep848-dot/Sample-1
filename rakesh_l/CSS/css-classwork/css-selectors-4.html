@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descendent selector</title>
+    <style>
+        div p{
+            color: blue;
+        }
+        p span{
+            font-family: cursive;
+            font-size: 20px;
+            background-color: aqua;
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>CSS selectors - descendent selector</h1>
+        <p>lonely pair</p>
+        <div>
+            <p>it selects all the children elements of a parent(child)</p>
+        </div>
+        <div>
+            <div>
+                <p>div p{}(grand child)</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <p>great grandchild</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet <span>consectetur adipisicing</span> elit. Repellendus dolorum dolor, mollitia alias cum consequuntur pariatur velit error et fuga <span> consectetur magni</span> vitae cumque, at facilis, labore sint perspiciatis! Voluptatibus molestias laborum reprehenderit accusantium iste minima nemo voluptas dignissimos architecto? Quam deserunt laudantium natus placeat dicta! Reiciendis blanditiis mollitia exercitationem facilis eos! Perspiciatis culpa dignissimos quisquam? Earum iusto facilis dolore provident, cumque nostrum quos sit eaque repellendus fuga similique, tenetur, architecto omnis quisquam eos reiciendis. Cumque ad ipsa explicabo, accusantium pariatur suscipit nulla dignissimos ab, adipisci nobis expedita temporibus sed fugit ipsum omnis voluptatum voluptates magni qui, voluptatem minima aliquam.</p>
+</body>
+</html>

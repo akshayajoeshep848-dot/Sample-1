@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        list-style-type: none;
+        background-color: rgba(0, 255, 255, 0.532);
+        margin: 10px;
+        border-radius: 5px;
+        width: 200px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+      span{
+        background-color: rgb(12, 69, 228);
+        padding: 10px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="name">Pavan</p>
+    <div class="div-elem">
+      <ul class="ul">
+        <li class="item item 1">item</li>
+        <li class="item item 2">item</li>
+        <li class="item item 3">item</li>
+        <li class="item item 4">item</li>
+        <li class="item item 5">item</li>
+      </ul>
+    </div>
+    <script>
+      //   let nme = document.getElementById("name");
+      //   console.log(nme);
+      //   console.log(nme.textContent);
+      //   nme.innerText = "Pavan kumar";
+      //   console.log(nme.textContent);
+      //   console.log(document);
+      //   console.log(document.head);
+      //   console.log(document.body);
+      //   let items = document.getElementsByClassName("item");
+      //   let items = document.getElementsByTagName("li");
+
+      //   console.log(items);
+      //   let arrElem = Array.from(items);
+      //   console.log(arrElem);
+      //   arrElem.forEach((element) => (element.style.backgroundColor = "purple"));
+      //   arrElem.forEach((element) => (element.style.color = "white"));
+      //   let fruits=["Apple","Banana","Orange","Mango","Grapes","Strawberry"]
+      //   arrElem.forEach((element,index)=>{
+      //     element.innerText=fruits[index]
+      //   })
+      let fruits = [
+        { name: "Banana", quantity: 15 },
+        { name: "Orange", quantity: 25 },
+        { name: "Grapes", quantity: 50 },
+        { name: "Strawberry", quantity: 30 },
+        { name: "Pineapple", quantity: 5 },
+        { name: "Mango", quantity: 12 },
+      ];
+      let lstitems = document.querySelectorAll(".item");
+      lstitems.forEach((item, index) => {
+        item.innerHTML = `<i>${fruits[index].name}</i> -- <span>${fruits[index].quantity}</span>`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Iteration methods</h1>
+    <script>
+      // forEach
+      let arr1 = [1, 2, 3, 4];
+      arr1.forEach((item, index, arr1) => {
+        // console.log(index ${index} : ${item});
+        arr1[index] = item * 2;
+      });
+      console.log(arr1);
+
+      // sum of array using forEach
+      arr1.forEach((item, index) => {
+        sum = 0;
+        sum = sum + item;
+      });
+      console.log(`Sum of array is ${sum}`);
+
+      arr1.forEach((item, index, arr1) => {
+        arr1[index] = item ** 0.5;
+      });
+      console.log(arr1);
+
+      //   map()  function
+      let arr2 = [1, 2, 3, 4];
+      let new_arr = arr2.map((num) => num * 2);
+      console.log(new_arr);
+
+      //   filter() function
+
+      let arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      let even_numbers = arr3.filter((num) => {
+        return num % 2 !== 0;
+      });
+      console.log(even_numbers);
+
+      // reduce() function
+
+      let arr4 = [1, 2, 3, 4, 5];
+      let sum1 = arr4.reduce((acc, curr) => acc + curr * curr, 0);
+      console.log(sum1);
+      let mul = arr4.reduce((acc, curr) => acc * curr, 1);
+      console.log(mul);
+
+    //   flattening the arrays
+    let nested=[[1,2],[3,4],[5]]
+    let flat=nested.reduce((acc,item)=>acc.concat(item),[])
+    console.log(flat)
+    </script>
+  </body>
+</html>

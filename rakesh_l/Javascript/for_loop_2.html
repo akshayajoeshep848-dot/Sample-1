@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>For loop</h1>
+    <script>
+      //     for (let i = 0; i < 10; i++) {
+      // console.log(i)
+      //     }
+
+      //   for (let i = 1; i < 10; i = i + 2) {
+      //     console.log(i + 1);
+      //   }
+
+      //
+
+      // multiples of 5
+      //   for (let i = 0; i < 25; i++) {
+      //     if (i % 5 == 0) {
+      //       console.log(i);
+      //     }
+      //   }
+
+      // to add n numbers
+      //   sum = 0;
+      //   for (let i = 0; i <= 10; i++) {
+      //     sum = sum + i;
+      //   }
+      //   console.log(sum);
+
+      // Multiplication table
+
+      // let number=17
+      // for(let i=1;i<=10;i++){
+      //     console.log(`${number}*${i}=${number*i}`)
+      // }
+
+      // printing numbers from 10 to 1
+      //   for (let i = 10; i >=1; i--) {
+      //     console.log(i);
+      //   }
+
+      // Counting the consonants
+      // let strng="pavan kumar"
+      // count=0
+      // for(let i=0;i<strng.length;i++){
+      //   if (strng[i]!=="a" && strng[i]!=="e" && strng[i]!=="i" && strng[i]!=="o" && strng[i]!=="u"){
+      //     count+=1
+      //   }
+      // }
+      // console.log(count)
+
+      // largest number in array
+      // let arr=[3,2,5,3,7,8]
+      // Largest=0
+      // for(let i=0;i<arr.length;i++){
+      //   if (arr[i]>Largest){
+      //     Largest=arr[i]
+      //   }
+      // }
+      // console.log(Largest)
+
+      // Sum of elements in array
+      // let arr=[3,2,5,3,7,8]
+      // sum=0
+      // for(let i=0;i<arr.length;i++){
+      //   sum=sum+arr[i]
+      // }
+      // console.log(sum)
+
+      // Fizz Buzz
+
+    //   for(i=1;i<=15;i++){
+    //     if(i%3===0 && i%5===0){
+    //         console.log(i,'fizz buzz');
+    //     }
+    //     else if(i%3===0){
+    //         console.log(i,'fizz');
+    //     }
+    //     else if(i%5===0){
+    //         console.log(i,'buzz')
+    //     }
+    //   }
+
+      // Factorial
+      // let number = 5;
+      // fact = 1;
+      // for (let i = 1; i <= number; i++) {
+      //   fact = fact * i;
+      // }
+      // console.log(fact);
+
+      // Reverse a string
+      // let strng="abcd"
+      // let revstrng=""
+      // for(let i=strng.length-1;i>=0;i--){
+      //   revstrng+=strng[i]
+      // }
+      // console.log(revstrng)
+
+      // Count Down by 2s
+
+      // for (let i = 20; i >= 1; i=i-2) {
+      //   console.log(i);
+      // }
+
+      // Array Search
+      // let arr = [5, 4, 3, 2, 1];
+      // let number = 0;
+      // is_found = false;
+      // for (let i = 0; i < arr.length; i++) {
+      //   if (arr[i] === number) {
+      //     is_found = true;
+      //      break;
+      //   }
+      // }
+      // if (is_found) {
+      //   console.log("True");
+      // } else {
+      //   console.log("False");
+      // }
+
+      // Powers of 2
+      // for (let i = 0; i <= 10; i++) {
+      //   console.log(2 power of ${i} = ${2 ** i});
+      // }
+
+      // Palindrome Check
+      // let strng="abba"
+      // rev=""
+      // for(let i=strng.length-1;i>=0;i--){
+      //   rev=rev+strng[i]
+      // }
+      // if(rev===strng){
+      //   console.log("True")
+      // }
+      // else{
+      //   console.log("False")
+      // }
+
+      // Pattern Printing (Stars)
+
+      // let rows = 5;
+      // for (let i = 0; i < rows; i++) {
+      //   let pattern = "";
+      //   for (let j = 0; j <= i; j++) {
+      //     pattern = pattern + "*";
+      //   }
+      //   console.log(pattern)
+
+      // }
+
+      //  Count Characters
+
+      // let strng = "pavan kumar";
+      // let chara = "a";
+      // let count = 0;
+      // for (let i = 0; i < strng.length; i++) {
+      //   if (strng[i] === chara) {
+      //     count++
+      //   }
+      // }
+      // console.log(count)
+
+      // Calculate Average
+
+      // let arr = [1, 2, 3, 4, 5];
+      // let sum = 0;
+      // let avg;
+      // for (let i = 0; i < arr.length; i++) {
+      //   sum = sum + arr[i];
+      // }
+      // avg = sum / arr.length;
+      // console.log(avg);
+
+      // Fibonacci series
+
+      // let number = 5;
+      // let n1 = 0;
+      // let n2 = 1;
+      // console.log(n1)
+      // console.log(n2)
+      // for (let i = 0; i <= 5; i++) {
+
+      //   let next = n1 + n2;
+      //   console.log(next);
+      //   n1 = n2;
+      //   n2 = next;
+      // }
+
+      // Finding the duplicates in array
+
+      // let arr=[1,2,3,2,1,2,3]
+      // let duplicates=[]
+      // for(let i=0;i<arr.length;i++){
+      //   for(let j=i+1;j<arr.length;j++){
+      //     if (arr[i]===arr[j] && !duplicates.includes(arr[i])){
+      //       duplicates.push(arr[i])
+      //     }
+      //   }
+      // }
+      // console.log(duplicates)
+
+      // Prime number
+      // let number = 4;
+      // let count = 0;
+      // for (let i = 1; i <= number; i++) {
+      //   if (number % i === 0) {
+      //     count++;
+      //   }
+      // }
+      // if (count === 2) {
+      //   console.log("Prime");
+      // } else {
+      //   console.log("Not a prime");
+      // }
+
+
+      // Prime numbers in a given range
+      
+
+
+    </script>
+  </body>
+</html>

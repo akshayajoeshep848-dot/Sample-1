@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//1. What is this?
+
+//this is a special keyword in JavaScript that refers to the object that is currently calling or executing the function
+
+//It’s like saying “who is calling this function right now?”.
+
+//The value of this changes depending on how the function is called.
+
+
+        let person={
+            name:'ntr',
+            age:42,
+            location:'hyderbad',
+            walk:function (){
+                console.log(`${this.name} is waling`);
+            }
+        }
+        person.walk();
+    </script>
+</body>
+</html>

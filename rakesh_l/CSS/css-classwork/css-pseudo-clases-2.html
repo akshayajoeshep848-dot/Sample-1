@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: red;
+            border: 1px solid black;
+            box-shadow: 1px 1px 4px 2px grey;
+            border-radius: 5px;
+            line-height: 20px;
+
+        }
+
+        p:hover {
+            color: rgb(226, 11, 219);
+            border: 1px solid black;
+            box-shadow: 4px 4px 4px 3px grey;
+            border-radius: 10px;
+            line-height: 50px;
+            place-content: center;
+            text-align: center;
+
+        }
+
+        button {
+            background-color: crimson;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, 0.815);
+            cursor: pointer;
+            transform: translate(2px, 5px);
+
+        }
+
+        button:active {
+            background-color: rgb(20, 220, 110);
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 1px 1px 1px 2px rgba(128, 128, 128, 0.815) inset;
+            transform: scale(1.4);
+
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            transform: rotate(-1.2deg);
+            transform: skew(10deg, 5deg);
+
+        }
+
+        .form {
+            margin-bottom: 10px;
+            border: 1px solid lightskyblue;
+            padding: 10px;
+        }
+
+        input:focus {
+            color: lightseagreen;
+            border: 2px solid rgb(0, 204, 255);
+            height: 20px;
+
+        }
+
+        a:link {
+            color: rgb(127, 148, 255);
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: red;
+            text-decoration: dotted;
+        }
+
+        input:disabled {
+            color: red;
+            background-color: rgba(255, 0, 234, 0.337);
+        }
+
+        input:enabled {
+            color: green;
+        }
+
+        input:required {
+            background-color: beige;
+        }
+        input:invalid{
+            background-color: blue;
+        }
+        input:valid{
+            background-color: aquamarine;
+        }
+        *:optional{
+            background-color: palegreen;
+        }
+        input:default{
+             outline: 2px solid blueviolet;
+        }
+        input:in-range{
+            background-color: grey;
+        }
+        input:out-of-range{
+            background-color: red;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Css pseudo classes</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium asperiores laborum id consequuntur
+        reiciendis beatae vitae facilis, inventore ut, consectetur deserunt dignissimos sequi error ad explicabo
+        officia, labore dolor autem quae distinctio quidem sit? Corporis, cumque? Iste natus aut quaerat adipisci,
+        eveniet commodi possimus eligendi dolor amet earum exercitationem voluptatum!</p>
+    <div class="form">
+        <label for="fn">Name</label>
+        <input type="text" placeholder="Enter Name" id="fn">
+        <label for="fn">village name</label>
+        <input type="text" placeholder="Enter village Name" disabled id="fn">
+        <label for="fn">email</label>
+        <input type="email" placeholder="Enter Email" id="fn">
+        <label for="fn">Age</label>
+        <input type="number" placeholder="Enter Age" id="fn" value="10" min="18">
+        <input type="radio" checked>
+        <label for="">Male</label>
+        <input type="radio" >
+        <label for="">Female</label>
+        <label for="">Enter Number</label>
+        <input type="number" min="2" max="8" value="5">
+    </div>
+    <div>
+        <a href="https://www.google.com" target="_blank">click me!</a>
+    </div>
+
+    <button>submit</button>
+</body>
+
+</html>

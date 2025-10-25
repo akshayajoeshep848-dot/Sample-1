@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        /* static */
+        .parent{
+            background-color: aqua;
+            height: 600px;
+        }
+        .child{
+            background-color: bisque;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        /* relative */
+        .parent1{
+            background-color: aqua;
+            height: 600px;
+        }
+        .child1{
+            background-color: bisque;
+            width: 200px;
+            height: 100px;
+            /* border: 1px solid; */
+            place-content: center;
+            text-align: center;
+           
+            
+
+        }
+        .child1-1{
+            position: relative;
+            top: -50px;
+            left: 20px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+        .child1-2{
+            position: relative;
+            top: -151px;
+            left: 220px;
+        }
+        .child1-3{
+            position: relative;
+            top: -250px;
+            left: 420px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Position</h1>
+    <h2>static (default)</h2>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+    </div>
+    <h1>CSS Position</h1>
+    <h2>relative</h2>
+    <div class="parent1">
+        <div class="child1 child1-1">child-1</div>
+        <div class="child1 child1-2">child-2</div>
+        <div class="child1 child1-3">child-3</div>
+    </div>
+    <h1>CSS Position</h1>
+    <h2>relative</h2>
+    <div class="parent1">
+        <div class="child1 child1-1">child-1</div>
+        <div class="child1 child1-2">child-2</div>
+        <div class="child1 child1-3">child-3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>general-siblings</title>
+    <style>
+        h1~p{
+            color: blue;
+        }
+        p~h1{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>general-siblings</h1>
+    <p>selects all subsequent siblings after h1</p>
+    <p>does not select the siblings occuring before h1</p>
+    <p>h1~p{}</p>
+    <h1>heading2</h1>
+</body>
+</html>

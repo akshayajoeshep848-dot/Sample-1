@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Callbacks</h1>
+    <script>
+      function greet(name, callback) {
+        console.log("Hello ," + name + "!");
+        callback();
+      }
+      function saygoodbye() {
+        console.log("Good bye");
+      }
+      greet("Pavan", saygoodbye);
+
+      function operation(number1, number2 = 0, oper) {
+        oper(number1, number2);
+      }
+      // sum function
+      function sum(a, b) {
+        console.log(`sum of ${a} and ${b} is : `, a + b);
+      }
+
+    //   factorial function
+      function fact(n) {
+        let fact = 1;
+        for (let i = 1; i <= n; i++) {
+          fact *= i;
+        }
+        console.log(`factorial of ${n} is : `, fact);
+      }
+      operation(5, 4, fact);
+      operation(5, 4, sum);
+    </script>
+  </body>
+</html>

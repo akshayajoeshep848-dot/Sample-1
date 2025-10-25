@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-flex shrink</title>
+    <style>
+        .parent{
+            background-color: blanchedalmond;
+            height: 50vh;
+            display: flex;
+            gap: 10px;
+        }
+        .child{
+            background-color: chartreuse;
+            width: 100px;
+            height: 100px;
+        }
+        .child-1{
+            flex-shrink: 0;/*if the combined size of items is larger than the flex container then the flex-shrink decreases the items space
+            1)accepts a unitless non-negative number.
+            2)default value is 1(meaining the item can shink)
+            3)a value of 0 means the item will not shink, even if it causes an overflow
+            4)if one item has flex-shrink:2 and other have flex-shrink;1,the item with flex-shrink;2 will shrink(decreases) twice as
+            much as the others when space is insuffcient.the total amount an item shrinks is also propotional to its flex-basis
+            5)higher number shrink faster than lower numbers*/
+           
+        }
+        .child-2{
+            flex-shrink: 2;
+            
+        }
+        .child-3{
+            flex-shrink: 3;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>css-flex shrink</h1>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3 Lorem ipsum dolor sit amet.</div>
+    </div>
+</body>
+</html>

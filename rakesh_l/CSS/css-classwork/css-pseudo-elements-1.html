@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            list-style-type: none;
+        }
+        li::before{
+            content: "\2B50";
+            color: aqua;
+            padding: 10px;
+        }
+        li::after{
+            content: "\1F4AB";
+            color: aqua;
+            padding: 10px;
+        }
+        .burger-menu{
+            background-color: black;
+            width: 15px;
+            height: 4px;
+        }
+        .burger-menu::before{
+            content: "";
+            position: absolute;
+            transform: translateY(7px);
+            background-color: black;
+            width: 20px;
+            height: 4px;
+        }
+        .burger-menu::after{
+            content: "";
+            position: absolute;
+            transform: translateY(-7px);
+            background-color: black;
+            width: 20px;
+            height: 4px;
+        }
+        p::first-letter{
+            font-size: 50px;
+        }
+        p::first-line{
+            font-size: 30px;
+        }
+        p::selection{
+            color: aqua;
+            background-color: black;
+        }
+        input::placeholder{
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>pseudo elements</h1>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+    <div class="burger-menu"></div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, animi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, minima? Eveniet distinctio repellendus doloremque natus, mollitia suscipit saepe quos a perspiciatis? Nemo magni cupiditate tempore reiciendis modi? Aliquam, tempore repudiandae?
+    Itaque quos quaerat nemo ducimus, quam amet inventore! Vel dolorum obcaecati maiores explicabo autem? Rem consequatur incidunt, in officia reiciendis id ad maiores vitae adipisci nemo culpa, voluptas placeat explicabo?
+    Dolores recusandae qui minus mollitia! Accusantium officia corporis deleniti nostrum similique! Quae officia aut praesentium, ipsam adipisci rem perspiciatis cum saepe sint vitae, amet fuga? Ad numquam veniam iste quasi?</p>
+
+    <input type="text " placeholder="enter your name">
+</body>
+</html>

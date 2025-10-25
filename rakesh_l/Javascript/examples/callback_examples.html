@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Callback Functions
+
+//1.  A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+//2.
+// function operate(num1, num2, callback) {
+//   return callback(num1, num2);
+// }
+
+// function add(a, b) {
+//   return a + b;
+// }
+
+// function subtract(a, b) {
+//   return a - b;
+// }
+
+// console.log(operate(10, 5, add)); // Output: 15
+// console.log(operate(10, 5, subtract)); // Output: 5
+
+
+// //3\.
+// function greet(name, callback) {
+//   console.log(callback(name));
+// }
+
+// greet("Alice", (name) => `HELLO, ${name.toUpperCase()}!`); // Output: HELLO, ALICE!
+
+// //4.  A **synchronous callback** is executed immediately during the execution of the higher-order function. An **asynchronous callback** is executed at a later time, after the higher-order function has completed.
+
+//     //- **Synchronous Example:**
+     
+//       let numbers = [1, 2, 3];
+//       numbers.forEach(function (num) {
+//         console.log(num); // This is a synchronous callback
+//       });
+//       console.log("After forEach");
+//     //**Asynchronous Example:**
+//       console.log("Before setTimeout");
+//       setTimeout(function () {
+//         console.log("Inside setTimeout"); // This is an asynchronous callback
+//       }, 2000);
+//       console.log("After setTimeout");
+
+
+// //5.
+// function doSomething(callback) {
+//   const randomNumber = Math.random();
+//   if (randomNumber > 0.5) {
+//     callback();
+//   } else {
+//     console.log("Condition not met.");
+//   }
+// }
+
+// doSomething(() => {
+//   console.log("Callback executed!");
+// });
+
+//foreach()
+//1)Given the array `let numbers = [1, 2, 3, 4, 5];`, use `forEach` to print each number to the console.
+// let numbers=[1,2,3,4,5,6];
+// numbers.forEach((num)=>{
+//     console.log(num);
+// });
+
+//2)Using `forEach`, iterate over `let fruits = ['apple', 'banana', 'cherry'];` and print each fruit along with its index.
+// let fruits = ['apple', 'banana', 'cherry'];
+// fruits.forEach((fruit)=>{
+//     console.log(fruit)
+// });
+
+//3)Write a function `sumArray` that takes an array of numbers and uses `forEach` to calculate and return their sum.
+// function array(arr){
+//     let sum=0;
+//     arr.forEach((ar)=>{
+//          sum=sum+ar;
+//     });
+//     return sum;
+// }
+//   console.log(array([1,2,3,4]));
+
+//map()
+//1) Given `let numbers = [1, 2, 3, 4, 5];`, use `map` to create a new array where each number is doubled.
+//  let numbers=[1,2,3,4];
+//  let doubled=numbers.map((num)=>
+//     num*2
+// );
+//  console.log(doubled);
+
+//2)Create a new array of strings from an array of objects. For example, from `[{ name: 'Alice' }, { name: 'Bob' }]`, create `['Alice', 'Bob']`.
+// let people=[{name:"rakesh"},
+//             {name:"chowdary"}];
+// let persons=people.map((person)=>person.name)
+// console.log(persons);
+
+//3)
+// let fahrenheitTemps = [32, 68, 86];
+// let celsiusTemps = fahrenheitTemps.map((f) => ((f - 32) * 5) / 9);
+// console.log(celsiusTemps); // Output: [0, 20, 30]
+
+
+// //4)
+// let strings = ["hello", "world"];
+// let uppercaseStrings = strings.map((str) => str.toUpperCase());
+// console.log(uppercaseStrings); // Output: ['HELLO', 'WORLD']
+
+//filter()
+//1
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let evens = numbers.filter((number) => number % 2 === 0);
+// console.log(evens); // Output: [2, 4, 6, 8, 10]
+
+// //2
+// let people = [
+//   { name: "Alice", age: 25 },
+//   { name: "Bob", age: 17 },
+//   { name: "Charlie", age: 30 },
+// ];
+// let adults = people.filter((person) => person.age >= 18);
+// console.log(adults); // Output: [{ name: 'Alice', age: 25 }, { name: 'Charlie', age: 30 }]
+
+
+// //3
+// let words = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+// let longWords = words.filter((word) => word.length > 6);
+// console.log(longWords); // Output: ["exuberant", "destruction", "present"]
+
+// //4 Yes, you can. You can filter based on the truthiness of the values.
+//     let mixedArray = [1, null, "hello", undefined, 0, false, "world"];
+//     let cleanArray = mixedArray.filter(Boolean);
+//     console.log(cleanArray);
+
+//reduce()
+//1
+// let numbers = [1, 2, 3, 4, 5];
+// let sum = numbers.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue,
+//   0
+// );
+// console.log(sum); // Output: 15
+
+
+//2
+// let numbers = [1, 2, 3, 4, 5];
+// let product = numbers.reduce(
+//   (accumulator, currentValue) => accumulator * currentValue
+// );
+// console.log(product); // Output: 120
+
+// //3
+// let emptyArray = [];
+//     // This would throw a TypeError without an initial value
+//     let sum = emptyArray.reduce((acc, curr) => acc + curr, 0);
+//     console.log(sum); // Output: 0
+
+// //4
+// let words = ["Hello", " ", "World", "!"];
+// let sentence = words.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue
+// );
+    </script>
+</body>
+</html>

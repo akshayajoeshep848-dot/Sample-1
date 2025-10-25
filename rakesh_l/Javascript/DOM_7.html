@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>creating an element</h1>
+    <div id="container"></div>
+    <script>
+        let heading2= document.createElement("h2");
+        heading2.innerText = 'h2 is created by createelement';
+        //document.body.append(heading2);
+        let con=document.getElementById("container");
+        con.append(heading2);
+        //creating list items
+        let orderList=document.createElement("ol");
+        // let list=document.createElement("li");
+        // list.innerText='item1';
+        // document.body.append(orderList);
+        // orderList.append(list);
+        document.body.style.backgroundColor="blue";
+
+        //using for loop
+        for(i=1;i<6;i++){
+            let list=document.createElement("li");
+            list.innerText=`item${i}`;
+            orderList.append(list);
+        }
+        document.body.append(orderList);
+        
+    </script>
+</body>
+</html>

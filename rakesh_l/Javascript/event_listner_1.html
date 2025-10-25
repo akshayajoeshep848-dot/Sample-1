@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            padding: 50px;
+            background-color: aqua;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">js event listener</h1>
+    <button id="btn">submit</button>
+    <input type="text" id="inp" name="firstName">
+    <script>
+
+        let input=document.getElementById("inp");
+        let formobj={};
+
+        let button=document.getElementById('btn');
+        // button.addEventListener('click', onclick);
+
+        // function onclick(event){
+        //     console.log('bitton is clicked');
+        // }
+
+        button.addEventListener('click',(event)=>{
+            formobj[`${input.name}`]=input.value;
+            console.log(formobj);
+        }) 
+
+
+        button.addEventListener('click', (event)=>{
+            console.log('button is clicked');
+        });
+
+        let h1=document.getElementById("h1");
+        h1.addEventListener("mouseover",(event)=>{
+            h1.textContent='the text is changed';
+        });
+
+        h1.addEventListener('mouseout', (event)=>{
+            h1.textContent=event.target;
+        });
+    </script>
+</body>
+</html>

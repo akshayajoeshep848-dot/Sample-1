@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 1px;
+        }
+        header{
+            background-color: lawngreen;
+            width: 650px;
+            height: 50px;
+            place-content: center;
+            text-align: center;
+        }
+        .parent-1{
+            display: flex;
+            margin-top: 10px;
+        }
+        .child-1{
+            background-color: lawngreen;
+            width: 150px;
+            height: 120px;
+            text-align: center;
+            place-content: center;
+        }
+        .child-2{
+            background-color: lawngreen;
+            width: 150px;
+            height: 400px;
+            text-align: center;
+            place-content: center;
+            margin-top: 10px;
+        }
+        .grandparent-2{
+            margin-left: 10px;
+        }
+        .child-3{
+            background-color: lawngreen;
+            width: 490px;
+            height: 400px;
+            text-align: center;
+            place-content: center;
+            /* margin-top: 10px; */
+        }
+        .child-4{
+            background-color: lawngreen;
+            width: 490px;
+            height: 119px;
+            text-align: center;
+            place-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <header>Header</header>
+       <div class="parent-1">
+        <div class="grandparent-1">
+            <div class="child-1">Ads</div>
+            <div class="child-2">Nav</div>
+        </div>
+        <div class="grandparent-2">
+            <div class="child-3">Article</div>
+            <div class="child-4">Footer</div>
+        </div>
+       </div>
+    </div>
+</body>
+</html>

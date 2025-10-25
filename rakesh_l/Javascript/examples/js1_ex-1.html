@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //Take two numbers and an operator (+, -, *, /, %) as input and print the result.
+
+        // let num1=prompt('enter first number');
+        // let num2=prompt('enter second number');
+        // let operator=prompt('enter the operator(+, -, *, /, %)');
+        // let result;
+        // num1=Number(num1);
+        // num2=Number(num2);
+        // if(operator=='+'){
+        //     result=num1+num2;
+        //     console.log(result);
+        // }
+        // else if(operator=='-'){
+        //     result=num1-num2;
+        //     console.log(result);
+        // }
+        // else if(operator=='*'){
+        //     result=num1*num2;
+        //     console.log(result);
+        // }
+        // else if(operator=='/'){
+        //     result=num1/num2;
+        //     console.log(result);
+        // }
+        // else if(operator=='%'){
+        //     result=num1%num2;
+        //     console.log(result);
+        // }
+
+        //Check if a year is a leap year using only logical and arithmetic operators. (Optional: avoid using if)
+        // let year=Number(prompt('enter a year'));
+        // let isLeapYear=((year%400===0) || (year%4===0) && (year%100!==0))? 'is leap year':'is not a leap year';
+        // console.log(isLeapYear);
+
+        //model--2
+        // let year=prompt('enter a year:');
+        // if(year%400==0){
+        //     console.log('century leap year');
+        // }
+        // else if(year%100!=0 && year%4==0){
+        //     console.log('leap year');
+        // }
+        // else{
+        //     console.log('not a leap year');
+        // }
+
+        //model---3
+        // let year = Number(prompt("Enter a year:"));
+
+        // if (year % 4 === 0) {
+        //     if (year % 100 === 0) {
+        //         if (year % 400 === 0) {
+        //             console.log(" is a Leap Year ");
+        //         } else {
+        //             console.log( " is NOT a Leap Year ");
+        //         }
+        //     } else {
+        //         console.log(" is a Leap Year ");
+        //     }
+        // } else {
+        //     console.log(" is NOT a Leap Year ");
+        // }
+
+        //Sum of Digits of a 3-digit Number
+        // let num=prompt("enter a number");
+        // let sum=0;
+        // for(let i of num){
+        //     sum=sum+Number(i);
+        // }
+        // console.log(sum);
+
+        //model--2
+        // let str=prompt("enter a number");
+        // let sum=0;
+        // let num=Number(str);
+        // for(i=0;i<=str.length;i++){
+        //     sum=sum+(num%10);
+        //     num=Math.floor(num/10);
+        // }
+        // console.log(sum);
+
+
+        //Problem 5: Final Price Calculator with Discount
+
+        // let price = Number(prompt("Enter the price:"));
+        // let discountRate = Number(prompt("Enter discount rate (%):"));
+
+        // let discountedPrice = price - (price * discountRate / 100);
+
+        // // Apply extra discount based on price
+        // if (price > 5000) {
+        //     discountedPrice=discountedPrice - (discountedPrice * 0.05); // extra 5%
+        //     console.log(discountedPrice);
+        // } else if (price >= 2000 && price <= 5000) {
+        //     discountedPrice=discountedPrice - (discountedPrice * 0.02); // extra 2%
+        //     console.log(discountedPrice);
+        // }
+
+
+        //. Digit Equality Game (3-digit number)
+        // let num = prompt("Enter a 3-digit number:"); 
+        // let d1 = num[0];  
+        // let d2 = num[1];  
+        // let d3 = num[2];  
+
+        // if (d1 === d2 && d2 === d3) {
+        //     console.log("All same");
+        // } else if (d1 === d2 || d2 === d3 || d1 === d3) {
+        //     console.log("Two same");
+        // } else {
+        //     console.log("All different");
+        // }
+
+        //model--2
+        // let num =Number( prompt("Enter a 3-digit number:")); 
+        // let d1=num%10;
+        // num =Math.floor(num/10);
+        // let d2=num%10;
+        // num =Math.floor(num/10);
+        // let d3=num%10;
+        // num =Math.floor(num/10);
+        // if (d1 === d2 && d2 === d3) {
+        //     console.log("All same");
+        // } else if (d1 === d2 || d2 === d3 || d1 === d3) {
+        //     console.log("Two same");
+        // } else {
+        //     console.log("All different");
+        // }
+
+        //Write a program that takes an integer input from the user.
+        // let num =Number( prompt("Enter a number:"));
+        // if(num<=21){
+        //    console.log(21-num); 
+        // }
+        // else if(num>21){
+        //     console.log((num-21)*2);
+        // }
+
+        // Lucky Number
+        // let str=prompt("enter a number");
+        // let sum=0;
+        // let num=Number(str);
+        // for(i=0;i<=str.length;i++){
+        //     sum=sum+(num%10);
+        //     num=Math.floor(num/10);
+        // }
+        // if(sum%7==0){
+        //     console.log('lucky number');
+        // }
+        // else{
+        //     console.log('try again')
+        // }
+
+        // Fizz Buzz
+
+        //   let num=Number(prompt('enter a number'))
+        //   if(num>100 || num<1){
+        //      console.log('out of range');
+        //      }
+
+        //    else if(num%3===0 && num%5===0){
+        //         console.log(num,'fizz buzz');
+        //     }
+        //     else if(num%3===0){
+        //         console.log(num,'fizz');
+        //     }
+        //     else if(num%5===0){
+        //         console.log(num,'buzz')
+        //     }
+        //    else if(num%3!==0 || num%5!==0){
+        //         console.log(num);
+        //     }
+            
+    </script>
+</body>
+</html>

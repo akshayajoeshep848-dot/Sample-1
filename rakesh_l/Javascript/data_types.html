@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types</title>
+    
+</head>
+<script>
+        let a=10;
+        let firstName="Rakesh";
+        let lastName=`L` //template literal
+        let bool=true;
+        let unDefined=undefined;
+        let sym=Symbol();
+        let bigInt=63n
+
+        console.log("age:",a)
+        console.log("Firstname:",firstName)
+        console.log("Lastname",lastName)
+        console.log("Bool:",bool)
+        console.log("Undefined:",unDefined)
+        console.log(sym)
+        console.log(bigInt)
+        //template literal
+        console.log(`My name is ${firstName} ${lastName},and my age is ${a}`)
+        //string concatenation
+        console.log("My name is " + firstName + " " + lastName + ", and my age is"+ " " + a)
+        //comma seperated by values
+        console.log("My name is " , firstName , lastName , ", and my age is" , a)
+        console.log("Firstname:",firstName)
+        console.log("Lastname:",lastName)
+        console.log("Age:",a)
+
+        let address1="Road number-1";
+        let address2="Beside blowhot";
+        let address3="paying guest boys hostel";
+        //template literal
+        console.log("template literal:",`${address1},${address2},${address3}`)
+        //string concatenation
+        console.log("String concatenation:",address1+","+address2+","+address3)
+
+        //string concatenation
+        let fullName1=firstName + " " +lastName;
+        let fullName2=`${firstName} ${lastName}`;
+        console.log("Fullname-1:",fullName1)
+        console.log("Fullname-2:",fullName2)
+
+        //Represents both integer and floating point numbers--they are no separate type of integers vs floats
+        //typeof operator returns a string
+        let age1=21;
+        let price=33.33
+        console.log("Age:",typeof age1)
+        console.log("Price:",typeof price)
+        
+    </script>
+<body>
+    
+</body>
+</html>

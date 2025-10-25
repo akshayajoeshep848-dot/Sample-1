@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent-1{
+            background-color: skyblue;
+            height: 500px;
+            width: 700px;
+            padding-top: 1px;
+            
+        }
+        .head{
+            background-color: rgb(5, 218, 168);
+            height: 50px;
+            width: 600px; 
+            margin-left:  50px;
+            margin-top: 20px; 
+            text-align: center;
+            place-content: center;
+            color: white;
+            font-size: large;
+        }
+        .parent-2{
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-evenly;
+        }
+        aside{
+            background-color: rgb(22, 233, 22);
+            width: 150px;
+            height: 320px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            font-size: large;
+            /* margin-left: 30p; */
+            justify-content: space-around;
+        }
+        article{
+            background-color: orange;
+            width: 400px;
+            /* color: white;
+            font-size: large;
+            text-align: center;
+            margin-top:; */
+            
+        }
+        .parent-3{
+            display: flex;
+            gap: 10px;
+            justify-content: space-evenly;
+            height: 300px;
+            align-items: end;
+            
+        }
+        .image{
+            background-color: rgb(225, 225, 45);
+            height: 100px;
+            width: 100px;
+            margin-bottom: 10px;
+            text-align: center;
+            place-content: center;
+            color: white;
+        }
+        footer{
+            background-color: rgb(5, 218, 168);
+            height: 50px;
+            width: 600px; 
+            margin-left:  50px;
+            margin-top: 20px; 
+            text-align: center;
+            place-content: center;
+            color: white;
+            font-size: large;
+        }
+        .a{
+            width: 50px;
+            position: relative;
+            top: 130px;
+            right: -180px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-1">
+        <div class="head">
+            Header</div>
+    <div class="parent-2">
+        <aside>Aside</aside>
+        <article>
+            <div class="a" style="color: white; font-size: large;">
+
+                Article
+            </div>
+            <div class="parent-3">
+
+                <div class="image image-1">Image</div>
+                <div class="image image-2">Image</div>
+                <div class="image image-3">Image</div>
+            </div>
+        </article>
+    </div>
+    <footer>Fotter</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body{
+            background-color: rgb(234,237,247);
+            
+        }
+        .main-container{
+            width: 946px;
+            height: 710px;
+            background-color: white;
+            box-shadow: 0px 10px 30px 0px rgba(98,89,202,0.05);
+            border-radius: 11px;
+            padding-top: 1px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .con-1{
+            width: 926px;
+            height: 673px;
+            
+        }
+        .header{
+            width: 926px;
+            height: 37px;
+            padding: 35px 0px 5px 25px;
+        }
+        .head-1{
+            font-size: 14px;
+            font-weight: 800;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            margin-top: -10px;
+            height: 21px;
+            /* padding: 30px; */
+            text-transform: uppercase;
+
+        }
+        th,table,td{
+            /* padding: 44px; */
+            /* margin-top: -15px; */
+            border: 1px solid #e8e8f7;;
+            border-collapse: collapse;
+        }
+        th,td{
+            border-right: none;
+            border-left: none;
+        }
+        .table{
+            margin-left: 40px;
+            margin-top: -10px;
+            width: 100%;
+        }
+        .th-1{
+            width: 292px;
+            height: 35px;
+            text-align: start;
+            padding-left: 23px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            /* margin-top: -10px; */
+            /* height: 21px; */
+            /* padding: 30px; */
+            text-transform: uppercase;
+            
+        }
+        .th-2{
+            width: 116px;
+            height: 35px;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            /* margin-top: -10px; */
+            /* height: 21px; */
+            /* padding: 30px; */
+            text-transform: uppercase;
+        }
+        .th-3{
+            width: 250px;
+            height: 35px;
+            text-align: start;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            /* margin-top: -10px; */
+            /* height: 21px; */
+            /* padding: 30px; */
+            text-transform: uppercase;
+        }
+        .th-4{
+            width: 96.7px;
+            height: 35px;
+            text-align: start;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            /* margin-top: -10px; */
+            /* height: 21px; */
+            /* padding: 30px; */
+            text-transform: uppercase;
+        }
+        .th-5{
+            width: 116px;
+            height: 35px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            /* margin-top: -10px; */
+            /* height: 21px; */
+            /* padding: 30px; */
+            text-transform: uppercase;
+        }
+        .tab{
+            width: 876px;
+        }
+        .con-2{
+            display: flex;
+        }
+        .image{
+            width: 64px;
+            height: 64px;
+            background-color: rgb(228, 244, 247);
+            margin-top: 2px;
+            margin-left: 17px;
+            border-radius: 8px;
+        }
+        tbody tr:hover{
+            background-color: rgb(228, 244, 247);
+        }
+        tr{
+            cursor: pointer;
+        }
+        img{
+            width: 42px;
+            height: 42px;
+            margin-left: 13px;
+            margin-top: 10px;
+        }
+        .td-1{
+            height: 94px;
+        }
+        h6{
+            width: 174px;
+            height: 1px;
+            font-size: 14px;
+            font-weight: 500;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            margin-top: 23px;
+        }
+        .parent{
+            margin-left: 10px;
+            margin-top: -20px;
+        }
+        .para-1{
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            /* margin-top: -2px; */
+        }
+        .para-2{
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            /* margin-top: -2px; */
+        }
+        .a{
+            margin-top: -10px;
+        }
+        .p1{
+            color: rgb(253,96,116);
+             font-size: 12px;
+            /* font-weight: 400; */
+            font-family: "Roboto",sans-serif;
+            letter-spacing: 0.2px;
+            margin: 4px 0px 0px;
+        }
+        span{
+            font-family: "Roboto";
+        }
+        .del{
+            width: 17.5px;
+            height: 20px;
+            margin-left: 45px;
+            margin-top: -20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- <div class="con-1"> -->
+           <div class="header">
+            <div class="head-1">Shopping cart</div>
+           </div>
+          <!-- <div class="con-2"> -->
+              <div class="tab">
+                <table class="table">
+                    <thead class="tr-1">
+                        <th class="th-1">Product</th>
+                        <th class="th-2"></th>
+                        <th class="th-3">Quantity</th>
+                        <th class="th-4">Price</th>
+                        <th class="th-5">Action</th>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="td-1 td" >
+                            <div class="con-2">
+                                <div class="image">
+                                    <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/14.png" alt="">
+                                </div>
+                                <div class="parent">
+                                    <h6>COLLEGE BAG</h6>
+                                    <div class="a">
+                                    <span class="para-1">Color:</span><br>
+                                    
+                                       <span class="para-2">Black Color</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td td-2" >
+                            <p class="p1 p">Out of stock</p>
+                        </td>
+                        <td class="td td-3">
+                            <div class="parent-1" style="display: flex; border: 1px solid rgb(228, 244, 247); width: 150px; ">
+                                <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 25px; font-weight: 800; text-align: center; height: 38px; place-content: center;">-</a>
+                                <span  style="width: 86px;  text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">0</span>
+                              <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">+</a>
+
+                            </div>
+                        </td>
+                        <td style="width: 120px;">
+                            <span style="font-size: 16px; font-weight: 600;">$0.00</span>
+                        </td>
+                        <td class="td-5" style="width: 96px; height: 94px;">
+                            <a href="" class="a-1">
+                               <img src="images/trash-solid (1).svg" alt="" class="del">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-1 td" >
+                            <div class="con-2">
+                                <div class="image">
+                                    <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/15.png" alt="">
+                                </div>
+                                <div class="parent">
+                                    <h6>PARTY WEAR SHOES</h6>
+                                    <div class="a">
+                                    <span class="para-1">Color:</span><br>
+                                    
+                                       <span class="para-2">Pink</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td td-2" >
+                            <p class="p1 p" style="color: rgb(6, 156, 6);">In stock</p>
+                        </td>
+                        <td class="td td-3">
+                            <div class="parent-1" style="display: flex; border: 1px solid rgb(228, 244, 247); width: 150px; ">
+                                <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 25px; font-weight: 800; text-align: center; height: 38px; place-content: center;">-</a>
+                                <span  style="width: 86px;  text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">0</span>
+                              <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">+</a>
+
+                            </div>
+                        </td>
+                        <td style="width: 120px;">
+                            <span style="font-size: 16px; font-weight: 600;">$0.00</span>
+                        </td>
+                        <td class="td-5" style="width: 96px; height: 94px;">
+                            <a href="" class="a-1">
+                               <img src="images/trash-solid (1).svg" alt="" class="del">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-1 td" >
+                            <div class="con-2">
+                                <div class="image">
+                                    <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/19.png" alt="">
+                                </div>
+                                <div class="parent">
+                                    <h6>SAMSUNG A2</h6>
+                                    <div class="a">
+                                    <span class="para-1">Color:</span><br>
+                                    
+                                       <span class="para-2">Black Color</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td td-2" >
+                            <p class="p1 p">Out of stock</p>
+                        </td>
+                        <td class="td td-3">
+                            <div class="parent-1" style="display: flex; border: 1px solid rgb(228, 244, 247); width: 150px; ">
+                                <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 25px; font-weight: 800; text-align: center; height: 38px; place-content: center;">-</a>
+                                <span  style="width: 86px;  text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">0</span>
+                              <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">+</a>
+
+                            </div>
+                        </td>
+                        <td style="width: 120px;">
+                            <span style="font-size: 16px; font-weight: 600;">$0.00</span>
+                        </td>
+                        <td class="td-5" style="width: 96px; height: 94px;">
+                            <a href="" class="a-1">
+                               <img src="images/trash-solid (1).svg" alt="" class="del">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-1 td" >
+                            <div class="con-2">
+                                <div class="image">
+                                    <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/16.png" alt="">
+                                </div>
+                                <div class="parent">
+                                    <h6>
+                                      FLOWER POT</h6>
+                                    <div class="a">
+                                    <span class="para-1">Color:</span><br>
+                                    
+                                       <span class="para-2">Green and Black Color</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td td-2" >
+                            <p class="p1 p" style="color: rgb(6, 156, 6);">In stock</p>
+                        </td>
+                        <td class="td td-3">
+                            <div class="parent-1" style="display: flex; border: 1px solid rgb(228, 244, 247); width: 150px; ">
+                                <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 25px; font-weight: 800; text-align: center; height: 38px; place-content: center;">-</a>
+                                <span  style="width: 86px;  text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">0</span>
+                              <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">+</a>
+
+                            </div>
+                        </td>
+                        <td style="width: 120px;">
+                            <span style="font-size: 16px; font-weight: 600;">$0.00</span>
+                        </td>
+                        <td class="td-5" style="width: 96px; height: 94px;">
+                            <a href="" class="a-1">
+                               <img src="images/trash-solid (1).svg" alt="" class="del">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-1 td" >
+                            <div class="con-2">
+                                <div class="image">
+                                    <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/17.png" alt="">
+                                </div>
+                                <div class="parent">
+                                    <h6>CHAIR</h6>
+                                    <div class="a">
+                                    <span class="para-1">Color:</span><br>
+                                    
+                                       <span class="para-2">Green and Black Color</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td td-2" >
+                            <p class="p1 p" style="color: rgb(6, 156, 6);">In stock</p>
+                        </td>
+                        <td class="td td-3">
+                            <div class="parent-1" style="display: flex; border: 1px solid rgb(228, 244, 247); width: 150px; ">
+                                <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 25px; font-weight: 800; text-align: center; height: 38px; place-content: center;">-</a>
+                                <span  style="width: 86px;  text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">0</span>
+                              <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">+</a>
+
+                            </div>
+                        </td>
+                        <td style="width: 120px;">
+                            <span style="font-size: 16px; font-weight: 600;">$0.00</span>
+                        </td>
+                        <td class="td-5" style="width: 96px; height: 94px;">
+                            <a href="" class="a-1">
+                               <img src="images/trash-solid (1).svg" alt="" class="del">
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-1 td" >
+                            <div class="con-2">
+                                <div class="image">
+                                    <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/18.png" alt="">
+                                </div>
+                                <div class="parent">
+                                    <h6>WATCH</h6>
+                                    <div class="a">
+                                    <span class="para-1">Color:</span><br>
+                                    
+                                       <span class="para-2">Green and Black Color</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="td td-2" >
+                            <p class="p1 p">Out of stock</p>
+                        </td>
+                        <td class="td td-3">
+                            <div class="parent-1" style="display: flex; border: 1px solid rgb(228, 244, 247); width: 150px; ">
+                                <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 25px; font-weight: 800; text-align: center; height: 38px; place-content: center;">-</a>
+                                <span  style="width: 86px;  text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">0</span>
+                              <a href="#" style="width: 32px; background-color: rgb(228, 244, 247) ; text-decoration: none; color: black; font-size: 18px; font-weight: 800; text-align: center; height: 38px; place-content: center;">+</a>
+
+                            </div>
+                        </td>
+                        <td style="width: 120px;">
+                            <span style="font-size: 16px; font-weight: 600;">$0.00</span>
+                        </td>
+                        <td class="td-5" style="width: 96px; height: 94px;">
+                            <a href="" class="a-1">
+                               <img src="images/trash-solid (1).svg" alt="" class="del">
+                            </a>
+                        </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          <!-- </div> -->
+        <!-- </div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>tenary operator examples</h1>
+    <p>(condition)?true statement : false statement</p>
+    <script>
+        //1)even or odd
+        // let num=prompt("enter a number");
+        // let evenOrOdd=(num%2==0)? 'even':'odd;'
+        // console.log(evenOrOdd);
+
+        //2)positive,negative or zero
+        // let num1=prompt('enter a number');
+        // let pOrNOrZ=(num1<0)? 'negative': num1==0? 'zero': "positive";
+        // console.log(pOrNOrZ);
+
+        //3)login status
+        // let isLogin=true
+        // let status=(isLogin)? 'logged in' : 'logged out';
+        // console.log(status);
+
+        //4)max of two numbers
+        // let num1=10;
+        // let num2=20;
+        // let result=(num1>num2)? `${num1} is greater than ${num2}` : `${num2} is greater than ${num1}`;
+        // console.log(result);
+
+        //5)vote eligibility= check if a person is eligible to vote(age 18 or older)
+        // let age=prompt("enter your age");
+        // let eligible=(age>=18 && age<=140)? "vote eligible" : 'not eligible for vote';
+        // console.log(eligible);
+
+        //6)Passing Grade**: Check if a student's score is a passing grade (70 or higher)
+        // let marks=prompt("enter your marks");
+        // let result=(marks>=70)? 'students score is a passing grade':'students score not a passing grade ';
+        // console.log(result);
+
+        //7)Discount Eligibility**: Give a discount if a customer's total purchase is over $100.
+        // let totalPrice=prompt("enter a total price");
+        // let discount=(totalPrice>100)? totalPrice*0.5:0;
+        // console.log(discount);
+
+        //8)String Empty Check**: Check if a string is empty and return a default value if it is.
+        // let nm=prompt('enter your name');
+        // let result=(nm==="")? 'string is empty':nm;
+        // console.log(result);
+
+        //9)single or Plural**: Display "item" or "items" based on a count.
+        // let count=Number(prompt('enter a number'));
+        // let result=(count===1)? 'singular': 'plural';
+        // console.log(result);
+
+        //10))**Ternary Chaining**: Assign a grade (A, B, or F) based on a score.
+        // let marks=prompt("enter your marks")
+        // let result=(marks>=90 && marks<=100)?'A Grade': (marks>=75 && marks<90)? 'B Grade' : (marks>=0 && marks<75)? 'F grade' : 'enter a vaid marks';
+        // console.log(result);
+
+        //11))User Role**: Display "Admin" or "User" based on a user's role.
+        // let userRole="admin";
+        // let role=(userRole==='admin')? 'Admin':'User';
+        // console.log(role);
+
+        //12))Temperature Status**: Display "Hot" if temperature is over 30, "Cold" if under 10, otherwise "Moderate."
+        // let temp=prompt('enter your temp');
+        // let res=(temp>30)? 'hot': (temp<10)? 'cold': 'modarate';
+        // console.log(res);
+
+        //13))Authentication Check**: Return "Authenticated" or "Guest" based on user session status.
+        // let isAuthen=true;
+        // let result=isAuthen?'Authenticated':'Guest';
+        // console.log(result);
+
+        //14))conditional class name : assign a css class based on a boolean state (eg.,'active' or 'inactive')
+        let isActive=false;
+        let result=isActive?"active":'inactive';
+        console.log(result)
+
+        //15))**Ternary within a string literal**: Create a dynamic message that includes a condition.(a product is aviable or out of stock)
+        let isProduct=true;
+        let productStatus=`The product is currently ${isProduct? "available":"out of stock"}`
+        console.log(productStatus);
+        </script>
+</body>
+</html>

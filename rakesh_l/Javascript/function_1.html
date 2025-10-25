@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function = selection of reusable code. Declare code once , use it whenever you want call the function to execute that code.
+
+        //example--1
+        // function greet(name){
+        //     console.log(`hello,${name}`);
+        // }
+        // greet('alice');
+        // greet('bob');
+
+        //example--2
+        //write a function to display if a user is eligible to vote based on age
+        // function vote(age){
+        //     if(age<=0 || age>=140){
+        //         console.log('enter valid number');
+        //     }
+        //    else if(age>=18){
+        //         console.log('eligible to vote');
+        //     }
+        //     else{
+        //         console.log('not eligible to vote');
+        //     }    
+        // }
+        //vote(Number(prompt('enter your age')));
+
+        //example--3
+        // function getName(firstName,lastName){
+        //     console.log(`hello,${firstName} ${lastName}`);
+        // }
+        // getName('Rakesh','Chowdary');
+
+        //example--4
+        //hoisting
+        //Functions declared with the function keyword are fully hoisted.
+        //That means you can call them before they are written in the code.
+        //getName('Rakesh','Chowdary');
+        // function getName(firstName,lastName){
+        //     console.log(`hello,${firstName} ${lastName}`);
+        // }
+        
+        //example--5
+        //variable hoisting
+        //Variables declared with var are hoisted, but only the declaration, not the value.
+        //So before assignment, they are undefined.
+        // greet(a);
+        //  function greet(name){
+        //     console.log(`hello,${name}`);
+        // }
+        // var a=10;
+
+        //write a function to print 1 to n
+        // function getNum(n){
+        //     let i=1;
+        //     while(i<=n){
+        //         console.log(i)
+        //         i++;
+        //     }
+        // }
+        // getNum(Number(prompt('enter a number')))
+
+        //write a function to print n factorial
+        function getFactorial(n){
+            let sum=1;
+            for(let i=1;i<=n;i++){
+                sum=sum*i;
+            }
+            console.log(sum);
+        }
+        getFactorial(Number(prompt('enter a number')));
+       
+    </script>
+</body>
+</html>

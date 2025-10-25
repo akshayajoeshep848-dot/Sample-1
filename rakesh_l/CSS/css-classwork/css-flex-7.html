@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-flex basis</title>
+    <style>
+        .parent{
+            background-color: blanchedalmond;
+            height: 50vh;
+            display: flex;
+            gap: 10px;
+        }
+        .child{
+            background-color: chartreuse;
+            width: 100px;
+            height: 100px;
+        }
+        .child-1{
+            flex-basis: 200px; /*1)it defines the default size of a flex item(auto).it can apply on the main axis either flex-direction-row nor flex-direction-coloumn
+           2)it accepts a length unit(px,em,%,etc), or the keyword auto or content.
+           3)if set to a specific length(ex--100px),that becomes its initial main size */
+           
+        }
+        .child-2{
+            flex-basis: 100px;
+            
+        }
+        .child-3{
+            flex-basis: content;/*we used content keyword in flex-basis it is increases the width by content*/
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>css-flex basis</h1>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3 Lorem ipsum dolor sit amet.</div>
+    </div>
+</body>
+</html>

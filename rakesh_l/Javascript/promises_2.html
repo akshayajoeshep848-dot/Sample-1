@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let p1= Promise.resolve("sucess")
+        let p2=34;
+        let p3= new Promise((resolve,reject)=>{
+            const sucess=true
+            setTimeout(() => {
+                sucess?resolve("sucess"):reject("fail");
+            }, 2000);
+        });
+        Promise.all([p1,p2,p3])
+            .then(values=>{
+                console.log(values)
+            })
+            .catch((value)=>{console.log(value)})
+    </script>
+</body>
+</html>

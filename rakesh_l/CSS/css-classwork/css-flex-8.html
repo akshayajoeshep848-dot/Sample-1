@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-flex grow</title>
+    <style>
+        .parent{
+            background-color: blanchedalmond;
+            height: 50vh;
+            display: flex;
+            gap: 10px;
+        }
+        .child{
+            background-color: chartreuse;
+            width: 100px;
+            height: 100px;
+        }
+        .child-1{
+           flex-grow: 2;/*The flex-grow property defines the ability of a flex item to grow if necessary.it specifies what proportion of the remaining space in the flex container should be distibuted to the item.
+           1)accepts a unitless non-negative number(eg--0,1,2)
+           2)default value is 0(meaing the item will not grow to fill available space)
+           3)if all items have flex-grow;1;,the remaining space is distributed equally among them.
+           4)if one item has flex grow;2 and other have flex-grow;1,the item with flex-grow;2 will take up twice as much of the available space as the others
+           5)this property is applied after items have been sized according to flex-basis*/
+           
+        }
+        .child-2{
+            flex-grow: 1;
+            
+        }
+        .child-3{
+            flex-grow: 3;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>css-flex grow</h1>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3 </div>
+    </div>
+</body>
+</html>

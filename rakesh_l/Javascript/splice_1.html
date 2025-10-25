@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>splice</h1>
+    <script>
+        /*array.splice(start, deleteCount, item1, item2, ...)
+        start → the index to begin changing the array.
+        deleteCount → number of elements to remove (can be 0).
+        item1, item2, ... → elements to insert at that position.*/
+
+        //example--1----Remove elements
+        // let fruits=['apple','banana','carrot','guvva','kivi','orange','mango','watermelon'];
+        // //removing elements
+        // //let copy1=fruits.splice(0,1);
+        // let copy1=fruits.splice(2,3);
+        // console.log(fruits)//it can written all elements except deleted element not return
+        // console.log(copy1);//only return deleted element
+
+        //example--2---- Add elements
+        // let arr = [1, 2, 5];
+        // // at index 2, delete 0, add 3 and 4
+        // arr.splice(2, 0, 3, 4);
+        // console.log(arr); // [1, 2, 3, 4, 5]
+
+        //example--3---Replace elements
+            // let arr = ["a", "b", "c", "d"];
+            // // at index 1, delete 2, insert "x", "y"
+            // arr.splice(1, 2, "x", "y");
+            // console.log(arr); // ["a", "x", "y", "d"]
+
+        //example--4----Remove everything from an index onward
+        // let arr = [1, 2, 3, 4, 5];
+        // // remove all from index 2
+        // arr.splice(2);
+        // console.log(arr); // [1, 2]
+
+
+        //Negative indexing
+        let colors=['red','green','orange','yellow'];
+        colors.splice(-4,4);
+        console.log(colors)
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>spread operator</h1>
+    <script>
+        //spread operator = ... allows an iterable such as an array or string to be expanded into seperate elements (unpacks the elements)
+        // const arr = [1, 2, 3];
+        // console.log(...arr); // 1 2 3   (separate elements)
+
+        // let numbers = [1,2,3,4,5];
+        // let max = Math.max(...numbers);
+        // let min = Math.min(...numbers);
+
+        // console.log(max);
+        // console.log(min);
+
+        // let username='Rakesh';
+        // let letters=[...username].join('-');
+
+        // console.log(username);
+
+        // let fruits=["apple",'ortange','bannana'];
+        // let newFruits=[...fruits];
+
+        // console.log(newFruits);
+
+        // let fruits=["apple",'ortange','bannana'];
+        // let vegetables=['carrot','potato'];
+        // let newFruits=[...fruits,...vegetables,'eggs','milk'];
+
+        // console.log(newFruits);
+
+
+        //  function sum(a,b,c){
+        //     return a+b+c;
+        // }
+        // const num=[10,20,30];
+        // console.log(sum(...num))
+
+
+        //shallow copy
+        //example-1
+        // const originalArray=[1,2,{key:'value'}];
+        // const copiedArray=[...originalArray];
+
+        // console.log(copiedArray);
+        // console.log(originalArray===copiedArray);
+        // console.log(originalArray[2]===copiedArray[2]);
+
+        // copiedArray[0]=99;
+        // copiedArray[2].key='new value';
+
+        // console.log(originalArray);
+        // console.log(copiedArray);
+        
+        // //example-2
+        // let originalobject={a:1,b:{c:3}};
+        // let copiedonject={...originalobject};
+
+        // console.log(originalobject);
+        // console.log(copiedonject);
+        // //changes
+        // copiedonject.a=2
+        // copiedonject.b.c=5
+        // console.log(originalobject);
+        // console.log(copiedonject);
+
+        //merging arrays
+        // const arr1=[1,2,3];
+        // const arr2=[4,5];
+        // const arr3=[6,7];
+        // const mergedArray=[...arr1,...arr2,...arr3];
+        // console.log(mergedArray);
+
+        //merging ob{jects
+        // const obj1={x:1,y:2};
+        // const obj2={y:3,z:4};
+        // const obj3={a:5};
+
+        // const mergedobj={...obj1,...obj2,...obj3};
+        // console.log(mergedobj);
+    </script>
+</body>
+</html>

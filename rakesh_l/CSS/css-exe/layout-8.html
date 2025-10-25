@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 80vh;
+            /* background-color: antiquewhite; */
+            margin-left: auto;
+            margin-right: auto ;
+            padding-top: 1px;
+            margin-top: 150px;
+
+        }
+        .container-1{
+            display: flex;
+        }
+        .child-1{
+            height: 80px;
+            width: 130px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            background-color: rgba(142, 14, 112, 0.577);
+        }
+        .child-2{
+            height: 80px;
+            width: 130px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            background-color: rgba(14, 103, 5, 0.847);
+            margin-top: 2px;
+        }
+        .child-3{
+            height: 80px;
+            width: 130px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-top: 2px;
+            background-color: rgba(14, 142, 18, 0.577);
+        }
+        .child-4{
+            height: 162px;
+            width: 180px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-left: 2px;
+            background-color: hwb(305 2% 6% / 0.684);
+        }
+        .grandparent{
+            display: flex;
+        }
+        .child-5{
+            height: 80px;
+            width: 50px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-left: 2px;
+            margin-top: 2px;
+            background-color: rgba(14, 103, 5, 0.847);
+        }
+        .child-6{
+            height: 80px;
+            width: 128px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-left: 2px;
+             margin-top: 2px;
+             background-color: aqua;
+        }
+        .container-0{
+            height: 80px;
+            width: 310px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            /* margin-left: 2px; */
+             margin-top: 2px;
+             background-color:navy;
+        }
+        .container-2{
+             height: 325px;
+            width: 300px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-left: 2px;
+             /* margin-top: 2px; */
+             background-color:navy;
+        }
+        .head{
+            display: flex;
+        }
+        .child-7{
+            height: 80px;
+            width: 130px;
+            text-align: center;
+            margin-left: 2px;
+            place-content: center;
+            color: white;
+            background-color: rgba(218, 247, 4, 0.862);
+        }
+        .child-8{
+            height: 80px;
+            width: 130px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-top: 2px;
+            margin-left: 2px;
+            background-color: rgba(37, 79, 64, 0.577);
+        }
+        .child-9{
+            height: 80px;
+            width: 130px;
+            text-align: center;
+            place-content: center;
+            color: white;
+             margin-top: 2px;
+            margin-left: 2px;
+            background-color: rgba(8, 202, 163, 0.686);
+        }
+        .child-10{
+            height: 80px;
+            width: 130px;
+            text-align: center;
+            place-content: center;
+            color: white;
+             margin-top: 2px;
+            margin-left: 2px;
+            background-color: rgba(231, 6, 14, 0.837);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <div>
+                <div class="container-1">
+                <div class="parent-1">
+                   <div class="child-1">1</div>
+                   <div class="child-2">2</div>
+                   <div class="child-3">3</div>
+                </div>
+                <div class="parent-2">
+                    <div class="child-4">4</div>
+                    <div class="grandparent">
+                        <div class="child-5">5</div>
+                        <div class="child-6">6</div>
+                    </div>
+                </div>
+            </div>
+                <div class="container-0">11</div>
+            </div>
+            
+            <div class="container-2">
+                CSS Grid Layout
+            </div>
+            <div>
+                <div class="child-7">7</div>
+                <div class="child-8">8</div>
+                <div class="child-9">9</div>
+                <div class="child-10">10</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

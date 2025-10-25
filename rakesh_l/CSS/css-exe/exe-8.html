@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .div1{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            
+            box-shadow: 0px 0px 5px gray;
+        }
+        .div2{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: 0px 0px 15px 0.5px gray;
+        }
+        .div3{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: 2px 2px 5px gray;
+        }
+        .div4{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: -2px 2px 15px gray;
+        }
+        .div5{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: 0px 0px 1px  gray ;
+        }
+        .div6{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: 1px 1px 10px 0.1px gray;
+        }
+        .div7{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+        
+        .div8{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+        }
+        .div9{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        .div10{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+        .div11{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+        .div12{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+        .div13{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+        .div14{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        }
+        .div15{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        }
+        .div16{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .div17{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .div18{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .div19{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .div20{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        }
+        .div21{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+        .div22{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+           box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        }
+        .div23{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+           box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        .div24{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        .div25{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+        }.div26{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+        .div27{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        }
+        .div28{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+        }
+        .div29{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        }
+        .div30{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        }
+        .div31{
+            margin: 50px;
+            margin-right: 300px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+        videov
+        .div32{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+        .div33{
+            margin: 50px;
+            padding: 40px;
+            width: 20%;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        }
+        .div34{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        .div35{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+        }
+        .div36{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        }
+        .div37{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+        }
+        .div38{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+        .div39{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+        }
+        .div40{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+         box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+        }
+        .div41{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        }
+        .div42{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+        }
+        .div43{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+        }
+        .div44{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        }
+        .div45{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+        }
+        .div46{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        }
+        .div47{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        }
+        .div48{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+        }
+        .div49{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+            box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        }
+        .div50{
+            margin: 50px;
+            padding: 40px;
+            width: 30%;
+box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div> 
+        <div style="display: flex;">
+
+            <div class="div1">
+                <h1>Box-shadow1</h1>
+            </div>
+            <div class="div2">
+                <h1>Box-shadow2</h1>
+            </div>
+            <div class="div3">
+                <h1>Box-shadow3</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div4">
+                <h1>Box-shadow4</h1>
+            </div>
+            <div class="div5">
+                <h1>Box-shadow5</h1>
+            </div>
+            <div class="div6">
+                <h1>Box-shadow6</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div7">
+                <h1>Box-shadow7</h1>
+            </div>
+            <div class="div8">
+                <h1>Box-shadow8</h1>
+            </div>
+            <div class="div9">
+                <h1>Box-shadow9</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div10">
+                <h1>Box-shadow10</h1>
+            </div>
+            <div class="div11">
+                <h1>Box-shadow11</h1>
+            </div>
+            <div class="div12">
+                <h1>Box-shadow12</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div13">
+                <h1>Box-shadow13</h1>
+            </div>
+            <div class="div14">
+                <h1>Box-shadow14</h1>
+            </div>
+            <div class="div15">
+                <h1>Box-shadow15</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div16">
+                <h1>Box-shadow16</h1>
+            </div>
+            <div class="div17">
+                <h1>Box-shadow17</h1>
+            </div>
+            <div class="div18">
+                <h1>Box-shadow18</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div19">
+                <h1>Box-shadow19</h1>
+            </div>
+            <div class="div20">
+                <h1>Box-shadow20</h1>
+            </div>
+            <div class="div21">
+                <h1>Box-shadow21</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div22">
+                <h1>Box-shadow22</h1>
+            </div>
+            <div class="div23">
+                <h1>Box-shadow23</h1>
+            </div>
+            <div class="div24">
+                <h1>Box-shadow24</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div25">
+                <h1>Box-shadow25</h1>
+            </div>
+            <div class="div26">
+                <h1>Box-shadow26</h1>
+            </div>
+            <div class="div27">
+                <h1>Box-shadow27</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div28">
+                <h1>Box-shadow28</h1>
+            </div>
+            <div class="div29">
+                <h1>Box-shadow29</h1>
+            </div>
+            <div class="div30">
+                <h1>Box-shadow30</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div31">
+                <h1>Box-shadow31</h1>
+            </div>
+            <div class="div32">
+                <h1>Box-shadow32</h1>
+            </div>
+            <div class="div33">
+                <h1>Box-shadow33</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div34">
+                <h1>Box-shadow34</h1>
+            </div>
+            <div class="div35">
+                <h1>Box-shadow35</h1>
+            </div>
+            <div class="div36">
+                <h1>Box-shadow36</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div37">
+                <h1>Box-shadow37</h1>
+            </div>
+            <div class="div38">
+                <h1>Box-shadow38</h1>
+            </div>
+            <div class="div39">
+                <h1>Box-shadow39</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div40">
+                <h1>Box-shadow40</h1>
+            </div>
+            <div class="div41">
+                <h1>Box-shadow41</h1>
+            </div>
+            <div class="div42">
+                <h1>Box-shadow42</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div43">
+                <h1>Box-shadow43</h1>
+            </div>
+            <div class="div44">
+                <h1>Box-shadow44</h1>
+            </div>
+            <div class="div45">
+                <h1>Box-shadow45</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div46">
+                <h1>Box-shadow46</h1>
+            </div>
+            <div class="div47">
+                <h1>Box-shadow47</h1>
+            </div>
+            <div class="div48">
+                <h1>Box-shadow48</h1>
+            </div>
+        </div>
+        <div style="display: flex;">
+
+            <div class="div49">
+                <h1>Box-shadow49</h1>
+            </div>
+            <div class="div50">
+                <h1>Box-shadow50</h1>
+            </div>
+        </div>
+        <div class="51">
+            <h1>box-51</h1>
+        </div>
+    </div>
+</body>
+</html>

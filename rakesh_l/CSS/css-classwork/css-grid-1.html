@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .parent{
+            background-color: beige;
+            /* height: 50vh; */
+            display: grid;
+            /* grid-auto-flow: row(default); ,columns*/
+             grid-template-columns: 1fr min-content 1fr max-content;/* we can use pixles,rem,vw or vh,fr */
+            /* grid-template-columns: repeat(3,2fr) 1fr repeat(3,3fr); */
+            /* grid-template-columns: minmax(100px,1fr) 1fr 1fr 1fr; */
+            gap: 1vw;
+            grid-template-rows: 100px 200px 1fr 2fr 300px 3fr 100px;
+        }
+        .child{
+            background-color: aqua;
+            /* height: 10vh; */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Grid</h1>
+    <div class="parent">
+        <div class="child child-1">child1</div>
+        <div class="child child-2">child2 Lorem ipsum dolor sit amet.
+        </div>
+        <div class="child child-3">child3</div>
+        <div class="child child-4">child4</div>
+        <div class="child child-5">child5</div>
+        <div class="child child-6">child6</div>
+        <div class="child child-7">child7</div>
+        <div class="child child-8">child8</div>
+        <div class="child child-9">child9</div>
+        <div class="child child-10">child10</div>
+        <div class="child child-11">child11</div>
+        <div class="child child-12">child12</div>
+        <div class="child child-13">child13</div>
+        <div class="child child-14">child14</div>
+        <div class="child child-15">child15</div>
+        <div class="child child-16">child16</div>
+        <div class="child child-17">child17</div>
+        <div class="child child-18">child18</div>
+        <div class="child child-19">child19</div>
+        <div class="child child-20">child20</div>
+    </div>
+</body>
+</html>

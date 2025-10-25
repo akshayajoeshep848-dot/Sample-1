@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 50%;
+            /* background-color: rgb(54, 154, 241); */
+            height: 100vh;
+            
+            margin: 0 auto;
+        }
+        .parent-1{
+display: flex;
+justify-content: space-between;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            text-align: center;
+            place-content: center;
+        }
+        .parent-2{
+            display: flex;
+            justify-content: space-between;
+
+        }
+       .child-1{
+          margin-left: 100px;
+       }
+       .child-2{
+          margin-right: 100px;
+       }
+       .parent-3{
+        display: flex;
+        justify-content: space-between;
+       }
+       .child-3{
+          margin-left: 200px;
+       }
+       .child-4{
+          margin-right: 200px;
+       }
+       .parent-4{
+        display: flex;
+        justify-content: space-between;
+       }
+       .child-5{
+          margin-left: 300px;
+       }
+       .child-6{
+          margin-right: 300px;
+       }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="parent-1">
+            <div class="child child-1-1">child-1</div>
+            <div class="child child-2-1">child-2</div>
+        </div>
+        <div class="parent-2"> 
+            <div class="child child-1">child-1</div>
+            <div class="child child-2">child-2</div>
+        </div>
+        <div class="parent-3">
+            <div class="child child-3">child-1</div>
+            <div class="child child-4">child-2</div>
+        </div>
+        <div class="parent-4">
+            <div class="child child-5">child-1</div>
+            <div class="child child-6">child-2</div>
+        </div>
+        <div class="parent-3">
+            <div class="child child-3">child-1</div>
+            <div class="child child-4">child-2</div>
+        </div>
+        <div class="parent-2"> 
+            <div class="child child-1">child-1</div>
+            <div class="child child-2">child-2</div>
+        </div>
+        <div class="parent-1">
+            <div class="child child-1-1">child-1</div>
+            <div class="child child-2-1">child-2</div>
+        </div>
+    </div> 
+</body>
+</html>

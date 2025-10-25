@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        .a{
+            border: 1px solid;
+            box-shadow: 5px 5px 5px 5px gray;
+            padding: 10px;
+        }
+        input[type="text"]{
+            border: 1px solid aqua;
+            height: 50px;
+            width: 400px;
+            border-radius: 20px;
+        }
+        div{
+            margin: 20px;
+        }
+        input[type="date"]{
+            border: 1px solid brown;
+            height: 50px;
+            width: 400px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+
+        <h1 align="center" >CSS selectors</h1>
+        <hr style="border: 0.1px solid blue; margin: 10px;">
+        <div>
+    
+            <label for="inp1">first name</label>
+            <input type="text" id="inp1">
+        </div>
+        <div>
+    
+            <label for="inp2">last name</label>
+            <input type="text" id="inp2">
+        </div>
+        <div>
+            <label for="inp3">date of birth</label>
+            <input type="date" id="inp3">
+        </div>
+    </div>
+</body>
+</html>

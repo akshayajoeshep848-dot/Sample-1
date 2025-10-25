@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent-1{
+            background-color: #E6E9F6;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(13,100px);
+            gap: 10px;
+            grid-template-areas: 
+            "child1 head1 head1 head1 head1"
+            "child1 head2 head2 head2 head2"
+            "child1 child2 child2 child2 child3"
+            "child1 child4 child5 child6 child3"
+            "child1 child7 child7 child7 child3"
+            "child1 child7 child7 child7 child8"
+            "child1 child7 child7 child7 child11"
+            "child1 child9 child10 . child11"
+            "child1 child9 child10 . child11"
+            "child1 child12 child12 child12 child13"
+            "child1 child12 child12 child12 child13"
+            "child1 child12 child12 child12 child13" ;
+        }
+        .header-1{
+            grid-area: head1;
+            background-color: white;
+        }
+        .header-2{
+            grid-area: head2;
+        }
+        .child{
+            background-color: white;
+        }
+        .child-1{
+            grid-area: child1;
+        }
+        .child-2{
+            grid-area: child2;
+        }
+        .child-3{
+            grid-area: child3;
+        }
+        .child-4{
+            grid-area: child4;
+        }
+        .child-5{
+            grid-area: child5;
+        }
+        .child-6{
+            grid-area: child6;
+        }
+        .child-7{
+            grid-area: child7;
+        }
+        .child-8{
+            grid-area: child8;
+        }
+        .child-9{
+            grid-area: child9;
+            /* width: 200px; */
+        }
+        .child-10{
+            grid-area: child10;
+            /* width: 200px; */
+        }
+        .child-11{
+            grid-area: child11;
+        }
+        .child-12{
+            grid-area: child12;
+        }
+        .child-13{
+            grid-area: child13;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent-1">
+        <div class="header-1">header 1</div>
+        <div class="header-2">header 2</div>
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-4">child 4</div>
+        <div class="child child-5">child 5</div>
+        <div class="child child-6">child 6</div>
+        <div class="child child-7">child 7</div>
+        <div class="child child-8">child 8</div>
+        <div class="child child-9">child 9</div>
+        <div class="child child-10">child 10</div>
+        <div class="child child-11">child 11</div>
+        <div class="child child-12">child 12</div>
+        <div class="child child-13">child 13</div>
+    </div>
+</body>
+</html>

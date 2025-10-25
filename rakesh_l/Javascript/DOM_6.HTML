@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="con">
+        <button class="button-item">button-1</button>
+        <button class="button-item">button-2</button>
+        <button class="button-item">button-3</button>
+        <button class="button-item">button-4</button>
+    </div>
+
+    <script>
+        let buttonItems=document.querySelectorAll(".button-item");
+        let styleArray=[
+            {
+                name:'click me',
+                backgroundColor:"blue",
+                padding:'10px',
+                border:'none',
+                margin:'10px',
+                borderRadius:'10px'
+            },
+            {
+                name:'click me',
+                backgroundColor:"blue",
+                padding:'10px',
+                border:'none',
+                margin:'10px',
+                borderRadius:'10px'
+            },
+            {
+                name:'click me',
+                backgroundColor:"blue",
+                padding:'10px',
+                border:'none',
+                margin:'10px',
+                borderRadius:'10px'
+            },
+            {
+                name:'me',
+                backgroundColor:"blue",
+                padding:'10px',
+                border:'none',
+                margin:'10px', 
+                borderRadius:'10px'
+            }
+        ]
+        buttonItems.forEach((item,index)=>{
+            item.innerText=styleArray[index].name;
+            item.style.backgroundColor='blue'
+        })
+    </script>
+</body>
+</html>

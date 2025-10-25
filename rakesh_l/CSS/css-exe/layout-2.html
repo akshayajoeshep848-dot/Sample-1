@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: rgb(51, 48, 48);
+            height: 72vh;
+            width: 650px;
+            padding: 1px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header {
+            background-color: blueviolet;
+            height: 40px;
+            width: 620px;
+            margin-left: 12px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-top: 20px;
+            border: 5px solid black;
+            box-shadow: 1px 1px 10px 5px rgb(30, 28, 28);
+        }
+
+        .parent-1 {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-evenly;
+        }
+
+        .child-1 {
+            background-color: rgb(58, 198, 179);
+            width: 160px;
+            height: 350px;
+            border: 5px solid black;
+            box-shadow: 1px 1px 10px 5px rgb(30, 28, 28);
+            text-align: center;
+            place-content: center;
+            color: white;
+
+        }
+
+        .child-2 {
+            background-color: oklab(49.75% 0.00771 -0.26145 / 0.892);
+            width: 440px;
+            height: 150px;
+            border: 5px solid black;
+            box-shadow: 1px 1px 10px 5px rgb(30, 28, 28);
+            text-align: center;
+            place-content: center;
+            color: white;
+        }
+        .grandparent-1{
+            display: flex;
+            gap: 5px;
+            justify-content: space-evenly;
+        }
+        .grandchild{
+            background-color:oklab(49.75% 0.00771 -0.26145 / 0.892) ;
+            height: 160px;
+            width: 215px;
+            border: 5px solid black;
+            box-shadow: 1px 1px 10px 5px rgb(30, 28, 28);
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-top: 30px;
+        }
+        footer{
+            background-color: blueviolet;
+            height: 40px;
+            width: 620px;
+            margin-left: 12px;
+            text-align: center;
+            place-content: center;
+            color: white;
+            margin-top: 20px;
+            border: 5px solid black;
+            box-shadow: 1px 1px 10px 5px rgb(30, 28, 28);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>header</header>
+        <div class="parent-1">
+            <div class="child-1">sidebar</div>
+            <div>
+                <div class="child-2">Content-1</div>
+                <div class="grandparent-1">
+                    <div class="grandchild">container-2</div>
+                    <div class="grandchild">container-3</div>
+                </div>
+            </div>
+
+
+        </div>
+    <footer>footer</footer>
+    </div>
+
+</body>
+
+</html>

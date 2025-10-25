@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .first-name{ 
+            border: 5px solid red;
+        } 
+        #fn-2{
+            border: 5px solid green;
+        }
+        input[type="password"]{
+            border: 5px solid brown;/*attribute and element combibation and specificity is 11*/
+        }
+        input{
+            border: 5px solid orange;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>css specificity</h1>
+    <input style="border: 5px solid blue;" type="text" class="first-name" id="fn-1">
+    <input type="email" class="first-name" id="fn-2">
+    <input type="password" class="first-name" id="fn-3">
+    <input type="date" class="first-name" id="fn-4">
+    <input type="tel" class="first-name" id="fn-5">
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 60vh;
+            width: 850px;
+            background-color: navy;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 1px;
+        }
+        .child{
+            width: 200px;
+            height: 360px;
+            background-color: rgb(30, 204, 30);
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+        .child1{
+            width: 380px;
+            height: 100px;
+            background-color: rgb(30, 204, 30);
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .grandparent-1{
+            display: flex;
+        }
+        .child-1{
+            width: 185px;
+            height: 100px;
+            background-color: orange;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .child-2{
+            width: 185px;
+            height: 100px;
+            background-color: rgb(204, 62, 30);
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .grandparent-2{
+            display: flex;
+        }
+        .child-3{
+            width: 185px;
+            height: 100px;
+            background-color: rgb(255, 47, 0);
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .child-4{
+            width: 185px;
+            height: 100px;
+            background-color: rgb(233, 150, 7);
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .child-5{
+            width: 185px;
+            height: 100px;
+            background-color: rgb(255, 47, 0);
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .child-6{
+            width: 185px;
+            height: 230px;
+            background-color: rgb(41, 233, 7);
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="child"></div>
+        <div class="grandchild">
+            <div class="child1"></div>
+            <div class="grandparent-1">
+                <div class="child-1"></div>
+                <div class="child-2"></div>
+            </div>
+            <div class="grandparent-2">
+                <div class="child-3"></div>
+                <div class="child-4"></div>
+            </div>
+        </div>
+        <div class="grandparent-3">
+            <div class="child-5"></div>
+            <div class="child-6"></div>
+        </div>
+    </div>
+</body>
+</html>

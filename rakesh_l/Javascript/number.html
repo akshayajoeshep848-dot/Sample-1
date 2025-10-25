@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //Represents both integer and floating point numbers--they are no separate type of integers vs floats
+    let age1=45;
+    let age2=45.5;
+    console.log("type of age1:",typeof age1, "\nValue:", age1)
+    console.log("type of age2:",typeof age2, "\nValue:", age2)
+
+    let bigNumber1=1e40;//1x10 power of 40
+    console.log("big number",bigNumber1)
+
+    let bigNumber2=3e41;
+    console.log("combined number", bigNumber1 + bigNumber2)
+
+    let crores=10_00_00_000.0;
+    let billion=1_000_000_000;
+    let sum=crores+billion;
+    console.log("sum:",sum)
+    console.log("crores:",crores)
+    console.log("billions:",billion)
+
+    let age3="fourty five"
+    let str=age1+age3;
+    console.log(typeof str)
+
+    let notANumber=age1-age3;
+    console.log("not a number:",notANumber)
+    console.log("type of not a number:",typeof notANumber)
+
+    let infinity=1/0;
+    let negInfinity=-1/0;
+    console.log(infinity)
+    console.log(negInfinity)
+</script>
+<body>
+    <h1>JS Numbers</h1>
+</body>
+</html>

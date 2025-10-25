@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for--loop--->for(initization;condition;final-expression){
+                        //code to be executed
+                      //  }
+    //model-1
+    // let num=prompt('enter a nuber');
+    // for(i=1;i<=num;i=i+1){
+    //     if(i%2==0){
+    //         console.log(i)
+    //     }
+    // }
+
+    //model-2
+    // for(let i=1;i<=10;i=i+1){
+    //     console.log(++i);
+    // }
+
+    //model-3
+    // for(let i=1;i<=10; i=i+2){
+    //     console.log(i+1)
+    // }
+    
+    //print multiples of 5
+    // for(i=0;i<=625;i+i+5){
+    //     console.log(i)
+    // }
+
+    //print the sum of 1 to 10 
+    // let sum=0;
+    // for(let i=1;i<=10;i++){
+    //     sum=sum+i;    
+    // }
+    // console.log(sum);
+
+    //Multiplication Table**: Print the multiplication table for a given number (e.g., 7).
+    // let num=prompt('enter a number');
+    // for(i=1;i<=10;i++){
+    //     console.log(`${num}x${i}=${num*i}`);
+    // }
+
+
+    //Reverse Loop**: Print numbers from 10 down to 1.
+    // for(let i=10;i>=1;i--){
+    //     console.log(i);
+    // }
+
+    //**Count Vowels**: Count the number of vowels in a given string.
+    // let nam=prompt('enter name');
+    // let vowels='aieou';
+    // let count=0;
+    // for(let nams of nam ){
+    //     // for(let vol of vowels){
+
+    //         if(nams==vol){
+    //             count=count+1;
+    //         }
+    //     // }
+        
+    // }
+    // console.log(count);/
+    
+    //method-2
+    // let str='name';
+    // let count=0;
+    // for(let i of str){
+    //     if(i=='a' || i=='e' || i=='i' || i=='o' || i=='u'){
+    //         count=count+1;
+    //     }
+    // }
+    // console.log(count);
+
+    //method-3
+    // let str='name';
+    // let count=0;
+    // for(let i=0;i<str.length;i++){
+    //     if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' ){
+    //         count=count+1;
+    //     }
+    // }
+    // console.log(count);
+
+    //prime number
+    // let num=Number(prompt('enter a number'))
+    // let count=0
+    // for(i=1;i<=num;i++){
+    //     if(num%i===0){
+    //         count=count+1
+    //     }
+    // }
+    // if(count===2){
+    //     console.log(true)
+    // }
+    // else{
+    //     console.log(false)
+    // }
+
+    //model--2
+    // let num=Number(prompt('enter a number'));
+    // let isPrime=true;
+    // if(num==1){
+    //     isPrime=false;
+    // }
+    // else if(num<=0){
+    //     isPrime=false;
+    // }
+    // else if(num==2){
+    //     isPrime=true;
+    // }
+    // else if(num%2==0){
+    //     isPrime=false;
+    // }
+    // else{
+    //     for(let i=3;i<=Math.floor(num**0.5);i+=2){
+    //         if(num%2==0){
+    //             isPrime=false;
+    //             break;
+    //         }
+    //     }  
+    // }
+    // if(isPrime){
+    //     console.log('Prime')
+    // }
+    // else{
+    //     console.log('Not a Prime')
+    // }
+
+     let word = "prabhas";
+     let arr = word.split(""); 
+
+        for (let i = 0; i < word.length; i++) {
+            console.log(arr.join(""));  
+            arr.shift();    
+        }
+
+    </script>
+</body>
+</html>

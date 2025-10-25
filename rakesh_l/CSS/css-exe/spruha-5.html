@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: Roboto;
+        }
+
+        body {
+            background-color: rgb(234, 237, 247);
+        }
+
+        .main {
+            width: 841px;
+            height: 473px;
+            background-color: white;
+            border-radius: 11px;
+        }
+
+        .con-1 {
+            width: 821px;
+            height: 453px;
+            padding: 25px;
+            margin-left: 13px;
+            /* background-color: aqua; */
+        }
+
+        .par-1 {
+            width: 771px;
+            height: 109px;
+        }
+
+        label {
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+        }
+
+        p {
+            height: 18px;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #8f8fb1;
+            letter-spacing: 0.2px;
+            line-height: 1;
+        }
+
+        .parent-2 {
+            width: 771px;
+            height: 38px;
+            display: flex;
+            gap: 18px;
+            justify-content: end;
+            align-items: center;
+        }
+
+        input {
+            width: 182px;
+            height: 38px;
+            line-height: 1.75;
+            border-radius: 5.6px;
+            border: 1px solid rgb(222, 226, 230);
+        }
+
+        .bt-1 {
+            width: 43px;
+            height: 33px;
+            background-color: white;
+            border: none;
+            position: relative;
+            left: 151px;
+            top: 2px;
+        }
+
+        .img-1 {
+            width: 16px;
+            height: 16px;
+        }
+
+        input::placeholder {
+            font-size: 14px;
+            font-weight: 400;
+            color: #8f8fb1;
+            line-height: 1.75;
+            padding: 15px;
+        }
+
+        .child-2 {
+            width: 101px;
+            height: 40px;
+            background-color: #6259ca;
+        }
+
+        .bt-2 {
+            width: 101px;
+            height: 38px;
+            background-color: #6259ca;
+            border: none;
+            place-content: center;
+            text-align: center;
+            color: white;
+            letter-spacing: 0.2px;
+            border-radius: 3px;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .child-1 {
+            width: 187px;
+            height: 38px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+        }
+
+        .img-2 {
+            position: relative;
+        }
+
+        .con-2 {
+            width: 771px;
+            height: 239px;
+        }
+
+        th,
+        table,
+        td {
+            /* padding: 44px; */
+            /* margin-top: -15px; */
+            border: 1px solid #e8e8f7;
+            ;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border-right: none;
+            border-left: none;
+        }
+
+        .tr-1 {
+            height: 35px;
+            width: 770px;
+
+            align-items: center;
+        }
+
+        .th {
+            font-weight: 800;
+            font-size: 14px;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+            padding: 9px 19px;
+            height: 0px;
+        }
+
+        .th-1 {
+            width: 237px;
+            text-align: start;
+            /* padding: 9px 19px; */
+            margin-right: 10px;
+        }
+
+        .th-2 {
+            width: 144px;
+        }
+
+        .th-3 {
+            width: 135px;
+        }
+
+        .th-4 {
+            width: 124px;
+            text-align: start;
+        }
+
+        .th-5 {
+            width: 134px;
+            text-align: start;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="con-1">
+            <div class="par-1">
+                <div class="parent-1">
+                    <label for="">Tasks</label>
+                    <p>A task is accomplished by a set deadline, and must contribute toward work-related objectives.</p>
+                </div>
+                <div class="parent-2">
+                    <div class="child-1">
+                        <button class="bt-1"><img class="img-1" src="images/magnifying-glass-solid (1).svg"
+                                alt=""></button>
+                        <input type="text" placeholder="Search here..." />
+                    </div>
+                    <div class="child-2">
+                        <button class="bt-2">
+                            <img class="img-2" src="images/sliders-solid.svg" alt="" width="13px" height="20px">Sort by
+                            <img src="images/chevron-down-solid.svg" alt="" width="9.6px" height="14.4px">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="con-2">
+                <table style="border: 1px solid #e8e8f7;">
+                    <tr class="tr-1">
+                        <th class="th-1 th">Task</th>
+                        <th class="th-2 th">Team</th>
+                        <th class="th-3 th">open task</th>
+                        <th class="th-4 th">Priority</th>
+                        <th class="th-4 th">status</th>
+                    </tr>
+                    <tr class="tr-2">
+                        <td class="td td-1" style="height: 50px; width: 237px;">
+                            <div style="display: flex; height: 21px; width: 199px; justify-content: space-around;">
+                                <input type="checkbox"
+                                    style="height: 14px; width: 14px; border: 1px solid #e9edf6; border-radius: 50%;">
+                                <span
+                                    style="height: 17px; width: 140px; font-size: 14px; display: inline-block;  line-height: 1.5; font-weight: 800; letter-spacing: 0.2px;">Evaluating
+                                    the design</span>
+                            </div>
+                        </td>
+                        <td class="td td-2" style="width: 144px; height: 50px; ">
+                            <div
+                                style="width: 96px; height: 32px; display: flex; justify-content: center; align-items: center; margin-left: 50px;">
+                                <img src="	https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                    alt="" height="29px" width="29px" style="border-radius: 100%;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%; position: relative; right: 8.5px;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%; position: relative; right: 17px;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%;position: relative; right: 26px;">
+                            </div>
+                        </td>
+                        <td class="td td-3" style="width: 130px; height: 50px;  text-align: center;">8</td>
+                        <td class="td td-4"
+                            style="text-align: start; width: 124px; height: 50px; padding-left: 20px; color: rgb(98,89,202);">
+                            High</td>
+                        <td class="td td-5" style="width: 134px; height: 50px;">
+                            <span
+                                style="font-size: 10.5px; font-weight: 500;  width: 77px; height: 29px; background-color: rgba(98,89,202,0.1); display: inline-block; place-content: center; text-align:center ; margin-left: 10px; border-radius: 50rem; color: rgb(98,89,202);">Completed</span>
+                        </td>
+                    </tr>
+                    <tr class="tr-2">
+                        <td class="td td-1" style="height: 50px; width: 237px;">
+                            <div style="display: flex; height: 21px; width: 199px; justify-content: space-around;">
+                                <input type="checkbox"
+                                    style="height: 14px; width: 14px; border: 1px solid #e9edf6; border-radius: 50%;">
+                                <span
+                                    style="height: 17px; width: 140px; font-size: 14px; display: inline-block;  line-height: 1.5; font-weight: 800; letter-spacing: 0.2px;">Evaluating
+                                    the design</span>
+                            </div>
+                        </td>
+                        <td class="td td-2" style="width: 144px; height: 50px; ">
+                            <div
+                                style="width: 96px; height: 32px; display: flex; justify-content: center; align-items: center; margin-left: 50px;">
+                                <img src="	https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                    alt="" height="29px" width="29px" style="border-radius: 100%;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%; position: relative; right: 8.5px;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%; position: relative; right: 17px;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%;position: relative; right: 26px;">
+                            </div>
+                        </td>
+                        <td class="td td-3" style="width: 130px; height: 50px;  text-align: center;">8</td>
+                        <td class="td td-4"
+                            style="text-align: start; width: 124px; height: 50px; padding-left: 20px; color: rgb(98,89,202);">
+                            High</td>
+                        <td class="td td-5" style="width: 134px; height: 50px;">
+                            <span
+                                style="font-size: 10.5px; font-weight: 500;  width: 77px; height: 29px; background-color: rgba(98,89,202,0.1); display: inline-block; place-content: center; text-align:center ; margin-left: 10px; border-radius: 50rem; color: rgb(98,89,202);">Completed</span>
+                        </td>
+                    </tr>
+                    <tr class="tr-2">
+                        <td class="td td-1" style="height: 50px; width: 237px;">
+                            <div style="display: flex; height: 21px; width: 199px; justify-content: space-around;">
+                                <input type="checkbox"
+                                    style="height: 14px; width: 14px; border: 1px solid #e9edf6; border-radius: 50%;">
+                                <span
+                                    style="height: 17px; width: 140px; font-size: 14px; display: inline-block;  line-height: 1.5; font-weight: 800; letter-spacing: 0.2px;">Evaluating
+                                    the design</span>
+                            </div>
+                        </td>
+                        <td class="td td-2" style="width: 144px; height: 50px; ">
+                            <div
+                                style="width: 96px; height: 32px; display: flex; justify-content: center; align-items: center; margin-left: 50px;">
+                                <img src="	https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                    alt="" height="29px" width="29px" style="border-radius: 100%;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%; position: relative; right: 8.5px;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%; position: relative; right: 17px;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%;position: relative; right: 26px;">
+                            </div>
+                        </td>
+                        <td class="td td-3" style="width: 130px; height: 50px;  text-align: center;">8</td>
+                        <td class="td td-4"
+                            style="text-align: start; width: 124px; height: 50px; padding-left: 20px; color: rgb(98,89,202);">
+                            High</td>
+                        <td class="td td-5" style="width: 134px; height: 50px;">
+                            <span
+                                style="font-size: 10.5px; font-weight: 500;  width: 77px; height: 29px; background-color: rgba(98,89,202,0.1); display: inline-block; place-content: center; text-align:center ; margin-left: 10px; border-radius: 50rem; color: rgb(98,89,202);">Completed</span>
+                        </td>
+                    </tr>
+                    <tr class="tr-2">
+                        <td class="td td-1" style="height: 50px; width: 237px;">
+                            <div style="display: flex; height: 21px; width: 199px; justify-content: space-around;">
+                                <input type="checkbox"
+                                    style="height: 14px; width: 14px; border: 1px solid #e9edf6; border-radius: 50%;">
+                                <span
+                                    style="height: 17px; width: 140px; font-size: 14px; display: inline-block;  line-height: 1.5; font-weight: 800; letter-spacing: 0.2px;">Evaluating
+                                    the design</span>
+                            </div>
+                        </td>
+                        <td class="td td-2" style="width: 144px; height: 50px; ">
+                            <div
+                                style="width: 96px; height: 32px; display: flex; justify-content: center; align-items: center; margin-left: 50px;">
+                                <img src="	https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                                    alt="" height="29px" width="29px" style="border-radius: 100%;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%; position: relative; right: 8.5px;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%; position: relative; right: 17px;">
+                                <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                                    alt="" height="29px" width="29px"
+                                    style="border-radius: 100%;position: relative; right: 26px;">
+                            </div>
+                        </td>
+                        <td class="td td-3" style="width: 130px; height: 50px;  text-align: center;">8</td>
+                        <td class="td td-4"
+                            style="text-align: start; width: 124px; height: 50px; padding-left: 20px; color: rgb(98,89,202);">
+                            High</td>
+                        <td class="td td-5" style="width: 134px; height: 50px;">
+                            <span
+                                style="font-size: 10.5px; font-weight: 500;  width: 77px; height: 29px; background-color: rgba(98,89,202,0.1); display: inline-block; place-content: center; text-align:center ; margin-left: 10px; border-radius: 50rem; color: rgb(98,89,202);">Completed</span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
