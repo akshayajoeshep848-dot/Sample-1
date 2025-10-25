@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img:hover {
+            box-shadow: 2px 2px 12px grey;
+        }
+
+        h1:hover {
+            box-shadow: 2px 2px 12px grey;
+        }
+
+        .zen:hover {
+            background-color: green;
+            color: white;
+        }
+
+        body {
+            background-image: url();
+        }
+    </style>
+</head>
+
+<body>
+    <h1
+        style="background-color: green; color: aliceblue; padding: 20px; width: 300px; border-radius: 5px; text-align: center;">
+        This is a heading 1</h1>
+    <h2
+        style="background-color: green; color: aliceblue; padding: 20px; width: 300px; border-radius: 5px; text-align: center;">
+        This is a Heading 2</h2>
+    <h3
+        style="background-color: green; color: aliceblue; padding: 20px; width: 300px; border-radius: 5px; text-align: center;">
+        This is a Heading 3</h3>
+    <h4
+        style="background-color: green; color: aliceblue; padding: 20px; width: 300px; border-radius: 5px; text-align: center;">
+        This is a Heading 4</h4>
+    <p class="zen"
+        style="background-color: white; color: green; border: 2px solid green; width: 300px; padding: 20px; text-align: center; border-radius: 5px;"
+        class="zen">
+        this is a sample plain text</p>
+    <pre style="background-color: lightgray; padding: 10px; width: 500px; border-radius: 10px;">
+        public class Main {
+
+  public static void main(String[] args) {
+
+    int num = 29;
+    boolean flag = false;
+
+    // 0 and 1 are not prime numbers
+    if (num == 0 || num == 1) {
+        flag = true;
+    }
+
+    for (int i = 2; i <= num / 2; ++i) {
+
+      // condition for nonprime number
+      if (num % i == 0) {
+        flag = true;
+        break;
+      }
+    }
+
+    if (!flag)
+      System.out.println(num + " is a prime number.");
+    else
+      System.out.println(num + " is not a prime number.");
+  }
+}
+    </pre>
+    <div style=" display: inline-block; ">
+        <div style=" display: flex; border: 2px solid;">
+            <img src="https://pngmagic.com/product_images/arrow-png-download.png" alt="arrow-png-download" width="50px">
+            <button style="background-color: white; font-size: 25px; border: none;">Click Me</button>
+        </div>
+    </div>
+    <button
+        style="background-color: red; color: white; padding: 20px; font-size: 20px; border: none; border-radius: 30px;">SUBSCRIBE</button>
+    <button
+        style="background-color: lightgray; color: black; padding: 20px; font-size: 20px; border: none; border-radius: 30px;">SUBSCRIBED</button>
+    <br><br><br>
+    <div style="border: 2px solid green; padding: 5px; display: inline-block; border-radius: 40px;">
+        <img src="https://www.zilliondesigns.com/blog/wp-content/uploads/Twitter-Old-Logo.jpg" alt="Twitter-Old-Logo"
+            style="width: 80px; border-radius: 50%;">
+        <img src="https://goodly.co.in/wp-content/uploads/2023/10/youtube-logo-png-46016-1.png" alt="Twitter-Old-Logo"
+            style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/500px-Facebook_logo_%28square%29.png"
+            alt="Twitter-Old-Logo" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
+    </div>
+    <div style="margin-top: 20px; border: 1px solid black; display: inline-block;">
+        <div
+            style="background-color: rgb(255, 255, 255); padding: 10px; font-size: 20px; width: 500px; text-align: center;">
+            <p>body</p>
+        </div>
+        <div style="background-color: coral; padding: 20px; font-size: 20px; width: 480px; text-align: center;">
+            header
+        </div>
+        <div
+            style="background-color: coral; padding: 10px; font-size: 20px; width: 500px; text-align: center; margin-top: 5px;">
+            nav
+        </div>
+        <div
+            style="background-color: rgb(57, 57, 255); padding: 20px; width: 235px; margin-top: 5px; display: inline-block;">
+            <div style="background-color: rgb(0, 255, 255); padding: 20px; margin-bottom: 10px;">section</div>
+            <div style="background-color: rgb(0, 255, 255); padding: 20px; margin-bottom: 10px;">section</div>
+            <div style="background-color: rgb(0, 255, 255); padding: 20px; margin-bottom: 10px;">section</div>
+        </div>
+        <div
+            style="background-color: rgb(188, 188, 188); padding: 20px; width: 200px; margin-top: 5px; display: inline-block;">
+            <div style="background-color: rgb(216, 216, 216); padding: 20px; margin-bottom: 10px;">section</div>
+            <div style="background-color: rgb(221, 221, 221); padding: 20px; margin-bottom: 10px;">section</div>
+            <div style="background-color: rgb(210, 210, 210); padding: 20px; margin-bottom: 10px;">section</div>
+        </div>
+        <div
+            style="background-color: coral; padding: 10px; font-size: 20px; width: 500px; text-align: center; margin-top: 5px;">
+            footer
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+
+<body>
+    <!-- class Person {
+
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                console.log(`hi ${this.name}`)
+            }
+        }
+
+        let person = new Person("bhAAi", 42);
+
+        console.log(person.name)
+        console.log(person.age)
+
+        person.greet() -->
+
+    <script>
+        class Car {
+            constructor(make, model) {
+                this.make = make;
+                this.model = model
+
+            }
+        }
+        const mycar = new car("tesla", "model y")
+
+
+        class car {
+            constructor(make, model) {
+                this.make = make;
+                this.model = model;
+            }
+        }
+        let Cars = new car(" Mercedes benz", 20);
+        console.log(Cars.make);
+        console.log(Cars.model);
+
+
+        class Dog {
+            constructor(name, breed = "mutt") {
+                this.name = name;
+                this.breed = breed;
+            }
+
+        }
+        const dog1 = new Dog("max", "mutt");
+        console.log(dog1.name)
+        console.log(dog1.breed)
+
+
+
+        class vehicle {
+            constructor(name, cost) {
+                this.name = name;
+                this.cost = cost;
+            }
+        }
+        class motorcycle extends vehicle {
+            constructor(name, cost, year) {
+                super(name, cost);
+                this.year = year;
+            }
+        }
+        let Motorcycle = new motorcycle("car", "1 crore", 2019);
+        console.log(Motorcycle.name);
+        console.log(Motorcycle.cost);
+        console.log(Motorcycle.year);
+
+    </script>
+
+    </script>
+</body>
+
+</html>

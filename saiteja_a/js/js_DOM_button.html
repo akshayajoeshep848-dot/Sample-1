@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+</head>
+
+<body>
+    <div class="button-container">
+        <button class="button-item">Button 1</button>
+        <button class="button-item">Button 2</button>
+        <button class="button-item">Button 3</button>
+        <button class="button-item">Button 4</button>
+        <button class="button-item">Button 5</button>
+    </div>
+    <script>
+        let buttonItems = document.querySelectorAll(".button-item")
+        // console.log(buttonItems.forEach(item => item.innerText = "ClickMe"))
+        // console.log(buttonItems.forEach(item => item.style.backgroundColor = "blue"))
+        // console.log(buttonItems.forEach(item => item.style.padding = "10px"))
+
+        let styleArray = [
+            {
+                name: "click me",
+                backgroundColor: "blue",
+                padding: "10px",
+                border: "None",
+                margin: "10px",
+                borderRadius: "10px",
+                color: "white",
+                boxShadow: "2px 2px 5px 5px lightgray"
+            }, {
+                name: "Submit",
+                backgroundColor: "red",
+                padding: "10px",
+                border: "None",
+                margin: "10px",
+                borderRadius: "10px",
+                color: "white",
+                boxShadow: "2px 2px 5px 5px lightgray"
+            }, {
+                name: "log in",
+                backgroundColor: "orange",
+                padding: "10px",
+                border: "None",
+                margin: "10px",
+                borderRadius: "10px",
+                color: "white",
+                boxShadow: "2px 2px 5px 5px lightgray"
+            }, {
+                name: "register",
+                backgroundColor: "green",
+                padding: "10px",
+                border: "None",
+                margin: "10px",
+                borderRadius: "10px",
+                color: "white",
+                boxShadow: "2px 2px 5px 5px lightgray"
+            }, {
+                name: "apply",
+                backgroundColor: "pink",
+                padding: "10px",
+                border: "None",
+                margin: "10px",
+                borderRadius: "10px",
+                color: "white",
+                boxShadow: "2px 2px 5px 5px lightgray"
+            }
+        ]
+
+
+
+
+
+        buttonItems.forEach((item, index) => {
+            item.innerText = styleArray[index].name
+            item.style.backgroundColor = styleArray[index].backgroundColor
+            item.style.padding = styleArray[index].padding
+            item.style.borderRadius = styleArray[index].borderRadius
+            item.style.border = styleArray[index].border
+            item.style.color = styleArray[index].color
+            item.style.boxShadow = styleArray[index].boxShadow
+
+
+
+        })
+    </script>
+</body>
+
+</html>

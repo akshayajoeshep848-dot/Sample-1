@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes</title>
+</head>
+
+<body>
+    <script>
+
+        //Foxconn and Pegatron
+
+        //PasCal Case - upper camilton case.
+
+        // constuctor is a special function same name as a class.
+
+        class Person {
+
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            greet() {
+                console.log(`hi ${this.name}`)
+            }
+        }
+
+        let person = new Person("bhAAi", 42);
+
+        console.log(person.name)
+        console.log(person.age)
+
+        person.greet()
+
+
+
+    </script>
+</body>
+
+</html>

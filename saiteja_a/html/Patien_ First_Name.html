@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>patient registration </title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+		<style>	
+		.savate-<uniquifier> {
+ 		font-family: "Savate", sans-serif;
+  		font-optical-sizing: auto;
+  		font-weight: <weight>;
+  		font-style: normal;
+		}
+		body{
+		font-family:Savate;
+		}	
+		input{
+		padding:15px;
+		border:none;
+		border-radius:5px;
+		box-shadow:0 0 2px grey;
+		}
+		textarea{
+		padding:15px;
+		border:none;
+		border-radius:5px;
+		box-shadow:0 0 2px grey;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Patient Registration Form</h1>
+		<form>
+			<label for="fn">Patient First Name</label>
+			<input type="text" id="fn">
+			<label for="ln">Patient Last Name</label>
+			<input type="text" id="ln">
+			<div>
+				<label for="add">Address:</label>
+				<textarea id="add"></textarea>
+			</div>
+			<div>
+				<label for="phn">Phone Number</label>
+				<input type="tel" id="phn" maxlength="10" placeholder="+91-9895999788">
+			</div>
+			<div>
+				<label for="adhar">Aadhar Number:</label>
+				<input type="number" id="adhar" placeholder="6354451278564" maxlength="12">
+			</div>
+			<div>
+				<label for="abha">ABHA :</label>
+				<input type="text" maxlength="12"/>
+			</div>
+			<div>
+				<label for="pov">Purpose of Visit<label>
+				<textarea id="pov"></textarea>
+			</div>
+			<div>
+				<label for="poc">Prevoius conditions<label>
+				<textarea id="pov"></textarea>
+			</div>
+			<div>
+				<label for="cm">Current medications<label>
+				<textarea id="cm"></textarea>
+			</div>
+			<div>
+				<label for="pts">Prevoius Tests<label>
+				<textarea id="pts"></textarea>
+			</div>
+			<div>
+				<label for="pov">Purpose of Visit<label>
+				<input type="date" id="pov">
+			</div>
+			<div>
+				<label for="fa">Food Allergies<label>
+				<textarea id="fa"></textarea>
+			</div>
+			<div>
+				<label for="ma">Medical Allergies<label>
+				<textarea id="ma"></textarea>
+			</div>
+			<button>Submit</button>
+
+		</form>
+	</body>
+</html>

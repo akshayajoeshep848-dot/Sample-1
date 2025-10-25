@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .parent {
+            background-color: aquamarine;
+            height: 500px;
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: baseline;
+            overflow: scroll;
+            flex-wrap: wrap;
+
+        }
+
+        .child {
+            height: 75px;
+            width: 75px;
+            background-color: blue;
+            text-align: center;
+            place-content: center;
+            padding: 10px;
+            color: white;
+
+
+        }
+
+        .child-1 {
+
+            text-align: right;
+        }
+
+        .child-2 {
+
+            text-align: justify;
+
+        }
+
+        .child-3 {
+
+            text-align: end;
+        }
+
+        .child-4,
+        .child-5,
+        .child-6 {
+            text-align: end;
+        }
+
+        .child-7,
+        .child-8,
+        .child-9,
+        .child-10 {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Display:flex</h1>
+    <p>Four properties
+    <ul>
+        <li>row</li>
+        <li>row-reverse</li>
+        <li>column</li>
+        <li>column-reverse</li>
+    </ul>
+    <p>if preoperty is in row then x-axis is main axis and y axis is cross axis</p>
+    <p>if property is in column then y axis in main axis and x axis is cross axis</p>
+    </p>
+    <br>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+        <div class="child child-4">child-4</div>
+        <div class="child child-5">child-5</div>
+        <div class="child child-6">child-6</div>
+        <div class="child child-7">child-7</div>
+        <div class="child child-8">child-8</div>
+        <div class="child child-9">child-9</div>
+        <div class="child child-10">child-10</div>
+        <div class="child child-11">child-11</div>
+        <div class="child child-12">child-12</div>
+        <div class="child child-13">child-13</div>
+        <div class="child child-14">child-14</div>
+        <div class="child child-15">child-15</div>
+        <div class="child child-16">child-16</div>
+        <div class="child child-17">child-17</div>
+        <div class="child child-18">child-18</div>
+        <div class="child child-19">child-19</div>
+        <div class="child child-20">child-20</div>
+    </div>
+    <br>
+    <h2>justify content</h2>
+    <ul>
+        <li>flex-start(Default)</li>
+        <li>flex-end</li>
+        <li>center</li>
+        <li>space-between</li>
+        <li>space-around</li>
+        <li>space-evenly</li>
+    </ul>
+    <h2>align-items</h2>
+    <ul>
+        <li>stretch(default)</li>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>center</li>
+        <li>baseline</li>
+    </ul>
+    <h2>align-content</h2>
+    <ul>
+        <li>home work</li>
+    </ul>
+    <h2>flex wrap</h2>
+    <ul>
+        <li>wrap</li>
+        <li>wrap-reverse</li>
+
+    </ul>
+
+</body>
+
+</html>

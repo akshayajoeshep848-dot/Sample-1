@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Objects</title>
+    <style>
+        .boxing {
+            display: grid;
+            grid-template-columns: repeat(3, 150px);
+            grid-template-rows: repeat(4, 40px);
+            gap: 10px;
+        }
+
+        button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            transition: 10000ms;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            transform: scale(1.1);
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxing">
+        <button onclick="dog.bark()">Bark</button>
+        <button onclick="dog.walk()">walk</button>
+        <button onclick="dog.sit()">sit</button>
+        <button onclick="dog.shakehand()">shakehand</button>
+        <button onclick="dog.smell()">smell</button>
+        <button onclick="dog.sleep()">sleep</button>
+        <button onclick="dog.rollover()">rollover</button>
+        <button onclick="dog.laydown()">laydown</button>
+        <button onclick="dog.getSodafromFridge()">getSodafromFridge</button>
+        <button onclick="dog.bark()">bark</button>
+    </div>
+    <p>An Object is a standalone entity, with properties and type. Its a non-primitive data type <br>that store
+        collections
+        of data and more complex entities. Properties consist of a key (or a name) and a value.</p>
+    <script>
+
+
+        const dog = {
+            Name: "Pluto",
+            Breed: "Golden Retriver",
+            Color: "Golden",
+            Age: 2,
+            Gender: "Female",
+            petID: "3473912",
+            bark: function () {
+                console.log(`${this.Name} is barking`)
+            },
+            walk: function () {
+                console.log(`${this.Name} is walking`)
+            },
+            sit: function () {
+                console.log(`${this.Name} is sat`)
+            },
+            shakehand: function () {
+                console.log(`${this.Name} is Shakehanding`)
+            },
+
+            smell: function () {
+                console.log(`${this.Name} is eating`)
+            },
+            sleep: function () {
+                console.log(`${this.Name} is sleeping`)
+            },
+            rollover: function () {
+                console.log(`${this.Name} is rollovering`)
+            },
+            laydown: function () {
+                console.log(`${this.Name} is lied down`)
+            },
+            getSodafromFridge: function () {
+                console.log(`${this.Name} is taking Soda From Fridge`)
+            },
+            bite: function (person) {
+                console.log(`${this.Name} is bitting ${person} `)
+            }
+        }
+
+
+
+
+        const person = {
+            firstName: "Wednesday",
+            name: 'Wednesday Addams',
+            age: 25,
+            isStudent: true,
+            greet: function () {
+                return `Hello my name is ${this.name}`
+            }
+        }
+        // console.log(dog.shakehand())
+        // console.log(dog.bite(person.name))
+
+        // //accessing the objects
+        // // dot notataion
+        // console.log(person.firstName)
+        // console.log(person.name)
+        // console.log(person.age)
+        // console.log(person.isStudent)
+        // console.log(person.greet())
+
+        // // [] bracket notation
+        // console.log(person["name"])
+        // console.log(person["age"])
+        // console.log(person["isStudent"])
+        // console.log(person["greet"]())
+    </script>
+</body>
+
+</html>

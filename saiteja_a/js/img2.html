@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs Photo Gallery</title>
+    <style>
+        img {
+            width: 250px;
+            height: 250px;
+            margin: 10px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #main {
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+
+    </div>
+    <script>
+
+        const photos = [
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_10263.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_10715.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_10822.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_1128.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_1145.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_115.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_1150.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_11570.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_11584.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_1186.jpg",
+            "https://images.dog.ceo/breeds/hound-afghan/n02088094_11953.jpg",
+        ];
+
+        let Main = document.getElementById("main");
+
+
+        const Heading = document.createElement('h1');
+        Heading.textContent = "Afghan Hounds";
+
+        Main.append(Heading);
+
+
+        photos.forEach(url => {
+            const imgElement = document.createElement('img');
+            imgElement.src = url;
+            // imgElement.alt = "An Afghan Hound image"; 
+            Main.append(imgElement);
+        });
+    </script>
+</body>
+
+</html>

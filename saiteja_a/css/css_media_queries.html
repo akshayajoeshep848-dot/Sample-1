@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS HEADER</title>
+    <style>
+        :root {
+            scroll-behavior: smooth;
+        }
+
+        .parent {
+            height: 100vh;
+            display: grid;
+            background-color: aquamarine;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-areas:
+                "header header header"
+                "sidebar1 main sidebar2"
+                "footer footer footer";
+        }
+
+        .child {
+            background-color: brown;
+        }
+
+        .child-1 {
+            background-color: blueviolet;
+            grid-area: header;
+        }
+
+        .child-2 {
+            background-color: green;
+            grid-area: sidebar1;
+        }
+
+        .child-3 {
+            background-color: yellow;
+            grid-area: main;
+        }
+
+        .child-4 {
+            background-color: green;
+            grid-area: sidebar2;
+        }
+
+        .child-5 {
+            background-color: blueviolet;
+            grid-area: footer;
+        }
+
+        @media screen and (max-width:500px) {
+            .parent {
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px 100px 1fr 100px 100px;
+                grid-template-areas:
+                    "header"
+                    "sidebar1"
+                    "main"
+                    "sidebar2"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-4">child 4</div>
+        <div class="child child-5">child 5</div>
+    </div>
+</body>
+
+</html>

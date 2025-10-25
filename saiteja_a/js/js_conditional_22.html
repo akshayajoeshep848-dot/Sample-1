@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Validation</title>
+</head>
+
+<body>
+    <script>
+        //Example 1 
+        //Check if a person age >18
+        //then check if they have license
+        //has -> prnt eleible to drive
+        //dont't have license -> not eligible to drive (no license)
+        //age <18 -> not eligible to drive(too young)
+
+        let age = Number(prompt("Enter your age :"))
+        if (age >= 18) {
+            let license = prompt("Do you have any license (yes/no): ")
+            if (license == "yes") {
+                console.log("Ready to drive")
+            } else {
+                console.log("Get license and drive")
+            }
+        } else {
+            console.log("Too young")
+        }
+        //-----------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+        // let category = prompt("Enter your category")
+        // let age = prompt("Enter Your age")
+        // if (category == "General" && age >= 21 && age <= 32) {
+        //     console.log("General Agreed")
+        // } else if (category == "SC" && age >= 21 && age <= 37) {
+        //     console.log("SC Agreed")
+        // } else if (category == "ST" && age >= 21 && age <= 37) {
+        //     console.log("ST Agreed")
+        // } else if (category == "OBC" && age >= 21 && age <= 35) {
+        //     console.log("OBC Agreed")
+        // } else if (category == "PD" && age >= 21 && age <= 42) {
+        //     console.log("PD agreed")
+        // }
+        // else {
+        //     console.log("Please Enter Correct Crediantals")
+        // }
+    </script>
+</body>
+
+</html>

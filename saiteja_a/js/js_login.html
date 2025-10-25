@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Login Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 14px;
+            transition: all 0.3s;
+            background: #f8f9fa;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .toggle-text {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .toggle-text a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .toggle-text a:hover {
+            text-decoration: underline;
+        }
+
+        .message {
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            display: none;
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .dashboard {
+            display: none;
+        }
+
+        .dashboard.active {
+            display: block;
+        }
+
+        .user-info {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .user-info h2 {
+            margin-bottom: 10px;
+        }
+
+        .user-info p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .logout-btn {
+            background: #dc3545;
+        }
+
+        .logout-btn:hover {
+            box-shadow: 0 10px 25px rgba(220, 53, 69, 0.4);
+        }
+
+        .stored-data {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stored-data h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .data-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .data-item strong {
+            color: #667eea;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Login/Register Form -->
+        <div id="authForm">
+            <div class="header">
+                <h1 id="formTitle">Welcome Back</h1>
+                <p id="formSubtitle">Login to your account</p>
+            </div>
+
+            <div id="message" class="message"></div>
+
+            <form id="loginRegisterForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">Login</button>
+            </form>
+
+            <div class="toggle-text">
+                <span id="toggleText">Don't have an account? <a id="toggleLink">Register</a></span>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="dashboard">
+            <div class="header">
+                <h1>Dashboard</h1>
+            </div>
+
+            <div class="user-info">
+                <h2 id="welcomeUser"></h2>
+                <p id="userEmail"></p>
+            </div>
+
+            <div class="stored-data">
+                <h3>Your Stored Information</h3>
+                <div class="data-item">
+                    <strong>Username:</strong> <span id="storedUsername"></span>
+                </div>
+                <div class="data-item">
+                    <strong>Email:</strong> <span id="storedEmail"></span>
+                </div>
+                <div class="data-item">
+                    <strong>Account Created:</strong> <span id="accountCreated"></span>
+                </div>
+            </div>
+
+            <button class="btn logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </div>
+
+    <script>
+        // In-memory storage (simulates localStorage)
+        const storage = {
+            users: [],
+            currentUser: null
+        };
+
+        let isLoginMode = true;
+
+        const authForm = document.getElementById('authForm');
+        const dashboard = document.getElementById('dashboard');
+        const form = document.getElementById('loginRegisterForm');
+        const message = document.getElementById('message');
+        const formTitle = document.getElementById('formTitle');
+        const formSubtitle = document.getElementById('formSubtitle');
+        const submitBtn = document.getElementById('submitBtn');
+        const toggleLink = document.getElementById('toggleLink');
+        const toggleText = document.getElementById('toggleText');
+
+        // Toggle between login and register
+        toggleLink.addEventListener('click', () => {
+            isLoginMode = !isLoginMode;
+            if (isLoginMode) {
+                formTitle.textContent = 'Welcome Back';
+                formSubtitle.textContent = 'Login to your account';
+                submitBtn.textContent = 'Login';
+                toggleText.innerHTML = 'Don\'t have an account? <a id="toggleLink">Register</a>';
+            } else {
+                formTitle.textContent = 'Create Account';
+                formSubtitle.textContent = 'Register a new account';
+                submitBtn.textContent = 'Register';
+                toggleText.innerHTML = 'Already have an account? <a id="toggleLink">Login</a>';
+            }
+            message.style.display = 'none';
+            document.getElementById('toggleLink').addEventListener('click', arguments.callee);
+        });
+
+        // Show message
+        function showMessage(text, type) {
+            message.textContent = text;
+            message.className = `message ${type}`;
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 3000);
+        }
+
+        // Handle form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+
+            if (isLoginMode) {
+                // Login
+                const user = storage.users.find(u =>
+                    (u.username === username || u.email === email) && u.password === password
+                );
+
+                if (user) {
+                    storage.currentUser = user;
+                    showDashboard(user);
+                    showMessage('Login successful!', 'success');
+                } else {
+                    showMessage('Invalid credentials. Please try again.', 'error');
+                }
+            } else {
+                // Register
+                const userExists = storage.users.some(u =>
+                    u.username === username || u.email === email
+                );
+
+                if (userExists) {
+                    showMessage('Username or email already exists!', 'error');
+                } else {
+                    const newUser = {
+                        username,
+                        email,
+                        password,
+                        createdAt: new Date().toLocaleString()
+                    };
+                    storage.users.push(newUser);
+                    storage.currentUser = newUser;
+                    showMessage('Registration successful!', 'success');
+                    setTimeout(() => {
+                        showDashboard(newUser);
+                    }, 1000);
+                }
+            }
+        });
+
+        // Show dashboard
+        function showDashboard(user) {
+            authForm.style.display = 'none';
+            dashboard.classList.add('active');
+
+            document.getElementById('welcomeUser').textContent = `Welcome, ${user.username}!`;
+            document.getElementById('userEmail').textContent = user.email;
+            document.getElementById('storedUsername').textContent = user.username;
+            document.getElementById('storedEmail').textContent = user.email;
+            document.getElementById('accountCreated').textContent = user.createdAt;
+        }
+
+        // Logout
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            storage.currentUser = null;
+            dashboard.classList.remove('active');
+            authForm.style.display = 'block';
+            form.reset();
+            showMessage('Logged out successfully!', 'success');
+        });
+
+        // Check if user is already logged in
+        if (storage.currentUser) {
+            showDashboard(storage.currentUser);
+        }
+    </script>
+</body>
+
+</html>

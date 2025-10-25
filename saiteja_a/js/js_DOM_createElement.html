@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Create Element</title>
+</head>
+
+<body>
+    <h1>js DOM docuent.createElement() method</h1>
+    <div id="ol"></div>
+    <button>Click Me</button>
+    <li></li>
+    <script>
+
+        let fruits = [
+            'apple',
+            'banana',
+            'cherry',
+            'strawberry',
+            'guava',
+            'mango',
+            'dragonfruit',
+            'greenapple',
+            "pineapple",
+            "kindaapple"
+        ]
+
+        let vegetables = [
+            'potato',
+            'tomato',
+            'coriander',
+            'carrot',
+            'beetroot',
+            'green-mango',
+            'bottle guard'
+        ]
+        let heading2 = document.createElement("h2")
+        heading2.innerText = 'h2 created by createElement';
+        document.body.append(heading2)
+
+        let OrderedList = document.createElement("ol");
+
+        // let listItem1 = document.createElement("li");
+        // listItem1.innerText = "Item1"
+        // let listItem2 = document.createElement("li");
+        // listItem2.innerText = "Item2"
+
+        // OrderedList.append(listItem1)
+        // OrderedList.append(listItem2)
+
+
+        // for (let i = 0; i < fruits.length; i++) {
+        //     let listItem = document.createElement("li");
+        //     listItem.innerText = fruits[i];
+        //     OrderedList.append(listItem)
+        // }
+
+
+
+
+        function getItems(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                let listItem = document.createElement("li");
+                listItem.innerText = arr[i];
+                OrderedList.append(listItem)
+            }
+        }
+
+        getItems(vegetables)
+        getItems(fruits)
+
+
+        // for (let i = 0; i < vegetables.length; i++) {
+        //     let listItem = document.createElement("li");
+        //     listItem.innerText = vegetables[i];
+        //     OrderedList.append(listItem)
+        // }
+
+        document.body.append(OrderedList)
+        document.body.style.backgroundColor = "lightgray"
+
+        // let containers = document.getElementById("container");
+        // containers.append(heading2)
+
+
+    </script>
+</body>
+
+</html>

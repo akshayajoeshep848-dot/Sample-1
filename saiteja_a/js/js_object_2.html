@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Object 2</title>
+</head>
+
+<body>
+    <button onclick="nanda.prod()">goodboy</button>
+    <button onclick="nanda.gamer()">gamer</button>
+    <script>
+
+        const nanda = {
+            name: "nanda",
+            age: 20,
+            gender: "no-definedddd",
+
+            prod: function () {
+                console.log(`${this.name} is a good boy`)
+            },
+            gamer: function () {
+                console.log(`${this.name} is a gamer`)
+            }
+        }
+
+        console.log(nanda.prod())
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //         const address = {
+        //             address_line1: "MIG-87",
+        //             address_line2: "First Floor, Road Number 1",
+        //             address_line3: "KPHB Phase-1",
+        //             landmark: "Beside AED Hospitals",
+        //             city: "Hyderbad",
+        //             state: "Telangana",
+        //             pincode: 500072,
+
+        //             getAddress: function () {
+        //                 console.log(`${this.address_line1}
+        // ${this.address_line2}
+        // ${this.address_line3}
+        // ${this.landmark}
+        // ${this.city}
+        // ${this.state}
+        // ${this.pincode}`)
+        //             }
+        //         }
+
+        // address.getAddress()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex shorthand 1</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Flex-basis</title>
+        <style>
+            * {
+                margin: 0;
+            }
+
+            .parent {
+                background-color: burlywood;
+                height: 50vh;
+                display: flex;
+                gap: 10px;
+
+            }
+
+            .child {
+                background-color: chartreuse;
+                height: 100px;
+                width: 100px;
+                flex-grow: 1;
+
+            }
+
+            .child-1 {
+                flex-basis: 150px;
+            }
+
+            .child-2 {
+                flex-basis: 100px;
+            }
+
+            .child-3 {
+                flex-basis: content;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>ORDER</h1>
+        <pre>The order property controls the order in flex items appear within the flex container by default items are laid out in their source order(as they appear in the HTML)
+ .Accept an integer value(+ve, -ve or zero)
+ .Default value zero(0)
+ .Items with lower order values appear first. Items with same order value are laid out in the source order
+ .This property allows you to change the visual order without altering the HTML structure, Which can be useful
+   for responsiveness or capability consideration(Though be mindful that order still matters for things like tab navigation)</pre>
+
+        <br><br><br>
+        <h1>CSS FLEX_BASIS</h1>
+        <div class="parent">
+            <div class="child child-1">child-1</div>
+            <div class="child child-2">child-2</div>
+            <div class="child child-3">Lorem ipsum dolor sit amet.</div>
+        </div>
+        <pre>
+    Flex-basis:- It defines the default size of a flex items along the main axis before any remaining space distributed according to flex-grow or flex shrink.
+	.Accept a length unit(px,%, em, etc.,), or the keywords auto or content
+	.Default value is auto. If auto, the items main size property (width or height) is used. If that is also auto , it sized based on content.
+    .If set to specific length, that becomes its intial main size.
+	.The content keyword sizes items on its content size.
+	.If fle-basis is set to a value other than auto, it genrally overrides the item width or height property for the purpose of flex layout calculation.</pre>
+
+    </body>
+
+    </html </body>
+
+</html>

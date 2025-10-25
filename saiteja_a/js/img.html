@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hound Image Grid</title>
+    <!-- Load Tailwind CSS for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f3f4f6;
+        }
+
+        /* Custom class for a nice elevation effect */
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Style for the images within the grid */
+        .dog-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .dog-image:hover {
+            transform: scale(1.03);
+            /* Subtle zoom effect on hover */
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+
+    <!-- Main Box -->
+    <div class="max-w-4xl w-full bg-white p-6 rounded-xl card-shadow text-center">
+
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Hound Image Gallery 🐕</h1>
+        <p id="info-text" class="text-md text-gray-600 mb-6">Loading pictures...</p>
+
+        <!-- Button to fetch/refresh the images -->
+        <button id="get-button" onclick="fetchAndDisplayDogs()"
+            class="mb-6 py-2 px-6 bg-indigo-600 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 transition duration-150 disabled:opacity-50">
+            Reload All Dogs
+        </button>
+
+        <!-- Grid Container - This is where the images will be placed -->
+        <!-- Tailwind Grid Classes: grid, 2 columns by default, 3 columns on medium screens, with a gap of 4 -->
+        <div id="dog-pics-container" class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Images will be inserted here by JavaScript -->
+        </div>
+
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // 1. References to the HTML elements
+        const imageContainer = document.getElementById('dog-pics-container');
+        const fetchButton = document.getElementById('get-button');
+        const statusMessage = document.getElementById('info-text');
+        const API_URL = 'https://dog.ceo/api/breed/hound/images';
+
+        /**
+         * Function to get all dog images and display them in the grid.
+         */
+        async function fetchAndDisplayDogs() {
+            // --- Step 1: Loading state setup ---
+            fetchButton.disabled = true;
+            fetchButton.textContent = 'Loading...';
+            statusMessage.textContent = 'Getting all pictures from the web...';
+            imageContainer.innerHTML = ''; // Clear the previous images
+
+            try {
+                // --- Step 2: Get data from API ---
+                const response = await fetch(API_URL);
+                const data = await response.json();
+
+                if (data.status === 'success' && Array.isArray(data.message)) {
+
+                    // --- Step 3: Display all images in the grid ---
+                    const images = data.message;
+
+                    images.forEach(imageUrl => {
+                        // Create a div container for each image (for fixed height)
+                        const imageWrapper = document.createElement('div');
+                        // Ensure each image container has a nice, fixed height for the grid look
+                        imageWrapper.className = 'h-40 bg-gray-200 rounded-lg overflow-hidden';
+
+                        // Create the actual image element
+                        const img = document.createElement('img');
+                        img.src = imageUrl;
+                        img.alt = 'A hound dog picture';
+                        img.className = 'dog-image'; // Use the custom class for styling
+
+                        // Add the image to its wrapper, and the wrapper to the container
+                        imageWrapper.appendChild(img);
+                        imageContainer.appendChild(imageWrapper);
+                    });
+
+                    // --- Step 4: Show success message ---
+                    statusMessage.textContent = `Successfully loaded ${images.length} hound pictures.`;
+
+                } else {
+                    // Show error if data is bad
+                    statusMessage.textContent = 'Error: API gave a bad response.';
+                }
+
+            } catch (error) {
+                // Show error if connection fails
+                console.error("Fetch Error:", error);
+                statusMessage.textContent = 'Network Error. Could not connect.';
+            } finally {
+                // --- Step 5: Reset the button ---
+                fetchButton.disabled = false;
+                fetchButton.textContent = 'Reload All Dogs';
+            }
+        }
+
+        // Get the dogs when the page opens
+        window.onload = fetchAndDisplayDogs;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Classes </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        a:link {
+            color: #1e88e5;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #6a1b9a;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #1565c0;
+        }
+
+        a:focus,
+        input:focus {
+            outline: 2px solid #4CAF50;
+            outline-offset: 2px;
+        }
+
+        .target-section:target {
+            background-color: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input:enabled {
+            border: 2px solid #4CAF50;
+        }
+
+        input:disabled {
+            border: 2px solid #cccccc;
+            background-color: #f5f5f5;
+            cursor: not-allowed;
+        }
+
+        input[type="checkbox"]:checked+label {
+            color: #d81b60;
+            font-weight: bold;
+        }
+
+        input[type="radio"]:default+label {
+            color: #e65100;
+            font-style: italic;
+        }
+
+        input:required {
+            border-left: 4px solid #d32f2f;
+        }
+
+        input:optional {
+            border-left: 4px solid #0288d1;
+        }
+
+        input:valid {
+            background-color: #e8f5e9;
+        }
+
+        input:invalid {
+            background-color: #ffebee;
+        }
+
+        input:in-range {
+            border: 2px solid #4CAF50;
+        }
+
+        input:out-of-range {
+            border: 2px solid #d32f2f;
+        }
+
+        .container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 30px;
+        }
+
+        label {
+            margin-left: 5px;
+        }
+
+        input {
+            margin: 5px 0;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .target-section {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Pseudo-Classes</h1>
+
+    <div class="container">
+        <h2>:link, :visited, :focus</h2>
+        <p>Click the link to see :visited and :focus effects (hover for :hover):</p>
+        <a href="https://example.com">Example Link</a>
+    </div>
+
+    <div class="container">
+        <h2>:target</h2>
+        <p>Click the link to target the section (adds background and border):</p>
+        <a href="#section1">Go to Section 1</a>
+        <div id="section1" class="target-section">This is Section 1</div>
+    </div>
+
+    <div class="container">
+        <h2>:enabled, :disabled</h2>
+        <p>Enabled and disabled input fields:</p>
+        <input type="text" placeholder="Enabled input">
+        <input type="text" placeholder="Disabled input" disabled>
+    </div>
+
+    <div class="container">
+        <h2>:checked, :default</h2>
+        <p>Checkboxes and radio buttons (checked items in pink, default radio in orange):</p>
+        <input type="checkbox" id="chk1"><label for="chk1">Checkbox 1</label><br>
+        <input type="checkbox" id="chk2"><label for="chk2">Checkbox 2</label><br>
+        <input type="radio" name="group" id="radio1" checked><label for="radio1">Default Radio</label><br>
+        <input type="radio" name="group" id="radio2"><label for="radio2">Other Radio</label>
+    </div>
+
+    <div class="container">
+        <h2>:required, :optional</h2>
+        <p>Required (red left border) and optional (blue left border) inputs:</p>
+        <input type="text" required placeholder="Required input"><br>
+        <input type="text" placeholder="Optional input">
+    </div>
+
+    <div class="container">
+        <h2>:valid, :invalid</h2>
+        <p>Valid (green background) and invalid (red background) email inputs:</p>
+        <input type="email" value="valid@example.com" placeholder="Valid email"><br>
+        <input type="email" value="invalid-email" placeholder="Invalid email">
+    </div>
+
+    <div class="container">
+        <h2>:in-range, :out-of-range</h2>
+        <p>Number input (1-10 range, green for in-range, red for out-of-range):</p>
+        <input type="number" min="1" max="10" value="5" placeholder="In range (1-10)"><br>
+        <input type="number" min="1" max="10" value="15" placeholder="Out of range">
+    </div>
+</body>
+
+</html>

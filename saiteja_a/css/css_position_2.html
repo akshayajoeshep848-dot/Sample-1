@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioned 2</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .parent {
+            background-color: blue;
+            height: 500px;
+        }
+
+        .child {
+            background-color: rgb(255, 0, 0);
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .child-1 {
+            position: absolute;
+            bottom: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Position 2</h1>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+</body>
+
+</html>

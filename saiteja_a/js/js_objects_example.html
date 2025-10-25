@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        button {
+            width: 250px;
+            height: 50px;
+            padding: 15px;
+            font-size: 17px;
+            color: white;
+            border: none;
+            background-color: black;
+            border-radius: 5px;
+            margin: 10px;
+            transition: 300ms;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            border: 1px solid black;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Student Object</h3>
+    <div>
+        <button onclick="student.get_details()">Student Details</button>
+        <button onclick="student.study()">Student work</button>
+    </div>
+
+    <h3>Employee Object</h3>
+    <div>
+        <button onclick="employee.get_details()">Employee details</button>
+        <button onclick="employee.work()">Employee work</button>
+    </div>
+
+    <h3>Development team</h3>
+    <div>
+        <button onclick="development_team.project_manager.getdetails()">Project Manager</button>
+        <button onclick="development_team.project_manager.work()">Project Manager work</button>
+        <button onclick="development_team.frontend_developer.getdetails()">Frontend Developer</button>
+        <button onclick="development_team.frontend_developer.work()">Frontend Developer work</button>
+        <button onclick="development_team.backend_developer.getdetails()">Backend Developer</button>
+        <button onclick="development_team.backend_developer.work()">Backend Developer work</button>
+        <button onclick="development_team.tester.getdetails()">Tester</button>
+        <button onclick="development_team.tester.work()">Tester work</button>
+        <button onclick="development_team.devops_engineer.getdetails()">DevOps Engineer</button>
+        <button onclick="development_team.devops_engineer.work()">DevOps Engineer work</button>
+        <button onclick="development_team.uiux_designer.getdetails()">UI/UX Designer</button>
+        <button onclick="development_team.uiux_designer.work()">UI/UX Designer work</button>
+    </div>
+
+    <h3>Testing team</h3>
+    <div>
+        <button onclick="testing_team.test_manager.getdetails()">Test Manager</button>
+        <button onclick="testing_team.test_manager.work()">Test Manager Work</button>
+        <button onclick="testing_team.test_lead.getdetails()">Test Lead</button>
+        <button onclick="testing_team.test_lead.work()">Test Lead work</button>
+        <button onclick="testing_team.Manual_Tester.getdetails()">Manual Tester</button>
+        <button onclick="testing_team.Manual_Tester.work()">Manual Tester work</button>
+        <button onclick="testing_team.Automation_Tester.getdetails()">Automation Tester</button>
+        <button onclick="testing_team.Automation_Tester.work()">Automation Tester work</button>
+    </div>
+
+    <script>
+        // Testing team
+        const testing_team = {
+            test_manager: {
+                name: "Hemanth",
+                experience: 10,
+                skills: ["Test Planning", "Risk Management", "Team Leadership"],
+                work() {
+                    console.log(`${this.name} oversees the entire testing process and manages the team.`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is Test Manager, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            },
+            test_lead: {
+                name: "Ajay",
+                experience: 7,
+                skills: ["Test Coordination", "Test Case Design", "Progress Monitoring"],
+                work() {
+                    console.log(`${this.name} coordinates daily testing activities and assigns tasks.`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is Test Lead, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            },
+            Manual_Tester: {
+                name: "Nanda",
+                experience: 4,
+                skills: ["Test Case Execution", "Defect Reporting", "Usability Testing"],
+                work() {
+                    console.log(`${this.name} executes manual test cases and reports defects.`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is Manual Tester, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            },
+            Automation_Tester: {
+                name: "Srinada",
+                experience: 5,
+                skills: ["Test Automation", "Selenium", "CI/CD"],
+                work() {
+                    console.log(`${this.name} develops and runs automated test scripts.`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is Automation Tester, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            }
+        };
+
+        // Student object
+        const student = {
+            name: "Teja",
+            grade: "A+",
+            study() {
+                console.log(`${this.name} is studying.`);
+            },
+            attendClass() {
+                console.log(`${this.name} is attending the class.`);
+            },
+            get_details() {
+                console.log(`Student Name is ${this.name} and grade is ${this.grade}`);
+            }
+        };
+        // Development team
+        const development_team = {
+            project_manager: {
+                name: "abc",
+                experience: 8,
+                skills: ["leadership", "communication", "planning"],
+                work() {
+                    console.log(`${this.name} is managing`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is project manager, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            },
+            frontend_developer: {
+                name: "def",
+                experience: 4,
+                skills: ["html", "css", "javascript", "React"],
+                work() {
+                    console.log(`${this.name} is developing frontend applications`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is frontend developer, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            },
+            backend_developer: {
+                name: "ghi",
+                experience: 5,
+                skills: ["node js", "Express js", "MongoDB"],
+                work() {
+                    console.log(`${this.name} is developing Backend applications`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is backend developer, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            },
+            tester: {
+                name: "jkl",
+                experience: 5,
+                skills: ["Testing", "Automation", "Bug tracking"],
+                work() {
+                    console.log(`${this.name} is testing the applications`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is tester, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            },
+            uiux_designer: {
+                name: "mno",
+                experience: 4,
+                skills: ["Adobe", "Figma"],
+                work() {
+                    console.log(`${this.name} is designing the user interfaces`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is UI/UX designer, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            },
+            devops_engineer: {
+                name: "pqr",
+                experience: 4,
+                skills: ["AWS", "Docker"],
+                work() {
+                    console.log(`${this.name} is handling the deployment and infrastructure`);
+                },
+                getdetails() {
+                    console.log(`${this.name} is DevOps engineer, experience is ${this.experience} years, skills are ${this.skills}`);
+                }
+            }
+        };
+
+
+
+        // Employee object
+        const employee = {
+            name: "Teja",
+            department: "Developer team",
+            work() {
+                console.log(`${this.name} is working.`);
+            },
+            takeBreak() {
+                console.log(`${this.name} is taking a break.`);
+            },
+            get_details() {
+                console.log(`Employee Name is ${this.name} and department is ${this.department}`);
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function printWordVariations() {
+            let word = "charan";
+            let arr = word.split("");
+            for (let i = 0; i < word.length; i++) {
+                console.log(arr.join(""));
+                arr.shift();
+            }
+        }
+
+        printWordVariations();
+
+    </script>
+</body>
+
+</html>

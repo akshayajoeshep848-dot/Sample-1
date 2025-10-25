@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Age Validation</title>
+</head>
+
+<body>
+    <script>
+        let age = prompt("Enter Your Age:");
+        let category = prompt("Enter Your Category (General, SC/ST, OBC, PD):");
+
+        age = parseInt(age);
+
+        if (isNaN(age) || age < 0) {
+            console.log("Please enter a valid age.");
+        } else if ("General", "SC/ST", "OBC", "PD") {
+            console.log("Please enter a valid category (General, SC/ST, OBC, PD).");
+        } else {
+            if (category === "General" && age >= 21 && age <= 32) {
+                console.log("You are eligible to write the UPSC exam.");
+            } else if (category === "OBC" && age >= 21 && age <= 35) {
+                console.log("You are eligible to write the UPSC exam.");
+            } else if (category === "SC" && age >= 21 && age <= 37) {
+                console.log("You are eligible to write the UPSC exam.");
+            } else if (category === "ST" && age >= 21 && age <= 37) {
+                console.log("You are eligible to write the UPSC exam.");
+            } else if (category === "PD" && age >= 21 && age <= 42) {
+                console.log("You are eligible to write the UPSC exam.");
+            } else {
+                console.log("You are not eligible to write the UPSC exam.");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

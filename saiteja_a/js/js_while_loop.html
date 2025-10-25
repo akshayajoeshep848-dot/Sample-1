@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While loop</title>
+</head>
+
+<body>
+    <script>
+
+        let n = 167;
+        cnt = 0;
+        is_prime = true;
+        if (n == 2) {
+            is_prime = true;
+        } else if (n <= 1 || n % 2 === 0) {
+            is_prime = false;
+        } else {
+            for (let i = 3; i <= Math.sqrt(n); i = i + 2) {
+                cnt++;
+                if (n % i === 0) {
+                    is_prime = false;
+                    break;
+                }
+            }
+            if (is_prime) {
+                console.log(`${n} is Prime`);
+            } else {
+                console.log(`${n} is not Prime`);
+            }
+        }
+        console.log(`Loop runs for ${cnt} times`);
+
+
+        // let n = Number(prompt("Enter a Positive Number :"))
+        // isPrime = true;
+        // if (n == 1) {
+        //     console.log(`${n} not a prime number`)
+        // } else if (n == 2) {
+        //     console.log(`${n} it is a even prime number`)
+        // } else if (n % 2 == 0) {
+        //     console.log(`${n} is not a prime number`)
+        // } else {
+        //     for (let i = 3; i <= Math.floor(n ** 0.5); i += 2) {
+        //         if (n % i == 0) {
+        //             isPrime=false;
+        //             break;
+        //         }
+
+        //     }
+        // }
+
+
+        // let num = prompt('enter a number')
+        // let count = 0
+        // for (i = 1; i <= num; i++) {
+        //     if (num % i === 0) {
+        //         count = count + 1
+        //     }
+        // }
+        // if (count === 2) {
+        //     console.log(true)
+        // }
+        // else {
+        //     console.log(false)
+        // }
+        // let i = 0;
+        // while (i <= 10) {
+        //     if (i % 2 == 0) {
+        //         i++
+        //         continue;
+        //     } else {
+        //         console.log(`printing : ${i}`)
+        //     }
+        //     i++;
+
+        // }
+
+        // let j = 0;
+        // do {
+        //     console.log(`j is ${j}`);
+        //     j++;
+        // } while (j < 0);
+
+
+
+        // let i = 0;
+        // while (i < 3) {
+        //     console.log(`current value of i : ${i}`);
+        //     i++;
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="roll">Roll</button>
+    <h3 id="display-number"></h3>
+
+    <script>
+        let RollBtn = document.getElementById('roll')
+
+        let DisplayNumber = document.getElementById('display-number')
+
+        RollBtn.onclick = function () {
+            let Random = Math.floor((Math.random() * 6) + 1)
+            console.log(Random)
+
+
+            DisplayNumber.textContent = Random
+        }
+    </script>
+</body>
+
+</html>

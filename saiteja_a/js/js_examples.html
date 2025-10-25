@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples</title>
+</head>
+
+<body>
+    <script>
+        // grade A - 100 - 90
+        // grade B - 90 - 80
+        // grade C - 80 - 70
+        // grade D - 70 - 60
+        // grade E - 60 - 40
+        // grade F - 40 - 0
+        // check if pass %
+        // 70-80 - 10%
+        // 80 - 90 - 15%
+        // 90 - 100 - 25%
+
+
+        let year = Number(prompt("Enter your Year : "))
+        let fee = Number(prompt("Enter your Fee : "))
+        let percentage = Number(prompt("Enter your Percentage : "))
+        if ((percentage >= 1 && percentage >= 100) && (year <= 4 && year >= 1)) {
+            console.log("Enter correct values")
+        } else {
+            if (percentage >= 90 && percentage <= 100) {
+                let per = fee * 0.25
+                console.log(fee - per)
+            } else if (percentage >= 80 && percentage < 90) {
+                let per = fee * 0.15
+                console.log(fee - per)
+            } else if (percentage >= 70 && percentage < 80) {
+                let per = fee * 0.10
+                console.log(fee - per)
+            } else {
+                console.log("No Discount")
+            }
+        }
+
+        // let year = Number(prompt("Enter your Year : "))
+        // let fee = Number(prompt("Enter your Fee : "))
+        // let percentage = Number(prompt("Enter your Percentage : "))
+        // if (percentage > 100 || (year > 4 || year <= 1)) {
+        //     console.log("Enter correct values")
+        // } else {
+        //     if (percentage >= 90 && percentage <= 100) {
+        //         let per = fee * 0.25
+        //         console.log(fee - per)
+        //     } else if (percentage >= 80 && percentage < 90) {
+        //         let per = fee * 0.15
+        //         console.log(fee - per)
+        //     } else if (percentage >= 70 && percentage < 80) {
+        //         let per = fee * 0.10
+        //         console.log(fee - per)
+        //     } else {
+        //         console.log("No Discount")
+        //     }
+        // }
+
+
+
+        // grade A - 100 - 90
+        // grade B - 90 - 80
+        // grade C - 80 - 70
+        // grade D - 70 - 60
+        // grade E - 60 - 40
+        // grade F - 40 - 0
+
+        // let grade = 70
+        // switch (true) {
+        //     case (grade >= 90 && grade <= 100):
+        //         console.log("Grade A")
+        //         break;
+        //     case (grade >= 80 && grade < 90):
+        //         console.log("Grade B")
+        //         break;
+        //     case (grade >= 70 && grade < 80):
+        //         console.log("Grade C")
+        //         break;
+        //     case (grade >= 60 && grade < 70):
+        //         console.log("Grade D")
+        //         break;
+        //     case (grade >= 40 && grade < 60):
+        //         console.log("Grade E")
+        //         break;
+        //     default:
+        //         console.log("Grade F")
+
+        // }
+
+    </script>
+</body>
+
+</html>

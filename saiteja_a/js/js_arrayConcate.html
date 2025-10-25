@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concate</title>
+    <style>
+        p {
+            position: relative;
+            padding: 20px;
+        }
+
+        p::after {
+            position: absolute;
+            top: 0;
+            left: 30px;
+            content: "Ollama";
+            font-size: 10px;
+            color: transparent;
+            z-index: 1;
+            transition: 500ms;
+            padding: 5px;
+        }
+
+        p:hover::after {
+            background-color: yellow;
+            padding: 5px;
+            color: black;
+        }
+
+        .main {
+            width: 100px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 50px;
+            position: relative;
+            transition: 30s;
+        }
+
+        .child {
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            position: absolute;
+        }
+
+        .child:active {
+            position: absolute;
+            right: 0;
+            background-color: green;
+        }
+
+        h1::after {
+            content: "substring(start:stop)";
+            font-size: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>Concat</p>
+    <h1>string methods</h1>
+    <div class="main">
+        <div class="child"></div>
+    </div>
+    <script>
+
+        let f = "javascript"
+        let fs = f[0].toUpperCase()
+        let fss = f.substring(1)
+        let ff = (fs, fss).join("")
+        print(ff)
+
+        // let stringf = "javaScript"
+
+        // console.log(stringf.substring(5))
+
+        // const greeting = "this is a basic laptop"
+        // console.log(greeting)
+        // const newGreet = greeting.replace("basic", "gaming")
+        // console.log(newGreet)
+
+        // const sentence = "The quick brown fox jumps over the lazy dog"
+        // console.log(sentence.includes("fox jumps "))
+
+        // let strings = "Hello Prapancham"
+        // console.log(strings.charAt(1))
+
+
+
+        // let greet = ["Hello", "world"] //method chaining
+        // let str = greet.join("").split('').join()
+        // console.log(str)
+
+
+        // let arr1 = [1, 2, 3, [4, 5, 6], [7, 8], [9]];
+        // let arr2 = [4, 5, 6];
+
+
+        // let flatArray = arr1.reduce(
+        //     (initialValue, currentValue) => initialValue.concat(currentValue), []
+        // )
+
+        // console.log(flatArray)
+
+        // const a = [1, 2, 3, 4]
+        // const b = [5, 6, 7, 8]
+        // const add = a.concat(b)
+        // console.log(add)
+    </script>
+
+
+</body>
+
+</html>

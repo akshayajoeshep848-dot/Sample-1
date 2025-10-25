@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+
+        //to create an empty array we use the new Array()
+        let empty = new Array()
+        let empty2 = new Array('apple', 'ball', 'cat')
+        let student = {
+            name: "Raam",
+            age: 23,
+            college: "Hyderabad Public School",
+            id: '001',
+            address: {
+                line1: "Plot No. 303 N",
+                line2: "Road No. 25, Jubilee Hills",
+                city: "Hyderbad",
+                state: "Telangana",
+                pincode: 500034
+            },
+            movies: ["Chirutha,Maghadheera,Racha,Naayak,Dhruva,Bruclee,VV-Rama,Rangasthalama,Acharya,Yevadu,Orange,Thufan,RRR,GameChanger"],
+            //array of Objects
+            awards: [{
+                Name: "Best Actor",
+                type: "Filmfare",
+                year: 2023,
+                movie: "RRR"
+            }, {
+                Name: "Best Debut",
+                type: "Filmfare",
+                year: 2007,
+                movie: "Chirutha"
+            }, {
+                Name: "Best Actor",
+                type: "CineMAA",
+                year: 2010,
+                movie: "Maghadheera"
+            },
+            ]
+        };
+
+
+        console.log(student.address.line1)
+        console.log(student.awards[0].Name)
+
+
+
+
+
+
+
+
+
+        // let emptyArray = [];
+        // let fruits = ["apple", "banana", "cherry"];
+        // let number = [1, 2, 3, 4, 5, 6];
+        // let mixedArray = [10, "hello", true, { name: "bob" }, [6, 7]]
+
+        // console.log(fruits[0])
+        // console.log(mixedArray[4][0])
+    </script>
+</body>
+
+</html>

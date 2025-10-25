@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo class 4</title>
+    <style>
+        li {
+            list-style-type: lower-alpha;
+            position: relative;
+            left: -10px;
+            padding: 8px;
+
+        }
+
+        ul li::marker {
+            content: "\27A4";
+            color: green;
+        }
+
+        p::spelling-error {
+            text-decoration: unline red;
+            color: reds;
+        }
+
+        p::grammar-error {
+            text-decoration: unline rgb(17, 0, 255);
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Pseudo elements 2 x</h2>
+    <ul>
+        <li>items 1</li>
+        <li>items 2</li>
+        <li>items 3</li>
+        <li>items 4</li>
+        <li>items 5</li>
+    </ul>
+    <p contenteditable spellcheck="true">My friends is coming to the party tonight</p>
+</body>
+
+</html>

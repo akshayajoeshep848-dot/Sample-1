@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js event Listener</title>
+</head>
+
+<body>
+    <h1 id="h1">Event Listener</h1>
+    <button id="button">Click</button>
+    <!-- <label for="myInput">Type something:</label><br> -->
+    <input type="text" id="myInput" placeholder="Start typing...">
+    <script>
+        let button = document.getElementById('button');
+        let h1 = document.getElementById('h1');
+        let input = document.getElementById('input')
+
+        button.onclick = function () {
+            let store = input;
+            document.textContent = h1
+        }
+
+        button.addEventListener("click", (event) => console.log(event.target));
+
+        h1.addEventListener('mouseover', (event) => {
+            event.target.style.backgroundColor = "blue";
+            event.target.style.borderRadius = "10px";
+        });
+
+        h1.addEventListener('mouseout', event => {
+            event.target.style.backgroundColor = '';
+            event.target.style.borderRadius = '';
+        });
+
+
+        // button.addEventListener("click", onclick);
+
+        // function onclick(event) {
+        //     console.log(event.timeStamp);
+        // }
+
+
+        // h1.addEventListener("mouseover")
+
+        const inputEl = document.getElementById('myInput');
+
+        inputEl.addEventListener('input', (event) => {
+            console.log(event.target.value);
+        });
+    </script>
+</body>
+
+</html>

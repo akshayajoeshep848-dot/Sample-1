@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Student Registration Form</title>
+			<style>
+				body{
+				font-family:Arial;
+				}
+				input{
+				padding:15px;
+				border-radius:5px;
+				border:none;
+				box-shadow:0 0 2px grey;
+				margin-bottom:10px;
+				}
+				button{
+				background-color:lightgrey;
+				padding:10px 20px;
+				border-radius:5px;
+				}
+			</style>
+		</head>
+		<body>
+			<h1>STUDENT REGISTRATION FORM</h1>
+			<form>
+			<div>
+				<label for="fn">First Name:</label>
+				<input type="text" id="fn" placeholder="bob"/>
+			</div>
+			<div>
+				<label for="mn">Middle Name:</label>
+				<input type="text" id="mn" placeholder="show"/>
+			</div>
+			<div>
+				<label for="ln">Last Name:</label>
+				<input type="text" id="ln"placeholder="Smith"/>
+			</div>
+			<div>
+				<label for="pn">Phone Number:</label>
+				<input type="number" id="pn" maxlength="10"/>
+			</div>
+			<div>
+				<label for="add">Address:</label>
+				<textarea id="add" placeholder="Main Street Hyderabad">					</textarea>
+			</div>
+			<div>
+				<label for="em-num">Emergency Contact:</label>
+				<input id=""type="number" placeholder="+91-8964897788" 					maxlength="10" />
+			</div>
+			<div>
+				<label for="ffn">Father Name:</label>
+				<input type="text" id="ffn" placeholder="bob's father"/>
+			</div>
+			<div>
+				<label for="mn">Mother Name:</label>
+				<input type="text" id="mn" placeholder="bob's Mother"/>
+			</div>
+			<div>
+				<label for="adn">Admission Number:</label>
+				<input type="number" id="adn" placeholder="986-8989-4589"/>
+			</div>
+			<div>
+				<label for="photo">Photo</label>
+				<input type="file" id="photo" />
+			</div>
+			<div>
+				<label for="age">Age:</label>
+				<input type="number" id="age" placeholder="22"maxlength="2"/>
+			</div>
+			<div>
+				<h4>Gender</h4>
+				<input type="radio" id="gdr" name="gender">
+				<lable for="gender">Male</label>
+				<input type="radio" id="gdr" name="gender">
+				<lable for="gender">female</label>
+				<input type="radio" id="gdr" name="gender">
+				<lable for="gender">others</label>
+			</div>
+			<div>
+				<label for="sign">Signature :</label>
+				<input type="file" id="sign" >
+			</div>
+			<div>
+				<label for="e-mail">Email:</label>
+				<input type="email" id="e-mail" placeholder="bobjohn@gmail.com"/>
+			</div>
+			<div>
+				<h4>Branch:</h4>
+				<input type="radio" id="cse" name="branch">
+				<label for="cse" name="branch">CSE<label>
+				<input type="radio" id="ece" name="branch">
+				<label for="ese"name="branch">ECE<label>
+				<input type="radio" id="civil"name="branch">
+				<label for="civil" name="branch">CIVIL<label>
+				<input type="radio" id="eee" name="branch">
+				<label for="eee" name="branch">EEE<label>
+				<input type="radio" id="other" name="branch">
+				<label for="other" name="branch">OTHER<label>
+			</div>
+			<div>
+				<label for="par-occ">Parent Occupation:</label>
+				<input type="text" id="par-occ" placeholder="Manager">
+			</div>
+			<div>
+				<label for="aadhar">Aadhar Number:</label>
+				<input type="number" id="aadhar" placeholder="784532897451" maxlength="12">
+			</div>
+			<h4>Upload Certificates</h4>
+			<div>
+				<label for="tenth">tenth</label>
+				<input type="file" id="tenth" />
+			</div>
+			<div>
+				<label for="inter">Intermediate :</label>
+				<input type="file" id="inter" />
+			</div>
+			<div>
+				<label for="degree">Degree</label>
+				<input type="file" id="degree" />
+			</div>
+			<button>Submit</button>
+
+
+
+
+			</form>
+		</body>
+	</html>

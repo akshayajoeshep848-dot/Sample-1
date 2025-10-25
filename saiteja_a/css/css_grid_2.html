@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid areas</title>
+    <style>
+        .parent {
+            background-color: aquamarine;
+            display: grid;
+            gap: 10px;
+            height: 50vh;
+            grid-template-columns: 200px repeat(2, 1fr);
+            grid-template-rows: 2fr 9fr 2fr;
+            grid-template-areas:
+                "header header header"
+                "sidenav main main"
+                "footer footer footer";
+        }
+
+        .child {
+            background-color: rgb(89, 0, 255);
+            color: wheat;
+            place-content: center;
+            text-align: center;
+        }
+
+        .child-1 {
+            grid-area: header;
+        }
+
+        .child-2 {
+            grid-area: sidenav;
+        }
+
+        .child-3 {
+            grid-area: main;
+        }
+
+        .child-4 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>CSS GRID TEMPLATE AREAS</h2>
+    <div class="parent">
+        <div class="child child-1">child1</div>
+        <div class="child child-2">child2</div>
+        <div class="child child-3">child3</div>
+        <div class="child child-4">child4</div>
+    </div>
+</body>
+
+</html>

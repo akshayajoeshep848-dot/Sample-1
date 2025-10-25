@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom </title>
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="menu-item menu-item-1">Menu Items 1</div>
+        <div class="menu-item menu-item-2">Menu Items 2</div>
+        <div class="menu-item menu-item-3">Menu Items 3</div>
+        <div class="menu-item menu-item-4">Menu Items 4</div>
+    
+    </div> -->
+
+    <!-- <script>
+
+        let menuItems = document.getElementsByClassName("menu-item");
+        console.log(Array.isArray(menuItems))
+        console.log(menuItems)
+        console.log(Array.isArray(Array.from(menuItems)))
+        console.log(Array.from(menuItems))
+
+        let menuItemsArray = Array.from(menuItems)
+        menuItemsArray.forEach((item) => (item.innerHTML = "HTML "));
+        // const items = document.getElementsByClassName("list-items")
+    </script> -->
+
+
+
+
+
+    <p>hii</p>
+    <p>hii</p>
+    <p>hii</p>
+    <p>hii</p>
+
+
+    <script>
+        let paraItems = document.getElementsByTagName("p");
+
+        let actorsArray = [
+            {
+                name: "prabhas",
+                profession: "Acting",
+                movies: ["Mirchi", "Bahubali"],
+            }, {
+                name: "N.T.T Jr",
+                profession: "Acting, Enterprenuer",
+                movies: ["shakthi", "temper"],
+            }, {
+                name: "Sai Pallavi",
+                profession: "Acting,Doctor",
+                movies: ["Fida", "Love Today"]
+            }, {
+                name: "Priyanka Arul Mohan",
+                profession: "Acting",
+                movies: ["Doctor", "og"]
+            }
+        ]
+        Array.from(paraItems).forEach((element, index) => {
+            element.innerText = `Actor name : ${actorsArray[index].name}`
+        })
+        Array.from(paraItems).forEach((element, index) => {
+            element.innerText = `Actor proffession : ${actorsArray[index].movies}`
+        })
+    </script>
+</body>
+
+</html>

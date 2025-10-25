@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            box-shadow: 0px 8px 24px rgb(193, 193, 193);
+            border-radius: 5px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            margin-top: 25px;
+            border-radius: 5px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 2px 2px 2px rgb(215, 215, 215);
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            margin-top: 25px;
+            border-radius: 5px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 2px rgb(215, 215, 215);
+        }
+
+        .box4 {
+            width: 100px;
+            height: 100px;
+            margin-top: 25px;
+            border-radius: 5px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 12px rgb(211, 211, 211) inset;
+        }
+
+        .box5 {
+            width: 100px;
+            height: 100px;
+            margin-top: 25px;
+            border-radius: 5px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 0px 1px black;
+        }
+
+        .box6 {
+            width: 100px;
+            height: 100px;
+            margin: 25px;
+            border-radius: 5px;
+            text-align: center;
+            place-content: center;
+            box-shadow: -5px 5px rgb(255, 0, 43, 0.5), -10px 10px rgba(255, 0, 0, 0.3), -15px 15px rgba(255, 0, 0, 0.1);
+        }
+
+        .box7 {
+            width: 100px;
+            height: 100px;
+            margin: 25px;
+            border-radius: 5px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 5px 5px rgba(239, 0, 0, 0.5), 10px 10px rgba(239, 0, 0, 0.3), 10px 10px rgba(239, 0, 0, 0.1);
+        }
+
+        .box8 {
+            width: 100px;
+            height: 100px;
+            margin: 25px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 1px 3px red, 0px 0px 0px 7px rgb(0, 8, 255), 0px 0px 0px 11px rgb(255, 251, 0);
+        }
+
+        .box9 {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 0px 4px red, 4px -4px 0px 5px rgb(255, 255, 255), 8px -8px 0px 5px rgb(0, 255, 34), 12px -12px 0px 5px rgb(255, 255, 255), 16px -16px 0px 5px rgb(0, 204, 255);
+        }
+
+        .box10 {
+            width: 100px;
+            height: 100px;
+            border-radius: 30px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 10px grey inset;
+        }
+
+        .box11 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 0px 3px red, -2px -4px 0px 4px rgb(255, 255, 255), -6px -8px 0px 4px rgb(17, 255, 0), -6px -10px 0px 8px rgb(255, 255, 255), -14px -18px 0px 4px rgb(0, 34, 255);
+        }
+
+        .box12 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 22px 15px 0px rgb(201, 201, 201);
+        }
+
+        .box13 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 3px 10px lightgray;
+        }
+
+        .box14 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: -5px -5px 0px 0px rgba(0, 128, 0, 0.267) inset, 5px 5px 0px 0px rgba(218, 12, 12, 0.409) inset, -10px -10px 4px 10px rgba(0, 128, 0, 0.267) inset, 10px 10px 4px 10px rgba(218, 12, 12, 0.409) inset;
+            ;
+        }
+
+        .box15 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 5px 0px black inset, 3px 6px 5px -5px;
+            ;
+        }
+
+        .box16 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 25px 20px -20px rgb(0, 0, 0, 0.5);
+
+        }
+
+        .box17 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 5px rgb(240, 30, 150, 0.5), 0px 10px rgb(240, 30, 150, 0.3), 0px 15px rgb(240, 30, 150, 0.3), 0px 20px rgb(240, 30, 150, 0.1), 0px 25px rgb(240, 30, 150, 0.05);
+
+        }
+
+        .box18 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: 0px 0px 0px 5px inset, 0px 0px 0px 10px green inset, 0px 0px 0px 15px red inset, 0px 0px 0px 20px blue inset;
+
+        }
+
+        .box19 {
+            width: 100px;
+            height: 100px;
+            margin: 50px;
+            text-align: center;
+            place-content: center;
+            box-shadow: ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">BOX1</div>
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+    <div class="box4">BOX4</div>
+    <div class="box5">BOX5</div>
+    <div class="box6">BOX6</div>
+    <div class="box7">BOX7</div>
+    <div class="box8">BOX8</div>
+    <div class="box9">BOX9</div>
+    <div class="box10">box10</div>
+    <div class="box11">BOX11</div>
+    <div class="box12">BOX12</div>
+    <div class="box13">BOX13</div>
+    <div class="box14">BOX14</div>
+    <div class="box15">BOX15</div>
+    <div class="box16">BOX16</div>
+    <div class="box17">BOX17</div>
+    <div class="box18">BOX18</div>
+    <div class="box19">BOX19</div>
+
+</body>
+
+</html>

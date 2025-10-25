@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            padding: 10px 30px 10px 8px;
+            border-radius: 20px;
+            border: 1px solid grey;
+        }
+
+        button {
+            padding: 8px 15px;
+            font-size: 15px;
+            border: none;
+            background-color: red;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(193, 0, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="inp-box">
+    <button id="btn">View</button>
+    <h2 id="answer"></h2>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            let Text = document.getElementById("inp-box").value;
+            document.getElementById('answer').textContent = Text;
+            console.log(Text)
+        }
+    </script>
+</body>
+
+</html>

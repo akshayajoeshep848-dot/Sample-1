@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid template areas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        .parent {
+            background-color: yellow;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 132px);
+            grid-template-areas:
+                "child6 child6 child6 child6 child9"
+                "child7 child1 child1 child2 child9 "
+                "child7 child3 child4 child2 child9 "
+                "child7 child3 child5 child5 child9 "
+                "child7 child8 child8 child8 child8";
+            background-image: url('https://static.vecteezy.com/system/resources/thumbnails/049/855/347/small_2x/nature-background-high-resolution-wallpaper-for-a-serene-and-stunning-view-photo.jpg');
+            background-size: cover;
+            background-repeat: repeat;
+            padding: 0px;
+        }
+
+        .child {
+            background-color: transparent;
+            border: 5px solid white;
+            place-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .child1 {
+            grid-area: child1;
+        }
+
+        .child2 {
+            grid-area: child2;
+        }
+
+        .child3 {
+            grid-area: child3;
+        }
+
+        .child4 {
+            grid-area: child4;
+        }
+
+        .child5 {
+            grid-area: child5;
+        }
+
+        .child6 {
+            grid-area: child6;
+        }
+
+        .child7 {
+            grid-area: child7;
+        }
+
+        .child8 {
+            grid-area: child8;
+        }
+
+        .child9 {
+            grid-area: child9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child child1">Child 1</div>
+        <div class="child child2">Child 2</div>
+        <div class="child child3">Child 3</div>
+        <div class="child child4">Child 4</div>
+        <div class="child child5">Child 5</div>
+        <div class="child child6">Child 6</div>
+        <div class="child child7">Child 7</div>
+        <div class="child child8">Child 8</div>
+        <div class="child child9">Child 9</div>
+    </div>
+</body>
+
+</html>

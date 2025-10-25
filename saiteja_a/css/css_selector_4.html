@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CSS SELECTOR</title>
+   <style>
+      body {
+         display: flex;
+         justify-content: center;
+      }
+
+      p+h1 {
+         background-color: aqua;
+         width: 400px;
+         padding: 10px;
+         border: 1px solid blue;
+      }
+
+      h1+p {
+         background-color: bisque;
+         padding: 10px;
+         width: 400px;
+      }
+
+      h1~p {
+         color: blue;
+      }
+
+      p~h1 {
+         color: tomato;
+      }
+   </style>
+</head>
+
+<body>
+   <div>
+      <p>lorem2</p>
+      <h1>Adjacent Slibling</h1>
+      <p>h1 + p</p>
+      <p>It selects the next slibling</p>
+      <h1>General Slibling Selector</h1>
+      <p>h1 ~ p</p>
+      <p>It select all sibling</p>
+      <p>It doesn't select slibling before the h1</p>
+   </div>
+</body>
+
+</html>

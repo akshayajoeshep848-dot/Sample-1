@@ -1,0 +1,283 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Functions Practice</h1>
+    <script>
+        //1.Function to print multiples of 5
+        //   function multiples(n) {
+        //     for (let i = 1; i <= n; i++) {
+        //       if (i % 5 == 0) {
+        //         console.log(i);
+        //       }
+        //     }
+        //   }
+        //   multiples(25)
+
+        //    Function to add n numbers
+        function addNumbers(n) {
+            sum = 0;
+            for (let i = 0; i <= n; i++) {
+                sum = sum + i;
+            }
+            console.log(sum);
+        }
+        addNumbers(5)
+
+
+        // Multiplication Table
+        function multiplicationTable(number) {
+            for (let i = 1; i <= 10; i++) {
+                console.log(${ number } * ${ i } = ${ number * i});
+            }
+        }
+
+        // Print numbers from 10 to 1
+        function countdownFromTen() {
+            for (let i = 10; i >= 1; i--) {
+                console.log(i);
+            }
+        }
+
+        // Count consonants in a string
+        function countConsonants(str) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (!"aeiou ".includes(str[i].toLowerCase())) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // Largest number in array
+        function findLargest(arr) {
+            let largest = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > largest) {
+                    largest = arr[i];
+                }
+            }
+            return largest;
+        }
+
+        // Sum of array elements
+        function arraySum(arr) {
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        }
+
+        // Fizz Buzz
+        function fizzBuzz() {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 15 === 0) {
+                    console.log("Fizz Buzz");
+                } else if (i % 5 === 0) {
+                    console.log("Buzz");
+                } else if (i % 3 === 0) {
+                    console.log("Fizz");
+                }
+            }
+        }
+
+        // Factorial
+        function factorial(number) {
+            let fact = 1;
+            for (let i = 1; i <= number; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        // Reverse a string
+        function reverseString(str) {
+            let rev = "";
+            for (let i = str.length - 1; i >= 0; i--) {
+                rev += str[i];
+            }
+            return rev;
+        }
+
+        // Countdown by 2s
+        function countdownByTwos(start = 20) {
+            for (let i = start; i >= 1; i -= 2) {
+                console.log(i);
+            }
+        }
+
+        // Array Search
+        function isNumberInArray(arr, number) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === number) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        // Powers of 2
+        function printPowersOfTwo(limit) {
+            for (let i = 0; i <= limit; i++) {
+                console.log(2 power of ${ i } = ${ 2 ** i });
+            }
+        }
+
+        // Palindrome check
+        function isPalindrome(str) {
+            let rev = "";
+            for (let i = str.length - 1; i >= 0; i--) {
+                rev += str[i];
+            }
+            return rev === str;
+        }
+
+        // Pattern Printing (Stars)
+        function printStarPattern(rows) {
+            for (let i = 0; i < rows; i++) {
+                let pattern = "";
+                for (let j = 0; j <= i; j++) {
+                    pattern += "*";
+                }
+                console.log(pattern);
+            }
+        }
+
+        // Count specific character in string
+        function countCharacter(str, char) {
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (str[i] === char) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        // Calculate Average
+        function calculateAverage(arr) {
+            let sum = arraySum(arr);
+            return sum / arr.length;
+        }
+
+        // Fibonacci series
+        function fibonacciSeries(n) {
+            let n1 = 0;
+            let n2 = 1;
+            console.log(n1);
+            console.log(n2);
+            for (let i = 2; i < n; i++) {
+                let next = n1 + n2;
+                console.log(next);
+                n1 = n2;
+                n2 = next;
+            }
+        }
+
+        // Find duplicates in array
+        function findDuplicates(arr) {
+            let duplicates = [];
+            for (let i = 0; i < arr.length; i++) {
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[i] === arr[j] && !duplicates.includes(arr[i])) {
+                        duplicates.push(arr[i]);
+                    }
+                }
+            }
+            return duplicates;
+        }
+
+        // Check if number is prime (basic)
+        function isPrimeBasic(number) {
+            if (number <= 1) return false;
+            let count = 0;
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count++;
+                }
+            }
+            return count === 2;
+        }
+
+        // Check if number is prime (optimized)
+        function isPrimeOptimized(n) {
+            if (n === 2 || n === 3) return true;
+            if (n <= 1 || n % 2 === 0 || n % 3 === 0) return false;
+
+            for (let i = 5; i <= Math.sqrt(n); i += 6) {
+                if (n % i === 0 || n % (i + 2) === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        // Prime numbers in a given range
+        function primesInRange(start, end) {
+            let primes = [];
+            for (let i = start; i <= end; i++) {
+                if (isPrimeOptimized(i)) {
+                    primes.push(i);
+                }
+            }
+            return primes;
+        }
+
+        // Max Load calculation
+        function calculateMaxLoad(price, load, max_price) {
+            let max_load = 0;
+
+            // Single item
+            for (let i = 0; i < price.length; i++) {
+                if (price[i] <= max_price) {
+                    max_load = Math.max(max_load, load[i]);
+                }
+            }
+
+            // Combination of two items
+            for (let i = 0; i < price.length; i++) {
+                for (let j = i + 1; j < price.length; j++) {
+                    if (price[i] + price[j] <= max_price) {
+                        let total_load = load[i] + load[j];
+                        max_load = Math.max(max_load, total_load);
+                    }
+                }
+            }
+
+            return max_load;
+        }
+
+
+        // multiplicationTable(17);
+        // console.log(countConsonants("pavan kumar"));
+        // console.log(findLargest([3, 2, 5, 3, 7, 8]));
+        // console.log(arraySum([3, 2, 5, 3, 7, 8]));
+        // fizzBuzz();
+        // console.log(factorial(5));
+        // console.log(reverseString("abcd"));
+        // countdownByTwos();
+        // console.log(isNumberInArray([5, 4, 3, 2, 1], 0));
+        // printPowersOfTwo(10);
+        // console.log(isPalindrome("abba"));
+        // printStarPattern(5);
+        // console.log(countCharacter("pavan kumar", "a"));
+        // console.log(calculateAverage([1, 2, 3, 4, 5]));
+        // fibonacciSeries(6);
+        // console.log(findDuplicates([1, 2, 3, 2, 1, 2, 3]));
+        // console.log(isPrimeBasic(4));
+        // console.log(isPrimeOptimized(29));
+        // console.log(primesInRange(1, 50));
+        // console.log(calculateMaxLoad([5, 4, 3, 8, 2], [10, 12, 14, 8, 7], 3));
+
+    </script>
+</body>
+
+</html> -->

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meesho Investor Relations</title>
+    <link rel="shortcut icon"
+        href="https://investor.meesho.com/investor-web/_next/static/media/header-logo.e8180dcf.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            /* Improved for readability */
+            line-height: 1.5;
+        }
+
+        .nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 24px clamp(20px, 5vw, 100px);
+            /* Responsive padding */
+            background-color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-1 {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .nav-2 {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-2 a {
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .header-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .heading1 {
+            position: absolute;
+            bottom: 240px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(32px, 5vw, 53px);
+            /* Responsive font size */
+            text-align: center;
+            font-weight: 600;
+            color: white;
+            line-height: 1.2;
+        }
+
+        .para-1 {
+            position: absolute;
+            bottom: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(12px, 2vw, 14px);
+            text-align: center;
+            color: white;
+        }
+
+        .para-para {
+            font-size: clamp(24px, 4vw, 30px);
+            font-weight: bold;
+        }
+
+        .para-para-2 {
+            width: min(600px, 90%);
+            font-size: clamp(14px, 2vw, 16px);
+        }
+
+        .parent-parent {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 35px;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .image-container {
+            width: clamp(300px, 40vw, 450px);
+            height: clamp(200px, 30vw, 330px);
+            border-radius: 20px;
+            position: relative;
+            background-size: cover;
+        }
+
+        .dp2 {
+            background-image: url('https://investor.meesho.com/investor-web/_next/images/home_tile_1_thumbnail_2.png');
+        }
+
+        .dp3 {
+            background-image: url('https://investor.meesho.com/investor-web/_next/images/home_tile_2_thumbnail_1.png');
+        }
+
+        .dp4 {
+            background-image: url('https://investor.meesho.com/investor-web/_next/images/home_tile_2_thumbnail_2.png');
+        }
+
+        .dp5 {
+            background-image: url('https://investor.meesho.com/investor-web/_next/images/home_tile_3_thumbnail_2.png');
+        }
+
+        .dp6 {
+            background-image: url('https://investor.meesho.com/investor-web/_next/images/home_tile_4_thumbnail_1.png');
+        }
+
+        .dp7 {
+            background-image: url('https://investor.meesho.com/investor-web/_next/images/home_tile_4_thumbnail_2.png');
+        }
+
+        .simple1 {
+            position: absolute;
+            bottom: 150px;
+            left: 20px;
+        }
+
+        .simple1 img {
+            width: 70px;
+        }
+
+        .simple2 {
+            position: absolute;
+            color: white;
+            font-size: clamp(20px, 3vw, 24px);
+            bottom: 20px;
+            left: 20px;
+            max-width: 80%;
+        }
+
+        .main-image-container {
+            display: flex;
+            flex-direction: row;
+            gap: 35px;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .footer {
+            display: flex;
+            background-color: #000;
+            justify-content: space-around;
+            align-items: center;
+            padding: 15px;
+            gap: 50px;
+            color: white;
+        }
+
+        .footer1 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer1-2 {
+            font-size: 14px;
+        }
+
+        .footer2 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer2 a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer3 {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer3 img {
+            width: 30px;
+            border-radius: 50%;
+        }
+
+        .footer4 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer4 img {
+            width: 120px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .heading1 {
+                bottom: 180px;
+                font-size: clamp(24px, 4vw, 36px);
+            }
+
+            .para-1 {
+                bottom: 100px;
+                font-size: clamp(12px, 2vw, 13px);
+            }
+
+            .parent {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main-image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .para-para-2 {
+                width: 100%;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 30px;
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .image-container {
+                width: 100%;
+                height: clamp(150px, 25vw, 200px);
+            }
+
+            .simple2 {
+                font-size: clamp(16px, 2.5vw, 18px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="nav-1">
+            <div>
+                <img src="https://investor.meesho.com/investor-web/_next/static/media/header-logo.e8180dcf.svg"
+                    alt="Meesho Logo" width="45px">
+            </div>
+            <div>Investor Relations</div>
+        </div>
+        <div class="nav-2">
+            <a href="#home" class="home">Home</a>
+            <a href="#financials" class="financial">Financial</a>
+            <a href="#resources" class="resources">Resources</a>
+        </div>
+    </div>
+
+    <div class="header">
+        <div class="header-image">
+            <img src="https://investor.meesho.com/investor-web/_next/images/home_header.png" alt="Meesho Banner"
+                loading="lazy">
+        </div>
+        <div class="heading1">
+            Meesho is democratising <br>internet commerce for everyone
+        </div>
+        <div class="para-1">
+            For nearly a decade, Meesho has built innovative technology to create an <br> accessible and affordable
+            e-commerce ecosystem for a billion Indians
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="para-image-1">
+            <img src="https://investor.meesho.com/investor-web/_next/images/home_tile_1_main.png"
+                alt="Affordable E-commerce" width="300px" loading="lazy">
+        </div>
+        <div class="parent-parent">
+            <div class="para-para">Making e-commerce affordable and <br> accessible</div>
+            <div class="para-para-2">
+                Meesho is a multi-sided technology platform driving e-commerce in India by connecting consumers,
+                sellers, logistics partners, and content creators. Through a low-cost, discovery-led model, we enable
+                affordable and accessible shopping for diverse consumer segments across the country.
+            </div>
+        </div>
+    </div>
+
+    <div class="main-image-container">
+        <div class="image-container">
+            <div class="simple1">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/play-button-round-white-icon.png"
+                    alt="Play Video: Sanju Sharma">
+            </div>
+            <div class="simple2">
+                Watch how Sanju Sharma shops smarter, right from home.
+            </div>
+        </div>
+        <div class="image-container dp2">
+            <div class="simple1">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/play-button-round-white-icon.png"
+                    alt="Play Video: Yashwanth">
+            </div>
+            <div class="simple2">
+                Watch how Yashwanth chases style on a student budget.
+            </div>
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="para-image-1">
+            <img src="https://investor.meesho.com/investor-web/_next/images/home_tile_2_main.png"
+                alt="Digitizing Businesses" width="300px" loading="lazy">
+        </div>
+        <div class="parent-parent">
+            <div class="para-para">Digitizing Indian businesses</div>
+            <div class="para-para-2">
+                Our tech-first approach equips these businesses with the tools to succeed online, complemented by
+                industry-first initiatives like 0% seller commission. Today, lakhs of sellers leverage Meesho's vast
+                customer base, advanced tech, and low-cost, pan-India shipping to grow their businesses.
+            </div>
+        </div>
+    </div>
+
+    <div class="main-image-container">
+        <div class="image-container dp3">
+            <div class="simple1">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/play-button-round-white-icon.png"
+                    alt="Play Video: Vatsal">
+            </div>
+            <div class="simple2">
+                Watch how Vatsal transformed everyday products with Uniclan Healthcare.
+            </div>
+        </div>
+        <div class="image-container dp4">
+            <div class="simple1">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/play-button-round-white-icon.png"
+                    alt="Play Video: Kavin">
+            </div>
+            <div class="simple2">
+                Watch how Kavin scaled BodyGlove through e-commerce.
+            </div>
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="para-image-1">
+            <img src="https://investor.meesho.com/investor-web/_next/images/home_tile_3_main.png"
+                alt="Low Cost Delivery" width="300px" loading="lazy">
+        </div>
+        <div class="parent-parent">
+            <div class="para-para">Building a low cost delivery network</div>
+            <div class="para-para-2">
+                Valmo operates through Meesho’s technology infrastructure and a network of logistics partners to support
+                order fulfillment across the country, with a continued emphasis on reliability and cost-effectiveness.
+            </div>
+        </div>
+    </div>
+
+    <div class="main-image-container">
+        <div class="image-container dp5">
+            <div class="simple1">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/play-button-round-white-icon.png"
+                    alt="Play Video: Rupesh">
+            </div>
+            <div class="simple2">
+                Watch how Rupesh used smart tech to handle ~1.5L daily orders.
+            </div>
+        </div>
+    </div>
+
+    <div class="parent">
+        <div class="para-image-1">
+            <img src="https://investor.meesho.com/investor-web/_next/images/home_tile_4_main.png" alt="Content Commerce"
+                width="300px" loading="lazy">
+        </div>
+        <div class="parent-parent">
+            <div class="para-para">Content Commerce</div>
+            <div class="para-para-2">
+                Enabling content-led product discovery by connecting creators, sellers, and consumers on a single
+                platform.
+            </div>
+        </div>
+    </div>
+
+    <div class="main-image-container">
+        <div class="image-container dp6">
+            <div class="simple1">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/play-button-round-white-icon.png"
+                    alt="Play Video: Ramyaa">
+            </div>
+            <div class="simple2">
+                Ramyaa turned a curious experiment into a thriving content career.
+            </div>
+        </div>
+        <div class="image-container dp7">
+            <div class="simple1">
+                <img src="https://uxwing.com/wp-content/themes/uxwing/download/controller-and-music/play-button-round-white-icon.png"
+                    alt="Play Video: Meesha">
+            </div>
+            <div class="simple2">
+                Watch how Meesha built a community-driven brand with Meesho.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer1">
+            <div class="footer1-1">
+                <img src="https://investor.meesho.com/investor-web/_next/static/media/footer-logo.2c3a702b.svg"
+                    alt="Meesho Footer Logo" width="50px">
+            </div>
+            <div class="footer1-2">
+                © 2023 Copyright Meesho <br>
+                All Rights Reserved
+            </div>
+        </div>
+        <div class="footer2">
+            <a href="#home" class="footer2-1">Home</a>
+            <a href="#financials" class="footer2-2">Financials</a>
+            <a href="#resources" class="footer2-3">Resources</a>
+        </div>
+        <div class="footer3">
+            <div class="footer3-1">
+                <a href="https://linkedin.com"><img
+                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
+                        alt="LinkedIn"></a>
+            </div>
+            <div class="footer3-2">
+                <a href="https://twitter.com"><img
+                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/twitter-app-white-icon.png"
+                        alt="Twitter"></a>
+            </div>
+            <div class="footer3-3">
+                <a href="https://instagram.com"><img
+                        src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-app-white-icon.png"
+                        alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer4">
+            <div class="footer4-1">
+                <a href="https://play.google.com"><img
+                        src="https://investor.meesho.com/investor-web/_next/static/media/google-play.c939a775.svg"
+                        alt="Google Play Store"></a>
+            </div>
+            <div class="footer4-2">
+                <a href="https://www.apple.com/app-store"><img
+                        src="https://investor.meesho.com/investor-web/_next/static/media/app-store.2313ecf3.svg"
+                        alt="App Store"></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

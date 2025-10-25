@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements 1</title>
+    <style>
+        li {
+            list-style-type: none;
+        }
+
+        li::before {
+            content: "\2665  ";
+        }
+
+        LI::after {
+            content: "\2668";
+        }
+
+        p {
+            cursor: pointer;
+        }
+
+        /* p:active {
+            color: red;
+        } */
+
+        .burger-menu {
+            background-color: black;
+            width: 12px;
+            height: 4px;
+            border-radius: 10px;
+        }
+
+        .burger-menu::before {
+            content: "";
+            background-color: black;
+            width: 15px;
+            position: absolute;
+            height: 4px;
+            transform: translateY(5px);
+            border-radius: 10px;
+        }
+
+        .burger-menu::after {
+            content: "";
+            background-color: black;
+            width: 15px;
+            position: absolute;
+            height: 4px;
+            transform: translateY(-5px);
+            border-radius: 10px;
+        }
+
+        .menu-burger {
+            content: "";
+            width: 15px;
+            height: 3px;
+            background-color: black;
+            margin-top: 30px;
+            transform: rotate(45deg);
+        }
+
+        .menu-burger1 {
+            content: "";
+            width: 15px;
+            height: 3px;
+            background-color: black;
+            margin-top: 30px;
+            transform: rotate(-45deg);
+            /* position: relative; */
+            bottom: 34px;
+        }
+
+        .menu-burger:hover {
+            transform: rotate(315deg);
+        }
+
+        .menu-burger1:hover {
+            transform: rotate(45deg);
+        }
+
+        p::first-letter {
+            font-size: 30px;
+        }
+
+        p::selection {
+            color: white;
+            background-color: blue;
+        }
+
+        p:hover {
+            transform: rotate(20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <p>&#127155;</p>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+    </ul>
+    <div class="burger-menu"></div>
+    <div class="menu-burger"></div>
+    <div class="menu-burger1"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, praesentium!</p>
+</body>
+
+</html>

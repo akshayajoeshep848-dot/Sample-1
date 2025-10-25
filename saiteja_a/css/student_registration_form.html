@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        div {
+            margin: 10px;
+        }
+
+        h1 {
+            background-color: rebeccapurple;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        h2 {
+            margin-left: 5px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+        input,
+        select {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            width: 500px;
+            padding: 10PX;
+            border: none;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+
+        .container {
+            width: 800px;
+            box-shadow: 0px 0cap 5px rgb(166, 166, 166);
+            border-radius: 10px;
+        }
+
+        .none {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="none">
+            <h1>Student Registration Form</h1>
+        </div>
+        <div>
+            <h2>Personal Information</h2>
+        </div>
+        <hr>
+        <div>
+            <label for="fn">Full Name :</label>
+            <input type="text" name="fullname" id="fn" placeholder="Alluri Seetha Rama Raju">
+        </div>
+        <div>
+            <label for="dob">Date of Birth :</label>
+            <input type="date" id="dob">
+        </div>
+        <div>
+            <label for="gender">Gender :</label>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+        <div>
+            <label for="nation">Natioanlity</label>
+            <input type="text" id="nation" placeholder="indian">
+            <label for="rac">Religion</label>
+            <input type="text" id="rac" placeholder="Hindu">
+        </div>
+        <div>
+            <label for="mt">Mother Tongue</label>
+            <input type="text" id="mt" placeholder="telugu">
+            <label for="bg">Blood Group</label>
+            <input type="text" id="bg" placeholder="A+">
+        </div>
+        <div>
+            <label for="cn">Contact Number :</label>
+            <input type="text" id="mt" placeholder="telugu">
+            <label for="em">Email :</label>
+            <input type="email" id="em" placeholder="seetharamraju@gmail.com">
+        </div>
+        <div>
+            <label for="aadhar">Aadhar Number :</label>
+            <input type="number" maxlength="12" placeholder="XXXX XXXX XXXX 8787">
+        </div>
+        <br><br>
+        <div>
+            <h2>Address Details:</h2>
+        </div>
+        <hr>
+        <div>
+            <label for="address">Address :</label>
+            <input type="text" placeholder="">
+        </div>
+        <div>
+            <label for="Pincode">Pincode :</label>
+            <input type="number" maxlength="6" placeholder="879546">
+        </div>
+        <div>
+            <label for="state">State</label>
+            <select name="state" id="state">
+                <option value="ap">Andhra Pradesh</option>
+                <option value="te">Telengana</option>
+                <option value="kerala">Kerala</option>
+                <option value="tn">Tamil Nadu</option>
+            </select>
+        </div>
+        <div>
+            <label for="number">Phone Number :</label>
+            <input type="tel" id="number">
+        </div>
+        <br><br>
+        <div>
+            <h2>Family / Guardian Information</h2>
+        </div>
+        <hr>
+        <div>
+            <label for="ffn">Father Name:</label>
+            <input type="text" id="ffn" placeholder="Veera Simha Reddy">
+        </div>
+        <div>
+            <label for="mn">Mother Name :</label>
+            <input type="text" id="mn" placeholder="Arundadthi">
+        </div>
+        <div>
+            <label for="occc">Occupation of the Parents :</label>
+            <input type="text" id="occc" placeholder="Leader MLA (Hindupur)">
+        </div>
+        <div>
+            <label for="fpn">Parents Phone Number :</label>
+            <input type="text" placeholder="+91-898987185">
+        </div>
+        <div>
+            <label for="emailid">Parents Email id :</label>
+            <input type="text" placeholder="+91-898987185">
+        </div>
+        <br><br>
+        <div>
+            <h2>Course Details</h2>
+        </div>
+        <hr>
+        <div>
+            <label for="course">Course Applying for </label>
+            <select>
+                <option value="cse">CSE</option>
+                <option value="cse">ECE</option>
+                <option value="civil">CIVIL</option>
+                <option value="eee">EEE</option>
+                <option value="ai">AI</option>
+                <option value="ds">Data Science</option>
+                <option value="ml">Machine Learning</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Admission Category</label>
+            <select>
+                <option value="General">General</option>
+                <option value="Reserved">Reserved</option>
+                <option value="Management">Management</option>
+            </select>
+        </div>
+        <br><br>
+        <h2>Documents Required</h2>
+        <hr>
+        <div>
+            <label for="passport">Passport size photo :</label>
+            <input type="file" name="" id="">
+        </div>
+        <div>
+            <label for="tc">Transfer Certificate :</label>
+            <input type="file">
+        </div>
+        <div>
+            <label for="cc">Conduct Certificate :</label>
+            <input type="file">
+        </div>
+        <div>
+            <label for="tenth">Tenth Certificate :</label>
+            <input type="file">
+        </div>
+        <div>
+            <label for="ic"> Inter Certificate :</label>
+            <input type="file">
+        </div>
+        <div>
+            <label for="ccc">Caste Certificate :</label>
+            <input type="file">
+        </div>
+        <div>
+            <label for="iic">Income Certificate :</label>
+            <input type="file">
+        </div>
+        <br><br>
+        <div>
+            <h2>Dexclartion and Signature :</h2>
+        </div>
+        <hr>
+        <div>
+            <label for="edu">Declaration by Student: stating information is true, agreeing to college rules
+            </label>
+        </div>
+        <div>
+            <label for="sos">Signature of Student :</label>
+            <input type="file">
+        </div>
+        <div>
+            <label for="sos">Signature of Student :</label>
+            <input type="file">
+        </div>
+        <div>
+            <label for="pos">Signature of Parents :</label>
+            <input type="file">
+        </div>
+        <br>
+        <hr>
+        <center>
+            <div>
+                <button>Submit Form</button>
+            </div>
+        </center>
+    </div>
+
+</body>
+
+</html>

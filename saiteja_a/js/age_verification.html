@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Verification</title>
+</head>
+
+<body>
+    <label for="inp-age">Enter Your Age :</label>
+    <input type="text" id="inp-age">
+    <button id="verify-btn">Verify</button>
+    <h3 id="answer"></h3>
+
+    <script>
+        let InputBox = document.getElementById('inp-age');
+        let VerifyButton = document.getElementById('verify-btn');
+        let Answer = document.getElementById('answer');
+        let age = 0;
+
+        VerifyButton.onclick = function () {
+
+            age = InputBox.value;
+            if (age >= 100) {
+                Answer.textContent = "You are Too old"
+            } else if (age <= 0) {
+                Answer.textContent = "You are born Just"
+            } else if (age < 18) {
+                Answer.textContent = "You are So young"
+            } else {
+                Answer.textContent = "You are OK for enter to this site."
+            }
+        }
+    </script>
+</body>
+
+</html>

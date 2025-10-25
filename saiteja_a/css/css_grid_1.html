@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .parent {
+            background-color: grey;
+            /* height: 100vh; */
+            display: grid;
+            gap: 1vw;
+            grid-auto-flow: row dense;
+            grid-template-columns: repeat(4, minmax(100px, 1fr));
+            grid-template-rows: 100px 1fr 200px 15vh 10vh 10vh 200px;
+        }
+
+        .child {
+            background-color: aqua;
+            /* height: 10vh; */
+            padding: 10px;
+            place-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Grid 1</h1>
+    <div class="parent">
+        <div class="child child1">Child1</div>
+        <div class="child child2">Lorem ipsum dolor sit amet.</div>
+        <div class="child child3">Child3</div>
+        <div class="child child4">Lorem ipsum dolor sit amet. lo</div>
+        <div class="child child5">Child5</div>
+        <div class="child child6">Child6</div>
+        <div class="child child7">Child7</div>
+        <div class="child child8">Child8</div>
+        <div class="child child9">Child9</div>
+        <div class="child child10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, eos!</div>
+        <div class="child child11">Child11</div>
+        <div class="child child12">Child12</div>
+        <div class="child child13">Child13</div>
+        <div class="child child14">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor sequi repellendus
+            dicta deserunt id amet! Corrupti est voluptas dolores assumenda?</div>
+        <div class="child child15">Child15</div>
+        <div class="child child16">Child16</div>
+        <div class="child child17">Child17</div>
+        <div class="child child18">Child18</div>
+        <div class="child child19">Child19</div>
+        <div class="child child20">Child20</div>
+    </div>
+</body>
+
+</html>

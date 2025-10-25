@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            background-color: rgb(5, 168, 250);
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+        }
+
+        input[type='text'] {
+            border: 1px solid rgb(80, 80, 255);
+            height: 30px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        div {
+            margin: 10px;
+        }
+
+        input[type='date'] {
+            border: 2px dashed blue;
+            height: 30px;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .container {
+            width: 800px;
+            margin: 20px;
+            border: 1px solid green;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px 5px lightgray;
+        }
+
+        hr {
+            border: 0.1px solid lightgray;
+        }
+
+        button {
+            background-color: crimson;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 150px;
+            border-radius: 10px;
+            font-variant: all-small-caps;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Registration Form</h1>
+        <hr>
+        <div>
+            <label for="input1">First Name: </label>
+            <input type="text" id="input1" placeholder="john">
+        </div>
+        <div>
+            <label for="input2">Last Name: </label>
+            <input type="text" id="input2">
+        </div>
+        <div>
+            <label for="input1">Date of Birth </label>
+            <input type="date" id="input1">
+        </div>
+        <hr>
+        <div>
+            <button>submit</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

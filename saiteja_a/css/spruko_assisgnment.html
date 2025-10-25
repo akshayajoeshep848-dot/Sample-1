@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spruko dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libertinus+Math&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            /* padding: 0; */
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: rgb(227, 227, 227);
+        }
+
+        .img {
+            background-color: rgb(235, 235, 235);
+            width: 55px;
+            height: 55px;
+            padding: 8px;
+            border-radius: 5px;
+
+        }
+
+        img {
+            width: 16px;
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid rgb(255, 233, 255);
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        td,
+        th {
+            border-right: none;
+            border-left: none;
+        }
+
+        thead th {
+            font-size: 11.5px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .cb {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .cc {
+            font-size: 11.5px;
+        }
+
+        t {
+            border: 3px solid violet;
+        }
+
+        .out-of-stock {
+            color: red;
+            place-content: center;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .in-stock {
+            color: rgb(94, 255, 0);
+            place-content: center;
+            text-align: center;
+            font-size: 10px;
+        }
+
+        .shopping-card {
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        table {
+            padding: 10px;
+            background-color: white;
+        }
+
+        .shopp {
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: inline-block;
+            font-size: 12px;
+            margin-left: 8px;
+        }
+
+        .main {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px;
+        }
+
+        .inpu {
+            height: 25px;
+            width: 50px;
+            border: none;
+        }
+
+        .cal {
+            display: flex;
+            border: 1px solid rgb(242, 188, 242);
+            width: 100px;
+            cursor: pointer;
+        }
+
+        .cal button {
+            background-color: rgb(242, 188, 242);
+            padding: 3px 9px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="shopp">
+            SHOPPING CARD
+        </div>
+        <table>
+            <thead>
+                <th colspan="3">PRODUCT</th>
+                <th>QUANTITY</th>
+                <th>PRICE</th>
+                <th>ACTION</th>
+            </thead>
+            <tr>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/14.png" class="img">
+                </td>
+                <td>
+                    <p class="cb"><b>COLLEGE BAG</b></p>
+                    <p class="cc">color:</p>
+                    <p class="cc">blackcolor</p>
+                </td>
+                <td class="out-of-stock">
+                    Out of stock
+                </td>
+                <td style="text-align: center; align-items: center; text-align: center;">
+                    <div class="cal">
+                        <button>-</button>
+                        <div class="inpu"></div>
+                        <button>+</button>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    $0.00
+                </td>
+                <td style="text-align: center; padding: 10px; cursor: pointer;">
+                    <img src="
+                https://cdn-icons-png.flaticon.com/512/8567/8567786.png" alt="">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/15.png"
+                        class="img">
+                </td>
+                <td>
+                    <p class="cb"><b>PARTY WARE SHOE</b></p>
+                    <p class="cc">color:</p>
+                    <p class="cc">pink</p>
+                </td>
+                <td class="in-stock">
+                    in stock
+                </td>
+                <td style="text-align: center; align-items: center;">
+                    <div class="cal">
+                        <button>-</button>
+                        <div class="inpu"></div>
+                        <button>+</button>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    $0.00
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://cdn-icons-png.flaticon.com/512/8567/8567786.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/19.png" class="img">
+                </td>
+                <td>
+                    <p class="cb"><b>SAMSUNG A2</b></p>
+                    <p class="cc">color:</p>
+                    <p class="cc">blackcolor</p>
+                </td>
+                <td class="out-of-stock">
+                    Out of stock
+                </td>
+                <td style="text-align: center; align-items: center;">
+                    <div class="cal">
+                        <button>-</button>
+                        <div class="inpu"></div>
+                        <button>+</button>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    $0.00
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://cdn-icons-png.flaticon.com/512/8567/8567786.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/16.png" class="img">
+                </td>
+                <td>
+                    <p class="cb"><b>FLOWER POT</b></p>
+                    <p class="cc">color:</p>
+                    <p class="cc">green and black color</p>
+                </td>
+                <td class="in-stock">
+                    in stock
+                </td>
+                <td style="text-align: center; align-items: center;">
+                    <div class="cal">
+                        <button>-</button>
+                        <div class="inpu"></div>
+                        <button>+</button>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    $0.00
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://cdn-icons-png.flaticon.com/512/8567/8567786.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/17.png" class="img">
+                </td>
+                <td>
+                    <p class="cb"><b>CHAIR</b></p>
+                    <p class="cc">color:</p>
+                    <p class="cc">green and black color</p>
+                </td>
+                <td class="in-stock">
+                    in stock
+                </td>
+                <td style="text-align: center; align-items: center;">
+                    <div class="cal">
+                        <button>-</button>
+                        <div class="inpu"></div>
+                        <button>+</button>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    $0.00
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://cdn-icons-png.flaticon.com/512/8567/8567786.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/18.png" class="img">
+                </td>
+                <td>
+                    <p class="cb"><b>WATCH</b></p>
+                    <p class="cc">color:</p>
+                    <p class="cc">green and black color</p>
+                </td>
+                <td class="out-of-stock">
+                    Out of stock
+                </td>
+                <td style="text-align: center; align-items: center;">
+                    <div class="cal">
+                        <button>-</button>
+                        <div class="inpu"></div>
+                        <button>+</button>
+                    </div>
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    $0.00
+                </td>
+                <td style="text-align: center; padding: 10px;">
+                    <img src="
+                https://cdn-icons-png.flaticon.com/512/8567/8567786.png" alt="">
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
