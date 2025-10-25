@@ -5,12 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random_Quote_Genrator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(242, 200, 200);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #quoteContainer {
+            background-color: white;
+            width: 600px;
+            height: 400px;
+            text-align: center;
+            place-content: center;
+            border-radius: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+
+        }
+
+        #button {
+            margin-top: 15px;
+            padding: 18px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: red;
+            margin-top: -40px;
+
+        }
+
+        #quote {
+            color: blue;
+            padding: 0px 50px;
+        }
+
+        #quote:hover {
+            color: red;
+            font-weight: bold;
+
+
+        }
+
+        #author {
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
     <div id="quoteContainer">
+        <h1>Inspirational Quotes</h1>
         <p id="quote"></p>
         <p id="author"></p>
+        <p id="greetings"></p>
         <button id="button">Click for quote</button>
 
     </div>
@@ -18,6 +76,8 @@
         let quote = document.getElementById("quote");
         let author = document.getElementById("author");
         let button = document.getElementById("button");
+
+        let greetings = document.getElementById("greetings");
 
         let quotes = [
 
@@ -37,8 +97,12 @@
             let random = Math.floor(Math.random() * quotes.length);
             quote.textContent = quotes[random].quote;
             author.textContent = "– " + quotes[random].author;
+            greetings.textContent = "thanks for click";
+            greetings.style.color = "orange"
         });
     </script>
+
+
 
 
 </body>
