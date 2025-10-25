@@ -23,5 +23,5 @@ button1.addEventListener("click", () => {
   let randomquote = quotes[Math.floor(Math.random() * quotes.length)];
     // console.log(randomquote);
   p1.textContent = randomquote.quote;
-  p2.textContent=randomquote.author
+  p2.textContent=`-- ${randomquote.author}`
 });
