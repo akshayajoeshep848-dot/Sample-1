@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage_form</title>
+    <style>
+        body {
+            background-color: rgb(239, 159, 159);
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #Localstorage_form {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            width: 450px;
+            height: 420px;
+            padding: 40px;
+            padding-top: 10px;
+            gap: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 10px;
+
+        }
+
+        h1 {
+            text-align: center;
+            color: red;
+        }
+
+        input {
+            padding: 15px 40px;
+            border-color: rgb(222, 208, 208);
+            ;
+            border-radius: 10px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        }
+
+        button {
+            padding: 15px 0px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        #button1 {
+            background-color: blue;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        #button2 {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #greeting {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Localstorage_form">
+        <h1>My info</h1>
+
+        <label>UserName:</label>
+        <input type="text" name="username" id="username">
+        <label>Password:</label>
+        <input type="password" name="password" id="password">
+        <button id="button1">Save to Browser</button>
+        <button id="button2">Clear Saved Data</button>
+        <p id="greeting"></p>
+
+    </div>
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let greeting = document.getElementById("greeting");
+        let button1 = document.getElementById("button1");
+        let button2 = document.getElementById("button2");
+
+        //save data
+        button1.addEventListener("click", () => {
+            let usernames = username.value.trim();
+            let passwords = password.value.trim();
+
+            //for empty filed conditon;
+
+            if (usernames === "" || passwords === "") {
+                greeting.textContent = "Hello User Please fill fileds !";
+                greeting.style.color = "red";
+                return;
+            };
+
+            //add to local storage
+
+            localStorage.setItem("usernames", usernames);
+            localStorage.setItem("passwords", passwords);
+
+            console.log(localStorage)
+            greeting.style.color = "green";
+            greeting.textContent = "Data saved to localStorage ";
+
+            // Clear inputs after submit
+            username.value = "";
+            password.value = "";
+        });
+
+        // Clear Data
+        button2.addEventListener("click", () => {
+            localStorage.clear();
+            greeting.style.color = "red";
+            greeting.textContent = "Data is Cleared in Local storage ";
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

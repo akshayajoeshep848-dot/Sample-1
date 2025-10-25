@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to_do_list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Berkshire+Swash&family=Creepster&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Bubbles&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: rgb(241, 237, 237);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+
+        }
+
+        #content-container {
+            width: 650px;
+            height: 400px;
+            background-color: white;
+            padding: 25px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 15px;
+            /* overflow: scroll; */
+
+        }
+
+
+
+        h1 {
+            color: #6b5acc;
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            font-weight: 900;
+            font-family: "Lilita one";
+
+        }
+
+
+
+        input {
+            padding: 15px 50px;
+            margin-left: 10px;
+            border-radius: 10px;
+            border-color: rgb(235, 214, 214);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            border-width: 0;
+
+
+        }
+
+        button {
+            padding: 15px;
+            margin-left: 10px;
+            border: none;
+
+            border-radius: 10px;
+
+            font-weight: 600;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+        }
+
+        button:hover {
+            background-color: #6b5acc;
+            color: white;
+            cursor: pointer;
+
+        }
+
+        #add {
+            background-color: #6b5acc;
+            color: white;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        }
+
+        #all,
+        all,
+        active,
+        completed,
+        clear completed {
+            margin-top: 25px;
+        }
+
+
+        #clearcompleted {
+            margin-left: 232px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+
+        <div id="content-container">
+            <h1><i class="fa-brands fa-slack" style="margin-right: 15px;"></i>My To-Do List</h1>
+            <input type="text" name=" addtask" id="addtask" placeholder="Add a new task...">
+            <input type="text" name="duration" id="duration" placeholder="Duration (e.g., 1hour)">
+            <button id="add">Add</button>
+            <button id="all">All</button>
+            <button id="active">Active</button>
+            <button id="completed">completed</button>
+            <button id="clearcompleted">clear completed</button>
+
+            <div id="tasklist">
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+        // let add = document.getElementById("add");
+        // let addtask = document.getElementById("addtask");
+        // let duration = document.getElementById("duration");
+
+        // let taskDiv = document.createElement("div");
+
+
+
+        // let tasks = [];
+        // add.addEventListener("click", (event) => {
+        //     let addtasks = addtask.value;
+        //     let durations = duration.value;
+
+        //     if (addtasks === "") {
+        //         alert("Please enter a task");
+        //         return;
+        //     }
+
+        //     let tasklist = document.getElementById("tasklist");
+        //     tasklist.style.backgroundColor = "#f1eded";
+        //     tasklist.style.color = "black";
+        //     tasklist.style.padding = "10px";
+        //     tasklist.style.borderRadius = "20px";
+        //     tasklist.style.marginTop = "20px";
+        //     tasklist.style.display = "flex";
+        //     tasklist.style.flexDirection = "row";
+        //     tasklist.style.gap = "150px";
+        //     taskDiv.style.alignItems = "center";
+        //     taskDiv.style.justifyContent = "space-between";
+        //     taskDiv.style.boxShadow = "rgba(0, 0, 0, 0.1) 0px 4px 6px";
+
+
+
+
+
+        //     tasklist.innerHTML = `
+        //         <strong>${addtasks}</strong><br>
+        //         <small>${durations}</small>
+        //     `;
+
+
+
+        //     // Add task content + delete icon at end
+        //     tasklist.innerHTML = `
+        //         <div>
+        //             <strong>${addtasks}</strong><br>
+        //             <small>${durations}</small>
+        //         </div>
+        //         <i class="fa-solid fa-trash" id="deleteIcon" 
+        //            style="color:#6b5acc; cursor:pointer; font-size:22px; display:flex;"></i>
+        //     `;
+
+
+
+        //     // Delete icon clears content
+
+        //     let deleteIcon = document.getElementById("deleteIcon");
+        //     deleteIcon.addEventListener("click", () => {
+        //         tasklist.innerHTML = ""; // clear content
+        //         tasklist.style.backgroundColor = "transparent";
+        //         tasklist.style.boxShadow = "none";
+
+        //     });
+        //     tasklist.appendChild(taskDiv);
+
+
+
+
+
+
+
+        //     // Clear input fields
+        //     addtask.value = "";
+        //     duration.value = "";
+        // });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let add = document.getElementById("add");
+        let addtask = document.getElementById("addtask");
+        let duration = document.getElementById("duration");
+        let tasklist = document.getElementById("tasklist");
+
+        add.addEventListener("click", () => {
+            let addtasks = addtask.value.trim();
+            let durations = duration.value.trim();
+
+            if (addtasks === "") {
+                alert("Please enter a task");
+                return;
+            }
+
+            // Create one task row
+            let taskDiv = document.createElement("div");
+            taskDiv.style.backgroundColor = "#f1eded";
+            taskDiv.style.color = "black";
+            taskDiv.style.padding = "10px 15px";
+            taskDiv.style.borderRadius = "10px";
+            taskDiv.style.marginTop = "20px";
+            taskDiv.style.display = "flex";
+            taskDiv.style.alignItems = "center";
+            taskDiv.style.justifyContent = "space-between";
+            taskDiv.style.boxShadow = "rgba(0, 0, 0, 0.1) 0px 4px 6px";
+
+
+            // Inner content (task + duration + delete icon)
+            taskDiv.innerHTML = `
+            <div style="display:flex; align-items:center; gap:40px;">
+                <strong>${addtasks}</strong>
+                <small style="color:gray;font-style:bold;">${durations}</small>
+            </div>
+            <i class="fa-solid fa-trash" style="color:red; cursor:pointer; font-size:22px;"></i>
+        `;
+
+            // Delete only this task when icon clicked
+            let deleteIcon = taskDiv.querySelector(".fa-trash");
+            deleteIcon.addEventListener("click", () => {
+                tasklist.removeChild(taskDiv);
+            });
+
+            // Add the row to the tasklist
+            tasklist.appendChild(taskDiv);
+
+            // Clear input fields
+            addtask.value = "";
+            duration.value = "";
+        });
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

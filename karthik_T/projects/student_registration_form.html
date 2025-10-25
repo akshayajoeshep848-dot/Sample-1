@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student_registration_form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0655b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: white;
+            width: 600px;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        }
+
+        form {
+            margin: 20px;
+
+
+        }
+
+        img {
+            width: 480px;
+            margin-left: 50px;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+
+        }
+
+        input {
+            padding: 8px 50px;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: 5px;
+            border-color: orange;
+
+        }
+
+        select {
+            padding: 8px 80px;
+            border-radius: 5px;
+            margin-top: 10px;
+            margin-left: 5px;
+            border-color: orange;
+        }
+
+        button {
+            border: none;
+            background-color: rgb(28, 28, 228);
+            color: white;
+            padding: 10px 50px;
+            margin-left: 200px;
+            margin-top: 15px;
+        }
+
+
+        h1 {
+            text-align: center;
+            color: red;
+            font-style: italic;
+        }
+
+        hr {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <img src="log-_st.png">
+        <h1>Student Registration Form</h1>
+        <hr style="color:red;">
+        <form id="form">
+            <label for="firstname">Student Name</label>
+            <input type="text" name="firstname" placeholder="First" id="firstname">
+            <input type="text" name="lastname" placeholder="Last" id="lastname">
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" value="Male" id="male">Male
+            <input type="radio" name="gender" value="Female" id="female" style="margin-left: 2%;">Female
+
+            <label for="address">Address</label>
+            <input type="text" name="address1" placeholder="Street Address " style="padding-left: 330px;" id="add1">
+            <input type="text" name="address2" placeholder="Street Address line2" style="padding-left: 330px;"
+                id="add2">
+            <input type="text" name="city" placeholder="City" id="city">
+            <input type="text" name="region" placeholder="Region" id="region">
+            <input type="text" name="pincode" placeholder='Postal/Zip-code' id="pincode">
+            <select id="country">
+                <option value="">Select country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+                <option>Canada</option>
+            </select>
+
+            <label for="email">E-Mail & PhoneNumber</label>
+            <input type="text" name="email" placeholder="Enter Email" id="email">
+            <input type="number" name="phone" placeholder="Enter PhoneNumber" id="phone">
+
+            <button id="button">Submit</button>
+            <button id="reset">reset</button>
+
+        </form>
+    </div>
+
+    <script>
+        let button = document.getElementById("button");
+
+        button.addEventListener("click", function (event) {
+            event.preventDefault(); // stop form from refreshing page
+
+            let studentObj = {
+                firstname: document.getElementById("firstname").value,
+                lastname: document.getElementById("lastname").value,
+                dob: document.getElementById("dob").value,
+                gender: document.getElementById("male").checked ? "Male" :
+                    document.getElementById("female").checked ? "Female" : "",
+                address1: document.getElementById("add1").value,
+                address2: document.getElementById("add2").value,
+                city: document.getElementById("city").value,
+                region: document.getElementById("region").value,
+                pincode: document.getElementById("pincode").value,
+                country: document.getElementById("country").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value
+            };
+
+            console.log(studentObj);
+            // document.getElementById("form").reset();
+
+        });
+    </script>
+</body>
+
+</html>

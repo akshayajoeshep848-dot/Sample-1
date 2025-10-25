@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caluclator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(191, 191, 239);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #main-container {
+            background-color: white;
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+
+
+        }
+
+        input {
+            width: 90%;
+            padding: 40px 10px;
+            border-radius: 5px;
+            margin: 0px px;
+        }
+
+        button {
+            padding: 20px;
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-container">
+        <input type="text" id="display" disabled>
+        <div id="buttons">
+            <button onclick="cleardisplay()"
+                style="background-color: rgb(239, 167, 34);color: white; border: none;border-radius: 10px;">AC</button>
+            <button onclick="deletedisplay()"
+                style="background-color: antiquewhite; color: red; font-size: 15px;border: none;border-radius: 10px;">X</button>
+            <button onclick="appendvalue('%')"
+                style="background-color: rgb(239, 167, 34);color:green; border: none;border-radius: 10px;">%</button>
+            <button onclick="appendvalue('*')"
+                style="background-color: rgb(239, 167, 34);color: blue; border: none;border-radius: 10px;">*</button>
+            <button onclick="appendvalue('/')"
+                style="background-color: rgb(239, 167, 34);color:brown; border: none;border-radius: 10px;">/</button>
+            <button onclick="appendvalue('7')" style="border-color:orange; border-radius:10px">7</button>
+            <button onclick="appendvalue('8')" style="border-color:orange; border-radius:10px">8</button>
+            <button onclick="appendvalue('9')" style="border-color:orange; border-radius:10px">9</button>
+            <button onclick="appendvalue('4')" style="border-color:orange; border-radius:10px">4</button>
+            <button onclick="appendvalue('5')" style="border-color:orange; border-radius:10px">5</button>
+            <button onclick="appendvalue('6')" style="border-color:orange; border-radius:10px">6</button>
+            <button onclick="appendvalue('1')" style="border-color:orange; border-radius:10px">1</button>
+            <button onclick="appendvalue('2')" style="border-color:orange; border-radius:10px">2</button>
+            <button onclick="appendvalue('3')" style="border-color:orange; border-radius:10px">3</button>
+            <button onclick="appendvalue('0')" style="border-color:orange; border-radius:10px">0</button>
+            <button onclick="appendvalue('.')" style="border-color:orange; border-radius:10px">.</button>
+            <button onclick="caluclate()" class="equal"
+                style="background-color: orange; border-radius:10px;border-color: red;color: white;">=</button>
+
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        let display = document.getElementById("display");
+
+        function appendvalue(value) {
+            display.value += value
+        }
+        function cleardisplay() {
+            display.value = ""
+        }
+
+        function deletedisplay() {
+            display.value = display.value.slice(0, -1);
+        }
+
+        function caluclate() {
+            try {
+                display.value = eval(display.value);
+            }
+            catch (error) {
+                display.value = "Error"
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
