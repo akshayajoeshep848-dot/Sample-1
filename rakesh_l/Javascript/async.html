@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #userDetails {
+        background-color: aqua;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px,
+          rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px,
+          rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>User Information</h2>
+    <div id="userDetails">User details displayed here... Click show data to display</div>
+    <button id="btn1">show data</button>
+    <button id="btn2">Hide data</button>
+    <script>
+      //   async function greet() {
+      //     return "Hello Chimtu";
+      //   }
+      //   console.log(greet())
+      //   greet().then((res)=>console.log(res))
+      //   greet().then(console.log)
+
+      async function fetchdata(url) {
+        // console.log("starting the fetch call");
+        let res = await fetch(url);
+        let data = await res.json();
+        // console.log(breeds);
+        // console.log("End fetch call");
+        return data;
+      }
+      const url1 = "https://jsonplaceholder.typicode.com/users/1";
+      const url2 = "https://dogapi.dog/api/v2/breeds";
+      const userDiv = document.getElementById("userDetails");
+      let btn1=document.getElementById("btn1");
+      let btn2=document.getElementById("btn2");
+      btn1.addEventListener("click",()=>{
+        userDiv.innerHTML = '';
+        fetchdata(url1).then((res) => {
+        let data = res;
+        console.log(data);
+        let p1 = document.createElement("p");
+        let p2 = document.createElement("p");
+        let p3 = document.createElement("p");
+        let p4 = document.createElement("p");
+        let p5 = document.createElement("p");
+        userDiv.append(p1, p2, p3, p4, p5);
+        p1.textContent = `ID :  ${data.id}`;
+        p2.textContent = `Name : ${data.name}`;
+        p3.textContent = `Username : ${data.username}`;
+        p4.textContent = `Email : ${data.email}`;
+        p5.textContent = `City : ${data.address.city}`;
+      });
+      })
+      btn2.addEventListener("click",()=>{
+        userDiv.innerHTML = '';
+        userDiv.textContent="Data cleared"
+      })
+      //   fetchdata(url2).then((res) => console.log(res));
+    </script>
+  </body>
+</html>
