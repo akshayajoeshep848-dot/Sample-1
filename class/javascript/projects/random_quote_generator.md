@@ -35,3 +35,100 @@ The system shall perform the following functions:
   - `quote`: A string containing the full text of the quote.
   - `author`: A string containing the name of the author.
 - **3.3 Data Requirement:** The data source **shall** contain a minimum of five (5) unique quote objects to ensure a varied user experience.
+
+## Sample Data
+
+```javascript
+[
+  {
+    quote: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs",
+  },
+  {
+    quote:
+      "In three words I can sum up everything I've learned about life: it goes on.",
+    author: "Robert Frost",
+  },
+  {
+    quote:
+      "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+    author: "Ralph Waldo Emerson",
+  },
+  {
+    quote:
+      "The future belongs to those who believe in the beauty of their dreams.",
+    author: "Eleanor Roosevelt",
+  },
+  {
+    quote:
+      "It is our choices, Harry, that show what we truly are, far more than our abilities.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "Don't cry because it's over, smile because it happened.",
+    author: "Dr. Seuss",
+  },
+  {
+    quote: "Be the change that you wish to see in the world.",
+    author: "Mahatma Gandhi",
+  },
+  {
+    quote:
+      "If you want to live a happy life, tie it to a goal, not to people or things.",
+    author: "Albert Einstein",
+  },
+  {
+    quote:
+      "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+    author: "Nelson Mandela",
+  },
+  {
+    quote: "The purpose of our lives is to be happy.",
+    author: "Dalai Lama",
+  },
+  {
+    quote: "You only live once, but if you do it right, once is enough.",
+    author: "Mae West",
+  },
+  {
+    quote: "Get busy living or get busy dying.",
+    author: "Stephen King",
+  },
+  {
+    quote:
+      "Many of life's failures are people who did not realize how close they were to success when they gave up.",
+    author: "Thomas A. Edison",
+  },
+  {
+    quote:
+      "If life were predictable it would cease to be life, and be without flavor.",
+    author: "Eleanor Roosevelt",
+  },
+  {
+    quote: "Life is what happens when you're busy making other plans.",
+    author: "John Lennon",
+  },
+  {
+    quote:
+      "Tell me and I forget. Teach me and I remember. Involve me and I learn.",
+    author: "Benjamin Franklin",
+  },
+  {
+    quote: "It does not do to dwell on dreams and forget to live.",
+    author: "J.K. Rowling",
+  },
+  {
+    quote: "What we think, we become.",
+    author: "Buddha",
+  },
+  {
+    quote:
+      "Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.",
+    author: "Bill Keane",
+  },
+  {
+    quote: "That which does not kill us makes us stronger.",
+    author: "Friedrich Nietzsche",
+  },
+];
+```
