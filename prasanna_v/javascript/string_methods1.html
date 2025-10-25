@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string methods</title>
+</head>
+
+<body>
+    <h1>string methods</h1>
+    <script>
+        let str = "hello,world";
+        //char at
+        console.log(str.charAt(0) == "h");
+        console.log(str.charAt(10));
+
+
+        //includes:string contain the characters of a specified string,returning true or false
+
+        const sentence = "a quick brown fox jumps over the lazy dog";
+        console.log(sentence.includes("fox"));
+
+        //replace
+        console.log(sentence.replace("brown", "white"));
+        console.log(sentence.replace("fox", "harika"));
+
+        //substring
+
+        const str1 = "javascript";
+        const sub = str1.substring(9);
+        const sub1 = str1.substring(8);
+        const sub2 = str1.substring(7);
+        const sub3 = str1.substring(6);
+        const sub4 = str1.substring(5);
+        const sub5 = str1.substring(4);
+
+        console.log(sub);
+        console.log(sub1);
+        console.log(sub2);
+        console.log(sub3);
+        console.log(sub4);
+        console.log(sub5);
+
+        //toLowerCase
+        let js = "Javascript";
+        let lower = js.toLowerCase("J");
+        console.log(lower);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

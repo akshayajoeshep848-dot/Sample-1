@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Pet {
+            constructor(type, name) {
+                this.type = type;
+                this.name = name;
+            }
+            see() {
+                console.log(`${this.name}is seeing harika`)
+            }
+        }
+
+        class Dog extends Pet {
+            constructor(type, name, breed) {
+                super(type, name);
+                this.breed = breed;
+
+            }
+        }
+
+        let dog1 = new Dog("Dog", "chimtu", "oorakukka");
+
+        console.log(dog1.type);
+        console.log(dog1.name);
+        console.log(dog1.breed);
+        dog1.see();
+
+
+        class Car {
+            constructor(model, color) {
+                this.model = model;
+                this.color = color;
+            }
+            desription() {
+                console.log(`${this.model} is in black color and six seater`)
+            }
+        }
+        let car = new Car("kia", "black");
+        console.log(car.model);
+        console.log(car.color);
+        car.desription();
+
+
+
+
+    </script>
+
+</body>
+
+</html>

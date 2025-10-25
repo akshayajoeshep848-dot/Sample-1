@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position properties</title>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        /* .main {
+            background-color: antiquewhite;
+        } */
+
+        .div {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .div1 {
+            position: relative;
+            background-color: blue;
+
+
+        }
+
+        .div2 {
+            background-color: brown;
+            position: relative;
+            top: -110px;
+            left: 110px;
+        }
+
+        .div3 {
+            background-color: chartreuse;
+            position: relative;
+            top: -220px;
+            left: 220px
+        }
+
+        .div4 {
+            background-color: chocolate;
+            position: relative;
+            top: -330px;
+            left: 330px
+        }
+
+        .div5 {
+            background-color: darkgoldenrod;
+            position: relative;
+            top: -440px;
+            left: 440px
+        }
+    </style>
+</head>
+
+<body>
+    <!-- position:relative is positioned relative to its normal position.setting top,right,botton,and left properties will shift away from its original position-->
+
+    <div class="main">
+        <div class=" div div1">item1</div>
+        <div class=" div div2">item2</div>
+        <div class=" div div3">item3</div>
+        <div class=" div div4">item4</div>
+        <div class=" div div5">item5</div>
+    </div>
+
+</body>
+
+</html>

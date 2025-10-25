@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: skyblue;
+            color: brown;
+            border: 3px solid black;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 10px;
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>TEAM PROJECT</h2>
+    <button onclick="console.log(team.project_manager.work())">projectManager</button>
+    <button onclick="console.log(team.team_Leader.work())">TEAMLEADER</button>
+    <button onclick="console.log(team.senior_developer.work())">SENIOR DEVELOPER</button>
+    <button onclick="console.log(team.junior_developer.work())">JUNIOR DEVELOPER</button>
+    <button onclick="console.log(team.business_analysist.work())">BUSINESS ANALYSIST</button>
+    <hr />
+    <h2>Testing team</h2>
+    <button onclick="console.log(team.testing_manager.work())">TESTING MANAGER</button>
+    <button onclick="console.log(team.testing_teamleader.work())">TESTING TEAM LEADER</button>
+    <button onclick="console.log(team.senior_tester.work())">SENIOR TESTER</button>
+    <button onclick="console.log(team.junior_tester.work())">JUNIOR TESTER</button>
+    <hr />
+
+    <button onclick="console.log(student.student())">Student</button>
+    <hr />
+
+    <button onclick="console.log(employee.employee())">EMPLOYEE</button>
+    <script>
+        const team = {
+            project_manager: {
+                name: "kiran",
+                age: 50,
+                id: 12345,
+                role: "projectManager",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, his age is ${this.age}, his id ${this.id}`;
+
+                },
+            },
+            team_Leader: {
+                name: "pavan",
+                age: 25,
+                id: 12346,
+                role: "TEAMLEADER",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, his age is ${this.age}, his id ${this.id}`;
+                },
+            },
+
+            senior_developer: {
+                name: "manoj",
+                age: 45,
+                id: 12347,
+                role: "SENIOR DEVELOPER",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, his age is ${this.age}, his id ${this.id}`;
+                },
+            },
+
+            junior_developer: {
+                name: "ravi",
+                age: 26,
+                id: 12348,
+                role: "JUNIOR DEVELOPER",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, his age is ${this.age}, his id ${this.id}`;
+                },
+            },
+
+            business_analysist: {
+                name: "raja",
+                age: 30,
+                id: 12349,
+                role: "BUSINESS ANALYSIST",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, his age is ${this.age}, his id ${this.id}`;
+                },
+            },
+
+
+            testing_manager: {
+                name: "prasanna",
+                age: 25,
+                id: 12346,
+                role: "TESTING MANAGER",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, her age is ${this.age}, her id ${this.id}`;
+                },
+            },
+
+            testing_teamleader: {
+                name: "likitha",
+                age: 45,
+                id: 12347,
+                role: "TESTNG TEAM LEADER",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, her age is ${this.age}, her id ${this.id}`;
+                },
+            },
+
+            junior_tester: {
+                name: "harika",
+                age: 26,
+                id: 12348,
+                role: "JUNIOR TESTER",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, her age is ${this.age}, her id ${this.id}`;
+                },
+            },
+
+            senior_tester: {
+                name: "sujitha",
+                age: 30,
+                id: 12349,
+                role: "SENIOR TESTER",
+                work: function () {
+                    return `${this.name}, is a ${this.role}, her age is ${this.age}, her id ${this.id}`;
+                },
+            },
+        };
+
+
+        const student = {
+            name: "presi",
+            age: 21,
+            college: "NRIIT",
+            rollno: 465,
+            year: "3rd year",
+            branch: "ECE",
+            student: function () {
+                return `${this.name}, her age is ${this.age}, studied in ${this.college}, her rollno is  ${this.rollno} at present she is ${this.year} ${this.branch}`;
+            },
+        };
+
+        const employee = {
+            name: "sithamma",
+            age: 30,
+            company: "TCS",
+            emp_id: 12345,
+            role: "DEVELOPER",
+            salary: 75000,
+            employee: function () {
+                return `${this.name},her age is ${this.age} she is working in ${this.company} and her id id ${this.emp_id} her role in company ${this.role} her monthly salary is ${this.salary} `;
+            },
+
+        };
+
+
+        // console.log(team.project_manager.work());
+        // console.log(team.team_Leader.work());
+        // console.log(team.senior_developer.work());
+        // console.log(team.junior_developer.work());
+        // console.log(team.business_analysist.work());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            background-color: rgb(36, 135, 54);
+            display: flex;
+            height: 400px;
+            /* width: 1000px; */
+            flex-direction: row;
+            gap: 10px;
+            justify-content: space-between;
+
+
+
+
+        }
+
+
+        .flex-item1 {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 10px;
+            text-align: center;
+            place-content: center;
+            align-self: flex-start;
+        }
+
+        .flex-item2 {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 10px;
+            text-align: center;
+            place-content: center;
+            align-self: center;
+
+        }
+
+        .flex-item3 {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 10px;
+            text-align: center;
+            place-content: center;
+            align-self: flex-end;
+
+        }
+
+        .flex-item:hover {
+            color: blue;
+            background-color: burlywood;
+        }
+
+        .flex-item1:hover {
+            color: blue;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="flex-item1 flex-item1">flex-item1</div>
+        <div class="flex-item flex-item2">flex-item2</div>
+        <div class="flex-item flex-item3">flex-item3</div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    "this is body"
+    <h1>ul</h1>
+    <div id="div"></div>
+    <ul id="ul">
+        <li id="li-1">item1</li>
+        <li id="li-2">item1</li>
+        <li id="li-3">item2</li>
+        <li id="li-4">item3</li>
+        <li id="li-5">item4</li>
+    </ul>
+    <script>
+        //parentnode=>the parent node
+        //childNodes=>a nodelist of child nodes(including text nodes)
+        //children=>an html collection of child nodes(ignores text nodes)
+        //firstElementChild=>the first child element
+        //lastElementChild=>the last child element
+        //previousElementSibling=>the previous sibling element(adjacent  elementnode)
+        //nextElementSibling=>the next sibling element(adjacent element nodes)
+        //nextsibling/previous=>adjacent nodes
+
+
+
+
+
+        let ul = document.getElementById("ul");
+        ul.firstElementChild.style.backgroundColor = "pink";
+        ul.lastElementChild.style.backgroundColor = "green";
+        ul.children[2].style.backgroundColor = "yellow";
+
+
+        // console.log(ul.parentNode);
+        // console.log(ul.childNodes);
+        // console.log(ul.children);
+        // console.log(ul.firstElementChild);
+        // console.log(ul.lastElementChild);
+        // console.log(ul.previousElementSibling);
+        // console.log(ul.nextElementSibling);
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

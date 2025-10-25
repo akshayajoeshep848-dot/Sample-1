@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="presi"></div>
+    <script>
+        async function fetchData() {
+            let responce = await fetch("https://dogapi.dog/api/v2/breeds");
+            let dogs = await responce.json();
+            console.log(dogs);
+            return dogs;
+
+
+            let container = document.getElementById(".presi");
+            dogs.forEach((dog) => {
+                let dogContainer = document.createElement("div");
+                let dogbreed = document.createElement("h3");
+                let dogbreedDescription = document.createElement("p");
+
+                //set classes
+                dogContainer.classList.add("dog-container");
+                dogbreed.classList.add("dog-breed");
+                dogbreedDescription.classList.add("dog-description");
+
+                //assign values
+
+                dogbreed.textContent = dog.attributes.name;
+                dogbreedDescription.textContent = dog.attributes.description;
+
+
+                dogContainer.append(dogbreed);
+                dogContainer.append(dogbreedDescription);
+                container.appendChild(dogContainer);
+            })
+        };
+
+
+        // fetchData("https://dogapi.dog/api/v2/breeds").then((value) => {
+        //     let div = document.getElementById("presi");
+        //     let data = document.createElement("p");
+
+        //     data.classList.add("data");
+
+        //     data.textContent = `data.${data.attributes}`;
+        //     div.appendChild(div)
+
+
+        // })
+    </script>
+
+</body>
+
+</html>

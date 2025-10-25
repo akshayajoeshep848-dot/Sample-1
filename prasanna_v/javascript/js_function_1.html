@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- /function is a set of statements that perform a task or calculate a value.to use a function,you must define it some where in the scope from which you wish to call it -->
+    <!-- syntax : function functionName(parameter1 parameter2,....) -->
+
+    <h1>functions</h1>
+    <script>
+        function greet(name) {
+            console.log(`hello ${name}`);
+        }
+        //function call
+        greet("presi");
+        greet(10);
+
+
+        //write a function to display if a user is eligible to vote based on age
+
+        function eligibletovote(age) {
+            age < 18
+                ? console.log("NOT ELIGIBLE TO VOTE")
+                : console.log("eligible to vote");
+        }
+        eligibletovote(59);
+
+
+        function fullname(firstname, middlename, lastname) {
+            console.log(` myfullname:${firstname} ${middlename}${lastname}`)
+        }
+        fullname("lakshmi", "prasanna", "vadlamudi");
+
+
+        //variable Hoisting "while compiling  where ever you declare variable  it goes up"
+
+        //write a function to print 1to n
+
+        function num(number) {
+            console.log(`start of function..`)
+            // console.log(`printing value of i:${i}`);
+            for (let i = 1; i <= number; i++) {
+                console.log(i);
+            }
+            // console.log(`printing value of i:${i}`);
+            console.log(`end of function`)
+        }
+
+        num(50);
+
+        //***imp (scope where the variable is defined(block scope(it avaliable inside particular block(let,const)),function scope,globe scope(var because hoisting)
+
+        function fact(positiveinteger) {
+            console.log(`positveinteger:${positiveinteger}`)
+            let factorial = 1;
+            for (i = 1; i <= positiveinteger; i++); {
+                factorial *= i;
+            }
+            console.log(factorial)
+        }
+        fact(5);
+
+    </script>
+
+</body>
+
+</html>

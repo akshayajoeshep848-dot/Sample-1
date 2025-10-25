@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element</title>
+</head>
+
+<body>
+    <h1>create element</h1>
+    <div id="div-container"></div>
+    <script>
+
+        let fruits = ["apple", "mango", "grape", "berry", "papaya", "apple", "mango", "grape", "berry", "papaya"];
+        let vegetables = ["vankaya", "bendakaya", "dondakaya", "dosakaya", "chikkudukaya", "sorakaya", "potlakaya", "gummadikaya", "beerakaya", "kakarakaya"];
+        let heading2 = document.createElement("h2");
+        heading2.innerText = ' h2 created by create element';
+        heading2.style.backgroundColor = "pink";
+
+        document.body.append(heading2);
+
+        let container = document.getElementById("div-container");
+        container.append(heading2);
+
+
+
+        //creating list element
+
+        let orderedList = document.createElement("ol");
+
+        // let ListItem = document.createElement("li");
+        // ListItem.innerText = "item1";
+        // let ListItem1 = document.createElement("li");
+        // ListItem1.innerText = "item2";
+
+        // orderedList.append(ListItem);
+        // orderedList.append(ListItem1); 
+
+
+        function getItems(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                let ListItem = document.createElement("li");
+                ListItem.innerText = arr[i];
+                ListItem.style.backgroundColor = "pink"
+                ListItem.style.marginTop = "5px"
+                orderedList.append(ListItem);
+            }
+        }
+        getItems(fruits);
+        getItems(vegetables);
+
+
+        document.body.append(orderedList);
+
+
+    </script>
+
+</body>
+
+</html>

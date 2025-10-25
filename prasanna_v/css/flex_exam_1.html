@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex example1</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid;
+            height: 50vh;
+            width: 50vh;
+            gap: 5px;
+            background-color: coral;
+        }
+
+        .section1 {
+            background-color: orange;
+            height: 10%;
+        }
+
+        .section2 {
+            height: 40%;
+            background-color: cadetblue;
+            display: flex;
+            gap: 5px;
+
+        }
+
+        .div3,
+        .div4 {
+            flex: 1
+        }
+
+        .div3 {
+            background-color: blueviolet;
+        }
+
+        .div4 {
+            background-color: rgb(8, 84, 17);
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+        }
+
+        .div5,
+        .div6 {
+            flex: 1;
+            background-color: rgb(15, 204, 113);
+
+        }
+
+        .section3 {
+            background-color: cadetblue;
+            height: 25%;
+            display: flex;
+            gap: 5px;
+        }
+
+        .flexitem1,
+        .flexitem2 {
+            flex: 1;
+            background-color: rgb(43, 119, 226);
+
+
+        }
+
+        .secton4 {
+            height: 25%;
+            background-color: cadetblue;
+            display: flex;
+            gap: 5px;
+        }
+
+        .flexrow1,
+        .flexrow2,
+        .flexrow3 {
+            flex: 1;
+            background-color: blueviolet;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="section1">flexitem1</div>
+        <div class="section2">
+            <div class="div3">coloum1</div>
+            <div class="div4">
+                <div class="div5">flexrow1</div>
+                <div class="div6">flexrow2</div>
+
+            </div>
+        </div>
+        <div class="section3">
+            <div class="flexitem1">flexrows1</div>
+            <div class="flexitem2">flexrows2</div>
+
+        </div>
+        <div class="secton4">
+            <div class="flexrow1">flexitem1</div>
+            <div class="flexrow2">flexitem2</div>
+            <div class="flexrow3">flexitem3</div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

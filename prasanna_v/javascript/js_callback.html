@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>callback function</h1>
+    <!-- it passed an argument to another function ,which is then invoked inside the outer function to complete some kind of routine or action -->
+    <!-- understsnding callback=> a call back function that is called after another function has finished executing.this pattern expecillay useful when dealing with operator that take an unknow amount oftime,such as reading files,making http request -->
+
+    <script>
+
+        function greet(name, callback) {
+            console.log("hello," + name + "!");
+            callback();
+        }
+        function saygoodbye() {
+            console.log("goodbye!");
+        }
+        greet("presi", saygoodbye);
+
+
+        //function operation
+        function operation(num1, num2, oper) {
+            console.log(`you have given${num1, num2}`)
+            oper(num1, num2);
+        }
+        function sum(num1, num2) {
+            console.log(num1 + num2);
+        }
+        function multiply(num1, num2) {
+            console.log(num1 * num2);
+        }
+        function division(num1, num2) {
+            console.log(num1 / num2);
+        }
+        function mod(num1, num2) {
+            console.log(num1 % num2);
+        }
+        console.log(operation(10, 2, sum));
+        console.log(operation(10, 2, multiply));
+        console.log(operation(10, 2, division));
+        console.log(operation(10, 2, mod));
+
+    </script>
+</body>
+
+</html>

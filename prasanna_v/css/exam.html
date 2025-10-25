@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML CSS Exam</title>
+<style>
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-box {
+  width: 400px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 2px solid black;
+  outline: 2px dashed red;
+  position: relative; /* For positioning the inner div */
+}
+
+h1 {
+  font-family: Georgia;
+  font-size: 24px;
+  color: darkblue;
+}
+
+p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+  overflow: hidden;
+  height: 50px;
+}
+
+.bottom-right-box {
+  width: 100px;
+  height: 30px;
+  background-color: green;
+  z-index: 999;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+</style>
+</head>
+<body>
+
+<div class="main-box">
+  <h1>Welcome to Home!</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <div class="bottom-right-box"></div>
+</div>
+
+</body>
+</html>

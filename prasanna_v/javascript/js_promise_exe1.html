@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fetchData = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const data = { id: 1, message: 'Hello, World!' };
+                if (data) {
+                    resolve(data);
+                } else {
+                    reject('No data found');
+                }
+            }, 2000);
+        });
+
+        fetchData
+            .then((result) => console.log('Data received:', result))
+            .catch((error) => console.error('Error:', error));
+    </script>
+
+</body>
+
+</html>

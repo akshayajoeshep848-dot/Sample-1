@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>js numbers</h1>
+
+    <script>
+        //numbers range from 10^5 to 10^-5
+        let age1 = 22;
+        let age2 = 22.34;
+
+        let infinity = 1 / 0;
+        let neginfinity = -1 / 0;
+        let age3 = "fourty five";
+        let str = age1 + age3;
+        let notANumber = age1 - age3;
+
+        let bigNumber = 1e40;
+        console.log(typeof bigNumber);
+        console.log(bigNumber);
+        console.log("bigNumber:", bigNumber);
+
+        let bigNumber1 = 1e40;
+        let bigNumber2 = 3e41;
+        console.log("combined number:", bigNumber1 + bigNumber2);
+
+        let crores = 10_00_00_000;
+        let billions = 1_000_000_000;
+        console.log("combined number:", crores + billions);
+
+
+
+        console.log(typeof age1);
+        console.log(typeof age2);
+        console.log("typeof age1:", typeof age1, "\nvalue:", age1);
+        console.log("typeof age2:", typeof age2, "\nvalue:", age2);
+        console.log(infinity);
+        console.log(neginfinity);
+        console.log(str);
+        console.log(typeof str);
+        console.log(notANumber);
+        console.log("notANumber:", notANumber);
+        console.log(typeof notANumber);
+    </script>
+</body>
+
+</html>

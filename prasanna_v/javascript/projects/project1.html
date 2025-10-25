@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+        #container {
+            background-color: chocolate;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: medium;
+            font-weight: 500;
+            color: lawngreen;
+            border: 3px solid darkgreen;
+            height: 200px;
+            width: 400px;
+            position: relative;
+            left: 400px;
+
+
+
+        }
+
+        .quote_p {
+            /* border: 3px solid skyblue; */
+            padding: 5px;
+            /* border-radius: 9px; */
+        }
+
+        .author_p {
+
+            color: skyblue;
+
+        }
+
+        .button_p {
+            background-color: indianred;
+            padding: 5px;
+            border-radius: 10px;
+            color: greenyellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container"></div>
+    <script>
+        let quotes = [
+            {
+                quote: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                quote: "Strive not to be a success, but rather to be of value.",
+                author: "Albert Einstein"
+            },
+            {
+                quote: "The mind is everything. What you think you become.",
+                author: "Buddha"
+            },
+            {
+                quote: "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do.",
+                author: "Mark Twain"
+            },
+            {
+                quote: "The future belongs to those who believe in the beauty of their dreams.",
+                author: "Eleanor Roosevelt"
+            },
+            {
+                quote: "Not all those who wander are lost.",
+                author: "J.R.R. Tolkien"
+            },
+            {
+                quote: "Innovation distinguishes between a leader and a follower.",
+                author: "Steve Jobs"
+            },
+            {
+                quote: "Life is what happens when you're busy making other plans.",
+                author: "John Lennon"
+            },
+            {
+                quote: "Get busy living or get busy dying.",
+                author: "Stephen King"
+            },
+            {
+                quote: "The only limit to our realization of tomorrow will be our doubts of today.",
+                author: "Franklin D. Roosevelt"
+            }
+        ];
+
+        let div = document.getElementById("container");
+        let presi = document.createElement("p");
+        let author = document.createElement("p");
+        let button = document.createElement("button");
+
+
+        presi.classList.add("quote_p");
+        author.classList.add("author_p");
+        button.classList.add("button_p");
+        button.textContent = " NewQuote ";
+
+
+        div.append(presi);
+        div.append(author);
+        div.append(button);
+
+
+        function displayRandomQuote() {
+
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+
+            const random = quotes[randomIndex];
+
+
+            presi.textContent = `Quote -"${random.quote}"`;
+            author.textContent = `Author - ${random.author}`;
+        }
+
+        button.addEventListener('click', displayRandomQuote);
+
+
+        displayRandomQuote();
+
+    </script>
+
+</body>
+
+</html>

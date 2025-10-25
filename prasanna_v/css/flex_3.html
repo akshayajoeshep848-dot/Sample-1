@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display flex</title>
+    <style>
+        .flex-container {
+            display: flex;
+            height: 500px;
+            background-color: brown;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .para1 {
+            height: 200px;
+            background-color: green;
+            border-radius: 10px;
+            width: 100px;
+            text-align: center;
+            place-content: center;
+            align-self: flex-end;
+        }
+
+        .para2 {
+            height: 200px;
+            width: 100px;
+            background-color: green;
+            border-radius: 10px;
+            text-align: center;
+            place-content: center;
+            align-self: center;
+        }
+
+        .para3 {
+            height: 200px;
+            width: 100px;
+            background-color: green;
+            border-radius: 10px;
+            text-align: center;
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>display-flex</h1>
+    <div class="flex-container">
+        <div class="para1">flex-item1</div>
+        <div class="para2">flex-item2</div>
+        <div class="para3">flex-item3</div>
+    </div>
+</body>
+
+</html>

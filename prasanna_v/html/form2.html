@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>REGISTRATION FORM</title>
+    <style>
+        .presi {
+            text-decoration: underline;
+            text-align: center;
+            text-shadow: 2px 2px 2px;
+            font-style: italic;
+
+        }
+
+        .padding {
+            padding-right: 10%;
+            color: rgb(148, 41, 41);
+        }
+
+        body {
+            background-color: antiquewhite;
+            font-size: smaller;
+            font-weight: 400;
+
+
+        }
+
+        input::placeholder {
+            color: rgb(159, 234, 9);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 10px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <h2 class="presi"
+        style="color: blueviolet; font-size: xx-large; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+        REGISTRATION FORM</h2>
+    <form class="padding">
+        <label>ROLL NO :</label>&nbsp;
+        <input type="text" placeholder="enter number" value="465" /><br><br>
+        <label> NAME :</label>&nbsp;
+        <input type="text" placeholder="first name" />&nbsp;&nbsp;
+        <input type="text" placeholder="last name" /><br><br>
+        <label>DATE OF BIRTH :</label>
+        <input type="date" /><br><br>
+        <label>MOBILE NO :</label>
+        <input type="text" placeholder="enter number" /><br><br>
+        <label>EMAIL ID :</label>
+        <input type="text" placeholder="enter email" /><br><br>
+        <label>PASSWORD :</label>
+        <input type="text" placeholder="enter password" /><br><br>
+        <label> GENDER :</label>
+        <input type="radio" name="gender" value="female" />female
+        <input type="radio" name="gender" value="male" />male
+        <input type="radio" name="gender" value="others" />others<br><br>
+        <label>DEPARTMENT :</label>
+        <input type="radio" name="department" value="CSE" />CSE
+        <input type="radio" name="department" value="ECE" />ECE
+        <input type="radio" name="department" value="IT" />IT<br><br>
+        <label> COURSE :</label>
+        <input type="text" placeholder="........... select couse......" /><br><br>
+        <label>SELECT PHOTO :</label>
+        <input type="file" /><br><br>
+        <label>CITY :</label>
+        <input type="text" placeholder="enter city name" /><br><br>
+        <label>ADDRESS :</label>
+        <textarea></textarea><br><br>
+        <button> REGISTER</button>
+
+
+    </form>
+</body>
+
+</html>

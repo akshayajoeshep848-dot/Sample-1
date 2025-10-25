@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects&arrays</title>
+    <style>
+        button {
+            border-color: cadetblue;
+            color: blue;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>arrays</h1>
+    <p>let array=[1,2,3,4]</p>
+
+    <h3>object{collection of key values}</h3>
+    <p>let obj={name:"presi" ,age:18}
+    </p>
+    <button onclick="dog.bark()">bark</button>
+    <button onclick="dog.eat()">eat</button>
+    <button onclick="dog.walk()">walk</button>
+
+
+    <script>
+        //an object is a standalone entity,with property and type.it is non-primitive data type that stores collection of data and and more complexities entitites.property consist of a key(or name)and a value
+        const person = {
+            firstName: "vadlamudi",
+            name: 'presi',
+            age: 18,
+            isStudent: true,
+            greet: function () {
+                return `Hello , my name  is ${this.name}`;
+            },
+
+        };
+
+        //dot notation
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.greet());
+        console.log(person.firstName)
+
+        //[]bracket notation
+        console.log(person["name"]);
+        console.log(person["age"]);
+        console.log(person["greet"]());
+        console.log(person["firstName"]);
+
+        //dog:name ,breed,colour ,age,gender,petid
+
+        const dog = {
+            name: "browni",
+            breed: "german shepard",
+            colour: "white",
+            age: 2,
+            gender: "female",
+            petid: 44059,
+            bark: function () {
+                console.log(`${this.name} is barking`);
+                return `${this.name}is barking`
+            },
+            walk: function () {
+                console.log(`${this.name} is walking`);
+                return `${this.name}is walking`
+            },
+            eat: function () {
+                console.log(`${this.name} is eating`);
+                return `${this.name}is eating`
+            },
+            run: function () {
+                return `${this.name}is running`
+            },
+            smell: function () {
+                return `${this.name}is smelt your feet and fainted`
+            },
+            sleep: function () {
+                return `${this.name}is sleeping`
+            },
+            bite: function (person) {
+                return `${this.name}is biting ${person}`
+            },
+        }
+        console.log(dog.name);
+        console.log(dog.breed);
+        console.log(dog.age);
+        console.log(dog.colour);
+        console.log(dog.gender);
+        console.log(dog.petid);
+        console.log(dog.bark());
+        console.log(dog.walk());
+        console.log(dog.eat());
+        console.log(dog.smell());
+        console.log(dog.run());
+        console.log(dog.sleep());
+        console.log(dog.bite(person.name));
+
+        const address = {
+            address_line1: "MIG-87",
+            address_line2: "First floor,Road No. 1",
+            address_line3: "KPHB Phase-1",
+            landmark: "Beside AED Hospital",
+            city: "HYDERABAD",
+            state: "Telangana",
+            pincode: 50072,
+
+        }
+        getaddress: {
+            console.log(`${this.address_line1},{this.address_line2},  {this.address_line3} ,{this.landmark}, {this.city}, {this.state} ,{this.pincode} `)
+        }
+
+
+
+
+        //student object,employee object
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>while loop</h1>
+    <script>
+        // let i = 0;
+        // while (i < 3) {
+        //     console.log(`currrent value of  ${i}`);
+        //     i++;
+        // }
+
+
+
+        // let j = 0;
+        // do {
+        //     console.log(`j is ${j}`);
+        //     j++;
+        // } while (j < 0);
+
+
+
+        let i = 0;
+        while (i <= 10) {
+            console.log(`loop${i}`);
+            if (i % 2 == 0) {
+                i++;
+                break;
+            } else {
+                console.log(`printing :${i}`);
+            }
+            i++;
+        }
+
+
+
+        //do while
+        let j = 0;
+        do {
+            console.log(j);
+            j++;
+        } while (j <= 10);
+
+
+        let prime = Number(prompt("Enter A Number"));
+        if (prime % 1 == 0 && prime % prime == 0) {
+            console.log(`This number is prime ${prime}`);
+        } else {
+            console.log("Not prime Number")
+        }
+
+
+
+
+        let n = Number(prompt(`enter a positive integer`));
+        let isprime = true;
+        if (n <= 0) {
+            isprime = false;
+        } else if (n == 1) {
+            isprime = false;
+        } else if (n == 2) {
+            isprime = true;
+        } else if (n % 2 == 0) {
+            isprime = false;
+        } else {
+            for (let i = 3; i <= Math.floor(n ** 0.5); i += 2) {
+                if (n % 1 == 0) {
+                    isprime = false;
+                    break;
+                }
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

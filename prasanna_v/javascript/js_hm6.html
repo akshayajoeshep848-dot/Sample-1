@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div"></div>
+    <script>
+        const shoppingCart = [
+            {
+                sku: "SHOE-M-10B",
+                productName: "Men's Running Shoes",
+                price: 89.99,
+                quantity: 2,
+            },
+            {
+                sku: "SOCK-A-03P",
+                productName: "Athletic Socks (3-Pack)",
+                price: 15.0,
+                quantity: 2,
+            },
+        ];
+        let div = document.getElementById("div");
+        total = 0;
+        shoppingCart.forEach((item) => {
+            total += item.price * item.quantity;
+            div.append(total)
+        })
+
+
+    </script>
+
+</body>
+
+</html>

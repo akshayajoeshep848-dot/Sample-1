@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>to-do-list</h1>
+
+    <ul id="list"></ul>
+    <script>
+        const todoList = [
+            { id: 1, task: "Buy groceries", isComplete: false },
+            { id: 2, task: "Finish project report", isComplete: false },
+            { id: 3, task: "Call the dentist", isComplete: true },
+        ];
+        const listitem = document.getElementById("list");
+        todoList.forEach((item) => {
+            const list1 = document.createElement("li");
+            list1.textContent = `${item.task} - ${item.isComplete ? "completed" : "not completed"}`;
+            listitem.appendChild(list1);
+        });
+
+    </script>
+
+</body>
+
+</html>

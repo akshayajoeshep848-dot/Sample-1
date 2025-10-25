@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM2</title>
+</head>
+
+<body>
+    <div id="div1">
+        Lorem ipsum dolor sit amet consectetur
+    </div>
+    <div class="div2">
+        Lorem ipsum dolor sit amet
+    </div>
+    <script>
+        //document.queryselector("css selector")
+        let div1 = document.querySelector("#div1");
+        console.log(div1.innerText);
+        div1.innerText = `this is div1`;
+        div1.style.color = "blue";
+        div1.style.backgroundColor = "aqua";
+        div1.style.borderRadius = "10px";
+        div1.style.boxShadow = "4px 4px green";
+        div1.style.fontSize = "24px";
+        div1.style.fontWeight = "bold";
+        div1.style.width = "150px";
+        div1.style.height = "30px";
+        div1.style.margin = "10px";
+
+
+        let div2 = document.querySelector(".div2");
+        console.log(div2.innerText);
+        div2.innerText = `this is div2`;
+        div2.style.color = "brown";
+        div2.style.backgroundColor = "pink";
+        div2.style.borderRadius = "10px";
+        div2.style.boxShadow = "4px 4px green";
+        div2.style.fontSize = "24px";
+        div2.style.fontWeight = "bold";
+        div2.style.width = "150px";
+        div2.style.height = "30px";
+        div2.style.margin = "10px";
+
+
+
+    </script>
+</body>
+
+</html>

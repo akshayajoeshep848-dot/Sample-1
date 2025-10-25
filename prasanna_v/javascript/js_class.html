@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+
+<body>
+    <h1>class</h1>
+    <script>
+        //constructor method is a special method for creating and intializing an object created with a class
+        //a class can have one constuctor()
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            greet() {
+                console.log(`hi my name is ${this.name}`);
+            }
+
+        }
+        let person = new Person("maheshbabu", 42);
+
+        console.log(person.name);
+        console.log(person.age);
+        person.greet();
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

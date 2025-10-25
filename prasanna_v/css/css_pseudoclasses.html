@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo classes</title>
+    <style>
+        /* pseudo classes */
+        /* a css pseudo classes is a keyword added to a selector that lets you style a specific state of the selected element(s).
+        they are used to add style to a specific part of an element,without needing to add extra html elements.
+        for ex: the pseudo-class:hover can be used to select a button when a users pointer  */
+        p {
+            background-color: aqua;
+            width: 100px;
+            padding: 10px;
+            border: 2px solid red;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px 2px green;
+        }
+
+        /* change state when the user does mouseover clicks */
+        p:hover {
+            background-color: brown;
+            box-shadow: 2px 2px 2px 2px green inset;
+        }
+
+        /* change state when the user clicks */
+        p:active {
+            /* transform: scale(0.9); */
+            transform: translatey(10px);
+            transform: translatex(10px);
+            transform: translate(10px, 10px);
+            background-color: blue;
+        }
+
+        /* selects unvisited links */
+        a:link {
+            color: purple;
+            font-size: 50px;
+        }
+
+        /* selects visited links */
+        a:visited {
+            color: aqua;
+        }
+
+        #fn {
+            border: 5px solid pink;
+        }
+
+        #fn:focus {
+            border: 10px solid red;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>pseudo classes</h1>
+    <p>para</p>
+    <a href="https://www.nriit.ac.in">nriit</a>
+    <a href="https://www.nriit.ac.in">google</a>
+    <br />
+    <label for="fn">first name</label>
+    <input type="text" id="fn" />
+    <label for="fn">last name</label>
+    <input type="text" id="fn" />
+</body>
+
+</html>

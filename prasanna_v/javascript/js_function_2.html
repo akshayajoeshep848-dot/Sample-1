@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>js functions with return statement</h1>
+    <script>
+        //returning values:it return value using return statement.if a function doesnot have a return statement,or has a return statement with no expression,it implicit undefined
+        //void function <name></parameter>{return}
+        function addTwoNumbers(num1, num2) {
+            let sum = num1 + num2;
+            return sum;
+        }
+        console.log(addTwoNumbers(10, 20));
+        let sum = addTwoNumbers(20, 40);
+        console.log(sum);
+
+        //write a program to multiply 3 numbers
+        // function multiply(num1, num2, num3) {
+        //     return num1 * num2 * num3
+
+        // }
+        // let value = multiply(2, 3, 4)
+        // console.log(value);
+
+
+        function twonumbers(num1, num2) {
+            if (num1 > num2) {
+                console.log(true)
+            } else {
+                console.log(false)
+            }
+
+        }
+        let boolean = twonumbers(30, 20);
+
+        function add(a, b) {
+            return a + b;
+        }
+        let result = add(5, 5);
+        console.log(result);
+
+
+        //function expression: it defines a function as a part of an expression
+        //syntax: let variableName=function functionName
+
+        let multiply = function (x, y) {
+            return x * y;
+        }
+
+        console.log(multiply(2, 3));
+
+
+        function factorialvalue(n) {
+            let factorial = 1;
+            for (let i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            return factorial;
+        }
+        console.log(factorialvalue(5));
+
+
+        //recursion:using//calling same function inside a function
+        //f(n)=n*f(n-1)
+        //    =n*n-1*f(n-2)
+
+        //fibanacci series  f(n)= f(n - 1) + f(n - 2);
+        //limits=>
+
+
+        let nthFibNumber = function fib(n) {
+            let nthvalue = 0;
+            if (n <= 0) {
+                return;
+            } else if (n == 1) {
+                return 0;
+            } else if (n == 2) {
+                return 1;
+            } else {
+                return fib(n - 1) + fib(n - 2);
+            }
+        };
+        console.log(nthFibNumber(10));
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

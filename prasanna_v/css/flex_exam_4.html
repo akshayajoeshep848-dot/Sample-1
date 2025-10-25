@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example4</title>
+    <style>
+        .main {
+            height: 70vh;
+            width: 100vh;
+            margin: 5px;
+
+
+        }
+
+        .header1 {
+            height: 10%;
+            width: 110%;
+            background-color: blueviolet;
+            border: 8px solid black;
+            color: aliceblue;
+            text-align: center;
+            place-content: center;
+        }
+
+        .header2 {
+            height: 90%;
+            /* background-color: bisque; */
+            width: 122%;
+            display: flex;
+            gap: 5px;
+        }
+
+        .sidebar1 {
+            height: 93%;
+            width: 20%;
+            background-color: aquamarine;
+            border: 7px solid black;
+            margin: 10px;
+            margin-left: 5px;
+            color: aliceblue;
+            text-align: center;
+            place-content: center;
+        }
+
+        .sidebar2 {
+            height: 90%;
+            width: 100%;
+
+            /* background-color: aqua; */
+        }
+
+        .content1 {
+            height: 45%;
+            width: 89%;
+            background-color: blueviolet;
+            margin: 10px;
+            border: 7px solid black;
+            margin-left: -3px;
+            color: aliceblue;
+            text-align: center;
+            place-content: center;
+        }
+
+        .content2 {
+            height: 55%;
+            width: 90%;
+            /* background-color: blue; */
+            display: flex;
+            /* flex-direction: row; */
+            gap: 10px;
+            margin-right: 20px;
+
+        }
+
+        .content2-1,
+        .content2-2 {
+            flex: 2;
+            background-color: blueviolet;
+            border: 8px solid black;
+            color: aliceblue;
+            text-align: center;
+            place-content: center;
+        }
+
+        .footer {
+            height: 20%;
+            width: 110%;
+            background-color: blueviolet;
+            border: 7px solid black;
+            color: aliceblue;
+            text-align: center;
+            place-content: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header1">header</div>
+        <div class="header2">
+            <div class="sidebar1">sidebar</div>
+            <div class="sidebar2">
+                <div class="content1">content-1</div>
+                <div class="content2">
+                    <div class="content2-1">content-2</div>
+                    <div class="content2-2">content-2</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+
+
+</body>
+
+</html>

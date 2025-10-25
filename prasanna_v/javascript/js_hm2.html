@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="country">
+        <option id="option">select country</option>
+    </select>
+    <script>
+        const countryOptions = [
+            { value: "us", label: "United States" },
+            { value: "ca", label: "Canada" },
+            { value: "mx", label: "Mexico" },
+            { value: "gb", label: "United Kingdom" },
+        ];
+        const select = document.getElementById("country");
+        countryOptions.forEach((item) => {
+            const option = document.createElement("option");
+            option.value = item.value
+            option.textContent = item.label
+
+            select.append(option);
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            height: 100vw;
+            width: 100vw;
+            gap: 5px;
+            flex-direction: column;
+            /* background-color: blanchedalmond; */
+            margin-left: 20px;
+        }
+
+        .main1 {
+            display: flex;
+
+        }
+
+        .presi1 {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .A {
+            height: 120px;
+            width: 700px;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            background-image: url(images/29.jpeg);
+            background-repeat: no-repeat;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: rgb(129, 84, 172);
+
+        }
+
+        .h21 {
+            position: relative;
+            left: 190px;
+            color: aliceblue;
+
+        }
+
+        .para {
+            position: relative;
+            left: 180px;
+            bottom: 5px;
+            color: aliceblue;
+            font-size: 15px;
+            font-weight: lighter;
+
+        }
+
+        .B {
+            display: flex;
+            gap: 5px;
+            height: 170px;
+
+        }
+
+        .B1,
+        .C,
+        .D {
+            flex: 1;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+
+        }
+
+        .h22 {
+            position: relative;
+            bottom: 85px;
+
+        }
+
+        .para1 {
+            position: relative;
+            bottom: 45px;
+
+        }
+
+        .total {
+            position: relative;
+            bottom: 10px;
+
+        }
+
+        .h31 {
+            position: relative;
+            bottom: 120px;
+        }
+
+        .image1 {
+            height: 40px;
+            width: 40px;
+            background-color: aliceblue;
+            background-image: url("images/spruha1.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            position: relative;
+            left: 130px;
+            bottom: 190px;
+        }
+
+        .image3 {
+            height: 40px;
+            width: 40px;
+            background-color: aliceblue;
+            background-image: url("images/spruha3.jpeg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            position: relative;
+            left: 130px;
+            bottom: 190px;
+        }
+
+        .image2 {
+            height: 40px;
+            width: 40px;
+            background-color: aliceblue;
+            background-image: url("images/spruha2.jpeg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            position: relative;
+            left: 130px;
+            bottom: 190px;
+        }
+
+        .presi2 {
+            gap: 10px;
+            margin-left: 10px;
+
+        }
+
+        .F {
+            height: 450px;
+            width: 350px;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .card1 {
+            display: flex;
+            background-image: url("images/people1.jpeg");
+            background-size: contain;
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 35px;
+            width: 45px;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+
+        }
+
+        .Flicker {
+            display: flex;
+
+
+        }
+
+        .C1 {
+            position: relative;
+            left: -80px;
+            top: -5px;
+
+        }
+
+        .para2 {
+            margin-top: -20px;
+        }
+
+        .D1 {
+            position: relative;
+            right: 20px;
+            top: 1px;
+            margin-top: -1px;
+        }
+
+        .para3 {
+            margin-top: -10px;
+            font-size: 10px;
+        }
+
+        .h3 {
+            position: relative;
+            top: 20px;
+            left: 15px;
+        }
+
+        .h5 {
+            position: relative;
+            top: 10px;
+            left: 15px;
+        }
+
+        .E {
+            height: 400px;
+            width: 700px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            position: relative;
+            left: 10px;
+        }
+
+        .G {
+            height: 170px;
+            width: 350px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            margin-top: 15px;
+            position: relative;
+            left: 12px;
+        }
+
+        .project {
+            position: relative;
+            top: 15px;
+            left: 15px;
+        }
+
+        .going {
+            position: relative;
+            top: 5px;
+            left: 15px;
+            color: gray;
+        }
+
+        .days {
+            position: relative;
+            top: 5px;
+            left: 15px;
+            color: rgb(129, 84, 172);
+        }
+
+        .monday {
+            position: relative;
+            top: 5px;
+            left: 15px;
+            color: grey;
+        }
+
+        .rocket {
+            background-image: url(images/rocket.jpeg);
+            background-size: contain;
+
+
+            height: 220px;
+            width: 150px;
+            background-repeat: no-repeat;
+            margin-right: 10px;
+            position: relative;
+            left: 220px;
+            bottom: 150px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="color: blueviolet; font-weight: bolder;">Welcome To Dashboard</h2>
+    <p style="color: gray; ">Home/Project Dashboard</p>
+    <div class="main">
+        <div class="main1">
+            <div class="presi1">
+                <div class="A">
+                    <h2 class="h21">Sonia Taylor!</h2>
+                    <p class="para">You have two projects to finish, you had completed <span
+                            style="color: orange;">57%</span> from<br> your montly level,
+                        Keep going to
+                        your level</p>
+                </div>
+                <div class="B">
+                    <div class="B1">
+                        <div class="presi1">
+                            <h4 style="font-weight: bolder;" class="total">TOTAL REVENUE</h4>
+                            <P class="para1">Previous month vs this months</P>
+                            <h2 class="h22">$5,900.00</h2>
+                            <h3 class="h31"><span style="color: green;">55%</span> Higher</h3>
+                            <div class="image1"></div>
+                        </div>
+                    </div>
+                    <div class="C">
+                        <div class="presi1">
+                            <h4 style="font-weight: bolder;" class="total">TOTAL REVENUE</h4>
+                            <P class="para1">Previous month vs this months</P>
+                            <h2 class="h22">$5,900.00</h2>
+                            <h3 class="h31"><span style="color: green;">55%</span> Higher</h3>
+                            <div class="image2"></div>
+                        </div>
+                    </div>
+                    <div class="D">
+                        <div class="presi1">
+                            <h4 style="font-weight: bolder;" class="total">TOTAL REVENUE</h4>
+                            <P class="para1">Previous month vs this months</P>
+                            <h2 class="h22">$5,900.00</h2>
+                            <h3 class="h31"><span style="color: green;">55%</span> Higher</h3>
+                            <div class="image3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="E"></div>
+            </div>
+            <div class="presi2">
+                <div class="F">
+                    <h3 class="h3">RECENT TRANSACTION</h3>
+                    <h5 class="h5">Projects Where development work is on completion</h5>
+                    <div class="Flicker">
+                        <div class="B1">
+                            <div class="card1"></div>
+                        </div>
+                        <div class="C1">
+                            <h5>Flicker</h5>
+                            <p class="para2">App improvement</p>
+
+                        </div>
+                        <div class="D1">
+                            <p>$45.234 <span style="font-weight:bold; color: green;">&#8613</span></p>
+                            <p class="para3">12 jan 2020</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="Flicker">
+                        <div class="B1">
+                            <div class="card1"></div>
+                        </div>
+                        <div class="C1">
+                            <h5>Flicker</h5>
+                            <p class="para2">App improvement</p>
+
+                        </div>
+                        <div class="D1">
+                            <p>$45.234 <span style="font-weight:bold; color: green;">&#8613</span></p>
+                            <p class="para3">12 jan 2020</p>
+                        </div>
+
+                    </div>
+                    <div class="Flicker">
+                        <div class="B1">
+                            <div class="card1"></div>
+                        </div>
+                        <div class="C1">
+                            <h5>Flicker</h5>
+                            <p class="para2">App improvement</p>
+
+                        </div>
+                        <div class="D1">
+                            <p>$45.234 <span style="font-weight:bold; color: green;">&#8613</span></p>
+                            <p class="para3">12 jan 2020</p>
+                        </div>
+
+                    </div>
+                    <div class="Flicker">
+                        <div class="B1">
+                            <div class="card1"></div>
+                        </div>
+                        <div class="C1">
+                            <h5>Flicker</h5>
+                            <p class="para2">App improvement</p>
+
+                        </div>
+                        <div class="D1">
+                            <p>$45.234 <span style="font-weight:bold; color: green;">&#8613</span></p>
+                            <p class="para3">12 jan 2020</p>
+                        </div>
+
+                    </div>
+                    <div class="Flicker">
+                        <div class="B1">
+                            <div class="card1"></div>
+                        </div>
+                        <div class="C1">
+                            <h5>Flicker</h5>
+                            <p class="para2">App improvement</p>
+
+                        </div>
+                        <div class="D1">
+                            <p>$45.234 <span style="font-weight:bold; color: green;">&#8613</span></p>
+                            <p class="para3">12 jan 2020</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="G">
+                    <h4 class="project">PROJECT LAUNCH</h4>
+                    <P class="going">the project is going to launch</P>
+                    <h2 class="days">145 days</h2>
+                    <p class="monday">12 monday,Oct 2020</p>
+                    <div class="rocket"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="presi3">
+                <div class="H">
+                    <div class="H1"></div>
+                    <div class="I"></div>
+                </div>
+                <div class="J"></div>
+            </div>
+            <div class="presi4">
+                <div class="K"></div>
+                <div class="L"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example5</title>
+    <style>
+        .example5 {
+            height: 100vh;
+            width: 100vh;
+        }
+
+        .header {
+            height: 8%;
+            /* width: 100%; */
+            background-color: aquamarine;
+            margin-top: 10px;
+            text-align: center;
+            place-content: center;
+            font-size: x-large;
+        }
+
+        .navigation {
+            height: 8%;
+            /* width: 100%; */
+            background-color: greenyellow;
+            margin-top: 10px;
+            text-align: center;
+            place-content: center;
+            font-size: x-large;
+        }
+
+        .middle {
+            height: 50%;
+            /* background-color: aqua; */
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .aside {
+            flex: 1;
+            background-color: greenyellow;
+            text-align: center;
+            place-content: center;
+            font-size: x-large;
+
+        }
+
+        .aside1 {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        .content {
+            flex: 1;
+            height: 50%;
+            background-color: skyblue;
+            text-align: center;
+            place-content: center;
+            font-size: x-large;
+        }
+
+        .section {
+            flex: 1;
+            height: 50%;
+            background-color: blueviolet;
+            text-align: center;
+            place-content: center;
+            font-size: x-large;
+        }
+
+        .footer {
+            height: 8%;
+            /* width: 100%; */
+            background-color: aquamarine;
+            margin-top: 10px;
+            text-align: center;
+            place-content: center;
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="example5">
+        <div class="header">Header</div>
+        <div class="navigation">Navigation</div>
+        <div class="middle">
+            <div class="aside">aside</div>
+            <div class="aside1">
+                <div class="content">content</div>
+                <div class="section">section</div>
+            </div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

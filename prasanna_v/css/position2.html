@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <style>
+        .div {
+            position: relative;
+            background-color: lightgreen;
+            height: 50vh;
+        }
+
+        .para {
+            height: 100px;
+            width: 100px;
+
+        }
+
+        .para1 {
+            position: absolute;
+            background-color: chocolate;
+            text-align: center;
+            place-content: center;
+            left: 20px;
+            bottom: 10px;
+            top: 20px;
+            z-index: 1;
+            /* left: 200px; */
+        }
+
+        .para2 {
+            position: absolute;
+            background-color: cornflowerblue;
+        }
+
+        .para3 {
+            position: absolute;
+            background-color: rgb(188, 43, 72);
+            right: 370px;
+            bottom: 120px;
+            z-index: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- absolute=>position relative to its nearest position ancester(an ancestor eith"position" other than static) -->
+
+
+    <div class="div">
+        <div class="para para1">item1</div>
+        <div class="para para2">item2</div>
+        <div class="para para3">item3</div>
+    </div>
+</body>
+
+</html>

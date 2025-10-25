@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            height: 100vh;
+            width: 100vh;
+        }
+
+        .header {
+            height: 8%;
+            /* width: 100%; */
+            background-color: skyblue;
+            margin-top: 5px;
+            text-align: center;
+            place-content: center;
+            font-size: x-large;
+        }
+
+        .middle {
+            height: 40%;
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+
+        }
+
+        .sidebar1 {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .sidebar2 {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hero {
+            flex: 1;
+            background-color: pink;
+        }
+
+        .sidebar {
+            flex: 1;
+            background-color: greenyellow;
+
+        }
+
+        .maincontent {
+            flex: 2;
+            background-color: gold;
+        }
+
+        .extracontent {
+            flex: 1;
+            background-color: grey;
+        }
+
+        .middle2 {
+            height: 10%;
+            margin-top: 5px;
+            display: flex;
+            gap: 3px;
+        }
+
+        .images {
+            flex: 3;
+            background-color: green;
+        }
+
+        .posts {
+            flex: 1;
+            background-color: palevioletred;
+        }
+
+        .footer {
+            height: 6%;
+            background-color: orange;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">HEADER</div>
+        <div class="middle">
+            <div class="sidebar1">
+                <div class="hero">hero</div>
+                <div class="sidebar ">sidebar</div>
+            </div>
+            <div class="sidebar2">
+                <div class="maincontent">main</div>
+                <div class="extracontent">extra</div>
+            </div>
+        </div>
+        <div class="middle2">
+            <div class="images">images</div>
+            <div class="posts">posts</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>

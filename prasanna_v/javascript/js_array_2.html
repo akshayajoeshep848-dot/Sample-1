@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYPES OF ARRAYS</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>DIFFERENT TYPES OF ARRAYS</h1>
+    <script>
+        let emptyArray = [];//empty
+        let fruits = ["apple", "cherry", "mango"];//array of strings
+        let numbers = [1, 2, 3, 4, 5];//array of numbers
+        let mixedArray = [10, "hii", true, { name: "presi" }, [6, 5]];//array of mixed data type
+        console.log(fruits[0]);
+        console.log(mixedArray.length);
+        console.log(mixedArray[3].name);
+        console.log(mixedArray[4][1]);
+
+
+
+        //create array using constructor
+        let arr1 = new Array();//this will create an empty array
+        let arr2 = new Array("apple", "cherry", "mango");
+        let arr3 = new Array(4);
+        arr2.push(["papaya", "bananna", "grapes"]);//add one or more elements to the end of array and return new length
+        // arr2.pop();//remove last element from an array and return the element
+        // arr2.unshift("papaya", "sapota");//add one more element to the beginng of array
+        // arr2.shift();//remove the first element from an array and return
+        // arr2.reverse();//reverse the order of elements in an arrray
+
+
+        //print arrays
+        console.log(arr1);
+        console.log(arr2);
+        arr3[0] = "laddu";
+        arr3[1] = "mysore pack";
+        arr3[2] = "palakova";
+        arr3.push("kaja");
+        arr3.pop();
+        console.log(arr3[0]);
+        console.log(arr3[1]);
+        console.log(arr3[2]);
+        console.log(arr3[3]);
+        console.log(arr3);
+
+
+
+
+        let student = {
+            name: "kajal",
+            age: 18,
+            college: "NRIIT",
+            id: 465,
+            address: {
+                line1: "kphb colony road no 2",
+                line2: "tiru residency plot no 101",
+                city: "hyderabad",
+                state: "telengana",
+            },
+            movies: ["darling", "temper", "magadheera"],
+            awards: [
+                {
+                    name: "Best Actress",
+                    type: "Siima award",
+                    year: 2012,
+                    movie: "Mr.perfect",
+                },
+                {
+                    name: "Youth icon",
+                    type: "South indian cinema",
+                    year: 2013,
+                    movie: "badshaa",
+                },
+                {
+                    name: "Best Actress",
+                    type: "Siima award",
+                    year: 2018,
+                    movie: "Nene raju nene mantri",
+                },
+            ],
+
+
+        };
+        console.log(student.college);
+        console.log(student.address.line1);
+        console.log(student.awards[0].name);
+        console.log(student.awards.length);
+
+
+        let name = "dipali manoj";
+        console.log(name);
+        console.log(name.split("").reverse().join(""));
+
+
+        let name1 = "likhitha";
+        console.log(name.split("").unshift());
+
+
+        //concatnation
+        const array1 = [1, 2, 3, [4, 5, 6], [7, 8], [9]];
+        const array2 = [4, 5, 6];
+        const combined = array1.concat(array2);
+        console.log(combined);
+
+
+
+        //flatten array1
+        let flattenarray = array1.reduce((initialvalue, currentvalue) => initialvalue.concat(currentvalue), []);
+        console.log(flattenarray);//flatten :single array
+
+
+        //join
+        //method changing:use method after another method with (.) is called method changing
+        let greetng = ["hello", "world"];
+        let str = greetng.join("").split("").reverse().join();
+        console.log(str);
+
+
+        // const sentence = "JavaScript is fun";
+        // console.log(sentence.charAt(11));
+
+        // const text = "Hello world, welcome to the universe.";
+        // console.log(text.indexOf("welcome"));
+
+        // const data = "Data science is amazing. Data analysis is powerful.";
+        // console.log(data.lastIndexOf("is")); // Output: 27
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

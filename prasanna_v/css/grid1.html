@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid1</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(5, 20fr);
+            grid-template-rows: repeat(5, 50fr);
+            height: 100vh;
+            gap: 5px;
+        }
+
+        .grid_item {
+            background-color: blueviolet;
+            text-align: center;
+            place-content: center;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- grid is a poweful layout system that enable two diamensional control over elements on web page  it control both roes and coloum-->
+
+    <!-- while flexbox excels arranging items along a single axis ,grid is designed for layouts involving both rows and coloums simultaneously -->
+    <!-- two-dimensional layout,item placement control,alignment capabilities gap control,reduced need for makeup,overlap -->
+    <!-- GRID CONTAINER:the element on which display:grid; -->
+    <!-- GRID ITEMS:direct children of grid container -->
+    <!-- GRID LINES: the dividing lines that makes up the structure of the grid -->
+    <!-- GRID CELL: the space between two adjacent row lines and two adjacent coloum lines -->
+    <!-- GRID AREA: total space surounded by four grid lines  -->
+    <!-- the space between two grids lines is grid track -->
+
+    <div class="grid-container">
+        <div class="grid_item">item 1</div>
+        <div class="grid_item">item 2</div>
+        <div class="grid_item">item 3</div>
+        <div class="grid_item">item 4</div>
+        <div class="grid_item">item 5</div>
+        <div class="grid_item">item 6</div>
+        <div class="grid_item">item 7</div>
+        <div class="grid_item">item 8</div>
+        <div class="grid_item">item 9</div>
+        <div class="grid_item">item 10</div>
+        <div class="grid_item">item 11</div>
+        <div class="grid_item">item 12</div>
+        <div class="grid_item">item 13</div>
+        <div class="grid_item">item 14</div>
+        <div class="grid_item">item 15</div>
+        <div class="grid_item">item 16</div>
+        <div class="grid_item">item 17</div>
+        <div class="grid_item">item 18</div>
+        <div class="grid_item">item 19</div>
+        <div class="grid_item">item 20</div>
+    </div>
+</body>
+
+</html>

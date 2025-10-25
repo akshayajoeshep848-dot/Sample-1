@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*decendent selector*/
+        div p {
+            color: brown;
+        }
+
+        ul li {
+            background-color: cadetblue;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /*child  selector*/
+        div>p {
+            color: blueviolet;
+        }
+
+        .ul2 li {
+            background-color: chocolate;
+            border-radius: 20px;
+
+        }
+
+        .ul3 li {
+            background-color: darksalmon;
+            border-radius: 10px;
+        }
+
+        /*adjacent sibling after h1 first one*/
+        h1+p {
+            color: olivedrab;
+        }
+
+        /*general sibling after h1 all */
+        h1~p {
+            color: magenta;
+        }
+
+        h2+p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>heading</h1>
+        <p>para1</p>
+        <p>para2</p>
+        <h2>heading 2</h2>
+        <p>para3</p>
+        <h1>heading 2</h1>
+        <section>
+            <p>para 1</p>
+            <p>para 2</p>
+            <p>para 3</p>
+            <p>para 4</p>
+        </section>
+    </div>
+    <ul>
+        <li>item1
+            <ul class="ul2">
+                <li> sub item 1</li>
+                <li> sub item 2</li>
+                <li> sub item 3</li>
+            </ul>
+        </li>
+        <li>item2
+            <ul class="ul3">
+                <li>item 1</li>
+                <li>item 2</li>
+                <li>item 3</li>
+                <li>item 4</li>
+            </ul>
+        </li>
+        <li>item3</li>
+        <li>item4</li>
+        <li>item5</li>
+        <li>item6</li>
+        <li>item7</li>
+        <li>item8</li>
+        <li>item9</li>
+        <li>item10</li>
+    </ul>
+</body>
+
+</html>

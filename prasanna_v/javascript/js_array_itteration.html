@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>array-iteration methods</h1>
+    <p>forEach(),map(),filter(),reduce(),some(),every(),find(),and findindex()</p>
+    <script>
+        let array = [1, 2, 3, 4, 5];
+        console.log(array);
+        array.forEach((num, index, arr) => {
+            console.log(`the element at index:${index}is${num}`);
+            arr[index] = num * 2;
+        });
+        array.forEach((num) => console.log(num));
+        array.forEach((num) => console.log(num * 2));
+        array.forEach((num) => console.log(num * num));
+
+        array.forEach((value, index, array) => (array[index] = value * 2));
+        
+        let newArray = array.map((num) => num * num);
+        console.log(newArray);
+
+        console.log(array);
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const odds = numbers.filter((num) => num > 2);
+        console.log(odds);
+
+        const numbers1 = [1, 2, 3, 4, 5];
+        const sum = numbers1.reduce((accumulator, current) => accumulator * current, 1);
+        console.log(sum);
+    </script>
+
+
+</body>
+
+</html>

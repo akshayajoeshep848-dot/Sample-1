@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM3</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-item menu-item1">menu item1</div>
+        <div class="menu-item menu-item2">menu item2</div>
+        <div class="menu-item menu-item3">menu item3</div>
+        <div class="menu-item menu-item4">menu item4</div>
+        <div class="menu-item menu-item5">menu item5</div>
+    </div>
+    <div class="para-container">
+        <p>this is para1</p>
+        <p>this is para2</p>
+        <p>this is para3</p>
+        <p>this is para4</p>
+
+    </div>
+    <div class="button-container">
+        <button class="button-item">button1</button>
+        <button class="button-item">button2</button>
+        <button class="button-item">button3</button>
+        <button class="button-item">button4</button>
+        <button class="button-item">button5</button>
+    </div>
+    <script>
+        // let menuitems = document.getElementsByClassName("menu-item");
+        // console.log(Array.isArray(menuitems));
+        // console.log(Array.isArray(Array.from(menuitems)));
+        // console.log(Array.from(menuitems));
+        // let menuitemsArray = Array.from(menuitems);
+        // menuitemsArray.forEach((item) => (item.innerText = "Hello"));
+
+        //getElementByTagName
+
+        let paraItems = document.getElementsByTagName("p");
+        // let arr = ["maheshbabu", "kajal", "presi", "Ram", "NagaSourya"];
+        let actorArray = [
+            {
+                name: "maheshbabu",
+                profession: "Acting",
+                movies: ["Athadu", "khaleja"],
+            }, {
+                name: "Kajal",
+                profession: "Acting , modeling",
+                movies: ["darling", "temper"],
+            }, {
+                name: "Ram",
+                profession: "Acting",
+                movies: ["ready", "hyper"],
+            }, {
+                name: "Samantha",
+                profession: "Acting",
+                movies: ["kushi", "OH Baby  "],
+            },
+        ];
+        Array.from(paraItems).forEach((element, index) => {
+            element.innerText = `actor:${actorArray[index].movies}`;
+        });
+
+        //querySelectorAll
+        //NodeList
+        let styleArray = [
+            {
+                name: "clickme",
+                backgroundColor: "blue",
+                padding: "10px",
+
+            },
+            {
+                name: "submit",
+                backgroundColor: "red",
+                padding: "10px",
+
+
+            },
+            {
+                name: "login",
+                backgroundColor: "green",
+                padding: "10px",
+
+            },
+            {
+                name: "Register",
+                backgroundColor: "orange",
+                padding: "10px",
+
+            },
+            {
+                name: "Reset",
+                backgroundColor: "pink",
+                padding: "10px",
+
+            },
+        ];
+
+        let buttonitem = document.querySelectorAll(".button-item");
+        buttonitem.forEach((item, index) => {
+            item.innerText = styleArray[index].name;
+            item.style.backgroundColor = styleArray[index].backgroundColor;
+            item.style.padding = styleArray[index].padding;
+            item.style.border = "5px";
+            item.style.borderRadius = "5px";
+            item.style.margin = "10px";
+            item.style.boxShadow = "2px 2px 5px 5px lightgreen";
+            item.style.color = "white";
+
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

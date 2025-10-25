@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="ul"></ul>
+    <script>
+        const users = [
+            {
+                id: 101,
+                username: "jdoe",
+                email: "john.doe@example.com",
+                isActive: true
+            },
+            {
+                id: 102,
+                username: "asmith",
+                email: "alice.smith@example.com",
+                isActive: false,
+            },
+            {
+                id: 103,
+                username: "bwhite",
+                email: "bob.white@example.com",
+                isActive: true,
+            },
+        ];
+        let list = document.getElementById("ul");
+        users.forEach((team) => {
+            let list1 = document.createElement("li");
+            list1.textContent = `${team.id}-${team.username}-${team.email}-${team.isActive ? "Active" : "In active"}`;
+            list.append(list1);
+
+        })
+    </script>
+
+</body>
+
+</html>

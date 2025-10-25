@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example3</title>
+    <style>
+        .main {
+            height: 70vh;
+            width: 100vh;
+            /* background-color: dimgray; */
+            display: flex;
+            gap: 5px;
+            margin-left: 10px;
+        }
+
+        .flexbox1 {
+
+            height: 65vh;
+            width: 20vh;
+            margin-top: 10px;
+            background-color: aqua;
+
+        }
+
+        .flexbox2 {
+
+            height: 65vh;
+            width: 20vh;
+            margin-top: 10px;
+            /* background-color: cadetblue; */
+            gap: 5px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flexbox1,
+        .flexbox2 {
+            flex: 1;
+            gap: 5px;
+        }
+
+        .div1 {
+            height: 33%;
+            /* width: 10%; */
+            background-color: aqua;
+        }
+
+        .div2 {
+            height: 33%;
+            /* background-color: aqua; */
+            display: flex;
+            gap: 5px;
+        }
+
+        .sub1,
+        .sub2 {
+            flex: 1;
+            background-color: aqua;
+
+        }
+
+        .div3 {
+            height: 33%;
+            /* width: 10%; */
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="flexbox1">flexbox</div>
+        <div class="flexbox2">
+            <div class="div1"></div>
+            <div class="div2">
+                <div class="sub1"></div>
+                <div class="sub2"></div>
+            </div>
+            <div class="div3"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

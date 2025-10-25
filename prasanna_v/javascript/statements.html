@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>statements</title>
+</head>
+
+<body>
+    <h1>js statements</h1>
+    <script>
+        // let age = prompt("enter the age:");
+        // console.log(typeof age);
+        // if (Number(age) > 18) {
+        //     console.log("you are eligible to vote");
+        // } else if (age <0) {
+        //     console.log("please enter a valid age");
+        // } else if (Number(age) > 21) {
+        //     console.log("you are eligible for vote and marriage");
+        // } else {
+        //     console.log("you are not eligible to vote");
+        // }
+
+
+
+        let a = prompt("enter the age:");
+        if (a >= 0 && a < 18) {
+            console.log("you are not eligible to vote");
+        } else if (a >= 18 && a < 21) {
+            console.log("you are eligible for vote but not to  marriage");
+        } else if (a < 0) {
+            console.log("please enter valid age");
+        } else {
+            console.log("you are eligible for both vote and marriage");
+        }
+
+
+
+    </script>
+</body>
+
+</html>
