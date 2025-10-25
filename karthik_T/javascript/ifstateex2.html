@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js conditions</title>
+</head>
+
+<body>
+    <h1>Upsc age validation</h1>
+    <script>
+        //genral - 21 to 32
+        // sc/st - 21 to 37
+        // obc - 21 to 35
+        //pd - 21 to 42
+        let category = prompt("Enter your category :")
+        let age = prompt("Enter your age  for civil services Exam :")
+        if (category == "genral") {
+            console.log(`you are ${category} category`)
+            if (age < 0 || age > 140) {
+                console.log("Enter Valid Age")
+            } else if (age > 0 && age < 21) {
+                console.log("Yoiur are not eligible")
+            } else if (age >= 21 && age <= 32) {
+                console.log("You are eliogible for exam")
+            } else {
+                console.log(`yoy have exceeded yor age limit for ${category} category`)
+            }
+
+
+
+
+        } else if (category == "sc" || category == "st") {
+            console.log(`you are ${category} category`)
+            if (age < 0 || age > 140) {
+                console.log("Enter Valid Age")
+            } else if (age > 0 && age < 21) {
+                console.log("Yoiur are not eligible")
+            } else if (age >= 21 && age <= 37) {
+                console.log("You are eliogible for exam")
+            } else {
+                console.log(`yoy have exceeded yor age limit for ${category} category`)
+            }
+        }
+
+
+
+
+
+        else if (category == "pd") {
+            console.log(`you are ${category} category`)
+            if (age < 0 || age > 140) {
+                console.log("Enter Valid Age")
+            } else if (age > 0 && age < 21) {
+                console.log("Yoiur are not eligible")
+            } else if (age >= 21 && age <= 42) {
+                console.log("You are eliogible for exam")
+            } else {
+                console.log(`yoy have exceeded yor age limit for ${category} category`)
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Flex</title>
+    <style>
+        .parent {
+            background-color: aqua;
+            height: 500px;
+            display: flex;
+            gap: 20px;
+            color: white;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+
+        }
+
+        .child {
+            /* height: 100px;*/
+            width: 100px;
+            background-color: red;
+
+            padding: 20px;
+        }
+
+        .child-1 {
+            height: 100px;
+
+        }
+
+        .child-2 {
+            height: 200px;
+            place-content: center;
+            text-align: center;
+        }
+
+        .child-3 {
+            height: 150px;
+            place-content: end;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Display : flex</h1>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slice Method </title>
+</head>
+
+<body>
+    <h1>***slice Method***</h1>
+    <h1>***splice Method***</h1>
+    <p>Returns a shallow copy of a portion of an array into a new array.the original is unchanged</p>
+
+    <script>
+        //Examples
+        //*********slice Method********
+        //slice creates a shallow copy of the array
+        // let arry = [1, 2, 3, 4, 5];
+        // console.log(arry.slice())
+        // console.log('arry', arry);
+        // console.log('copy', copy);
+
+
+        // let arry = [9, 3, 9, 2, 3];
+        // console.log(arry.slice(0, 4));
+
+        // let fruits = ['Dragon Fruit', 'Banana', 'Apple', 'Papaya', 'Watermelon', 'Pineaple'];
+        // console.log(fruits.slice(0, 3));
+        // console.log('fruits', fruits)
+        // console.log("copy", copy)
+
+        // let fruits = ['Dragon Fruit', 'Banana', 'Apple', 'Papaya', 'Watermelon', 'Pineaple', ['sapota', 'jamakai', 'Bathakai']];
+        // console.log(fruits.slice(2));
+        // console.log('fruits', fruits)
+        // console.log("copy", copy)
+
+
+        //*******splice Method******
+
+        // let fruits = ['Dragon Fruit', 'Banana', 'Apple', 'Papaya', 'Watermelon', 'Pineaple'];
+        // console.log(fruits)
+        // //removing elements
+        // let copy1 = fruits.splice(0, 3);
+        // console.log('copy', copy1)
+        // console.log('fruits', fruits)
+
+        // //add elements
+        // let fruits = ['Dragon Fruit', 'Banana', 'Apple', 'Papaya', 'Watermelon', 'Pineaple'];
+        // console.log(fruits)
+
+        // let copy1 = fruits.splice(1, 2, 'Seetaphalam');
+        // console.log('copy', copy1)
+        // console.log('fruits', fruits)
+
+        //Neagitive index elements
+        let fruits = ['Dragon Fruit', 'Banana', 'Apple', 'Papaya', 'Watermelon', 'Pineaple'];
+        console.log(fruits)
+
+        let copy1 = fruits.splice(-3, 2);
+        console.log('copy', copy1)
+        console.log('fruits', fruits)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

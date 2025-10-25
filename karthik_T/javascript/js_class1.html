@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js classes</title>
+</head>
+
+<body>
+    <h1>js classes In-hertance</h1>
+    <script>
+        class pet {
+            constructor(type, name) {
+                this.type = type;
+                this.name = name;
+
+            }
+        }
+        class Dog extends pet {
+            constructor(type, name, breed) {
+                super(type, name);
+                this.breed = breed;
+
+
+            }
+
+        }
+
+        let dog1 = new Dog("dog", "ryhme");
+        console.log(dog1.petType);
+        console.log(dog1.name);
+        console.log(dog1.breed);
+
+
+
+
+        class Car {
+            constructor(make, model) {
+                this.make = make;
+                this.model = model;
+            }
+
+
+            displayInfo() {
+                console.log(`Car: ${this.make} ${this.model}`);
+            }
+        }
+
+
+        const car1 = new Car("Toyota", "Corolla");
+        car1.displayInfo();
+    </script>
+
+
+</body>
+
+</html>

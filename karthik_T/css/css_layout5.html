@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts</title>
+    <style>
+        header {
+            width: 640px;
+            height: 50px;
+            background-color: aqua;
+            place-content: center;
+            text-align: center;
+
+        }
+
+        .mid-main {
+            display: flex;
+            gap: 10px;
+        }
+
+        .side {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        .side-1 {
+            width: 220px;
+            height: 170px;
+            background-color: hotpink;
+            margin-top: 10px;
+            place-content: center;
+            text-align: center;
+        }
+
+        .side-2 {
+            width: 220px;
+            height: 270px;
+            background-color: rgb(88, 124, 33);
+            place-content: center;
+            text-align: center;
+
+        }
+
+        .content-1 {
+            width: 410px;
+            height: 320px;
+            background-color: yellow;
+            margin-top: 10px;
+            place-content: center;
+            text-align: center;
+        }
+
+        .content-2 {
+            width: 410px;
+            height: 120px;
+            background-color: gray;
+            margin-top: 10px;
+            place-content: center;
+            text-align: center;
+        }
+
+        .related-img {
+            display: flex;
+            gap: 10px;
+        }
+
+        .img-1 {
+            width: 430px;
+            height: 80px;
+            background-color: green;
+            margin-top: 10px;
+            place-content: center;
+            text-align: center;
+
+        }
+
+        .img-2 {
+            width: 200px;
+            height: 80px;
+            background-color: pink;
+            margin-top: 10px;
+            place-content: center;
+            text-align: center;
+        }
+
+        footer {
+            width: 640px;
+            height: 50px;
+            background-color: orangered;
+            place-content: center;
+            text-align: center;
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header>Header</header>
+        <div class="mid-main">
+            <div class="side">
+                <div class="side-1">Hero</div>
+                <div class="side-2">Side</div>
+            </div>
+            <div class="content">
+                <div class="content-1">content-1</div>
+                <div class="content-2">content-2</div>
+            </div>
+
+
+        </div>
+        <div class="related-img">
+            <div class="img-1">Related-Images</div>
+            <div class="img-2">Related-posts</div>
+
+        </div>
+        <footer>footer</footer>
+
+    </div>
+
+</body>
+
+</html>

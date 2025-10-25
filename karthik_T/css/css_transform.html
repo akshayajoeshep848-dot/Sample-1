@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform - property 2D-3D</title>
+    <style>
+        h1 {
+            color: brown;
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: black;
+            border: 5px solid yellow;
+        }
+
+        .child-1 {
+
+            margin: 50px;
+            place-content: center;
+            text-align: center;
+            transform: rotate(50deg);
+        }
+
+        .child-2 {
+            margin: 50px;
+            place-content: center;
+            text-align: center;
+            transform: skew(10deg);
+
+        }
+
+        .child-3 {
+            margin: 50px;
+            place-content: center;
+            text-align: center;
+
+            transform: translate3d(50px, 100px, 0px);
+
+        }
+
+        .child-4 {
+            margin: 50px;
+            place-content: center;
+            text-align: center;
+
+        }
+
+        .child-4:hover {
+            transform: translate(30px);
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1> transform - property-2D-3D</h1>
+    <div class="parent">
+
+
+        <div class=" child child-1">child-1</div>
+
+        <div class=" child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+        <div class="child child-4">child-4</div>
+    </div>
+
+</body>
+
+</html>

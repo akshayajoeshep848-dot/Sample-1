@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> JS Datatypes</h1>
+
+    <script>
+        let age = 10;
+        let firstName = "Thimma";
+        let lastname = `Karthik`;
+
+        let bool = true;
+        let Undefined = undefined;
+        let sym = Symbol()
+
+
+        console.log('age:', typeof age);
+        console.log("Age", age);
+        console.log("FirstName:", firstName);
+        console.log("LastNanme:", lastname);
+        console.log("bool:", bool);
+        console.log(Undefined);
+        console.log(sym);
+        //string concatination
+        console.log("My nmae is " + firstName + lastname + ", and my age is" + age)
+        //template literals
+        console.log(`my name is ${firstName} ${lastname}, and my age is ${age}`);
+        //seprated by commas
+        console.log("My Name  is ", firstName, lastname, ",and my age is", age)
+        console.log("FirstName:", firstName, "Last Name:", lastname, ", age: ", age)
+
+
+        //string concatination
+        let fullName1 = firstName + " " + lastname;
+        let fullName2 = `${firstName} ${lastname}`;
+
+        console.log('fullname1', fullName1);
+        console.log("fullname2", fullName2);
+
+
+        //create 3 varibles
+        address1 = "Nsp colony,4th line,santhanuthalapadu,";
+        address2 = "prakasam,523225,";
+        address3 = "Andrapradesh.";
+        console.log('address1', typeof address1);
+
+        console.log(address1 + address2 + address3)
+        console.log(`${address1}${address2}${address3}`)
+
+        //number datatype
+
+    </script>
+</body>
+
+</html>

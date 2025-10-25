@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions Examples</title>
+</head>
+
+<body>
+    <h1>Functions Examples</h1>
+    <script>
+        // 1 .Write a function called greet that takes a name as an argument and returns a greeting string "Hello, [name]!".
+
+        function greet(name) {
+            return `hello ,${name}`;
+
+        }
+
+
+        //2 . Write a function expression that calculates the square of a number and assign it to a variable named square.
+        let square = function (num) {
+            return num * num;
+        }
+
+        //// 3. Arrow function for full name
+        let fullName = (firstName, lastName) => `${firstName} ${lastName}`
+
+        // 4. Sum function
+        function sum(a, b) {
+            return a + b;
+
+        }
+
+        // 5. Calculate rectangle area
+        function calArea(width, height) {
+            return width * height;
+        }
+
+        // 6. Check if even or odd
+        function isEvenOrOdd(num) {
+            return num % 2 === 0 ? "Even" : "Odd";
+        }
+
+
+        // 7. Find the maximum of three numbers
+        function findMax(a, b, c) {
+            return math.max(a, b, c);
+        }
+
+        // 8. Check if a number is positive
+        function isPositive(num) {
+            return num > 0;
+        }
+
+        // 9. Sum of numbers in an array
+        function sumArray(arr) {
+            return arr.reduce((acc, current) => acc + current, 0);
+        }
+        // 10. Reverse a string
+        function reverseString(str) {
+            return str.split("").reverse().join("");
+        }
+        console.log(reverseString("hello"));
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

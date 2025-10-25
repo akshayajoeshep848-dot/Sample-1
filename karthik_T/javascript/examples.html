@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Examples</title>
+</head>
+
+<body>
+    <h1>javascript Examples</h1>
+    <script>
+        //Problem Statement:
+        //Take two numbers and an operator (+, -, *, /, %) as input and print the result.
+        // let = parseFloat(prompt("Enter First Number :"));
+
+
+        // let num2 = parseFloat(prompt("Enter second Number :"));
+        // let operater = prompt("Enter operater");
+        // let result;
+
+        // switch (operater) {
+        //     case '+';
+        //         result = num1 + num2;
+        //         break;
+
+        //     case '-';
+        //         result = num1 - num2;
+        //         break;
+        //     case '*';
+        //         result = num1 * num2;
+        //         break;
+        //     case '/';
+        //         if (num2 != 0); {
+        //             result = num1 / num2;
+        //         } else {
+        //             result = "Zero division error";
+        //         }
+        //         break;
+        //     case '%';
+        //         if (num2 != 0); {
+        //             result = num1 % num2;
+        //         } else {
+        //             result = "Zero modulo error";
+        //         }
+        //         break;
+        //     default;
+        //         result = "Invalid operator"
+
+
+
+
+
+
+
+
+
+
+        // }
+        // console.log("result :" + result);
+
+
+        // Take inputs
+        // let num1 = parseFloat(prompt("Enter first number:"));
+        // let num2 = parseFloat(prompt("Enter second number:"));
+        // let operator = prompt("Enter operator (+, -, *, /, %):");
+
+        // Perform operation
+        /*let result;
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    result = "Error! Division by zero.";
+                }
+                break;
+            case '%':
+                if (num2 !== 0) {
+                    result = num1 % num2;
+                } else {
+                    result = "Error! Modulus by zero.";
+                }
+                break;
+            default:
+                result = "Invalid operator!";
+        }
+
+        // Print result
+        console.log("Result: " + result);*/
+
+        //leap year
+        // let year = Number(prompt("Enter year :"))
+        // if (year % 4 == 0) {
+        //     if (year % 400 == 0) {
+        //         console.log("This is century lewap year")
+        //     } else {
+        //         console.log("This is a leap year")
+        //     }
+
+        // } else {
+        //     console.log("this is n0ot a leap year")
+        // }
+
+
+        //method 2
+        // let year = Number(prompt("Enter year :"))
+        // if (year % 400 == 0) {
+        //     console.log("This is a cemtury leap year");
+
+        // } else if (year % 100 !== 0 || year % 4 == 0) {
+        //     console.log("This is a leap year")
+        // } else {
+        //     console.log("THis not a leap year")
+        // }
+
+        //method 3
+
+        // let year = Number(prompt("Enter year :"))
+        // if (year % 4 == 0) {
+        //     if (year % 400 == 0) {
+        //         console.log("This is a century leap year")
+        //     } else if (year % 100 !== 0) {
+        //         console.log("This is a leap yaer")
+        //     } else {
+        //         console.log("Not aleap year")
+        //     }
+
+
+        // } else {
+        //     console.log("Not a leap year")
+        // }
+
+
+        //         Problem 3: Sum of Digits of a 3 - digit Number
+        // Problem Statement:
+        // Take a 3 - digit number and print the sum of its digits using arithmetic operator
+        // let num = prompt("Enter 3 digit number");
+        // let hundreds = Math.floor(num / 100); //gives the hundreds digit.
+        // let tens = Math.floor((num % 100) / 10); //gives the tens digit.
+        // let units = num % 10;                    //gives the ones digit.
+        // let digitSum = hundreds + tens + units;
+        // console.log("Sum of digits:", digitSum);
+
+
+        //method 2
+        // Problem 3: Sum of Digits of a 3-digit Number using if
+
+        // let num = 753; // Example number
+        // let sum = 0;
+
+        // if (num >= 100 && num <= 999) {   // Check if it's a 3-digit number
+        //     let digit1 = Math.floor(num / 100);       // First digit
+        //     let digit2 = Math.floor((num / 10) % 10); // Second digit
+        //     let digit3 = num % 10;                    // Third digit
+
+        //     sum = digit1 + digit2 + digit3;
+
+        //     console.log("The sum of digits of " + num + " is: " + sum);
+        // } else {
+        //     console.log("Please enter a valid 3-digit number");
+        // }
+
+
+
+        //method 3
+        let str = prompt("Enter a number :");
+        let sum = 0;
+        let num = str(num);
+        for (let i = 0; i < str.length; i++) {
+            console.log(`start of loop ${i}`);
+            //step:1 getblast digit
+            console.log("sum", sum);
+            console.log(`step1: sum = sum + (num%10);`);
+            sum = sum + (num % 10);
+            console.log("Output sum =", sum);
+
+
+            console.log(` step 2 : num = math.floor(num);`);
+            num = math.floor(num / 10);
+            console.log("Output : num =", num);
+            console.log(`End of loop ${i}`);
+
+
+        }
+        console.log(`sum of digits of given  umber ${str}= ${s
+            + um}`);
+
+
+
+    </script>
+
+</body>
+
+</html>

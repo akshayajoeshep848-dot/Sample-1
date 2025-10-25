@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operater</title>
+</head>
+
+<body>
+    <h1>spread operater</h1>
+    <script>
+        // let arr = [1, 2, 3, 4, 5];
+        // console.log(...arr);
+        // let arr2 = [...arr];
+        // console.log(arr2);
+
+        //write afunction sum 3 numbers a
+        // function sum(a, b, c) {
+        //     return a + b + c;
+
+        // }
+        // const num = [10, 20, 30];
+        // console.log(sum(...num))
+
+
+
+        // const arry1 = [1, 2]
+        // const arry2 = [3, 4]
+        // const combined = [...arry1, ...arry2]
+        // console.log(combined)
+
+
+
+        //shallow copy example
+
+        // const originalArray = [1, 2, { key: 'value' }];
+        // const copiedArray = [...originalArray];
+
+        // console.log(copiedArray);
+        // console.log(originalArray === copiedArray)
+        // console.log(originalArray[2] === copiedArray[2]);
+
+        // copiedArray[0] = 99;
+        // copiedArray[2].key = 'new value'
+
+        // console.log(originalArray)
+        // console.log(copiedArray)
+
+
+        //copying objects (shallow copy)
+        // let originalObject = { a: 1, b: { c: 3 } };
+        // let copiedObject = { ...originalObject };
+        // console.log("orginialobject", originalObject);
+        // console.log("copiedobject", copiedObject)
+        // //chnage values
+        // copiedObject.a = 2;
+        // copiedObject.b.c = 5;
+
+
+
+        //Merging Arrays
+        // const arry1 = [1, 2, 3];
+        // const arry2 = [3, 4, 5];
+        // const arry3 = [5, 6, 7];
+
+        // const mergedArray = [...arry1, ...arry2, ...arry3];
+        // console.log(mergedArray);
+
+        //Merging Objects
+        const objA = { x: 1, y: 2 };
+        const objB = { y: 3, z: 4 };
+        const objC = { a: 5 };
+        const mergedObject = { ...objA, ...objB, ...objC };
+        console.log(mergedObject)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local_storange</title>
+</head>
+
+<body>
+    <h1>Local_storange</h1>
+    <p>
+        key-value-pairs :Data is stored as string key-values pairs.
+
+        persistent : Data reamains in the browser even after the browser is closed and responed;
+
+
+    </p>
+    <script>
+        console.log(localStorage);
+
+
+        //send to loacl storage
+        let userName = "MS Dhoni";
+        localStorage.setItem("userName", userName);
+        console.log(localStorage);
+
+        //get item from local storage
+
+        let user = localStorage.getItem("userName");
+        console.log(user);
+        //remove the item
+        localStorage.removeItem("userName");
+        console.log(user);
+
+
+        //set array
+        let arr = [1, 2, 3, 4, 5];
+        localStorage.setItem("Array", JSON.stringify(arr));
+        console.log(localStorage);
+
+        //get array from local storage
+
+        let returnArr = JSON.parse(localStorage.getItem("Array"));
+        console.log(Array.isArray(returnArr));
+
+        //set object
+
+        let student = {
+            name: "Prathap",
+            age: "23",
+            college: "Qis College"
+        }
+        localStorage.setItem("student", JSON.stringify(student));
+        console.log(localStorage);
+
+        //get object
+        let returnstudent = localStorage.getItem("student");
+        console.log(JSON.parse(returnstudent));
+
+
+        localStorage.clear();
+        console.log(localStorage);
+
+
+
+    </script>
+
+</body>
+
+</html>

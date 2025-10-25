@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+
+<body>
+    <h1>Functions in javascript (IMP)</h1>
+    <script>
+        // //function delecration 
+        // function greet(name) {
+        //     console.log(`Hello ${name} How are You !`)
+
+        // }
+
+        // //calling function
+        // greet("Karthik")
+        // greet("Kiran")
+
+
+
+        //write a function to display vote eligibility
+        // function age(ages) {
+        //     if (age >= 18) {
+        //         console.log("eligible")
+        //     } else {
+        //         console.log("Not-eligible")
+        //     }
+
+
+        // }
+
+        // age(prompt())
+
+
+
+        // function eligibleToVote(age) {
+        //     age < 18
+        //         ? console.log("Eligible to vote")
+        //         : console.log(" Not - Eligible to vote")
+
+        // }
+
+
+        // eligibleToVote(prompt())
+
+        // print full name
+        // function fullName(firstn, middlen, lastn) {
+        //     // console.log(`your full name is : ${firstn} ${middlen} ${lastn}`);
+        //     console.log(`First Name : ${firstn}`);
+
+        //     console.log(`MIddle Name : ${middlen}`);
+
+        //     console.log(`Last Name : ${lastn}`);
+
+
+        // }
+
+        // fullName("karthik", "Naidu", "Thimma")
+
+        var a = 10;
+        // age(a);6
+
+        //to print 1 to n
+        // function printPositiveIntegers(positiveInteger) {
+        //     let i = 1;
+        //     while (i <= positiveInteger) {
+        //         console.log(`${i}`);
+        //         i++
+        //     }
+
+        // }
+        // printPositiveIntegers(a)
+        // function printPositiveIntegers(positiveInteger) {
+        //     for (let i = 1; i <= positiveInteger; i++) {
+        //         console.log(i)
+        //     }
+        //     console.log(`print value of i : ${i}`)
+
+        // }
+        // printPositiveIntegers(a)
+
+
+        // function printPositiveIntegers(positiveInteger) {
+        //     for (var i = 1; i <= positiveInteger; i++) {
+        //         console.log(i)
+        //     }
+        //     console.log(`print value of i : ${i}`)
+
+        // }
+        // printPositiveIntegers(a)
+
+
+        //to print n factorial.
+
+        function factorial(n) {
+            if (n < 0) {
+                return "factorials haven't zero"
+            }
+            if (n === 0 || n === 1) {
+                return 1;
+            }
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+                result *= i;
+
+            }
+            return result;
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

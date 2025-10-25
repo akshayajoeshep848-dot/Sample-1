@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: #ebeef7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            display: grid;
+            height: 100vh;
+
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            gap: 20px;
+        }
+
+        .child {
+            background-color: #ffffffff;
+        }
+
+        .child-1 {
+            grid-column: 1 / 4;
+            grid-row: 1 / 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+        <div class="child child-4">child-4</div>
+        <div class="child child-5">child-5</div>
+        <div class="child child-6">child-6</div>
+        <div class="child child-7">child-7</div>
+        <div class="child child-8">child-8</div>
+        <div class="child child-9">child-9</div>
+        <div class="child child-10">child-10</div>
+        <div class="child child-11">child-11</div>
+        <div class="child child-12">child-12</div>
+        <div class="child child-13">child-13</div>
+    </div>
+
+</body>
+
+</html>

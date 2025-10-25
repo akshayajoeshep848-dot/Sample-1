@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>high scores</h1>
+    <div id="container"></div>
+    <script>
+        const highScores = [
+            { rank: 1, user: "ACE", score: 95000 },
+            { rank: 2, user: "GMR", score: 87200 },
+            { rank: 3, user: "KID", score: 79000 },
+        ];
+
+        let container = document.getElementById("container");
+        highScores.forEach((player) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<span class="rank">#${player.rank}</span> ${player.user} <span class="score">${player.score}</span>`;
+            container.appendChild(li);
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+
+<body>
+    <h1>forEach()</h1>
+    <h2>Real Time Examples</h2>
+    <script>
+        //Displaying a Shopping Cart
+        let cart = ["shoes", "shirt", "phant", "watch", "Bag"];
+        cart.forEach((item, index) => {
+            console.log(`${index + 1}.${item}`);
+        });
+
+        let cart1 = ["Hello", "Hi", "call"];
+        cart1.forEach((items, index) => {
+            console.log(`${index + 1}.${items}`)
+
+        });
+
+
+        //Calculating Total Price
+        let prices = [100, 200, 300, 400];
+        let total = 0;
+        prices.forEach(price => {
+            total += price;
+
+        });
+        console.log("Total price : ", total);
+
+        //Highlighting Menu Items
+        let menu = ["Home", "About", "Services", "Contact"];
+        menu.forEach(items => {
+            console.log(`renderning : ${items}`)
+
+        })
+
+
+    </script>
+
+</body>
+
+</html>

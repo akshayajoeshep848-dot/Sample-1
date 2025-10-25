@@ -1,0 +1,134 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="submit" id="form">
+
+
+        <label for="firstname">FirstName</label>
+        <input type="text" name="firstname" id="firstname">
+        <label for="lastname" id="lastname">LastName</label>
+        <input type="text" name="lasstname">
+
+        <select name="gender" id="gender">
+            <option value="">Male</option>
+            <option value="">Female</option>
+            <option value="">Other</option>
+        </select>
+        <button id="button">submit</button>
+        <button id="rest">reset</button>
+    </form>
+    <script>
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+        let gender = document.getElementById("gender");
+        let button = document.getElementById("button")
+
+        let formobi = {}
+
+        firstname.addEventListener("input", (event) => console.log(event.target.value));
+        lastname.addEventListener("input", (event) => console.log(event.target.value));
+
+        //select for changing
+
+        gender.addEventListener("change", (event) => console.log(event.target.value));
+
+
+        //foucs(filed focus) and  blur(out of focus)
+        firstname.addEventListener("foucs", (event) => {
+            event.target.style.backgroundColor = "red";
+        });
+
+
+        firstname.addEventListener("blur", (event) => {
+            event.target.style.backgroundColor = "yellow";
+            event.target.style.borderColor = "red";
+            event.target.style.padding = "10px";
+        });
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            console.log("form submited")
+        });
+
+        let form = document.getElementById("form").reset()
+
+        document.body.append(form);
+
+
+
+    </script>
+
+</body>
+
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="submit" id="form">
+        <label for="firstname">FirstName</label>
+        <input type="text" name="firstname" id="firstname">
+        <label for="lastname" id="lastname">LastName</label>
+        <input type="text" name="lastname" id="lastnameInput">
+
+        <select name="gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <button id="button" type="submit">submit</button>
+        <button id="rest" type="reset">reset</button>
+    </form>
+
+    <script>
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastnameInput");
+        let gender = document.getElementById("gender");
+        let form = document.getElementById("form");
+
+        let formobi = {}
+
+        firstname.addEventListener("input", (event) => console.log(event.target.value));
+        lastname.addEventListener("input", (event) => console.log(event.target.value));
+
+        // select for changing
+        gender.addEventListener("change", (event) => console.log(event.target.value));
+
+        // focus and blur events
+        firstname.addEventListener("focus", (event) => {
+            event.target.style.backgroundColor = "red";
+        });
+
+        firstname.addEventListener("blur", (event) => {
+            event.target.style.backgroundColor = "yellow";
+            event.target.style.borderColor = "red";
+            event.target.style.padding = "10px";
+        });
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            formobi[event.target.name] = event.target.value;
+            formobi[event.target.name] = event.target.value;
+            formobi[event.target.name] = event.target.value;
+            console.log("form submitted", formobi);
+        });
+    </script>
+</body>
+
+</html>

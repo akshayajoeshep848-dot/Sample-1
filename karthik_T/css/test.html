@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dress card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+        body {
+            font-family: Roboto;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            height: 321px;
+            width: 240px;
+            border-radius: 10px;
+            box-shadow: 0 6px 5px rgb(203, 198, 198);
+        }
+
+        .dress {
+            position: relative;
+            height: 200px;
+            width: 240px;
+            background-image: url("/images/dress1.png");
+            background-size: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            transition: 0.5s ease-in, transform 1s ease-out;
+        }
+
+        .chaitu {
+            display: flex;
+        }
+
+        .below,
+        .below1 {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5px;
+        }
+
+        i {
+            position: relative;
+            top: 160px;
+            height: 40px;
+            width: 120px;
+            background-color: rgba(0, 0, 0, 0.761);
+            color: whitesmoke;
+            padding-left: 50px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            border-radius: 3px;
+            opacity: 0;
+            transition: opacity 1s ease-out;
+            box-shadow: 0px 0px 0px 0.5px rgb(80, 80, 59);
+            margin: 0px;
+        }
+
+        .p1,
+        .p2 {
+            position: relative;
+            top: 110px;
+            height: 40px;
+            width: 119px;
+            background-color: rgba(0, 0, 0, 0.761);
+            color: whitesmoke;
+            padding-left: 50px;
+            padding-top: 10px;
+            box-sizing: border-box;
+            border-radius: 3px;
+            opacity: 0;
+            transition: transform 1s ease, background-color 0.4s ease, color 0.4s ease;
+            box-shadow: 0px 0px 0px 0.5px rgb(98, 98, 66);
+            margin: 0px;
+        }
+
+
+
+        .container:hover i {
+            opacity: 1;
+        }
+
+        .container:hover .dress {
+            background-image: url("/images/imagedress2.png");
+        }
+
+        .icon {
+            position: absolute;
+            left: 260px;
+            opacity: 1;
+            transition: opacity 1s ease-in, transform 0.5s ease-in;
+            height: 30px;
+            width: 30px;
+            top: 20px;
+            border-radius: 15px;
+            place-content: center;
+            text-align: center;
+            background-color: white;
+            opacity: 0;
+        }
+
+        .container:hover .icon {
+            top: 20px;
+            opacity: 1;
+            transform: translateX(-60px);
+        }
+
+        .icon:hover {
+            background-color: black;
+        }
+
+        .prec {
+            position: absolute;
+            width: 40px;
+            height: 20px;
+            background-color: #19b159;
+            text-align: center;
+            place-content: center;
+            box-sizing: border-box;
+            top: 5px;
+            left: 8px;
+            border-radius: 5px;
+            font-size: 12px;
+            color: white;
+        }
+
+        .below:hover .p1 {
+            transform: translateY(10px);
+            background-color: white;
+            color: black;
+            opacity: 1;
+        }
+
+        .below1:hover .p2 {
+            transform: translateY(10px);
+            background-color: white;
+            color: black;
+            opacity: 1;
+        }
+
+        .text {
+            padding-top: 20px;
+            text-align: center;
+            font-family: roboto;
+        }
+
+        h3 {
+            margin: 0px;
+            font-size: 20px;
+            color: #1d212f;
+            font-weight: 450;
+        }
+
+        p {
+            margin: 4px;
+            display: inline-block;
+            font-size: 16px;
+            color: #fd6074
+        }
+
+        .strike {
+            text-decoration: line-through;
+            color: #909090;
+        }
+
+        .checked {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dress">
+            <div class="prec">-33%</div>
+            <div class="icon">
+                <span class="fa fa-heart" style="color: red"></span>
+            </div>
+            <div class="chaitu">
+                <div class="below">
+                    <i class="fa fa-cloud" id="cloud"></i>
+                    <p class="p1">cart</p>
+                </div>
+                <div class="below1">
+                    <i class="fa fa-heart" id="cloud"></i>
+                    <p class="p2">look</p>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            <h3>Women's Red Dress</h3>
+            <p class="strike">$19.00</p>
+            <p>$20.$</p>
+            <br>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        </div>
+
+         
+</body>
+
+</html>

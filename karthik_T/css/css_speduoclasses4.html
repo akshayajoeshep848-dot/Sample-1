@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div p:nth-of-type(even) {
+            background-color: chartreuse;
+        }
+
+        div section:nth-of-type(odd) {
+            background-color: aqua;
+
+        }
+
+        div section:nth-last-of-type(1) {
+            background-color: red;
+        }
+
+        p:empty,
+        p:hover,
+        div:empty {
+            background-color: yellow;
+            height: 30px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Speduo-Classes</h1>
+    <div>
+        <p>para 1</p>
+        <section>section 1</section>
+        <p>para 2</p>
+        <section>section 2</section>
+        <p>para 3</p>
+        <section>section 3</section>
+        <p>para 4</p>
+        <section>section 4</section>
+        <p>para 5</p>
+        <section>section 5</section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+
+</html>

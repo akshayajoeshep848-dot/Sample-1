@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>Document Object Model (DOM) Create</h1>
+    <script>
+        let heading = document.createElement('h1');
+        console.log('Node Type of h1', heading.nodeType);
+
+        let text = document.createTextNode("Hello");
+        console.log('Node Type of Text', text.nodeType);
+
+
+        let comment = document.createComment("Hi NANA");
+        console.log('Node Type of Comment', comment.nodeType);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-classes</title>
+    <style>
+        h1:hover {
+            color: red;
+        }
+
+        p {
+            color: red;
+        }
+
+        p:hover {
+            color: yellow;
+            border: 1px solid orange;
+            padding: 10px;
+            box-shadow: 5px 5px 5px -1px lightgray;
+            border-radius: 10px;
+
+        }
+
+        button {
+            border: none;
+            background-color: crimson;
+            padding: 10px 30px;
+            color: white;
+            box-shadow: 2px 2px 5px 5px lightgray;
+
+        }
+
+        button:hover {
+            transform: scale(1.05) rotate(-5deg);
+        }
+
+        button:active {
+            /* box-shadow: 2px 2px 2px 2px lightgray;*/
+            /*transform: scale(0.9);*/
+            transform: translate(10px 0px);
+
+        }
+
+        .form {
+            padding: 20px;
+            border: 1px solid lightblue;
+        }
+
+        input {
+            border: 1px solid red;
+        }
+
+
+        input:focus {
+            border: 2px solid blue;
+        }
+
+        input:required {
+            border: 2px solid green;
+        }
+
+        a {
+            text-decoration: none;
+
+        }
+
+        a:link {
+            color: green;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: orange;
+        }
+
+        a:target {
+            color: yellow;
+        }
+
+        .para-2:target {
+            color: blue;
+        }
+
+        p:target {
+            color: blue;
+            background-color: rgba(255, 255, 0, 0.459);
+        }
+
+        input:valid {
+            color: red;
+            background-color: aqua;
+        }
+
+        input:invalid {
+            color: yellow;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS pseudo-classes</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente suscipit numquam, vel architecto aspernatur
+        sequi delectus porro aliquid incidunt esse nihil tenetur et ipsum accusamus non saepe sint quasi. Mollitia, et
+        perferendis? Voluptas velit, commodi modi fuga culpa pariatur? Tempore eaque tempora saepe quod quae ut dolor id
+        ab fugit.</p>
+    <button>Login</button>
+    <div class="form">
+        <label id="fn">First Name :</label>
+        <input type="text" id="fn" minlength="5">
+        <label id="ln">last name :</label>
+        <input type="text" id="ln" required>
+
+    </div>
+
+    <div class="form-1">
+        <a href="https://www.logicwhile.com/">logicwhile</a>
+        <a href="https://www.google.com/">google</a>
+        <a href="https://www.youtube.com/">youtube</a>
+    </div>
+
+    <a href="#para">first</a>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, beatae exercitationem! Dolorem hic, facere
+        rem aut quas deleniti voluptatibus officiis vero rerum, iure nostrum libero commodi doloribus ullam. Nostrum
+        sint, odit possimus saepe laboriosam impedit esse quisquam suscipit explicabo repellat quaerat repudiandae
+        voluptate porro aspernatur qui, praesentium laborum ipsam voluptas!</p>
+    <a href="#para-1">middle</a>
+    <p id="para-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus iusto omnis temporibus! A
+        obcaecati odio ex nisi assumenda commodi voluptates nihil mollitia perspiciatis nulla sapiente id ullam soluta,
+        expedita, vitae, laborum debitis! Itaque beatae cum animi at ipsam! Tempora impedit itaque ex voluptatem illum
+        ad odit vel facere sunt quasi ipsa, maxime magnam incidunt dignissimos. Totam, sunt deserunt quos repudiandae
+        beatae eaque a tempora sequi, necessitatibus, voluptate consequatur cupiditate incidunt optio ducimus! Non
+        assumenda, illo cum aliquid vero quis harum reiciendis laudantium at! Quisquam unde numquam harum fuga cumque
+        obcaecati! Minima cum ipsum vel, nesciunt numquam, harum repudiandae quo perspiciatis cumque quod ad illum
+        quaerat id commodi, natus culpa odit sit! Aspernatur perferendis delectus ex voluptatem fugiat. Optio nobis ab
+        assumenda vel quis expedita ducimus unde, similique minus accusantium possimus a distinctio velit cum asperiores
+        rem esse harum? Impedit officia earum neque, quis temporibus beatae modi et? Quia incidunt maiores error
+        suscipit magnam corporis eos nam, eligendi nemo ratione nostrum alias autem reiciendis aliquam voluptas!
+        Officiis voluptate atque beatae ratione obcaecati magni? Rem quo, libero excepturi, nemo, expedita cupiditate
+        odio quas tempora reiciendis magni nostrum dolorum. Necessitatibus molestias deserunt consequuntur modi ut earum
+        suscipit dolor ipsum explicabo vero ad voluptas doloremque, aut quam neque saepe delectus, mollitia ipsa quis
+        voluptatem eaque est unde commodi. Voluptate rem quod amet minus corrupti porro veniam nobis quidem minima
+        placeat eveniet blanditiis nulla officiis iure commodi veritatis, accusamus nisi neque laudantium asperiores
+        dicta ipsam beatae perferendis! Vero eveniet voluptatum et velit inventore totam tenetur beatae veritatis
+        asperiores nostrum ex repellat assumenda eum odio ea, praesentium quae ipsa placeat pariatur sunt cumque
+        quibusdam provident aut illum. Culpa delectus suscipit nemo magnam unde itaque quibusdam quas quo excepturi
+        aliquam, officiis blanditiis neque tenetur sequi eos saepe nesciunt iste. Natus enim ad, vero distinctio
+        laboriosam, maiores reprehenderit consectetur harum provident, magnam facilis quas inventore! Velit reiciendis
+        sed, exercitationem dolore, repellendus provident quam aspernatur ipsum culpa eveniet quia eaque facilis sequi
+        cum praesentium ratione error similique odio asperiores. Itaque vitae neque dolorum voluptatibus culpa ratione
+        ipsam atque voluptatum saepe ea doloribus quibusdam unde reprehenderit veniam mollitia asperiores molestiae quis
+        harum, fugiat quo amet aperiam quisquam quas! Consectetur doloremque autem est quaerat nostrum, tenetur
+        blanditiis odio sint magnam in, dolorum eos mollitia minima impedit ea nulla aperiam obcaecati molestiae
+        voluptate quod rem? Enim amet repellendus quisquam non blanditiis inventore eos. Esse sint sed voluptates
+        distinctio dignissimos ratione obcaecati consequatur a, aut quaerat est officiis. Laudantium, vel rem modi
+        suscipit quia, soluta neque sed in iste vero accusantium, nisi asperiores vitae consequuntur impedit natus autem
+        praesentium ratione. Necessitatibus sequi voluptas ea. Magni illum autem eaque quo, voluptate quibusdam
+        perspiciatis, officiis vitae reiciendis iste dolores, qui quasi fugiat nisi vero veniam sequi officia rerum
+        commodi esse nulla nihil minus. Aliquam perspiciatis adipisci accusantium ipsum, quis voluptatem sapiente, sed
+        reiciendis provident quod cumque excepturi nam corrupti quae temporibus ratione. Commodi, nisi facere ab
+        pariatur voluptate quas maiores dolorem sequi fuga culpa dolorum incidunt repudiandae expedita debitis.
+        Voluptates excepturi laboriosam est! Quia, unde?</p>
+    <a href="#para-2">last</a>
+    <p id="para-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolor cumque autem ea blanditiis fugit
+        reprehenderit quae. Accusantium accusamus, temporibus quasi reiciendis facilis asperiores optio, totam ad,
+        tempore quas nisi. Cumque hic et quasi recusandae, ipsum aspernatur maxime, accusantium numquam maiores velit,
+        aut sunt cum! Quos, quis nam ullam magni voluptates eveniet explicabo deleniti nemo eos odit accusamus at est
+        eius reiciendis nulla fugit asperiores odio, eaque aliquam, molestiae tempora voluptas! Voluptatem molestiae
+        laudantium voluptas dolore debitis ex repellendus sunt id ratione vitae quaerat possimus eos dignissimos hic,
+        vero error libero consectetur nesciunt asperiores odit consequatur. Error, tempora et quasi quos sequi nulla
+        nobis suscipit cupiditate magnam architecto, harum inventore maxime est, fugiat odit? Blanditiis ex ab corporis
+        ducimus odio cupiditate, numquam debitis molestias animi sit aperiam illum hic repellat amet harum. Velit sit
+        fugit minima tempora doloribus blanditiis quasi veniam a nisi, vel ut, aspernatur sint itaque optio ipsam
+        incidunt repellat enim voluptate dolor? Ut dolore, molestiae repellendus hic dicta laborum iste omnis, maiores
+        voluptate quos quis porro. Laborum omnis sint consectetur possimus accusantium minima commodi, tenetur labore
+        asperiores voluptas debitis nihil natus officia ea facere vel provident inventore eveniet mollitia fugit ullam
+        ratione. Placeat ratione aliquam perspiciatis ut iusto deserunt sapiente fugit dolore quidem atque! Ab, minus
+        vel doloribus delectus optio consectetur eos nostrum in est quisquam, soluta eligendi, aut accusantium sunt
+        sint. Rem, ullam esse placeat minima ut dicta vero. Veritatis quae tempore sit doloribus neque sint nostrum
+        atque alias. Sit quis aspernatur hic aperiam molestiae, modi aut accusamus maiores reprehenderit inventore
+        facilis mollitia possimus fugiat perspiciatis excepturi explicabo asperiores nam nulla ea at odio laudantium
+        distinctio atque. Facere amet dignissimos ducimus minus itaque nemo excepturi deserunt. Sapiente labore in,
+        quibusdam, facere impedit illo fugiat consequuntur blanditiis quo a numquam quos corrupti ab inventore esse
+        pariatur unde.</p>
+
+
+</body>
+
+</html>

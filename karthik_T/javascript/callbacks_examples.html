@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callbacks</title>
+</head>
+
+<body>
+
+    <h1>callback Examples</h1>
+    <script>
+
+        //Write a higher-order function named operate that takes two numbers and a callback function. The callback function should perform a mathematical operation (e.g., addition, subtraction), and operate should return the result.
+        // function operate(num1, num2, callback) {
+        //     return callback(num1, num2);
+
+        // }
+        // function add(a, b) {
+        //     return a + b;
+        // }
+        // function sub(a, b) {
+        //     return a - b;
+
+        // }
+        // console.log(operate(10, 5, add));
+        // console.log(operate(10, 5, sub));
+
+
+        //Create a function greet that takes a name and a callback function. The callback function should format the greeting message. Call greet with a callback that makes the message uppercase.
+        // function greet(name, callback) {
+
+        //     console.log(callback(name))
+        // }
+        // greet("Karthik", (name) => `hello , ${name.toUpperCase()}!`)
+
+        // function fullName(name, callback) {
+        //     console.log(callback(name))
+        // }
+        // fullName("konidela pawan kalyan", (name) => ` Nmashkar ${name}`)
+
+
+        //synchronous callback
+        // let numbers = [1, 2, 3];
+        // numbers.forEach(function (num) {
+        //     console.log(num); // This is a synchronous callback
+        // });
+        // console.log("After forEach");
+
+        //Asynchronous Example:console.log("Before setTimeout");
+        // setTimeout(function () {
+        //     console.log("Inside setTimeout"); // This is an asynchronous callback
+        // }, 2000);
+        // console.log("After setTimeout");
+
+        //example set time
+
+        // console.log("start");
+        //setTimeout(() => {
+        // console.log("This Runs After 5 Seconds");
+
+        //}, 2000);
+        //console.log("End")
+
+        // let numbers = [1, 2, 3, 4, 5];
+        // numbers.forEach((num) => {
+        //     console.log(num);
+        // });
+
+
+        // let numbers = [1, 2, 3, 4, 5];
+        // numbers.map((num) => {
+        //     console.log(num)
+        // })
+
+
+        let numbers = [1, 2, 3, 4, 5];
+        console.log(numbers.toString());
+
+
+    </script>
+
+
+</body>
+
+</html>

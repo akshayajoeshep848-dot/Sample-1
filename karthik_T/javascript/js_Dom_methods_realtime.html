@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="title">Realtime Examples for DOM Methods</h1>
+    <button onclick="changeTitle()">Click Here</button>
+    <h1 id="lu">Please click suprise button</h1>
+    <button onclick="loveU()">Suprise</button>
+
+
+
+
+    <!-- getElementsByClassName()
+
+👉 Example: Highlighting multiple elements -->
+
+    <p class="item">Apple</p>
+    <p class="item">Banana</p>
+    <p class="item">Mango</p>
+    <button onclick="highlight()">Highlight</button>
+
+
+    <!-- 🔹 3. querySelector()
+
+👉 Example: Select first matching element -->
+    <p class="info">First Info</p>
+    <p class="info">Second Info</p>
+
+    <script>
+        //Updating a headline dynamically using getElementById()
+        function changeTitle() {
+            document.getElementById("title").innerText = "Hello"
+
+        }
+
+        function loveU() {
+            let love = document.getElementById("lu");
+            love.innerText = "LOVE U NANA";
+            love.style.color = "red";
+
+        }
+
+
+        getElementsByClassName()
+
+        function highlight() {
+            let items = document.getElementsByClassName("item");
+            for (let i = 0; i < items.length; i++) {
+                items[i].style.color = "red";
+            }
+        }
+
+
+        // 3. querySelector()
+
+        document.querySelector(".info").style.fontWeight = "bold";
+
+
+
+
+
+
+
+
+        // function getfruits() {
+        //     let fruits = ["Apple", "Banana", "Orange", "Dragon", "Watermelon"];
+        //     let fruitsCollections = document.getElementsByClassName("item");
+        //     console.log(fruitsCollections);
+        //     let fruitsArray = Array.from(fruitsCollections);
+        //     console.log(fruitsArray);
+        //     fruitsArray.forEach((htmlElement, index) =>
+        //         console.log(htmlElement.innerText));
+        //     htmlElement.innerText = fruits[index];
+
+        // }
+
+    </script>
+
+</body>
+
+</html>

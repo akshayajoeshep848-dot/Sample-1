@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .item {
+            background-color: red;
+            padding: 10px;
+            margin: 10px;
+            color: yellow;
+            text-align: center;
+            place-content: center;
+        }
+
+        .item:hover {
+            color: red;
+            background-color: yellow;
+        }
+
+        button {
+            background-color: blue;
+            border: none;
+            padding: 8px 20px;
+            color: white;
+            margin-left: 150px;
+            margin-top: 50px;
+
+        }
+
+        button:hover {
+            background-color: yellow;
+            color: red;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="item item-1 ">item 1</div>
+        <div class="item item-2">item 2</div>
+        <div class="item item-3">item 3</div>
+        <div class="item item-4">item 4</div>
+        <div class="item item-5">item 5</div>
+        <div class="item item-5">item 6</div>
+        <div class="item item-5">item 7</div>
+        <div class="item item-5">item 8</div>
+        <div class="item item-5">item 9</div>
+        <div class="item item-5">item 10</div>
+    </div>
+
+    <button onclick="getfruits(itemArray,fruits)">fruits</button>
+    <button onclick="getfruits(itemArray,vegetables)">vegtables</button>
+    <button onclick="getfruits(itemArray,shirts)">shirts</button>
+
+    <script>
+
+
+
+        let vegetables = ["Dondakaya",
+            "Bemndayaka", "potato", "carrot", "Beetroot", "chilly", "mango", "dosskaya", "beerakaya", "chikkudi"];
+        let fruits = ["Apple", "Banana", "Orange", "Dragon", "Watermelon"];
+        // let shirts = ["full ", "half", "Model", "checks"]
+        // console.log(vegetables);
+        // let vegetablesCollection = document.getElementsByClassName("item");
+        // console.log(vegetablesCollection);
+        // let vegetablesArray = Array.from(vegetablesCollection);
+        // console.log(vegetablesArray);
+        // vegetablesArray.forEach((element, index) =>
+        //     element.innerText = vegetables[index]
+        // )
+
+        let vegCollections = document.getElementsByClassName("item");
+        let itemArray = Array.from(vegCollections);
+        function getfruits(arr1, arr2, arr3) {
+
+            arr1.forEach((e, i) => (e.innerText = arr1[i]));
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>js_async</h1>
+    <script>
+        // console.log("start");
+        // setTimeout(() => console.log("Middle"), 2000);
+        // console.log("end");
+
+
+
+        //pizza order Example
+        function getpizza(callback) {
+            console.log("Ordering Pizza !");
+            setTimeout(() => {
+                console.log("Pizza is arrived");
+                callback()
+            }, 2000);
+        }
+
+        function dodishes() {
+            console.log("Washing Dishes")
+        }
+
+        getpizza(dodishes);
+        console.log("watchhing instagram while I wait...")
+    </script>
+
+</body>
+
+</html>

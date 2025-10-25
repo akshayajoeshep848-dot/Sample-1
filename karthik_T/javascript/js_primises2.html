@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_promises</title>
+</head>
+
+<body>
+    <h1>promises</h1>
+    <script>
+        // let mypromise = Promise.resolve("Success");
+        // let mypromise2 = Promise.reject("Failure")
+        // console.log(mypromise);
+        // mypromise.then((response) => console.log(response));
+        // mypromise2.catch((reject) => console.log(reject));
+
+
+
+
+        // let mypromise = Promise.resolve("Success");
+        // let mypromise2 = Promise.reject("Failure");
+        // let mypromise3 = new Promise((resolve, reject) => {
+        //     const success = true;         //Math.random > 0.7;
+        //     setTimeout(() => {
+        //         success ? resolve("Success") : reject("Failure");
+        //     }, 2000);
+
+        // });
+
+
+        // Promise.all([mypromise, mypromise2, mypromise3])
+        //     .then((values) => console.log(values))
+        //     .catch((error) => console.log(error));
+
+
+        let mypromise = Promise.resolve("Success");
+        let mypromise2 = Promise.reject("Failure");
+        let mypromise3 = new Promise((resolve, reject) => {
+            const success = Math.random() > 0.7; // Randomly true or false
+            setTimeout(() => {
+                success ? resolve("Success") : reject("Failure");
+            }, 2000);
+        });
+
+        Promise.all([mypromise, mypromise2, mypromise3])
+            .then((values) => console.log("✅ All Success:", values))
+            .catch((error) => console.log("❌ One Failed:", error));
+
+    </script>
+</body>
+
+</html>

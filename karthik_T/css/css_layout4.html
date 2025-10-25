@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layouts</title>
+    <style>
+        header {
+            width: 640px;
+            height: 40px;
+            background-color: rgb(90, 224, 180);
+            text-align: center;
+            place-content: center;
+        }
+
+        nav {
+            width: 640px;
+            height: 40px;
+            background-color: rgb(122, 240, 122);
+            text-align: center;
+            place-content: center;
+            margin-top: 15px;
+
+        }
+
+        .middle {
+            display: flex;
+            gap: 15px;
+        }
+
+        aside {
+            width: 200px;
+            height: 357px;
+            background-color: rgb(122, 240, 122);
+            margin-top: 15px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .content-1 {
+            width: 425px;
+            height: 170px;
+            background-color: rgb(96, 96, 237);
+            margin-top: 15px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .content-2 {
+            width: 425px;
+            height: 170px;
+            background-color: rgb(93, 18, 164);
+            margin-top: 15px;
+            text-align: center;
+            place-content: center;
+
+        }
+
+        footer {
+            width: 640px;
+            height: 40px;
+            background-color: rgb(90, 224, 180);
+            text-align: center;
+            place-content: center;
+            margin-top: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <header>header</header>
+        <nav>Nav</nav>
+        <div class="middle">
+            <aside>Aside</aside>
+            <div class="content">
+                <div class="content-1"> content-1</div>
+                <div class="content-2"> content-2</div>
+
+            </div>
+
+        </div>
+        <footer>fotter</footer>
+    </div>
+
+</body>
+
+</html>

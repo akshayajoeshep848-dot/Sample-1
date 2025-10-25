@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asynchronous</title>
+    <style>
+        #container {
+            background-color: rgba(255, 0, 0, 0.223);
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        p {
+            color: red;
+            font-size: 20px;
+            font-weight: 300;
+
+        }
+
+        p:hover {
+            color: white;
+        }
+
+        .button {
+            background-color: blue;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1>asynchronous</h1>
+
+    <p>Async function is a function that always returns a promise,designed to improve
+        redability and simplify chaining asynchronous operations</p>
+    <p>"await"==> It is keyword is used inside the async functions and is used to pause the execution of the function
+        until promise it awaits resovlves or rejets,it allows writing asynchronous code that looks synchronus</p> -->
+
+    <div id="container">
+
+    </div>
+
+    <script>
+        // async function hello() {
+        //     return "Hello, Async!"
+
+        // }
+        // hello().then((value) => console.log(value));
+        // hello().then(console.log)
+
+
+
+        //await (async using fetch call)
+
+        //method1
+        //----------------------------------------
+        // async function fetchData() {
+        //     // console.log("Starting Fetch CAll")
+        //     let response = await fetch("https://dogapi.dog/api/v2/breeds");
+        //     let breeds = await response.json();
+        //     //console.log(breeds)
+        //     //  console.log("End Fetch CAll")
+        //     return breeds;
+        // }
+        // fetchData().then(console.log);
+
+
+        //method2
+        //=---------------------------------------
+
+        let options = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        };
+
+        let postoptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: {} // JSON.stringfiy({})
+        }
+
+
+        async function fetchData(url, options) {
+            let response = await fetch(url);
+            let data = await response.json();
+            return data;
+        }
+
+        fetchData("https://jsonplaceholder.typicode.com/users/1", options)
+            .then(user => {
+                const container = document.getElementById("container");
+
+
+                const detailsContainer = document.createElement("div");
+                detailsContainer.classList.add("details-container");
+
+                // Create paragraphs for each detail
+                const nameP = document.createElement("p");
+                nameP.textContent = "Name: " + user.name;
+
+                const usernameP = document.createElement("p");
+                usernameP.textContent = "Username: " + user.username;
+
+                const emailP = document.createElement("p");
+                emailP.textContent = "Email: " + user.email;
+
+                const companyP = document.createElement("p");
+                companyP.textContent = "Company: " + user.company.name;
+
+                const addressP = document.createElement("p");
+                addressP.textContent = `Address: ${user.address.street}, ${user.address.city}`;
+
+                let button = document.createElement("button")
+                button.textContent = "Add"
+                button.classList.add("button");
+
+                // Add click event to button
+                button.addEventListener("click", () => {
+                    alert(
+                        `User Details:\nName: ${user.name}\nUsername: ${user.username}\nEmail: ${user.email}\nCompany: ${user.company.name}\nAddress: ${user.address.street}, ${user.address.city}`
+                    );
+                });
+                // Append all paragraphs to details container
+                detailsContainer.append(nameP, usernameP, emailP, companyP, addressP, button);
+
+
+
+                // Append details container to main container
+                container.appendChild(detailsContainer);
+
+            })
+            .catch(error => console.error("Error:", error));
+
+
+
+
+    </script>
+</body>
+
+</html>

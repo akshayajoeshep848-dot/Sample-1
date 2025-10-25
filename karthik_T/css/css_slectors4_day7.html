@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        /*h1+p {
+            color: red;
+        }
+
+        p+h1 {
+            border: 1px solid yellow;
+        }*/
+
+        h1 ~ p{    /*genral sibling selector*/
+            color: yellow;
+        }
+         p ~ h1{
+            border: 1px solid red;
+         }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Selectors - adjacent sibling</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis totam, nam deserunt repellendus explicabo
+        ullam consequuntur reprehenderit rem ipsam rerum.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae rerum atque consequuntur, similique
+        molestias ab dolorem vel. Dicta, delectus illo.</p>
+    <h1>Heading - 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, incidunt.2</p>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        #countryselect {
+            background-color: red;
+            color: white;
+            padding: 10px;
+        }
+
+        h1 {
+            color: green;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 250px;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- <h1>select a country</h1>
+    <select id="countryselect"> -->
+
+    <h1>select Gender</h1>
+    <select id="gender"></select>
+
+
+
+    </select>
+
+    <script>
+
+        // const countryOptions = [
+        //     { value: "us", label: "United States" },
+        //     { value: "ca", label: "Canada" },
+        //     { value: "mx", label: "Mexico" },
+        //     { value: "gb", label: "United Kingdom" },
+        // ];
+
+        // let select = document.getElementById("countryselect");
+
+        // countryOptions.forEach((country) => {
+        //     let option = document.createElement("option");
+        //     option.value = country.value;
+        //     option.textContent = country.label;
+        //     select.appendChild(option);
+        // });
+
+
+        let genderoptions = [
+            { value: "select Gender", label: "Select Gender" },
+            { value: "Male", label: "Male" },
+            { value: "Female", label: "Female" },
+            { value: "Others", label: "Others" },
+        ];
+
+        // Get the select element
+        let gender = document.getElementById("gender");
+
+        // Loop through array and create <option> elements
+        genderoptions.forEach((g) => {
+            let option = document.createElement("option");
+            option.value = g.value;
+            option.textContent = g.label;
+            gender.appendChild(option);
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div"></div>
+    <script>
+        let div = document.getElementById("div");
+        div.style.background = "pink";
+        div.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
+        div.style.width = "400px";
+        div.style.borderRadius = "10px";
+        div.style.padding = "20px";
+        div.style.color = "green";
+        div.style.margin = "auto";
+
+
+
+
+        let heading = document.createElement("h1");
+        heading.textContent = "patient registration form";
+
+        div.append(heading);
+
+        let form = document.createElement("form");
+        div.append(form);
+
+
+        let name = document.createElement("label");
+        name.setAttribute("for", "Name");
+        name.textContent = "Patient First Name:"
+
+        form.append(name);
+
+        let input1 = document.createElement("input")
+        input1.setAttribute("type", "text");
+        input1.setAttribute("id", "patient  Firstname");
+        input1.setAttribute("name", "patient Firstname");
+        input1.setAttribute("requried", true);
+        input1.setAttribute("placeholder", "Enter Patient FirstName")
+        input1.style.marginLeft = "20px"
+
+
+        form.append(input1);
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+
+        let name1 = document.createElement("label");
+        name1.setAttribute("for", "Lastname");
+        name1.textContent = "Patient Last name:"
+        form.append(name1);
+
+        let input = document.createElement("input");
+        input.setAttribute("type", "text");
+        input.setAttribute("id", "Patient Last Name");
+        input.setAttribute("placeholder", "Enter Patient Last Name");
+        input.setAttribute("required", true);
+        input.style.marginLeft = "20px"
+        input.style.margin = "10px"
+
+
+
+        form.append(input)
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+
+
+
+
+        let name2 = document.createElement("label");
+        name2.setAttribute("for", "FatherName");
+        name2.textContent = "patient FatherName:"
+        form.append(name2);
+
+        let input2 = document.createElement("input")
+        input2.setAttribute("type", "text");
+        input2.setAttribute("id", "patient name");
+        input2.setAttribute("name", "patient name");
+        input2.setAttribute("requried", true);
+        input2.setAttribute("placeholder", "Enter Patient FatherName")
+        input2.style.marginLeft = "20px"
+        input2.style.margin = "10px"
+
+
+
+
+        form.append(input2);
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let dob = document.createElement("label");
+        dob.setAttribute("for", "dob");
+        dob.textContent = "Date-Of-Birth:"
+        form.append(dob);
+
+        let input4 = document.createElement("input")
+        input4.setAttribute("type", "date");
+        input4.setAttribute("id", "dob");
+        input4.setAttribute("name", "dob");
+        input4.setAttribute("requried", true);
+        input4.setAttribute("placeholder", "Enter Date of birth")
+        input4.style.marginLeft = "20px"
+        input4.style.margin = "10px"
+
+
+
+
+        form.append(input4);
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+
+
+
+
+        let email = document.createElement("label");
+        email.setAttribute("for", "email");
+        email.textContent = "Email:"
+        form.append(email);
+
+        let input5 = document.createElement("input")
+        input5.setAttribute("type", "email");
+        input5.setAttribute("id", "email");
+        input5.setAttribute("name", "email");
+        input5.setAttribute("requried", true);
+        input5.setAttribute("placeholder", "Enter Email")
+        input5.style.marginLeft = "20px"
+        input5.style.margin = "10px"
+
+
+
+
+        form.append(input5);
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let number = document.createElement("label");
+        number.setAttribute("id", "Ph.no")
+        number.textContent = ("Ph.no:")
+        form.append(number);
+
+
+        let input3 = document.createElement("input");
+        input3.setAttribute("type", "tel");
+        input3.setAttribute("id", "Ph.no");
+        input3.setAttribute("tel", "number");
+        input3.setAttribute("required", true);
+        input3.setAttribute("placeholder", "enter mobile number");
+        input3.style.marginLeft = "20px"
+        input3.style.margin = "10px"
+
+
+        form.append(input3);
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let marriagestatus = document.createElement("label");
+        marriagestatus.setAttribute("id", "marriagestatus")
+        marriagestatus.textContent = ("Marriage Status:")
+        form.append(marriagestatus);
+
+
+        let input8 = document.createElement("input");
+        input8.setAttribute("type", "text");
+        input8.setAttribute("id", "marriagestatus");
+        input8.setAttribute("text", "marriagestatus");
+        input8.setAttribute("required", true);
+        input8.setAttribute("placeholder", "enter marriagestatus");
+        input8.style.marginLeft = "20px"
+        input8.style.margin = "10px"
+
+
+        form.append(input8);
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+        let number1 = document.createElement("label");
+        number1.setAttribute("id", "Emergency Contact.no")
+        number1.textContent = ("Emergency Contact.no:")
+        form.append(number1);
+
+
+        let input6 = document.createElement("input");
+        input6.setAttribute("type", "tel");
+        input6.setAttribute("id", "Emergency Contact.no:");
+        input6.setAttribute("tel", "number");
+        input6.setAttribute("required", true);
+        input6.setAttribute("placeholder", "enter mobile number");
+        input6.style.marginLeft = "20px"
+        input6.style.margin = "10px"
+
+
+        form.append(input6);
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+
+        let Adress = document.createElement("label");
+        Adress.setAttribute("for", "Adress");
+        Adress.textContent = "Adress:"
+        form.append(Adress);
+
+        let input7 = document.createElement("input")
+        input7.setAttribute("type", "text");
+        input7.setAttribute("id", "Adress");
+        input7.setAttribute("name", "Adress");
+        input7.setAttribute("requried", true);
+        input7.setAttribute("placeholder", "Enter Adress")
+        input7.style.marginLeft = "20px"
+        input7.style.margin = "10px"
+        input7.style.width = "200px"
+        input7.style.height = "40px"
+
+
+
+        form.append(input7);
+        form.append(document.createElement("br"))
+        form.append(document.createElement("br"))
+
+
+        let submit = document.createElement("input");
+
+        submit.setAttribute("type", "submit");
+        submit.setAttribute("value", "Submit");
+
+        submit.style.backgroundColor = "green"
+        submit.style.textAlign = "center"
+        submit.style.textContent = "center"
+        submit.style.placeContent = "center"
+        submit.style.height = "40px"
+        submit.style.width = "200px"
+        submit.style.marginLeft = "90px"
+
+
+
+
+
+        form.appendChild(submit);
+
+        // Form submission handler
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            let name = input1.value;
+            let name1 = input.value;
+            let name2 = input2.value;
+            let dob = input4.value;
+            let email = input5.value;
+            let marriagestatus = input8.value;
+            let number1 = input6.value;
+            //let gender = document.querySelector('input[name="gender"]:checked')?.value;
+
+            let number = input3.value;
+
+
+            console.log("Name:", name);
+            console.log("Name:", name1);
+            console.log("Name:", name2);
+            console.log("Marriage status:", marriagestatus);
+            console.log("Date of Birth:", dob);
+            console.log("Adress:", Adress);
+
+            console.log("Phone Number:", number);
+            console.log("Phone Number:", number1);
+            console.log("Email:", email)
+
+
+            alert("Form submitted! Check console for data.");
+
+            form.reset();
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

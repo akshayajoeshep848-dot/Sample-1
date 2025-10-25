@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style-type: square;
+            position: relative;
+            left: -10px;
+            padding-left: 30px;
+
+
+        }
+
+
+
+        ul li::marker {
+            content: "\27a4";
+            color: green;
+            font-size: 20px;
+
+
+        }
+
+        p::spelling-error {
+            text-decoration: underline;
+            color: green;
+        }
+
+        p::grammar-error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS-Speudo-Elements</h1>
+    <ul>
+        <li>itemes-1</li>
+        <li>itemes-2</li>
+        <li>itemes-3</li>
+        <li>itemes-4</li>
+        <li>itemes-5</li>
+    </ul>
+
+    <p contenteditable="true" spellcheck="true">his am praggagraph. It is editable. Try to change the text</p>
+
+</body>
+
+</html>

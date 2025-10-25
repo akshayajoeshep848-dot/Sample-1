@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Image Gallery</h1>
+    <div id="ImageContainer"></div>
+    <script>
+        // const galleryImages = [
+        //     {
+        //         id: "img001",
+        //         src: "/images/sunset.jpg",
+        //         alt: "A vibrant sunset over the ocean",
+        //     },
+        //     {
+        //         id: "img002",
+        //         src: "/images/mountains.jpg",
+        //         alt: "Snow-capped mountains under a blue sky",
+        //     },
+        //     {
+        //         id: "img003",
+        //         src: "/images/forest.jpg",
+        //         alt: "Sunlight filtering through a dense forest",
+        //     },
+        // ];
+
+        // let ImageContainer = document.getElementById("ImageContainer");
+        // galleryImages.forEach((images) => {
+        //     let imgElement = document.createElement("img");
+        //     imgElement.src = img.src;
+        //     imgElement.alt = img.alt;
+        //     imgElement.id = img.id;
+        //     imgElement.style.width = "200px";
+        //     ImageContainer.appendChild(imgElement);
+
+        // });
+
+
+
+
+
+        const galleryImages = [
+            { id: "img001", src: "/images/sunset.jpg", alt: "A vibrant sunset over the ocean" },
+            { id: "img002", src: "/images/mountains.jpg", alt: "Snow-capped mountains under a blue sky" },
+            { id: "img003", src: "/images/forest.jpg", alt: "Sunlight filtering through a dense forest" },
+        ];
+
+        let ImageContainer = document.getElementById("ImageContainer");
+
+        galleryImages.forEach((img) => {
+            let imgElement = document.createElement("img");
+            imgElement.src = img.src;
+            imgElement.alt = img.alt;
+            imgElement.id = img.id; // ✅ fixed
+            imgElement.style.width = "200px";
+            imgElement.style.margin = "10px";
+            ImageContainer.appendChild(imgElement);
+        });
+
+
+    </script>
+
+</body>
+
+</html>

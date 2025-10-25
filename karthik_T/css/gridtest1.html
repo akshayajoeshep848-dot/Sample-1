@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid template areas</title>
+    <style>
+        .parent {
+            background-color: bisque;
+            height: 50vh;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas: "child-1 child-1 child-2"
+                "child-5 child-3 child-2"
+                "child-5 child-4 child-4 ";
+
+        }
+
+        .child {
+            background-color: red;
+            text-align: center;
+            place-content: center;
+        }
+
+        .child-1 {
+            grid-area: child-1;
+        }
+
+        .child-2 {
+            grid-area: child-2;
+        }
+
+        .child-3 {
+            grid-area: child-3;
+        }
+
+        .child-4 {
+            grid-area: child-4;
+        }
+
+        .child-5 {
+            grid-area: child-5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <child class="child child-1">child-1</child>
+        <child class="child child-2">child-2</child>
+        <child class="child child-3">child-3</child>
+        <child class="child child-4">child-4</child>
+        <child class="child child-5">child-5</child>
+    </div>
+
+</body>
+
+</html>

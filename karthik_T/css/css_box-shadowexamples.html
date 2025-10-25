@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-size Examples</title>
+    <style>
+        .shadow {
+
+
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            padding: 5px;
+            margin: 50px 20px 20px 20px;
+            border-radius: 10px;
+            text-align: center;
+            place-content: center;
+
+
+
+
+        }
+
+        .shadow-1 {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+
+        }
+
+        .shadow-2 {
+            box-shadow: 8px 8px 0px -5px rgb(232, 226, 226);
+        }
+
+        .shadow-3 {
+            box-shadow: 0px 0px 10px 5px rgb(217, 212, 212);
+        }
+
+        .shadow-4 {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+        }
+
+        .shadow-5 {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+
+        .shadow-6 {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+        }
+
+        .shadow-7 {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+        }
+
+        .shadow-8 {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        }
+
+        .shadow-9 {
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+        }
+
+        .shadow-10 {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+        }
+
+        .shadow-11 {
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+        }
+
+        .shadow-12 {
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+        }
+
+        .shadow-13 {
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+        }
+
+        .shadow-14 {
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+        }
+
+        .shadow-15 {
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+        }
+
+        .shadow-16 {
+
+            box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+        }
+
+        .shadow-17 {
+            box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+
+        }
+
+
+
+        .shadow-18 {
+            box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+
+        }
+
+        .shadow-19 {
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+        }
+
+        .shadow-20 {
+            box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+
+        }
+
+        .shadow-21 {
+            box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+
+        }
+
+        .shadow-22 {
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+        }
+
+        .shadow-23 {
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+
+        }
+
+        .shadow-24 {
+            box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+        }
+
+        .shadow-25 {
+            box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div style="display: flex;justify-content: space-around;">
+        <div class="shadow-1 shadow">1</div>
+        <div class="shadow-2 shadow">2</div>
+        <div class="shadow-3 shadow">3</div>
+    </div>
+    <div style="display: flex;justify-content: space-around;">
+        <div class="shadow-4 shadow">4</div>
+        <div class="shadow-5 shadow">5</div>
+        <div class="shadow-6 shadow">6</div>
+    </div>
+    <div style="display: flex;justify-content: space-around;">
+        <div class="shadow-7 shadow">7</div>
+        <div class="shadow-8 shadow">8</div>
+        <div class="shadow-9 shadow">9</div>
+    </div>
+    <div style="display: flex;justify-content: space-around;">
+        <div class="shadow-10 shadow">10</div>
+        <div class="shadow-11 shadow">11</div>
+        <div class="shadow-12 shadow">12</div>
+    </div>
+    <div style="display: flex;justify-content: space-around;">
+        <div class="shadow-13 shadow">13</div>
+        <div class="shadow-14 shadow">14</div>
+        <div class="shadow-15 shadow">15</div>
+    </div>
+    <div style="display:flex;justify-content: space-around;">
+        <div class="shadow-16 shadow">16</div>
+        <div class="shadow-17 shadow">17</div>
+        <div class="shadow-18 shadow">18</div>
+    </div>
+    <div style="display:flex;justify-content: space-around;">
+        <div class="shadow-19 shadow">19</div>
+        <div class="shadow-20 shadow">20</div> w">20
+    </div>
+
+
+    <div style="display:flex;justify-content: space-around;">
+        <div class="shadow-22 shadow">22</div>
+        <div class="shadow-23 shadow">23</div>
+        <div class="shadow-24 shadow">24</div>
+    </div>
+    <div class="shadow-25 shadow">225</div>
+    <div class="shadow-21 shadow">21</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

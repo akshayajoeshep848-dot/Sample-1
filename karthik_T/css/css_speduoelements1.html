@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style-type: none;
+            padding: 0px;
+        }
+
+        li::before {
+            content: "\2b50";
+            padding: 10px;
+        }
+
+        li::after {
+            content: "\1f4ab";
+            padding: 10px;
+        }
+
+        .burger-menu {
+            background-color: black;
+            width: 20px;
+            height: 4px;
+            border-radius: 10px;
+        }
+
+        .burger-menu::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            transform: translateY(7px);
+            border-radius: 10px;
+
+
+        }
+
+        .burger-menu::after {
+            content: "";
+            background-color: black;
+            position: absolute;
+            width: 20px;
+            height: 4px;
+            transform: translateY(-7px);
+            border-radius: 10px;
+
+
+        }
+
+        p::first-letter {
+
+            font-size: 30px;
+        }
+
+        p::first-line {
+            color: red;
+            font-variant: small-caps;
+        }
+
+        p::selection {
+            color: orange;
+        }
+
+        .cross {
+
+            background-color: black;
+            width: 15px;
+            height: 3px;
+            position: absolute;
+            transform: rotate(45deg);
+        }
+
+        .cross::after {
+            content: " ";
+            background-color: black;
+            width: 15px;
+            height: 3px;
+            position: absolute;
+            transform: rotate(90deg);
+
+        }
+    </style>
+
+<body>
+    <h1>CSS-Speudo-Elements</h1>
+    <ul>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+        <li>item-5</li>
+
+
+    </ul>
+    <h1>burger-menu-icon</h1>
+    <p>Pseduo elements are used for styling specific part of an element</p>
+    <div class="burger-menu"></div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, dolores!</p>
+    <div class="cross">
+
+    </div>
+
+
+    ul>li*5{itemes-$}
+
+
+
+
+</body>
+
+</html>

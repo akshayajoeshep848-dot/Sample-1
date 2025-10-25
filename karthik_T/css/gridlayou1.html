@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            background-color: black;
+            display: grid;
+            height: 100vh;
+            margin: 30px;
+            padding: 30px;
+            grid-template-columns: 200px repeat(2, 1fr);
+            grid-template-rows: 1fr 4fr 2fr 1fr 1fr 1fr;
+            gap: 10px;
+            grid-template-areas: "header header header"
+                "sidebar content content"
+                "sidebar content2 content3"
+                "footer footer footer";
+        }
+
+        .child {
+            color: white;
+            background-color: blue;
+        }
+
+        .child-1 {
+            grid-area: header;
+        }
+
+        .child-2 {
+            grid-area: sidebar;
+        }
+
+        .child-3 {
+            grid-area: content;
+        }
+
+        .child-4 {
+            grid-area: content2;
+        }
+
+        .child-5 {
+            grid-area: content3;
+        }
+
+        .child-6 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+        <div class="child child-4">child-4</div>
+        <div class="child child-5">child-5</div>
+        <div class="child child-6">child-6</div>
+    </div>
+
+
+</body>
+
+</html>

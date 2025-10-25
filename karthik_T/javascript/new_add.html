@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #d3e3fd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #container {
+            background-color: rgb(246, 174, 174);
+            padding: 60px;
+            border-radius: 8px;
+        }
+
+        #additem {
+            padding: 10px 50px;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        #button {
+            padding: 10px;
+            border: none;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        #button:hover {
+            background-color: green;
+            color: white;
+        }
+
+        .displayitem {
+            margin-top: 10px;
+        }
+
+        .item {
+            display: inline-flex;
+            align-items: center;
+            background: #f1f1f1;
+            padding: 6px 10px;
+            border-radius: 10px;
+            margin: 4px;
+        }
+
+        .remove {
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" name="additem" id="additem" placeholder="Add items...">
+        <button id="button">Add</button>
+        <div id="displayitem" class="displayitem"></div>
+    </div>
+
+    <script>
+        let additem = document.getElementById("additem");
+        let button = document.getElementById("button");
+        let displayitem = document.getElementById("displayitem");
+
+        button.addEventListener("click", () => {
+            let additems = additem.value.trim();
+
+            if (additems === "") {
+                alert("Please enter a task");
+                return;
+            }
+
+            let itemBox = document.createElement("div");
+            itemBox.classList.add("item");
+
+            let span = document.createElement("span");
+            span.textContent = additems;
+
+            let remove = document.createElement("span");
+            remove.textContent = "✖";
+            remove.classList.add("remove");
+
+            remove.addEventListener("click", () => {
+                itemBox.remove();
+            });
+
+            itemBox.appendChild(span);
+            itemBox.appendChild(remove);
+            displayitem.appendChild(itemBox);
+
+            additem.value = "";
+        });
+    </script>
+
+</body>
+
+</html>

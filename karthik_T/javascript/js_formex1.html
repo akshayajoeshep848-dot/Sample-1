@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #div {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .gender-options {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div"></div>
+
+    <script>
+        let div = document.getElementById("div");
+
+        let heading = document.createElement("h1");
+        heading.textContent = "Student Registration Form";
+        div.append(heading);
+
+        let form = document.createElement("form");
+
+        div.append(form);
+
+        // Student Name
+        let label1 = document.createElement("label");
+        label1.setAttribute("for", "studentName");
+        label1.textContent = "Student Name:";
+        form.append(label1);
+
+        let input1 = document.createElement("input");
+        input1.setAttribute("type", "text");
+        input1.setAttribute("id", "studentName");
+        input1.setAttribute("name", "studentName");
+        input1.setAttribute("required", true);
+        input1.setAttribute("placeholder", "Enter your full name");
+        form.append(input1);
+
+        // Father's Name
+        let label4 = document.createElement("label");
+        label4.setAttribute("for", "fatherName");
+        label4.textContent = "Father Name:";
+        form.append(label4);
+
+        let input4 = document.createElement("input");
+        input4.setAttribute("type", "text");
+        input4.setAttribute("id", "fatherName");
+        input4.setAttribute("name", "fatherName");
+        input4.setAttribute("required", true);
+        input4.setAttribute("placeholder", "Enter your father's name");
+        form.append(input4);
+
+        // Date of Birth
+        let label5 = document.createElement("label");
+        label5.setAttribute("for", "dob");
+        label5.textContent = "Date of Birth:";
+        form.append(label5);
+
+        let input5 = document.createElement("input");
+        input5.setAttribute("type", "date");
+        input5.setAttribute("id", "dob");
+        input5.setAttribute("name", "dob");
+        input5.setAttribute("required", true);
+        form.append(input5);
+
+        // Gender
+        let label6 = document.createElement("label");
+        label6.textContent = "Gender:";
+        form.append(label6);
+
+        let genderContainer = document.createElement("div");
+        genderContainer.className = "gender-options";
+
+        let input6 = document.createElement("input");
+        input6.setAttribute("type", "radio");
+        input6.setAttribute("id", "male");
+        input6.setAttribute("name", "gender");
+        input6.setAttribute("value", "Male");
+        input6.required = true;
+
+        let maleLabel = document.createElement("label");
+        maleLabel.setAttribute("for", "male");
+        maleLabel.textContent = "Male";
+
+        let input7 = document.createElement("input");
+        input7.setAttribute("type", "radio");
+        input7.setAttribute("id", "female");
+        input7.setAttribute("name", "gender");
+        input7.setAttribute("value", "Female");
+
+        let femaleLabel = document.createElement("label");
+        femaleLabel.setAttribute("for", "female");
+        femaleLabel.textContent = "Female";
+
+        genderContainer.append(input6, maleLabel, input7, femaleLabel);
+        form.append(genderContainer);
+
+        // Age
+        let label2 = document.createElement("label");
+        label2.setAttribute("for", "age");
+        label2.textContent = "Age:";
+        form.append(label2);
+
+        let input2 = document.createElement("input");
+        input2.setAttribute("type", "number");
+        input2.setAttribute("id", "age");
+        input2.setAttribute("name", "age");
+        input2.setAttribute("required", true);
+        input2.setAttribute("placeholder", "Enter your age");
+        form.append(input2);
+
+        // Phone Number
+        let label8 = document.createElement("label");
+        label8.setAttribute("for", "phone");
+        label8.textContent = "Phone Number:";
+        form.append(label8);
+
+        let input8 = document.createElement("input");
+        input8.setAttribute("type", "tel");
+        input8.setAttribute("id", "phone");
+        input8.setAttribute("name", "phone");
+        input8.setAttribute("required", true);
+        input8.setAttribute("placeholder", "Enter your phone number");
+        form.append(input8);
+
+        // Email
+        let label3 = document.createElement("label");
+        label3.setAttribute("for", "email");
+        label3.textContent = "Email:";
+        form.append(label3);
+
+        let input3 = document.createElement("input");
+        input3.setAttribute("type", "email");
+        input3.setAttribute("id", "email");
+        input3.setAttribute("name", "email");
+        input3.setAttribute("required", true);
+        input3.setAttribute("placeholder", "Enter your email");
+        form.append(input3);
+
+        // Submit button
+        let submit = document.createElement("input");
+        submit.setAttribute("type", "submit");
+        submit.setAttribute("value", "Submit");
+        form.append(submit);
+
+        // Form submission handler
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            let name = input1.value;
+            let fatherName = input4.value;
+            let dob = input5.value;
+            let gender = document.querySelector('input[name="gender"]:checked')?.value;
+            let age = input2.value;
+            let phoneNumber = input8.value;
+            let email = input3.value;
+
+            console.log("Name:", name);
+            console.log("Father Name:", fatherName);
+            console.log("Date of Birth:", dob);
+            console.log("Gender:", gender);
+            console.log("Age:", age);
+            console.log("Phone Number:", phoneNumber);
+            console.log("Email:", email)
+
+            alert("Form submitted! Check console for data.");
+
+            form.reset();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css positon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .main1 {
+            background-color: #bb09f6;
+            width: 800px;
+            height: 300px;
+
+        }
+
+
+        .main2 {
+            background-color: #ff4ae3;
+            width: 800px;
+            height: 500px;
+
+        }
+
+        .child {
+            width: 100px;
+            height: 100px;
+            place-content: center;
+            text-align: center;
+
+        }
+
+        .main2 .child1 {
+            position: relative;
+            background-color: white;
+            top: -50px;
+            left: 50px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+
+
+
+        }
+
+        .main2 .child1:hover {
+            color: red;
+        }
+
+
+
+        .main2 .child2 {
+            background-color: white;
+            position: relative;
+            left: 150px;
+            top: -150px;
+
+        }
+
+        .main2 .child2:hover {
+            color: red;
+        }
+
+
+
+        .main2 .child3 {
+            background-color: white;
+            position: relative;
+            left: 250px;
+            top: -250px;
+        }
+
+        .main2 .child3:hover {
+            color: yellow;
+        }
+
+
+
+        .main2 .child4 {
+            background-color: white;
+            position: relative;
+            left: 350px;
+            top: -350px;
+
+        }
+
+        .main2 .child4:hover {
+            color: yellow;
+        }
+
+
+
+        .main2 .child5 {
+            background-color: white;
+            position: relative;
+            left: 450px;
+            top: -450px;
+
+
+        }
+
+        .main2 .child5:hover {
+            color: blue;
+        }
+
+
+
+        .main2 .child6 {
+            background-color: white;
+            position: relative;
+            left: 550px;
+            top: -550px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+        }
+
+        .main2 .child6:hover {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main1">
+        <h1 style="font-size: 50px; font-family: sans-serif;font-weight: 900;font-style: oblique;
+        padding: 50px;"><span style="color: rgb(252, 92, 34);">IN</span><span style="color: white;">D</span><span
+                style="color:green;">IA</span></h1>
+
+    </div>
+    <div class="main2">
+        <div class="child">
+            <div>.</div>
+            <div class="child1 child">2020</div>
+            <div class="child2 child">2021</div>
+            <div class="child3 child">2022</div>
+            <div class="child4 child">2023</div>
+            <div class="child5 child">2024</div>
+            <div class="child6 child">2025</div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

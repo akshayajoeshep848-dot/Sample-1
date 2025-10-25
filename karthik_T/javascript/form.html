@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        div {
+            background-color: white;
+            padding: 10px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            margin: 20px;
+
+        }
+
+        form h1 {
+            text-align: center;
+            color: green;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="date"],
+        form input[type="email"],
+        form input[type="tel"],
+        form select,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form input[type="text"]:focus,
+        form input[type="date"]:focus,
+        form input[type="email"]:focus,
+        form input[type="tel"]:focus,
+        form select:focus,
+        form textarea:focus {
+            border-color: aqua;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+
+        .checkbox-container input,
+        .radio-container input {
+            margin-right: 8px;
+
+        }
+
+        .checkbox-container label,
+        .radio-container label {
+            display: inline;
+            font-weight: normal;
+            color: #555;
+        }
+
+        .radio-container label {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: rgb(85, 85, 235);
+            color: white;
+            /* color: black; */
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #0057b3cc;
+        }
+
+        .checkbox-container,
+        .radio-container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let div = document.createElement("div");
+        document.body.append(div);
+
+
+        let heading = document.createElement("h1");
+        heading.textContent = "Student Registration form";
+        heading.style.color = "red";
+        heading.style.fontStyle = "bold";
+
+
+
+        div.append(heading);
+
+        let form = document.createElement("form");
+        form.setAttribute("id", "student-form");
+        document.body.append(form);
+
+
+        let lableName = document.createElement("label");
+        lableName.textContent = "Name ";
+        lableName.style.color = "orange";
+        lableName.style.fontSize = "18px";
+        // lableName.style.padding = "10px";
+        form.append(document.createElement("br"));
+
+
+        form.append(lableName);
+        form.append(document.createElement("br"));
+
+        let nameInput = document.createElement("input");
+
+        nameInput.setAttribute("type", "text");
+        nameInput.setAttribute("name", "UserName");
+        nameInput.setAttribute("placeholder", " Enter UserName");
+        nameInput.style.borderColor = "black";
+        nameInput.style.padding = "8px 30px";
+        nameInput.style.borderRadius = "10px";
+        nameInput.style.marginTop = "-20px";
+
+
+        form.append(nameInput)
+        form.append(document.createElement("br"));
+
+
+
+        let lableName1 = document.createElement("label");
+        lableName1.textContent = "E-mail:";
+        lableName1.style.color = "orange";
+        lableName1.style.fontSize = "18px";
+        lableName1.style.padding = "1px";
+        lableName1.style.marginTop = "10px";
+
+        form.append(lableName1);
+        form.append(document.createElement("br"));
+
+        let email = document.createElement("input");
+        email.setAttribute("type", "email");
+        email.setAttribute("name", "E-mail");
+        email.setAttribute("placeholder", " Enter email");
+        email.style.borderColor = "black";
+        email.style.padding = "8px 30px";
+        email.style.borderRadius = "10px";
+
+
+
+        form.append(email);
+        form.append(document.createElement("br"));
+        form.append(document.createElement("br"));
+
+
+        let lableName2 = document.createElement("label");
+        lableName2.textContent = "Password:";
+        lableName2.style.color = "orange";
+        lableName2.style.fontSize = "18px";
+        // lableName2.style.padding = "10px";
+        lableName2.style.marginBottom = "20px";
+        form.append(lableName2);
+
+        let password = document.createElement("input");
+        password.setAttribute("type", "text");
+        password.setAttribute("name", "password");
+        password.setAttribute("placeholder", " Enter password");
+        password.style.borderColor = "black";
+        password.style.padding = "8px 30px";
+        password.style.borderRadius = "10px";
+        password.style.marginBottom = "30px";
+        form.append(password);
+        form.append(document.createElement("br"));
+
+
+        let lableName3 = document.createElement("label");
+        lableName3.textContent = "DOB:";
+        lableName3.style.color = "orange";
+        lableName3.style.fontSize = "18px";
+        lableName3.style.padding = "10px";
+        form.append(lableName3);
+
+        let dofb = document.createElement("input");
+        dofb.setAttribute("type", "date");
+        dofb.setAttribute("name", "dob");
+        dofb.setAttribute("placeholder", " Select Your dob");
+        dofb.style.borderColor = "black";
+        dofb.style.padding = "8px 30px";
+        dofb.style.borderRadius = "10px";
+        dofb.style.marginBottom = "20px";
+        form.append(dofb);
+        form.append(document.createElement("br"));
+
+        let genlabel = document.createElement("label");
+        genlabel.setAttribute("for", "gender");
+        genlabel.textContent = "Gender:";
+        genlabel.style.color = "orange";
+        form.append(document.createElement("br"));
+
+        let select = document.createElement("select");
+        select.setAttribute("id", "gender");
+        select.setAttribute("name", "gender");
+        select.setAttribute("required", "");
+        select.style.borderRadius = "10px";
+        select.style.borderColor = "black";
+
+        let optionsData = [
+            { value: "", text: "Select Gender" },
+            { value: "male", text: "Male" },
+            { value: "female", text: "Female" },
+            { value: "other", text: "Other" },
+        ];
+
+        optionsData.forEach((option) => {
+            let optionn = document.createElement("option");
+            optionn.setAttribute("value", option.value);
+            optionn.textContent = option.text;
+            select.append(optionn)
+        });
+        form.append(genlabel);
+        form.append(select)
+
+        let phoneLabel = document.createElement("label");
+        phoneLabel.setAttribute("for", "phone");
+        phoneLabel.textContent = "Phone Number:";
+        phoneLabel.style.color = "orange";
+        form.appendChild(phoneLabel);
+
+        let phoneInput = document.createElement("input");
+        phoneInput.setAttribute("type", "tel");
+        phoneInput.setAttribute("required", "");
+        phoneInput.setAttribute("id", "phone");
+        phoneInput.setAttribute("name", "phone");
+        phoneInput.classList.add("form-input");
+        phoneInput.style.borderRadius = "10px";
+        phoneInput.style.borderColor = "black";
+        form.appendChild(phoneInput);
+        form.append(document.createElement("br"));
+
+
+
+        let addressLabel = document.createElement("label");
+        addressLabel.textContent = "Address:";
+        addressLabel.setAttribute("for", "address");
+        addressLabel.style.color = "orange";
+        form.append(addressLabel);
+        let addressInput = document.createElement("input");
+        addressInput.setAttribute("type", "text");
+        addressInput.setAttribute("id", "address");
+        addressInput.setAttribute("name", "address");
+        addressInput.classList.add("form-input");
+        addressInput.style.padding = "60px 80px";
+        addressInput.style.borderColor = "black";
+        addressInput.style.borderRadius = "10px";
+        form.append(addressInput);
+        form.append(document.createElement("br"));
+
+
+        let checkboxDiv = document.createElement("div");
+        checkboxDiv.classList.add("checkbox-container");
+        let checkbox = document.createElement("input");
+        checkbox.setAttribute("type", "checkbox");
+        checkbox.setAttribute("id", "check");
+        checkbox.setAttribute("name", "terms");
+        checkbox.setAttribute("value", "agreed");
+        checkbox.setAttribute("required", "");
+        let chekboxLabel = document.createElement("label");
+        chekboxLabel.textContent = "I agree to the terms and conditions.";
+        chekboxLabel.setAttribute("for", "check");
+        checkboxDiv.append(checkbox);
+        checkboxDiv.append(chekboxLabel);
+        form.append(checkboxDiv);
+        form.append(document.createElement("br"));
+
+        // Submit Button
+        let registerButton = document.createElement("button");
+        registerButton.setAttribute("type", "submit");
+        registerButton.textContent = "Register Stusent";
+        registerButton.classList.add("submit-button");
+        form.appendChild(registerButton);
+
+        let registrationform = document.getElementById("registrationform");
+        registrationform.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            let fullname = document.getElementById("fullname").value;
+            let dob = document.getElementById("dob").value;
+            let gender = document.getElementById("gender").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let address = document.getElementById("address").value;
+            let insuranceStatus = document.querySelector(
+                'input[name="insuranceStatus"]:checked'
+            ).value;
+            let comments = document.getElementById("comments").value;
+            let terms = document.getElementById("check").checked;
+
+            const patientData = {
+                fullname: fullname,
+                dob: dob,
+                gender: gender,
+                email: email,
+                phone: phone,
+                address: address,
+                insuranceStatus: insuranceStatus,
+                comments: comments,
+                termsAgreed: terms,
+            };
+
+            console.log(patientData);
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

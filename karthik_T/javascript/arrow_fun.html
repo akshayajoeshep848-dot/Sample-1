@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow_function</title>
+</head>
+
+<body>
+    <h1>js_arrow_funtion</h1>
+    <p>It is used to write a function in a way shorter way</p>
+    <script>
+        //sum of 2 numbers in a normal way using functions
+
+        function sum(a, b) {
+            return a + b;
+        };
+        console.log(sum(5, 5));
+
+        //sum of 2 numbers in a shorter way using arrow functions
+        const add = (a, b) => {
+            return a + b;
+        }
+        console.log(add(3, 3));
+
+        //without using {}
+        const mul = (a, b) => a * b;
+        console.log(mul(5, 10));
+        //squres
+        const square = (n) => n * n;
+        console.log(square(5));
+
+        const greet = () =>
+            console.log("hello karthik");
+
+        greet();
+
+        //Arrow Functions Inside Arrays (Common Example)
+
+        //You’ll often see this in methods like .map(), .forEach(), .filter(), etc.
+        const numbers = [1, 2, 3, 4, 5];
+        numbers.forEach(num => console.log(num * 2));
+
+        const fruits = ["fruits", "apple", "gao", "watermelon", "mango"];
+        fruits.forEach(plam => console.log(plam));
+
+        //check even or odd
+
+        // const checkevnodd = num => num % 2 == 0 ? "even" : "odd";
+        // console.log(checkevnodd(prompt("Enter a Number for Check Even Or Odd")));
+
+        //Convert Array Elements to Uppercase
+
+        const names = ["karthik", "ram", "sita"];
+        const upperNames = names.map(name => name.toUpperCase())
+        console.log(upperNames);
+
+        //Convert Array Elements to lowercase
+        const Names = ["PICHI", "BUJII", "BUDDI"];
+        let lowercase = Names.map(perulu => perulu.toLowerCase())
+        console.log(lowercase);
+
+        //Filter Numbers Greater Than 10
+        const nums = [1, 2, 310, 20, 30, 40, 50];
+        const bigNumbers = nums.filter(numbers => numbers > 10);
+        console.log(bigNumbers);
+
+
+        //Reverse a String
+
+        const reversestring = str => str.split('').reverse('').join('');
+        console.log(reversestring("karthik"));
+
+        //Find Maximum Number wer can use math.max()
+
+        const findMax = arr => Math.max(...arr);
+        console.log(findMax([1, 2, 3, 4, , 5, 6, 7, 8, 9, 10]));
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_classes</title>
+</head>
+
+<body>
+    <h1>Js Classes</h1>
+    <p>constructer is a special special method for creating and intalizing an object created with in a class </p>
+    <script>
+        class person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            greet() {
+                console.log(`Hi my name is ${this.name}`);
+                console.log(`Hi my age is ${this.age}`);
+            }
+        }
+        let person1 = new person("       karthik", 26);
+        let person2 = new person("       pawan kalyan", 56);
+        console.log(person.name);
+        console.log(person.age);
+        person1.greet();
+        person2.greet();
+    </script>
+
+
+</body>
+
+</html>

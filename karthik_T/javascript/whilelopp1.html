@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>while loop</h1>
+    <script>
+        //while loop
+        // let i = 0;
+        // while (i < 0) {
+        //     console.log(`current value of i : ${i}`);
+        //     i++
+        // }
+
+
+
+        //do while loop
+
+        // let j = 0;
+        // do {
+        //     console.log(` j is ${j}`);
+        //     j++
+        // } while (j < 0);
+
+
+        //print 1 to 10 odd numbers using while loop;
+        // let k = 0;
+        // while (k <= 10) {
+        //     if (k % 2 == 0) {
+        //         continue;
+
+        //     } else {
+        //         console.log(`${k} number is odd`);
+
+        //     }
+        //     k++;
+
+        // }
+
+        //prime numbers using fpoor loop
+        // let num = prompt("Enter a Number :")
+        // let count = 0;
+        // for (i = 1; i <= num; i++) {
+        //     if (num % i === 0) {
+        //         count = count + 1;
+        //     }
+        // }
+        // if (count === 2) {
+        //     console.log("True")
+        // } else {
+        //     console.log("false")
+        // }
+
+
+
+        // let n = prompt("Enter the number");
+        // let flag = 0;
+        // if (n < 2) {
+        //     console.log("not a prime number");
+        // } else if (n == 2) {
+        //     console.log("prime nmuber");
+        // } else {
+        //     for (let i = 3; i <= Math.sqrt(n); i += 2) {
+        //         console.log(`inside loop when i value is ${i}`);
+        //         if (n % i == 0) {
+        //             console.log("not a prime number");
+        //             flag = 1;
+        //         }
+        //     }
+        //     if (flag == 0) {
+        //         console.log("prime number");
+        //     }
+        // }
+
+        //method 2
+
+        let n = Number(prompt("Enter the number"));
+        let flag = 0;
+        if (n == 2) {
+            console.log("not a prime number");
+        } else if (n < 2 || n % 2 == 0) {
+            console.log("not prime nmuber");
+        } else {
+            let c = 0;
+            for (let i = 3; i <= Math.sqrt(n); i += 2) {
+                c++;
+                if (n % i == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                console.log(n, "is a prime number and no.of iterations are", c);
+            } else {
+                console.log(
+                    n,
+                    "is not a prime number and number of iterations are ",
+                    c
+                );
+            }
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

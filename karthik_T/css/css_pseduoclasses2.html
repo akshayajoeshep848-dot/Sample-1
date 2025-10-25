@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:disabled {
+            background-color: blue;
+            color: white;
+            /*padding: 3px;
+            width: 80px;
+            height: 30px;
+            border: none;
+            text-align: center;
+            place-content: center;
+            border-radius: 5px;*/
+        }
+
+        input:checked+label {
+            background-color: red;
+            color: yellow;
+        }
+
+        input:in-range {
+            background-color: red;
+            color: white;
+        }
+
+        input:out-of-range {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Pseduo - classes</h1>
+    <input type="text">
+    <input type="submit" disabled>
+    <p>Languages Known</p>
+    <input type="checkbox"> <label>Telugu</label>
+    <input type="checkbox" checked><label>English</label>
+    <input type="checkbox"><label>Hindi</label>
+    <input type="number" min="1" max="500">
+    <label for="language">Choose a language:</label>
+    <select id="language" name="language" style="background-color: red; color: white;">
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+    </select>
+
+</body>
+
+</html>

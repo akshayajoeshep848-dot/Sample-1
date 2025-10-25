@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        #btn {
+            background-color: red;
+            padding: 100px 200px;
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">Js Events</h1>
+    <h2 id="text"></h2>
+    <button id="btn" onclick="onClick()">Submit</button>
+    <input type="=text" id="inpt" value="">
+    <script>
+        let button = document.getElementById("btn");
+        let h1 = document.getElementById("h1");
+        let input = document.getElementById("inpt")
+        button.addEventListener("click", (event) =>
+            console.log('button is clicked'))
+
+        function onClick() {
+            console.log('Button is clicked')
+        }
+
+
+        button.onClick = function (event) {
+            console.log('Hello Sbumit')
+        }
+
+        // let h2 = document.getElementById()
+        // let count = 0;
+        // button.addEventListener("click", (event) => {
+        //     count++
+        //     h2.innerText(`you clicked me ${count} times`)
+        //     console.log(event.type)
+        // })
+
+        button.addEventListener("click", (evnet) => {
+
+            console.log(event.target)
+        });
+
+        h1.addEventListener("mouseover", (event) => {
+            event.target.style.backgroundColor = "blue";
+        }
+        );
+
+        h1.addEventListener("mouseout", (event) => {
+            event.target.style.backgroundColor = "red";
+        }
+        );
+
+        inpt.addEventListener("keydown", (event) => {
+            console.log(`${event.key} is pressed`)
+
+        })
+
+        inpt.addEventListener("keypress", (event) => {
+            console.log(`${event.key} is pressed`)
+        })
+
+        let fromobject = {};
+        button.addEventListener("click", (event) => {
+            // console.log(inpt.value)
+            fromobject[`${inpt.name} `] = inpt.value;
+            console.log(fromobject)
+        })
+
+
+    </script>
+
+</body>
+
+</html>

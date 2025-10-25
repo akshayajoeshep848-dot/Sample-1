@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jersy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fe796b;
+            font-family: Arial, sans-serif;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+        }
+
+        #div {
+            background-color: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 1000px;
+            height: 1000px;
+            box-sizing: border-box;
+        }
+
+        #header {
+            /* background-image: url('jersery_logo.png'); */
+            width: 920px;
+            height: 300px;
+
+            display: flex;
+
+
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-top: 120px;
+            margin-left: 50px;
+
+        }
+
+        .background-image {
+            background-image: url(jersery_logo.png);
+            width: 280px;
+            height: 280px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-left: 20px;
+            margin-top: 10px;
+            border-radius: 100px;
+
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div">
+        <div id="header">
+            <div class="background-image"></div>
+            <h1>Registration Form</h1>
+        </div>
+    </div>
+
+    <script>
+        let div = document.getElementById("div");
+
+        let form = document.createElement("form");
+
+        div.append(form);
+
+        //person name
+
+        let label1 = document.createElement("label");
+        label1.setAttribute("for", "Name");
+        label1.textContent = " Full Name";
+        form.append(label1);
+
+        let input1 = document.createElement("input");
+        input1.setAttribute("type", "text");
+        input1.setAttribute("id", "Name");
+        input1.setAttribute("name", "Name");
+        input1.setAttribute("required", true);
+        input1.setAttribute("placeholder", "Enter your full name");
+        form.append(input1);
+
+        //mobile number
+        let label2 = document.createElement("label");
+        label2.setAttribute("for", "phone");
+        label2.textContent = " phone";
+        form.append(label2);
+
+        let input2 = document.createElement("input");
+        input2.setAttribute("type", "number")
+        input2.setAttribute("id", "phone");
+        input2.setAttribute("name", "phone");
+        input2.setAttribute("required", true);
+        input2.setAttribute("placeholder", "Enter your Mobile number");
+        console.log(input2.maxLength);
+
+        form.append(input2);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

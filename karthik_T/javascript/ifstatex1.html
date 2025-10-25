@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Js conditional statements</h1>
+    <script>
+        let age = prompt("Entyer Your Age : ")
+        if (age >= 0 && age < 18) {
+            console.log("Not eligible for vote")
+
+        } else if (age < 0 || age > 140) {
+            console.log("Enter VAlid input")
+
+        } else if (age >= 18 && age < 21) {
+            console.log("You are eligible for  vote but not marriage")
+
+        } else {
+            console.log("You are eligible for vote and marriage")
+        }
+    </script>
+
+</body>
+
+</html>

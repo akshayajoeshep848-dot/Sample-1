@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        .parent {
+            background-color: rgb(212, 176, 247);
+            display: grid;
+            height: 100vh;
+            gap: 20px;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto 1fr 2fr auto;
+            grid-template-areas: "header header"
+                "ads article "
+                "nav article "
+                "nav footer ";
+
+
+        }
+
+        .child {
+            background-color: chartreuse;
+            color: white;
+        }
+
+        .child-1 {
+            grid-area: header;
+        }
+
+        .child-2 {
+            grid-area: ads;
+        }
+
+        .child-3 {
+            grid-area: article;
+        }
+
+        .child-4 {
+            grid-area: nav;
+        }
+
+        .child-4 {
+            grid-area: nav;
+        }
+
+        .child-5 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+        <div class="child child-4">child-4</div>
+        <div class="child child-5">child-5</div>
+    </div>
+
+
+</body>
+
+</html>
