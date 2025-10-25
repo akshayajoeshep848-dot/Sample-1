@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Excercise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #main {
+            margin: 0 auto;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.422);
+            border-radius: 10px;
+            height: 480px;
+            width: 500px;
+        }
+        #head { 
+            text-align: center;
+            position: relative;
+            top: 30px;
+            color: orangered;
+        }
+        #button {
+            margin-top: 20px;
+            border-radius: 50px;
+            margin-left: 140px;
+            color: white;
+            border: none;
+            padding: 20px;
+            font-size: 20px;
+            background-color: orange;
+            width: 230px;
+        }
+        #quote {
+            background-color:white;
+            height: 120px;
+            text-align: center;
+            border-radius: 5px;
+            color: orange;
+            font-family: cursive;
+            place-content: center;
+            font-size: 20px;
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.361);
+            margin-left: 180px;
+            width: 300px;
+        }
+        .name {
+            margin-left: 20px;
+            position: relative;
+            color: orangered;
+            top: 45px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .work {
+            position: relative;
+            top: 80px;
+        }
+        #author {
+            box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.361);
+            background-color: white;
+            height: 50px;
+            width: 300px;
+            position: relative;
+            top: -10px;
+            color: orange;
+            font-size: 20px;
+            font-family: cursive;
+            text-align: center;
+            place-content: center;
+            border-radius: 5px;
+            margin-left: 180px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="head">Random Quote Generator</h1>
+        <label for="quote" class="name  work">Quotation:</label>
+        <p id="quote"></p>
+        <label for="author" class="name">Name of Author:</label>
+        <p id="author"></p>
+        <button id="button">Quote Generator <i class='fas fa-hand-point-left'></i></button>
+    </div>
+
+    <script>
+        let main = document.getElementById("main");
+        let quote = document.getElementById("quote");
+        let authorName = document.getElementById("author");
+        let head = document.getElementById("head");
+        let button = document.getElementById("button");
+
+        const quotes = [
+            { quote: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+            { quote: "Don’t let yesterday take up too much of today.", author: "Will Rogers" },
+            { quote: "It’s not whether you get knocked down, it’s whether you get up.", author: "Vince Lombardi" },
+            { quote: "If you are working on something exciting, it will keep you motivated.", author: "Steve Jobs" },
+            { quote: "Success is not in what you have, but who you are.", author: "Bo Bennett" },
+            { quote: "Your time is limited, so don’t waste it living someone else’s life.", author: "Steve Jobs" },
+            { quote: "Dream big and dare to fail.", author: "Norman Vaughan" },
+            { quote: "Believe you can and you’re halfway there.", author: "Theodore Roosevelt" },
+            { quote: "Act as if what you do makes a difference. It does.", author: "William James" },
+            { quote: "Keep your face always toward the sunshine—and shadows will fall behind you.", author: "Walt Whitman" },
+            { quote: "What you get by achieving your goals is not as important as what you become by achieving them.", author: "Zig Ziglar" },
+            { quote: "Happiness is not by chance, but by choice.", author: "Jim Rohn" },
+            { quote: "If opportunity doesn’t knock, build a door.", author: "Milton Berle" },
+            { quote: "Don’t watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+            { quote: "Everything you can imagine is real.", author: "Pablo Picasso" },
+            { quote: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" },
+            { quote: "Turn your wounds into wisdom.", author: "Oprah Winfrey" },
+            { quote: "It always seems impossible until it’s done.", author: "Nelson Mandela" },
+            { quote: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+            { quote: "You miss 100% of the shots you don’t take.", author: "Wayne Gretzky" }
+        ];
+            // let quotations = quotes * Math.random;
+
+        button.addEventListener("click", function() {
+            const random = Math.floor(Math.random() * quotes.length);
+            const randomquote = quotes[random];
+            quote.textContent = `${randomquote.quote}`
+            authorName.textContent = `${randomquote.author}`
+        })
+        window.addEventListener("load", function() {
+            quote.textContent = "Dream big and dare to fail"
+            authorName.textContent = "Steve Jobs"
+        })
+
+    </script>
+</body>
+</html>
