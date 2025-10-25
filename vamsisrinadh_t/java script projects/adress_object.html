@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adress object</title>
+</head>
+<body>
+    <h1>address object</h1>
+    <script>
+        const adress = {
+            address_line1 : "MIG-87",
+            address_line2 : "first floor , Road No.1 " ,
+            address_line3 : `KPHB Phase-1` ,
+            landmark : "Beside AED Hospital" ,
+            city : "Hyderabad" ,
+            state : "Telangana",
+            pincode : 500072 ,
+
+
+            getAdress: function () {
+                console.log(`${this.address_line1},${this.address_line2} , ${this.address_line3} , ${this.landmark} , ${this.city} , ${this.state}, ${this.pincode} `);
+
+            }
+        };
+         adress.getAdress()
+    </script>
+    
+</body>
+</html>

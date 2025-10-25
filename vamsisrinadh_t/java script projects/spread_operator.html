@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operator</title>
+</head>
+<body>
+    <h1>spread operator</h1>
+    <script>
+        // let arr = [1, 2, 3, 4];
+        // console.log(...arr);
+
+        // let arr2 = [...arr];
+        //  console.log(arr2);
+
+
+
+        // function sum (a, b,c){
+        //     return a + b + c ;
+        
+        // }
+        // const numbers = [10, 20, 30];
+        // console.log(sum(...numbers));
+
+
+        // const arr1 = [ 1, 2, 3, 4];
+        // const arr2 = [ 5, 6, 7, 8];
+        // const combined = [...arr1,...arr2];
+        // console.log(combined);
+
+      //shallow copy example of array
+    //   const originalArray = [1, 2, {key: `value` }];
+    //   const copiedArray = [...originalArray];
+
+    //   console.log(copiedArray);
+    //   console.log(copiedArray === originalArray); //output : false
+    //   console.log(originalArray[2] === copiedArray[2]); // output : true
+
+    //   copiedArray[0] = 99 ; // modifies only copiedarray
+    //   copiedArray[2].key = `new value` ; // modifies original nested
+
+    //   console.log(originalArray);
+    //   console.log(copiedArray);
+
+//shallow copy of object
+        // const originalObject = {a: 1, b: {c: 2}};
+        // const copiedObject = {...originalObject};
+
+        // console.log("originalObject",originalObject);
+        // console.log("copiedObject",copiedObject);
+
+        // change values 
+        // copiedObject.a = 2;
+        // copiedObject.b.c = 5 ;
+        // console.log("originalObject",originalObject)
+        // console.log("copiedObject",copiedObject);
+
+        // const arr1 = [1, 2, 3];
+        // const arr2 = [3, 4, 5];
+        // const arr3 = [5, 6, 7];
+
+        // const mergedArray = [...arr1,...arr2,...arr3];
+        // console.log(mergedArray);
+        
+        //merging arrays
+        // const objA = {x: 1,y: 2, };
+        // const objB = {y: 3,z: 4, }; // 'y' wil be over written by objB's 'y'
+        // const objC = {a: 5 };
+        // const mergedObject = {...objA,...objB,...objC};
+        // console.log(mergedObject);//[5 1 3 4]
+
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        let div = document.getElementById("div");
+         div.style.width = "400px";
+    div.style.margin = "50px auto";
+    div.style.backgroundColor = "orange";
+    div.style.padding = "20px";
+    div.style.fontFamily = "Arial, sans-serif";
+    div.style.borderRadius = "10px";
+
+      div.innerHTML = `
+         <h1 style="color: black; text-align: center;"><u>Logic While Registration Form</u></h1>`;
+
+        let head3 = document.createElement("h3");
+        head3.innerText = "fill in this form to register :";
+        div.append(head3);
+
+        let name = document.createElement("label");
+        name.innerText = "FirstName:"
+        div.append(name);
+        div.innerHTML += `<input type ="text"><br><br>`
+
+        let name2 = document.createElement("label");
+        name2.innerText = "LastName:"
+        div.append(name2);
+       
+       div.innerHTML += `<input type ="text"><br><br>`
+
+       let mail = document.createElement("label");
+        mail.innerText = "email:"
+        div.append(mail);
+       div.innerHTML += `<input type =e-mail><br><br>`
+
+
+        let dob = document.createElement("label");
+        dob.innerText = "D.o.B:"
+        div.append(dob);
+       div.innerHTML += `<input type =date><br><br>`
+
+
+        let Username = document.createElement("label");
+        Username.innerText = "Set Username:"
+        div.append(Username);
+       div.innerHTML += `<input type =text><br><br>`
+
+        let pass = document.createElement("label");
+        pass.innerText = "Set Password:"
+        div.append(pass);
+       div.innerHTML += `<input type =text><br><br>`
+
+
+       // Course dropdown label
+let courseLabel = document.createElement("label");
+courseLabel.innerText = "Select Course:";
+div.append(courseLabel);
+
+// Create select element
+let select = document.createElement("select");
+
+// Add options
+let option1 = document.createElement("option");
+option1.value = "js";
+option1.textContent = "JavaScript";
+select.append(option1);
+
+let option2 = document.createElement("option");
+// option2.value = "html";
+option2.textContent = "HTML";
+select.append(option2);
+
+let option3 = document.createElement("option");
+option3.value = "css";
+option3.textContent = "CSS";
+select.append(option3);
+
+// Append select to div
+div.append(select);
+
+// Optional: add a line break after dropdown
+div.append(document.createElement("br"));
+div.append(document.createElement("br"));
+
+
+let button = document.createElement("button");
+button.innerText = "Register";
+button.style.position = "relative"
+button.style.left = "150px"
+div.append(button);
+
+
+      
+
+       
+
+        
+
+
+       
+    </script>
+    
+</body>
+</html>

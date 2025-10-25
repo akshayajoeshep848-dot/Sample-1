@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    
+    <style>
+        body{
+             background-color:rgb(233, 236, 246);
+
+            width: auto;
+            height:100%;
+
+        }
+        
+        
+        *{
+            margin: 0px;
+            color: white;
+        }
+        .main{
+         background-color:rgb(233, 236, 246);
+
+            width: auto;
+            height: 1731px;
+            
+        }.topleft{
+            width: 219px;
+            height: 57.46px;
+            border: 1px solid white;
+            background-color: black;
+            position: sticky;
+            top: 0px;
+            margin: 0px;
+           z-index: 3;
+        }
+        .leftnavbar{
+            position: relative;
+            width: 219px;
+            height: 100%;
+            background-color: black;
+        }
+
+
+
+        .topnavbar{
+            width: 927.4px;
+            height: 57.46px;
+            background-color:rgb(255, 255, 255);
+            border: 1px solid black;
+            position: relative;
+             left: 219px;
+            bottom: 1789.5px;
+           
+        }.secondline{
+            height: 130px;
+            width: 588px;
+            background-color: rgb(98, 89, 202);
+            position: relative;
+             left: 249px;
+              bottom: 1670px;
+            border-radius: 10px;            
+        }.threeline{
+             position: relative;
+            width:604px ;
+            height: 165px;
+            background-color: rgb(233, 236, 246);
+            display: flex;
+          
+            gap: 1px;
+            left: 243px;
+              bottom: 1660px;
+          
+
+        }.div{
+           
+            background-color: rgb(255, 255, 255);
+            flex: 1;
+            margin: 10px;
+            border-radius: 10px;
+            left: 219px;
+          
+            
+            
+
+            
+        }.project{
+            position: relative;
+             left: 250px;
+             height: 378px;
+             width:596px;
+            background-color: rgb(255, 255, 255);
+            bottom: 1650px;
+             border-radius: 10px;
+        }.dashboard{
+         text-transform: uppercase;
+    font-size: 11.49px;
+    font-weight: 500;
+    letter-spacing: .5px;
+        }.to{
+            position: relative;
+            
+             background-color: rgb(233, 236, 246);
+             border-radius: 10px;
+             width: 588px;
+             height: 260px;
+             left: 250px;
+             bottom: 840px;
+              border-radius: 10px;
+              display: flex;
+              gap: 1px;
+             
+             
+
+
+        }.today,.top{
+            position: relative;
+            bottom: 792px;
+           
+            
+           background-color: rgb(255, 255, 255);
+             border-radius: 10px;
+             margin: 5px;
+        }.today{
+            flex: 8;
+             height: 80%;
+        }.top{
+            flex: 8;
+             height: 90%;
+
+        }.tasks{
+            position: relative;
+            bottom: 1630px;
+             width: 588px;
+               left: 250px;
+                height: 310px;
+                 background-color: rgb(255, 255, 255);
+                border-radius: 10px;
+
+        }
+       
+     
+            
+        
+
+       
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="topleft"></div>
+        <div class="leftnavbar">
+            <p class="dashboard">DASHBOARD </p>
+        </div>
+        <div class="topnavbar"></div>
+        <div class="secondline"></div>
+        <div class="threeline">
+            <div class="div div1"></div>
+            <div class="div div2"></div>
+            <div class="div div3"></div>
+            
+        </div>
+        <div class="project"></div>
+       
+        
+    
+     <div class="to">
+            <div class="today"></div>
+            <div class="top"></div>
+        </div>
+        <div class="tasks"></div>
+    </div>
+    
+</body>
+</html>

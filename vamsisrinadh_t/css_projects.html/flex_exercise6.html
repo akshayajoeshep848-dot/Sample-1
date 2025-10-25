@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex exercice6</title>
+  <style>
+    *{
+        margin: 3px;
+        text-align: center;
+        color: aliceblue;
+        
+    }
+    .main{
+        background-color: bisque;
+        height: 100vh;
+
+    }.one{
+        background-color: aqua;
+        height: 10%;
+        place-content: center;
+    }.two{
+        background-color: aqua;
+        display: flex;
+        height: 65%;
+        
+    }
+       
+    .three{
+        background-color: aqua;
+        height: 10%;
+        place-content: center;
+    }.left{
+        flex:2;
+        background-color: green;
+        place-content: center;
+    }.right{
+       
+        flex: 7;
+        background-color: orange;
+        display: flex;
+         
+       
+      
+        
+    }.div{
+        background-color: rgb(213, 183, 117);
+        text-align: center;
+       
+        place-content: center;
+        flex: 1;
+        max-height: 30%;
+        position: relative;
+        bottom: -200px;
+       
+        
+
+    }.font{
+        position: relative;
+        left: 420px;
+        top: 170px;
+        
+    }
+   
+
+    
+  </style>
+</head>
+<body>
+    <div class="main">
+        <div class="one">header</div>
+        <div class="two">
+            <div class="left">Aside</div>
+            <div class="right">
+                <div class="font">article</div>
+                
+                <div class="div">image</div>
+                <div class="div">image</div>
+                <div class="div">image</div>
+            </div>
+        </div>
+        <div class="three">footer</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flicker</title>
+    <!-- include FA -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<i class="fa-solid fa-arrow-up" style="color: green;"></i>
+<i class="fa-solid fa-arrow-down" style="color: red;"></i>
+
+    <style>
+    
+       
+        .main{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(214, 231, 231);
+            margin: 20px ;
+            border: 2px solid black;
+            position: relative;
+        }.items1{
+            position: relative;
+            left: 15px;
+            top: 10px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+             font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: #2a2a2a;
+
+        }.items2{
+            position: relative;
+            top: 10px;
+            left: 15px;
+        }img{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+             top: 40px;
+            left: 15px;
+        }.flicker1{
+            position: relative;
+             top: -9px;
+            left: 75px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+
+        }.app1{
+            position: relative;
+            left: 75px;
+            top: -8px;
+        }.dollar1{
+            position: relative;
+             font-size: 15px;
+            font-weight: 600;
+            color: #222;
+            left: 75%;
+            top: -43px;
+        }.date1{
+            position: relative;
+            font-size: 12px;
+            font-weight: 400;
+            color: #999;
+            left: 75%;
+            top: -43px;
+       
+        }i{
+            position: relative;
+            left: 88%;
+            top: -77px;
+        }.items4{
+            position: relative;
+            top: -70px;
+        }
+         img{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+             top: 40px;
+            left: 15px;
+        }.flicker2{
+            position: relative;
+             top: -9px;
+            left: 75px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+
+        }.app2{
+            position: relative;
+            left: 75px;
+            top: -8px;
+        }.dollar2{
+            position: relative;
+             font-size: 15px;
+            font-weight: 600;
+            color: #222;
+            left: 75%;
+            top: -43px;
+        }.date2{
+            position: relative;
+            font-size: 12px;
+            font-weight: 400;
+            color: #999;
+            left: 75%;
+            top: -43px;
+       
+        }i{
+            position: relative;
+            left: 88%;
+            top: -77px;
+        }
+         .items5{
+            position: relative;
+            top: -140px;
+        }
+         img{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+             top: 40px;
+            left: 15px;
+        }.flicker3{
+            position: relative;
+             top: -9px;
+            left: 75px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+
+        }.app3{
+            position: relative;
+            left: 75px;
+            top: -8px;
+        }.dollar3{
+            position: relative;
+             font-size: 15px;
+            font-weight: 600;
+            color: #222;
+            left: 75%;
+            top: -43px;
+        }.date3{
+            position: relative;
+            font-size: 12px;
+            font-weight: 400;
+            color: #999;
+            left: 75%;
+            top: -43px;
+       
+        }i{
+            position: relative;
+            left: 88%;
+            top: -77px;
+        }
+        .items6{
+            position: relative;
+            top: -210px;
+        }
+         img{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+             top: 40px;
+            left: 15px;
+        }.flicker4{
+            position: relative;
+             top: -9px;
+            left: 75px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+
+        }.app4{
+            position: relative;
+            left: 75px;
+            top: -8px;
+        }.dollar4{
+            position: relative;
+             font-size: 15px;
+            font-weight: 600;
+            color: #222;
+            left: 75%;
+            top: -43px;
+        }.date4{
+            position: relative;
+            font-size: 12px;
+            font-weight: 400;
+            color: #999;
+            left: 75%;
+            top: -43px;
+       
+        }i{
+            position: relative;
+            left: 88%;
+            top: -77px;
+        }
+        .items7{
+            position: relative;
+            top: -289px;
+        }
+         img{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+             top: 40px;
+            left: 15px;
+        }.flicker5{
+            position: relative;
+             top: -9px;
+            left: 75px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+
+        }.app5{
+            position: relative;
+            left: 75px;
+            top: -8px;
+        }.dollar5{
+            position: relative;
+             font-size: 15px;
+            font-weight: 600;
+            color: #222;
+            left: 75%;
+            top: -43px;
+        }.date5{
+            position: relative;
+            font-size: 12px;
+            font-weight: 400;
+            color: #999;
+            left: 75%;
+            top: -43px;
+       
+        }i{
+            position: relative;
+            left: 88%;
+            top: -77px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="item items1">RECENT TRANSACTIONS</div>
+        <div class="item items2">projects where devolopment work is on completion</div>
+        <div class="item items3">
+            <div class="img1">
+                <img src="img1.jpg" alt="img1">
+            </div>
+            <div class="flicker1">Flicker</div>
+            <div class="app1">App improvement</div>
+            <div class="dollar1">$45.234</div>
+            <div class="date1">12 jan 2020</div>
+            <div class="symbol1"><i class="fa-solid fa-arrow-turn-up" style="color: green; font-size: 15px;"></i>
+</div>
+        </div>
+        <div class="item items4">
+            <div class="img2">
+                <img src="img2.jpg" alt="img1">
+            </div>
+            <div class="flicker2">Intoxica</div>
+            <div class="app2">App improvement</div>
+            <div class="dollar2">$23.452</div>
+            <div class="date2">28 jan 2020</div>
+            <div class="symbol2"><i class="fa-solid fa-arrow-turn-down" style="color:red; font-size:15px;"></i></i>
+</div>
+        </div>
+        <div class="item items5">
+            <div class="img3">
+                <img src="img3.jpg" alt="img1">
+            </div>
+            <div class="flicker3">Digiwatt</div>
+            <div class="app3">App improvement</div>
+            <div class="dollar3">$78.001</div>
+            <div class="date3">4 apr 2020</div>
+            <div class="symbol3"><i class="fa-solid fa-arrow-turn-down" style="color:red; font-size:15px;"></i>
+</div>
+        </div>
+        <div class="item items6">
+            <div class="img4">
+                <img src="img4.jpg" alt="img1">
+            </div>
+            <div class="flicker4">Flicker</div>
+            <div class="app4">App improvement</div>
+            <div class="dollar4">$37.285</div>
+            <div class="date4">4 apr 2020</div>
+            <div class="symbol4"><i class="fa-solid fa-arrow-turn-up" style="color: green; font-size: 15px;"></i>
+</div>
+        </div>
+        <div class="item items7">
+            <div class="img5">
+                <img src="img5.jpg" alt="img1">
+            </div>
+            <div class="flicker5">Flicker</div>
+            <div class="app5">App improvement</div>
+            <div class="dollar5">$25.341</div>
+            <div class="date5">4 apr 2020</div>
+            <div class="symbol5"><i class="fa-solid fa-arrow-turn-down" style="color:red; font-size:15px;"></i>
+</div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

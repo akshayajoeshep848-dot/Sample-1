@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Shopping Cart</title>
+</head>
+<body>
+  <h2>Shopping Cart</h2>
+  <div id="cart"></div>
+
+  <script>
+    const shoppingCart = [
+      {
+        sku: "SHOE-M-10B",
+        productName: "Men's Running Shoes",
+        price: 89.99,
+        quantity: 1,
+      },
+      {
+        sku: "SOCK-A-03P",
+        productName: "Athletic Socks (3-Pack)",
+        price: 15.0,
+        quantity: 2,
+      },
+    ];
+
+    const cartDiv = document.getElementById("cart");
+    let total = 0;
+
+    shoppingCart.forEach(item => {
+      const subtotal = item.price * item.quantity;
+      total += subtotal;
+
+      cartDiv.innerHTML += `
+        <p>
+          <b>${item.productName}</b><br>
+          SKU: ${item.sku}<br>
+          Price: $${item.price}<br>
+          Quantity: ${item.quantity}<br>
+          Subtotal: $${subtotal.toFixed(2)}
+        </p>
+        <hr>
+      `;
+    });
+
+    cartDiv.innerHTML += `<h3>Total: $${total.toFixed(2)}</h3>`;
+  </script>
+</body>
+</html>

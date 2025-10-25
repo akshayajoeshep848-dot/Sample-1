@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form events</title>
+</head>
+<body>
+
+<form action="submit" id="form">
+    <label for="firstname">first name:</label>
+    <input id="firstname" type="text" name="firstname"><br><br>
+    <label for="lastname">Last name:</label>
+    <input id="lastname" type="text" name="lastname"><br><br>
+    <label for="adress">Adress:</label>
+    <input id="adress" type="text" name="adress">
+
+
+    
+    <br><br>
+    <select name="gender" id="gender">
+        <option value="male">male</option>
+        <option value="male">male</option>
+        <option value="female">female</option>
+        <option value="other">other</option>
+    </select>
+     <button  type="submit">submit</button>
+    </form>
+
+    <div id="record-list"></div>
+
+   <script>
+    let firstname = document.getElementById("firstname")
+    let lastname = document.getElementById("lastname")
+    let gender = document.getElementById("gender")
+    let  list = document.getElementById("record-list")
+    let adress = document.getElementById("adress")
+    let btn = document.getElementById("btn")
+    let formObj = {}
+    let formArray = []
+
+
+//input
+    firstname.addEventListener("input",(event)=>{
+    console.log(event.target.value);
+    formObj[event.target.name]=event.target.value;
+    console.log(formObj);
+});
+   
+    lastname.addEventListener("input",(event)=>{
+    console.log(event.target.value);
+     formObj[event.target.name]=event.target.value;
+    console.log(formObj);
+});
+
+//change
+//  firstname.addEventListener("change",(event)=>
+//     console.log(event.target.value)
+// );
+//     lastname.addEventListener("change",(event)=>
+//     console.log(event.target.value)
+// );
+//gender
+gender.addEventListener("change",(event)=>{
+console.log(event.target.value);
+formObj[event.target.name]=event.target.value;
+    console.log(formObj);
+});
+
+
+//focus
+adress.addEventListener("change",(event)=>{
+    event.target.style.backgroundColor = "red";
+    event.target.style.border = "5px solid blue";
+    formObj[event.target.name]=event.target.value;
+    console.log(formObj);
+
+console.log(event.target.value)
+});
+//blur
+// adress.addEventListener("blur",(event)=>{
+//     event.target.style.backgroundColor = "green";
+//     event.target.style.border = "2px solid white";
+
+// console.log(event.target.value)
+// });
+ form.addEventListener("submit", (event) => {
+      event.preventDefault(); 
+
+      
+      console.log("Form Submitted");
+ });
+
+
+formArray.forEach((element, index) => {
+    document.createElement("div").innerText = 
+
+})
+   </script>
+</body>
+</html>

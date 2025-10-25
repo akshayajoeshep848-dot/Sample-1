@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid 2</title>
+    <style>
+        *{
+            color: aliceblue;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: 100px 2fr 2fr;
+            grid-template-rows: 1fr 8fr 1fr;
+            height: 100vh;
+           
+           
+           
+          
+
+        
+           
+            grid-template-areas:
+            "header header header"
+            "sidenav content content"
+            "footer footer footer";
+          
+  background-image: url(flower.webp);
+  background-size: cover;
+  background-position:initial;
+  border: 1px solid #ccc;
+
+}
+        
+        grid-item {
+            background-color: transparent;
+          
+          
+            border: 1px solid rgb(236, 228, 228);
+            background-repeat:round;
+            background-position: inherit;
+           
+           
+            
+           
+        }
+        .grid-item1{
+            grid-area: header;
+        }.grid-item2{
+            grid-area: sidenav;
+        }.grid-item3{
+            grid-area: content;
+        }.grid-item4{
+            grid-area: footer;
+        }
+    </style>
+    <div class="grid-container">
+        <grid-item class="grid-item1 grid-item1" >header</grid-item>
+        <grid-item class="grid-item2 grid-item2">side navbar</grid-item>
+        <grid-item class="grid-item3 grid-item3">content</grid-item>
+        <grid-item class="grid-item4 grid-item4">footer</grid-item>
+    </div>
+</head>
+<body>
+    
+</body>
+</html>

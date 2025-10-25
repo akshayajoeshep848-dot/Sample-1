@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital form</title>
+</head>
+<body>
+    <div id="div"></div>
+    <script>
+        let div = document.getElementById("div");
+
+        div.style.width = "600px"
+        div.style.backgroundColor ="rgb(41, 171, 255)"
+        div.style.margin = "50px auto"
+        div.style.padding = "20px"
+    div.style.fontFamily = "Arial, sans-serif";
+
+
+        let head = document.createElement("h1");
+        head.innerText = "SREE Hospitals" 
+        head.style.position = "relative"
+        head.style.left = "200px"
+        head.style.color = "white"
+        head.style.transition = "background-color 1s ease, transform 0.5s ease";
+        div.append(head);
+        
+        
+
+        let h3 = document.createElement("h3");
+        h3.innerText = "TAKING CARE OF YOUR HEALTH IS OUR PRIORITY";
+        h3.style.position = "relative";
+        h3.style.left = "85px"
+        div.append(h3);
+
+        let line = document.createElement("hr");
+        div.append(line);
+
+
+        let name = document.createElement("label");
+        name.innerText = "Full Name : " ;
+        div.append(name);
+        div.innerHTML += `<input type = "text"><br><br>`
+
+         let adress = document.createElement("label");
+        adress.innerText = "Enter full adress : " ;
+        div.append(adress);
+
+        let ta = document.createElement("textarea");
+        div.append(ta);
+
+        
+     </script>
+    
+</body>
+</html>

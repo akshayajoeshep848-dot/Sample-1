@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form Console Example</title>
+</head>
+<body>
+
+  <h2 id="title">Student Registration Form</h2>
+  <form id="studentForm">
+    <input type="text" id="name" placeholder="Student Name" required>
+    <input type="number" id="age" placeholder="Age" required>
+    <input type="text" id="course" placeholder="Course" required>
+    <select id="gender" required>
+      <option value="">Select Gender</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+    <button type="submit">Add Student</button>
+  </form>
+
+  <script>
+    // === JS Styling ===
+    document.body.style.fontFamily = "Arial, sans-serif";
+    document.body.style.padding = "20px";
+    document.body.style.backgroundColor = "#f4f4f4";
+
+    const title = document.getElementById("title");
+    title.style.textAlign = "center";
+    title.style.color = "#333";
+
+    const form = document.getElementById("studentForm");
+    form.style.maxWidth = "400px";
+    form.style.margin = "0 auto";
+    form.style.backgroundColor = "#fff";
+    form.style.padding = "20px";
+    form.style.borderRadius = "10px";
+    form.style.boxShadow = "0 2px 6px rgba(0,0,0,0.1)";
+    form.style.display = "flex";
+    form.style.flexDirection = "column";
+
+    const inputs = form.querySelectorAll("input, select, button");
+    inputs.forEach(el => {
+      el.style.margin = "10px 0";
+      el.style.padding = "8px 10px";
+      el.style.borderRadius = "5px";
+      el.style.border = "1px solid #ccc";
+    });
+
+    const button = form.querySelector("button");
+    button.style.backgroundColor = "#3498db";
+    button.style.color = "white";
+    button.style.fontSize = "16px";
+    button.style.cursor = "pointer";
+    button.addEventListener("mouseenter", () => button.style.backgroundColor = "#2980b9");
+    button.addEventListener("mouseleave", () => button.style.backgroundColor = "#3498db");
+
+    // === JS Logic ===
+    form.addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent page reload
+
+      // Get input values
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+      const course = document.getElementById("course").value;
+      const gender = document.getElementById("gender").value;
+
+      // Create student object
+      const student = { name, age, course, gender };
+
+      // Show data in console
+      console.log("Student Data:", student);
+
+      // Reset form
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

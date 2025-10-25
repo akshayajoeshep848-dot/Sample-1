@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Members</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+    /* th {
+      background-color: #007BFF;
+      color: white;
+    } */
+    tr:last-child td {
+      border-bottom: none;
+    }
+    .inactive {
+      color: #aaa;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Team Members</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody id="userTable"></tbody>
+</table>
+
+<script>
+  const users = [
+    { id: 101, username: "jdoe", email: "john.doe@example.com", isActive: true },
+    { id: 102, username: "asmith", email: "alice.smith@example.com", isActive: false },
+    { id: 103, username: "bwhite", email: "bob.white@example.com", isActive: true },
+  ];
+
+  const tableBody = document.getElementById("userTable");
+
+  users.forEach(user => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${user.id}</td>
+      <td>${user.username}</td>
+      <td>${user.email}</td>
+      <td class="${user.isActive ? '' : 'inactive'}">
+        ${user.isActive ? 'Active' : 'Inactive'}
+      </td>
+    `;
+    tableBody.appendChild(row);
+  });
+</script>
+
+</body>
+</html>

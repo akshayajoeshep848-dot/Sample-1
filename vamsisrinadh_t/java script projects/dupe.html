@@ -1,0 +1,164 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Info</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+        #div {
+            margin: 100px;
+            background-color: rgb(255, 255, 255);
+            height: 400px;
+            width: 400px;
+            border-radius: 10px;
+        }
+        #h1 {
+            text-align: center;
+            position: relative;
+            top: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #lbl1 {
+            position: relative;
+            left: 20px;
+            top: 40px;
+            color: black;
+            font-size: 15px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #lbl2 {
+            position: relative;
+            left: 20px;
+            top: 60px;
+            color: black;
+            font-size: 15px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #ipt1 {
+            position: relative;
+            top: 45px;
+            left: 20px;
+            height: 35px;
+            border-radius: 5px;
+            width: 350px;
+        }
+        #ipt2 {
+            position: relative;
+            top: 60px;
+            left: 20px;
+            height: 35px;
+            border-radius: 5px;
+            width: 350px;
+        }
+        #div2 {
+            position: relative;
+            height: 40px;
+            border-radius: 5px;
+            width: 355px;
+            background-color: blue;
+            top: 60px;
+            left: 20px;
+            cursor: pointer;
+        }
+        #div3 {
+            position: relative;
+            height: 40px;
+            border-radius: 5px;
+            width: 355px;
+            background-color: brown;
+            top: 50px;
+            left: 20px;
+            cursor: pointer;
+        }
+        #p1, #p2 {
+            color: white;
+            text-align: center;
+            justify-content: flex-start;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            position: relative;
+            top: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div"></div>
+    <h2 id="h1">My Info</h2>
+    <label for="ip1" id="lbl1">Name:</label>
+    <input type="text" name="ip1" id="ipt1">
+    <label for="ip2" id="lbl2">Email:</label>
+    <input type="email" name="ip2" id="ipt2">
+
+    <div id="div2">
+        <p id="p2">Save to Browser</p>
+    </div>
+    <div id="div3">
+        <p id="p1">Clear Saved Data</p>
+    </div>
+
+    <script>
+        // Move elements into the white box
+        let container = document.getElementById("div");
+
+        let h1 = document.getElementById("h1");
+        container.append(h1);
+
+        let lbl1 = document.getElementById("lbl1");
+        container.append(lbl1);
+
+        let ipt1 = document.getElementById("ipt1");
+        container.append(ipt1);
+
+        let lbl2 = document.getElementById("lbl2");
+        container.append(lbl2);
+
+        let ipt2 = document.getElementById("ipt2");
+        container.append(ipt2);
+
+        let div2 = document.getElementById("div2");
+        container.append(div2);
+
+        let div3 = document.getElementById("div3");
+        container.append(div3);
+
+        // ✅ Local Storage Logic
+
+        const nameInput = document.getElementById("ipt1");
+        const emailInput = document.getElementById("ipt2");
+        const saveDiv = document.getElementById("div2");
+        const clearDiv = document.getElementById("div3");
+
+        // 🟢 Load saved data when page opens
+        // window.addEventListener("load", () => {
+        //     const savedName = localStorage.getItem("name");
+        //     const savedEmail = localStorage.getItem("email");
+
+        //     if (savedName) nameInput.value = savedName;
+        //     if (savedEmail) emailInput.value = savedEmail;
+        // });
+
+        // 🟦 Save data to localStorage
+        saveDiv.addEventListener("click", () => {
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+
+           
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            alert(" Data saved to your browser!");
+        });
+
+        // 🟤 Clear saved data
+        clearDiv.addEventListener("click", () => {
+            localStorage.removeItem("name");
+            localStorage.removeItem("email");
+            nameInput.value = "";
+            emailInput.value = "";
+            alert(" Saved data cleared!");
+        });
+    </script>
+</body>
+</html>

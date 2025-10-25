@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leader board</title>
+</head>
+<body>
+    <h1>leader boards</h1>
+    <ol id="ollist"></ol>
+    <script>
+        const highScores = [
+  { rank: 1, user: "ACE", score: 95000 },
+  { rank: 2, user: "GMR", score: 87200 },
+  { rank: 3, user: "KID", score: 79000 },
+];
+
+let ol = document.getElementById("ollist")
+
+highScores.forEach((item)=>{
+    let leadBoard = document.createElement("li")
+    leadBoard.textContent = `${item.rank}-${item.user}-${item.score}`;
+    ol.append(leadBoard);
+})
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testcases</title>
+</head>
+<body>
+    <h1>tetcaes</h1>
+    <script>
+        1// let nmbr1 = Number(prompt ("enter your first number"));
+        // let nmbr2 = Number(prompt("enter your second number"));
+        // let symbol = prompt("enter your symbol");
+        // if(symbol == "+"){
+        //     console.log(`${nmbr1} + ${nmbr2} = ${nmbr1 + nmbr2}`);
+        // }else if(symbol == "-"){
+        //     console.log( `${nmbr1} - ${nmbr2} = ${nmbr1 - nmbr2 }`);
+        // }else if (symbol == "*"){
+        //     console.log( `${nmbr1} * ${nmbr2} = ${nmbr1 * nmbr2 }`);
+        // }else if (symbol == "/"){
+        //     console.log( `${nmbr1} / ${nmbr2} = ${nmbr1 / nmbr2 }`);
+        // }else if (symbol == "%"){
+        //     console.log( `${nmbr1} % ${nmbr2} = ${nmbr1 % nmbr2 }`);
+        // }else{
+        //     console.log("enter a valid symbol");
+        // }
+
+          2  // let year = Number(prompt("enter a year"));
+            // switch(true){
+            //     case (year % 400 == 0 ):
+            //         console.log("this is a leaf year");
+            //         break;
+            //          case (year % 100 == 0):
+            //          console.log(year + " is NOT a Leap Year");
+            //         break;
+            //         case ( year % 4 == 0):
+            //             console.log("leap year")
+               
+            // default:
+            //         console.log("not a leaf year");
+
+            // }
+
+
+
+
+        3//   let num = Number(prompt("enter your number")); // Example 3-digit number
+
+        //     let digit1 = (num // 100);         // First digit
+        //     let digit2 =((num // 10) % 10);   // Second digit
+        //     let digit3 = num % 10;                      // Third digit
+
+        //     let sum = digit1 + digit2 + digit3;
+
+        //     console.log("Sum of digits:", sum);
+
+
+            4//     let price = Number(prompt("enter price"));   // Example price
+            //     let discountRate = Number(prompt("enter discount rate")); // Example discount rate in %
+
+            //     let discountedPrice = price - (price * discountRate / 100);
+
+            //     // Apply extra discount
+            //     if (price > 5000) {
+            //   discountedPrice = discountedPrice - (discountedPrice * 5 / 100);
+            //     } else if (price >= 2000 && price <= 5000) {
+            //     discountedPrice = discountedPrice - (discountedPrice * 2 / 100);
+            //     }
+
+            //     console.log("Final Price after discount:", discountedPrice);
+
+
+
+        6//    let num = Number(prompt("Enter a number: "));
+
+        //    if (num <= 21) {
+        //      let diff = 21 - num;
+        //     console.log("Difference:", diff);
+        //     } else {
+        //     let diff = Math.abs(num - 21);
+        //      console.log("Double the absolute difference:", diff * 2);
+        //     }
+
+
+
+           7 // let nmbr = Number(prompt("enter your number"));
+            // let digit1 = Math.floor( nmbr / 100);
+            // let digit2 = Math.floor((nmbr / 10) % 10 );
+            // let digit3 = Math.floor(nmbr % 10);
+            // if (digit1 == digit2 && digit2 == digit3 && digit1 == digit3){
+            //     console.log("all digits are same");
+            // }else if(digit1 == digit2 || digit2 == digit3 || digit1 == digit3){
+            //     console.log("two digits are same");
+            // }else{
+            //     console.log("all digits are differ");
+            // }
+
+
+          8  // let nmbr = Number(prompt("enter  a number"));
+            // let dgt1 = Math.floor(( nmbr / 10) % 10);
+            // let dgt2 = Math.floor((nmbr % 10));
+            // let sum = dgt1 + dgt2;
+            // if( sum % 7 == 0){
+            //     console.log("Lucky Number");
+            // }else{
+            //     console.log("Try again");
+            // }
+
+       9 //     let i = Number(prompt("enter a integer"));
+        //     if( i > 100){
+        //         console.log("OUT OF Range");
+        //     }
+        //     else if (i % 3 === 0 && i % 5 === 0) {
+        //     console.log("FizzBuzz");
+        //     } else if (i % 3 === 0) {
+        //   console.log("Fizz");
+        //   } else if (i % 5 === 0) {
+        //   console.log("Buzz");
+        //     } else  {
+        //         console.log(i);
+        //     }
+
+
+
+
+         
+      let str = prompt("enter a number");
+      let sum = 0 ;
+      let num = Number(str);
+      for (let i = 0 ; i < str.length ; i++){
+        console.log(` start of loop ${i} `);
+        //step1 : get last digit
+        console.log("Sum :",sum);
+        console.log(`step1 : sum = sum + (num 5 10) : `);
+        sum = sum + (num % 10);
+        console.log("OUTPUT : sum=",sum);
+        //step2 : reduce num by one place 
+        // console.loh (`step2 : num == num / 10;`);
+        //num = num / 10 ;
+        //console.log("OUTPUT : num = ", num);
+        //step3:truncate decimal place
+         console.log(`step2 : num = Math.floor(num) `);
+         num = Math.floor(num / 10);
+         //console.log("OUTPUT: num =",num)
+         //console.log(`END of loop $ {i}`);
+         console.log("sum of digits of given number : ", sum);         
+      }
+   
+
+    
+
+
+
+       
+
+
+
+            
+
+
+
+
+
+
+
+
+           
+
+            
+
+
+
+         
+
+
+
+
+        
+        
+
+    </script>
+    
+</body>
+</html>

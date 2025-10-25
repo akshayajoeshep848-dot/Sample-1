@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="gallery" id="gallery"></div>
+
+  <script>
+    const galleryImages = [
+      { id: "img001", src: "/images/sunset.jpg", alt: "A vibrant sunset over the ocean" },
+      { id: "img002", src: "/images/mountains.jpg", alt: "Snow-capped mountains under a blue sky" },
+      { id: "img003", src: "/images/forest.jpg", alt: "Sunlight filtering through a dense forest" },
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    galleryImages.forEach(image => {
+      const img = document.createElement("img");
+      img.src = image.src;
+      img.alt = image.alt;
+      img.id = image.id;
+      gallery.appendChild(img);
+    });
+  </script>
+</body> 
+</html>

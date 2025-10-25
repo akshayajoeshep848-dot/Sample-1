@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class car</title>
+</head>
+<body>
+    <script>
+       // Define Car class
+class Car {
+    constructor(make, model) {
+        this.make = make;   // e.g., "Tesla"
+        this.model = model; // e.g., "Model S"
+    }
+
+    // Optional method to display info
+    getInfo() {
+        console.log(`Car: ${this.make} ${this.model}`);
+    }
+        }
+
+        // Create instances
+        let car1 = new Car("Tesla", "Model S");
+        let car2 = new Car("BMW", "X5");
+
+        // Access properties
+        console.log(car1.make);  // Tesla
+        console.log(car1.model); // Model S
+
+        // Call method
+        car1.getInfo(); // Car: Tesla Model S
+        car2.getInfo(); // Car: BMW X5
+
+    
+
+
+        // Parent class
+class Vehicle {
+    constructor(brand, year) {
+        this.brand = brand;
+        this.year = year;
+    }
+
+    info() {
+        console.log(`${this.brand} made in ${this.year}`);
+    }
+}
+
+// Child class
+class Motorcycle extends Vehicle {
+    ride() {
+        console.log(`${this.brand} is riding on the road`);
+    }
+}
+
+// Create an instance
+let bike = new Motorcycle("Ducati", 2021);
+
+// Call methods
+bike.info();   // Ducati made in 2021
+bike.ride();   // Ducati is riding on the road
+     
+        
+    </script>
+    
+</body>
+</html>

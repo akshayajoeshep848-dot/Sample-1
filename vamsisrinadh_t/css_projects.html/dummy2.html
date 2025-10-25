@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Transactions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fd;
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    .transactions {
+      background: #fff;
+      padding: 20px;
+      width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .transactions h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .transactions p {
+      font-size: 13px;
+      color: gray;
+      margin: 5px 0 20px;
+    }
+
+    .transaction-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .transaction-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .transaction-left img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 12px;
+    }
+
+    .transaction-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .transaction-info strong {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .transaction-info span {
+      font-size: 13px;
+      color: gray;
+    }
+
+    .transaction-right {
+      text-align: right;
+    }
+
+    .transaction-right strong {
+      font-size: 15px;
+      color: #333;
+    }
+
+    .transaction-right .up {
+      color: green;
+    }
+
+    .transaction-right .down {
+      color: red;
+    }
+
+    .transaction-right small {
+      display: block;
+      font-size: 12px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="transactions">
+    <h3>RECENT TRANSACTIONS</h3>
+    <p>Projects where development work is on completion</p>
+
+    <div class="transaction-item">
+      <div class="transaction-left">
+        <img src="https://i.pravatar.cc/45?img=1" alt="profile">
+        <div class="transaction-info">
+          <strong>Flicker</strong>
+          <span>App improvement</span>
+        </div>
+      </div>
+      <div class="transaction-right">
+        <strong class="up">$45.234 ↑</strong>
+        <small>12 Jan 2020</small>
+      </div>
+    </div>
+
+    <div class="transaction-item">
+      <div class="transaction-left">
+        <img src="https://i.pravatar.cc/45?img=2" alt="profile">
+        <div class="transaction-info">
+          <strong>Intoxica</strong>
+          <span>Milestone</span>
+        </div>
+      </div>
+      <div class="transaction-right">
+        <strong class="down">$23.452 ↓</strong>
+        <small>23 Jan 2020</small>
+      </div>
+    </div>
+
+    <div class="transaction-item">
+      <div class="transaction-left">
+        <img src="https://i.pravatar.cc/45?img=3" alt="profile">
+        <div class="transaction-info">
+          <strong>Digiwatt</strong>
+          <span>Sales executive</span>
+        </div>
+      </div>
+      <div class="transaction-right">
+        <strong class="down">$78.001 ↓</strong>
+        <small>4 Apr 2020</small>
+      </div>
+    </div>
+
+    <div class="transaction-item">
+      <div class="transaction-left">
+        <img src="https://i.pravatar.cc/45?img=4" alt="profile">
+        <div class="transaction-info">
+          <strong>Flicker</strong>
+          <span>Milestone2</span>
+        </div>
+      </div>
+      <div class="transaction-right">
+        <strong class="up">$37.285 ↑</strong>
+        <small>4 Apr 2020</small>
+      </div>
+    </div>
+
+    <div class="transaction-item">
+      <div class="transaction-left">
+        <img src="https://i.pravatar.cc/45?img=5" alt="profile">
+        <div class="transaction-info">
+          <strong>Flicker</strong>
+          <span>App improvement</span>
+        </div>
+      </div>
+      <div class="transaction-right">
+        <strong class="down">$25.341 ↓</strong>
+        <small>4 Apr 2020</small>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

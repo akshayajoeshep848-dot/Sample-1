@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>traffic signals</title>
+</head>
+<body>
+    <h1>conditional statements</h1>
+    <script>
+        let personAge=prompt(" enter your age");
+        let haslicense = prompt( " enter `yes` if you have license, `no` if you don't have license");
+
+        if(personAge >= 18 && personAge <= 70){
+            if(haslicense == "yes"){
+                console.log("eligible to drive");
+            }else if (haslicense == "no"){
+                console.log("you are not eligible to drive");
+            }else{
+                console.log(" invalid output");
+            }
+        }else if(personAge >= 0 && personAge < 18){
+            consolelog("not eligible to drive(too young)");
+        }else if(personAge > 70 && personAge  < 140){
+            console.log("you are too old to drive");
+        }else if(personAge < 0){
+            console.log("enter  positive number for age ");
+        }else{
+            console.log("enter a valid age");
+        }
+
+
+    </script>
+    
+</body>
+</html>

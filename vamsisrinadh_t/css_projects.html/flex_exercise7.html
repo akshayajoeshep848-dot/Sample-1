@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex exercise 7</title>
+    <style>
+        *{
+            margin: 5px;
+            text-align: center;
+        }
+        .main{
+            height: 100vh;
+            background-color: bisque;
+
+        }.one{
+            height: 10%;
+            background-color: rgb(110, 110, 207);
+            place-content: center;
+        }.two{
+            height: 40%;
+            /* background-color: aquamarine; */
+            display: flex;
+            
+        }.left{
+            background-color: blue;
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+
+        }.left1{
+            background-color: aliceblue;
+            flex: 2;
+             place-content: center;
+
+        }.left2{
+            background-color: beige;
+            flex: 3;
+             place-content: center;
+
+        }
+        
+        .right{
+            background-color: blue;
+            flex: 7;
+            display: flex;
+            flex-direction: column;
+
+        }.right1{
+             background-color: aliceblue;
+            flex: 4;
+             place-content: center;
+
+
+        }.right2{
+                        background-color: beige;
+            flex: 3;
+             place-content: center;
+
+        }.three{
+            height: 20%;
+            background-color: aliceblue;
+            display: flex;
+        }.three1{
+            background-color: rgb(196, 88, 16);
+            flex: 3;
+             place-content: center;
+
+        }.three2{
+             background-color: rgb(224, 127, 9);
+             flex: 1;
+              place-content: center;
+
+        }.four{
+            background-color: aqua;
+            height: 12%;
+             place-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="one">Header</div>
+        <div class="two">
+            <div class="left">
+                <div class="left1">hero</div>
+                <div class="left2">sidebar</div>
+            </div>
+            <div class="right">
+                <div class="right1">Main content</div>
+                <div class="right2">Extra content</div>
+            </div>
+        </div>
+        <div class="three">
+            <div class="three1">related images</div>
+            <div class="three2">related posts</div>
+        </div>
+        <div class="four">footer</div>
+    </div>
+    
+</body>
+</html>

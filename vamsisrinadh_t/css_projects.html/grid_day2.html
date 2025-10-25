@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid day2</title>
+    <style>
+        *{
+            place-content: center;
+           text-align: center;
+        }
+         .maincontainer{
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 50px 100px;
+           
+           gap: 1px;
+            grid-area: 
+            "Row1 Row1"
+            "Row2 Row2";
+           
+        }.grid-items{
+            background-color: rgb(219, 227, 9);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="maincontainer">  
+        <div class="grid-items grid-items1">row1</div>
+        <div class="grid-items grid-items2">Row1</div>
+        <div class="grid-items grid-items3">Row2 </div>
+        <div class="grid-items grid-items4">Row2</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vegetables</title>
+</head>
+<body>
+    <div class="container">
+        <div class="item items1">Items1</div>
+        <div class="item items2">Items2</div>
+        <div class="item items3">Items3</div>
+        <div class="item items4">Items4</div>
+        <div class="item items5">Items5</div>
+        <div class="item items6">Items6</div>
+        <div class="item items7">items7</div>
+        <div class="item items8">Items8</div>
+        <div class="item items9">Items9</div>
+        <div class="item items10">Items10</div>
+        <button onclick="getVege()">vegetables</button>
+    </div>
+    <script> 
+        let vegetables = [
+            "vankaya",
+            "dosakaya",
+            "sorakaya",
+            "chikkudukaya",
+            "gummadikaya",
+            "beerakaya",
+            "kakarakaya",
+            "bendakaya",
+            "dondakaya",
+            "potlakaya",
+        ];
+           function getVege() {
+        let vegetablesCollection = document.getElementsByClassName("item");
+        let vegArray = Array.from(vegetablesCollection).forEach((veg,index)=>{
+            console.log(veg.innerText);
+            veg.innerText = vegetables[index];
+        },
+    );
+           };
+    </script>
+    
+</body>
+</html>

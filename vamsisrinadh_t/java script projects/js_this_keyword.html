@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+<body>
+    <!-- this is determined at call time , not definition time -->
+     <!-- its value depends on how the function is called  -->
+      <!-- in strict mode,global this is undefined -->  
+       <!-- arow functions dont have their own this binding -->
+     <script> 
+        // let person = {
+        //     name : "NTR",
+        //     age : 42,
+        //     location: "hyderabad",
+        //     walk : function(){
+        //         console.log(`${this.name}is walking`); 
+        //     }
+        // } 
+
+
+        //default binding
+        //window (browser) or global node
+        //in strict mode this is undefined("use strict";)
+
+        // function obj(){
+        // console.log(this)    
+        // }
+        // obj();
+
+        //implicit binding of 'this'
+
+        // let person = {
+        //     name : "NTR",
+        //     age : 42,
+        //     location : "hyd",
+        //     walk() {
+        //         //this is implicit binding of "this"
+        //         console.log(`${this.name} is walking`);
+
+        //     }, eat : function(){
+        //         //this is implicit binding of "this"
+        //         console.log(`${this.name}is eating`);
+        //     },
+        //     sleep :() =>{
+        //         //this is undefined
+        //         console.log(`${this.name} is sleeping`);
+        //     },
+        // };
+        // person.walk()
+        // person.eat()
+        // person.sleep()
+
+
+        //explicit binding
+
+        function greet(){
+            console.log(`hello,$(this.name}`);
+        }
+        const Alice = {name : "Alice"};
+        greet.call(alice); // "hello,Alice"
+
+
+
+
+    </script>
+    
+</body>
+</html>

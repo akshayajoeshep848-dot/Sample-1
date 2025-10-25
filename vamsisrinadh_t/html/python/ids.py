@@ -1,0 +1,6 @@
+bn=input("ENTER BOOK NAME:")
+pg=int(input("ENTER NO OF PAGES:"))
+price=float(input("ENTER BOOK PRICE"))
+print("BOOK NAME:",bn)
+print("PAGES:",pg)
+print("PRICE:",price)

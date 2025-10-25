@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <h2>vamsisrinadh</h2>
+    <div id="main-container"></div>
+    <div class="paragraph">
+        <p>para-items1</p>
+        <p>para-items2</p>
+        <p>para-items3</p>
+    </div>
+    
+    <script>
+        // let family = [
+        //     {
+        //         name : "hanumantharao",
+        //         age : "45",
+        //         occupation : "farming ",
+        //         place :"vitalapuram" ,
+
+        //     },
+            
+        //     {
+        //         name : "sujatha",
+        //         age : "40",
+        //         occupation : "farming" ,
+        //         place : "vitalapuram",
+
+        //     },
+        //     {
+        //         name : "vamsi",
+        //         age : "21",
+        //         occupation : "student" ,
+        //         place : "vitalapuram",
+
+        //     },
+           
+
+        // ];
+        // let fam1 = document.getElementById("main-container");
+        // fam1.innerText = "this is main container";
+
+        // let allParagraphs = document.getElementsByTagName("p");
+        // allParagraphs[0].innerText = "vamsisrinadh" ; 
+        // allParagraphs[1].innerText = "sreeenadh" ; 
+        // allParagraphs[2].innerText = "vamsiluuuu";
+        //  allParagraphs[0].style.backgroundColor= "yellow";
+        //  allParagraphs[1].style.backgroundColor= "red";
+        //  allParagraphs[2].style.backgroundColor= "yellow";
+        //    allParagraphs[0].style.border= "2px solid red";
+        //    allParagraphs[1].style.border= "2px solid green";
+        //    allParagraphs[2].style.border= "2px solid blue";
+
+        //   document.querySelectorAll("p").forEach(p => {
+        //  p.style.borderRadius = "10px";
+        // });
+        //         document.querySelectorAll("p").forEach(p => {
+        //  p.style.textAlign = "center";
+        // });
+        //         document.querySelectorAll("p").forEach(p => {
+        //  p.style.placeContent = "center";
+        // });
+
+        
+    let ClassName = document.getElementsByTagName("p"); 
+
+    let family1 = [
+        { name: "hanumantharao", age: "45", occupation: "farming", place: "vitalapuram" },
+        { name: "sujatha", age: "40", occupation: "farming", place: "vitalapuram" },
+        { name: "vamsi", age: "21", occupation: "student", place: "vitalapuram" },
+    ];
+
+    [0,1,2].forEach(i => ClassName[i].innerText = `Name : ${family1[i].name} ${family1[i].age}`);
+
+
+
+      
+
+
+
+
+        
+  
+
+    </script>
+    
+</body>
+</html>

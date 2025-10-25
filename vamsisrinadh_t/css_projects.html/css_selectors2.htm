@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors2</title>
+    <style>   
+      /* <!-- child selector --> */
+      div>p{
+        color: red;
+      }
+
+        /* descendat selector */
+        div p{
+            color:blue
+        }
+        ul li{
+            background-color: aqua;
+        }
+        /* adjacent sibling */
+        h1+p{
+            background-color: blanchedalmond;
+        }
+                /* generalsibling */
+
+        h1 ~ p{
+            background-color: black;
+        }
+        layer1{
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>heading</h1>
+        <p>para 1</p>
+        <p>para 2</p>
+        <p>para 3</p>
+    </div>
+    <p>para 1</p>
+    <p>para 2</p>
+    <p>para 3</p>
+    <p>para 4</p>
+    <p>para 5</p>
+    <ul>
+        <li>items 1
+            <ul>
+                <li>sub item 1</li>
+                <li>sub item 2</li>
+                <li>sub item 3</li>
+            </ul>
+        </li>
+        <ol>
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+            <li>sub item 3</li>
+            <li>sub item 4</li>
+            <li>sub item 5</li>
+        </ol>
+        <li>items 2</li>
+        <li>items 3</li>
+        <li>items 4</li>
+        <li>items 5</li>
+    </ul>
+<h1></h1>
+<p>paragraph</p>   
+. <ul class="layer1">
+    <li>items 1</li>
+    <li>items 2</li>
+    <li>items 3</li>
+</ul>
+</body>
+</html>

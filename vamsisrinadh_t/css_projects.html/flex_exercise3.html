@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex exercise 3</title>
+    <style>
+        *{
+            margin: 5px;
+            text-align: center;
+            place-content: center;
+        }
+        .main{
+            background-color: rgb(84, 143, 125);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+           
+        }.one , .two{
+            background-color: aqua;
+            height: 15%;
+        }
+        .three{
+            background-color:white ;
+            height: 40%;
+            display: flex;
+           
+        }.left , .right {
+           background-color: #a52a2a;
+          
+           display: flex;
+           flex-direction: row;
+           flex: 1;
+        
+        }.left{
+            flex: 1;
+        }.right{
+            flex: 3;
+        }.right{
+            display: flex;
+            background-color: blue;
+            flex-direction: column;
+            
+        }.top , .bottom{
+            background-color: beige;
+            flex: 1;
+
+        }.four{
+            background-color: aqua;
+            height: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="one">Header</div>
+        <div class="two">Navigation</div>
+        <div class="three">
+            <div class="left">Aside</div>
+            <div class="right">
+                <div class="top">Content</div>
+                <div class="bottom">section</div>
+            </div>
+        </div>
+        <div class="four">footer</div>
+    </div>
+    
+</body>
+</html>

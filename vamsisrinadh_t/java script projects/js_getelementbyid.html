@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM methods</title>
+</head>
+<style>
+    .item{
+        margin : 10px;
+        border-radius: 10px;
+        width: 100px;
+    }
+    span{
+        background-color: blue;
+        width: 100px;
+        border-radius: 2px;
+        space
+
+    }
+</style>
+<body>
+    <!-- //get element by id  single output -->
+    <h1 id="head">hi</h1>
+
+    <ul class="ul">
+        <li class="item listitems1">items1</li>
+        <li class="item listitems2">items2</li>
+        <li class="item listitems3">items3</li>
+        <li class="item listitems4">items4</li>
+        <li class="item listitems5">items5</li>
+    </ul>
+    <script>
+        // //get element by id  output single HTML element 
+        //   let heading = document.getElementById("head");
+        // heading.innerText = "hello" 
+        // heading.style.color = "red"
+
+        // //queryselector by id  output single HTML element 
+        // let heading = document.querySelector("#head")
+        // heading.innerHTML = "<p>paragraph</p>"
+
+
+
+        // let listItems = document.getElementsByClassName("ul");
+        // let listArray = Array.from(listItems);
+        // listArray.forEach((element)=> (element.style.backgroundColor = "red"))
+
+        // let fruits = ["apple", "banana", "orange", "lichi", "grapes"];
+        // let listItems = document.getElementsByTagName("li");
+        // Array.from(listItems).forEach((element, index) => {
+        //     element.innerText = fruits[index];
+        // });
+ 
+
+
+        //queryselectorall
+        let fruits = [
+            {
+                name: "Apple",
+                quantity : 10,
+            },
+            {
+                name: "banana",
+                quantity : 20,
+            },
+            {
+                name: "grapes",
+                quantity : 100,
+            },
+            {
+                name: "watermelon",
+                quantity : 2,
+            },
+            {
+                name: "orange",
+                quantity : 50,
+            },
+        ];
+        let listItems = document.querySelectorAll(".item");
+        listItems.forEach((element, index)=>{
+            element.innerHTML = `${fruits[index].name}- <span>${fruits[index].quantity}</span>`;
+                    element.style.backgroundColor = "lightgreen"; // same color for all
+                    element.style.padding = "10px"
+
+        });
+       
+
+
+    </script>
+    
+</body>
+</html>

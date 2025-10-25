@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js async-1</title>
+</head>
+<body>
+<div id="c1"></div>
+<button id="btn">click me</button>
+    <script> 
+       // async is a function that implicity returns a promise.this syntax is a syntatic sugar over promises,designed to improve readability and simplify chaining asyncharous operations
+
+        // async function hello(){
+        //     return   "helllo,async" ;
+        //     console.log(hello());
+        // }
+        // hello().then((value)=>console.log(value));
+        // hello().then(console.log);
+
+        //await
+
+        //await keyword is only valis inside async function is used to pause the execution of the functiin until a promise it resolves or rejects.it allows writing asyncharous code  that looks syncharous
+
+        // async function fetchData(){
+        //     console.log("starting a fetch call..");
+        //     let response = await fetch("https://dogapi.dog/api/v2/breeds");
+        //     let breeds = await response.json();
+        //     console.log(breeds);
+        //     console.log("end fetch call ")
+        //     return breeds;
+        // }
+        // fetchData().then((value)=>console.log(value));
+
+        //generalize the function
+        async function fetchData(url){
+            console.log("starting a fetch call..");
+            let response = await fetch(url);
+            let breeds = await response.json();
+            console.log(breeds);
+            console.log("end fetch call ")
+            return breeds;
+        }
+        // fetchData("https://dogapi.dog/api/v2/breeds").then((value)=>console.log(value)
+        fetchData("https://jsonplaceholder.typicode.com/users/1").then((value)=>{
+            console.log(value);
+
+            let Container = document.getElementById("c1")
+           
+                // let p1=document.createElement("p");
+                // p1.textContent =` Name:${value.name}`;
+                // Container.append(p1)
+           
+                // let p2=document.createElement("p");
+                // p2.textContent =` email:${value.email}`;
+                // Container.append(p2)
+
+                let btn = document.getElementById("btn");
+               
+                btn.addEventListener("click",(event)=>{
+                                    let p1=document.createElement("p");
+                p1.textContent =` Name:${value.name}`;
+                Container.append(p1)
+           
+                let p2=document.createElement("p");
+                p2.textContent =` email:${value.email}`;
+                Container.append(p2)
+
+                              btn.removeEventListener("click",addEventListener)
+
+                
+
+                }, { once: true }) ;
+
+
+        });    
+          
+
+    </script>
+    
+</body>
+</html>

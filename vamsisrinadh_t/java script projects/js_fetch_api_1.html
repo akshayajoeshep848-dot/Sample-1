@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api 1</title>
+</head>
+<body>
+    <h1>fetch apiz</h1>
+    <div id="container"></div>
+    <script>
+        let dogsDataArray = [];
+        let response = fetch("https://dogapi.dog/api/v2/breeds")
+        .then((data)=> data.json()) 
+        .then((value)=>{
+                    let array = value.data
+
+
+         console.log(array)
+       
+
+        let container = document.getElementById("container");
+        array.forEach((dog)=>{
+            let dogContainer = document.createElement("div")
+            let dogBreed = document.createElement("h2")
+            let desc = document.createElement("p")
+            //assign values
+            dogBreed.textContent = dog.attributes.name;
+            desc.textContent = dog.attributes.description;
+
+            dogContainer.append(dogBreed);
+            dogContainer.append(desc);
+            container.append(dogContainer);
+
+        });
+    })
+    //array.forEach((item))=> dogsDataArray.push(item)
+    .catch((error) => console.log(error));
+    console.log("dogs Data Array",dogsDataArray);
+    </script>
+    
+</body>
+</html> 

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom get methods examples</title>
+</head>
+<body>
+    <!-- 8)<div class="nav-bar"></div> -->
+
+    <!-- 11)<ul id="fruit-list">
+        <li></li>
+        <li></li>
+        <li></li>
+        </ul> -->
+
+       <!-- 12 <div id="user-ages">
+        <p class="age"></p>
+        <p class="age"></p>
+        <p class="age"></p>
+        </div> -->
+
+        <!-- 13<div id="product-list">
+        <h2></h2>
+        <h2></h2>
+        </div> -->
+
+        <p id="sentence"></p>
+
+
+    <script>
+        //1) getElementById
+
+        //2)yes you can access but it is a html collection
+
+        //3)getElementByTagName
+
+        //4)getElementById returns a single element object (or null if not found), while getElementsByTagName returns an HTMLCollection (which is array-like), even if only one or zero elements are found.
+
+        //5)let strongElement = document.querySelector("#content strong");
+        //console.log(strongElement);
+
+        //6) So it grabs the first <p class="highlight">First</p> and ignores the rest.
+
+        //7)let images = document.querySelectorAll("#gallery img");
+            //console.log(images);
+
+        //8) let navBar = document.querySelector("#nav-bar");
+        // console.log(navBar);
+
+        
+        
+        //9)document.querySelectorAll(".section-title");
+
+        //10)querySelector/querySelectorAll are more versatile and powerful because they let you use any CSS selector, whereas the getElementBy... methods are limited to a specific type of selection (ID, class, or tag).
+
+        
+        //11 const fruits = ["Apple", "Banana", "Cherry"];
+        // let getfruits = document.getElementById("fruit-list");
+        // let fruitsArray = Array.from(getfruits.querySelectorAll("li")); 
+        //    fruitsArray.forEach((e,i) =>{
+        //     console.log(e.innerText);
+        //     e.innerText = fruits[i];
+        //    });
+
+        
+            //12 const ages = [25, 30, 22];
+
+            // let perAges = document.getElementById("user-ages");
+            // let AgesArray = Array.from(perAges.querySelectorAll("p"));
+            // AgesArray.forEach((age,index) => {
+            //     console.log(age.innerText);
+            //     age.innerText = ages[index];
+
+            // });
+
+
+
+            //13 const products = [
+            // { name: "Laptop", price: 1200 },
+            // { name: "Mouse", price: 25 },
+            // ];
+
+            // let productHeadings = document.querySelectorAll("#product-list h2");
+            // productHeadings[0].innerText = products[0].name;
+            // productHeadings[1].innerText = products[1].name;
+
+
+            // 14const words = ["JavaScript", "DOM", "is", "powerful"];
+            // document.getElementById("sentence").innerText = words.join(" ");
+
+
+            
+
+
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js Objects</title>
+</head>
+<body>
+    <!-- <h1>js objects</h1> -->
+     <h1>dog functionalities</h1>
+     <button onclick="dog.bark()">bark</button>
+     <button onclick="dog.walk()">walk</button>
+     <button onclick="dog.play()">play</button>
+     <button onclick="dog.smell()">smell</button>
+    <script>
+1//         const person = {
+//     name : 'Vamsi',
+//     age : 22,
+//     isStudent:true,
+//     greet: function() {
+//         return `Hello, my name is ${this.name}` ;
+//     },
+// };
+
+// dot notation
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.isStudent);
+// console.log(person.greet());
+
+ // bracket notation
+// console.log(person["name"]);
+// console.log(person["age"]);
+// console.log(person["isStudent"]);
+// console.log(person["greet"]());
+
+
+//name , breed , color , age , gender ,etId   dog cat 
+//bark , walk , run ,smell,eat , sleep , sit , ,liedown
+//getSodaFromFridge,bite
+
+
+const dog = {
+    name : 'ladda' ,
+    breed : "german sheperd" ,
+    age : 2 ,
+    color : "white",
+   gender : "Male",
+    petId : 123 ,
+    bark : function () {
+                console.log(`${this.name} barking`);
+                 return`${this.name} is barking`;
+    },
+    walk : function() {
+        console.log(`${this.name} is walking`);
+
+        return`${this.name} is walking`;
+    },
+    run : function() {
+                console.log(`${this.name} is running`);
+
+        return`${this.name} is running`;
+    },
+    smell : function() {
+                console.log(`${this.name} is smelling`);
+
+        return`${this.name} is smelling`;
+    },
+    bite : function() {
+                console.log(`${this.name} is bitting`);
+
+        return`${this.name} is bitting`;
+    },
+    play : function() {
+                console.log(`${this.name} is playing`);
+
+        return`${this.name} is playing`;
+    },
+    sleep : function() {
+        console.log(`${this.name} is sleeping`);
+         return`${this.name} is sleeping`;
+    },
+    eat : function() {
+         return`${this.name} is eating`;
+        console.log(`${this.name} is eating`);
+    },
+    liedown : function() {
+         return`${this.name} is lied down`;
+        console.log(`${this.name} is lied down`);
+    },
+    sit : function() {
+         return`${this.name} is sitting`;
+        console.log(`${this.name} is sitting`);
+    },
+    walk : function() {
+         return`${this.name} is walking`;
+        console.log(`${this.name} is walking`);
+    },
+    getSodaFromFridge : function() {
+         return`${this.name} is getting the soda from the fridge`;
+        console.log(`${this.name} is getting the soda from the fridge`);
+    },
+
+};
+console.log (dog.bite());
+console.log (dog.smell());
+console.log (dog.walk());
+console.log (dog.play());
+console.log (dog.getSodaFromFridge());
+console.log (dog.sit());
+console.log (dog.liedown());
+console.log (dog.eat());
+console.log (dog.sleep());
+console.log (dog.bark());
+
+    </script>
+    
+</body>
+</html>

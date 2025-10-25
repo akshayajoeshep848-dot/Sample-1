@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+<!-- class keyword is used to declare a new class -->
+ <!-- classes are typically written in pascalCase -->
+
+<script>
+        // class Vamsi{
+            
+        // }
+
+        //constructor() method
+        // constructor method is a special method for creating and initializing an object created with a class
+
+        // *key points
+        // => its called automatically when a new instance of the class is created.
+        // => a class can only have constructor()
+        //=> it is use to set initial properties on the object
+
+        // class Person{
+
+        //     constructor(name,age){
+        //         this.name = name ; 
+        //         this.age = age;
+        //     }
+        // }
+
+        // let person = new Person("NTR",42);
+
+        // console.log(person.name);
+        // console.log(person.age);
+
+
+
+
+        class Person{
+            constructor(name,age){
+                this.name = name ;
+                this.age = age ;
+
+            }
+            greet() {
+                console.log(`hi my name is ${this.name}`);
+
+            }
+        }
+    </script> 
+    
+</body>
+</html>

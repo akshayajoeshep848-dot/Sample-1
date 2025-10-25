@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather Forecast</title>
+  <style>
+    .day {
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    .hourly {
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Weather Forecast</h2>
+  <div id="forecast"></div>
+
+  <script>
+    const weatherForecast = [
+      {
+        date: "2025-10-23",
+        summary: {
+          high: 72,
+          low: 58,
+          condition: "Partly Cloudy",
+          precipitation: 10,
+        },
+        hourly: [
+          { time: "13:00", temp: 71, condition: "Sunny" },
+          { time: "14:00", temp: 72, condition: "Sunny" },
+          { time: "15:00", temp: 72, condition: "Clouds increasing" },
+        ],
+      },
+      {
+        date: "2025-10-24",
+        summary: {
+          high: 68,
+          low: 55,
+          condition: "Showers",
+          precipitation: 60,
+        },
+        hourly: [
+          { time: "13:00", temp: 67, condition: "Cloudy" },
+          { time: "14:00", temp: 66, condition: "Light Rain" },
+          { time: "15:00", temp: 65, condition: "Showers" },
+        ],
+      },
+    ];
+
+    const forecastDiv = document.getElementById("forecast");
+
+    weatherForecast.forEach(day => {
+      const dayDiv = document.createElement("div");
+      dayDiv.className = "day";
+
+      const dateP = document.createElement("p");
+      dateP.innerHTML = `<b>Date:</b> ${day.date}`;
+      const summaryP = document.createElement("p");
+      summaryP.innerHTML = `<b>High:</b> ${day.summary.high}°F, <b>Low:</b> ${day.summary.low}°F, <b>Condition:</b> ${day.summary.condition}, <b>Precipitation:</b> ${day.summary.precipitation}%`;
+
+      const hourlyDiv = document.createElement("div");
+      hourlyDiv.className = "hourly";
+      const hourlyTitle = document.createElement("p");
+      hourlyTitle.textContent = "Hourly Breakdown:";
+      hourlyDiv.appendChild(hourlyTitle);
+
+      day.hourly.forEach(hour => {
+        const hourP = document.createElement("p");
+        hourP.textContent = `${hour.time} - Temp: ${hour.temp}°F, Condition: ${hour.condition}`;
+        hourlyDiv.appendChild(hourP);
+      });
+
+      dayDiv.appendChild(dateP);
+      dayDiv.appendChild(summaryP);
+      dayDiv.appendChild(hourlyDiv);
+
+      forecastDiv.appendChild(dayDiv);
+    });
+  </script>
+</body>
+</html>

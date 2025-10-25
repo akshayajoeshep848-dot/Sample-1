@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get element by class name</title>
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="menu-item menu-items1-">menu item1</div>
+        <div class="menu-item menu-items2-">menu item2</div>
+        <div class="menu-item menu-items3-">menu item3</div>
+        <div class="menu-item menu-items4-">menu item4</div> -->
+        <div class="para-container">
+            <p>this is para1</p>
+            <p>this is para2</p>
+            <p>this is para3</p>
+            <p>this is para4</p>
+        </div>
+    </div>
+    <script>
+        //getElementsByClassName
+        // let menuItems = document.getElementsByClassName("menu-item");
+        // console.log(Array.isArray(menuItems));
+        // console.log(menuItems); 
+        //  console.log(Array.isArray(Array.from(menuItems)));
+        // let menuItemsArray = Array.from(menuItems);
+        // menuItemsArray.forEach((item) =>(item.innerText = "hello world"));
+
+        // getElementsByTagName
+        // let paraItems =document.getElementsByTagName('p');
+        // let arr = ["balayya",  "ntr","jahnavi" , "shreya"];
+        // Array.from(paraItems).forEach((element,index) => {
+        //     element.innerText = arr[index] ;
+            
+        // });
+
+
+        let paraItems = document.getElementsByTagName("p");
+        let ActorsArray = [
+            {
+                name:"balayya",
+                profession:"actor",
+                movies:["akhanda", "akhanda2"]
+            },
+            {
+                name:"tarak",
+                profession:"actor",
+                movies:["devara", "dragon"],
+            },
+            {
+                name:"nagachaithanya",
+                profession:"actor",
+                movies:["thandel", "josh"],
+            },
+            {
+                name:"akhil",
+                profession:"actor",
+                movies:["akhil", "mr majnu"],
+            },
+        ];
+        Array.from(paraItems).forEach((element,index)=>{
+            element.innerText = `actor Name : ${ActorsArray[index].name}`;
+        });
+    </script>
+    
+</body>
+</html>

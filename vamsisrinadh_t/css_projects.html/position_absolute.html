@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute position</title>
+    <style>
+        .parent{
+            position: relative;
+            background-color: rgb(162, 138, 185);
+            height: 50vh;
+        }
+        .child{
+            position: absolute;
+          
+            height: 100px;
+            width:  100px;
+        }.child1{
+            position: absolute;
+            background-color: aqua;
+            top: 200px;
+            text-align: center;
+            place-content: center;
+        }
+        .child2{
+            position: absolute;
+            background-color: transparent;
+        }
+        .child3{
+            position: fixed;
+            background-color: rgb(118, 24, 24);
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>absolute position</h1>
+
+    <div class="parent">
+        <div class="child child1">items1</div>
+        <div class="child child2">items2</div>
+        <div class="child child3">items3</div>
+    </div>
+    
+</body>
+</html>

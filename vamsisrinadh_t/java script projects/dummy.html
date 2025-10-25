@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fruit List</title>
+<style>
+  .item {
+    background-color: lightgreen;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between; /* name left, quantity right */
+    align-items: center;
+    width: 150px;           /* fixed width */
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+  }
+  .quantity{
+    background-color: red;
+  }
+</style>
+</head>
+<body>
+
+<div id="fruit-container"></div>
+
+<script>
+let fruits = [
+  { name: "Apple", quantity: 10 },
+  { name: "Banana", quantity: 20 },
+  { name: "Grapes", quantity: 100 },
+  { name: "Watermelon", quantity: 2 },
+  { name: "Orange", quantity: 50 },
+];
+
+const container = document.getElementById("fruit-container");
+
+fruits.forEach(fruit => {
+  const div = document.createElement("div");
+  div.className = "item";
+  div.innerHTML = `<span class="name">${fruit.name}</span>
+                   <span class="quantity">${fruit.quantity}</span>`;
+  container.appendChild(div);
+});
+</script>
+
+</body>
+</html>

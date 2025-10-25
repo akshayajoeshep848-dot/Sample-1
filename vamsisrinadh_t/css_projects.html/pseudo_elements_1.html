@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: green;
+        }
+        p::before{
+            /* content: "\20B8" ; */
+            color: rgb(85, 0, 255);
+            c
+        }
+        .para::before{
+            content: "\20B9";
+            color: yellow;
+
+        }
+        ul{
+            list-style: none;
+        }
+        li::before{
+            content: "\2f1d";
+            padding-right:20px;
+        }
+        li::after{
+            content: "\1f44d"
+            padding: 10px;
+        }
+        .menu{
+            height: 3px;
+            width: 10px;
+            top: -5px;
+            background-color: #000000;
+            border-radius: 5px;
+            position: relative;
+        }
+        .menu::before,
+       .menu::after {
+            content: "";
+            top: 5px;
+            height: 3px;
+            width: 15px;
+            position: absolute;
+            background-color: #ef1010;
+            border-radius: 5px;
+        }
+        .menu::before{
+            top: -5px;
+            background-color: blue;
+        }
+        .wrong{
+            height: 2px;
+            width: 10px;
+            position:absolute;
+            background-color: green;
+        
+            padding-left: 10px;
+            transform:rotate(45);
+
+        }
+        .cross-icon {
+  position: relative;
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+}
+
+.cross-icon::before,
+.cross-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 100px;
+  height: 4px; /* Adjust thickness as needed */
+  background-color: #333; /* Adjust color as needed */
+  transform-origin:center;
+}
+
+.cross-icon::before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.cross-icon::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+.para1{
+    color: blue;
+}
+.para1::first-letter {
+    font-size: 30px;
+}
+.para1::first-line{
+    font-size: 25px;
+}
+.para1::selection{
+    background-color: green;
+}
+input::placeholder{
+    color: blue;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+    </style>
+</head>
+<body>
+    <h1>pseudo elements</h1>
+    <p>this para</p>
+    <p class="para">1000</p>
+    <ul>
+        <li> item 1</li>
+        <li> item 2</li>
+        <li> item 3</li>
+        <li> item 4</li>
+        <li> item 5</li>
+    </ul>
+    <div class="menu"></div> 
+<div class="cross-icon"></div>
+<p class="para1"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis enim atque illo non earum consectetur cum at? Fugit iusto dicta, dolores consectetur consequatur debitis commodi voluptas veniam reprehenderit quos impedit perferendis sint iste quas totam, delectus ipsa molestias itaque officiis temporibus corrupti. Laudantium totam numquam excepturi aliquam facere quibusdam omnis facilis hic. Amet corrupti fugiat perferendis aliquid iure suscipit. Enim exercitationem nihil provident magni debitis quae dolores dolor, unde rerum numquam, pariatur repellendus itaque non excepturi inventore commodi dolorum aspernatur voluptate ad, nam molestias? Commodi, voluptates, assumenda placeat ipsam reiciendis aliquam obcaecati tempore iusto, mollitia magnam pariatur architecto maiores rem?   </p>    
+<label for id="fn">first name:</label>
+<input id="fn" type="text" placeholder="enter youname">
+</body>
+</html>

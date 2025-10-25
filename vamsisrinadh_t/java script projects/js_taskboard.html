@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task board </title>
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        *{ 
+             margin: 10px;
+        }
+        #div{
+            background-color: white;
+            height: 250px;
+            width: 600px;
+            position: relative;
+            left: 50px;
+        }
+        #h1{
+            position: relative;
+            left: 50px ;
+            top: 10px;
+        }
+       
+            
+        
+        #p1{
+            position: relative;
+            left: 50px;
+            margin-top: 10px;
+        }
+        #ip3 , #ip4{
+           margin-top: -5px;
+        }#p3{
+            position: relative;
+            bottom: 30px;
+            left: 292px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1 id="h1">Task Dashboard</h1>
+    <p id="p1">stay orgaized,get this Done.</p>
+    <div id="div"></div>
+   
+     <input id="ip1" ></input>
+     <input id="ip2" ></input>
+   <p id="p2">Due date(optional)</p>
+   <p id="p3">priority</p>
+     <input id="ip3" type="date" ></input>
+     <input id="ip4" ></input>
+    <script>
+    let container = document.getElementById("div");
+       
+        let ip1 = document.getElementById("ip1")
+        ip1.placeholder = "Task title";
+        ip1.style.width ="550px"
+       
+        let ip2 = document.getElementById("ip2")
+         ip2.placeholder = "add a description";
+         ip2.style.width ="550px"
+
+        container.append(ip1);
+         let br =document.createElement("br")
+        container.append(br)
+        container.append(ip2)
+        let p2 = document.getElementById("p2")
+        container.append(p2)
+        let p3 = document.getElementById("p3")
+        container.append(p3)
+        let ip3= document.getElementById("ip3")
+        ip3.style.width="262px"
+        container.append(ip3)
+        let ip4= document.getElementById("ip4")
+         ip4.style.width="262px"
+        container.append(ip4)
+
+       
+    </script>
+    
+</body>
+</html>

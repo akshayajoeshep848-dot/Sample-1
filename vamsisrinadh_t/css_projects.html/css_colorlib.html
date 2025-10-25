@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorlib</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *
+        {
+            margin: 0px;
+        }
+        .sri{
+            height:7530px;
+            width: 100%;
+            background-color: rgb(249, 248, 248);
+
+        }
+        .one{
+            height:50px;
+            width:100%;
+            background-color: #333333;
+        }
+        .chai
+        {
+            display:flex;
+        }
+        .color
+        {
+            height:50px;
+            width:120px;
+            place-content: center;
+            background-image: url('https://preview.colorlib.com/assets/img/logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-left:30px;
+        }
+        .chaitu
+        {
+            display:flex;
+            flex-direction: row;
+            gap:700px;
+        }
+        .launch
+        {
+            height:50px;
+            width:150px;
+            font-size:22px;
+            color:#9B9B9B;
+            background-color: black;
+            place-content: center;
+            text-align: center;
+            margin-left:10px
+        } 
+        .desktop{
+            height: 100px;
+            weight:100pxpx;
+            background-color:rgb(94, 221, 15);
+            position: relative;
+            display: flex;
+            background-image: url("desktop.png");
+            background-size: 50px;
+        }
+        .desktop{
+            width: 50px;
+            height: 40px;
+            position: relative;
+            display: flex;
+            text-align: center;
+            background-color: greenyellow;
+
+            place-content: center;
+            right:-685px;
+            top: 4px;
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/1536px-Black_colour.jpg");
+            background-size: cover;
+            background-repeat: round;
+            
+        }
+        .tab{
+          width: 40px;
+            height:40px;
+            position: relative;
+            display: flex;
+            text-align: center;
+
+            place-content: center;
+            right:-690px;
+            top: 4px;
+
+        }
+        .mobile{
+                      width: 40px;
+            height:40px;
+            position: relative;
+            display: flex;
+            text-align: center;
+
+            place-content: center;
+            right:-695px;
+            top: 4px;
+
+        }
+        .cart{
+            width: 40px;
+            height:40px;
+            position: relative;
+            display: flex;
+            text-align: center;
+
+            place-content: center;
+            right:-700px;
+            top: 4px;
+        }
+        .icons{
+            position: relative;
+            display: flex;
+            top:4px;
+            right:-90px;
+            height: 100px;
+            width: 100px;
+            place-content: center;
+            text-align: center;
+            
+        }
+        .lau{
+            width: 85.89px;
+            height: 38.4px;
+            color: black;
+            font-family:"Nunito", sans-serif;
+            text-align: center;
+            place-content: center;
+            position: relative;
+            left: 78px;
+            font-size:21px;
+            line-height:1.6;
+            top: 1px;
+            bottom: 200px;
+        }
+        .nav{
+            color: rgb(168,168,168);
+            width: 534.69px;
+            height: 42.4px;
+            color: #939393;
+            position: relative;
+            display: flex;
+            padding: 0px 0px 0px 4px;
+            top:-25px;
+            left: 220px;
+            
+        }
+        .Dropdown{
+            height: 20px;
+            width: 29px;
+        }
+        .Home{
+            height: 19px;
+            width: 10px;
+            display: flex;
+            margin: 0px 10px;
+            position: relative;
+        }
+        .Dropdown{
+            display: flex;
+            position: relative;
+            right:-80px;
+            top: -19px;
+        }
+        .Features{
+            height: 20px;
+            width:20px;
+            position: relative;
+            display: flex;
+            right: -10px;
+            top:-39px;
+            right:-180px;
+        }
+        .Pricing{
+            height: 20px;
+            width:20px;
+            display: flex;
+            position: relative;
+            right: -250px;
+            top:-59px;
+
+
+        }
+        .About{
+            height:20px;
+            width: 20px;
+            display:flex;
+            position: relative;
+            right: -310px;
+            top:-78px;
+
+        }
+        .Contact{
+        height:20px;
+        width: 20px;
+        display:flex;
+        position: relative;
+        right: -380px;
+        top:-97px;
+
+        }
+        .Signin{
+            border: 1px solid black;
+            height:30px;
+            width:100px;
+            position:relative;
+            display: flex;
+            top:-97px;
+            border-radius: 70px;
+            place-content: center;
+            text-align: center;
+            right: -680px;
+            top:-120px;
+            font-size: 1rem;
+            line-height: 1.6;
+
+
+
+        }
+        .register{
+            border:1px solid black;
+            height:30px;
+            width: 100px;
+            border-radius: 70px;
+            text-align: center;
+            place-content: center;
+            background-color: blue;
+            color:white;
+            position: relative;
+            display: flex;
+            right: -800px;
+            top:-150px;
+            line-height: 1.6;
+        }
+        .man{
+            height: 200px;
+            width: 635px;
+            height: 423.33px;
+            position: relative;
+            right: -485px;
+               
+            }
+            .txt{
+                font-family:"Nunito",sans-serif;
+                font-size:2.5rem;
+                width: 445px;
+                height: 210px;
+                color:#000000;
+                position: relative;
+                display: flex;
+                margin: 0px 0px 30px;
+                top:-350px;
+                font: 70px Nunito, sans serif;
+                left: 100px;
+
+            }
+            .txt2{
+                width: 388.97px;
+                height: 102.50px;
+                color: #939393;
+                line-height: 1.6;
+                position: relative;
+                right: -100px;
+                top: -350px;
+            }
+            .SF{
+                height: 30px;
+                width: 130px;
+                border: 1px solid black;
+                line-height: 1.0;
+                color: aliceblue;
+                background-color: blue;
+                border-radius: 50px;
+                place-content: center;
+                text-align: center;
+                position: relative;
+                top: -250px;
+                right:-100px;
+
+            }
+            .Pricing{
+                width: 100px;
+                height: 30px;
+                border: 1px solid black;
+                border-radius: 30px;
+                line-height: 1.6;
+                place-content: center;
+                text-align: center;
+                top: -280px;
+            }
+            .digitalservices{
+                height: 20px;
+                width   110px;
+                position: relative;
+                right: -100px;
+                color: #407bff;
+                top: -150px;
+                line-height: 1.6;
+            }
+            .dstxt{
+                color:#939393;
+                position: relative;
+                top: -140px;
+                right: -100px;
+                width: 510px;
+                height: 77px;
+            }
+            .dstxt2{
+                font-size: 18px;
+                position: relative;
+                right: -100px;
+                top:-100px;
+
+            }
+            .dstxt3{
+                position: relative;
+                right: -100px;
+                font-family: sans-serif;
+                line-height: 1.6;
+                top: -60px;
+            }
+            .manimg img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                position: relative;
+                right: -100px;
+            }
+            .font{
+                position: relative;
+                right: -160px;
+                top: -48px;
+
+            }
+            .font2{
+                position: relative;
+                right: -160px;
+                top: -45px;
+                opacity: 0.5;
+            }
+            .anim img{
+                width: 510px;
+                height: 393px;
+                position: relative;
+                right: -580px;
+                top: -507px;
+            }
+            .anim2 img{
+                width: 510px;
+                height: 393px;
+                position: relative;    
+                right: -100px;   
+                top:-300px;     
+            }
+            .icon1{
+                height: 20px;
+                width: 20px;
+                background-color: aqua;
+            }
+            .grid1{
+                height: 40px;
+                width: 40px;
+                background-color: aqua;
+                border-radius: 5px;
+                place-content: center;
+                text-align: center;
+            }
+            .p1{
+                position: relative;
+                display: flex;
+                width: 255px;
+                height :213px;
+                top: 40px;
+            }
+            .p2{
+                position: relative;
+                display: flex;
+                top: 50px;
+            }
+            .firstside{
+                position: relative;
+                right: -700px;
+                top: -700px;
+            }
+        
+         
+    
+
+    </style>
+ 
+
+    </head>
+<body>
+    <div class="sri">
+        <div class="one">
+            <div class="chaitu">
+            <div class=chai>
+                <div class="color"></div>
+                <div class="launch"><pre>+ Launch</pre></div>
+                   <div class="icons">
+                    
+                    </div>
+            </div>
+        </div>
+        </div>
+        <div class="lau">Launch</div>
+        <div class="nav">
+        <nav>
+       <div> 
+        <div class="Home">Home</div> 
+        <div class="Dropdown">Dropdown</div>
+        <div class="Features">Features</div>
+        <div class="Pricing">Pricing</div>
+        <div class="About">About</div>
+        <div class="Contact">Contact</div>
+        <div class="Signin">Sign in</div>
+        <div class="register">Register</div>
+            </nav>
+       </div>
+       <div class="man">
+        <img src="https://preview.colorlib.com/theme/launch/images/market-launch-pana.svg">
+       </div>
+       <div class="txt">
+        <p>Promote Your<br> Products by <br> Colorlib </p>
+       </div>
+       <div class="txt2">
+        <p>Another cool free html css template by<span style="color: blue;" > Colorlib</span>  Far far away, behind <br> the word mountains, far from the countries Vokalia and Consonantia, <br> there live the blind texts. Separated they live in Bookmarksgrove right <br> at the coast</p>
+       </div>
+       <div class="SF">SEE FEATURES</div>
+        <div class="Pricing">Pricing</div>
+        <div>
+            <p class="digitalservices">DIGITAL SERVICES</p>
+        </div>
+        <div>
+            <p class="dstxt">Far far away, behind the word mountains, far <br> from the countries Vokalia and Consonantia, <br> there live the blind texts. Separated they live in <br> Bookmarksgrove right at the coast
+
+</p>
+        </div>
+        <div>
+            <p class="dstxt2"><span style="color: #407bff;">&#10004</span>There live the blind texts
+</p>
+
+        </div>
+        <div>
+        <p class="dstxt2"><span style="color: #407bff;">&#10004</span>Far far away behind the word
+</p>
+<p class="dstxt3">“Separated they live in Bookmarksgrove right at <br> the coast of the Semantics, a large language <br> ocean. A small river named Duden flows by their <br> place and supplies it with the necessary <br> regelialia. ”
+</p>
+
+        </div>
+        <div class="manimg">
+            <img src= "https://preview.colorlib.com/theme/launch/images/person_1.jpg">
+        </div>
+        <div>
+            <p class="font">James Anderson</p>
+            <p class="font2">Facebook, Product Lead
+</p>
+        </div>
+        <div class="anim">
+            <img src="https://preview.colorlib.com/theme/launch/images/dashboard.jpg">
+        </div>
+                <div class="anim2">
+            <img src="https://preview.colorlib.com/theme/launch/images/dashboard.jpg">
+        </div>
+        <div class="firstside">
+        <div class="grid1">
+            <img class="icon1" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTwlFuthXQVo6uovx8upxi6HPZicW8CTFz6WpWyi0y1J95InCSd" alt="images">
+           
+            <p class="p1">Grow Your Business</p>
+
+</p>
+
+        </div>
+            <p class="p2">  Far far away, behind the word <br> mountains, far from the countries <br> Vokalia and Consonantia, there live <br> the blind texts.
+        </div>
+
+
+        </div>
+
+    </div>
+
+    
+</body>
+</html>

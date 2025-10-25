@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <h1>promise</h1>
+    <script>
+        let promise = new Promise((resolve, reject)=>{
+            setTimeout(()=>{
+                const success= Math.random() > 0.8;
+                if(success){
+                    resolve("successfully");
+                }else{
+                    reject("failure")
+                }
+            }, 2000);
+        
+        });
+   promise
+   .then((value) => console.log(value))
+   .catch((value) => console.log(error));
+    </script>
+     
+</body>
+</html>

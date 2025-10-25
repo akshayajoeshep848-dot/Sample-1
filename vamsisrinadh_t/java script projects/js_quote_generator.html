@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Random quote Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+     <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background:pink;
+      color: #fff;
+      text-align: center;
+      padding: 60px;
+    }
+
+    .container {
+      background-color: white;
+      color: #333;
+      max-width: 600px;
+      margin: auto;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #6b5acf;
+      margin-bottom: 25px;
+    }
+
+    #quote {
+      font-size: 22px;
+      font-style: italic;
+      color: #333;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+    }
+
+    #author {
+      font-size: 18px;
+      color: red;
+      margin-bottom: 25px;
+    }
+
+    #newQuoteBtn {
+      background-color: #6b5acf;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #newQuoteBtn:hover {
+      background-color: #574ab3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+     <div class="container">
+    <h1><i class="fas fa-edit"></i> Random Quote Generator</h1>
+
+     <!-- Quote Display Area  -->
+    <p id="quote"></p>
+
+    <!--  Author Display Area -->
+    <p id="author"></p>
+
+    <!--  New Quote Button -->
+    <button id="newQuoteBtn">New Quote</button>
+  </div>
+  <script>
+      let quotes = [
+      {
+        quote: "Be yourself; everyone else is already taken.",
+        author: "Oscar Wilde"
+      },
+      {
+        quote: "In the middle of difficulty lies opportunity.",
+        author: "Albert Einstein"
+      },
+      {
+        quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+        author: "Winston Churchill"
+      },
+      {
+        quote: "Do what you can, with what you have, where you are.",
+        author: "Theodore Roosevelt"
+      },
+      {
+        quote: "It does not matter how slowly you go as long as you do not stop.",
+        author: "Confucius"
+      },
+      {
+        quote: "Your time is limited, so don't waste it living someone else's life.",
+        author: "Steve Jobs"
+      },
+      {
+        quote: "The best way to predict the future is to create it.",
+        author: "Peter Drucker"
+      },
+      {
+        quote: "Don't watch the clock; do what it does. Keep going.",
+        author: "Sam Levenson"
+      },
+      {
+        quote: "Believe you can and you're halfway there.",
+        author: "Theodore Roosevelt"
+      },
+      {
+        quote: "Happiness is not something ready-made. It comes from your own actions.",
+        author: "Dalai Lama"
+      }
+    ];
+
+
+        let quoteText = document.getElementById("quote");
+    let authorText = document.getElementById("author");
+    let newQuoteBtn = document.getElementById("newQuoteBtn");
+
+function randomQuote() {
+      let randomIndex = Math.floor(Math.random() * quotes.length);
+      let randomQuote = quotes[randomIndex];
+
+      quoteText.textContent = `"${randomQuote.quote}"`;
+      authorText.textContent = ` "${randomQuote.author}"`;
+    }
+            window.onload = randomQuote;
+
+ newQuoteBtn.addEventListener("click", randomQuote);
+
+  </script>
+    
+</body>
+</html>

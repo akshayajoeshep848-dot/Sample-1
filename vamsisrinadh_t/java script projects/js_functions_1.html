@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions 01</title>
+</head>
+<body>
+    <h1>functions in js</h1>
+    <script>
+        1// //fuction declaration
+        // function greet(name){
+        //     console.log(`Hello,${name}!`);
+        // }
+        // //function
+        //     greet("Alice");
+        //     greet("Bob");
+        
+    
+    2//based on users age
+
+    // function eligibleToVote(age){
+    //    age < 18
+    //    ? console.log("not eligible to vote")
+    //    : console.log("eligible to vote");
+    // }
+    // eligibleToVote(18);
+    
+
+
+    //function with no parameter
+    // function hello (){
+    //     console.log("Hello");
+    // }
+    // hello();
+
+    
+    //write a function to print full name from first name,middle name , last name
+    // function printFullname(firsrName,middleName,lastName){
+    //     console.log(`your full name is : ${firsrName} ${middleName} ${lastName}`);
+    // }
+    // printFullname("vamsi", "srinadh", "tatikonda");
+
+
+
+        //variable hoisting------>
+
+
+
+        //write a function print from 1 to n
+
+        // function printIntgers(positiveInteger){
+        //     console.log(`start of function....`);
+        //     let i = 1;
+        //     while (i <= positiveInteger){
+        //         console.log(`${i}`);
+        //         i++ ;
+
+        //     }
+        //     console.log(`end of the function...`);
+        // }
+        // printIntgers(20);
+    
+    
+// write a function to print n factorial
+  
+function factorialNumber(positiveInteger){
+    console.log(`positive integer :${positiveInteger}`)
+   
+    let fact = 1;
+    for ( let i = 1 ; i <= positiveInteger ; i++){
+        fact *= i ;
+       
+
+    }
+    console.log(`factorial of positive integer is:${fact}`);
+}
+
+factorialNumber(10);
+
+    </script>
+    
+</body>
+</html>

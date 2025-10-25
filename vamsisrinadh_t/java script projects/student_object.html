@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student</title>
+</head>
+<body>
+  <h1>Student Info</h1>
+
+  <!-- Buttons -->
+  <button onclick="student.getName()"> Name</button>
+  <button onclick="student.getAge()"> Age</button>
+  <button onclick="student.getGrade()"> Grade</button>
+  <button onclick="student.getSubjects()"> Subjects</button>
+  <button onclick="student.getEnrollment()"> Enrollment </button>
+  <button onclick="student.getStudent()">Show student Details</button>
+
+  <script>
+    const student = {
+      name: "Vamsi",
+      age: 22,
+      grade: "A",
+      subjects: ["Math", "Science", "English"],
+      isEnrolled: true,
+
+      getName: function () {
+        console.log(`Name: ${this.name}`);
+        return `Name: ${this.name}`;
+      },
+
+      getAge: function () {
+        console.log(`Age: ${this.age}`);
+        return `Age: ${this.age}`;
+      },
+
+      getGrade: function () {
+        console.log(`Grade: ${this.grade}`);
+        return `Grade: ${this.grade}`;
+      },
+
+      getSubjects: function () {
+        console.log(`Subjects: ${this.subjects.join(", ")}`);
+        return `Subjects: ${this.subjects.join(", ")}`;
+      },
+
+      getEnrollment: function () {
+        console.log(`Enrolled: ${this.isEnrolled ? "Yes" : "No"}`);
+        return `Enrolled: ${this.isEnrolled ? "Yes" : "No"}`;
+      },
+
+      getStudent: function () {
+        console.log(
+          `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}, Subjects: ${this.subjects.join(", ")}, Enrolled: ${this.isEnrolled ? "Yes" : "No"}`
+        );
+        return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}, Subjects: ${this.subjects.join(", ")}, Enrolled: ${this.isEnrolled ? "Yes" : "No"}`;
+      }
+    };
+    student.getStudent();
+
+    
+  </script>
+</body>
+</html>

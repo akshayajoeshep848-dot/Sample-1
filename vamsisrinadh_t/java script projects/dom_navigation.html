@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- parentNode - the parent parentNode
+    childNodes - a nod lis of child (including text nodes)
+    children -  a HTMLCollection of child elements(ignores text nodes)
+    firstChild/ lastChild - first/last child nodes
+    firstElementChild / lastElementChild - first/last child element
+    nextSibling / previousSibling - adjacent nodes (including text node) -->
+
+<ul id="ul">
+    <li id="li-1">item1</li>
+    <li id="li-2">item2</li>
+    <li id="li-3">item3</li>
+    <li id="li-4">item4</li>
+    <li id="li-5">item5</li>
+</ul>
+    <div id="div"></div>
+ 
+<script>
+    // let ul = document.getElementById("ul")
+    // console.log(ul.parentNode);
+    // console.log(ul.firstChild);
+    // console.log(ul.lastChild);
+    // console.log(ul.firstElementChild);
+    // console.log(ul.lastElementChild);
+    // console.log(ul.previousElementSibling);
+    // console.log(ul.nextElementSibling);
+
+    // ul.firstElementChild.style.backgroundColor = "red";
+    // ul.lastElementChild.style.backgroundColor = "yellow";
+    // ul.children[3].style.backgroundColor = "pink";
+    // ul.children[1].style.backgroundColor = "blue";
+    // ul.children[4].style.backgroundColor = "lightgreen";
+    // ul.children[2].style.backgroundColor = "lightyellow";
+
+
+
+    // let div = document.getElementById("div");
+    // div.textContent = "<p>hello</p>"
+    // div.innerHTML = "<p>hello world</p>"
+ 
+
+    let div = document.getElementById("div");
+    let anchor = document.createElement("a");
+    anchor.setAttribute("href","https://www.google.com");
+    anchor.textContent = "GOOGLE";
+
+    div.append(anchor); 
+
+</script>
+</body>
+</html>

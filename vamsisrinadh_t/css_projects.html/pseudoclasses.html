@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo classes</title>
+    <style>
+        p{
+            background-color: aqua;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            place-content: center;
+            border: 2px solid red;
+            border-radius: 30px;
+            box-shadow: 3px 3px 3px 3px blue;
+        }
+        p:hover{ 
+            transform: translate(10px) scale(0.5);
+            
+            color: red;
+            background-color: rgba(225, 225, 232, 0.79);
+        }
+        p:active{
+            #when click
+
+            color: rgb(0, 255, 21);
+            background-color: rgba(197, 85, 178, 0.79);
+        }
+        a:link{
+            font-size: 30px;
+            text-decoration: line-through;
+        }
+        a:visited{
+            color: yellow;
+            font-size: 25px; 
+            text-decoration: underline;
+        }
+        .a1{
+            color: bisque;
+            /* text-decoration: underline;(not worked) */
+        }
+        input:focus{
+            border-radius: 10px;
+            padding: 20px;
+            border: 3px solid greenyellow;
+            box-shadow: 2px 2px 1px 1px red;
+        }
+    </style>
+</head>
+<body>
+    <h1>hello</h1>
+    <p> hello</p>
+    <a href="https://www.ajio.com/">ajio</a> <br>
+        <a  class="a1" href="https://www.google.com/">google</a>
+<br><label for="fn">first name</label>
+<input type="text" id="fn"> <br><br>                                                                
+<label for="fn1">last name</label>
+<input type="text" id="fn1">
+
+
+    
+</body>
+</html>

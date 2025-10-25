@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callabck1</title>
+</head>
+<body>
+    
+    <h1>callback1</h1>
+    
+    <script>
+        function greet (name, callback){
+            console.log("hello, "+ name + "!");
+            callback();
+        }
+        function sayGoogbye() {
+            console.log("Goodbye!");
+        }
+        greet("Alice",sayGoogbye);
+
+
+        // example2
+
+        function operation (num1, num2, oper){
+            console.log(`you given ${num1}, ${num2}`);
+            oper(num1, num2);
+        }
+        function sum (num1, num2){
+        console.log(num1 + num2);
+        }function mul (num1, num2){
+        console.log(num1 * num2);
+        }function div (num1, num2){
+        console.log(num1 / num2);
+        }function mod (num1, num2){
+        console.log(num1 % num2);
+        }
+        console.log(operation(10 , 2, sum));
+        console.log(operation(10 , 2, div));
+        console.log(operation(10 , 2, mul));
+        console.log(operation(10 , 2, mod));
+    </script>
+    
+</body>
+</html>

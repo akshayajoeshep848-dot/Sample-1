@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js events</title>
+</head>
+<body>
+    <!-- mouse  events : click, dbl click , mousedown,mouseup, mousemove,museover,mouseout
+    keyboard events : keydown , keyup, keypress
+    form events : submit , change , focus , blur 
+    window events : load, resize, scroll, unload
+    clipboard events : copy, cut , paste -->  
+    <h1 id="head">eventlistener</h1>
+    <div>
+    <label for="firstname">first name :</label>
+    <input id="firstname" type="text" name="firstname"/>
+    </div>
+    <di v>
+        <label for="lastname">Last Name</label>
+        <input id="lastname" type="text" name="lastname"/>
+    </div>
+
+    
+<button id="btn">click me</button>
+<script>
+    let but = document.getElementById("btn");
+    
+    let head = document.getElementById("head");
+    let input = document.getElementById("input");
+    let formObject = {}
+
+        but.addEventListener("click",(event)=>{
+            formObject[`${firstname.name}`] =firstname.value ;
+            formObject[`${lastname.name}`] =lastname.value ;
+            console.log(formObject);
+        });
+
+    //     firstname.addEventListener("keydown",(event)=>
+    // console.log(event.key,event.code));
+
+    
+
+
+
+    but.addEventListener("click",(event)=>{
+    //     console.log(event.type)
+    //     console.log(event.target)
+    //     console.log(event.currentTarget)
+    //     console.log(event.timeStamp)
+       
+   } );
+   
+      but.onclick = function(event){
+                console.log(`button is being clicked`);
+
+
+      };
+      function onclick(){
+                console.log(`button is clicked now`)
+
+      }
+
+      head.addEventListener("mouseover",(event) => {
+      event.target.style.backgroundColor = "red";
+      event.target.style.borderRadius = "10px";
+
+
+
+    });
+    
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid items1</title>
+    <style>
+       
+        .main{
+            display: grid;
+            grid-template-columns:repeat(4, 1fr);
+            grid-template-rows: repeat(3 , 100px);
+            gap: 10px;
+            background-color: rgb(234, 234, 123);
+
+          
+        }.grid-items{
+            background-color: aqua;
+             
+        }.grid-items1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end:2 ;
+            background-color: rgb(232, 136, 187);
+        }.grid-items2{
+              grid-column-start: 3;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end:4 ;
+             background-color: rgb(116, 135, 196);
+
+
+        }.grid-items3{
+            grid-area:2 / 1/ 4/2 ;
+              /* grid-column-start: 1 ;
+            grid-column-end: 2;
+            grid-row-start: 2;
+            grid-row-end:4 ; */
+            background-color:burlywood;
+
+        }.grid-items4{
+              grid-column-start: 2 / 3;
+           
+            grid-row-start: 2 / 2;
+           
+            background-color: darkgray;
+        }.grid-items5{
+              grid-column-start: 2 / 3;
+           
+            grid-row-start: 3 / 4;
+           
+            background-color: rgb(152, 225, 176);
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <grid-items class="grid-items grid-items1">A</grid-items>
+        <grid-items class="grid-items grid-items2">B</grid-items>
+        <grid-items class="grid-items grid-items3">C</grid-items>
+        <grid-items class="grid-items grid-items4">D</grid-items>
+        <grid-items class="grid-items grid-items5">E</grid-items>
+    </div>
+    
+</body>
+</html>

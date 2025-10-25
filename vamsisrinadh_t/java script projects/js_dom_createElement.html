@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom create element</title>
+</head>
+<body>
+    <h1>js dom createElement()method</h1>
+    <div id="container"></div>
+
+
+     
+    <script>
+        //creating h1 element
+        let heading2 = document.createElement("h2");
+        heading2.innerText = 'h2 createElement method()';
+        // document.body.append(heading2.innerText);
+
+        
+        document.getElementById("container");
+        container.append(heading2);
+
+        //creating list element
+         let orderedList = document.createElement("ol");
+
+        // let listItem1 = document.createElement("li");
+        // listItem1.innerText="item1";
+        // let listItem2 = document.createElement("li");
+        // listItem2.innerText="item2";
+
+        // orderedList.append(listItem1);
+        // orderedList.append(listItem2);
+        // document.body.append(orderedList);
+        // document.body.style.backgroundColor = "red";
+        // document.body.style.color = "white";
+
+
+
+        //creating loop 5 li elements append
+
+        // for(let i = 0; i < 5 ; i++){
+        //     let listItem = document.createElement("li");
+        //     listItem.innerText = `item${i + 1}`;
+
+        //     orderedList.append(listItem);
+        //     document.body.append(orderedList);
+            
+        // }
+          let fruits = ["mango", "mango1", "mango2", "mango3", "mango4"];
+
+
+        // for (let i = 0 ; i < fruits.length ; i++){
+        //      let listItem = document.createElement("li");
+        //     listItem.innerText = fruits[i];
+
+        //     orderedList.append(listItem);
+        //      document.body.append(orderedList);
+
+        // }
+
+
+
+
+        function getItems (arr){
+            for (let i = 0 ; i < arr.length ; i++){
+             let listItem = document.createElement("li");
+             listItem.innerText = arr[i];
+
+            orderedList.append(listItem);
+              document.body.append(orderedList);
+
+
+        }
+    }
+    getItems(fruits);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+
+    <!-- // 1)key value pairs : data is stored as  string key value pairs
+        2)preventDefault
+
+
+        // usage 
+        1)user preferences : storing themes settings, language settings,ui layouts
+        2)offline data : caching small amounts of data for offline access (e.g.. simple to do list)
+        3) Remembering user input : persisting from data across page reloads
+        4)client-side-Cachimg : storing frequently accessed , non-sensitive data to reduce network  requests -->
+
+        <!-- Limitations
+        1)only strings
+        2)syncharous
+        3)no security
+        4)no structure -->
+        
+
+        <!-- what is caching? -->
+    <script>
+      
+
+        
+        localStorage.setItem('userName',"Rohit sharma");
+        console.log(localStorage);
+         let user= localStorage.getItem("userName");
+         console.log("user:",user);
+         localStorage.removeItem("userName");
+         console.log(localStorage);
+
+         // se array
+
+         let arr = [1, 2, 3, 4,5];
+         localStorage.setItem("array",JSON.stringify(arr));
+         console.log(localStorage);
+
+         let returnARR =JSON.parse(localStorage.getItem("array"));
+         console.log(Array.isArray(returnARR));
+
+         // set object 
+         let student = {
+            name: "hardik pandya",
+            age: 21,
+            college : "qis",
+         };
+         localStorage.setItem("student",JSON.stringify(student));
+            console.log(localStorage);
+
+             let returnSTUDENT = localStorage.getItem("student");
+             console.log(JSON.parse(returnSTUDENT));
+
+
+             localStorage.clear();
+             console.log(localStorage) 
+
+             
+
+
+    </script>
+    
+</body>
+</html>

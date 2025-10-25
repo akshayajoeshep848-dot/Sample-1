@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex item properties</title>
+    <style>
+        .flex-container{
+            display: flex;
+
+            background-color: aqua;
+            gap: 50px;
+            padding: 10px;
+        }
+        .flex-item {
+            background-color: brown;
+            color: white;
+            /* height: 100px;
+            width: 200px; */
+            text-align: center;
+            place-content: center;
+
+        }
+        .flex-item-1{
+            flex: 1 1 300;
+           
+        }
+        .flex-item-2{
+            flex: 2 2 200;
+           
+        }.flex-item-3{
+            flex:3 3 100;
+        }
+    </style>
+</head>
+<body>
+    <h1>flexproperties</h1>
+    <div class="flex-container">
+     <div class="flex-item flex-item-1">item 1</div>
+     <div class="flex-item flex-item-2">item 2</div>
+     <div class="flex-item flex-item-3">item 3</div>
+    </div>
+    
+</body>
+</html>

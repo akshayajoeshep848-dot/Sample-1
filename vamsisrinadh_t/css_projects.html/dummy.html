@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navigation Bars</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    /* Common Navbar Style */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      color: #fff;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 14px;
+    }
+
+    .buttons button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* Variants */
+    .dark {
+      background: #222;
+    }
+
+    .dark .buttons .buy {
+      background: #6ee7b7;
+      color: #000;
+    }
+
+    .dark .buttons .discover {
+      background: #ef4444;
+      color: #fff;
+    }
+
+    .blue {
+      background: #3b82f6;
+    }
+
+    .green {
+      background: #10b981;
+    }
+
+    .green .signin {
+      background: #2563eb;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .red {
+      background: #ef4444;
+    }
+
+    .red .nav-links a {
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Navigation</h2>
+
+  <!-- First Navbar -->
+  <div class="navbar dark">
+    <div class="logo">◎ Miri UI</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Templates</a>
+      <a href="#">Pages</a>
+      <a href="#">Elements</a>
+    </div>
+    <div class="buttons">
+      <button class="buy">Buy Now</button>
+      <button class="discover">Discover</button>
+    </div>
+  </div>
+
+  <!-- Second Navbar -->
+  <div class="navbar blue">
+    <div class="logo">◎ Miri UI</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Templates</a>
+      <a href="#">Pages</a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <!-- Third Navbar -->
+  <div class="navbar green">
+    <div class="logo">◎ Miri UI</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Templates ▾</a>
+      <a href="#">Pages ▾</a>
+      <a href="#" class="signin"><i class="fa fa-user"></i> Signin</a>
+      <a href="#"><i class="fa fa-shopping-cart"></i></a>
+    </div>
+  </div>
+
+  <!-- Fourth Navbar -->
+  <div class="navbar red">
+    <div class="logo">◎ Miri UI</div>
+    <div class="nav-links">
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+
+</body>
+</html>

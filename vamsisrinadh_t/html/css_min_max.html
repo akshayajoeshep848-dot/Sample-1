@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css min max</title>
+    <style>
+        .parent{
+            background-color: aqua;
+            
+            min-width:100px;
+            min-height: 450px;
+            place-content: center;
+        }
+        .child1{
+            background-color: brown;
+        
+            min-width: 900px;
+            max-height: 50px;
+        }
+        .child2{
+            background-color: rgb(110, 43, 226);
+            max-width: 25pxx;
+            max-height: 200px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">child</div>
+        <div class="child2">child</div>
+    </div>
+</body>
+</html>

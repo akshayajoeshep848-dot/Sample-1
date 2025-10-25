@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex exercise 5</title>
+    <style>
+        *{
+            margin: 3px;
+            
+           
+           
+        }
+    .main{
+        background-color: white;
+        height: 100vh;
+    }.one{
+       height: 20%;
+       background-color: rgb(154, 205, 50);
+    }.two{
+        background-color: yellowgreen;
+        height: 70%;
+        flex: 1;
+        display: flex;
+        flex-direction: row;
+    }.left , .right{
+        background-color: azure;
+        
+
+       
+    }.left1,.left2{
+        background-color:yellowgreen;
+        display: flex;
+        
+        
+    }.left{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
+    }.left1{
+        flex: 1;
+
+    }.left2{
+        flex: 2;
+
+    }.right{
+     flex: 4;
+        display: flex;
+        flex-direction: column;
+    }.right1 , .right2{
+         background-color:yellowgreen;
+        display: flex;
+
+    }     
+    .right1{
+        flex: 4;
+
+    }.right2{
+        flex: 1;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="one">header</div>
+        <div class="two">
+            <div class="left">
+                <div class="left1">ads</div>
+                <div class="left2">nav</div>
+            </div>
+            <div class="right">
+                <div class="right1">article</div>
+                <div class="right2">footer</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
