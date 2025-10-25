@@ -28,9 +28,9 @@ listCon.addEventListener('click' , (e)=>{
 });
 
 function set(){
-    localStorage.setItem("data" , listCon.innerHTML);
+    localStorage.setItem("dataa" , listCon.innerHTML);
 }
 function show(){
-    listCon.innerHTML=localStorage.getItem('data');
+    listCon.innerHTML=localStorage.getItem('dataa');
 }
 show();
