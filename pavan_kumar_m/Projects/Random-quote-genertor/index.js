@@ -8,6 +8,7 @@ async function fetchQuotes() {
     // console.log(data);
     quotes = data.quotes;
     // console.log(quotes);
+    displayRandomQuote();
   } catch (err) {
     console.log("Error is : ", err);
   }
@@ -19,9 +20,17 @@ let button1 = document.getElementById("btn1");
 let p1 = document.getElementById("quotetext");
 let p2 = document.getElementById("author");
 // console.log(p2)
-button1.addEventListener("click", () => {
+
+function displayRandomQuote() {
+  if (!quotes || quotes.length === 0) {
+    p1.textContent = "No quotes available.";
+    p2.textContent = "";
+    return;
+  }
   let randomquote = quotes[Math.floor(Math.random() * quotes.length)];
-    // console.log(randomquote);
+  // console.log(randomquote);
   p1.textContent = randomquote.quote;
-  p2.textContent=`-- ${randomquote.author}`
-});
+  p2.textContent = `-- ${randomquote.author}`;
+}
+
+button1.addEventListener("click", displayRandomQuote);
