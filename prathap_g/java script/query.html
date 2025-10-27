@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quary</title>
+</head>
+<body>
+    VENKATA PRATHAP
+     <div id="div"></div>
+    <ul id="ul">
+        <li id="li-1">item 1</li>
+        <li id="li-2">item 2</li>
+        <li id="li-3">item 3</li>
+        <li id="li-4">item 4</li>
+        <li id="li-5">item 5</li>
+    </ul>
+    <script>
+              //  let ul = document.getElementById("ul");
+
+       /*console.log(ul.parentnode);
+        console.log(ul.childNodes);
+        console.log(ul.children);
+        console.log(ul.firstChild);
+        console.log(ul.lastchild);
+        console.log(ul.firstelementchild);
+        console.log(ul.lastelementchild);
+        console.log(ul.previousSibling);
+        console.log(ul.nextElementSibling);*/
+
+       /* ul.firstElementChild.style.backgroundcolor = "yellow";
+        ul.lastElementChild.style.backgroundcolor = "yellow";
+        ul.Children[2].style.backgroundcolor = "yellow";*/
+
+
+        let div =document.getElementById("div");  
+        let anchor = document.createElement("a");
+        anchor.setAttribute("href", "https://www.google.com");
+        anchor.textContent = "google";
+        div.append(anchor);
+    </script>
+</body>
+</html>

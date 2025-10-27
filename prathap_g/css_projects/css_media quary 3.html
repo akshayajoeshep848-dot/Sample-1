@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media screen and (max-width: 915px) {
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            .parent {
+                display: grid;
+                background-color: #edf2fa;
+
+
+
+                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: 100px 100px 150px 130px 100px 100px 100px 180px 100px 250px 250px 100px 130px 300px 300px;
+                grid-template-areas: "header header"
+                    "header2 header2"
+                    "c1 c2"
+                    "c3 c3"
+                    "c4 c4"
+                    "c4 c4"
+                    "c4 c4"
+                    "c5 c6"
+                    "c7 c7"
+                    "c7 c7"
+                    "c8 c8"
+                    "c8 c8"
+                    "c9 c9"
+                    "c10 c10"
+                    "c11 c11";
+            }
+
+            .child {
+                margin: 0px 20px;
+                border-radius: 10px;
+                text-align: center;
+                place-content: center;
+
+
+            }
+
+            .child-1 {
+                grid-area: header;
+                background-color: white;
+            }
+
+            .child-2 {
+                grid-area: header2;
+                background-color: white;
+
+            }
+
+            .child-3 {
+                grid-area: c1;
+                background-color: white;
+
+            }
+
+            .child-4 {
+                grid-area: c2;
+                background-color: white;
+            }
+
+            .child-5 {
+                grid-area: c3;
+                background-color: white;
+            }
+
+            .child-6 {
+                grid-area: c4;
+                background-color: white;
+            }
+
+            .child-7 {
+                grid-area: c5;
+                background-color: white;
+            }
+
+            .child-8 {
+                grid-area: c6;
+                background-color: white;
+            }
+
+            .child-9 {
+                grid-area: c7;
+                background-color: white;
+            }
+
+            .child-10 {
+                grid-area: c7;
+                background-color: white;
+            }
+
+            .child-11 {
+                grid-area: c8;
+                background-color: white;
+            }
+
+            .child-12 {
+                grid-area: c8;
+                background-color: white;
+            }
+
+            .child-13 {
+                grid-area: c9;
+                background-color: white;
+            }
+
+            .child-14 {
+                grid-area: c10;
+                background-color: white;
+            }
+
+            .child-15 {
+                grid-area: c11;
+                background-color: white;
+
+            }
+
+
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+        <div class="child child-4">child-4</div>
+        <div class="child child-5">child-5</div>
+        <div class="child child-6">child-6</div>
+        <div class="child child-7">child-7</div>
+        <div class="child child-8">child-8</div>
+        <div class="child child-9">child-9</div>
+        <div class="child child-10">child-10</div>
+        <div class="child child-11">child-11</div>
+        <div class="child child-12">child-12</div>
+        <div class="child child-13">child-13</div>
+        <div class="child child-14">child-14</div>
+        <div class="child child-15">child-15</div>
+    </div>
+
+</body>
+
+</html>

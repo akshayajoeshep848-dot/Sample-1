@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Layout</title>
+  <style>
+    /* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+}
+
+/* Layout Elements */
+header, nav, main, aside, footer {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header {
+  background: #333;
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  background: #555;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+nav ul li a:hover {
+  background: #444;
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Main Content and Sidebar */
+main {
+  flex: 3;+++++-32
+  background: #e7f0ff;
+}
+
+aside {
+  flex: 1;
+  background: #ffe7d6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+  </style>
+  
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <main>
+      <h2>Welcome!</h2>
+      <p>This is the main content area.</p>
+    </main>
+
+    <aside>
+      <h3>Sidebar</h3>
+      <p>Extra information here.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+</body>
+</html>

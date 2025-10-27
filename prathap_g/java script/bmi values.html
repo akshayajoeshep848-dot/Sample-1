@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div id="div"></div>
+
+    <script>
+        let div = document.getElementById("div");
+        div.style.background = "yellow";
+        div.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
+        div.style.width = "400px";
+        div.style.borderRadius = "10px";
+        div.style.padding = "20px";
+        div.style.color = "green";
+        div.style.margin = "auto";
+
+        let heading = document.createElement("h1");
+        heading.textContent = "BMI CALCULATOR";
+        div.append(heading);
+
+        let form = document.createElement("form");
+        div.append(form);
+
+        // AGE
+        let labelAge = document.createElement("label");
+        labelAge.textContent = "AGE:";
+        form.append(labelAge);
+
+        let inputAge = document.createElement("input");
+        inputAge.type = "number";
+        inputAge.id = "age";
+        inputAge.name = "age";
+        inputAge.required = true;
+        inputAge.placeholder = "Enter your age";
+        inputAge.style.marginLeft = "20px";
+        form.append(inputAge);
+        form.append(document.createElement("br"));
+        form.append(document.createElement("br"));
+
+        // WEIGHT
+        let labelWeight = document.createElement("label");
+        labelWeight.textContent = "WEIGHT (kg):";
+        form.append(labelWeight);
+
+        let inputWeight = document.createElement("input");
+        inputWeight.type = "text";
+        inputWeight.id = "weight";
+        inputWeight.name = "weight";
+        inputWeight.required = true;
+        inputWeight.placeholder = "Enter weight";
+        inputWeight.style.marginLeft = "20px";
+        form.append(inputWeight);
+        form.append(document.createElement("br"));
+        form.append(document.createElement("br"));
+
+        // HEIGHT
+        let labelHeight = document.createElement("label");
+        labelHeight.textContent = "HEIGHT (cm):";
+        form.append(labelHeight);
+
+        let inputHeight = document.createElement("input");
+        inputHeight.type = "text";
+        inputHeight.id = "height";
+        inputHeight.name = "height";
+        inputHeight.required = true;
+        inputHeight.placeholder = "Enter height";
+        inputHeight.style.marginLeft = "20px";
+        form.append(inputHeight);
+        form.append(document.createElement("br"));
+        form.append(document.createElement("br"));
+
+        // SUBMIT BUTTON
+        let submit = document.createElement("input");
+        submit.type = "submit";
+        submit.value = "Submit";
+        submit.style.backgroundColor = "green";
+        submit.style.height = "40px";
+        submit.style.width = "200px";
+        submit.style.marginLeft = "90px";
+        form.appendChild(submit);
+
+        // RESULT DISPLAY
+        let result = document.createElement("p");
+        result.id = "result";
+        result.style.marginTop = "20px";
+        result.style.fontWeight = "bold";
+        div.append(result);
+
+        // FORM SUBMISSION HANDLER
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            let age = inputAge.value;
+            let weight = parseFloat(inputWeight.value);
+            let height = parseFloat(inputHeight.value) / 100; // convert cm to meters
+
+            if (isNaN(weight) || isNaN(height) || height === 0) {
+                result.textContent = "Please enter valid weight and height.";
+                return;
+            }
+
+            let bmi = weight / (height * height);
+            result.textContent = `Your BMI is ${bmi.toFixed(2)}.`;
+
+            console.log("Data:", { age, weight, height, bmi: bmi.toFixed(2) });
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>

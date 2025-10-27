@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SPECIFICITY</title>
+        <link rel="stylesheet" href="css_speficity 2.css">
+  
+  <style>
+    h1{
+        color: brown;
+    }
+    .container{
+        color:yellow ;
+    }
+    .special[id="para 1"]{
+        color: aqua;
+    }
+  </style>
+
+</head>
+<body>
+    <h1>css specificity</h1>
+    <div class="container">
+        <p class="container">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, possimus.</p>
+        <div>
+            <p class="special" id="para 1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique, commodi!</p>
+        </div>
+
+    </div>
+    
+</body>
+</html>

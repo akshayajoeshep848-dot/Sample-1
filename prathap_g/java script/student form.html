@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>STUDENT REGISTRATION FORM</h1>
+  <script>
+    // Create submit button
+    const submitBtn = document.createElement('button');
+    submitBtn.textContent = 'Submit';
+    submitBtn.setAttribute('type', 'submit');
+    submitBtn.style.padding = '10px 20px';
+    submitBtn.style.backgroundColor = '#4CAF50';
+    submitBtn.style.color = 'white';
+    submitBtn.style.border = 'none';
+    submitBtn.style.cursor = 'pointer';
+
+    form.appendChild(submitBtn);
+
+    // Create the form element
+    form = document.createElement('form');
+    form.setAttribute('id', 'studentForm');
+    form.style.margin = '20px';
+    form.style.padding = '20px';
+    form.style.border = '1px solid #ccc';
+    form.style.width = '300px';
+    form.style.color = "green";
+    form.style.backgroundColor = "pink";
+
+
+
+    // Helper function to create input fields
+    function createInput(labelText, inputType, inputName) {
+      const wrapper = document.createElement('div');
+      wrapper.style.marginBottom = '10px';
+
+      const label = document.createElement('label');
+      label.textContent = labelText;
+      label.setAttribute('for', inputName);
+      label.style.display = 'block';
+
+      const input = document.createElement('input');
+      input.setAttribute('type', inputType);
+      input.setAttribute('name', inputName);
+      input.setAttribute('id', inputName);
+      input.style.width = '100%';
+      input.style.padding = '5px';
+
+      wrapper.appendChild(label);
+      wrapper.appendChild(input);
+      return wrapper;
+    }
+
+    // Add input fields
+    form.appendChild(createInput('Name:', 'text', 'studentName'));
+    form.appendChild(createInput('Age:', 'number', 'studentAge'));
+    form.appendChild(createInput('Email:', 'email', 'studentEmail'));
+    form.appendChild(createInput('adress:', 'adress', 'studentadress'));
+    form.appendChild(createInput('Ph.No:', 'number', 'studentmobilenumber'));
+    form.appendChild(createInput('password:', 'number', 'studentpasssword'));
+    form.appendChild(createInput('Course:', 'text', 'studentcourse'));
+
+
+
+
+    // Handle form submission
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('studentName').value;
+      const age = document.getElementById('studentAge').value;
+      const email = document.getElementById('studentEmail').value;
+      const adress = document.getElementById('studentadress').value;
+      const number = document.getElementById('studentmobilenumber').value;
+      const password = document.getElementById('studentpassword').value;
+      const course = document.getElementById('studentcourse').value;
+
+    });
+
+    // Add form to the body
+    document.body.appendChild(form);
+  </script>
+</body>
+
+</html>

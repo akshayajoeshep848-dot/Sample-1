@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Layouts</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, auto);
+      gap: 10px;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+
+    .rect {
+      background-color: #e74c3c;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+    }
+
+    .large {
+      width: 120px;
+      height: 240px;
+      grid-row: 1 / span 2;
+    }
+
+    .medium {
+      width: 100px;
+      height: 100px;
+    }
+
+    /* Top layout: Large rectangle on the left */
+    .top-layout {
+      grid-template-areas:
+        "one two three"
+        "one four five";
+    }
+
+    .top-layout .rect:nth-child(1) { grid-area: one; }
+    .top-layout .rect:nth-child(2) { grid-area: two; }
+    .top-layout .rect:nth-child(3) { grid-area: three; }
+    .top-layout .rect:nth-child(4) { grid-area: four; }
+    .top-layout .rect:nth-child(5) { grid-area: five; }
+
+    /* Bottom layout: Large rectangle on the right */
+    .bottom-layout {
+      grid-template-areas:
+        "two three one"
+        "four five one";
+    }
+
+    .bottom-layout .rect:nth-child(1) { grid-area: two; }
+    .bottom-layout .rect:nth-child(2) { grid-area: three; }
+    .bottom-layout .rect:nth-child(3) { grid-area: four; }
+    .bottom-layout .rect:nth-child(4) { grid-area: five; }
+    .bottom-layout .rect:nth-child(5) { grid-area: one; }
+  </style>
+</head>
+<body>
+
+  <h2>Top Layout (Large Rectangle on Left)</h2>
+  <div class="grid-layout top-layout">
+    <div class="rect large">1</div>
+    <div class="rect medium">2</div>
+    <div class="rect medium">3</div>
+    <div class="rect medium">4</div>
+    <div class="rect medium">5</div>
+  </div>
+
+  <h2>Bottom Layout (Large Rectangle on Right)</h2>
+  <div class="grid-layout bottom-layout">
+    <div class="rect medium">2</div>
+    <div class="rect medium">3</div>
+    <div class="rect medium">4</div>
+    <div class="rect medium">5</div>
+    <div class="rect large">1</div>
+  </div>
+
+</body>
+</html>

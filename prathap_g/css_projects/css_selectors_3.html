@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS SELECTORS 3</title>
+    <style>
+        div p{
+            color:blue;
+        }
+        p~h3{
+            background-color: rgb(226, 21, 21);
+
+        }
+        h2+p{
+            color: rgb(13, 198, 109);
+        }
+       p+h3{
+            border: 2px solid red;
+            background-color: aqua;
+            width: 100px;
+            height: 20pxpx;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors - descendent selector</h1>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Exercitationem pariatur voluptatem nostrum tenetur praesentium eum numquam, molestiae iste.
+     Nobis sapiente veritatis repudiandae placeat amet alias.
+      Cum, hic rem libero nisi sequi laudantium necessitatibus deserunt voluptas quia error<span>explicabo officia</span> quo illum quas nesciunt earum,
+       consectetur ullam minus doloremque? Dicta natus quisquam officiis, qui in quibusdam! Ea, possimus? Beatae ipsum distinctio eum? Est,
+        perspiciatis debitis maxime dolor odio, saepe, in fugit itaque quod molestiae necessitatibus obcaecati ea alias! Quidem eum quas quasi reiciendis accusamus suscipit nulla modi sed ratione veritatis,
+         quos fugit possimus incidunt facere doloremque architecto atque quia placeat quo!</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <div>
+    <p>child</p>
+   </div>
+   <div>
+    <div>
+
+        <p>grand child</p>
+    </div>
+   </div>
+   <div>
+    <div>
+        <div>
+            <p>great grand child</p>
+        </div>
+    </div>
+   </div>
+   <h2>CSS Selector - adjacent sibilings</h2>
+   <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, repellat!
+   </p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illo sed maxime, animi voluptatibus tenetur.</p>
+   <h3> heading 1</h3>
+   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis rem illum eaque amet magnam adipisci quibusdam quo, consequuntur cupiditate voluptatibus recusandae nihil beatae qui inventore, quae esse accusantium cum velit?</p>
+
+</body>
+</html>

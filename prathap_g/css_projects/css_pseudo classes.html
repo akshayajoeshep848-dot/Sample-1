@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PSEUDO CLASSES</title>
+    <style>
+        p{
+            color: brown;
+        }
+        p:hover{
+            color: green;
+            border: 3px solid black;
+            padding: 20px;
+            box-shadow: 5px 10px 5px 10px;
+            border-radius: 20px;
+        }
+        button{
+            background-color: rgb(247, 13, 153);
+            padding: 10px 20px;
+            box-shadow: 3px 5px 3px yellowgreen;
+        }
+        button:hover{
+            transform: scale(1.05) rotate(-60deg);
+            
+        }
+        button:active{
+            transform: translate(10px 20px);
+        }
+        .form{
+            padding: 20px;
+            border: 3px rgb(52, 20, 211);
+        }
+        input{
+            border: 2px solid yellow;
+        }
+        input:focus{
+            border-color: 2px darkblue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>PSEUDO CLASSES</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dolorum tenetur earum ea nobis magnam nesciunt
+        natus. Rerum facere quo aperiam asperiores molestiae soluta sit illum cumque, accusantium quibusdam itaque
+        commodi tenetur consequatur vitae hic blanditiis voluptate excepturi dolorem culpa. Tempore amet eius dicta
+        voluptatum. Voluptates culpa quibusdam exercitationem fugiat?</p>
+        <button>submit</button>
+        <div class="form">
+            <label id="form">first name:</label>
+            <input class="text" id="text">
+        </div>
+
+        <div class="form">
+            <a href="https://logicwhile.com/">logicwhile</a>
+        </div>
+</body>
+
+</html>

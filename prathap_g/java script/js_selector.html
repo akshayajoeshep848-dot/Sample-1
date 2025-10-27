@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Country Dropdown</title>
+</head>
+<body>
+  <label for="country">Choose a country:</label>
+  <select id="country"></select>
+
+  <script>
+    let h1=document.createElement("h1");
+    h1.innerText="selector"
+    body.append("h1 ")
+    const countryOptions = [
+      { value: "us", label: "United States" },
+      { value: "ca", label: "Canada" },
+      { value: "mx", label: "Mexico" },
+      { value: "gb", label: "United Kingdom" },
+    ];
+
+    const selectElement = document.getElementById("country");
+
+    countryOptions.forEach(option => {
+      const opt = document.createElement("option");
+      opt.value = option.value;
+      opt.textContent = option.label;
+      selectElement.appendChild(opt);
+    });
+  </script>
+</body>
+</html>

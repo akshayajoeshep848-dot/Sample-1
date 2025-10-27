@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSEUDO ELEMENTS</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        li::after{
+            content: "\1F4AB";
+        }
+                li::before{
+            content: "\1f491";
+        }
+        .burger-menu{
+            background-color: rgb(19, 221, 29);
+        }
+        .burger-menu ::after{
+                    position: relative;
+        }
+        p::first-letter{
+            font-size: 30px;
+        }
+        p::first-line{
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>PSEUDO ELEMENTS</h1>
+     <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+     </ul>
+    <h1>burger-menu icon</h1>
+    <div class="burger-menu">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, saepe?</p>
+    </div>
+</body>
+</html>

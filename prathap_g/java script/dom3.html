@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1> DOM</h1>
+    <p>qureySelectorAll</p>
+    <div class="button-container">
+        <button class="button-item">Button 1</button>
+        <button class="button-item">Button 2 </button>
+        <button class="button-item">Button 3</button>
+        <button class="button-item">Button 4</button>
+        <button class="button-item">Button 5</button>
+    </div>
+
+
+
+    <script>
+        //qureySelectorAll--->selects all elements that match a CSS selector
+
+        let styleArray = [
+            {
+                name: "Click Me",
+                backgroundColor: "red",
+                padding: "10px",
+                margin: "10px",
+                border: "none",
+                boderradius: "10px",
+                color: "white",
+            }, {
+                name: "submit",
+                backgroundColor: "red",
+                padding: "10px",
+                margin: "10px",
+                border: "none",
+                boderradius: "10px",
+                color: "white",
+            }, {
+                name: "login",
+                backgroundColor: "red",
+                padding: "10px",
+                margin: "10px",
+                border: "none",
+                boderradius: "10px",
+                color: "white",
+            }, {
+                name: "signup",
+                backgroundColor: "red",
+                padding: "10px",
+                margin: "10px",
+                border: "none",
+                boderradius: "10px",
+                color: "white",
+            }, {
+                name: "logout",
+                backgroundColor: "red",
+                padding: "10px",
+                margin: "10px",
+                border: "none",
+                boderradius: "10px",
+                color: "white",
+            },
+        ];
+
+        let buttonItems = document.querySelectorAll('.button-item');
+        buttonItems.forEach((item, index) => {
+            item.innerText = styleArray[index].name;
+            item.style.backgroundColor = "red";
+            item.style.padding = "10px";
+            item.style.margin = "10px";
+            item.style.border = "none";
+            item.style.color = "white";
+            item.style.borderRadius = "10px";
+            item.style.boxShadow = "2px 2px 5px 5px  lightgray";
+            // item.style.cursuer = "pointer";
+
+
+        })
+    </script>
+
+</body>
+
+</html>

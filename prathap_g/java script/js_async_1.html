@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ASYNC</title>
+</head>
+
+<body>
+    <div id="container"></div>
+
+    <script>
+        /* async function hello(){
+             return "hello, async!";
+         }
+         console.log(hello());
+         hello().then((value)=>console.log(value));
+         hello().then(console.log);*/
+
+
+        async function fetchdata(url) {
+            console.log("starting fetch call......")
+            let response = await fetch(url);
+            let data = await response.json();
+            console.log("end fetch call......");
+            return data;
+
+
+        }
+        // fetchdata("https://dogapi.dog/api/v2/breeds").then((value)=>console.log(value));
+        fetch("https://jsonplaceholder.typicode.com/users/1")
+           .then((res) => res.json())
+            .then((users) => {
+                let container = document.getElementById("container");
+
+                let name = document.createElement("p");
+                let email = document.createElement("p");
+                let phone = document.createElement("p");
+                let company = document.createElement("p");
+                let adress = document.createElement("p");
+
+                name.classList.add("name");
+                email.classList.add("email");
+                phone.classList.add("phone");
+                company.classList.add("company");
+                adress.classList.add("adress");
+
+                name.textContent = `Name: ${users.name}`;
+                email.textContent = `Email: ${users.email}`;
+                phone.textContent = `Phone: ${users.phone}`;
+                company.textContent = `Company: ${users.company.name}`; 
+                adress.textContent = `Address: ${users.address.street}, ${users.address.city}`; 
+                container.appendChild(name);
+                container.appendChild(email);
+                container.appendChild(phone);
+                container.appendChild(company);
+                container.appendChild(adress);
+            });
+
+    </script>
+
+</body>
+
+</html>

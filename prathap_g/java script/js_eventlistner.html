@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event listner</title>
+</head>
+
+<body>
+    <h1 id="h1">Event Listner</h1>
+    <button id="button">click me</button>
+    <div>
+        <label for="firstname">First Name</label>
+        <input  id="firstname" type="text" name="firstname"/>
+    </div>
+    <div>
+        <label for="lastname">Last Name Name</label>
+        <input  id="lastname" type="text" name="lastname"/>
+    </div>
+     <input type="text" id="myInput" placeholder="venkataprathap" />
+    <script>
+      //  let button = document.getElementById("button");
+
+        /*function onclick(){
+          console.log("button is being clicked");
+        }
+
+
+
+        button.onClick= function(event){
+        console.log("Button is clicked");};
+
+        button.addEventListener("click",(event)=>
+        console.log("Button is clicked")
+        );*/
+        /*  let h1=document.getElementById("h1");
+        button.addEventListener("click",(event)=>
+        console.log(event.target));
+
+
+          h1.addEventListner("mouseover",(event)=>{
+          event.target.style.backgroundcolor="blue";
+           } );*/
+
+
+       
+
+
+        document.getElementById("myInput").addEventListener("keydown", function (event) {
+            console.log("Key pressed:", event.key);
+        });
+        let button=document.getElementById("button");
+        let h1=document.getElementById("h1");
+        let firstname=document.getElementById("firstname");
+        let lastname=document.getElementById("lastname");
+        let formobject={};
+
+        button.addEventListener("click", (event)=>{
+            
+            
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1>DOM</h1>
+    <div class="container">
+        <div class="menu-item menu-item-1">Menu item 1</div>
+        <div class="menu-item menu-item-2">Menu item 2</div>
+        <div class="menu-item menu-item-3">Menu item 3</div>
+        <div class="menu-item menu-item-4">Menu item 4</div>
+
+    </div>
+    <div class="para-container">
+        <p>This is a pra</p>
+        <p>This is a pra</p>
+        <p>This is a pra</p>
+        <p>This is a pra</p>
+    </div>
+
+    <script>
+        //iterrater elemnts ...same elememts are behave like arrays ,thats but not arrays
+        //getElementsByClassName
+        // let menuItems = document.getElementsByClassName("menu-item");
+        // console.log(Array.isArray(menuItems));
+        // console.log(menuItems);
+
+        // console.log(Array.isArray(Array.from(menuItems)));
+        // console.log(Array.from(menuItems));
+        // let arrayMenuItems = Array.from(menuItems);
+        // arrayMenuItems.forEach((item) => (item.innerText = "Hello"));
+
+
+        //getElementByTagName
+
+        let paraItems = document.getElementsByTagName("p");
+        // let arr = [1, 2, 3, 4, 5]
+        let actorsArray = [
+            {
+                name: "Pawan Kalyan",
+                profession: "Acting",
+                movies: ["OG", "HHVM"],
+            }, {
+                name: "Balaiah",
+                profession: "Acting",
+                movies: ["Legend", "Daku"],
+
+            }, {
+                name: "Charan",
+                profession: "Acting",
+                movies: ["Orange", "Peddi"]
+            }, {
+                name: "Anushka",
+                profession: "Acting , MOdeling",
+                movies: ["Billa", "Arudhathi"]
+            }
+        ]
+        Array.from(paraItems).forEach((items, index) => {
+            items.innerText = `Actor Name : ${actorsArray[index].name}`;
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

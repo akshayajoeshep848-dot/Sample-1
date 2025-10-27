@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CLASSES INHERITANCE</title>
+</head>
+<body>
+    <script>
+       /*class Car {
+  constructor(make, model1) {
+    this.make = make;
+    this.model1 = model1;
+  }
+
+  updateModel(newModel) {
+    this.model1 = newModel;
+  }
+carsmooth(){
+    return `This car is a ${this.make} ${this.model1}.`;
+  }
+}
+
+
+const car1 = new Car("", "Civic");
+console.log(car1.carsmooth());
+
+car1.updateModel("Accord");
+console.log(car1.carsmooth());*/
+
+
+class Dog {
+  constructor(name, breed = "mutt") {
+    this.name = name;
+    this.breed = breed;
+  }
+
+  describe() {
+    return `${this.name} is a ${this.breed}`;
+  }
+}
+
+// Example usage:
+const dog1 = new Dog("Buddy", "Golden Retriever");
+const dog2 = new Dog("Max");
+
+console.log(dog1.describe()); // Buddy is a Golden Retriever
+console.log(dog2.describe()); // Max is a mutt
+
+
+    </script>
+</body>
+</html>

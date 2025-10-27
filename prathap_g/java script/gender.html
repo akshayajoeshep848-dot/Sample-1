@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <div id="div"></div> -->
+    <script>
+        //let div = document.getElementById("div");
+        let div = document.createElement("div")
+        div.style.background = "pink";
+        div.style.boxShadow = "0 4px 20px rgba(0, 0, 0, 0.1)";
+        div.style.width = "400px";
+        div.style.borderRadius = "10px";
+        div.style.padding = "20px";
+        div.style.color = "green";
+        div.style.margin = "auto";
+        document.body.append(div)
+
+
+
+
+        let heading = document.createElement("h1");
+        heading.textContent = "patient registration form";
+
+        div.append(heading);
+
+        let form = document.createElement("form");
+        div.append(form);
+
+        let genderlabel = document.createElement("label");
+        genderlabel.setAttribute("for", "gender");
+        genderlabel.textContent = "Gender:"
+        form.append(genderlabel);
+
+
+        let select = document.createElement("select");
+        select.setAttribute("id", "Gender")
+        select.setAttribute("type", "text")
+        select.setAttribute("name", "gender")
+        select.setAttribute("value", "gender")
+        select.setAttribute("required", true)
+        select.setAttribute("placeholder", "")
+        form.append(select);
+        let option = document.createElement("option");
+        option.value = "";
+        option.text = "Select gender";
+
+        let option1 = document.createElement("option");
+        option1.value = "male";
+        option1.text = "male";
+
+        let option2 = document.createElement("option");
+        option2.value = "female";
+        option2.text = "female";
+
+        let option3 = document.createElement("option");
+        option3.value = "other";
+        option3.text = "Other";
+
+        // Append options to select
+        select.appendChild(option);
+        select.appendChild(option1);
+        select.appendChild(option2);
+        select.appendChild(option3);
+
+        // Finally, add the dropdown to the page
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

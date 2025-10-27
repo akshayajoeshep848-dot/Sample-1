@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css position</title>
+    <style>
+        .main{
+            background-color: red;
+            width: 800px;
+            height: 400px;
+        }
+        .main1{
+            background-color: yellow;
+            width: 800px;
+            height: 400px;
+        }
+        .main1 .child{
+            width: 80px;
+            height: 80px;
+            
+
+        }
+        .main1 .child1{
+            background-color: white;
+            position: relative;
+            left: 100px;
+            top: -50px;
+            place-content: center;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+        .main1 .child1:hover{
+            color: red;
+        }
+        .main1 .child2{
+            background-color: white;
+            position: relative;
+            left: 180px;
+            top: -130px;
+            place-content: center;
+            text-align: center;
+
+        }
+        
+        .main1 .child2:hover{
+            color: pink;
+        }
+        .main1 .child3{
+            background-color: white;
+            position: relative;
+            left: 260px;
+            top: -210px;
+                        place-content: center;
+            text-align: center;}
+
+        .main1 .child3:hover{
+            color: yellow;
+        }
+
+        
+        .main1 .child4{
+            background-color: white;
+            position: relative;
+            left: 340px;
+            top: -290px;
+                        place-content: center;
+            text-align: center;
+             border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+        }
+        .main1 .child4:hover{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main"></div>
+    <div class="main1">
+        <div class="child">
+            <div class="child1 child ">child1</div>
+            <div class="child2 child ">child2</div>
+            <div class="child3 child "> child3</div>
+            <div class="child4 child ">child4</div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+    
+</body>
+</html>

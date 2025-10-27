@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meesho</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Creepster&family=Lilita+One&family=Oswald:wght@200..700&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Bubbles&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: 100px;
+            grid-template-areas: "header"
+                "header-img";
+        }
+
+        .head {
+            grid-area: header;
+            background-color: #f7f7f7;
+            padding: 30px;
+            position: sticky;
+            top: 0rem;
+            z-index: 1;
+        }
+
+        .logo {
+            display: flex;
+            gap: 10px;
+            margin-left: 150px;
+
+
+        }
+
+        p {
+            margin-top: 6px;
+            font-size: 13.5px;
+            color: #000000;
+        }
+
+        .logo img {
+            background-image: url('images/m-logo.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 40px;
+            height: 40px;
+        }
+
+        .heading {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            position: relative;
+            top: -32px;
+            gap: 30px;
+            margin-right: 80px;
+
+
+
+        }
+
+        a {
+
+            text-decoration: none;
+            font-size: 13.5px;
+            padding: 6.75px 12px;
+            border-radius: 10px;
+        }
+
+        .heading {
+            grid-area: header-img;
+        }
+
+        .bg-img {
+            background-image: url(images/home_bg.png);
+            background-size: cover;
+            width: 1520px;
+            height: 517.23px;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+
+
+
+
+
+        }
+
+
+        h1 {
+            font-size: 56.1px;
+            font-weight: 600;
+            color: white;
+            min-width: 78rem;
+            text-align: center;
+            line-height: 1.1;
+            margin-top: -80px;
+
+
+
+        }
+
+        .para {
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .card-1 {
+            width: 1200px;
+            height: 428.34px;
+            background-color: #f7f7f7;
+            margin: 0px 155px;
+
+        }
+
+        .videos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .video1 {
+            background-image: url(images/home_video1.png);
+            background-repeat: no-repeat;
+            width: 540px;
+            height: 394.79px;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+
+        }
+
+        .para-3 {
+            font-size: 21.9px;
+            color: #ffffff;
+            margin-left: 15px;
+        }
+
+        .video2 {
+            background-image: url(images/home_video2.png);
+            background-repeat: no-repeat;
+            width: 540px;
+            height: 394.79px;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+
+        }
+
+        .para-3 {
+            font-size: 21.9px;
+            color: #ffffff;
+            margin-left: 15px;
+        }
+
+        .video11 {
+            background-image: url(images/thumbnail_1.png);
+            background-repeat: no-repeat;
+            width: 540px;
+            height: 394.79px;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+
+        }
+
+        .video22 {
+            background-image: url(images/thumbnail_2.png);
+            background-repeat: no-repeat;
+            width: 540px;
+            height: 394.79px;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+
+        }
+
+        .video33 {
+            background-image: url(images/90.png);
+            background-repeat: no-repeat;
+            width: 540px;
+            height: 394.79px;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+
+        }
+
+        .video44 {
+            background-image: url(images/93.png);
+            background-repeat: no-repeat;
+            width: 540px;
+            height: 394.79px;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+
+        }
+
+        footer {
+            width: 1518px;
+            height: 164.6px;
+            background-color: #1C1C1C;
+            margin-top: 200px;
+            padding: 30px;
+            display: flex;
+
+        }
+
+        .aa1 {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .icon-1 {
+            font-size: 25px;
+
+
+        }
+
+        i {
+            background-color: white;
+            width: 37px;
+            height: 37px;
+            text-align: center;
+            place-content: center;
+
+            border-radius: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="head">
+                <div class="logo">
+                    <img src="images/m-logo.svg">
+                    <p>Invester Relations</p>
+
+
+                </div>
+                <div class="heading">
+                    <a href="" style="background-color: #FFBA4C;">Home</a>
+                    <a href="">Financials</a>
+                    <a href="">Resources</a>
+
+                </div>
+
+            </div>
+
+            <div class="bg-img">
+                <div>
+                    <h1>Meesho is democratising<br> internet commerce for everyone</h1>
+                </div>
+                <p class="para">For nearly a decade, Meesho has built innovative technology to create an<br> accessible
+                    and
+                    affordable
+                    e-commerce ecosystem for a billion Indians</p>
+
+
+
+
+
+            </div>
+            <div class="card-1" style="display: flex; align-items: center; gap: 20px;">
+
+                <img src="images/home_tile.png" style="width: 358px;height: 327.23px; margin-left: 50px;">
+
+                <div class="content1">
+                    <h1 class="heading-1" style="color: black;font-size: 30px;margin-left: -240px ;">Making e-commerce
+                        affordable and <br>accessible</h1>
+                    <p class="para-2" style="font-size: 14px;margin: 20px 0px -20px 100px; margin-top: 80px;">Meesho is
+                        a multi-sided technology platform driving e-commerce in India by connecting <br> sellers,
+                        logistics partners, and content creators. Through a low-cost, discovery-<br>led model, we enable
+                        affordable and accessible shopping for diverse consumer segments <br>across the country.</p>
+
+                </div>
+
+            </div>
+            <div class="videos">
+                <div class="video1"><i class="fa-solid fa-play"
+                        style="margin-left: 15px; margin-top: 200px   ;background-color:rgba(245, 222, 179, 0);width:60px;height:60px;font-size: 30px;border: 1px solid white;border-radius:30px;text-align: center;place-content: center;color: white;"></i>
+                    <p class="para-3">Watch how Sanju Sharma Shops Smarter,right from home</p>
+                </div>
+                <div class="video2"><i class="fa-solid fa-play"
+                        style="margin-left: 15px; margin-top: 200px   ;background-color:rgba(245, 222, 179, 0);width:60px;height:60px;font-size: 30px;border: 1px solid white;border-radius:30px;text-align: center;place-content: center;color: white;"></i>
+                    <p class="para-3">Watch Yashwanths Chases in style on a Student budget</p>
+                </div>
+
+
+            </div>
+            <div class="card-1" style="display: flex; align-items: center; gap: 20px;margin-top: 80px;">
+
+                <img src="images/home_tile_2_main.png" style="width: 358px;height: 327.23px; margin-left: 50px;">
+
+                <div class="content1">
+                    <h1 class="heading-1" style="color: black;font-size: 40px;margin-left: -240px ;">
+                        Digitizing Indian businesses</h1>
+                    <p class="para-2" style="font-size: 14px;margin: 20px 0px -20px 100px; margin-top: 80px;">
+                        Our tech-first approach equips these businesses with the tools to succeed online,<br>
+                        complemented by industry-first initiatives like 0% seller commission. Today, lakhs of sellers
+                        <br>leverage Meesho’s vast customer base, advanced tech, and low-cost, pan-India shipping to
+                        <br> their businesses.
+                    </p>
+                </div>
+
+            </div>
+            <div class="videos">
+                <div class="video11"><i class="fa-solid fa-play"
+                        style="margin-left: 15px; margin-top: 200px   ;background-color:rgba(245, 222, 179, 0);width:60px;height:60px;font-size: 30px;border: 1px solid white;border-radius:30px;text-align: center;place-content: center;color: white;"></i>
+                    <p class="para-3">Watch how visual transformed everyday products with Uniclan healthcatre.</p>
+                </div>
+                <div class="video22"><i class="fa-solid fa-play"
+                        style="margin-left: 15px; margin-top: 200px   ;background-color:rgba(245, 222, 179, 0);width:60px;height:60px;font-size: 30px;border: 1px solid white;border-radius:30px;text-align: center;place-content: center;color: white;"></i>
+                    <p class="para-3">Watch how kavin Scaled BodyGlove<br> through e-commerece.</p>
+                </div>
+
+
+            </div>
+            <div class="card-1" style="display: flex; align-items: center; gap: 20px;margin-top: 80px;">
+
+                <img src="images/home_tile_4_main.png" style="width: 358px;height: 327.23px; margin-left: 50px;">
+
+                <div class="content1">
+                    <h1 class="heading-1" style="color: black;font-size: 40px;margin-left: -360px ;">
+                        Content Commerce</h1>
+                    <p class="para-2" style="font-size: 14px;margin: 20px 0px -40px 70px; margin-top: 80px;">
+                        Enabling content-led product discovery by connecting creators, sellers, and consumers on a<br>
+                        single platform.
+                    </p>
+                </div>
+
+            </div>
+            <div class="videos">
+                <div class="video33"><i class="fa-solid fa-play"
+                        style="margin-left: 15px; margin-top: 200px   ;background-color:rgba(245, 222, 179, 0);width:60px;height:60px;font-size: 30px;border: 1px solid white;border-radius:30px;text-align: center;place-content: center;color: white;"></i>
+                    <p class="para-3">Ramya turned a curious Experiment into a <br>Thrivi Content Career.</p>
+                </div>
+                <div class="video44"><i class="fa-solid fa-play"
+                        style="margin-left: 15px; margin-top: 200px   ;background-color:rgba(245, 222, 179, 0);width:60px;height:60px;font-size: 30px;border: 1px solid white;border-radius:30px;text-align: center;place-content: center;color: white;"></i>
+                    <p class="para-3">Watch how Raksha went from a Small-Town start to Millions of followers online.</p>
+                </div>
+
+
+            </div>
+            <footer>
+                <div class="f1" style="margin-left: 150px;">
+                    <img src="images/footer-logo.2c3a702b.svg" style="width: 96px;height: 96px;margin-left: -15px;">
+                    <div class="p1">
+                        <p class="p-1" style="color: white;">© 2025 Copyright Meesho</p>
+                        <p class="p-11" style="color: white;margin-top: -3px;">All Rights Reserved</p>
+
+                    </div>
+
+                </div>
+                <div class="aa" style="display: flex;flex-direction: column;margin-left: 150px;margin-top: 30px;">
+
+
+                    <a class="aa1" href="">Home</a>
+                    <a class="aa1" href="">Financials</a>
+                    <a class="aa1" href="">Resources</a>
+                </div>
+                <div class="icons" style="display: flex;gap: 30px;margin-left: 200px;align-items: center;">
+                    <div class="icon-1"><i class="fa-brands fa-linkedin-in"></i></div>
+                    <div class="icon-1"><i class="fa-brands fa-instagram"></i></div>
+                    <div class="icon-1"><i class="fa-brands fa-square-x-twitter"></i></div>
+
+                </div>
+                <div class="apps"
+                    style="display: flex;flex-direction: row; width: 127px;height: 37px;gap: 10px;margin-left: 140px;margin-top: 60px;">
+                    <img src="images/google-play.c939a775.svg">
+                    <img src="images/app-store.2313ecf3.svg">
+
+                </div>
+
+
+            </footer>
+
+
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

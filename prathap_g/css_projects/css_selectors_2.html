@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css selectors</title>
+    <style> 
+        input [type="text"]{
+            width: 200px;
+        }
+        input[type="date"]{
+            border: 2px dotted brown;
+            border-radius: 10px;
+        }
+        .container{
+            width: 1000px;
+            margin: 20px;
+            border: 2px solid red;
+
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        h1{
+            color: blue;
+            text-align: center;
+            height: fit-content;
+            background-color: rgb(15, 213, 111);
+            padding: 20px;
+        }
+        hr{
+            border: 0.1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>css selectors 2</h1>
+    <hr>
+    <div>
+        <label for="input1">First Name:</label>
+        <input type="text" id="input1"><br></br>
+    </div>
+        <div>
+        <label for="input2">Last Name:</label>
+        <input type="text" id="input2"><br></br>
+    </div>
+        
+        <div>
+        <label for="input3">Date of birth</label>
+        <input type="date" id="input3"><br></br>
+    </div>
+    <hr>
+    <button>submit</button>
+</div>
+</body>
+</html>

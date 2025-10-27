@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM</title>
+</head>
+<body>
+    <h1 id="heading">Hello</h1>
+    <script>
+        let obj = {
+            name: "Pratap",
+            age: 22,
+            location: ["hyd", "vijayawada"],
+            gender: "Male",
+            addresses: [{
+                line1: "Pragathi Nagar",
+                hno: "301,Tirumala enclave, Lakeview Colony", 
+
+            },
+            {
+                line1: "Pragathi Nagar",
+                hno: "301,Tirumala enclave, Lakeview Colony", 
+
+            }],
+             walk: () => console.log("walking")
+        }
+
+        let name = obj.name
+        
+        console.log(obj.addresses[0].hno);
+        obj.walk()
+
+
+        console.log(document);
+        console.log(document.body);
+
+        let heading = document.getElementById('heading')
+        heading.innerText = "Hi"
+        heading.style.backgroundColor = "YELLOW"
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js classes</title>
+</head>
+
+<body>
+    <h1>JS CLASSES</h1>
+
+    <script>
+        class person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+
+            }
+
+            greet() {
+                console.log(`hi my name is ${this.name}`);
+            }
+        }
+        let person1 = new person("ntr", 42);
+        console.log(person.name);
+        console.log(person.age);
+        person1.greet();
+
+
+
+    </script>
+
+
+</body>
+
+</html>

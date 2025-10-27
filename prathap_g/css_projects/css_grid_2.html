@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID 2</title>
+    <style>
+        .parent{
+            background-color: blue;
+            display: grid;
+            gap: 10px;
+            height: 100vh;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr) ;
+            grid-template-areas: 
+            "header header header"
+            "sidenav main main"
+            "footer footer footer";
+        }
+        .child{
+            background-color: rgb(19, 117, 202);
+            color: aqua;
+        }
+        .child-1{
+             grid-area: header;
+        }
+        .child-2{
+            grid-area: main;
+        }
+        .child-3{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <H1>CSS GRID  </H1>
+    <div class="parent">
+    <div class="child child-1">child 1</div>
+    <div class="child child-2">child 2</div>
+    <div class="child child-3">child 3</div>
+    <div class="child child-4">child 4</div> 
+    </div>
+</body>
+</html>

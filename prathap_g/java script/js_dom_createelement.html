@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom createelement method</title>
+</head>
+
+<body>
+    <h1>js dom document.create element()method</h1>
+     <button id="bt1" onclick="getItems(fruits)">fruits</button>
+     <button id="bt2" onclick="getItems(vegitables)">vegitables</button>
+    <script>
+        let heading2 = document.createElement("h2");
+        heading2.innerText = "h2 create by createElement method";
+        // document.body.append(heading2);
+        let container = document.getElementById("container");
+        container.append(heading2)
+
+        //create list element
+        let orderedList = document.createElement("ol");
+        let listItem1 = document.createElement("li");
+        /* listItem1.innerText ="yellow";
+         let listItem2 = document.createElement("li");
+         listItem2.innerText ="green";
+         let listItem3 = document.createElement("li");
+         listItem3.innerText ="pink";
+         orderedList.append(listItem1);
+         orderedList.append(listItem2);
+         orderedList.append(listItem3);*/
+
+        //write a for loop to create 5 li ellements and append
+
+        /* for(let i=0; i<5; i++){
+          let listItem = document.createElement("li");
+          listItem.innerText =`item ${i+1}`;
+          orderedList.append(listItem);
+         }*/
+        /*  let fruits =["orange", "papayaaa", "mango", "bannana", "apple"];
+           for(let i=0; i<fruits.length; i++){
+           let listItem = document.createElement("li");
+           listItem.innerText =fruits[i];
+           orderedList.append(listItem);}*/
+           let vegitables = ["vankaya", "bendakaya", "dondhakaya", "dosakaya", "potlakaya", "gummadikaya", "beerakaya", "kakarakaya", "chikudhukaya", "sorrakaya"];
+           let listItem = document.createElement("li");
+           function getItems(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                listItem.innerText = arr[i];
+                orderedList.append(listItem);
+                listItem.style.color = "blue";
+                listItem.style.margin = "15px";
+            }
+        }
+        getItems(vegitables);
+        document.body.append(orderedList);
+
+
+    </script>
+</body>
+
+</html>

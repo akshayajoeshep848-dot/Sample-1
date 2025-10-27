@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops concept</title>
+</head>
+
+<body>
+    <h1>loops concept</h1>
+    <script>
+        // Take inputs
+        /*let num1 = parseFloat(prompt("Enter first number:"));
+        let num2 = parseFloat(prompt("Enter second number:"));
+        let operator = prompt("Enter operator (+, -, *, /, %):");
+        
+        // Perform operation
+        /*let result;
+        
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                break;
+            case '-':
+                result = num1 - num2;
+                break;
+            case '*':
+                result = num1 * num2;
+                break;
+            case '/':
+                if (num2 !== 0) {
+                    result = num1 / num2;
+                } else {
+                    result = "Error! Division by zero.";
+                }
+                break;
+            case '%':
+                if (num2 !== 0) {
+                    result = num1 % num2;
+                } else {
+                    result = "Error! Modulus by zero.";
+                }
+                break;
+            default:
+                result = "Invalid operator!";
+        }
+        
+        // Print result
+        console.log("Result: " + result);*/
+        /* let year = Number(prompt("enter the year"));
+         if (year % 400 == 0) {
+             console.log("this is centure leap year")
+         }
+         else if (year % 100 != 0 && year % 4 == 0) {
+             console.log("this is leap year");
+         } else {
+             console.log("not a leap year");
+         }*/
+        /* let Year=prompt("enter the year");
+     
+          
+         let (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0)){
+             console.log(result);
+         }*/
+        //  3-digit number
+       
+       
+        let num=Number(prompt("enter the number"))
+        if (num >= 100 && num <= 999) {
+            let hundreds = Math.floor(num / 100);
+            let tens = Math.floor((num % 100) / 10);
+            let units = num % 10;
+            let digitSum = hundreds + tens + units;
+            console.log("result:", digitSum);
+        } else {
+            console.log("Please enter a valid 3-digit number.");
+        }
+
+       
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

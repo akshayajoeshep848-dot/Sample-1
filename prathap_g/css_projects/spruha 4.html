@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spruha 4</title>
+    <style>
+        .container {
+            width: 816px;
+            height: 457.86px;
+            padding: 25.008px;
+            box-shadow: 2px 3px 5px 6px seagreen;
+        }
+
+        .sub-name {
+            color: #8f8fb1;
+            margin: 0px 0px 16px;
+            font: 12px roboto;
+        }
+
+        th,
+        tr,
+        td {
+            border: 1px solid #e8e8f7;
+            
+        }
+        .images{
+            display: flex;
+            margin-left: 30px;
+        }
+
+        .images img {
+            height: 28px;
+            width: 28px;
+            border-radius: 20px;
+            margin-left: -10px;
+            position: relative;
+
+        }
+       
+        .pic1:hover{
+            transform: translate(-5px);
+        }
+         .pic2:hover{
+            transform: translate(-5px);
+        }
+         .pic3:hover{
+            transform: translate(-5px);
+        }
+         .pic4:hover{
+            transform: translate(-5px);
+        }
+
+        .ex {
+            color: #000000;
+            font: 17px #000000;
+            margin: 4px 0px 0px;
+            display: flex;
+        }
+        table{
+            width: 800px;
+            height:  339.06px;
+            text-align: center;
+           
+           
+        }
+        th,td{
+            border-left: none;
+            border-right: none;
+        }
+        .input{
+            margin-left: 450px;
+            
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="head">
+                <div class="name">TASKS</div>
+                <div class="sub-name">A task is accomplished by a set deadline, and must contribute toward work-related
+                    objectives</div>
+            </div>
+            <div class="input">
+                 <input style="width: 150px;height: 40px;" type="search" name="gsearch" id="gsearch" placeholder="Search here">
+                <button style="width: 90px;height: 40px;background-color: #6259ca;">Sortby</button><br></br>
+
+            </div>
+            <div class="table">
+                <table style="border-collapse: collapse;">
+                    <thead>
+                        <th>TASK</th>
+
+                        <th>TEAM</th>
+                        <th>OPEN TASK</th>
+                        <th>PRIORITY</th>
+                        <th>STATIUS</th>
+                    </thead>
+                    <tr>
+                        <td>
+                            <div class="ex">
+                                <input type="checkbox" /> <br />
+                                <p>Evaluting the design</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="images">
+                                <img class="pic1" src="images/1.jpg">
+                                <img class="pic2" src="images/2.jpg">
+                                <img class="pic3" src="images/3.jpg">
+                                <img class="pic4" src="images/4.jpg">
+                            </div>
+                        </td>
+                        <td>18</td>
+                        <td style="color: #6259ca;">High</td>
+                        <td style="color: #6259ca; background-color: #8f8fb1;border-radius: 30px;font-size: 13px;">completed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ex"><input type="checkbox" /> <br /><p>Generate ideas for designs</p></div>
+                        </td>
+                        <td>
+                            <div class="images">
+                                <img class="pic1" src="images/1.jpg">
+                                <img class="pic2" src="images/5.jpg">
+                                <img class="pic3" src="images/6.jpg">
+                                <img class="pic4" src="images/7.jpg">
+                            </div>
+                        </td>
+                        <td>34</td>
+                        <td style="color: #f1388b;">Normal</td>
+                        <td style="color: #ff9b21; background-color: lightcoral; border-radius: 30px;font-size: 13px;">pending</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ex"> <input type="checkbox" /> <br /><p>Define the problem</p></div>
+                        </td>
+                        <td>
+                            <div class="images">
+                                <img class="pic1" src="images/8.jpg">
+                                <img class="pic2" src="images/9.jpg">
+                                <img class="pic3" src="images/10.jpg">
+                                <img class="pic4" src="images/11.jpg">
+                            </div>
+                        </td>
+                        <td>25</td>
+                        <td style="color: #ff9b21;">Low</td>
+                        <td style="color: #6259ca;background-color: lightblue;border-radius: 30px;font-size: 13px;">completed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="ex"><input type="checkbox" /> <br /><p>Empathize with users</p></div>
+                        </td>
+                        <td>
+                            <div class="images">
+                                <img class="pic1" src="images/11.jpg">
+                                <img class="pic2" src="images/2.jpg">
+                                <img class="pic3" src="images/3.jpg">
+                                <img class="pic4" src="images/1.jpg">
+                            </div>
+                        </td>
+                        <td>37</td>
+                        <td style="color:#6259ca;">high</td>
+                        <td style="color: #fd607a; background-color: #8f8fb1; border-radius: 60px;font-size: 13px; padding: 10px;">Rejected</td>
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
