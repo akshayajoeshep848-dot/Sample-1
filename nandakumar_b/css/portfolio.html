@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            background-color: #fcfcfc;
+        }
+
+
+
+        a {
+            text-decoration: none;
+            background-color: #f2f3f7;
+
+        }
+
+        .mini_prof {
+            width: 100px;
+            height: 100px;
+            background-color: grey;
+            border-radius: 50%;
+        }
+
+        .parent {
+            background-color: #f2f3f7;
+            width: 270px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            position: static;
+            overflow-y: scroll;
+        }
+
+        .child {
+            background-color: #f2f3f7;
+        }
+
+        .child-1 {
+            height: 150px;
+            width: 150px;
+            background-color: white;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            background: url(https://images.unsplash.com/photo-1752599850612-b4e19490b973?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9tJTIwY3J1aXNlfGVufDB8fDB8fHww);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .child-2 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .child-3 {
+            font-size: 15px;
+        }
+
+
+        .child-4,
+        .child-5,
+        .child-6,
+        .child-7,
+        .child-8,
+        .child-9,
+        .child-10,
+        .child-11,
+        .child-12 {
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            padding: 3px;
+            color: #4d4b4f;
+        }
+
+        .child-13,
+        .child-14,
+        .child-15 {
+            font-size: 0.8rem;
+            font-weight: lighter;
+            color: #4d4b4f;
+        }
+
+        .child:nth-child(4) {
+            margin-top: 20px;
+        }
+
+        .child:nth-child(12) {
+            margin-bottom: 20px;
+        }
+
+        .child-4:hover {
+            text-decoration: underline;
+        }
+
+        .child-5:hover {
+            text-decoration: underline;
+        }
+
+        .child-6:hover {
+            text-decoration: underline;
+        }
+
+        .child-7:hover {
+            text-decoration: underline;
+        }
+
+        .child-8:hover {
+            text-decoration: underline;
+        }
+
+        .child-9:hover {
+            text-decoration: underline;
+        }
+
+        .child-10:hover {
+            text-decoration: underline;
+        }
+
+        .child-11:hover {
+            text-decoration: underline;
+        }
+
+        .child-12:hover {
+            text-decoration: underline;
+        }
+
+        .stat_back {
+            width: 870px;
+            height: 100vh;
+            /* background: url(https://plus.unsplash.com/premium_photo-1711434824963-ca894373272e?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            overflow-y: scroll;
+            overflow-x: hidden;
+
+        }
+
+        .back_static {
+            display: flex;
+        }
+
+        .main_body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .my_img {
+            background-color: grey;
+            width: 870px;
+            height: 100vh;
+            background: url(images/ironman.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            justify-content: center;
+        }
+
+        .btn {
+            border: 2px solid black;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            place-content: center;
+            color: #4d4b4f;
+            position: relative;
+            right: -520px;
+
+        }
+
+        .hi,
+        .name {
+            font-weight: bold;
+            font-size: 4rem;
+            line-height: 4rem;
+            position: relative;
+            right: -520px;
+        }
+
+        .about_us {
+            color: lightgray;
+            margin-top: 50px;
+            margin-left: 50px;
+            font-size: 14px;
+            /* text-transform: uppercase; */
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+        }
+
+        .who {
+            color: black;
+            font-weight: lighter;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+
+        }
+
+        .my_data,
+        .context {
+            line-height: 1.2rem;
+            word-spacing: 0.3rem;
+            color: grey;
+            background-color: #fcfcfc;
+        }
+
+        .me_name {
+            color: black;
+            font-weight: bold;
+
+        }
+
+        .four_skills {
+            display: flex;
+            width: 870px;
+            justify-content: space-evenly;
+            align-items: center;
+            position: relative;
+            left: 10px;
+            margin-top: 40px;
+            background-color: #fcfcfc;
+        }
+
+        .skill {
+            width: 170px;
+            height: 150px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            padding: 10px;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        .skill-1 {
+            border-bottom: 2px solid #319af0;
+        }
+
+        .skill-2 {
+            border-bottom: 2px solid #ec5453;
+        }
+
+        .skill-3 {
+            border-bottom: 2px solid #facd6a;
+        }
+
+        .skill-4 {
+            border-bottom: 2px solid #a84cb8;
+        }
+
+        .img {
+            width: 30px;
+            height: 30px;
+            background-color: #319af0;
+
+        }
+
+        .img1 {
+            background: url(images/bulb.png);
+            background-size: cover;
+        }
+
+        .img2 {
+            background: url(images/webdesign.png);
+            background-size: cover;
+        }
+
+        .img3 {
+            background: url(images/sotware.png);
+            background-size: cover;
+        }
+
+        .img4 {
+            background: url(images/app-development.png);
+            background-size: cover;
+        }
+
+        .no_of_projects {
+            width: 890px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        .back_ground {
+            display: flex;
+            /* border: 1px solid black; */
+            flex-direction: column;
+            width: 795px;
+            height: 205px;
+            background-color: #f9bf3f;
+            padding: 30px;
+        }
+
+        h2,
+        .hire_btn {
+            background-color: #f9bf3f;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin: 0px 0px 30px;
+            height: 90px;
+            width: 735px;
+        }
+
+        .hire_btn {
+            text-decoration: none;
+            border: 1px solid black;
+            color: black;
+            width: 87px;
+            height: 25px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .wt_i_do {
+            color: #999999;
+            margin-left: 45px;
+            font-weight: bolder;
+            font-size: 10px;
+            letter-spacing: 0.3rem;
+
+
+        }
+
+        .my_expertise {
+            font-size: 18px;
+            background-color: white;
+            width: 382px;
+            height: 64px;
+            margin-left: 45px;
+            letter-spacing: 0.3rem;
+            margin-top: 30px;
+            line-height: 1.8rem;
+            word-spacing: 0.5rem;
+            margin-bottom: 92px;
+            background-color: #fcfcfc;
+        }
+
+        .block_1 {
+            width: 870px;
+            height: 720px;
+
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            column-gap: ;
+        }
+
+        .block {
+            background-color: white;
+            width: 245px;
+            height: 258px;
+            text-align: center;
+            place-content: center;
+            text-transform: uppercase;
+        }
+
+        .block-1 {
+            border-bottom: 2px solid #2c98f0;
+            margin-top: 40px;
+        }
+
+        .block-2 {
+            border-bottom: 2px solid #ec5453;
+            margin-top: 40px;
+        }
+
+        .block-3 {
+            border-bottom: 2px solid #f9bf3f;
+            margin-top: 40px;
+        }
+
+        .block-4 {
+            border-bottom: 2px solid #a84cb8;
+            margin-top: 40px;
+        }
+
+        .block-5 {
+            border-bottom: 2px solid #2fa499;
+            margin-top: 40px;
+        }
+
+        .block-6 {
+            border-bottom: 2px solid #4054b2;
+            margin-top: 40px;
+        }
+
+        .trans_content {
+            width: 870px;
+            height: 252px;
+            background-color: transparent;
+        }
+
+        .xd {
+            height: 252px;
+            width: 869px;
+            background-image: url("images/ironman.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_body">
+        <div class="back_static">
+            <div class="side_bar">
+                <div class="parent">
+                    <div class="child child-1"></div>
+                    <div class="child child-2">Nanda kumar</div>
+                    <div class="child child-3"><a href="#">Full stack developer</a></div>
+                    <div class="child child-4">home</div>
+                    <div class="child child-5">about</div>
+                    <div class="child child-6">services</div>
+                    <div class="child child-7">skills</div>
+                    <div class="child child-8">education</div>
+                    <div class="child child-9">experiance</div>
+                    <div class="child child-10">work</div>
+                    <div class="child child-11">blog</div>
+                    <div class="child child-12">contact</div>
+                    <div class="child child-13">copyrights 2025 all rights reserved</div>
+                    <div class="child child-14">this template is made with love by <a href="#">nk</a></div>
+                    <div class="child child-15">demo images: <a href="https://unsplash.com/">unsplash.com</a></div>
+
+                </div>
+
+            </div>
+            <div class="stat_back">
+                <div class="my_img">
+                    <div class="hi">Hi!</div>
+                    <div class="name">I'm Nanda</div>
+                    <div class="btn">Download CV</div>
+                </div>
+                <div class="about_us">about us
+                    <div class="who">Who am i?</div>
+                    <div class="abt_me">
+                        <p class="my_data"><span class="me_name">Hi I'm Nanda </span>Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Quibusdam
+                            numquam maiores, rerum ad
+                            voluptates ipsam exercitationem quas maxime laborum, possimus unde quam porro voluptatem
+                            dolore nesciunt dicta alias hic, nihil eos. Asperiores quaerat totam accusantium fugiat
+                            expedita error odio nemo facere soluta blanditiis ea, culpa voluptatem iusto pariatur illo
+                            rem perferendis provident dicta. Saepe reprehenderit temporibus optio, iste ipsam veritatis
+                            possimus? Laudantium quisquam voluptatem, itaque, amet fugiat velit sapiente aliquam
+                            inventore ad hic labore voluptas veritatis commodi? Adipisci nihil autem sapiente aliquid
+                            quaerat, laboriosam deserunt et itaque tempore. Est doloribus tenetur, illum dicta explicabo
+                            animi minima quis maxime fugit similique.</p>
+                    </div>
+                    <div class="context">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis corporis, accusamus soluta
+                            repellat unde quam laudantium quos quasi necessitatibus sequi repudiandae voluptas
+                            reiciendis incidunt consectetur tempore ipsa maxime porro at?</p>
+                    </div>
+
+                </div>
+                <div class="four_skills">
+                    <div class="skill skill-1">
+                        <div class="img img1"></div>
+                        <div style="background-color: white;">Graphic design</div>
+                    </div>
+                    <div class="skill skill-2">
+                        <div class="img2 img"></div>
+                        <div style="background-color: white;">Web design</div>
+                    </div>
+                    <div class="skill skill-3">
+                        <div class="img3 img"></div>
+                        <div style="background-color: white;">Software</div>
+                    </div>
+                    <div class="skill skill-4">
+                        <div class="img4 img"></div>
+                        <div style="background-color: white;">Application</div>
+                    </div>
+                </div>
+                <div class="no_of_projects">
+                    <div class="back_ground">
+                        <h2>I am happ to know you
+                            <br>
+                            that 300+ projects done succesfully
+                        </h2>
+                        <a href="" class="hire_btn">HIRE ME</a>
+                    </div>
+                </div>
+                <span class="wt_i_do">WHAT I DO?</span>
+                <h2 class="my_expertise">HERE ARE SOME OF MY EXPERTISE</h2>
+                <div class="block_1">
+                    <div class="block block-1">innovative ideas</div>
+                    <div class="block block-2">software</div>
+                    <div class="block block-3">application</div>
+                    <div class="block block-4">graphic design</div>
+                    <div class="block block-5">software</div>
+                    <div class="block block-6">application</div>
+                </div>
+                <div class="xd">
+                    <div style="display: flex;gap: 10px;">
+                        <div>43760</div>
+                        <div>43760</div>
+                        <div>43760</div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

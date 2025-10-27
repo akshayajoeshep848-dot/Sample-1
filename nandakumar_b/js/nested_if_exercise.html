@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Nested if exercise</title>
+    <style>
+        * {
+            padding: 20px;
+
+        }
+
+        body {
+
+            background-size: cover;
+
+        }
+
+
+        .cd_ {
+            padding: 10px;
+            border: 2px solid black;
+            color: green;
+            font-size: 20px;
+            filter: blur(0px);
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Marks and discount</h1>
+    <pre>
+        .check if UG or PG
+        .check year 4 or 2 
+        .1 year - 10%, 15%, 20%
+        .2 year - 10%, 15%, 22%
+        .3 year - 10%, 15%, 25%
+        .4 year - 20%, 25%, 30%
+        .check if pass % 
+        .70-80 - 10%
+        .80 - 90 - 15%
+        .90 - 100 - 25%
+    </pre>
+    <h1>CODE</h1>
+    <pre class="cd_">
+        <code>
+        let degree = prompt("Enter the degree(ug/pg): ")
+        if (degree == "pg") {
+            let presentYear = prompt("Enter the year you are studying in :")
+            if (presentYear > 0 && presentYear < 3) {
+                let marksScored = prompt("Enter your percentage")
+                if (marksScored < 70) {
+                    console.log("You are not eligible for discount")
+                } else if (marksScored >= 70 && marksScored < 81) {
+                    console.log("You got 10% compensation")
+                } else if (marksScored > 80 && marksScored < 91) {
+                    console.log("You got 15% compensation")
+                } else if (marksScored > 90 && marksScored < 101) {
+                    console.log('You got 20% compensation')
+                } else if (marksScored < 0 || marksScored > 100) {
+                    console.log("Enter valid percentage!")
+                } else {
+                    console.log('You are not eligible to get compensation')
+                }
+            } else {
+                console.log("Enter a valid year")
+            }
+        } else if (degree == "ug") {
+            let presentYear = prompt("Enter the year you are studying in :")
+            if (presentYear > 0 && presentYear < 4) {
+                marksScored = prompt("Enter your percentage of marks:")
+                if (marksScored >= 70 && marksScored < 81) {
+                    console.log("you get 10% compensation for next year")
+                } else if (marksScored > 80 && marksScored < 91) {
+                    console.log("You get 15% compensation for next year")
+                } else if (marksScored > 90 && marksScored < 101) {
+                    console.log("You get 20% compensation for next year")
+                } else if (marksScored < 0 && marksScored > 100) {
+                    console.log('Invalid marks')
+                } else {
+                    console.log("You are not elligible for compensation")
+                }
+
+
+            } else if (presentYear == 4) {
+                let marksScored = prompt("PLease enter Your marks this year")
+                if (marksScored >= 70 && marksScored < 81) {
+                    console.log("You get 20% compensation if you study pg in our college")
+                } else if (marksScored > 80 && marksScored < 91) {
+                    console.log("You get 25% compensation if you study pg in our college")
+                } else if (marksScored > 90 && marksScored < 101) {
+                    console.log("You get 30% compensation if you study pg in our college")
+                } else if (marksScored > 0 && marksScored < 70) {
+                    console.log("You are not elligible for any compensation!")
+                } else {
+                    console.log("Enter valid percentage")
+                }
+            } else {
+                console.log("Enter a valid year")
+            }
+
+        } else {
+            console.log("Enter valid degree")
+        }
+
+            
+        </code>
+    </pre>
+
+    <!-- <script>
+        let degree = prompt("Enter the degree(ug/pg): ")
+        if (degree == "pg") {
+            let presentYear = prompt("Enter the year you are studying in :")
+            if (presentYear > 0 && presentYear < 3) {
+                let marksScored = prompt("Enter your percentage")
+                if (marksScored < 70) {
+                    console.log("You are not eligible for discount")
+                } else if (marksScored >= 70 && marksScored < 81) {
+                    console.log("You got 10% compensation")
+                } else if (marksScored > 80 && marksScored < 91) {
+                    console.log("You got 15% compensation")
+                } else if (marksScored > 90 && marksScored < 101) {
+                    console.log('You got 20% compensation')
+                } else if (marksScored < 0 || marksScored > 100) {
+                    console.log("Enter valid percentage!")
+                } else {
+                    console.log('You are not eligible to get compensation')
+                }
+            } else {
+                console.log("Enter a valid year")
+            }
+        } else if (degree == "ug") {
+            let presentYear = prompt("Enter the year you are studying in :")
+            if (presentYear > 0 && presentYear < 4) {
+                marksScored = prompt("Enter your percentage of marks:")
+                if (marksScored >= 70 && marksScored < 81) {
+                    console.log("you get 10% compensation for next year")
+                } else if (marksScored > 80 && marksScored < 91) {
+                    console.log("You get 15% compensation for next year")
+                } else if (marksScored > 90 && marksScored < 101) {
+                    console.log("You get 20% compensation for next year")
+                } else if (marksScored < 0 && marksScored > 100) {
+                    console.log('Invalid marks')
+                } else {
+                    console.log("You are not elligible for compensation")
+                }
+
+
+            } else if (presentYear == 4) {
+                let marksScored = prompt("PLease enter Your marks this year")
+                if (marksScored >= 70 && marksScored < 81) {
+                    console.log("You get 20% compensation if you study pg in our college")
+                } else if (marksScored > 80 && marksScored < 91) {
+                    console.log("You get 25% compensation if you study pg in our college")
+                } else if (marksScored > 90 && marksScored < 101) {
+                    console.log("You get 30% compensation if you study pg in our college")
+                } else if (marksScored > 0 && marksScored < 70) {
+                    console.log("You are not elligible for any compensation!")
+                } else {
+                    console.log("Enter valid percentage")
+                }
+            } else {
+                console.log("Enter a valid year")
+            }
+
+        } else {
+            console.log("Enter valid degree")
+        }
+
+    </script> -->
+</body>
+
+</html>

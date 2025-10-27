@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch case</title>
+</head>
+
+<body>
+    <h1>Switch case exercise</h1>
+    <ul>write switch case for
+        <li>grade A - 100 - 90</li>
+        <li>grade B - 90 - 80</li>
+        <li>grade C - 80 - 70</li>
+        <li>grade D - 70 - 60</li>
+        <li>grade E - 60 - 40</li>
+        <li>grade F - 40 - 0</li>
+    </ul>
+    <pre>
+        <code>
+        <h2>Code to determine grade based on marks</h2>
+    let marks = prompt("Please enter your marks")
+        switch (true) {                                 
+            case (marks < 0 || marks > 100):
+                console.log("Invalid marks");
+                break;
+            case (marks >= 0 && marks < 41):
+                console.log("F");
+                break;
+            case (marks >= 41 && marks < 61):
+                console.log("E");
+                break;
+            case (marks >= 61 && marks < 70):
+                console.log("D");
+                break;
+            case (marks >= 71 && marks < 81):
+                console.log("C");
+                break;
+            case (marks >= 81 && marks < 91):
+                console.log("B");
+                break;
+            case (marks >= 91 && marks <= 100):
+                console.log("A");
+                break;
+        }
+
+        
+        </code>
+    </pre>
+    <script>
+        let marks = prompt("Please enter your marks")
+        switch (true) {                                             //we used true becase the condition in case operates strict equality with switch
+            case (marks < 0 || marks > 100):
+                console.log("Invalid marks");
+                break;
+            case (marks >= 0 && marks < 41):
+                console.log("F");
+                break;
+            case (marks >= 41 && marks < 61):
+                console.log("E");
+                break;
+            case (marks >= 61 && marks < 70):
+                console.log("D");
+                break;
+            case (marks >= 71 && marks < 81):
+                console.log("C");
+                break;
+            case (marks >= 81 && marks < 91):
+                console.log("B");
+                break;
+            case (marks >= 91 && marks <= 100):
+                console.log("A");
+                break;
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime number</title>
+</head>
+
+<body>
+
+    <h1>Prime number</h1>
+    <!-- <script>
+        let n = prompt("Enter number: ");
+        cnt = 0;
+        is_prime = true;
+        if (n == 2) {
+            is_prime = true;
+        } else if (n <= 1 || n % 2 === 0) {
+            is_prime = false;
+        } else {
+            for (let i = 3; i <= Math.sqrt(n); i = i + 2) {
+                cnt++;
+                if (n % i === 0) {
+                    is_prime = false;
+                    break;
+                }
+            }
+            if (is_prime) {
+                console.log(`${n} is Prime`);
+            } else {
+                console.log(`${n} is not Prime`);
+            }
+        }
+        console.log(`Loop runs for ${cnt} times`);
+    </script> -->
+    <script>
+        let n1 = 29;
+        cnt = 0;
+        is_prime = true;
+        if (n1 == 2 || n1 == 3) {
+            is_prime = true;
+        } else if (n1 <= 1 || n1 % 2 === 0 || n1 % 3 === 0) {
+            is_prime = false;
+        } else {
+            for (let i = 5; i <= Math.sqrt(n1); i = i + 6) {
+                cnt++;
+                if (n1 % i === 0 || n1 % (i + 2) === 0) {
+                    is_prime = false;
+                    break;
+                }
+            }
+            if (is_prime) {
+                console.log(`${n1} is Prime`);
+            } else {
+                console.log(`${n1} is not Prime`);
+            }
+        }
+        console.log(`Loop runs for ${cnt} times`);
+    </script>
+</body>
+
+</html>

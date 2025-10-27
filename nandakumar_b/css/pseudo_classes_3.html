@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo_classes_</title>
+    <style>
+        /* div p:nth-of-type(odd) {
+            background-color: green;
+        } */
+
+        div section:nth-last-of-type(-n+3) {
+            background-color: aqua;
+        }
+
+        p:empty,
+        div:empty {
+            background-color: magenta;
+            height: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>para 1</p>
+        <section>section 1</section>
+        <p>para 2</p>
+        <section>section 2</section>
+        <p>para 3</p>
+        <section>section 3</section>
+        <p>para 4</p>
+        <section>section 4</section>
+        <p>para 5</p>
+        <section>section 5</section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</body>
+
+</html>

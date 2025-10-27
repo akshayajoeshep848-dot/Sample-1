@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute</title>
+    <style>
+        .parent {
+            background-color: red;
+            height: 200px;
+            width: 300px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .child1 {
+            height: 200px;
+            width: 300px;
+            background-image: url('https://static0.gamerantimages.com/wordpress/wp-content/uploads/2023/12/zoro-three-sword-style-one-piece-featured.jpg');
+            background-size: cover;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .child2 {
+            position: absolute;
+            bottom: 0px;
+            color: white;
+            background-color: rgba(0, 128, 0, 0.603);
+            width: 280px;
+            height: 50px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            place-content: center;
+            transition: 0.2s;
+        }
+
+        .child2:hover {
+            height: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child child1"></div>
+        <div class="child child2">RORONOA ZORO</div>
+    </div>
+</body>
+
+</html>

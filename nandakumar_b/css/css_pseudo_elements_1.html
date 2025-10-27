@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo_elements</title>
+    <style>
+        li {
+            list-style-type: none;
+        }
+
+        li::before {
+            content: "\2B50";
+            padding: 10px;
+        }
+
+        li::after {
+            content: "\20B9";
+            padding: 10px;
+        }
+
+        .burger_menu {
+            background-color: black;
+            width: 12px;
+            height: 4px;
+            border-radius: 10px;
+        }
+
+        .burger_menu::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            width: 15px;
+            height: 4px;
+            transform: translateY(5px);
+            border-radius: 10px;
+
+        }
+
+        .burger_menu::after {
+            content: "";
+            background-color: black;
+            position: absolute;
+            width: 15px;
+            height: 4px;
+            transform: translateY(-5px);
+            border-radius: 10px;
+
+        }
+
+        p::first-line {
+            font-size: 30px;
+        }
+
+        p::selection {
+            color: green;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pseudo elements</h1>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <div class="burger_menu"></div>
+    <p>Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Officia, praesentium.</p>
+</body>
+
+</html>

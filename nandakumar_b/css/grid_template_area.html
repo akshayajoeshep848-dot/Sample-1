@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid_template_area</title>
+    <style>
+        .main {
+            background-color: #2931a5;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(4, 100px);
+            gap: 20px;
+            grid-template-areas:
+                "child1 . child2 child2 child2 child2 . child3"
+                "child4 child4 child4 child4 child4 child5 child6 child6"
+                "child7 child8 child8 child9 child9 child9 child9 child9"
+                "child10 child10 child11 child12 child12 child13 child14 child14";
+        }
+
+        .sub {
+            background-color: bisque;
+            border: 5px solid black;
+            text-align: center;
+            place-content: center;
+        }
+
+        .sub1 {
+            grid-area: child1;
+        }
+
+        .sub2 {
+            grid-area: child2;
+        }
+
+        .sub3 {
+            grid-area: child3;
+        }
+
+        .sub4 {
+            grid-area: child4;
+        }
+
+        .sub5 {
+            grid-area: child5;
+        }
+
+        .sub6 {
+            grid-area: child6;
+        }
+
+        .sub7 {
+            grid-area: child7;
+        }
+
+        .sub8 {
+            grid-area: child8;
+        }
+
+        .sub9 {
+            grid-area: child9;
+        }
+
+        .sub10 {
+            grid-area: child10;
+        }
+
+        .sub11 {
+            grid-area: child11;
+        }
+
+        .sub12 {
+            grid-area: child12;
+        }
+
+        .sub13 {
+            grid-area: child13;
+        }
+
+        .sub14 {
+            grid-area: child14;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sub sub1">child-1</div>
+        <div class="sub sub2">child-2</div>
+        <div class="sub sub3">child-3</div>
+        <div class="sub sub4">child-4</div>
+        <div class="sub sub5">child-5</div>
+        <div class="sub sub6">child-6</div>
+        <div class="sub sub7">child-7</div>
+        <div class="sub sub8">child-8</div>
+        <div class="sub sub9">child-9</div>
+        <div class="sub sub10">child-10</div>
+        <div class="sub sub11">child-11</div>
+        <div class="sub sub12">child-12</div>
+        <div class="sub sub13">child-13</div>
+        <div class="sub sub14">child-14</div>
+
+
+    </div>
+</body>
+
+</html>

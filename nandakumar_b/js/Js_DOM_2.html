@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>grtElementsByClassName</h2>
+    <div class="container">
+        <div class="menu-item menu-item-1">menu-item 1</div>
+        <div class="menu-item menu-item-2">menu-item 2</div>
+        <div class="menu-item menu-item-3">menu-item 3</div>
+        <div class="menu-item menu-item-4">menu-item 4</div>
+    </div>
+    <h2>getElementsByTagName</h2>
+    <p>This is para</p>
+    <p>This is para</p>
+    <p>This is para</p>
+    <p>This is para</p>
+    <!-- <script>
+        //getElementsByClassName
+        let menuItems = document.getElementsByClassName("menu-item")
+        console.log(Array.isArray(menuItems));                              //Array.isArray is used to check whether the given is an array or not
+        console.log(menuItems)
+        console.log(Array.isArray(Array.from(menuItems)))
+        console.log(Array.from(menuItems))                                  //it converts elements into array.
+        let menuItemsArray = Array.from(menuItems);
+        menuItemsArray.forEach((item) => (item.innerText = "Hello"))        //Array iterator
+    </script> -->
+    <!-- <script>
+        //getElementsByTagName
+        let paraItems = document.getElementsByTagName("p");
+        //let arr = [1, 2, 3, 4]
+        let actorsArray = [
+            {
+                name: "Prabhas",
+                profession: "Acting",
+                movies: ["Mirchi", "Bahubali"],
+            }, {
+                name: "N.T.R",
+                profession: "Acting, Entreprenuer",
+                movies: ["Adhi", "Temper"],
+            }, {
+                name: "Sai Pallavi",
+                profession: "Acting, Doctor",
+                movies: ["Fida", "Love Doctor"],
+            }, {
+                name: "Anushka Shetty",
+                profession: "Acting, Modelling",
+                movies: ["Billa", "Arundhathi"],
+            }]
+        Array.from(paraItems).forEach((element, index) => {
+            element.innerText = `Actor name: ${actorsArray[index].movies}`
+        })
+
+    </script> -->
+    <div class="button-container">
+        <button class="button-items">button1</button>
+        <button class="button-items">button2</button>
+        <button class="button-items">button3</button>
+        <button class="button-items">button4</button>
+        <button class="button-items">button5</button>
+    </div>
+    <script>
+        //querySelectorAll
+        //Nodelist
+        //Create data object
+        let styleArray = [{
+            name: "Click Me",
+            backgroundColor: "blue",
+            padding: "10px",
+            border: "none",
+            margin: "10px",
+            color: "white",
+            borderRadius: "20px"
+        }, {
+            name: "Submit",
+            backgroundColor: "indigo",
+            padding: "10px",
+            border: "none",
+            margin: "10px",
+            color: "white",
+            borderRadius: "20px"
+        }, {
+            name: "Signin",
+            backgroundColor: "black",
+            padding: "10px",
+            border: "none",
+            margin: "10px",
+            color: "white",
+            borderRadius: "20px"
+
+        }, {
+            name: "Log in",
+            backgroundColor: "pink",
+            padding: "10px",
+            border: "none",
+            margin: "10px",
+            color: "white",
+            borderRadius: "20px"
+
+        }, {
+            name: "Register",
+            backgroundColor: "green",
+            padding: "10px",
+            border: "none",
+            margin: "10px",
+            color: "white",
+            borderRadius: "20px"
+
+        }]
+        let buttonItems = document.querySelectorAll(".button-items")
+        buttonItems.forEach((item, index) => {
+            item.innerText = styleArray[index].name
+            item.style.backgroundColor = styleArray[index].backgroundColor
+            item.style.padding = styleArray[index].padding
+            item.style.border = styleArray[index].border
+            item.style.margin = styleArray[index].margin
+            item.style.color = styleArray[index].color
+            item.style.borderRadius = styleArray[index].borderRadius
+
+
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

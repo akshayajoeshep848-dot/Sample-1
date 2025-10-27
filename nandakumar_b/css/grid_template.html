@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-image: url(images/luffy.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            /* background: linear-gradient(blue, skyblue); */
+            /* padding: 10px; */
+            display: grid;
+            /* gap: 10px; */
+            border-radius: 10px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 100px);
+            grid-template-areas:
+                "child-1 child-1 child-1 child-1 child-2"
+                "child-4 child-6 child-6 child-7 child-2"
+                "child-4 child-9 child-5 child-7 child-2"
+                "child-4 child-9 child-8 child-8 child-2"
+                "child-4 child-3 child-3 child-3 child-3";
+        }
+
+        .child {
+            /* background-color: rgb(13, 150, 229); */
+            /* background: linear-gradient(pink, violet) text-align: center; */
+            place-content: center;
+            font-size: 12px;
+            color: white;
+            border: 4px solid rgb(254, 251, 251);
+            border-radius: 10px;
+            text-align: center;
+            outline: 4px solid white;
+        }
+
+        .child-1 {
+            grid-area: child-1;
+        }
+
+        .child-2 {
+            grid-area: child-2;
+        }
+
+        .child-3 {
+            grid-area: child-3;
+        }
+
+        .child-4 {
+            grid-area: child-4;
+        }
+
+        .child-5 {
+            grid-area: child-5;
+        }
+
+        .child-6 {
+            grid-area: child-6;
+        }
+
+        .child-7 {
+            grid-area: child-7;
+        }
+
+        .child-8 {
+            grid-area: child-8;
+        }
+
+        .child-9 {
+            grid-area: child-9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child-1 child"></div>
+        <div class="child-2 child"></div>
+        <div class="child-3 child"></div>
+        <div class="child-4 child"></div>
+        <div class="child-5 child"></div>
+        <div class="child-6 child"></div>
+        <div class="child-7 child"></div>
+        <div class="child-8 child"></div>
+        <div class="child-9 child"></div>
+    </div>
+</body>
+
+</html>

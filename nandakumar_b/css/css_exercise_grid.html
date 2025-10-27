@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise-1</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .parent {
+            display: grid;
+            /* margin: 10px; */
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px repeat(3, 1fr);
+            background-color: rgb(107, 100, 100);
+            gap: 10px;
+            height: 90%;
+            grid-template-areas:
+                "header header header"
+                "sidebar content content"
+                "sidebar content2 content3"
+                "footer footer footer";
+        }
+
+        .main {
+            background-color: brown;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .child {
+            background: rgb(255, 238, 0);
+            padding: 0px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .child-1 {
+            grid-area: header;
+        }
+
+        .child-2 {
+            grid-area: sidebar;
+        }
+
+        .child-3 {
+            grid-area: content;
+        }
+
+        .child-4 {
+            grid-area: content2;
+        }
+
+        .child-5 {
+            grid-area: content3;
+        }
+
+        .child-6 {
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="parent">
+            <div class="child child-1">c1</div>
+            <div class="child child-2">c2</div>
+            <div class="child child-3">c3</div>
+            <div class="child child-4">c4</div>
+            <div class="child child-5">c5</div>
+            <div class="child child-6">c6</div>
+
+        </div>
+    </div>
+</body>
+
+</html>

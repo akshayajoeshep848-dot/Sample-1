@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        span {
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Functions are fundamental building blocks in js. They are reusabe blocks of code that perform a specific
+        task.Today we'll explore how to define and use functions, focusing
+        declarations and Function expressions.
+    </p>
+    <h2><span>What is Function</span></h2>
+    <p>A function is a set of statements that performs a task or calculates a value. To use a function, you must define
+        it somewhere in the scope from which you wish to call it.</p>
+    <ul>Key benfits of using functions:
+        <li>Reusability:Write code once and use it multiple times.</li>
+        <li>Modulity: Break down complex problems into smaller, managaeable pieces.</li>
+        <li>Readability: Make code easier to understand by giving descriptiev names to block of logic.</li>
+    </ul>
+    <pre>
+        <code>
+        function greet(name) {
+            console.log(`Hello, ${name}`)
+        }
+        greet("Nanda")      //calling function
+        greet("Sai")        //calling function
+        greet("pavan")      //calling function
+
+
+
+
+
+
+    //write a function to check for vote eligibility based on vote
+        function elligibleToVote(age) {
+
+            if (age < 18) {
+                console.log("Not elligible")
+            } else {
+                console.log("elligible")
+            }
+        }
+        elligibleToVote(78);
+
+
+        //Multiple parameters
+        function printFullName(firstname, lastname, surname) {
+            console.log(`Your full name is: ${surname} ${firstname} ${lastname} `);
+        }
+        printFullName("Nanda", "Kumar", "king")
+        </code>
+    </pre>
+    <!-- <script>
+        function greet(name) {
+            console.log(`Hello, ${name}`)
+        }
+        greet("Nanda")      //calling function
+        greet("Sai")        //calling function
+        greet("pavan")      //calling function
+    </script> -->
+    <!-- <script>
+        function hello() {
+            console.log("Nanda")
+        }
+        //write a function to check for vote eligibility based on vote
+        function elligibleToVote(age) {
+
+            if (age < 18) {
+                console.log("Not elligible")
+            } else {
+                console.log("elligible")
+            }
+        }
+        elligibleToVote(78);
+        hello();
+    </script>
+    <script>
+        function printFullName(firstname, lastname, surname) {
+            console.log(`Your full name is: ${surname} ${firstname} ${lastname} `);
+        }
+        printFullName("Nanda", "Kumar", "king")
+
+    </script> -->
+    <h2>Hiosting</h2>
+    <p>No matter where you define a function or variable it always saves in top and exicutes the remaining code</p>
+    <h3>variable Hiosting</h3>
+    <p>the value of variable above the line of assigning is undefined. and below the line of assigning the value will be
+        assigned value</p>
+    <!-- <script>
+
+        function printNumbers(numb) {
+
+            let i = 1
+            while (i <= numb) {
+                console.log(i)
+                i++
+
+            }
+        }
+        printNumbers(12000)
+    </script> -->
+    <script>
+        //nfoctorial
+        function factorialOfNumber(n) {
+            let mul = 1
+            for (i = 1; i <= n; i++) {
+                mul = mul * i
+            }
+            console.log(mul)
+        }
+        factorialOfNumber(5)
+    </script>
+</body>
+
+</html>

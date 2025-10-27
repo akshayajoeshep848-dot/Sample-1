@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student registeration</title>
+    <style>
+        * {
+            margin: 0;
+            background-color: rgb(255, 255, 255);
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        h1 {
+            background-color: lightgreen;
+            padding: 10px;
+            text-align: center;
+            font-variant: small-caps;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .container {
+            padding: 10px;
+
+            border: 0px solid;
+            box-shadow: 0px 0px 4px 5px gray;
+        }
+
+        div {
+            margin: 20px;
+        }
+
+
+        input {
+            border: 1px solid lightblue;
+            width: 250px;
+            height: 10pxpx;
+            padding: 10px;
+        }
+
+        input[type="radio"] {
+            margin: 0px;
+        }
+
+        #ad {
+            width: 250px;
+            height: 120px;
+            margin-left: 70px;
+        }
+
+        #prd {
+            width: 250px;
+            height: 120px;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student registeration form</h1>
+        <hr>
+        <h3>Personel details</h3>
+        <hr>
+        <div class="">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Full Name">
+        </div>
+        <div>
+            <label for="dob">Date Of Birth</label>
+            <input type="date" id="dob">
+        </div>
+
+        <H2>Gender:</H2>
+        <input type="radio" id="gen1" name="Gender">
+        <label for="gen1">Male</label>
+        <input type="radio" id="gen2" name="Gender">
+        <label for="gen2">Female</label>
+        <input type="radio" id="gen3" name="Gender">
+        <label for="ge3">Other</label>
+
+        <div>
+            <label for="nat">Nationality <sup>*</sup>:</label>
+            <input type="text" id="nat">
+        </div>
+        <div>
+            <label for="rel">Religion:</label>
+            <input type="text" id="rel">
+        </div>
+        <div>
+            <label for="mt">Mother tongue:</label>
+            <input type="text" id="mt">
+        </div>
+        <div>
+            <label for="bg">Blood group:</label>
+            <input type="text" id="bg">
+        </div>
+        <div>
+            <label for="ct">Contact:</label>
+            <input type="tel" id="ct">
+        </div>
+        <div>
+            <label for="mail">G-mail:</label>
+            <input type="email" id="mail">
+        </div>
+        <div>
+            <label for="adh">Adhar-number:</label>
+            <input type="number" id="adh">
+        </div>
+        <div>
+            <h4>Address:</h4>
+            <Textarea id="ad">Present address</Textarea>
+        </div>
+        <div>
+            <textarea name="" id="prd">Permanent Address</textarea>
+        </div>
+        <div>
+            <label for="pc">Pincode:</label>
+            <input type="number" maxlength="6" id="pc" placeholder="515101">
+        </div>
+        <div>
+            <label for="state">State:</label>
+            <input type="text" id="state">
+        </div>
+        <hr>
+        <h3>Family/ Guardian information</h3>
+        <hr>
+        <div>
+            <label for="fathname">Father Name:</label>
+            <input type="text" id="fathname">
+        </div>
+        <div>
+            <label for="mothname">Mother Name</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="oc">Occupation:</label>
+            <input type="text" id="oc">
+        </div>
+        <div>
+            <label for="pcell">Parent ph No.:</label>
+            <input type="tel" id="pcell">
+        </div>
+        <h3>Course details</h3>
+        <div>
+
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flip-kart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f1f2f4;
+        }
+
+        .logopic {
+            width: 160px;
+            height: 40px;
+        }
+
+        .srch {
+            background-color: #f0f5ff;
+            width: 500px;
+            height: 40px;
+            border-radius: 5px;
+            text-align: start;
+            place-content: center;
+        }
+
+        .login,
+        .cart,
+        .sell {
+            width: 111px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: green;
+            text-align: center;
+            place-content: center;
+        }
+
+        .parent {
+            display: flex;
+            background-color: rgb(255, 255, 255);
+            gap: 30px;
+            width: fit-content;
+            padding: 10px;
+            /* justify-content: space-around; */
+        }
+
+        .topbar {
+            background-color: rgb(255, 255, 255);
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mainbody {
+            display: flex;
+            width: 100vw;
+            justify-content: center;
+        }
+
+        .subbody {
+            width: 1100px;
+            height: 1000px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="parent">
+            <div class="logo"><img
+                    src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg"
+                    alt="" class="logopic"></div>
+            <div class="srch"><img src="images/search.png" alt="" width="24px" height="24px"> search for products,
+                Brands
+                and more.</div>
+            <div class="login">log in</div>
+            <div class="cart">cart</div>
+            <div class="sell">becom seller</div>
+        </div>
+    </div>
+    <div class="mainbody">
+        <div class="subbody"></div>
+    </div>
+</body>
+
+</html>

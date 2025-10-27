@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS EVENT</title>
+</head>
+
+<body>
+    <h1 id="head">Events</h1>
+    <p></p>
+    <h2>EVENT TYPES</h2>
+    <ul>Event types
+        <li>Mouse events: click, dbclick mousedown, mouseup, mousemove,mouseover, mouseout</li>
+        <li>Keyboard events: keydown, kwyup,keypress</li>
+        <li>Form events: submit, change, focus, blur</li>
+        <li>window events: load, resize, scroll, unload</li>
+        <li>Clipboard events: Copy, cut paste</li>
+    </ul>
+    <h2>Event Listners</h2>
+    <pre>      To respond to events. you attached <b>event listeners</b>(also called event handlers) to DOM elements</pre>
+    <code>
+        <pre>
+            const button = document.querySelector("button");
+
+            button.addEventListener("Click", function (event)){
+                console.log("button was clicked")
+            }
+        </pre>
+    </code>
+
+    <label for="first_name">First name</label>
+    <input type="text" id="first_name" name="first_name"><br>
+
+    <label for="last_name">Last name</label>
+    <input type="text" id="last_name" name="last_name"><br>
+
+    <button id="btn">submit</button>
+
+    <script>
+        const firstNameInput = document.getElementById("first_name");
+        const lastNameInput = document.getElementById("last_name");
+        const button = document.getElementById("btn");
+        const formObject = {};
+
+        button.addEventListener("click", (e) => {
+            e.preventDefault();
+            formObject[firstNameInput.name] = firstNameInput.value;
+            formObject[lastNameInput.name] = lastNameInput.value;
+            console.log(formObject);
+        });
+    </script>
+
+    <!-- <script>
+        button.addEventListener()
+
+
+        button.addEventListener("click", onclick)
+        function onclick(event) {
+            console.log(event.timeStamp)
+        }
+        //mouseover event
+        h1.addEventListener('mouseover', (event) => {
+            event.target.style.backgroundColor = "blue"
+            event.target.style.borderRadius = "10px"
+        });
+        //mouseout event
+        h1.addEventListener('mouseout', (event) => {
+            event.target.style.backgroundColor = "white"
+            event.target.style.borderRadius = "0px"
+
+        })
+    </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

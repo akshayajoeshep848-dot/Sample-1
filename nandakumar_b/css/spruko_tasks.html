@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spruko task</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: Roboto;
+        }
+
+        .pics {
+            display: flex;
+            position: relative;
+            right: -80px;
+
+        }
+
+        img {
+            width: 30px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .img-2 {
+            position: relative;
+            right: 12px;
+        }
+
+        .img-3 {
+            position: relative;
+            right: 24px;
+        }
+
+        .img-4 {
+            position: relative;
+            right: 36px;
+        }
+
+        table {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            border: 1px solid;
+            border-right: none;
+            border-left: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 7px;
+        }
+
+        td {
+            border: 1px solid grey;
+            border-right: none;
+            border-left: none;
+            padding: 10px;
+        }
+
+        button {
+            /* padding: 10px; */
+            border-radius: 30px;
+            border: none;
+            color: #6a62cd;
+            background-color: #efeefa;
+
+        }
+
+        .ot,
+        .prio-high,
+        .btn,
+
+        .radio,
+        .team {
+            text-align: center;
+        }
+
+        .prio-high {
+            color: #9b96dd;
+        }
+
+        .prio-norm {
+            color: #f24291;
+            text-align: center;
+        }
+
+        .prio-low {
+            color: #ffa12e;
+            text-align: center;
+        }
+
+        .topcontent {
+            display: flex;
+            flex-direction: column;
+            line-height: 10px;
+        }
+
+        .content-1 {
+            font-weight: bold;
+        }
+
+        .content-2 {
+            font-size: 13px;
+            color: grey;
+        }
+
+        #search {
+            border: none;
+            /* padding: 10px; */
+
+            text-align: center;
+            margin-top: 40px;
+
+        }
+
+        .searchbar {
+            display: flex;
+            border: 1px solid grey;
+            width: 200px;
+            height: 40px;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 10px;
+            /* border-radius: 30px; */
+        }
+
+        svg {
+            width: 20px;
+            height: 10px;
+        }
+
+        .totalsort {
+            display: flex;
+
+            background-color: lightblue;
+            width: 90px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .searchsort {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 20px;
+            width: 100vw;
+            align-items: end;
+            padding: 10px;
+
+        }
+
+        .top {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="topcontent">
+        <div class="content-1">Tasks</div>
+        <div class="content-2">
+            <p>A task is accomplished by a set deadline, and must contribute toward work-related objectives.</p>
+        </div>
+    </div>
+    <div class="top">
+        <div class="searchsort">
+
+            <div class="totalsort">
+                <div class="sort">
+                    sort by
+                </div>
+                <div class="sym"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                    </svg></div>
+            </div>
+            <div class="searchbar">
+                <div class="search">
+                    search here..
+                </div>
+                <div class="searchimg">
+                    <img src="images/search.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+        <table>
+            <thead>
+                <th>Task</th>
+                <th></th>
+                <th>team</th>
+                <th>Open task</th>
+                <th>Priority</th>
+                <th>status</th>
+            </thead>
+            <tr>
+                <td class="radio">
+                    <input type="radio">
+                </td>
+                <td class="data">Evaluating the disign <br></td>
+                <td class="team">
+                    <div class="pics">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                            alt="" class="img-1">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                            alt="" class="img-2">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                            alt="" class="img-3">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                            alt="" class="img-4">
+                    </div>
+                </td>
+                <td class="ot">18</td>
+                <td class="prio-high">High</td>
+                <td class="btn"><button>completed</button></td>
+            </tr>
+            <!--row2-->
+            <tr>
+                <td class="radio">
+                    <input type="radio">
+                </td>
+                <td class="data">Genarating ideas for the design <br></td>
+                <td class="team">
+                    <div class="pics">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                            alt="" class="img-1">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                            alt="" class="img-2">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                            alt="" class="img-3">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                            alt="" class="img-4">
+                    </div>
+                </td>
+                <td class="ot">18</td>
+                <td class="prio-norm">Normal</td>
+                <td class="btn"><button>completed</button></td>
+            </tr>
+            <!--row3-->
+            <tr>
+                <td class="radio">
+                    <input type="radio">
+                </td>
+                <td class="data">Define the problems <br></td>
+                <td class="team">
+                    <div class="pics">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                            alt="" class="img-1">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                            alt="" class="img-2">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                            alt="" class="img-3">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                            alt="" class="img-4">
+                    </div>
+                </td>
+                <td class="ot">18</td>
+                <td class="prio-low">Low</td>
+                <td class="btn"><button>completed</button></td>
+            </tr>
+            <!--row-4-->
+            <tr>
+                <td class="radio">
+                    <input type="radio">
+                </td>
+                <td class="data">Empathize with user <br></td>
+                <td class="team">
+                    <div class="pics">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/1.jpg"
+                            alt="" class="img-1">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/2.jpg"
+                            alt="" class="img-2">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/3.jpg"
+                            alt="" class="img-3">
+                        <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg"
+                            alt="" class="img-4">
+                    </div>
+                </td>
+                <td class="ot">18</td>
+                <td class="prio-high">High</td>
+                <td class="btn"><button>completed</button></td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

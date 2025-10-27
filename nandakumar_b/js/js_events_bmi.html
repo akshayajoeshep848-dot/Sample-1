@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .bmi {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 10px;
+            border: 1px solid;
+        }
+
+        #btn {
+            background-color: lightgreen;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bmi">
+        <div class="wgt">
+            <label for="wt">Weight (kg):</label>
+            <input type="number" id="wt" placeholder="weight" value="45">
+        </div>
+
+        <div class="hgt">
+            <label for="ht">Height (cm):</label>
+            <input type="number" id="ht" placeholder="height in cm" value="164">
+        </div>
+
+        <button id="btn">Calculate</button>
+
+        <h2 id="solution"></h2>
+    </div>
+
+    <script>
+        let weight = document.getElementById("wt");
+        let height = document.getElementById("ht");
+        let button = document.getElementById("btn");
+
+        button.addEventListener("click", () => {
+            let w = weight.value;
+            let h = height.value / 100;
+            let bmi = w / (h ** 2);
+            console.log(bmi.toFixed(1));
+        });
+    </script>
+</body>
+
+</html>

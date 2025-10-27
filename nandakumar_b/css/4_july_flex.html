@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex-basis</title>
+    <style>
+        * {
+            /* margin: 0; */
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .parent {
+            background-color: burlywood;
+            height: 50vh;
+            display: flex;
+            /* gap: 10px; */
+
+        }
+
+        .child {
+            background-color: chartreuse;
+            height: 100px;
+            /* width: 100px; */
+            flex-grow: 1;
+            flex-basis: 300pxs;
+
+        }
+
+        .child-1 {
+            flex: 1;
+            background-color: orange;
+        }
+
+        .child-2 {
+            flex-basis: 100px;
+            background-color: white;
+            text-align: center;
+            place-content: center;
+            color: blue;
+        }
+
+        .child-3 {
+            flex-basis: content;
+            background-color: green;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ORDER</h1>
+    <pre>The order property controls the order in flex items appear within the flex container by default items are laid out in their source order(as they appear in the HTML)
+ .Accept an integer value(+ve, -ve or zero)
+ .Default value zero(0)
+ .Items with lower order values appear first. Items with same order value are laid out in the source order
+ .This property allows you to change the visual order without altering the HTML structure, Which can be useful
+   for responsiveness or capability consideration(Though be mindful that order still matters for things like tab navigation)</pre>
+
+    <br><br><br>
+    <h1>CSS FLEX_BASIS</h1>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <br><br><br>
+    <pre>
+    Flex-basis:- It defines the default size of a flex items along the main axis before any remaining space distributed according to flex-grow or flex shrink.
+	.Accept a length unit(px,%, em, etc.,), or the keywords auto or content
+	.Default value is auto. If auto, the items main size property (width or height) is used. If that is also auto , it sized based on content.
+    .If set to specific length, that becomes its intial main size.
+	.The content keyword sizes items on its content size.
+	.If fle-basis is set to a value other than auto, it genrally overrides the item width or height property for the purpose of flex layout calculation.</pre>
+
+    <div>
+        <h2>Flex-grow</h2>
+        <p>
+            Felx-grow property defines the ability of a flex items to grow if necessary. It specifies what proportion of
+            the remaining space in the flex container should be distributed to them.
+        <ul>
+            <li>accept a unitless non-negative numbers(eg, 0, 1, 2)</li>
+            <li>Default value is 0.(Meaning the item will not grow to full available soace).</li>
+            <li>If all items have flex-grow:1 ,the remaining space is distributed equally among them.</li>
+            <li>If one item has flex-grow: 2and others have flex-grow:1; The items with flex grow 2 will take up twice
+                as
+                much of the available space as the others.</li>
+        </ul>
+
+        This property is applied after the items have been sized according to flex-basis.It only has an effect if
+        there is +ve free space in flex container.</p>
+    </div>
+    <br><br>
+
+    <div>
+        <h2>Flex shrink</h2>
+        <p>Flex property defines the ability of a flex item to shrink if necessary
+        <ul>
+            <li>Accept a unitless non-negative number.</li>
+            <li>Default value is 1.</li>
+            <li>A value of 0 means the item will not shrink,</li>
+            <li>.if one item has flex-shrink: 2, and others have flex-shrink:1, the item with flex-shrik: 2, will shrink
+                twicw as much the others when space is insufficient. The amount an item shrink is also proportional to
+                its flex-basis </li>
+        </ul>
+        </p>
+    </div>
+
+</body>
+
+</html>

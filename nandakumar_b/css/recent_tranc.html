@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+
+            box-sizing: border-box;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .child {
+            padding: 5px;
+        }
+
+        .child-1 {
+            font-weight: bold;
+        }
+
+        .child-2 {
+            font-size: 13.5px;
+            color: gray;
+        }
+
+        .dp {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-image: url(https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/6.jpg);
+            background-size: contain;
+        }
+
+        .profile {
+            display: flex;
+        }
+
+        .subcurency {
+            display: flex;
+            gap: 5px;
+        }
+
+        .sec {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .mainsec {
+            display: flex;
+            width: 70vw;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainsec">
+        <div class="profile">
+            <div class="dp"></div>
+            <div class="parent">
+                <div class="child child-1">Flicker</div>
+                <div class="child child-2">App improvment</div>
+            </div>
+        </div>
+        <div class="sec">
+            <div class="subcurency">
+                <div class="currency">$45.234</div>
+                <div><img
+                        src="https://t3.ftcdn.net/jpg/12/13/80/96/240_F_1213809620_Fo20xpLXWXVsx9EchTJQ5kmJwUFhzhxI.jpg"
+                        alt="" width="15px"></div>
+            </div>
+            <div class="date">12 jan 2020</div>
+
+        </div>
+    </div>
+</body>
+
+</html>

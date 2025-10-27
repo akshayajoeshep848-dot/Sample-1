@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>String Methods</h1>
+    <script>
+        //charAt
+        let str = "Hello, world"
+        console.log(str.charAt(9))
+        //concat()
+        let greetings = str.concat("!")
+        console.log(greetings)
+        //Includes
+        let sentence = "The quick brown fox jumps over the lazy dog.";
+        console.log(sentence.includes("fox"))
+        //replace
+        let greet = "Hello, world";
+        let newGreet = greet.replace("world", "Universe")
+        console.log(newGreet)
+        //substring
+        let numb = "123-456-7890";
+        let middlePart = numb.substring(4, 7)
+        console.log(middlePart)
+        console.log(greet.substring(5, 9))        //Excludes the begining index and includes the ending index value
+
+        //toUppercase and toLowercase
+
+
+        let newStr = "Nanda"
+        console.log(newStr.toLocaleUpperCase())
+
+
+    </script>
+</body>
+
+</html>

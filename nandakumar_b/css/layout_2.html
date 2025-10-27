@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout-2</title>
+    <style>
+        * {
+            /* margin: 0; */
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            /* color: white; */
+
+        }
+
+        .middle {
+            /* background-color: black; */
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            height: ;
+        }
+
+        .child-1 {
+            background-color: lightgreen;
+            width: 700px;
+            height: 350px;
+            place-content: center;
+        }
+
+        .child-2 {
+            width: 700px;
+            height: 80px;
+            background-color: lightgreen;
+        }
+
+        .side {
+            background: lightgreen;
+        }
+
+        .side-1 {
+            width: 150px;
+            height: 120px;
+        }
+
+        .side-2 {
+            height: 310px;
+            width: 150px;
+        }
+
+        .navs {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .submain {
+            display: flex;
+            gap: 15px;
+        }
+
+        .head {
+            background-color: lightgreen;
+            height: 80px;
+            width: 865px;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .supermain {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="supermain">
+        <div class="main">
+            <div class="head">Header</div>
+            <div class="submain">
+                <div class="navs">
+                    <div class="side side-1">Ads</div>
+                    <div class="side side-2">Nav</div>
+                </div>
+                <div class="middle">
+                    <div class="child child-1">article</div>
+                    <div class="child child-2"> footer</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

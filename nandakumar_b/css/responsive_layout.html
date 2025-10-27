@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive layout</title>
+    <style>
+        * {
+            text-align: center;
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .submain {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: 60vw;
+            border: 1px solid;
+            height: 280px;
+        }
+
+        .box {
+            background-color: none(214, 53, 53);
+            width: 140px;
+            height: 220px;
+            border: 1px solid black;
+        }
+
+        h2 {
+            background-color: red;
+            height: 40p;
+            padding: 15px;
+        }
+
+        button {
+            background-color: red;
+            border: none;
+            margin-top: 15px;
+            padding: 8px;
+            width: 100px;
+        }
+
+        .css {
+            background-color: lightgreen;
+        }
+
+        .flex {
+            background-color: black;
+            color: white;
+        }
+
+        .css,
+        .flex {
+            height: 90px;
+            width: 60vw;
+        }
+
+        .foot {
+            background-color: lightgreen;
+            height: 40px;
+            width: 60vw;
+        }
+
+        .supermain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="supermain">
+        <div class="css">CSS Responsive</div>
+        <div class="flex">Flexbox Cards</div>
+        <div class="submain">
+            <div class="box box-1">
+                <h2>react</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, repudiandae.</p>
+                <button>
+                    Readmore
+
+                </button>
+            </div>
+            <div class="box box-2">
+                <h2>Vue</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, repudiandae.</p>
+                <button>
+                    Readmore
+
+                </button>
+            </div>
+            <div class="box box-3">
+                <h2>Angular</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, repudiandae.</p>
+                <button>
+                    Readmore
+
+                </button>
+            </div>
+            <div class="box box-4">
+                <h2>JQuery</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, repudiandae.</p>
+                <button>
+                    Readmore
+
+                </button>
+            </div>
+        </div>
+        <div class="foot"></div>
+    </div>
+</body>
+
+</html>

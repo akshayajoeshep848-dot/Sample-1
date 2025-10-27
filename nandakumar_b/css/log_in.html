@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            font-family: robot;
+        }
+
+        .main {
+            background-image: url(https://t4.ftcdn.net/jpg/01/19/11/55/360_F_119115529_mEnw3lGpLdlDkfLgRcVSbFRuVl6sMDty.jpg);
+            height: 633px;
+            display: flex;
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .submain {
+            background-color: rgba(255, 255, 255, 0.251);
+            width: 350px;
+            height: 400px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            border-radius: 10px;
+
+        }
+
+        .name,
+        .mail,
+        .pass,
+        .cpass {
+            border: 0px solid green;
+            padding: 10 px;
+            margin: 10px;
+
+        }
+
+        input {
+            width: 250px;
+            height: 25px;
+            border: none;
+            box-shadow: 1px 1px 3px -2px, -1px -1px 3px -2px;
+            background-color: rgba(0, 0, 0, 0.192);
+        }
+
+        #terms {
+            width: auto;
+            height: auto;
+            margin-left: -30px;
+        }
+
+        button {
+            width: 250px;
+            padding: 5px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border: none;
+            background-color: greenyellow;
+            background-attachment: local;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            position: relative;
+            left: -30px;
+            color: green;
+        }
+
+        h2 {
+            position: relative;
+            color: white;
+            left: -20px;
+        }
+
+        input[type="checkbox"] {
+            color: rgba(255, 255, 255, 0.486);
+            border: none;
+        }
+
+        input:hover {
+            box-shadow: 2px 2px 2px -2px green inset, -2px -2px 2px -2px green inset;
+        }
+
+        input:active {}
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="submain">
+            <h1><a href="#" style="color: red; text-decoration:overline;">R</a>egisteration</h1>
+            <div class="name">
+                <input type="text" placeholder="Enter your name">
+            </div>
+            <div class="mail">
+                <input type="email" placeholder="Enter your email">
+            </div>
+            <div class="pass">
+                <input type="password" placeholder="Create password">
+            </div>
+            <div class="cpass">
+                <input type="password" placeholder="Confirm password">
+            </div>
+            <div class="term">
+                <input type="checkbox" id="terms" name="conditions">
+                <label for="terms">I accept all terms and conditions</label>
+            </div>
+
+            <button type="submit" value="submit">Register Now</button>
+            <p>Already have an account? <a href="#">Login now</a> </p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest(...)operator</title>
+</head>
+
+<body>
+    <h1>Rest Operator(...)</h1>
+    <p>Create an array of parameters</p>
+    <script>
+        function sumOfArray(a = 0, b = 0, ...arr) {     //here a=0 and b=0 are defined values if you dont asign any value for it in loop it takes as zero
+            let sum = 0;
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum + a + b;
+        }
+
+        console.log(sumOfArray(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+        console.log(sumOfArray())
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

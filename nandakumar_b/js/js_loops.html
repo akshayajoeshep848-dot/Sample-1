@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS LOOPS</title>
+</head>
+
+<body>
+    <h1>JS LOOPS</h1>
+    <ol>Loops are two types
+        <li>for</li>
+        <li>while</li>
+    </ol>
+
+    </ul>
+    <pre>
+        <code>
+        for (intitalization;condition;final expression){
+            
+        }
+
+             // print numbers from 0 to 1
+        for (let i = 0; i < 11; i = i + 1) {
+            console.log(i)
+        }
+
+        //Positive even nymber
+        for (let i = 2; i < 11; i = i + 2) {
+            console.log(i)
+        }
+
+        //for odd numbers upto 10
+        for (let i = 1; i <= 10; i = i + 2) {
+            console.log(i)
+        }
+        // for multiples of 5 upto 625
+        for (i = 0; i <= 625; i = i + 5) {
+            console.log(i)
+        }
+
+
+        //sum of numbers from 1 t 10
+        let nmbr = 0
+        for (let i = 1; i <= 10; i = i + 1) {
+            nmbr = nmbr + i
+        }
+        console.log(nmbr)
+
+
+
+        //To print tables upto 10
+        let num = prompt("Enter number")
+        for (let i = 1; i <= 10; i = i + 1) {
+            console.log(num, "*", i, "=", num * i)
+        }
+
+
+        // To print numbers in reverse
+        for (let i = 10; i >= 1; i = i - 1) {
+            console.log(i)
+        }
+
+        // To print number of vowels in give word
+        let str = prompt("Enter string: ");
+        let count = 0;
+        let vowels = "aeiou";
+        for (let i = 0; i < str.length; i++) {
+            if (vowels.includes(str[i].toLowerCase())) {
+                count++;
+            }
+        }
+        console.log(count);
+            
+        </code>
+    </pre>
+    <!-- <script>
+        // print numbers from 0 to 1
+        for (let i = 0; i < 11; i = i + 1) {
+            console.log(i)
+        }
+
+    </script> -->
+    <!-- <script>
+        //Positive even nymber
+        for (let i = 2; i < 11; i = i + 2) {
+            console.log(i)
+        }
+    </script> -->
+
+
+    <!-- <script>
+        /*for (let i = 1; i <= 10; i = i + 2) {
+            console.log(i + 1)
+        }*/
+        for (let i = 1; i <= 10; i = i + 1) {
+            console.log(++i)
+        }
+    </script> -->
+    <!-- <script>
+        //for odd numbers upto 10
+        for (let i = 1; i <= 10; i = i + 2) {
+            console.log(i)
+        }
+        // for multiples of 5 upto 625
+        for (i = 0; i <= 625; i = i + 5) {
+            console.log(i)
+        }
+    </script> -->
+    <!-- <script>
+        //sum of numbers from 1 to 10 using for loop
+        let nmbr = 0
+        for (let i = 1; i <= 10; i = i + 1) {
+            nmbr = nmbr + i
+        }
+        console.log(nmbr)
+    </script> -->
+    <!-- <script>
+        //To print tables upto 10
+        let num = prompt("Enter number")
+        for (let i = 1; i <= 10; i = i + 1) {
+            console.log(num, "*", i, "=", num * i)
+        }
+    </script> -->
+    <!-- <script>
+        // To print numbers in reverse
+        for (let i = 10; i >= 1; i = i - 1) {
+            console.log(i)
+        }
+    </script> -->
+    <!-- <script>
+        let str = prompt("Enter string: ");
+        let count = 0;
+        let vowels = "aeiou";
+        for (let i = 0; i < str.length; i++) {
+            if (vowels.includes(str[i].toLowerCase())) {
+                count++;
+            }
+        }
+        console.log(count);
+    </script> -->
+
+    <!-- <script>
+        let str = prompt("Enter string: ");
+        let count = 0;
+        let vowels = "aeiou";
+        for (let ch of str) {   // directly loop over each character in lowercase
+            if (vowels.includes(ch)) {
+                count++;
+            }
+        }
+        console.log(count);
+
+
+    </script> -->
+
+    <script>
+        let name = prompt("");
+        let count = 0;
+        for (let i of name) {
+            if (i == 'a' || i == 'e' || i == 'i' || i == 'o' || i == 'u') {
+                count = count + 1;
+            }
+        }
+        console.log(count)
+
+    </script>
+
+</body>
+
+</html>

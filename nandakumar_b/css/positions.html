@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .sample {
+            background-color: white;
+            height: 25vh;
+        }
+
+        .child {
+            background-color: yellow;
+            height: 100px;
+            width: 300px;
+            border: 1px solid black;
+            text-align: center;
+            place-content: center;
+        }
+
+        .parent {
+            background-color: white;
+            width: 100%;
+            height: 30vh;
+            position: relative;
+            left: 7vw;
+        }
+
+        .child-1 {
+            position: relative;
+            left: 0px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        .child-2 {
+            position: relative;
+            left: 301px;
+            top: -101.5px;
+        }
+
+        .child-3 {
+            position: relative;
+            left: 602px;
+            bottom: 202.7px;
+        }
+
+        .child-4 {
+            position: relative;
+            left: 903.5px;
+            bottom: 304px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="sample"></div>
+        <div class="child child-1">HOME</div>
+        <div class="child child-2">ABOUT</div>
+        <div class="child child-3">cantact us</div>
+        <div class="child child-4">Login</div>
+    </div>
+</body>
+
+</html>

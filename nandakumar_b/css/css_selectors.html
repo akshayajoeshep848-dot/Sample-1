@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        input[type="text"] {
+            border: 1px solid rgba(38, 0, 255, 0.228);
+            height: 30px;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        div {
+            margin: 10px;
+        }
+
+        input[type="date"] {
+            border: 2px solid lightblue;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        input[type="button"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+            background-color: rgba(18, 192, 68, 0.445);
+        }
+
+        .container {
+            width: 500px;
+            margin: 20px;
+            border: 1px solid rgb(232, 232, 232);
+            box-shadow: 3px 3px 3px rgba(110, 108, 108, 0.352);
+            border-radius: 5px;
+
+        }
+
+        hr {
+            border: 1px solid grey;
+            border-style: dashed;
+        }
+
+        h1 {
+            background-color: rgb(131, 171, 171);
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Registeration form</h1>
+        <hr>
+        <div>
+            <label for="input1"> First name:</label>
+            <input type="text" id="input1">
+        </div>
+        <div>
+            <label for="input2"> Last name:</label>
+            <input type="text" id="input2">
+        </div>
+        <div>
+            <label for="date">Date Of Birth:</label>
+            <input type="date" id="date">
+            <hr>
+            <div>
+                <input type="button" value="submit">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

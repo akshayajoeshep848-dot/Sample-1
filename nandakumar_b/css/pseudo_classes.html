@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        p {
+            color: red;
+            border: 1px solid black;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px lightgray;
+            border-radius: 10px;
+        }
+
+        p:hover {
+            color: green;
+            border-radius: 0;
+        }
+
+        .btn {
+            color: white;
+            background-color: blue;
+            padding: 5px;
+            width: 90px;
+            height: 40px;
+        }
+
+        #button:hover {
+            border-radius: 10px;
+
+            box-shadow: 5px 5px 5px -5px rgb(99, 98, 98), -5px -5px 5px -5px rgb(98, 98, 98);
+            transform: scale(1.05);
+        }
+
+        #button:active {
+            background-color: red;
+            color: green;
+            transform: translate(2, 20%);
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: grey;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css Pseudo Classes</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis harum quaerat labore ex dolor debitis
+        inventore sapiente earum eius doloremque consequuntur ad laudantium, nam est nulla expedita illo at. Impedit,
+        quo neque velit culpa quae doloremque repudiandae illo iusto, vel consectetur nesciunt obcaecati laudantium.
+        Veritatis deleniti iure maiores accusamus cumque?</p>
+    <button class="btn" id="button">Click me</button>
+    <br>
+    <div>
+        <label for="name">name</label>
+        <input type="text" class="input" id="name">
+    </div>
+    <br><br>
+    <div class="form">
+        <a href="https://www.logicwhile.com" target="_blank">logicwhile</a>
+    </div>
+</body>
+
+</html>

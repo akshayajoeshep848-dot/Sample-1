@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout1</title>
+    <style>
+        * {
+            text-align: center;
+            place-content: center;
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: none;
+            width: 250px;
+            height: 20vh;
+        }
+
+        .contents {
+            background-color: red;
+            width: 120px;
+            height: 100px;
+        }
+
+        .content-1 {
+            background-color: red;
+            width: 250px;
+            height: 100px;
+        }
+
+        .submain {
+            display: flex;
+            gap: 10px;
+        }
+
+        .sidebar {
+            background-color: lightgreen;
+            height: 205px;
+            width: 100px;
+        }
+
+        .head {
+            background-color: violet;
+            width: 360px;
+        }
+
+        .foot {
+            background-color: violet;
+            width: 360px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="vicemain">
+
+        <div class="submain">
+            <div class="sidebar">sidebar</div>
+            <div class="total-content">
+                <div class="content-1">content1</div>
+                <div class="content">
+                    <div class="contents content-2">content-2</div>
+                    <div class="contents content-3">content-3</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

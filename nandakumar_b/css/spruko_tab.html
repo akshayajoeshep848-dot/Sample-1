@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spurko</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: lightgray;
+        }
+
+        .parent {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .child {
+            padding: 5px;
+        }
+
+        .child1 {
+            font-weight: bold;
+        }
+
+        .child2,
+        .date {
+            color: gray;
+            font-size: 13.5px;
+        }
+
+        .amount1 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .amount {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+
+        .parent1 {
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+        }
+
+        .dp {
+            width: 50px;
+            height: 50px;
+            background-image: url(https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/5.jpg);
+            border-radius: 50px;
+            background-size: contain;
+        }
+
+        .dp1 {
+            width: 50px;
+            height: 50px;
+            background-image: url(https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/6.jpg);
+            border-radius: 50px;
+            background-size: contain;
+        }
+
+        .dp2 {
+            width: 50px;
+            height: 50px;
+            background-image: url(https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/7.jpg);
+            border-radius: 50px;
+            background-size: contain;
+        }
+
+        .dp3 {
+            width: 50px;
+            height: 50px;
+            background-image: url(https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/8.jpg);
+            border-radius: 50px;
+            background-size: contain;
+        }
+
+        .dp4 {
+            width: 50px;
+            height: 50px;
+            background-image: url(https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg);
+            border-radius: 50px;
+            background-size: contain;
+        }
+
+        .container {
+
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            padding: 10px;
+        }
+
+        .main {
+            display: inline-block;
+        }
+
+        .center {
+            display: block;
+        }
+
+        .recent {
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        .matter {
+            padding: 5px;
+            color: gray;
+            font-size: 13.5px;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+        }
+
+        .box0 {
+            display: inline-block;
+            padding: 5px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 15px;
+        }
+
+        .img2 {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box0">
+
+
+        <div class="box1">
+            <div class="recent">
+                Recent transcations
+            </div>
+            <div class="matter">
+                Projects where development work is on completion
+            </div>
+        </div>
+        <div class="box2">
+            <div class="center">
+                <div class="main">
+                    <div class="container">
+                        <div class="dp"></div>
+                        <div class="parent1">
+                            <div class="parent">
+                                <div class="child child1">Flicker</div>
+                                <div class="child child2">App improvements</div>
+                            </div>
+                            <div class="parent">
+                                <div class="amount child">
+                                    <div class="amount1">$45.234</div>
+                                    <div class="arrow">
+                                        <img src="https://www.freeiconspng.com/uploads/green-arrow-png-20.png"
+                                            alt="green-arrow-png-20" width="13px">
+                                    </div>
+                                </div>
+                                <div class="date">12 Jan 2020</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="main">
+                    <div class="container">
+                        <div class="dp1"></div>
+                        <div class="parent1">
+                            <div class="parent">
+                                <div class="child child1">Sales executive</div>
+                                <div class="child child2">Milestonee</div>
+                            </div>
+                            <div class="parent">
+                                <div class="amount child">
+                                    <div class="amount1">$45.234</div>
+                                    <div class="arrow">
+                                        <img src="data:image/png;base64,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"
+                                            alt="green-arrow-png-20" width="13px" class="img2">
+                                    </div>
+                                </div>
+                                <div class="date">12 Jan 2020</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="main">
+                    <div class="container">
+                        <div class="dp2"></div>
+                        <div class="parent1">
+                            <div class="parent">
+                                <div class="child child1">Digwitha</div>
+                                <div class="child child2">App improvements</div>
+                            </div>
+                            <div class="parent">
+                                <div class="amount child">
+                                    <div class="amount1">$45.234</div>
+                                    <div class="arrow">
+                                        <img src="https://www.freeiconspng.com/uploads/green-arrow-png-20.png"
+                                            alt="green-arrow-png-20" width="13px">
+                                    </div>
+                                </div>
+                                <div class="date">12 Jan 2020</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="main">
+                    <div class="container">
+                        <div class="dp3"></div>
+                        <div class="parent1">
+                            <div class="parent">
+                                <div class="child child1">Digiwatt</div>
+                                <div class="child child2">App improvements</div>
+                            </div>
+                            <div class="parent">
+                                <div class="amount child">
+                                    <div class="amount1">$45.234</div>
+                                    <div class="arrow">
+                                        <img src="https://www.freeiconspng.com/uploads/green-arrow-png-20.png"
+                                            alt="green-arrow-png-20" width="13px">
+                                    </div>
+                                </div>
+                                <div class="date">12 Jan 2020</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="main">
+                    <div class="container">
+                        <div class="dp4"></div>
+                        <div class="parent1">
+                            <div class="parent">
+                                <div class="child child1">Digiwatt</div>
+                                <div class="child child2">App improvements</div>
+                            </div>
+                            <div class="parent">
+                                <div class="amount child">
+                                    <div class="amount1">$45.234</div>
+                                    <div class="arrow">
+                                        <img src="https://www.freeiconspng.com/uploads/green-arrow-png-20.png"
+                                            alt="green-arrow-png-20" width="13px">
+                                    </div>
+                                </div>
+                                <div class="date">12 Jan 2020</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

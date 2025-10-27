@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch case </title>
+    <style>
+        pre {
+            background-color: rgb(255, 255, 255);
+            border: 1px solid white;
+            padding: 10px;
+            color: green;
+            font-weight: 600;
+            font-family: sans-serif;
+            width: fit-content;
+
+            box-shadow: 2px 2px 2px rgb(0, 0, 0), -2px -2px 2px black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Switch case syntax</h1>
+    <code>
+        <pre>
+    let day = "Monday"
+    switch(day){
+        case "Monday":
+             console.log("Start of work week");
+            break;
+        case "Friday":
+            console.log("Weekend is coming");
+            break;
+         default:
+         console.log("Regular day")
+     }
+        </pre>
+    </code>
+    <!-- <script>
+        let day = prompt("Enter day")
+        switch (day) {
+            case "Monday":
+                console.log("Start of work week");
+                break;
+            case "Friday":
+                console.log("Weekend is coming");
+                break;
+            default:
+                console.log("Regular day")
+        }
+    </script> -->
+    <script>
+        let day = Number(prompt("Enter day code"))
+        switch (day) {
+            case 0:
+                console.log("Sunday");
+                break;
+            case 1:
+                console.log("Monday");
+                break;
+            case 2:
+                console.log("Tuesday");
+                break;
+            case 3:
+                console.log("Wednesday");
+                break;
+            case 4:
+                console.log("Thursday");
+                break;
+            case 5:
+                console.log("Friday");
+                break;
+            case 6:
+                console.log("Saturday");
+                break;
+            default:
+                console.log("pls enter a number between 0-6");
+        }
+    </script>
+</body>
+
+</html>

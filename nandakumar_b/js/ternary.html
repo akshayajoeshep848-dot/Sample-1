@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary</title>
+    <style>
+        pre {
+            border: 2px solid black;
+            color: green;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            border-radius: 10px;
+            width: fit-content;
+            padding: 10px;
+            line-height: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Ternary
+    </h1>
+    <h2> syntax</h2>
+    <code>
+        <pre>
+    //ternary operator
+        // condition ? true statement : false statement
+        let age = 11;
+        age >= 18 ? console.log("eligible for vote") : console.log("Not eligible");
+        age < 0 ? console.log("Enter positive age") : console.log("Not eligible")
+        </pre>
+    </code>
+    <script>
+        //ternary operator
+        // condition ? true statement : false statement
+        let age = prompt("Age");
+        age >= 18
+            ? age <= 140
+                ? console.log("eligible for vote")
+                : console.log("Not eligible")
+            : age < 0
+                ? console.log("Enter positive age")
+                : console.log("Not eligible")
+    </script>
+</body>
+
+</html>
