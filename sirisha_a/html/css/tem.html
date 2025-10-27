@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-image: url('./cafe.png') ;
+            height: 900px;
+            background-repeat: no-repeat;
+        }
+        .child{
+            background-color: rgba(0, 0, 0, 0.466);
+            height: 185px;
+            width: 280px;
+           
+        }
+        .child-1 {
+            position: relative;
+            top: 60px;
+            left: 70px;
+            color: white;
+        }
+        .child-2{ 
+            position: relative;
+            right: 40px;
+        }
+        .child-3{
+            border-radius: 10px;
+            position: relative;
+            right: 45px;
+            top: 10px;
+        }
+        .btn{
+            border-radius: 10px;
+            position: relative;
+            right: 45px;
+            top: 10px;
+            background-color: rgba(255, 166, 0, 0.783);
+        }
+        .nav {
+            position: fixed;
+            top: 35px;
+            left: 150px;
+            color: aqua;
+            text-decoration: none;
+        }
+        .nav-1 {
+            position: fixed;
+            top: 35px;
+            left: 200px;
+            color: aqua;
+            text-decoration: none;
+        }
+        .child-0 {
+            /* border: 2px solid rgba(255, 0, 0, 0.313); */
+            height: 30px;
+            position: relative;
+            top: 20px;
+            border-radius: 95px;
+            /* margin-top: 10px; */
+            background-color: rgba(255, 228, 196, 0.642);
+        }
+
+    </style>
+</head>
+<body>
+     <!-- <nav>
+        <a href="home" class="nav">Home</a>
+        <a href="Search" class="nav-1">Search</a>
+    </nav> -->
+    <div class="parent">
+        <div class="child">
+        <div class="child-0">
+            <nav>
+        <a href="home" class="nav">Home</a>
+        <a href="Search" class="nav-1">Search</a>
+    </nav>
+        </div>
+        <div class="child-1">cafe klang<div>
+        <div class="child-2">your favourate coffe lives</div>
+        <button class="child-3">our story</button>
+        <button class="btn">check menu</button>      
+         </div>
+    </div>
+   
+</body>
+</html>
