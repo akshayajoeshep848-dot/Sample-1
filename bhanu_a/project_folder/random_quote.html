@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <style>
+   
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: grid;
+            place-items: center;
+            min-height: 90vh;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 1rem;
+        }
+        #quote-box {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            max-width: 700px;
+            width: 90%;
+        }
+
+  
+        #quote-display {
+            font-size: 1.75rem; 
+            font-style: italic;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            color: #222;
+        }
+
+    
+        #author-display {
+            font-size: 1.125rem; 
+            font-weight: bold;
+            color: #555;
+            text-align: right;
+            margin-top: 2rem;
+        }
+        
+      
+        #new-quote-btn {
+            font-size: 1rem; 
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            padding: 0.8rem 1.6rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            margin-top: 2rem;
+        }
+        #new-quote-btn:hover {
+            background-color: #0056b3;
+        }
+        #new-quote-btn:active { 
+            transform: scale(0.98);  
+        }
+    </style>
+</head>
+<body>
+
+    <main id="quote-box">
+        <blockquote id="quote-display">
+            </blockquote>
+        
+        <p id="author-display">
+            </p>
+
+        <button id="new-quote-btn">New Quote</button>
+    </main>
+
+    <script>
+
+        const quoteData = [
+            {
+              
+                quote: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                quote: "Life is what happens when you're busy making other plans.",
+                author: "John Lennon"
+            },
+            {
+                quote: "Get busy living or get busy dying.",
+                author: "Stephen King"
+            },
+            {
+                quote: "You only live once, but if you do it right, once is enough.",
+                author: "Mae West"
+            },
+            {
+                quote: "The purpose of our lives is to be happy.",
+                author: "Dalai Lama"
+            },
+            {
+                quote: "In the end, it's not the years in your life that count. It's the life in your years.",
+                author: "Abraham Lincoln"
+            }
+        ];
+
+
+        const quoteDisplayEl = document.getElementById("quote-display");
+        const authorDisplayEl = document.getElementById("author-display");
+        const newQuoteBtnEl = document.getElementById("new-quote-btn");
+
+    
+        function showNewQuote() {    
+       
+            const randomIndex = Math.floor(Math.random() * quoteData.length);
+            const { quote, author } = quoteData[randomIndex];
+
+         
+            quoteDisplayEl.textContent = `"${quote}"`;
+            
+         
+            authorDisplayEl.textContent = `— ${author}`;
+        }
+
+   
+        document.addEventListener("DOMContentLoaded", showNewQuote); 
+
+ 
+        newQuoteBtnEl.addEventListener("click", showNewQuote); 
+
+    </script>
+
+</body>
+</html>
