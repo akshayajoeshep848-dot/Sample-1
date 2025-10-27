@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let studentAge = Number (prompt("Enter your age:"));
+
+        console.log(typeof studentAge);
+
+        var b;
+        let c = b || addTwonumbers (10,15);
+        let d = studentAge > 18 && addTwonumbers(25,35);
+        console.log("printing value of c:",c);
+           console.log("printing value of d:",d);
+
+        function addTwonumbers(a,b) {
+            return a + b;
+        }
+        
+
+
+
+
+        // let m1 = prompt("Enter M1 score out of 70");
+        // let chem = prompt("Enter Chemistry score out of 70");
+        // alert(m1 + chem);
+    </script>
+</body>
+</html>

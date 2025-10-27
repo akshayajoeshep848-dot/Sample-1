@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo Classes</title>
+    <style>
+        p{
+            color: red;
+              border: 1px solid black;
+            padding: 10px;
+            box-shadow: 5px 5px 5px 5px 5px lightgray;
+            border-radius: 10px;
+        }
+        p:hover{
+            color: green;
+            border-radius: 20px;
+             box-shadow: 15px 15px 15px 15px 15px lightgray;
+        }
+        button{
+            border: none;
+            background-color: crimson;
+            color: white;
+            padding: 10px 30px;
+            box-shadow: 2px 2px 5px 5px lightgray;
+        }
+        button:hover{
+            transform: scale(1.05) skew( 10deg,20deg);
+           
+        }
+        button:active{
+            box-shadow: 2px 2px 2px 2px lightgray inset;
+            transform: translate(10px, 2px);
+        }
+        .form{
+            padding: 20px;
+            border: 1px solid lightblue;
+
+        }
+        input{
+            border: 1px solid lightcoral;
+         
+        }
+        input:focus{
+            border-color:  2px solid green;
+            height: 30px;
+        }
+        a:visited{
+           color: coral;
+    
+        }
+        a:link{
+            color: brown;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Pseudo Classes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ipsum perspiciatis iure officiis qui repellendus consectetur eius accusamus labore porro reprehenderit, libero quia natus ab. Consectetur quis numquam commodi inventore! Amet enim atque exercitationem molestias repellendus, veritatis rem! Sunt quisquam veritatis omnis sequi, facere recusandae nemo vero provident itaque fuga?</p>
+    <button>submit</button>
+    <div class="form">
+        <label for="fn">First Name:</label>
+        <input type="text" id="fn">
+    </div>
+    <div class="form">
+        <a href="https://logicwhile.com">Logicwhile</a>
+        <a href="https://google">Google</a>
+    </div>
+</body>
+</html>

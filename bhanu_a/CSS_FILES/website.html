@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: Quicksand;
+            /* font-family: Arial, Helvetica, sans-serif; */
+            margin-left: 180px;
+            margin-right: 180px;
+        }
+
+        li {
+            list-style-type: none;
+            color: black;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .side-container {
+            height: 634px;
+            /* height: 100vh; */
+            width: 300px;
+            display: flex;
+            gap: 50px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #f2f3f7;
+            padding-top: 3em;
+            padding-bottom: 40px;
+            overflow-y: scroll;
+            transition: 0.5s;
+            position: fixed;
+            /* top: 0px; */
+
+            /* box-sizing: border-box; */
+        }
+
+        .main {
+            width: 820px;
+            height: 634px;
+            /* background-color: ; */
+        }
+
+        .download-btn {
+            color: black;
+            border: 1px solid black;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .my-name {
+            font-size: 60px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+
+        .my-info {
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .cards {
+            width: 164px;
+            height: 150px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 40px;
+            margin-left: -15px;
+            margin-right: 15px;
+            margin-bottom: 50px;
+        }
+
+        .section-4 {
+            width: 750px;
+            height: 207px;
+            background-color: #f9bf3f;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding: 30px;
+        }
+
+        .sec5-card {
+            height: 230px;
+            width: 257px;
+            box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+
+        }
+
+        .section-6 {
+            height: 252px;
+            width: 824px;
+            background-image: url('images/sec6-img-portfolio');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            /* background-position: center; */
+            align-content: center;
+            text-align: center;
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edu {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 25px;
+            background-color: #f2f3f7;
+            margin-bottom: 5px;
+            border: 1px solid #e6e6e6;
+            color: #333333;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-family: "Quicksand";
+        }
+
+        .rec-work-img {
+            width: 382px;
+            height: 300px;
+
+        }
+
+        .load {
+            padding: 18px 36px;
+            background-color: #2c98f0;
+            color: #fff;
+            border: 2px solid #2c98f0;
+            cursor: pointer;
+            text-align: center;
+            place-content: center;
+        }
+
+        .sec11-img {
+            height: 158px;
+            width: 238px;
+        }
+
+        .nav li {
+            margin-bottom: 15px;
+        }
+
+        .side-container p {
+            font-size: 12.75px;
+            text-align: center;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+            margin-bottom: 30px;
+
+
+        }
+
+        .img-container {
+            margin-top: 200px;
+        }
+
+        .main {
+            margin-left: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <div style="display: flex;">
+
+
+            <div class="side-container">
+                <div class="img-container">
+                    <div style="background-color: beige;border-radius: 50%;height: 150px;width: 150px;">
+                        <img style="height: 100%;width: 100%;border-radius: 50%;" src="https://i1.sndcdn.com/artworks-000577723232-pb4qll-t240x240.jpg" alt="">
+                    </div>
+                </div>
+                <div>
+                    <h2>JACKSON FORD</h2>
+                    <P>UI/UX DESIGNER IN PHILIPINES lore</P>
+                </div>
+                <ul class="nav">
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">SKILLS</a></li>
+                    <li><a href="">EDUCATION</a></li>
+                    <li><a href="">EXPERIENCE</a></li>
+                    <li><a href="">WORK</a></li>
+                    <li><a href="">BLOG</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+                <div>
+                    <p>© Copyright ©2025 All rights reserved | This template is made with by Colorlib
+                        Demo Images: Unsplash.com</p>
+                </div>
+            </div>
+            <div class="main">
+                <section
+                    style="background-image: url('images/portfolio-img1');height: 658px;width: 634px;background-repeat: no-repeat;background-size: cover;background-position: center;">
+                    <div style="width: 548px;height: 275px;position: relative;top: 180px;padding-left: 20px;">
+                        <h1 class="my-name">Hi!<br> i'm jackson</h1>
+                        <h2 class="my-info">100% html5 bootstrap templates</h2>
+                        <p><a href="" class="download-btn">Download cv</a></p>
+                    </div>
+
+                </section>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div>
+                    <h3
+                        style="font-size: 10px;text-transform: uppercase;color: #999999;font-weight: 500;letter-spacing: 5px;margin-bottom: 15px;">
+                        About Us</h3>
+                    <h3
+                        style="font-size: 18px;margin-bottom: 72px;font-weight: 700;text-transform: uppercase;letter-spacing: 5px;line-height: 1.8;">
+                        Who Am I?</h3>
+                    <p style="margin-bottom: 22px;font-weight: 400;font-size: 15px;line-height: 1.8;color: #000000b3;">
+                        Hi
+                        I'm Jackson Ford On her way she met a copy. The copy warned the Little Blind Text, that where it
+                        came from it would have been rewritten a thousand times and everything that was left from its
+                        origin
+                        would be the word "and" and the Little Blind Text should turn around and return to its own, safe
+                        country.</p>
+                    <p style="margin-bottom: 22px;font-weight: 400;font-size: 15px;line-height: 1.8;color: #000000b3;">
+                        Even
+                        the all-powerful Pointing has no control about the blind texts it is an almost unorthographic
+                        life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for
+                        the
+                        far World of Grammar.</p>
+                </div>
+
+                <div class="card-container">
+                    <div class="cards">
+                        <img src="" alt="">
+                        <p>Grapic Design</p>
+                    </div>
+                    <div class="cards">
+                        <img src="" alt="">
+                        <p>Web Design</p>
+                    </div>
+                    <div class="cards">
+                        <img src="" alt="">
+                        <p>Software</p>
+                    </div>
+                    <div class="cards">
+                        <img src="" alt="">
+                        <p>Application</p>
+                    </div>
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div class="section-4">
+                    <h2
+                        style="line-height: 1.5;font-weight: 400;margin-bottom: 30px;font-size: 30px;font-family: playfair Display;">
+                        I am
+                        happy to know you <br>
+                        that 300+ projects done sucessfully!</h2>
+                    <a href=""
+                        style="border: 1px solid black;padding: 2px 10px;letter-spacing: 1px;text-transform: uppercase;text-decoration: none;color: #000;">HIRE
+                        ME</a>
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div class="section-5">
+                    <div class="sec5-info">
+                        <h3
+                            style="font-size: 10px;text-transform: uppercase;color: #999999;font-weight: 500;letter-spacing: 5px;margin-bottom: 15px;">
+                            What I do?</h3>
+                        <h2
+                            style="font-size: 18px;margin-bottom: 72px;font-weight: 700;text-transform: uppercase;letter-spacing: 5px;line-height: 1.8;font-family: Playfair Display;">
+                            Here are some of my <br> expertise</h2>
+                    </div>
+                    <div class="sec5-cards-container">
+                        <div style="display: flex;gap: 20px;margin-bottom: 80px;">
+                            <div class="sec5-card"></div>
+                            <div class="sec5-card"></div>
+                            <div class="sec5-card"></div>
+                        </div>
+                        <div style="display: flex;gap: 20px;margin-bottom: 80px;">
+                            <div class="sec5-card"></div>
+                            <div class="sec5-card"></div>
+                            <div class="sec5-card"></div>
+                        </div>
+                    </div>
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div class="section-6">
+                    <div style="display: flex;justify-content: space-around;align-items: center;">
+                        <div>
+                            <h1>309</h1>
+                            <p>Cups of coffee</p>
+                        </div>
+                        <div>
+                            <h1>356</h1>
+                            <p>Projects</p>
+                        </div>
+                        <div>
+                            <h1>30</h1>
+                            <p>Clients</p>
+                        </div>
+                        <div>
+                            <h1>10</h1>
+                            <p>Partners</p>
+                        </div>
+                    </div>
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div class="section-7">
+                    <div>
+                        <h1>My Specialty</h1>
+                        <h2>My Skills</h2>
+                    </div>
+                    <div>
+                        <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild
+                            Question
+                            Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven
+                            versalia, put her initial into the belt and made herself on the way.</p>
+                    </div>
+                    <div style="display: flex;justify-content: space-between;">
+                        <div>
+                            <div class="skills">
+                                <label for="">Photoshop</label>
+                                <input type="range" value="75%">
+                            </div>
+                            <div class="skills">
+                                <label for="">HTML5</label>
+                                <input type="range">
+                            </div>
+                            <div class="skills">
+                                <label for="">WordPress</label>
+                                <input type="range">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="skills">
+                                <label for="">jQuery</label>
+                                <input type="range">
+                            </div>
+                            <div class="skills">
+                                <label for="">CSS3</label>
+                                <input type="range">
+                            </div>
+                            <div class="skills">
+                                <label for="">SEO</label>
+                                <input type="range">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div class="section-8">
+                    <div>
+                        <h3>Education</h3>
+                        <h1>Education</h1>
+                    </div>
+                    <div>
+                        <div class="edu">
+                            <p>Master degree in graphic design</p>
+                            <p>+</p>
+                        </div>
+                        <div class="edu">
+                            <p>Bachelor Degree of Computer Science</p>
+                            <p>+</p>
+                        </div>
+                        <div class="edu">
+                            <p>Diploma in Information Technology</p>
+                            <p>+</p>
+                        </div>
+                        <div class="edu">
+                            <p>Diploma in Information Technology</p>
+                            <p>+</p>
+                        </div>
+                        <div class="edu">
+                            <p>High School Secondary Education</p>
+                            <p>+</p>
+                        </div>
+                    </div>
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div class="section-9">
+                    <div>
+                        <h3>Experience</h3>
+                        <h2>Work Experience</h2>
+                    </div>
+                    <div style="display: flex;margin-bottom: 10px;">
+                        <div class="exp-icon">logo</div>
+                        <div
+                            style="background-color: #f2f3f7;padding: 22px;margin-left: 60px;width: 679px;height: 150px;">
+                            <div>
+                                <h1>Full Stack Developer <span>2017-2018</span></h1>
+                            </div>
+                            <div>
+                                <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered
+                                    prepare how cordial two promise. Greatly who affixed suppose but enquire compact
+                                    prepare
+                                    all put. Added forth chief trees but rooms think may.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;margin-bottom: 10px;">
+                        <div class="exp-icon">logo</div>
+                        <div
+                            style="background-color: #f2f3f7;padding: 22px;margin-left: 60px;width: 679px;height: 150px;">
+                            <div>
+                                <h1>Full Stack Developer <span>2017-2018</span></h1>
+                            </div>
+                            <div>
+                                <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered
+                                    prepare how cordial two promise. Greatly who affixed suppose but enquire compact
+                                    prepare
+                                    all put. Added forth chief trees but rooms think may.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;margin-bottom: 10px;">
+                        <div class="exp-icon">logo</div>
+                        <div
+                            style="background-color: #f2f3f7;padding: 22px;margin-left: 60px;width: 679px;height: 150px;">
+                            <div>
+                                <h1>Full Stack Developer <span>2017-2018</span></h1>
+                            </div>
+                            <div>
+                                <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered
+                                    prepare how cordial two promise. Greatly who affixed suppose but enquire compact
+                                    prepare
+                                    all put. Added forth chief trees but rooms think may.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;margin-bottom: 10px;">
+                        <div class="exp-icon">logo</div>
+                        <div
+                            style="background-color: #f2f3f7;padding: 22px;margin-left: 60px;width: 679px;height: 150px;">
+                            <div>
+                                <h1>Full Stack Developer <span>2017-2018</span></h1>
+                            </div>
+                            <div>
+                                <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered
+                                    prepare how cordial two promise. Greatly who affixed suppose but enquire compact
+                                    prepare
+                                    all put. Added forth chief trees but rooms think may.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: flex;margin-bottom: 10px;">
+                        <div class="exp-icon">logo</div>
+                        <div
+                            style="background-color: #f2f3f7;padding: 22px;margin-left: 60px;width: 679px;height: 150px;">
+                            <div>
+                                <h1>Full Stack Developer <span>2017-2018</span></h1>
+                            </div>
+                            <div>
+                                <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered
+                                    prepare how cordial two promise. Greatly who affixed suppose but enquire compact
+                                    prepare
+                                    all put. Added forth chief trees but rooms think may.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div class="section-10">
+                    <div>
+                        <h3>My Work</h3>
+                        <h1>Recent Work</h1>
+                    </div>
+                    <div>
+                        <ul style="display: flex;justify-content: space-between;width: 400px;">
+                            <li><a href="">Graphic Design</a></li>
+                            <li><a href="">Web Design</a></li>
+                            <li><a href="">Software</a></li>
+                            <li><a href="">Apps</a></li>
+                        </ul>
+                    </div>
+                    <div style="display: flex;gap: 40px;margin-bottom: 35px;">
+                        <div><img class="rec-work-img" src="images/sec10-img1-portfolio" alt=""></div>
+                        <div><img class="rec-work-img" src="images/sec10-img2-portfolio" alt=""></div>
+                    </div>
+                    <div style="display: flex;gap: 40px;margin-bottom: 35px;">
+                        <div><img class="rec-work-img" src="images/sec10-img3-portfolio" alt=""></div>
+                        <div><img class="rec-work-img" src="images/sec10-img4-portfolio" alt=""></div>
+                    </div>
+                    <div style="display: flex;gap: 40px;margin-bottom: 35px;">
+                        <div><img class="rec-work-img" src="images/sec10-img5-portfolio" alt=""></div>
+                        <div><img class="rec-work-img" src="images/sec10-img6-portfolio" alt=""></div>
+                    </div>
+                    <div class="load">
+                        <p>LOAD MORE</p>
+                    </div>
+
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+
+                <div class="section-11">
+                    <div>
+                        <h3>READ</h3>
+                        <h1>RECENT BLOG</h1>
+                    </div>
+                    <div style="display: flex;justify-content: space-between;gap: 40px;">
+                        <div>
+                            <div><img src="images/sec11-img1-portfolio" class="sec11-img" alt=""></div>
+                            <div>
+                                <p>APRIL 14,2018|WEB DESIGN|</p>
+                            </div>
+                            <div>
+                                <h3>RENOVATING NATIONAL GALLERY</h3>
+                            </div>
+                            <div>
+                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+                                    language
+                                    ocean.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div><img src="images/sec11-img2-portfolio" class="sec11-img" alt=""></div>
+                            <div>
+                                <p>APRIL 14,2018|WEB DESIGN|</p>
+                            </div>
+                            <div>
+                                <h3>RENOVATING NATIONAL GALLERY</h3>
+                            </div>
+                            <div>
+                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+                                    language
+                                    ocean.</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div><img src="images/sec11-img3-portfolio" class="sec11-img" alt=""></div>
+                            <div>
+                                <p>APRIL 14,2018|WEB DESIGN|</p>
+                            </div>
+                            <div>
+                                <h3>RENOVATING NATIONAL GALLERY</h3>
+                            </div>
+                            <div>
+                                <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
+                                    language
+                                    ocean.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="load">
+                        <p>LOAD MORE</p>
+                    </div>
+                </div>
+                <section style="margin-bottom: 160px;">
+
+                </section>
+                <div class="section-12">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family:Arial, sans-serif;
+            padding:20px;
+        }
+
+        .h1{
+            font-size:28px;
+            color:#333;
+        }
+
+        .details{
+            margin:20px 0;
+            background-color: #eaf8f9;
+            border-left : 5px solid #00bcd4;
+            padding: 10px 15px;
+            border-radius: 5px;
+        } 
+
+        .summary {
+            font-size: 18px;
+            font-weight: 600;
+            color: #007acc;
+            cursor: pointer;
+            outline: none;
+        }
+
+    .p{
+        font-family:sans-serif;
+          font-weight: 600;
+          font-size: 18px;
+          color:#2980b9 ;
+    }
+
+    .hr{
+      height: 2px;
+      border: none;
+      background-color: #2980b9;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="Main-container"></div>
+    <script>
+    let questions = [{
+        Q : "1. What is CSS Flexbox and why is it used?",
+        ans : "CSS Flexbox is a layout model that helps arrange items in a container with flexibility. It allows easy alignment of elements both vertically and horizontally. Flexbox makes designing responsive layouts simpler without using floats or complex positioning. It is widely used for creating modern, adaptable web designs."
+    },
+    {
+        Q : "2. What are the two main axes in Flexbox?",
+        ans : "In Flexbox, layout is controlled using two main axes: the main axis and the cross axis. The main axis defines the direction in which flex items are placed, determined by the `flex-direction` property. The cross axis runs perpendicular to the main axis and controls alignment in that direction. Understanding these axes is essential for proper item alignment and layout control."
+    },
+    {
+        Q : "3. How do you make an element a flex container?",
+        ans : "To make an element a flex container, you simply set its `display` property to `flex` in CSS. This activates the Flexbox layout model for that element. Once applied, all direct child elements become flex items and are arranged according to Flexbox rules. This allows for more control over spacing, alignment, and responsiveness of the layout."
+    },
+    {
+        Q : "4. Explain the difference between display: flex; and display: inline-flex;.",
+        ans : "The difference between `display: flex;` and `display: inline-flex;` lies in how the container itself behaves. `display: flex;` makes the container a block-level element, taking up the full width available. On the other hand, `display: inline-flex;` makes the container behave like an inline element, fitting only as wide as its content. Both create flex containers, but their outer display differs."
+
+    },
+    {
+        Q : "5. What is flex-direction and what are its possible values?",
+        ans : "The `flex-direction` property defines the direction in which flex items are placed inside a flex container. It controls the main axis of the layout. The possible values are `row`, `row-reverse`, `column`, and `column-reverse`. This property helps in setting the flow of items horizontally or vertically."
+
+    },
+    {
+        Q : "6. What is justify-content and how does it work?",
+        ans : "The `justify-content` property is used to align flex items along the main axis of the container. It helps distribute space between and around items. Common values include `flex-start`, `flex-end`, `center`, `space-between`, and `space-around`. This property enhances layout control and spacing in flexible designs."
+
+    },
+    {
+        Q : "7. What is align-items and how does it work?",
+        ans : "The `align-items` property is used to align flex items along the cross axis of the container. It affects how items are positioned vertically (if the main axis is horizontal). Common values include `flex-start`, `flex-end`, `center`, `baseline`, and `stretch`. This helps in aligning items consistently within the flex container."
+
+    },
+    {
+        Q : "8. Explain flex-wrap and its values.",
+        ans : "The `flex-wrap` property controls whether flex items should stay in a single line or wrap onto multiple lines. Its default value is `nowrap`, which keeps all items in one line. You can use `wrap` to allow items to move to the next line when needed. Another option, `wrap-reverse`, wraps items in the opposite direction."
+
+    },
+    {
+        Q : "9. What is the shorthand property for flex-direction and flex-wrap?",
+        ans : "The shorthand property for `flex-direction` and `flex-wrap` is called `flex-flow`. It combines both properties into a single declaration. For example, `flex-flow: row wrap;` sets the direction to row and allows wrapping. This shorthand helps simplify and shorten your CSS code."
+
+    },
+    {
+        Q : "10. What is align-content and when is it used?",
+        ans : "The `align-content` property is used to align multiple rows of flex items along the cross axis. It only affects containers with wrapping enabled (`flex-wrap: wrap`). Common values include `flex-start`, `flex-end`, `center`, `space-between`, and `stretch`. It’s useful for managing space between rows in multi-line flex layouts."
+
+    },
+    {
+        Q : "11. Explain the flex shorthand property for flex items.",
+        ans : "The `flex` shorthand property sets how a flex item grows, shrinks, and what its base size is. It combines three properties: `flex-grow`, `flex-shrink`, and `flex-basis`. For example, `flex: 1 1 100px;` means the item can grow, shrink, and starts with a base size of 100px. This shorthand makes defining flexible behavior concise and efficient."
+
+    },
+    {
+        Q : "12. What is flex-grow and when would you use it?",
+        ans : "The `flex-grow` property defines how much a flex item can grow relative to other items in the container. A value of `1` allows the item to take up available space, while `0` means it won’t grow at all. You use it when you want items to expand and fill extra space proportionally. It's helpful for creating flexible, responsive layouts."
+
+    },
+    {
+        Q : "13. What is flex-shrink and when is it useful?",
+        ans : "The `flex-shrink` property controls how much a flex item can shrink when there isn’t enough space. A value of `1` allows it to shrink, while `0` prevents shrinking. It's useful when you want some items to reduce in size while keeping others fixed. This helps maintain layout balance in tight spaces."
+
+    },
+    {
+        Q : "14. What is flex-basis?",
+        ans : "The `flex-basis` property defines the initial size of a flex item before any space is distributed. It can be set using length units like `px`, `em`, or percentages. If not specified, it defaults to `auto`, using the item’s natural size. This property helps control the starting width or height in flexible layouts."
+
+    },
+    {
+        Q : "15. How do you center an item both horizontally and vertically using Flexbox?",
+        ans : "To center an item both horizontally and vertically using Flexbox, set the container’s `display` to `flex`. Then use `justify-content: center;` to center horizontally and `align-items: center;` to center vertically. This combination aligns the item exactly in the center. It’s a common and efficient method for centering content."
+
+    },
+    {
+        Q : "16. What is the order property and how does it work?",
+        ans : "The `order` property in Flexbox controls the order in which flex items appear in the layout, regardless of their source order in HTML. By default, all items have `order: 0`. Items with lower values appear first, and higher values appear later. This property is useful for rearranging items visually without changing the HTML structure."
+
+    },
+    {
+        Q : "17. What is align-self and when would you use it?",
+        ans : "The `align-self` property allows a single flex item to override the container’s `align-items` setting. It aligns that specific item along the cross axis. Possible values include `auto`, `flex-start`, `flex-end`, `center`, `baseline`, and `stretch`. Use it when you want one item to align differently from the others in the same container."
+
+    },
+    {
+        Q : "18. Can a flex item also be a flex container? Provide an example.",
+        ans : "Yes, a flex item can also be a flex container. This allows you to create nested flex layouts where a child item contains its own flex children. It’s useful for building complex, responsive designs"
+
+    },
+    {
+        Q : "19. What are the advantages of using Flexbox over traditional layout methods (floats, positioning)?",
+        ans : "Flexbox offers several advantages over traditional layout methods like floats and positioning. It provides easier and more efficient alignment of elements both vertically and horizontally. Flexbox layouts are responsive by nature and adapt well to different screen sizes. It also reduces the need for complex CSS and extra wrappers, making code cleaner and more maintainable."
+
+    },
+    {
+        Q : "20. When would you choose CSS Grid over Flexbox, and vice-versa?",
+        ans : "You would choose **CSS Grid** when designing **two-dimensional layouts**, where control over both rows and columns is needed. It’s ideal for full-page or grid-based designs. On the other hand, **Flexbox** is better for **one-dimensional layouts**, aligning items in a single row or column. Use Flexbox for smaller UI components and Grid for larger, complex layouts."
+
+    }
+    ]
+
+   let  Container=document.getElementById("Main-container");
+    let heading=document.createElement("h1"); 
+    
+    heading.setAttribute("class", "h1")
+    heading.textContent="CSS Flexbox Interview Questions & Answers";
+    Container.appendChild(heading);
+
+    let underline=document.createElement("hr");
+    underline.setAttribute("class","hr")
+    
+    
+    Container.appendChild(underline);
+
+
+
+
+    for(let question of questions){
+       let  div = document.createElement("p");
+       div.setAttribute("class","p");
+        div.textContent=question.Q;
+        Container.appendChild(div);
+
+
+        let details=document.createElement("details");
+        details.setAttribute("class","details");
+
+        let summary=document.createElement("summary");
+        summary.setAttribute("class","summary")
+        summary.textContent="Answer";
+
+        
+        const para=document.createElement("p2");
+        para.setAttribute("class","p2");
+        para.textContent=question.ans;
+
+        details.appendChild(summary);
+        details.appendChild(para);
+
+        Container.appendChild(details);
+    }
+    </script>
+</body>
+</html>

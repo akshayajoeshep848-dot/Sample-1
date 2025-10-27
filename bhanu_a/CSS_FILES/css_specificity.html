@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css specificity</title>
+    <style>
+        .first_name{
+            border: 4px solid rgb(64, 64, 208);
+          
+        }
+
+        #fn-2{
+            border: 4px solid green;
+        }
+        
+    
+    #fn-3 {
+       border:3px solid brown;
+    }
+
+    .first{
+        border: 10px solid red;
+    }
+  
+    </style>
+</head>
+<body>
+    <h1>css specificity</h1>
+     <input type="text" class="first_name" id="fn-1">
+     <input type="date" class="first_name" id="fn-2">
+     <input type="email" class="first" id="fn-3">
+     <input type="password" class="first_name" id="fn-4">
+     <input type="tel" class="first_name" id="fn-5">
+    
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css specificity</title>
+    <style>
+        *{
+            color: brown;
+        }
+        .para{
+            color: brown;
+        }
+
+        .text{
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1> CSS specificity</h1>
+    <p class="para" id="para-1"> Lorem ipsum dolor sit amet. </p>
+
+      <input type="text" class="text" id="text-1"/>
+</body>
+</html>

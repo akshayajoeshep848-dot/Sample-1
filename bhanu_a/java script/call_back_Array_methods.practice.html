@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>call back</h1>
+    <script>
+2.//  function operate (num1,num2, callback) {
+//      return callback (num1,num2);
+//  }
+//  
+//  function add(a,b) {
+//      return a + b;
+//  }
+//  
+//  function subtract(a,b) {
+//      return a - b;
+//  }
+//  
+//  console.log(operate(10,20,add));
+//  console.log(operate(10,20,subtract)); 
+
+//3.
+//  function greet(name, callback) {
+//   console.log(callback(name));
+// }
+// 
+// greet("Alice", (name) => `bhanu, ${name.toUpperCase()}!`);
+
+//5.
+// function processData(callback) {
+//   setTimeout(() => {
+//     const data = { id: 1, name: "Sample Data" };
+//     callback(data);
+//   }, 2000);
+// }
+// 
+// processData((data) => {
+//   console.log("Data received:", data);
+// });
+
+//6.
+// function greet(name, callback) {
+//   const message = `Hello, ${name}!`;
+//   callback(message);
+// }
+// 
+// greet("Bhanu", function(msg) {
+//   console.log(msg.toUpperCase());
+// });
+
+7.
+// function doSomething(callback) {
+//   const randomNumber = Math.random();
+//   if (randomNumber > 0.5) {
+//     callback();
+//   } else {
+//     console.log("Condition not met.");
+//   }
+// }
+// 
+// doSomething(() => {
+//   console.log("Callback executed!");
+//// });
+//
+//
+//// ForEach ()--
+
+
+//9.
+ //let numbers = [1, 2, 3, 4,]  
+ //numbers.forEach(function(number) {
+ // console.log(numbers);
+ // });
+
+// numbers.forEach((number) => { console.log(number);
+// });
+
+
+//
+//11.
+//let fruits = ['apple', 'banana', 'cherry'];
+//fruits.forEach(function(fruits) {
+//console.log(fruits);
+//});
+
+//13.
+// function sumArray(arr) {
+//   let sum = 0;
+//   arr.forEach(function(num) {
+//     sum += num;
+//   });
+//   return sum;
+// }
+// 
+// 
+// let numbers = [1, 2, 3, 4, 5];
+// console.log(sumArray(numbers)); 
+
+
+// map ()
+
+//14.
+ let numbers = [1, 2, 3, 4, 5]
+ let doubled = numbers.map(function(num) {
+   return num * 2;
+ });
+ console.log(doubled);
+
+
+// or
+// let doubled = numbers.map((number) => number * 2);
+// console.log(doubled); 
+// 16.
+// 
+// let people = [{ name: 'Alice' }, { name: 'Bob' }];
+
+// let names = people.map(function(person) {
+//   return person.name;
+// });
+ 
+// console.log(names); 
+
+// or
+// let names = people.map((person) =>person.name);
+// console.log(names); 
+
+//17.
+
+// let fahrenheit = [32, 68, 86,];
+// 
+// let celsius = fahrenheit.map(function(f) {
+//   return (f - 32) * 5 / 9;
+// });
+// 
+// console.log(celsius);
+
+// or
+//let fahrenheitTemps = [32, 68, 86];
+//let celsiusTemps = fahrenheitTemps.map((f) => ((f - 32) * 5) / 9);
+//console.log(celsiusTemps)
+
+//18.
+// let strings = ['hello', 'world'];
+// let toUpperCaseStrings =strings.map(function(string) {
+// return string.toUpperCase();
+// });
+// console.log(toUpperCaseStrings);
+ 
+// or
+// let toUpperCaseStrings =strings.map((str) => str.toUpperCase());
+// console.log(toUpperCaseStrings);
+
+
+// filter()
+
+
+//21.
+//let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let even =numbers.filter((number) =>number % 2 === 0);
+// console.log(even);
+
+// or
+// let evens = numbers.filter(function(number) {
+// return number % 2 === 0;
+// });
+// console.log(evens);
+
+
+// 22.
+let people = [
+  { name: "Alice", age: 17 },
+  { name: "Bob", age: 20 },
+  { name: "Charlie", age: 15 },
+  { name: "David", age: 25 }
+];
+
+// let adults = people.filter(function(person) {
+//   return person.age >= 18;
+// });
+// 
+// console.log(adults);
+
+//  or
+let adults = people.filter((person)=>  person.age>=18);
+console.log(adults);
+
+// 23.
+let words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+// let longwards = words.filter(function(word) {
+// return word.length > 6;
+// });
+// console.log(longwards);
+
+// or
+let longwards = words.filter((word) => word.length > 6);
+ console.log(longwards);
+
+ // 24.
+
+    </script>
+</body>
+</html>

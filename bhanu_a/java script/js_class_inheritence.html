@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Classes Inheritence</title>
+</head>
+<body>
+    <script>
+      //   class Pet {
+      //       constructor(petType,name, ){
+      //           this.petType = petType;
+      //           this.name = name;
+      //       }
+      //   }
+      //   
+      //   class Dog extends Pet {
+      //       constructor(petType,name, breed){
+      //       super(petType,name);
+      //       this.breed = breed;
+      //       }
+      //   }
+ 
+      //   let dog1 = new Dog("Dog","chimtu","Oorakukka");
+      //   console.log(dog1.name);
+      //   console.log(dog1.petType);
+      //   console.log(dog1.breed);
+
+     class Car {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+    displayInfo() {
+    console.log(`Car Make: ${this.make}, Model: ${this.model}`);
+  }
+}
+
+const car1 = new Car("Kia", "seltos");
+car1.displayInfo();
+
+
+ class Dog {
+  constructor(name, breed = 'Mutt') {
+    this.name = name;
+    this.breed = breed;
+  }
+
+  displayInfo() {
+    console.log(`Dog Name: ${this.name}, Breed: ${this.breed}`);
+  }
+}
+
+
+const dog1 = new Dog('Buddy', 'Labrador');
+dog1.displayInfo(); 
+
+const dog2 = new Dog('Charlie');
+dog2.displayInfo();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard Stats</title>
+  <style>
+    body {
+      display: flex;
+      font-family: 'Segoe UI', sans-serif;
+      background: #cacbcf;
+      padding: 20px;
+    }
+    .dashboard {
+      display:flex;
+      gap: 10px;
+      display: wrap;
+      padding:2px;
+      height: 100vh;
+      width:500px;
+      justify-content: space-between;
+    
+    }
+    .card {
+    display: grid;
+            height: 10px;
+            grid-template-columns: auto ;
+            background-color: antiquewhite;
+            gap: 10px;
+            padding: 30px;
+            margin:4px;
+            height: 00vh;
+            width: 500px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="dashboard">
+    <div class="card">
+      <div class="change down">-1.05%</div>
+      <div class="label">TOTAL EMPLOYERS</div>
+    </div>
+
+    <div class="card">
+      <div class="count">4,026</div>
+      <div class="change up">+0.40%</div>
+      <div class="label">TOTAL CANDIDATES</div>
+    </div>
+
+    <div class="card">
+      <div class="count">48</div>
+      <div class="change up">+0.82%</div>
+      <div class="label">TOTAL LOCATIONS</div>
+    </div>
+
+    <div class="card">
+      <div class="count">1,116</div>
+      <div class="change up">+0.21%</div>
+      <div class="label">TOTAL RECRUITERS</div>
+    </div>
+
+    <div class="card">
+      <div class="count">1,468</div>
+      <div class="change down">-0.153%</div>
+      <div class="label">TOTAL SUBSCRIPTIONS</div>
+    </div>
+  </div>
+
+</body>
+</html>

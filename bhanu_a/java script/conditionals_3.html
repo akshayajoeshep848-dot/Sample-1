@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         // grade A -100 -90
+        // grade B -90 -80
+        // grade c -80 -70
+        // grade D -70 -60
+        // grade E -60 -40
+        // grade F -40 -0
+
+ let marks = (prompt("Enter your marks:"));
+
+let grade;
+
+if (marks >= 90 && marks <= 100) {
+  grade = "A";
+} else if (marks >= 80 && marks < 90) {
+  grade = "B";
+} else if (marks >= 70 && marks < 80) {
+  grade = "C";
+} else if (marks >= 60 && marks < 70) {
+  grade = "D";
+} else if (marks >= 40 && marks < 60) {
+  grade = "E";
+} else if (marks >= 0 && marks < 40) {
+  grade = "F";
+} else {
+  grade = "Invalid Marks";
+}
+
+console.log("Your Grade is: " + grade);
+
+
+// 0 - sunday
+// 1 - monday
+// 2 - Tuesday
+// 3-  Wednesday
+//4 -   Thursday
+// 5 - Friday
+// 6 - Saturday
+
+
+let day = new Date().getDay();  
+
+if (day === 0) {
+  console.log("Sunday");
+} else if (day === 1) {
+  console.log("Monday");
+} else if (day === 2) {
+  console.log("Tuesday");
+} else if (day === 3) {
+  console.log("Wednesday");
+} else if (day === 4) {
+  console.log("Thursday");
+} else if (day === 5) {
+  console.log("Friday");
+} else if (day === 6) {
+  console.log("Saturday");
+} else {
+  console.log("Invalid day");
+}
+
+
+// Temperature conditions
+// -40 to 0 -> Weather is too cold, don't go outside
+// 0 - 10 -> weather is cold, wear warm clothes while going outside
+// 10 - 20 ->Weather is some what cool, wear sweater while going out
+// 20 - 30 -> weather is awesome today,enjoy outdoors
+// 30 40 -> wheather is little bit hot, be cautions and drink water
+// 40 - 50 -> wheather is very hot, avoid goind ourtside
+// 50 and above.-> Dig a hole underground and hide
+// cuz you will be paper roast outside
+
+
+let temperature = 45; 
+
+if (temperature >= -40 && temperature < 0) {
+    console.log("Weather is too cold, don't go outside");
+} else if (temperature >= 0 && temperature < 10) {
+    console.log("Weather is cold, wear warm clothes while going outside");
+} else if (temperature >= 10 && temperature < 20) {
+    console.log("Weather is somewhat cool, wear a sweater while going out");
+} else if (temperature >= 20 && temperature < 30) {
+    console.log("Weather is awesome today, enjoy outdoors");
+} else if (temperature >= 30 && temperature < 40) {
+    console.log("Weather is a little bit hot, be cautious and drink water");
+} else if (temperature >= 40 && temperature < 50) {
+    console.log("Weather is very hot, avoid going outside");
+} else if (temperature >= 50) {
+    console.log("Dig a hole underground and hide, cuz you will be paper roast outside");
+} else {
+    console.log("Invalid temperature range");
+}
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comprehensive JavaScript Array Methods Guide</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css"
+    />
+    <style>
+      /* Custom Properties for Colors */
+      :root {
+        --color-blue-50: #eff6ff;
+        --color-indigo-100: #e0e7ff;
+        --color-white: #ffffff;
+        --color-gray-800: #1f2937;
+        --color-gray-600: #4b5563;
+        --color-gray-700: #374151;
+        --color-indigo-700: #4338ca;
+        --color-indigo-600: #4f46e5;
+        --color-blue-600: #2563eb; /* for border-left */
+        --color-gray-500: #6b7280;
+        --color-code-bg: #f6f8fa;
+        --color-method-name: #1e40af;
+      }
+
+      /* Base Body Styles */
+      body {
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(
+          to bottom right,
+          var(--color-blue-50),
+          var(--color-indigo-100)
+        );
+        min-height: 100vh;
+        color: var(--color-gray-800);
+        padding: 1rem; /* p-4 */
+      }
+
+      /* Responsive Padding for Body */
+      @media (min-width: 640px) {
+        /* sm:p-6 */
+        body {
+          padding: 1.5rem;
+        }
+      }
+      @media (min-width: 768px) {
+        /* md:p-8 */
+        body {
+          padding: 2rem;
+        }
+      }
+
+      /* Main Container Styles */
+      .main-container {
+        max-width: 90vw; /* Equivalent to max-w-4xl (768px) in Tailwind default config, adjusted slightly for better fit */
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--color-white);
+        border-radius: 0.75rem; /* rounded-xl */
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+        padding: 1.5rem; /* p-6 */
+        margin-bottom: 2rem; /* mb-8 */
+      }
+
+      /* Responsive Padding for Main Container */
+      @media (min-width: 640px) {
+        /* sm:p-8 */
+        .main-container {
+          padding: 2rem;
+        }
+      }
+      @media (min-width: 768px) {
+        /* md:p-10 */
+        .main-container {
+          padding: 2.5rem;
+        }
+      }
+
+      /* Heading Styles */
+      .main-title {
+        font-size: 1.25rem; /* text-4xl */
+        font-weight: 800; /* font-extrabold */
+        text-align: center;
+        color: var(--color-indigo-700);
+        margin-bottom: 0.5rem; /* mb-6 */
+      }
+      @media (min-width: 640px) {
+        /* sm:mb-8 */
+        .main-title {
+          margin-bottom: 2rem;
+        }
+      }
+
+      h2 {
+        font-size: 1.875rem; /* text-3xl */
+        font-weight: 700; /* font-bold */
+        color: var(--color-indigo-600);
+        margin-bottom: 1.5rem; /* mb-6 */
+        margin-top: 2.5rem; /* mt-10 */
+      }
+
+      /* Paragraph Styles */
+      p {
+        color: var(--color-gray-700);
+        margin-bottom: 0.75rem; /* mb-3 */
+      }
+      .method-section{
+        display: grid;
+        grid-template-columns:repeat(2,minmax(500px,50%));
+        gap: 20px;
+      
+      }
+      .intro-text {
+        font-size: 1rem; /* text-lg */
+        text-align: center;
+        color: var(--color-gray-600);
+        margin-bottom: 2rem; /* mb-8 */
+      }
+      .section-intro-text {
+        color: var(--color-gray-700);
+        margin-bottom: 1.5rem; /* mb-6 */
+      }
+      .use-case-text {
+        color: var(--color-gray-600);
+        font-style: italic;
+      }
+
+      /* Code Block Styles */
+      .code-block {
+        background-color: var(--color-code-bg);
+        border-left: 4px solid var(--color-blue-600);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.75rem;
+        margin-bottom: 0.75rem;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+          Courier, monospace;
+        font-size: 0.875rem;
+        overflow-x: auto;
+      }
+      .code-block pre {
+        margin: 0; /* Remove default pre margin */
+      }
+
+      /* Method Card Styles */
+      .method-card {
+        background-color: var(--color-white);
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: transform 0.2s ease-in-out;
+      }
+      .method-card:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Method Name Styles */
+      .method-name {
+        font-size: 1.5rem; /* text-2xl */
+        color: var(--color-method-name);
+        font-weight: 700;
+        margin-bottom: 0.5rem; /* mb-2 */
+      }
+
+      /* Footer Styles */
+      .site-footer {
+        max-width: 56rem; /* Equivalent to max-w-4xl */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: var(--color-gray-500);
+        font-size: 0.875rem; /* text-sm */
+        margin-top: 2.5rem; /* mt-10 */
+        margin-bottom: 1.5rem; /* mb-6 */
+        padding: 1rem; /* p-4 */
+      }
+    </style>
+  </head>
+  <body class="text-gray-800">
+    <div class="main-container">
+      <h1 class="main-title">Comprehensive JavaScript Array Methods Guide</h1>
+      <p class="intro-text">
+        Explore essential JavaScript array methods, their functionality,
+        practical examples, and common use cases.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto content-container">
+      <!-- The max-w-4xl mx-auto is retained for this div for consistent content width -->
+      <!-- However, its styling is now handled by .max-w-content-area in custom CSS, if needed -->
+
+      <!-- Mutator Methods Section -->
+      <h2>Mutator Methods</h2>
+      <p class="section-intro-text">These methods modify the original array.</p>
+      <div class="method-section">
+        <!-- Push Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>push()</code></h3>
+          <p>
+            Adds one or more elements to the end of an array and returns the new
+            length of the array.
+          </p>
+          <div class="code-block">
+            <pre><code> class =const fruits = ['apple', 'banana'];
+fruits.push('orange', 'grape');
+// fruits is now ['apple', 'banana', 'orange', 'grape']
+console.log(fruits);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Adding new items to a shopping cart or a
+            list of tasks.
+          </p>
+        </div>
+
+        <!-- Pop Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>pop()</code></h3>
+          <p>
+            Removes the last element from an array and returns that element.
+            This method changes the length of the array.
+          </p>
+          <div class="code-block">
+            <pre><code>const fruits = ['apple', 'banana', 'cherry'];
+const lastFruit = fruits.pop();
+// fruits is now ['apple', 'banana']
+// lastFruit is 'cherry'
+console.log(fruits, lastFruit);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Processing items from the end of a queue
+            or removing the last added item from a collection.
+          </p>
+        </div>
+
+        <!-- Shift Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>shift()</code></h3>
+          <p>
+            Removes the first element from an array and returns that removed
+            element. This method changes the length of the array.
+          </p>
+          <div class="code-block">
+            <pre><code>const queue = ['task1', 'task2', 'task3'];
+const nextTask = queue.shift();
+// queue is now ['task2', 'task3']
+// nextTask is 'task1'
+console.log(queue, nextTask);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Handling items from the front of a queue
+            (FIFO - First In, First Out).
+          </p>
+        </div>
+
+        <!-- Unshift Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>unshift()</code></h3>
+          <p>
+            Adds one or more elements to the beginning of an array and returns
+            the new length of the array.
+          </p>
+          <div class="code-block">
+            <pre><code>const numbers = [3, 4];
+numbers.unshift(1, 2);
+// numbers is now [1, 2, 3, 4]
+console.log(numbers);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Adding new elements to the beginning of a
+            history list or log.
+          </p>
+        </div>
+
+        <!-- Splice Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>splice()</code></h3>
+          <p>
+            Changes the contents of an array by removing or replacing existing
+            elements and/or adding new elements in place.
+          </p>
+          <div class="code-block">
+            <pre><code>const months = ['Jan', 'Mar', 'Apr', 'May'];
+// Insert 'Feb' at index 1 (0 elements to remove)
+months.splice(1, 0, 'Feb');
+// months is now ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+console.log(months);
+
+// Remove 1 element at index 4 and replace it with 'Jun'
+months.splice(4, 1, 'Jun');
+// months is now ['Jan', 'Feb', 'Mar', 'Apr', 'Jun']
+console.log(months);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Removing specific items by index,
+            inserting items at any position, or replacing items in a list (e.g.,
+            editing a playlist).
+          </p>
+        </div>
+
+        <!-- Sort Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>sort()</code></h3>
+          <p>
+            Sorts the elements of an array in place and returns the sorted
+            array. The default sort order is ascending, built upon converting
+            the elements into strings, then comparing their sequences of UTF-16
+            code units. For numbers, a compare function is often needed.
+          </p>
+          <div class="code-block">
+            <pre><code>const names = ['Alice', 'Charlie', 'Bob'];
+names.sort();
+// names is now ['Alice', 'Bob', 'Charlie']
+console.log(names);
+
+const numbers = [40, 100, 1, 5, 25, 10];
+numbers.sort((a, b) => a - b); // Ascending numeric sort
+// numbers is now [1, 5, 10, 25, 40, 100]
+console.log(numbers);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Ordering lists of data, such as product
+            names alphabetically or prices numerically.
+          </p>
+        </div>
+
+        <!-- Reverse Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>reverse()</code></h3>
+          <p>
+            Reverses the order of the elements in an array in place. The first
+            array element becomes the last, and the last array element becomes
+            the first.
+          </p>
+          <div class="code-block">
+            <pre><code>const items = ['one', 'two', 'three'];
+items.reverse();
+// items is now ['three', 'two', 'one']
+console.log(items);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Displaying search results in reverse
+            chronological order, or undoing an action by reversing a sequence of
+            steps.
+          </p>
+        </div>
+
+        <!-- Fill Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>fill()</code></h3>
+          <p>
+            Fills all the elements of an array from a start index to an end
+            index with a static value. Modifies the original array.
+          </p>
+          <div class="code-block">
+            <pre><code>const arr = [1, 2, 3, 4, 5];
+arr.fill(0, 2, 4); // Fill with 0 from index 2 up to (but not including) index 4
+// arr is now [1, 2, 0, 0, 5]
+console.log(arr);
+
+const newArr = new Array(5).fill('hello'); // Create an array of 5 'hello' strings
+// newArr is now ['hello', 'hello', 'hello', 'hello', 'hello']
+console.log(newArr);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Initializing an array with default
+            values, or resetting a section of an array.
+          </p>
+        </div>
+
+        <!-- CopyWithin Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>copyWithin()</code></h3>
+          <p>
+            Copies a sequence of array elements within the array to the position
+            starting at <code>target</code>. It does not change the length of
+            the array.
+          </p>
+          <div class="code-block">
+            <pre><code>const arr = [1, 2, 3, 4, 5];
+// Copy elements from index 3 (value 4) to index 0.
+arr.copyWithin(0, 3);
+// arr is now [4, 5, 3, 4, 5]
+console.log(arr);
+
+const arr2 = [1, 2, 3, 4, 5];
+// Copy elements from index 3 (value 4) up to index 4 (exclusive)
+// to position starting at index 1.
+arr2.copyWithin(1, 3, 4);
+// arr2 is now [1, 4, 3, 4, 5]
+console.log(arr2);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Shifting elements within an array
+            efficiently, useful in scenarios like handling fixed-size buffers or
+            game board manipulations.
+          </p>
+        </div>
+      </div>
+      <!-- Accessor Methods Section -->
+      <h2>Accessor Methods</h2>
+      <p class="section-intro-text">
+        These methods do not modify the original array; they return a new array
+        or a new value.
+      </p>
+      <div class="method-section">
+        <!-- Concat Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>concat()</code></h3>
+          <p>
+            Used to merge two or more arrays. This method does not change the
+            existing arrays, but instead returns a new array.
+          </p>
+          <div class="code-block">
+            <pre><code>const arr1 = ['a', 'b'];
+const arr2 = ['c', 'd'];
+const arr3 = ['e', 'f'];
+const newArray = arr1.concat(arr2, arr3);
+// newArray is now ['a', 'b', 'c', 'd', 'e', 'f']
+// arr1, arr2, arr3 remain unchanged
+console.log(newArray);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Combining multiple data sets or lists
+            without altering the originals, like merging user lists from
+            different sources.
+          </p>
+        </div>
+
+        <!-- Slice Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>slice()</code></h3>
+          <p>
+            Returns a shallow copy of a portion of an array into a new array
+            object selected from <code>start</code> to <code>end</code> (end not
+            included). The original array will not be modified.
+          </p>
+          <div class="code-block">
+            <pre><code>const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animals.slice(2));      // ['camel', 'duck', 'elephant']
+console.log(animals.slice(2, 4));   // ['camel', 'duck']
+console.log(animals.slice(1, 5));   // ['bison', 'camel', 'duck', 'elephant']
+console.log(animals);               // ['ant', 'bison', 'camel', 'duck', 'elephant'] (original unchanged)</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Creating subsets of an array for
+            pagination, displaying a limited number of results, or creating a
+            copy of an array.
+          </p>
+        </div>
+
+        <!-- IndexOf Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>indexOf()</code></h3>
+          <p>
+            Returns the first index at which a given element can be found in the
+            array, or <code>-1</code> if it is not present.
+          </p>
+          <div class="code-block">
+            <pre><code>const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+console.log(beasts.indexOf('bison'));     // 1
+console.log(beasts.indexOf('giraffe'));   // -1
+console.log(beasts.indexOf('bison', 2));  // 4 (starts search from index 2)</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Checking for the existence of an item in
+            an array or finding its position.
+          </p>
+        </div>
+
+        <!-- LastIndexOf Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>lastIndexOf()</code></h3>
+          <p>
+            Returns the last index at which a given element can be found in the
+            array, or <code>-1</code> if it is not present. The array is
+            searched backwards, starting from <code>fromIndex</code>.
+          </p>
+          <div class="code-block">
+            <pre><code>const numbers = [2, 5, 9, 2, 8];
+console.log(numbers.lastIndexOf(2));    // 3
+console.log(numbers.lastIndexOf(7));    // -1
+console.log(numbers.lastIndexOf(2, 3)); // 3 (starts search from index 3 backwards)</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Finding the most recent occurrence of an
+            item in a list or tracking duplicate entries.
+          </p>
+        </div>
+
+        <!-- Includes Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>includes()</code></h3>
+          <p>
+            Determines whether an array includes a certain value among its
+            entries, returning <code>true</code> or <code>false</code> as
+            appropriate.
+          </p>
+          <div class="code-block">
+            <pre><code>const pets = ['cat', 'dog', 'bat'];
+console.log(pets.includes('cat'));     // true
+console.log(pets.includes('at'));      // false (exact match required)
+console.log(pets.includes('dog', 1));  // true (starts search from index 1)</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Quickly checking if an item exists in a
+            list without needing its index, like checking if a user has a
+            specific permission.
+          </p>
+        </div>
+
+        <!-- Join Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>join()</code></h3>
+          <p>
+            Creates and returns a new string by concatenating all of the
+            elements in an array (or an array-like object), separated by commas
+            or a specified separator string.
+          </p>
+          <div class="code-block">
+            <pre><code>const elements = ['Fire', 'Air', 'Water'];
+console.log(elements.join());     // "Fire,Air,Water" (default comma separator)
+console.log(elements.join(''));   // "FireAirWater"
+console.log(elements.join('-'));  // "Fire-Air-Water"</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Converting an array of words into a
+            sentence, or generating a comma-separated string from a list of
+            tags.
+          </p>
+        </div>
+
+        <!-- ToString Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>toString()</code></h3>
+          <p>
+            Returns a string representing the specified array and its elements.
+            It's similar to <code>join(',')</code> but cannot take arguments.
+          </p>
+          <div class="code-block">
+            <pre><code>const array1 = [1, 2, 'a', '1a'];
+console.log(array1.toString()); // "1,2,a,1a"</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Simple string representation of an array,
+            often for debugging or logging.
+          </p>
+        </div>
+
+        <!-- At Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>at()</code></h3>
+          <p>
+            Takes an integer value and returns the item at that index, allowing
+            for positive and negative integers. Negative integers count back
+            from the last item in the array.
+          </p>
+          <div class="code-block">
+            <pre><code>const arr = [5, 12, 8, 130, 44];
+console.log(arr.at(2));  // 8
+console.log(arr.at(-1)); // 44 (last element)
+console.log(arr.at(-3)); // 8 (third from last)</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Accessing elements from the end of an
+            array without knowing its length (e.g., getting the last item), or
+            simply a more flexible way to access elements by index.
+          </p>
+        </div>
+      </div>
+      <!-- Iteration Methods Section -->
+      <h2>Iteration Methods</h2>
+      <p class="section-intro-text">
+        These methods iterate over array elements, often executing a callback
+        function for each element.
+      </p>
+      <div class="method-section">
+        <!-- ForEach Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>forEach()</code></h3>
+          <p>
+            Executes a provided function once for each array element. It does
+            not return a new array.
+          </p>
+          <div class="code-block">
+            <pre><code>const numbers = [1, 2, 3, 4];
+let sum = 0;
+numbers.forEach(num => {
+    sum += num;
+});
+// sum is now 10
+console.log(sum);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Performing an action for each item in a
+            list, like logging all users or updating their status.
+          </p>
+        </div>
+
+        <!-- Map Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>map()</code></h3>
+          <p>
+            Creates a new array populated with the results of calling a provided
+            function on every element in the calling array.
+          </p>
+          <div class="code-block">
+            <pre><code>const numbers = [1, 4, 9, 16];
+const doubled = numbers.map(num => num * 2);
+// doubled is now [2, 8, 18, 32]
+// numbers remains [1, 4, 9, 16]
+console.log(doubled);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Transforming data from one format to
+            another (e.g., converting an array of objects into an array of
+            specific properties, or scaling values).
+          </p>
+        </div>
+
+        <!-- Filter Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>filter()</code></h3>
+          <p>
+            Creates a new array with all elements that pass the test implemented
+            by the provided function.
+          </p>
+          <div class="code-block">
+            <pre><code>const words = ['spray', 'elite', 'exuberant', 'destruction', 'present'];
+const longWords = words.filter(word => word.length > 6);
+// longWords is now ['exuberant', 'destruction', 'present']
+console.log(longWords);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Selecting specific items from a list
+            based on criteria, such as filtering active users or products within
+            a price range.
+          </p>
+        </div>
+
+        <!-- Reduce Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>reduce()</code></h3>
+          <p>
+            Executes a user-supplied "reducer" callback function on each element
+            of the array, in order, passing in the return value from the
+            calculation on the preceding element. The final result of running
+            the reducer across all elements is a single value.
+          </p>
+          <div class="code-block">
+            <pre><code>const numbers = [1, 2, 3, 4];
+const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+// sum is now 10
+console.log(sum);
+
+const shoppingCart = [{ item: 'A', price: 10 }, { item: 'B', price: 20 }, { item: 'C', price: 30 }];
+const totalPrice = shoppingCart.reduce((total, product) => total + product.price, 0);
+// totalPrice is now 60
+console.log(totalPrice);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Calculating a single value from an array
+            of elements, like summing up all numbers, counting occurrences, or
+            flattening an array of arrays.
+          </p>
+        </div>
+
+        <!-- Find Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>find()</code></h3>
+          <p>
+            Returns the value of the first element in the provided array that
+            satisfies the provided testing function. Otherwise,
+            <code>undefined</code> is returned.
+          </p>
+          <div class="code-block">
+            <pre><code>const users = [
+    { id: 1, name: 'Alice' },
+    { id: 2, name: 'Bob' },
+    { id: 3, name: 'Charlie' }
+];
+const userBob = users.find(user => user.name === 'Bob');
+// userBob is now { id: 2, name: 'Bob' }
+console.log(userBob);
+
+const userNotFound = users.find(user => user.name === 'David');
+// userNotFound is now undefined
+console.log(userNotFound);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Locating the first element that matches a
+            specific condition, like finding a user by their ID.
+          </p>
+        </div>
+
+        <!-- FindIndex Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>findIndex()</code></h3>
+          <p>
+            Returns the index of the first element in the array that satisfies
+            the provided testing function. Otherwise, <code>-1</code> is
+            returned.
+          </p>
+          <div class="code-block">
+            <pre><code>const ages = [10, 25, 18, 30, 15];
+const adultIndex = ages.findIndex(age => age >= 18);
+// adultIndex is now 1 (index of 25)
+console.log(adultIndex);
+
+const missingIndex = ages.findIndex(age => age === 50);
+// missingIndex is now -1
+console.log(missingIndex);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Finding the position of an element based
+            on a complex condition, rather than just its value.
+          </p>
+        </div>
+
+        <!-- Some Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>some()</code></h3>
+          <p>
+            Tests whether at least one element in the array passes the test
+            implemented by the provided function. It returns a Boolean value.
+          </p>
+          <div class="code-block">
+            <pre><code>const numbers = [1, 3, 5, 7, 9];
+const hasEven = numbers.some(num => num % 2 === 0);
+// hasEven is now false
+console.log(hasEven);
+
+const numbers2 = [1, 2, 3, 4, 5];
+const hasEven2 = numbers2.some(num => num % 2 === 0);
+// hasEven2 is now true
+console.log(hasEven2);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Checking if any item in a list meets a
+            certain condition (e.g., "Are there any pending tasks?", "Does any
+            product have a discount?").
+          </p>
+        </div>
+
+        <!-- Every Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>every()</code></h3>
+          <p>
+            Tests whether all elements in the array pass the test implemented by
+            the provided function. It returns a Boolean value.
+          </p>
+          <div class="code-block">
+            <pre><code>const ages = [18, 20, 22, 19];
+const allAdults = ages.every(age => age >= 18);
+// allAdults is now true
+console.log(allAdults);
+
+const ages2 = [17, 20, 22, 19];
+const allAdults2 = ages2.every(age => age >= 18);
+// allAdults2 is now false
+console.log(allAdults2);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Validating if all items in a list meet a
+            specific criteria (e.g., "Are all form fields filled?", "Are all
+            users subscribed?").
+          </p>
+        </div>
+
+        <!-- Flat Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>flat()</code></h3>
+          <p>
+            Creates a new array with all sub-array elements concatenated into it
+            recursively up to the specified depth.
+          </p>
+          <div class="code-block">
+            <pre><code>const arr1 = [1, 2, [3, 4]];
+console.log(arr1.flat()); // [1, 2, 3, 4]
+
+const arr2 = [1, 2, [3, 4, [5, 6]]];
+console.log(arr2.flat());     // [1, 2, 3, 4, [5, 6]] (default depth is 1)
+console.log(arr2.flat(2));    // [1, 2, 3, 4, 5, 6]
+console.log(arr2.flat(Infinity)); // [1, 2, 3, 4, 5, 6] (flattens all nested arrays)</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Flattening nested arrays, useful for
+            processing data that might come in a hierarchical structure.
+          </p>
+        </div>
+
+        <!-- FlatMap Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>flatMap()</code></h3>
+          <p>
+            First maps each element using a mapping function, then flattens the
+            result into a new array. It is identical to
+            <code>map()</code> followed by <code>flat()</code> of depth 1.
+          </p>
+          <div class="code-block">
+            <pre><code>const words = ['it', 'was', 'the best of times'];
+const result = words.flatMap(word => word.split(' '));
+// result is now ['it', 'was', 'the', 'best', 'of', 'times']
+console.log(result);
+
+const numbers = [1, 2, 3];
+const doubledAndAdded = numbers.flatMap(num => [num * 2, num + 1]);
+// doubledAndAdded is now [2, 2, 4, 3, 6, 4]
+console.log(doubledAndAdded);</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Transforming and flattening data in a
+            single step, such as tokenizing sentences into words or creating new
+            elements from existing ones that might expand into multiple items.
+          </p>
+        </div>
+      </div>
+      <!-- Other Useful Methods Section -->
+      <h2>Other Useful Methods</h2>
+      <div class="method-section">
+        <!-- IsArray Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>Array.isArray()</code></h3>
+          <p>
+            The <code>Array.isArray()</code> static method determines whether
+            the passed value is an <code>Array</code>.
+          </p>
+          <div class="code-block">
+            <pre><code>console.log(Array.isArray([1, 2, 3])); // true
+console.log(Array.isArray({}));         // false
+console.log(Array.isArray('hello'));    // false</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Robustly checking if a variable holds an
+            array, especially when dealing with unknown input types.
+          </p>
+        </div>
+
+        <!-- From Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>Array.from()</code></h3>
+          <p>
+            The <code>Array.from()</code> static method creates a new,
+            shallow-copied <code>Array</code>
+            instance from an array-like or iterable object.
+          </p>
+          <div class="code-block">
+            <pre><code>console.log(Array.from('foo')); // ['f', 'o', 'o']
+
+const set = new Set(['foo', 'bar', 'baz']);
+console.log(Array.from(set)); // ['foo', 'bar', 'baz']
+
+// Using a map function
+console.log(Array.from([1, 2, 3], x => x + x)); // [2, 4, 6]</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Converting NodeList (from
+            <code>querySelectorAll</code>), Set, Map, or arguments objects into
+            true arrays, or creating arrays from iterables with a
+            transformation.
+          </p>
+        </div>
+
+        <!-- Of Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>Array.of()</code></h3>
+          <p>
+            The <code>Array.of()</code> static method creates a new
+            <code>Array</code> instance from a variable number of arguments,
+            regardless of number or type of the arguments.
+          </p>
+          <div class="code-block">
+            <pre><code>console.log(Array.of(1, 2, 3));        // [1, 2, 3]
+console.log(Array.of(7));              // [7]
+console.log(Array.of(undefined));      // [undefined]
+console.log(Array.of(1, 'hello', true)); // [1, 'hello', true]</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> A simpler and more predictable way to
+            create arrays with a single element compared to the
+            <code>Array</code> constructor (e.g.,
+            <code>new Array(7)</code> creates an array of 7 empty slots, while
+            <code>Array.of(7)</code> creates <code>[7]</code>).
+          </p>
+        </div>
+
+        <!-- Entries Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>entries()</code></h3>
+          <p>
+            Returns a new <code>Array Iterator</code> object that contains the
+            key/value pairs for each index in the array.
+          </p>
+          <div class="code-block">
+            <pre><code>const arr = ['a', 'b', 'c'];
+const iterator = arr.entries();
+
+console.log(iterator.next().value); // [0, 'a']
+console.log(iterator.next().value); // [1, 'b']
+console.log(iterator.next().value); // [2, 'c']</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> Iterating over both index and value of an
+            array, especially when traditional <code>for...of</code> loops might
+            not be suitable or when creating custom iterators.
+          </p>
+        </div>
+
+        <!-- Keys Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>keys()</code></h3>
+          <p>
+            Returns a new <code>Array Iterator</code> object that contains the
+            keys for each index in the array.
+          </p>
+          <div class="code-block">
+            <pre><code>const arr = ['a', 'b', 'c'];
+const iterator = arr.keys();
+
+console.log(iterator.next().value); // 0
+console.log(iterator.next().value); // 1
+console.log(iterator.next().value); // 2</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> When you only need to iterate over the
+            indices (keys) of an array, similar to
+            <code>Object.keys()</code> for objects.
+          </p>
+        </div>
+
+        <!-- Values Method -->
+        <div class="method-card">
+          <h3 class="method-name"><code>values()</code></h3>
+          <p>
+            Returns a new <code>Array Iterator</code> object that contains the
+            values for each index in the array.
+          </p>
+          <div class="code-block">
+            <pre><code>const arr = ['a', 'b', 'c'];
+const iterator = arr.values();
+
+console.log(iterator.next().value); // 'a'
+console.log(iterator.next().value); // 'b'
+console.log(iterator.next().value); // 'c'</code></pre>
+          </div>
+          <p class="use-case-text">
+            <strong>Use Case:</strong> When you only need to iterate over the
+            values of an array using an iterator, similar to
+            <code>for...of</code> loops directly on arrays.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      &copy; 2025, LogicWhile, JavaScript Array Methods Guide. All rights
+      reserved.
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  </body>
+</html>

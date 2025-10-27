@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head-1">selecting DOM Elements</h1>
+    <div id="div-1"></div>
+    <!-- <input type="text" id="in-1" value="bhanu"/> -->
+    <script>
+        // let head1 = document.getElementById("head-1");
+        //   console.log(head1.innerText);
+        //    head1.innerText = "Bhanu"; 
+ 
+        //  let div1 = document.getElementById("div-1");
+        //  console.log(div1);
+        //  div1.innerHTML="<p>This is a para</P>";
+ 
+        // let input1 = document.getElementById("in-1");  
+        // console.log(input1.value);  
+ 
+
+        // write a function to print sum of two numbers in html
+
+        let num1 = Number(prompt("Enter a first number"));
+        let num2 = Number(prompt("Enter a second number"));
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        let div1 = document.getElementById("div-1");
+        div1.innerText = sum(num1, num2);
+    </script>
+</body>
+</html>

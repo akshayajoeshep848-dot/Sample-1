@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+<div class="container">
+    <div class=" menu-item menu-items1-">Menu ITem 1</div>
+    <div class=" menu-item menu-items2-">Menu ITem 2</div>
+    <div class=" menu-item menu-items3-">Menu ITem 3</div>
+    <div class=" menu-item menu-items4-">Menu ITem 4</div>
+    </div>
+
+    <div class="para-container">
+    <p>This is a para 1</p>
+    <p>This is a para 2</p>
+    <p>This is a para 3</p>
+    <p>This is a para 4</p>
+
+    </div>
+
+    <div class="button-container">
+        <button class="button-item">button 1</button>
+        <button class="button-item">button 2</button>
+        <button class="button-item">button 3</button>
+        <button class="button-item">button 4</button>
+        <button class="button-item">button 5</button>
+    </div>
+    <script>
+
+      // getElementsByClassName
+
+         let menuItems = document.getElementsByClassName("menu-item");
+         console.log(Array.isArray(menuItems));
+         console.log(menuItems);
+         console.log(Array.isArray(Array.from(menuItems)));
+         console.log(Array.from(menuItems));
+         let menuItemsArray = Array.from(menuItems);
+         menuItemsArray.forEach((item) => (item.innertext = "Hello"));
+
+       
+       // getElementsByTagName
+
+       let paraItems = document.getElementsByTagName("p");
+     //   let arr = ["bhanu",2,3,4];
+     let actorsArray = [
+               {
+                    name: "prabhas",
+                    profession: "Acting",
+                    movies: ["Mirchi","Bahubali"],
+               },
+               {
+                     name: "N.T.R jr",
+                     profession: "Acting, Entreprenuer",
+                     movies: ["Aadhi", "Temper"],
+               },
+               {
+                     name: "Sai Pallavi",
+                     profession: "Acting, Doctor",
+                     movies:["Fida","Love Story"],
+               },
+               {
+                     name: "Anushka",
+                     profession: "Acting, Modeling ",
+                     movies:["Billa","Arundhathi"],
+               },
+               ];
+
+       Array.from(paraItems).forEach((element,index) => {
+        element.innerText = `Actor Name: ${actorsArray[index].name}`;
+      });
+          
+
+      // querySelectorAll
+      // NodeList - static list
+
+      
+
+      let buttonItems = document.querySelectorAll(".button-item");
+      buttonItems.forEach((item) => {
+        item.innerText = "click me";
+        item.style.backgroundColor = "blue";
+        item.style.padding = "10px";
+        item.style.border = "None";
+        item.style.color = "White";
+        item.style.borderRadius = "10px";
+        item.style.margin = "10px";
+    });
+
+
+    </script>
+</body>
+</html>

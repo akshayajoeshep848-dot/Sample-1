@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS BMI Calculator</title>
+</head>
+<body>
+    <h1 id="head"></h1>
+    <div id="divv"></div>
+    <div>
+    <label for="weight">Weight:</label>
+    <input type="number" name="weight" id="weight" placeholder="Enter weight in KGS"></div>
+    <br>
+    <div>
+    <label for="height">Height:</label>
+    <input type="number", name="height", id="height" placeholder="Enter Height in CMS"></div><br> 
+        <div>
+    <button id="button">Calculate</button></div>
+    <script>
+        let head = document.getElementById("head")
+        head.textContent = "BMI Calculator";
+
+        let weight = document.getElementById("weight");
+        let height = document.getElementById("height");
+        let button = document.getElementById("button");
+
+        let emobj = {};
+        
+        button.addEventListener("click", (event) =>{
+        emobj[`${weight.name}`] = weight.value;
+        emobj[`${height.name}`] = height.value;
+
+        let hght = height.value/100;
+        let height1 = hght * hght ;
+        let bmi = weight.value / height1;
+        
+       
+              let result = document.createElement("p");
+      result.textContent = `Your BMI is: ${bmi.toFixed(2)}`;
+
+      //  This is the line that appends it to the body
+      document.body.append(result);
+
+    });
+
+
+
+      //  button.addEventListener(("Click", (event) =>
+         console.log(weight/height);
+
+    </script>
+</body>
+</html>

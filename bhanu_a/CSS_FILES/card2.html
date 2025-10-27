@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recent Transactions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #E9EBF3;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+      height: 435px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 20px;
+      width: 290px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 14px;
+      color: #333;
+    }
+    .card p {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 30px;
+    }
+
+    .main {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 13px;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+  
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 8px;
+    }
+
+    .details .title {
+      font-weight: bold;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .details .subtitle {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .bhanu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 9px;
+    }
+
+    .bhanu .amount {
+      font-weight: bold;
+      color: #333;
+      font-size: 15px;
+    }
+    .amount.up span{
+      color: rgb(57, 230, 14);
+    }
+     .amount.down span{
+      color: red;
+         }
+    .bhanu .date {
+      font-size: 12px;
+      color: #888
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h3>RECENT TRANSACTIONS</h3>
+    <p>Projects where development work is on completion</p>
+
+      <div class="main">
+      <div class="avatar"><img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/5.jpg" alt="img1"></div>
+      <div class="details">
+        <div class="title">Flicker</div>
+        <div class="subtitle">App improvement</div>
+      </div>
+      <div class="bhanu">
+        <div class="amount up">$45.234 <span>↑</span></div>
+        <div class="date">12 Jan 2020</div>
+      </div>
+      </div>
+
+      <div class="main">
+      <div class="avatar"><img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/6.jpg" alt="img2"></div>
+      <div class="details">
+        <div class="title">Intoxica</div>
+        <div class="subtitle">Milestone</div>
+      </div>
+      <div class="bhanu">
+        <div class="amount down">$23.452 <span>↓</span></div>
+        <div class="date">23 Jan 2020</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="avatar"><img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/7.jpg" alt="img3"></div>
+      <div class="details">
+        <div class="title">Digiwatt</div>
+        <div class="subtitle">Sales executive</div>
+      </div>
+      <div class="bhanu">
+        <div class="amount down">$78.001 <span>↓</span></div>
+        <div class="date">4 Apr 2020</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="avatar"><img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/8.jpg" alt="img4"></div>
+      <div class="details">
+        <div class="title">Flicker</div>
+        <div class="subtitle">Milestone2</div>
+      </div>
+      <div class="bhanu">
+        <div class="amount up">$37.285 <span>↑</span></div>
+        <div class="date">4 Apr 2020</div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="avatar"><img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/faces/4.jpg" alt="img5"></div>
+      <div class="details">
+        <div class="title">Flicker</div>
+        <div class="subtitle">App improvement</div>
+      </div>
+      <div class="bhanu">
+        <div class="amount down">$25.341 <span>↓</span></div>
+        <div class="date">4 Apr 2020</div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
+

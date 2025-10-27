@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+</head>
+<body>
+
+  <div id="id"></div>
+
+  <script>
+    let div = document.getElementById("id");
+    div.style.width = "400px";
+    div.style.backgroundColor = "red";
+    div.style.margin = "100px ";
+    div.style.padding = "20px";
+    div.style.color = "white";
+
+    // Create heading
+    let head = document.createElement("h1");
+    head.innerText = "Registration Form";
+    div.append(head);
+
+    // Create label
+    let label1 = document.createElement("label");
+    label1.innerText = "First Name:";
+    div.append(label1);
+
+    //  Save existing content before adding new innerHTML
+    div.innerHTML += `<input type="text"><br><br>`;
+
+    let label2 = document.createElement("label");
+    label2.innerText = "Last Name:";
+    div.append(label2);
+
+     div.innerHTML += `<input type="text"><br><br>`;
+
+     
+    let label3 = document.createElement("label");
+    label3.innerText = "Email:";
+    div.append(label3);
+    
+    div.innerHTML += `<input type="text"><br><br>`;
+
+    let label4 = document.createElement("label");
+    label4.innerText = "Date of Birth:";
+    div.append(label4);
+      
+    div.innerHTML += `<input type="date"><br><br>`;
+
+    let label5 = document.createElement("label");
+    label5.innerText = "Age:";
+    div.append(label5);
+      
+    div.innerHTML += `<input type="text"><br><br>`;
+
+    let label6 = document.createElement("label");
+    label6.innerText = "Gender:";
+    div.append(label6);
+    div.innerHTML += `
+      <input type="radio" name="gender" value="male"> Male
+      <input type="radio" name="gender" value="female"> Female
+      <input type="radio" name="gender" value="other"> Other
+      <br><br>
+    `;
+
+
+    let label7 = document.createElement("label");
+    label7.innerText = "Phone Number:";
+    div.append(label7);
+      
+    div.innerHTML += `<input type="text"><br><br>`;
+
+// Create the form-group div
+let formGroup = document.createElement("div");
+formGroup.className = "form-group";
+
+// Create the label
+let label = document.createElement("label");
+label.innerText = "Course";
+
+// Create the select element
+let select = document.createElement("select");
+select.name = "course";
+
+
+let option1 = document.createElement("option");
+option1.value = "";
+option1.innerText = "Select course";
+
+let option2 = document.createElement("option");
+option2.value = "btech";
+option2.innerText = "B.Tech";
+
+let option3 = document.createElement("option");
+option3.value = "bsc";
+option3.innerText = "B.Sc";
+
+let option4 = document.createElement("option");
+option4.value = "bcom";
+option4.innerText = "B.Com";
+
+let option5 = document.createElement("option");
+option5.value = "ba";
+option5.innerText = "B.A";
+
+// Append options to select
+select.append(option1, option2, option3, option4, option5);
+
+// Append label and select to form-group
+formGroup.append(label, select);
+
+// Append form-group to parent div
+div.append(formGroup);
+
+  
+   
+    
+      
+  </script>
+
+</body>
+</html>
+

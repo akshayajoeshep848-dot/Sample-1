@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 100px 1fr 100px;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-areas: 
+            "header header header"
+            "sidebar1 main sidebar2"
+            "footer footer footer";
+        }
+        .child-1{
+            grid-area: header;
+            background-color: rgb(215, 222, 228);
+            font-size: 34px;
+        }
+        .child-2{
+            grid-area: sidebar1;
+            background-color: rgb(6, 174, 0);
+        }
+        .child-3{
+            grid-area: main;
+            background-color: rgb(216, 184, 24);
+        }
+        .child-4{
+            grid-area: sidebar2;
+            background-color: rgb(42, 102, 137);
+        }
+        .child-5{
+            grid-area: footer;
+            background-color: rgb(201, 32, 41);
+        }
+        @media screen and(max-width: 500px) {
+            .parent{
+             grid-template-columns: 1fr;
+             grid-template-areas: 
+             "header"
+             "sidebar1"
+             "main"
+             "sidebar2"
+             "footer";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-4">child 4</div>
+        <div class="child child-5">child 5</div>
+    </div>
+</body>
+</html>

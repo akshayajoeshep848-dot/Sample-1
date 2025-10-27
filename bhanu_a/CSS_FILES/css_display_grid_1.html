@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID 1</title>
+    <style>
+        .parent{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: auto auto auto;
+            background-color: antiquewhite;
+            gap: 10px;
+            padding: 10px;
+            margin: 10px;
+            border: 2px dashed black;
+            animation: borderDash 1s linear infinite;
+           
+
+          
+        }
+        .child{
+            background-color:aquamarine;
+            padding: 10px;
+        }
+        @keyframes borderDash {
+      to {
+        border-style: dashed;
+        border-color: black;
+        border-width: 3px;
+        border-image: repeating-linear-gradient(90deg, black 0px, black 5px, transparent 5px, transparent 10px) 1;
+        border-image-slice: 1;
+        border-image-width: 3px;
+        transform: rotate(0deg); /* To re-trigger re-render */
+      }
+    }
+    </style>
+</head>
+<body>
+     <h1> CSS GRID 1 -Example</h1>
+     <div class="parent">
+        <div class="child child-1">child 1</div>
+        <div class="child child-2">child 2</div>
+        <div class="child child-3">child 3</div>
+        <div class="child child-4">child 4</div>
+        <div class="child child-5">child 5</div>
+        <div class="child child-6">child 6</div>
+        <div class="child child-7">child 7</div>
+        <div class="child child-8">child 8</div>
+        <div class="child child-9">child 9</div>
+        <div class="child child-10">child 10</div>
+        <div class="child child-11">child 11</div>
+        <div class="child child-12">child 12</div>
+        <div class="child child-13">child 13</div>
+        <div class="child child-14">child 14</div>
+        <div class="child child-15">child 15</div>
+        <div class="child child-16">child 16</div>
+        <div class="child child-17">child 17</div>
+        <div class="child child-18">child 18</div>
+        <div class="child child-19">child 19</div>
+        <div class="child child-20">child 20</div>
+        <div class="child child-21">child 21</div>
+        
+     </div>
+</body>
+</html>

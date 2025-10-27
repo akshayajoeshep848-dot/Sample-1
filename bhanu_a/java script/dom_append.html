@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Append Method</title>
+</head>
+<body>
+    <h1> DOM Append Method</h1>
+    <div id="parent"></div>
+    <script>
+        const parent = document.getElementById("parent");
+
+        const child1 = document.createElement("h1");
+        const child2 = document.createElement("p");
+        const child3 = document.createTextNode("THis is a text")
+
+        child1.textContent = "Greetings";
+        child2.textContent = "Hi, How are you?";
+
+parent.append(child1,child2,child3);
+     </script>
+</body>
+</html>

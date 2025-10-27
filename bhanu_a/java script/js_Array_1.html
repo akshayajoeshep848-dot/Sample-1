@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Arrays</h1>
+    <script>
+        let emptyArray = [];
+        let fruits = ["Apple", "Banana", "cherry"];
+        let numbers = [1,2,3,4,5];
+        let mixedArray = [10, "Hello", true, {name: "Alice"}, [6,7]];
+
+        console.log(fruits[0]);
+        console.log(fruits.length);
+        console.log(mixedArray[3].name);
+        console.log(mixedArray[3]["name"]);
+        console.log(mixedArray[4][0]);
+
+
+        let student = {
+            name: "NTR",
+            age:23,
+            colleage:"Chalapathi Engg College",
+            id: "1234",
+            address: {
+                line1: "H.NO 553, ",
+                line2: "Jubilee Hills road no 29",
+                city: "Hyderabad",
+                state: "Telangana",
+                pincode: "500034",
+            },
+        
+        movies: ["Devara", "war 2", "Temper", "Janatha Garage"],
+        awards: [
+         {
+            name: "Best Dancer",
+            type:  "",
+            year:1996,
+            movie: "",
+
+        },
+        { 
+            name: "Best Actor",
+            type: "Nandhi award",
+            year:2016,
+            movie: "Nanna ki prematho",
+        },
+        {
+            name: "Best ",
+            type: "Nandhi award",
+            year:2016,
+            movie: "Nanna ki prematho",
+        },
+        
+    ],
+        };
+
+        console.log(student.awards[0].name);
+
+
+
+       // create array using constructor
+
+       let arr1 = new Array();
+       let arr2 = new Array("Apple","Banana","Cherry");
+       let arr3 = new Array(4);
+
+       // print arrays
+
+       // console.log(arr1);
+       // console.log(arr2);
+       // console.log(arr3);
+
+       arr3[0] = "Kalakandh";
+       arr[1] = "kaju"
+       arr[2] = "dry fruit"
+       arr[3] = "palakova"
+     
+       console.log(arr3[0]);
+       console.log(arr[1]);
+
+        </script>
+</body>
+</html>

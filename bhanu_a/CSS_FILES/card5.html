@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2fa;
+      padding: 40px;
+    }
+
+    .cart-container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .cart-header,
+    .cart-item {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+    }
+
+    .cart-header {
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+      color: #555;
+    }
+
+
+    .col {
+      flex: 1;
+      text-align: left;
+    }
+
+    .product-col {
+      flex: 3;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .product-col img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 6px;
+      background: #eee;
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      margin-top: -33px;
+    }
+
+    .details .name {
+      font-weight:bold;
+      color: black;
+    }
+
+    .details .desc {
+      font-size: 13px;
+      color: #444;
+    }
+
+    .stock {
+      font-size: 12px;
+    }
+
+    .in-stock {
+      color: green;
+      margin-left: 300px;
+      margin-top: -50px;
+    }
+
+    .out-stock {
+      color: red;
+      margin-left: 300px;
+      margin-top: -50px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .quantity button {
+      padding: 4px 13px;
+      background: #ececff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+
+    }
+
+    .price {
+      font-weight: bold;
+      color: #333;
+    }
+
+      .delete {
+      font-size: 18px;
+      color: rgb(196, 1, 1);
+  
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div class="cart-container">
+  <h2>SHOPPING CART</h2>
+
+  <div class="cart-header">
+    <div class="product-col">PRODUCT</div>
+    <div class="col">QUANTITY</div>
+    <div class="col">PRICE</div>
+    <div class="col">ACTION</div>
+  </div>
+
+  <!-- Item 1 -->
+  <div class="cart-item">
+    <div class="product-col">
+      <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/14.png" alt="College Bag">
+      <div class="details">
+        <span class="name">COLLEGE BAG</span>
+        <span class="desc">Color:</span>
+        <span>Black color</span>
+        <span class="stock out-stock">Out of stock</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="quantity">
+        <button>-</button><span>0</span><button>+</button>
+      </div>
+    </div>
+    <div class="col price">$0.00</div>
+    <div class="col delete">🗑️</div>
+  </div>
+
+  <!-- Item 2 -->
+  <div class="cart-item">
+    <div class="product-col">
+      <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/15.png" alt="Shoes">
+      <div class="details">
+        <span class="name">PARTY WEAR SHOES</span>
+        <span class="desc">Color:</span>
+        <span>Pink</span>
+        <span class="stock in-stock">In stock</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="quantity">
+        <button>-</button><span>0</span><button>+</button>
+      </div>
+    </div>
+    <div class="col price">$0.00</div>
+    <div class="col delete">🗑️</div>
+  </div>
+
+  <!-- Item 3 -->
+  <div class="cart-item">
+    <div class="product-col">
+      <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/19.png" alt="Samsung A2">
+      <div class="details">
+        <span class="name">SAMSUNG A2</span>
+        <span class="desc">Color:</span>
+        <span>Black color</span>
+        <span class="stock out-stock">Out of stock</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="quantity">
+        <button>-</button><span>0</span><button>+</button>
+      </div>
+    </div>
+    <div class="col price">$0.00</div>
+    <div class="col delete">🗑️</div>
+  </div>
+
+  <!-- Item 4 -->
+  <div class="cart-item">
+    <div class="product-col">
+      <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/16.png" alt="Flower Pot">
+      <div class="details">
+        <span class="name">FLOWER POT</span>
+        <span class="desc">Color:</span>
+        <span>Green and Black color</span>
+        <span class="stock in-stock">In stock</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="quantity">
+        <button>-</button><span>0</span><button>+</button>
+      </div>
+    </div>
+    <div class="col price">$0.00</div>
+    <div class="col delete">🗑️</div>
+  </div>
+
+  <!-- Item 5 -->
+  <div class="cart-item">
+    <div class="product-col">
+      <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/17.png" alt="Chair">
+      <div class="details">
+        <span class="name">CHAIR</span>
+        <span class="desc">Color:</span>
+        <span>Green and Black color</span>
+        <span class="stock in-stock">In stock</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="quantity">
+        <button>-</button><span>0</span><button>+</button>
+      </div>
+    </div>
+    <div class="col price">$0.00</div>
+    <div class="col delete">🗑️</div>
+  </div>
+
+  <!-- Item 6 -->
+  <div class="cart-item">
+    <div class="product-col">
+      <img src="https://nextjs.spruko.com/bootstrap/page/spruha-js/preview/assets/images/pngs/18.png" alt="Watch">
+      <div class="details">
+        <span class="name">WATCH</span>
+        <span class="desc">Color:</span>
+        <span>Green and Black color</span>
+        <span class="stock out-stock">Out of stock</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="quantity">
+        <button>-</button><span>0</span><button>+</button>
+      </div>
+    </div>
+    <div class="col price">$0.00</div>
+    <div class="col delete">🗑️</div>
+  </div>
+
+</div>
+
+</body>
+</html>

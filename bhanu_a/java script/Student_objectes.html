@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects-practice</title>
+</head>
+<body>
+    <h1>Objects</h1>
+    <h2>student functionalities:</h2>
+   <button onclick="Student.study()">Study</button>
+   <button onclick="Student.writeExam()">Write Exam</button>
+   <button onclick="Student.play()">Play</button>
+   <button onclick="Student.attendClass()">Attend Class</button>
+   <button onclick="Student.submitAssignment()">Submit Assignment</button>
+   <button onclick="Student.sleep()">Sleep</button>
+   <button onclick="Student.eat()">Eat</button>
+   <button onclick="Student.givePresentation()">Give Presentation</button> 
+     <script>
+   // Create student object
+       
+    const Student = {
+   name: "Bhanu Prasad",
+   age: 21,
+   gender: "Male",
+   rollNo: 3105,
+   course: "Computer Science",
+   college: "AUDISANKRA University",
+
+   study: function () {
+       console.log(`${this.name} is studying`);
+       return `${this.name} is studying`;
+   },
+
+   writeExam: function () {
+       console.log(`${this.name} is writing an exam`);
+       return `${this.name} is writing an exam`;
+   },
+
+   play: function () {
+       console.log(`${this.name} is playing cricket`);
+       return `${this.name} is playing cricket`;
+   },
+
+   attendClass: function () {
+       console.log(`${this.name} is attending class`);
+       return `${this.name} is attending class`;
+   },
+
+   submitAssignment: function () {
+       console.log(`${this.name} submitted the assignment`);
+       return `${this.name} submitted the assignment`;
+   },
+
+   sleep: function () {
+       console.log(`${this.name} is sleeping`);
+       return `${this.name} is sleeping`;
+   },
+
+   eat: function () {
+       console.log(`${this.name} is eating food`);
+       return `${this.name} is eating food`;
+   },
+
+   givePresentation: function () {
+       console.log(`${this.name} is giving a presentation`);
+       return `${this.name} is giving a presentation`;
+   }
+ }; 
+
+
+
+    </script>
+</body>
+</html>

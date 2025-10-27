@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Array Iteration methods</h1>
+    <p>
+        forEach(), map(), filter(), reduce(), some(), every(), find(),and findindex()
+    </p>
+    <script>
+
+  //let array = [1,2,3,4,5];
+//  console.log(array);
+//  array.forEach((num,index,arr) => {
+// 
+//     console.log(`the element at index: ${index} is ${num}`)
+//     arr[index] = num * num;
+// });
+// 
+// array.forEach((num) => console.log(num));
+// array.forEach((num) => console.log(num * 2));
+
+// console.log(array);
+
+// array.forEach((value,index,array) =>{
+//   array[index] = value * 2;
+//     array[index] = value ** 2;
+// 
+// });
+// console.log(array);
+
+      //map()
+
+    //   let newArray = array.map((num) => num * 2);
+    //   console.log(newArray);
+ 
+    //   console.log(array);
+
+//  filter()
+
+// const numbers = [1,2,3,4,5,6,7,8,9,10];
+// const odd = numbers.filter((num) => num % 2 != 0);
+// 
+// console.log(odd);
+  
+
+// reduce()
+
+// const numbers = [1,2,3,4,5];
+// const sum = numbers.reduce((accumulator,current) => accumulator * current, 0);
+// 
+// console.log(sum);
+
+ 
+let nestedArray = [[1,2],[3,4],[5]];
+
+let flatArray = nestedArray.reduce((intialvalue,currentvalue) =>intialvalue.concat(currentvalue),
+[]
+);
+console.log(flatArray);
+
+// join
+let greeting = ["Hello","World"];
+let str = greeting.join("").split("").reverse().join();
+// let letters = str.split(""); 
+console.log(typeof str,str);
+     </script>
+</body>
+</html>

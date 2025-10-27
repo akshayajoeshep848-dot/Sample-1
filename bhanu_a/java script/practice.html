@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //  1.  let nmbr1 = Number(prompt("enter your first number"));
+     //    let nmbr2 = Number(prompt("enter your second number"));
+     //    let symbol = prompt("enter your symbol");
+     //    if(symbol == "+") {
+     //        console.log( `${nmbr1} + ${nmbr2} = ${nmbr1 + nmbr2}`);
+     //    }else if (symbol == "-"){
+     //         console.log( `${nmbr1} - ${nmbr2} = ${nmbr1 - nmbr2}`);
+     //    } else if (symbol == "*") {
+     //         console.log( `${nmbr1} * ${nmbr2} = ${nmbr1 * nmbr2}`);
+     //    }  else if (symbol == "/") {
+     //         console.log( `${nmbr1} / ${nmbr2} = ${nmbr1 / nmbr2}`);
+     //    }  else if (symbol == "%") {
+     //         console.log( `${nmbr1} % ${nmbr2} = ${nmbr1 % nmbr2}`);
+     //    } else {
+     //           console.log("enter a valid symbol")
+     //    }
+
+
+     2.// let year = Number(prompt("enter a  year"));
+       // switch (true){
+       // case (year % 400 == 0 ):
+       // console.log("this is a leap year");
+       // break;
+       // case (year % 100 == 0):
+       // console.log("this not a leap year");
+       // break;
+       // case (year % 4 == 0):
+       // console.log("leap year");
+       // break;
+
+       // default:
+       //     console.log("not a leap year");
+
+   // }
+
+
+// 3.  let num = 300;  
+// let digit1 = Math.floor(num / 100);        // hundreds place
+// let digit2 = Math.floor((num / 10) % 10);  // tens place
+// let digit3 = num % 10;                     // ones place
+// 
+// 
+// let sum = digit1 + digit2 + digit3;
+// 
+// console.log("Sum of digits:", sum);
+
+
+// 5. let price = (prompt("Enter your price:"));
+//  let discountRate = (prompt("Enter the discount rate:"));
+//  
+//  
+//  let priceAfterDiscount = price - (price * discountRate / 100);
+//  
+//  
+//  if (priceAfterDiscount > 5000) {
+//      priceAfterDiscount -= priceAfterDiscount * 0.05; 
+//  } else if (priceAfterDiscount >= 2000 && priceAfterDiscount <= 5000) {
+//      priceAfterDiscount -= priceAfterDiscount * 0.02; 
+//  }
+//  
+//  console.log("Final Price: ₹" + priceAfterDiscount.toFixed(2));
+
+    
+
+//6. let num = (prompt("enter your number"));
+// let result;
+// 
+// if (num <= 21) {
+//   result = 21 - num;
+// } else {
+//   result = (num - 21) * 2;
+// }
+// 
+// console.log("Result:", result);
+
+
+
+//7. let num = prompt("Enter a 3-digit number:");
+// let d1 = num;
+// let d2 = num;
+// let d3 = num;
+// 
+// if (d1 === d2 && d2 === d3) {
+//     console.log("All same");
+// } else if (d1 === d2 || d2 === d3 || d1 === d3) {
+//     console.log("Two same");
+// } else {
+//     console.log("All different");
+// }
+
+
+
+
+//8. let num = (prompt("Enter a 2-digit number:"));
+// 
+// 
+// if (num >= 10 && num <= 99) {
+//     let digit1 = Math.floor(num / 10);
+//     let digit2 = num % 10;             
+//     
+//     
+//     let sum = digit1 + digit2;
+//     
+//    
+//     if (sum % 7 === 0) {
+//         console.log("Lucky number");
+//         alert("Lucky number");
+//     } else {
+//         console.log("Try again");
+//         alert("Try again");
+//     }
+// } else {
+//     console.log("Invalid input! Please enter a 2-digit number.");
+// }
+
+
+
+
+
+
+//9. let num = (prompt("Enter a number (1-100):"));
+// 
+// 
+// if (num < 1 || num > 100) {
+//     console.log("Out of range");
+//   
+// } else {
+// 
+//     if (num % 3 === 0 && num % 5 === 0) {
+//         console.log("FizzBuzz");
+//  
+//     } else if (num % 3 === 0) {
+//         console.log("Fizz");
+//    
+//     } else if (num % 5 === 0) {
+//         console.log("Buzz");
+//      
+//     } else {
+//         console.log(num);
+//    
+//     }
+// }
+
+
+// let year = Number(prompt("enter a  year"));
+//   if (year % 4 == 0){
+//     if (year % 400 == 0){
+//         console.log("This a centuary leap year");
+//     }else  {
+//         console.log("This is a  leap year");
+//     }
+//   }else {
+//     console.log("Not a leap year");
+//   }
+// 
+
+
+
+
+  //   let str = prompt("Enter a number");
+ // 
+  //  let sum = 0;
+ // 
+  //  let num = Number(str);
+  //  for (let i = 0; i<str.lenght; i++) {
+  //    console.log('Start of loop ${i}');
+  //    // step 1 : get last digit
+  //    console.log("Sum:",sum);
+  //    console.log('Step 1: sum = sum + (num % 10);');
+  //    sum = sum + (num % 10);
+  //    console.log("OUTPUT: sum =",sum);
+  //     //step 2: reduce num by one place
+  //     console.log('step 2: num = num / 10;');
+  //     num = num / 10;
+  //     console.log(" OUTPUT: num =", num);
+  //     // step3: truncate decimal place
+  //     console.log('step 2: num = math.floor(num);');
+  //     num = math.floor(num/10);
+  //     console.log("OUTPUT: num =", num);
+  //     console.log('End of loop ${i}');
+  //  } 
+  //   console.log('Sum of digits of a given number ${str} = ${sum}');
+
+
+
+
+
+let str = prompt("Enter a number");
+
+let sum = 0;
+
+let num = Number(str);
+
+for (let i = 0; i < str.length; i++) {
+  console.log(`Start of loop ${i}`);
+  
+  // step 1: get last digit and add to sum
+  console.log("Sum:", sum);
+  console.log("Step 1: sum = sum + (num % 10);");
+  sum = sum + (num % 10);
+  console.log("OUTPUT: sum =", sum);
+  
+  // step 2: reduce num by one place (remove last digit)
+  console.log("Step 2: num = Math.floor(num / 10);");
+  num = Math.floor(num / 10);
+  console.log("OUTPUT: num =", num);
+  
+  console.log(`End of loop ${i}`);
+}
+
+console.log(`Sum of digits of a given number ${str} = ${sum}`);
+
+
+
+
+    </script>
+</body>
+</html>

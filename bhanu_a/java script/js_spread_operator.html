@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spread Operator</h1>
+    <script>
+     //    let arr = [1,2,3,4];
+     //    console.log(...arr);
+
+     //    let arr2 = [...arr];
+     //    console.log(arr2);
+
+        // write a function to sum a three numbers
+        function sum(a,b,c) {
+            return a+b+c;
+        }
+
+        const numbers = [10,20,30];
+        console.log(sum(...numbers));
+
+        const array1 = [1,2,3];
+        const array2 = [4,5,6];
+
+        const combined =[...array1,...array2];
+        console.log(combined);
+
+
+
+        // copying Arrays (Shallow copy)  example--
+        const originalArray = [1,2, { key: 'value'}];
+        const copiedArray = [...originalArray];
+        console.log(copiedArray);
+        console.log(originalArray === copiedArray);
+        console.log(originalArray[2] === copiedArray[2]);
+
+        copiedArray[0] = 99;
+        copiedArray[2].key = 'new value';
+
+        console.log(originalArray);
+        console.log(copiedArray);
+
+        // shallow copy of objects
+        const originalObject = {a: 1, b: {c:2}};
+        const copiedObject = {...originalObject};
+
+        console.log("originalobject",originalObject);
+        console.log("copiedObject",  copiedObject);
+        // change values
+        copiedObject.a = 2;
+        copiedObject.b.c = 5;
+        console.log("originalobject",originalObject);
+        // {a:1, }
+           console.log("copiedObject",  copiedObject);
+
+
+           // merging Arrays 
+           const arr1 = [1,2,3];
+           const arr2 = [4,5,6];
+           const arr3 = [7,8,9];
+
+           const mergedArray = [...arr1,...arr2,...arr3];
+           console.log(mergedArray);
+ 
+           // merging objects 
+           const objA = {x: 1, y:2};
+           const objB = {y:3, z:4};
+           const objC = {a:5};
+           const mergedObject = {...objA,...objB,...objC};
+           console.log(mergedObject);
+
+         // spreading a string into an array of characters
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fetch Inner Text</title>
+</head>
+<body>
+  <!-- 5 HTML Elements -->
+   <h1 id="header">Bhanu</h1>
+   <div class="highlight">highlight</div>
+
+<div id="content">
+      <p>First paragraph inside content.</p>
+</div>
+  
+  <label><input type="checkbox"/> option 1</label><br/>
+     <label><input type="checkbox"/> option 2</label><br/>
+  <script>
+
+   //  let head1 = document.getElementById("head-1");
+   //  console.log(head1.innerText);
+   //  head1.innerHTML = "bhanu"
+   //  head1.style.color = "green"
+   //  head1.style.backgroundColor = "aqua"
+ 
+   //  let head2 = document.getElementById("head-2");
+   //  console.log(head2.innerText);
+   //  head2.innerHTML = "prasad"
+   //  head2.style.color = "blue"
+   //  head2.style.backgroundColor = "pink"
+
+
+    //  practice questions
+
+    // 1.Select the element with the ID header and change its text content to "Welcome!".
+
+      let header = document.getElementById("header");
+      header.textContent = "Welcome!";
+      console.log(header.textContent);
+
+
+  // 2. Select all elements with the class highlight and set their background color to lightblue.
+
+   let elements = document.getElementsByClassName("highlight");
+  for (let i = 0; i < elements.length; i++) {
+  elements[i].style.backgroundColor = "lightblue";
+    }
+
+    // 3. Select all <p> elements inside a container with the ID content and log their text content to the console.
+
+
+      let container = document.getElementById("content");
+      let paragraphs = container.querySelectorAll("p");
+      paragraphs.forEach(function(p) { console.log(p.textContent);
+      });
+
+    // 4. Select the first <input> element of type checkbox and check it (set its checked property to true).
+
+
+let firstCheckbox = document.querySelector('input[type="checkbox"]');
+if (firstCheckbox) {
+  firstCheckbox.checked = true;
+}
+
+
+
+  </script>
+</body>
+</html>

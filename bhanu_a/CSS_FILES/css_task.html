@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Border Box</title>
+  <style>
+    body {
+      background: #fff;
+      font-family: sans-serif;
+      padding: 40px;
+    }
+
+    .colorful-border {
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      background: white;
+      border: 20px solid transparent;
+      background-image:
+        linear-gradient(to right, #f45b45, #f4b400, #007b89),
+        linear-gradient(to left, #007b89, #fce7e2, #f45b45),
+        linear-gradient(to bottom, #f4b400, #fffaf5, #007b89),
+        linear-gradient(to top, #fce7e2, #f45b45, #f4b400);
+      background-repeat: no-repeat;
+      background-size: 100% 20px, 100% 20px, 20px 100%, 20px 100%;
+      background-position: top, bottom, left, right;
+      box-sizing: border-box;
+    
+    }
+  </style>
+</head>
+<body>
+  <div class="colorful-border">
+    Bhanu yadav
+  </div>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects & Arrays</title>
+</head>
+<body>
+   
+    <h1>Arrays</h1>
+    <h1>Object</h1>
+   <h2>Dog functionalities</h2>
+   <button onclick="Dog.bark()">bark</button>
+   <button onclick="Dog.walk()">walk</button>
+   <button onclick="Dog.run()">run</button>
+
+    <script>
+//         const person = {
+//           firstName: "Bhanu",
+//           last_name: "Anangi",  
+//           name: " Anangi Bhanu",
+//     age: 21,
+//     isStudent: true,
+//     greet: function() {
+//         return 'Hello, my name is bhanu';
+//     }
+// };
+
+
+// dot notation
+//console.log(person.firstName);
+//console.log(person.last_name);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.isStudent);
+// console.log(person.greet());
+
+// [] bracket notation -
+  // console.log(person["firstName"]);
+// console.log(person["name"]);
+// console.log(person["age"]);
+// console.log(person["isStudent"]);
+// console.log(person["greet"]()); 
+
+
+// create an  object called dog
+// name, breed, color, age, gender, petId
+// bark, walk, run, shakehand, smell, sleep, sit, rollover, sit
+
+const Dog ={
+    name:'rocky',
+    breed: "Greman Sheperd",
+    color:"brown",
+    age:2,
+    gender:"Male",
+    petID: 1234,
+    bark: function () {
+        console.log(`${this.name} is barking`);
+        return`${this.name} is barking`;
+    },
+    walk: function () {
+        console.log(`${this.name} is walking`);
+        return`${this.name} is walking`;
+    },
+
+     run: function () {
+        console.log(`${this.name} is running`);
+        return`${this.name} is running`;
+    },
+
+     shakehand: function () {
+        console.log(`${this.name} is shaking hand`);
+        return`${this.name} is shaking hand`;
+    },
+
+     smell: function () {
+        console.log(`${this.name} is smelled`);
+        return`${this.name} is smelled`;
+    },
+
+     eat: function () {
+        return`${this.name} is eating food`;
+    },
+
+     sleep: function () {
+        return`${this.name} is sleepig`;
+    },
+
+     rollover: function () {
+        return`${this.name} is rolling over`;
+    },
+
+     sit: function () {
+        return`${this.name} sat`;
+    },
+
+     liedown: function () {
+        return`${this.name} is lied down`;
+    },
+
+     getsodafridge: function () {
+        return`${this.name} brought sode from fridge`;
+    },
+
+     bite: function () {
+        return`${this.name} is biting`;
+    },
+
+};
+// console.log(Dog.bark());
+// console.log(Dog.walk());
+// console.log(Dog.run());
+// console.log(Dog.smell());
+// console.log(Dog.eat());
+// console.log(Dog.sleep());
+// console.log(Dog.rollover());
+// console.log(Dog.sit());
+// console.log(Dog.liedown());
+// console.log(Dog.getsodafridge());
+
+//  create object address
+// First Floor, MIG-87, Rd Number 1,
+// beside AED Hospital, K P H B Phase 1,
+// Kukatpally, Hyderabad, Telangana 500072
+
+
+const address = {
+  address_line1: "MIG-87",
+  address_line2: "First floor, Road no. 1",
+  address_line3: "KPHB Phase-1",
+  landmark: "beside AED Hospital",
+  city: "Hyderabad",
+  state: "Telangana",
+  pincode: 500072,
+
+  getaddress: function () {
+    console.log(
+      `${this.address_line1}, ${this.address_line2}, ${this.address_line3}, ${this.landmark}, ${this.city}, ${this.state}, ${this.pincode}`
+    );
+  }
+};
+
+address.getaddress();
+
+
+
+
+    </script>
+</body>
+</html>

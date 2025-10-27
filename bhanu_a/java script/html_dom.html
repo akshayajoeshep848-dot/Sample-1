@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head-1">
+        Header
+    <a href="https://www.logicWhile.com">LogicWhile</a>
+</h1>
+<h2 id="head-2">Header 2 - intial value</h2>
+<button onclick="ChangeText()"> Change Text</button>
+    <script>
+        console.log(document.body);
+        console.log(document.head);
+        console.log(document.URL);
+        
+        function ChangeText() {
+            console.log(document.getElementById)("head-2").textContent;
+            document.getElementById("head")
+        }
+        
+
+        // document.getElementbyTagName
+        // console.log(document.getElementByTagName("h1")[0].innerText);
+        // document.getElementById
+       // console.log(document.getElementById("head-1").textContent);
+        //console.log(document.getElementById("head-1").innerHTML);
+        //console.log(document.getElementById("head-1").innerText);
+        //document.getElementById("head-2").textContent = "Header 2";
+    </script>
+</body>
+</html>

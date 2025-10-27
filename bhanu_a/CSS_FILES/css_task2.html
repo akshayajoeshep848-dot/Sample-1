@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Opinion Cards</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background: linear-gradient(to right, #5f86f2, #bb0038);
+    }
+
+    .card {
+      background: #e9e7e9;
+      border-radius: 2px;
+      margin-bottom: 5px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 2px 6px rgba(20, 19, 19, 0.15);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.9rem;
+    }
+
+    .score {
+      font-weight: bolder;
+      padding: 0.25rem 0.75rem;
+      background: #f0ecec;
+      border-radius: 999px;
+    }
+
+    .opinions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+      color: #4e4b4b;
+    }
+
+    .sections {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .section-box {
+      flex: 1;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #f9f9f9;
+      border-left: 1px solid;
+    }
+
+    .positive {
+      border-color: #eaecea;
+      height: 180px;
+    }
+
+    .neutral {
+      border-color:  #eaecea;
+      height: 110px;
+      
+    }
+
+    .negative {
+      border-color:  #eaecea;
+       height: 110px;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      font-style: normal;
+    }
+
+    .section-content {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <span class="score" style="color: #f44336">-69  Lorem Ipsum</span>
+      <div class="opinions">
+        <div class="opinion-count">18 opinion</div>
+        <div class="opinion-count">😊4</div>
+        <div class="opinion-count">🟡 1</div>
+        <div class="opinion-count">🔴 13</div>
+        <div class="opinion-count"> ^</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="score" style="color: #4caf50">58   Lorem ipsum dolor sit amet</span>
+      <div class="opinions">
+        <div class="opinion-count">22 opinion</div>
+        <div class="opinion-count">🟢 12</div>
+        <div class="opinion-count">🟡 5</div>
+        <div class="opinion-count">🔴 5</div>
+        <div class="opinion-count">  ^</div>
+      </div>
+    </div>
+    <div class="sections">
+      <div class="section-box positive">
+        <div class="section-title">🟢 Positive 12</div>
+        <div class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id congue dolor. Vivamus eleifend vitae nunc sed tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id congue dolor. Vivamus eleifend vitae nunc sed tincidunt.</div>
+      </div>
+      <div class="section-box neutral">
+        <div class="section-title">🟡 Neutral 5</div>
+        <div class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id congue dolor. Vivamus eleifend vitae nunc sed tincidunt.</div>
+      </div>
+      <div class="section-box negative">
+        <div class="section-title">🔴 Negative 5</div>
+        <div class="section-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin id congue dolor. Vivamus eleifend vitae nunc sed tincidunt.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="score" style="color: #4caf50">33  Lorem</span>
+   
+      <div class="opinions">
+        <div class="opinion-count">7 opinion</div>
+        <div class="opinion-count">🟢 3</div>
+        <div class="opinion-count">🟡 2</div>
+        <div class="opinion-count">🔴 2</div>
+        <div class="opinion-count">  ^</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // category inputs OC,OBC,SC,ST,PH
+        // UPSC exam age limits between 21 and 32 - general category
+        // OBC -35, SC/ST -37 ,PH -42
+        // "you have exceeded your age limit based on your category"
+        //" You are eligible to write UPSC exam"
+        // 20-21 "you can attempt the exam next year"
+        // below 20 "you can attempt the exam in a years"
+
+        function checkUpscEligibility(age, category) {
+    let maxAge;
+
+    category = category.toUpperCase(); 
+
+    // Set max age based on category using if-else
+    if (category === "OC" || category === "GENERAL") {
+        maxAge = 32;
+    } else if (category === "OBC") {
+        maxAge = 35;
+    } else if (category === "SC" || category === "ST") {
+        maxAge = 37;
+    } else if (category === "PH") {
+        maxAge = 42;
+    } else {
+        return "Invalid category";
+    }
+
+    // Check age and return messages
+    if (age < 20) {
+        return "You can attempt the exam in a few years";
+    } else if (age >= 20 && age < 21) {
+        return "You can attempt the exam next year";
+    } else if (age >= 21 && age <= maxAge) {
+        return "You are eligible to write UPSC exam";
+    } else {
+        return "You have exceeded your age limit based on your category";
+    }
+}
+
+// Example usage
+console.log(checkUpscEligibility(19, "SC"));      
+console.log(checkUpscEligibility(20, "OBC"));     
+console.log(checkUpscEligibility(30, "OC"));      
+console.log(checkUpscEligibility(36, "OBC"));     
+
+    </script>
+</body>
+</html>

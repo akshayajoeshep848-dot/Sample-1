@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Number Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<style>
+    body {
+  margin: 0;
+  background: #fff8dc;
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 5px;
+  padding: 20px;
+}
+
+.item {
+  background: #fffacd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  aspect-ratio: 1 / 1;
+  border: 1px dashed #0a0a0a;
+}
+
+/* Color Themes */
+.green { background: #c8e6c9; }
+.red { background: #f8d7da; }
+.blue { background: #cce5ff; }
+.yellow { background: #fff9c4; }
+.black { background: #fff3cd; }
+
+/* Size Variants */
+.large {
+  font-size: 30px;
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 200px;
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.small {
+  font-size: 16px;
+  height: 100px;
+ 
+}
+
+</style>
+<body>
+  <div class="grid-container">
+    <!-- Repeat for numbers 1-24 -->
+    <div class="item large green">13</div>
+    <div class="item">9</div>
+    <div class="item">18</div>
+    <div class="item large gray">1</div>
+    <div class="item">5</div>
+    <div class="item large red" >6</div>
+    <div class="item">18</div>
+    <div class="item large red">22</div>
+    <div class="item large yellow">24</div>
+    <div class="item">8</div>
+    <div class="item tall blue">11</div>
+    <div class="item">20</div>
+    <div class="item red">15</div>
+    <div class="item large black">3</div>
+    <div class="item">16</div>
+    <div class="item">2</div>
+    <div class="item">17</div>
+    <div class="item">12</div>
+    <div class="item small red">19</div>
+    <div class="item">14</div>
+    <div class="item large yellow">21</div>
+    <div class="item">4</div>
+    <div class="item">23</div>
+    <div class="item">10</div>
+  </div>
+</body>
+</html>

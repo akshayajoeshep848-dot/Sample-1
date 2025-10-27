@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1 id="h1">Js event listener</h1>
+    <div>
+      <label for="firstname">First name :</label>
+      <input id="firstname" type="text" name="firstname"/><br><br>
+    </div>
+    <div>
+    <label for="lastname">Last name :</label>
+    <input id="lastname" type="text" name="lastname"/>
+    </div>
+    <button id="button">Click me</button>
+    <script>
+        let button = document.getElementById("button");
+        let h1 = document.getElementById("h1");
+        let input = document.getElementById("input");
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+        let formObject = {};
+
+        button.addEventListener("click",(event) =>{
+          formObject[`${firstname.name}`] = firstname.value;
+          formObject[`${lastname.name}`] = lastname.value;
+          console.log(formObject);
+        }
+
+        //  function onClick(event) {
+        //    console.log("event.type")
+          //  console.log("event.target")
+          //  console.log("event.currentTarget")
+          );
+        //  }
+
+      //  button.onclick = function (event) {
+      //      console.log(`button is being clicked`);
+      //  };
+
+      //  function onClick() {
+      //      console.log(`Button is clicked`);
+      //  }
+
+         // mouse event
+          h1.addEventListener(`mouseover`,(event) => {
+          event.target.style.backgroundColor = "blue";
+          event.target.style.borderRadius = "10px";
+          });
+   // mouse event
+        
+        //   h1.addEventListener(`mouseover`,(event) => {
+        //  event.target.style.backgroundColor = "white";
+        //  event.target.style.borderRadius = "0px";
+        //  });
+
+
+       firstname.addEventListener("keydown",(event) =>
+       console.log(event.key,event.code)
+       ); 
+    </script>
+</body>
+</html>

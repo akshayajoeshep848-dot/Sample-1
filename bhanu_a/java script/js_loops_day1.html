@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOPS DAY_1</title>
+</head>
+<body>
+    <script>
+        // print numbers from 0 to 10
+       // for (let i = 0; i <= 10; i = i +1) {
+       // console.log(i);
+       // }
+ 
+       //print 0 to 10 even numbers
+
+       //  for (let i = 2; i <=10; i = i +2) {
+        //   console.log(i);
+        //  } 
+
+      //  for (let i =1; i<=10; i = i + 2 ) {
+      //    console.log(i + 1);
+      // }
+
+     // write for a for loop to print odd numbers 
+      
+     //  for (let i = 1; i<=625; i = i +2) {
+      //  console.log(i);
+      // }
+
+      // write a for loop to print  5 multiples
+     //  for (let i = 0; i<= 625; i = i+5) {
+     //       console.log(i);
+      //   }
+        
+      //  for loop sum of integers 1 to 10 
+
+    //    let sum = 0;
+    // for (let i = 1; i <= 10; i++) {
+    //  sum += i;
+    // }
+     //    console.log("Sum =", sum);
+
+
+   //  Print the multiplication table for a given number (e.g., 7)
+
+   //   let n = 15;
+   //   for (let i = 1; i <= 10; i++) {
+   //   console.log(`${n} * ${i} = ${n * i}`);
+   // }
+
+      // Print numbers from 10 down to 1
+
+   //   for (let i = 10; i >=1; i--) {
+   //     console.log(i);
+   //   }
+
+    //Count the number of vowels in a given string.
+
+  //  let str = "bhanu prasad";
+  //  count = 0
+  //  let vowels = str == "a" || str == "e"  || str == "i" || str == "o"  ||  str == "u";
+
+
+    //  Find the largest number in an array.       
+
+//   let arr = [3, 8, 1, 6, 10, 2];
+//  let max = arr[0];
+//  for (let i = 1; i < arr.length; i++) {
+//    if (arr[i] > max) {
+//      max = arr[i];
+//    }
+//  }
+//  console.log(max);
+
+   // Calculate the sum of all elements in a numeric array.
+
+
+ //  let numbers = [10,20,30,40,50];
+ //  let total = 0;
+ //  for (let i = 0; i <numbers.length; i++) {
+ //   total += numbers[i];
+ //  }
+ //       console.log(total);
+
+
+// Print numbers from 1 to 100. For multiples of 3, print "Fizz"; for multiples of 5, print "Buzz"; for multiples of both, print "FizzBuzz".
+
+     //for (let i = 1; i <= 100; i++) {
+     // if (i % 3 === 0 && i % 5 === 0) {
+     //   console.log("FizzBuz");
+     // } else if (i % 3 === 0) {
+     //   console.log("Fizz") 
+     // } else if (i % 5 === 0) {
+     //   console.log("Buzz");
+     // }else {
+     //   console.log(i);
+     // }
+    //}
+
+// Calculate the factorial of a number (e.g., 5! = 5*4*3*2*1)
+
+ //     let num = 5;
+ // let factorial = 1;
+ // for (let i = 1; i <= num; i++) {
+ //   factorial *= i;
+ // }
+ // console.log(factorial);
+
+ // Reverse a given string
+
+//  let str = "bhanuprasad";
+// let reversedStr = "";
+// for (let i = str.length - 1; i >= 0; i--) {
+//   reversedStr += str[i];
+// }
+// console.log(reversedStr);
+ 
+
+//   Print numbers from 20 down to 0, skipping every other number.
+
+//   for (let i = 20; i >= 0; i -= 2) {
+//   console.log(i);
+// }
+
+//  Check if a specific element exists in an array.
+//    let arr = [10, 20, 30, 40, 50];
+// let searchElement = 30;
+// let found = false;
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] === searchElement) {
+//     found = true;
+//     break; // Exit the loop once found
+//   }
+// }
+// console.log(found ? "Element found" : "Element not found");
+
+   // Print the first 10 powers of 2 (2^0, 2^1, ... 2^9).
+//  for (let i = 0; i < 10l; i++) {
+//    console.log(Math.pow(2, i));
+//  }
+
+//  Determine if a string is a palindrome.
+
+// let str = "racecar";
+// let reversed = "";
+// for (let i = str.length - 1; i >= 0; i--) {
+//   reversed += str[i];
+// }
+// if (str === reversed) {
+//   console.log("Palindrome");
+// } else {
+//   console.log("Not a palindrome");
+// }
+
+  // Print a right-angled triangle pattern of stars.
+  //       let rows = 5;
+  //  for (let i = 1; i <= rows; i++) {
+  //    let pattern = "";
+  //    for (let j = 1; j <= i; j++) {
+  //      pattern += "*";
+  //    }
+  //    console.log(pattern);
+  //  }
+
+ // Count the occurrences of a specific character in a string
+
+//  let str = "bhanuprasad";
+//let char = "a";
+//let count = 0;
+//for (let i = 0; i < str.length; i++) {
+//  if (str[i] === char) {
+//    count++;
+//  }
+//}
+// console.log(count);
+
+// Calculate the average of all numbers in an array.
+
+//   let arr = [10, 20, 30, 40,];
+//  let sum = 0;
+//  for (let i = 0; i < arr.length; i++) {
+//    sum += arr[i];
+//  }
+//  let average = sum / arr.length;
+//  console.log(average);
+
+
+//    Print the first 10 numbers of the Fibonacci sequence.   
+
+function printFibonacci(n) {
+  let a = 0, b = 1;
+
+  console.log(a); 
+  console.log(b); 
+
+  for (let i = 2; i < n; i++) {
+    let next = a + b;
+    console.log(next); 
+    a = b;
+    b = next;
+  }
+}
+printFibonacci(10);
+    </script>
+</body>
+</html>

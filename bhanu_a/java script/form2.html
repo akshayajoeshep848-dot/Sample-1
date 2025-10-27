@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Registration Form</title>
+</head>
+<body>
+  <div id="div"></div>
+
+  <script>
+    let div = document.getElementById("div");
+    div.style.backgroundColor = "orange";
+    div.style.width = "370px";
+    div.style.padding = "10px";
+    div.style.margin = "50px auto";
+    div.style.borderRadius = "10px";
+    div.style.boxShadow = "0 0 10px rgba(0,0,0,0.3)";
+
+    let heading = document.createElement("h1");
+    heading.textContent = "Patient Registration Form";
+    heading.style.textAlign = "center";
+    div.append(heading);
+
+    let form = document.createElement("form");
+    div.append(form);
+
+    function br() {
+      form.append(document.createElement("br"));
+      form.append(document.createElement("br"));
+    }
+
+    // First Name
+    let label1 = document.createElement("label");
+    label1.textContent = "Patient First Name:";
+    form.append(label1);
+
+    let input1 = document.createElement("input");
+    input1.type = "text";
+    input1.id = "fname";
+    input1.name = "fname";
+    input1.placeholder = "Enter first name";
+    form.append(input1);
+    br();
+
+    // Last Name
+    let label2 = document.createElement("label");
+    label2.textContent = "Patient Last Name:";
+    form.append(label2);
+
+    let input2 = document.createElement("input");
+    input2.type = "text";
+    input2.id = "lname";
+    input2.name = "lname";
+    input2.placeholder = "Enter last name";
+    form.append(input2);
+    br();
+
+    // Date of Birth
+    let label3 = document.createElement("label");
+    label3.textContent = "Date of Birth:";
+    form.append(label3);
+
+    let input3 = document.createElement("input");
+    input3.type = "date";
+    input3.id = "dob";
+    input3.name = "dob";
+    form.append(input3);
+    br();
+
+    // Gender
+    let label4 = document.createElement("label");
+    label4.textContent = "Gender:";
+    form.append(label4);
+
+    let male = document.createElement("input");
+    male.type = "radio";
+    male.name = "gender";
+    male.value = "Male";
+    male.id = "male";
+    form.append(male);
+    form.append("Male");
+
+    let female = document.createElement("input");
+    female.type = "radio";
+    female.name = "gender";
+    female.value = "Female";
+    female.id = "female";
+    form.append(female);
+    form.append("Female");
+    br();
+
+    // City
+    let label5 = document.createElement("label");
+    label5.textContent = "City:";
+    form.append(label5);
+
+    let input4 = document.createElement("input");
+    input4.type = "text";
+    input4.id = "city";
+    input4.name = "city";
+    input4.placeholder = "Enter city";
+    form.append(input4);
+    br();
+
+    // Email
+    let label6 = document.createElement("label");
+    label6.textContent = "Email:";
+    form.append(label6);
+
+    let input5 = document.createElement("input");
+    input5.type = "email";
+    input5.id = "email";
+    input5.name = "email";
+    input5.placeholder = "Enter email";
+    form.append(input5);
+    br();
+
+    // Phone
+    let label7 = document.createElement("label");
+    label7.textContent = "Phone Number:";
+    form.append(label7);
+
+    let input6 = document.createElement("input");
+    input6.type = "tel";
+    input6.id = "phone";
+    input6.name = "phone";
+    input6.placeholder = "Enter phone number";
+    form.append(input6);
+    br();
+
+    // Marital Status
+    let label8 = document.createElement("label");
+    label8.textContent = "Marital Status:";
+    form.append(label8);
+
+    let married = document.createElement("input");
+    married.type = "radio";
+    married.name = "marital";
+    married.value = "Married";
+    married.id = "married";
+    form.append(married);
+    form.append("Married");
+
+    let unmarried = document.createElement("input");
+    unmarried.type = "radio";
+    unmarried.name = "marital";
+    unmarried.value = "Unmarried";
+    unmarried.id = "unmarried";
+    form.append(unmarried);
+    form.append("Unmarried");
+    br();
+
+    // Address
+    let label9 = document.createElement("label");
+    label9.textContent = "Address:";
+    form.append(label9);
+
+    let input8 = document.createElement("textarea");
+    input8.id = "address";
+    input8.name = "address";
+    input8.placeholder = "Enter address";
+    input8.rows = 2;
+    form.append(input8);
+    br();
+
+    // Submit Button
+    let submitBtn = document.createElement("button");
+    submitBtn.type = "button";
+    submitBtn.id = "submitBtn";
+    submitBtn.textContent = "Submit";
+    submitBtn.style.backgroundColor = "#4CAF50";
+    submitBtn.style.color = "white";
+    submitBtn.style.padding = "10px 20px";
+    submitBtn.style.border = "none";
+    submitBtn.style.cursor = "pointer";
+    submitBtn.style.marginLeft = "130px";
+    form.append(submitBtn);
+
+    // ---- OBJECT & EVENT LISTENER ----
+    let formObject = {};
+
+    let button = document.getElementById("submitBtn");
+
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      // Collect all values using getElementById
+      formObject.fname = document.getElementById("fname").value;
+      formObject.lname = document.getElementById("lname").value;
+      formObject.dob = document.getElementById("dob").value;
+      formObject.gender = document.querySelector('input[name="gender"]:checked')?.value || "Not selected";
+      formObject.city = document.getElementById("city").value;
+      formObject.email = document.getElementById("email").value;
+      formObject.phone = document.getElementById("phone").value;
+      formObject.marital = document.querySelector('input[name="marital"]:checked')?.value || "Not selected";
+      formObject.address = document.getElementById("address").value;
+
+      console.log(formObject);
+      alert("Form submitted successfully! Check console for details.");
+
+      form.reset();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CSS Pseudo elements 2</title>
+    <style>
+        li{
+            list-style-type: square;
+            position: relative;
+            left: -10px;
+            padding-left: 30px;
+        }
+        ul li::marker{
+            content: "\27A4";
+            color: green;
+            font-size: 20px;
+        }
+        p::spelling-error{
+            color: red;
+            text-decoration: underline blue;
+        }
+        p::grammar-error{
+            columns: rgb(76, 0, 255);
+            text-decoration: underline yellowgreen;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1> CSS Pseudo elements 2</h1>
+    <ul>
+        <li> Item 1</li>
+        <li> Item 2</li>        
+        <li> Item 3</li>
+        <li> Item 4</li>
+        <li> Item 5</li>
+    </ul>
+    <p contenteditable spellcheck="true">
+       my frnds am coming to the party tonight.
+    </p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create dom</title>
+</head>
+<body>
+    <h1>selecting dom elements</h1>
+    <script>
+        let heading = document.createElement(`h1`);
+        console.log('node type of h1:',heading.nodeType);
+
+         let text = document.createTextNode(`Hello`);
+        console.log( 'node type of text:',text.nodeType);
+
+        let comment = document.createComment(`This is a comment`);
+        console.log( 'node type of comment:',comment.nodeType);
+    </script>
+</body>
+</html>

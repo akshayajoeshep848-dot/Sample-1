@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List Example</title>
+</head>
+<body>
+  <h2>My To-Do List</h2>
+  <ul id="todoContainer"></ul>
+  <select id="countryselect"></select><br><br>
+
+  <li id="leaderBoard"></li>
+  <ol id="images"></ol>
+  <li id="teams"></li><br><br>
+
+  <div id="cart-container"></div>
+
+
+  <script>
+    const todoList = [
+      { id: 1, task: "Buy groceries", isComplete: false },
+      { id: 2, task: "Finish project report", isComplete: false },
+      { id: 3, task: "Call the dentist", isComplete: true },
+    ];
+
+    const container = document.getElementById("todoContainer");
+
+    todoList.forEach(item => {
+      const li = document.createElement("li");
+
+      li.textContent = item.task;
+
+     li.style.textDecoration = item.isComplete ? "line-through": "none"
+   //   li.style.color = item.isComplete ? "green" : "red";
+
+
+      container.appendChild(li);
+    });
+
+
+2.
+    const countryOptions = [
+  { value: "us", label: "United States" },
+  { value: "ca", label: "Canada" },
+  { value: "mx", label: "Mexico" },
+  { value: "gb", label: "United Kingdom" },
+];
+
+const select = document.getElementById("countryselect");
+
+countryOptions.forEach(country => {
+    const option = document.createElement("option");
+    option.value = country.value;
+    option.textContent = country.label;
+    select.appendChild(option);
+});
+
+
+3.
+const highScores = [
+  { rank: 1, user: "ACE", score: 95000 },
+  { rank: 2, user: "GMR", score: 87200 },
+  { rank: 3, user: "KID", score: 79000 },
+];
+
+const list = document.getElementById("leaderBoard");
+
+highScores.forEach((player) => {
+const li = document.createElement("li");
+ li.textContent = `#${player.rank} — ${player.user}: ${player.score} pts`;
+
+list.appendChild(li);
+});
+
+
+
+4.
+const galleryImages = [
+  {
+    id: "img001",
+    src: "/images/sunset.jpg",
+    alt: "A vibrant sunset over the ocean",
+  },
+  {
+    id: "img002",
+    src: "/images/mountains.jpg",
+    alt: "Snow-capped mountains under a blue sky",
+  },
+  {
+    id: "img003",
+    src: "/images/forest.jpg",
+    alt: "Sunlight filtering through a dense forest",
+  },
+];
+
+const gallery = document.getElementById("images");
+
+galleryImages.forEach((image) => {
+    const div = document.createElement("div");
+    div.textContent =`${image.id} ${image.src} ${image.alt}`;
+
+
+ //   const img = document.createElement("img");
+ //    img.src = image.src;
+ //     img.alt = image.alt;
+ //     img.id = image.id;
+     gallery.appendChild(div);
+});
+
+
+5.
+const users = [
+  { id: 101, username: "jdoe", email: "john.doe@example.com", isActive: true },
+  {
+    id: 102,
+    username: "asmith",
+    email: "alice.smith@example.com",
+    isActive: false,
+  },
+  {
+    id: 103,
+    username: "bwhite",
+    email: "bob.white@example.com",
+    isActive: true,
+  },
+];
+
+const userContainer = document.getElementById("teams");
+
+users.forEach((data) => {
+  const div = document.createElement("div");  
+                
+  div.textContent = ` ${data.id} ${data.username} (${data.email}) - ${data.isActive ? "Active" : "Inactive"}`;
+  userContainer.appendChild(div);           
+});
+
+
+const shoppingCart = [
+  {
+    sku: "SHOE-M-10B",
+    productName: "Men's Running Shoes",
+    price: 89.99,
+    quantity: 1,
+  },
+  {
+    sku: "SOCK-A-03P",
+    productName: "Athletic Socks (3-Pack)",
+    price: 15.0,
+    quantity: 2,
+  },
+];
+
+//const shoppingCartcontainer = document.getElementById("shoppingcart");
+//
+//shoppingCart.forEach((item) => {
+//  const div = document.createElement("div");
+//  div.textContent = `${item.sku}
+//${item.productName} ${item.price} ${item.quantity}`; 
+//
+//
+//  shoppingCartcontainer.appendChild(div);
+//});
+
+
+const cartContainer = document.getElementById("cart-container");
+
+shoppingCart.forEach(item => {
+  const itemDiv = document.createElement("div");
+  //itemDiv.className = "cart-item"; 
+
+  itemDiv.innerHTML = `
+    ${item.productName}
+    <p><strong>SKU:</strong> ${item.sku}</p>
+    <p><strong>Price:</strong> $${item.price.toFixed(2)}</p>
+    <p><strong>Quantity:</strong> ${item.quantity}</p>
+    <hr>
+  `;
+  
+  cartContainer.appendChild(itemDiv);
+});
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
+

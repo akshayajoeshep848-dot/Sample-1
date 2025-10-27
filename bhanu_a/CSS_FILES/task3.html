@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #1e1e2f;
+      color: white;
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    .box {
+      border: 5px solid #111;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+    
+    }
+
+    .header, .footer {
+      background: linear-gradient(135deg, #8e2de2, #4a00e0);
+      margin-bottom: 20px;
+    }
+
+    .main {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+
+    }
+
+    .sidebar {
+      flex: 1;
+      background: linear-gradient(135deg, #1dd1a1, #48dbfb);
+      place-content: center;
+    }
+
+    .content-area {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .content1 {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      height: 140px;
+      place-content: center;
+    }
+
+    .bottom-contents {
+      display: flex;
+      gap: 20px;
+    }
+
+    .content2, .content3 {
+      flex: 1;
+      background: linear-gradient(135deg, #43e97b, #38f9d7);
+      place-content: center;
+    }
+
+    .content2 {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      height: 150px;
+    }
+
+    .content3 {
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+      height: 150px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header box">header</div>
+
+  <div class="main">
+    <div class="sidebar box">sidebar</div>
+
+    <div class="content-area">
+      <div class="content1 box">Content-1</div>
+
+      <div class="bottom-contents">
+        <div class="content2 box">Content-2</div>
+        <div class="content3 box">Content-3</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer box">footer</div>
+
+</body>
+</html>

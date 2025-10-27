@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #3349a0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .todo-container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(240, 240, 240, 0);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        header h1 {
+            text-align: center;
+            color: #6a5acd;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+         
+        #add-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        #task-input, #duration-input {
+            padding: 12px;
+            border-radius: #dddce1;
+            border-radius:8px;
+            font-size: 16px;
+          
+        }
+
+        #task-input {
+          width: 40%;
+      
+        }
+
+        #duration-input {
+            flex-grow: 1;
+        }
+
+        .btn-primary {
+            padding: 12px 24px;
+            background-color: #493aac;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover {
+            background-color: #483d8b;
+        }
+
+        .filters {
+            display: flex;
+            text-align: center;
+            margin-bottom: 20px;
+            gap: 10px;
+          
+        }
+
+        .filter-btn {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            background-color: #f8f8ff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: #5a5252;
+        }
+
+        .filter-btn.active {
+            background-color: #5647bd;
+            color: white;
+            border-color: #6a5acd;
+        }
+
+        #clear-completed {
+            margin-left: auto;
+            background: none;
+            color: #555;
+            border: 1px solid #ddd;
+        }
+         #clear-completed:hover {
+            background-color: #f0f0f0;
+
+         }
+         
+         #task-list {
+            list-style: none;
+            padding: 0;
+        }
+
+.task-item {
+            display: flex;
+            align-items: center;
+            background-color: #f5f1f1;
+            padding: 15px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 560px;
+        }
+
+        /* --- Custom Checkbox (Radio button appearance) --- */
+        .task-checkbox {
+            /* Standard input styling reset */
+          
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border: 2px solid #d5cece;
+            border-radius: 50%; /* Makes it circular */
+            margin-right: 15px;
+          /* Prevents shrinking */
+        }
+
+        .task-checkbox:checked {
+            border-color: #6a5acd; /* Violet check border */
+        }
+
+        /* --- Task Text --- */
+        .task-text {
+            flex-grow: 1; /* Takes up available space */
+            font-size: 16px;
+            color: #5a5353;
+            font-weight: 540;
+        }
+
+        /* --- Duration Label --- */
+        .task-duration {
+            font-size: 14px;
+            color: #0d0c0c;
+            background-color: #d1cbcb; /* Light gray background */
+            padding: 5px 10px;
+            border-radius: 40px; /* Pill shape */
+            margin-left: 15px;
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        /* --- Actions (Edit and Delete) --- */
+        .task-actions {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            flex-shrink: 0;
+        }
+
+        .task-actions button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+            margin-left: 5px;
+            line-height: 1;
+        }
+
+        .edit-btn {
+            color: #6a5acd; /* Violet color for edit icon */
+        }
+
+        .delete-btn {
+            color: #dc3545; /* Red color for delete icon */
+        }
+
+        .task-actions button i {
+            font-size: 16px;
+        }
+
+        footer {
+            margin-top: 15px;
+            text-align: right;
+     
+        }
+
+        #task-count {
+            font-size: 19px;
+            color: #777;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <header>
+            <h1><i class="list-check"></i> My To-Do List</h1>
+        </header>
+     <form id="add-form">
+        <input type="text" id="task-input" placeholder="Add a new task...">
+        <input type="text" id="duration-input" placeholder="Duration (e.g., 30m)">
+        <button type="submit" class="btn-primary">Add</button>
+     </form>
+     <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class=" filter-btn" data-filter="active">Active</button>
+        <button class=" filter-btn" data-filter="complted">Completed</button>
+        <button class=" filter-btn" id="clear-completed">Clear-Completed</button>
+     </div>
+   <div class="task-item">
+        <input type="checkbox" class="task-checkbox">
+        
+        <span class="task-text">Interview Preparation</span>
+        
+        <span class="task-duration">1 hour</span>
+        
+        <div class="task-actions">
+            <button class="edit-btn" title="Edit"><i class="fas fa-pencil-alt"></i></button>
+            <button class="delete-btn" title="Delete"><i class="fas fa-trash"></i></button>
+        </div>
+    </div>
+
+  
+  
+     <footer>
+       
+        <span id="task-count">0 tasks left</span>
+     </footer>
+    </div>
+
+    <script>
+       
+
+    </script>
+</body>
+</html>
