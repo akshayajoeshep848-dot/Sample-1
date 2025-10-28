@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>operators</title>
+</head>
+
+<body>
+    <script>
+        // let nmbr1 = Number(prompt("enter the number"));
+        // let nmbr2 = Number(prompt("enter the number"));
+        // let sum = nmbr1 + nmbr2
+        // console.log(sum);
+
+        // let sum1 = nmbr1 - nmbr2
+        // console.log(sum1);
+
+        // let sum2 = nmbr1 * nmbr2
+        // console.log(sum2);
+
+        // let sum3 = nmbr1 / nmbr2
+        // console.log(sum3);
+
+        // let sum4 = nmbr1 % nmbr2
+        // console.log(sum4);
+
+        // let year = Number(prompt("Enter a year"));
+        //     if (year % 4 == 0) {
+        //         if (year % 400 == 0) {
+        //             console.log("This is a century Leap year");
+        //         }
+
+        //         else if (year % 100 != 0) {
+        //             console.log("this is leap year");
+        //         }
+        //     } else {
+        //         console.log("Not a leap year");
+        //     }
+
+        // let dgt = Number(prompt("Enter the number"));
+        // let dgt1 = Math.floor(dgt / 100);
+        // let dgt2 = Math.floor((dgt / 10) % 10);
+        // let dgt3 = Math.floor(dgt / 10);
+        // sum = dgt1 + dgt2 + dgt3;
+        // console.log("sum");
+        //or
+        let str = (prompt("Enter a number"));
+        let sum = 0;
+        let num = Number(str);
+        for (let i = 0; i < str.length; i++) {
+            console.log(`start of loop ${i}`);
+            //step 1 :get last digit
+            console.log("sum:", sum);
+            console.log(`step 1: sum = sum- +(num %10);`);
+            sum = sum + (num % 10);
+            console.log("output: sum =", sum);
+            //step 2 : reduce num by one place
+            console.log(`step 2: num = Math.floor(num);`);
+            num = Math.floor(num / 10);
+            console.log("output: num =", num);
+            console.log(`End of loop ${i}`);
+        }
+        console.log(`sum of digits of given number ${str}=${sum}`);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

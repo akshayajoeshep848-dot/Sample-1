@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS call back</title>
+</head>
+
+<body>
+    <h1>callback functin</h1>
+    <!-- callback  is afunction is passed an argument to another function,which is then invoked inside the outer function to complte some kind of routine or action  -->
+    <!-- callbacks are fundamentals to asynchrous programming in java script operators like u:i/o,timers or network requests -->
+    <!-- understandin callback:ia function is simply a function that is called after another function has finished executing,this pattren is especially ueeful when dealig with operations that take an amount -->
+    <script>
+        function greet(name, callback) {
+            console.log("hello," + name + "!");
+            callback();
+        }
+        function saygoodbye() {
+            console.log("goodbye!")
+        }
+        greet("alice", saygoodbye);
+
+        //example2
+        function operation(num1, num2, oper) {
+            console.log(`you have given ${num1},${num2}`);
+            oper(num1, num2)
+        }
+        function add(num1, num2) {
+            console.log(num1 + num2);
+        }
+        function multiply(num1, num2) {
+            console.log(num1 * num2);
+        }
+        function division(num1, num2) {
+            console.log(num1 / num2);
+        }
+        function mod(num1, num2) {
+            console.log(num1 % num2);
+        }
+        console.log(operation(10, 2, add));
+        console.log(operation(10, 2, multiply));
+        console.log(operation(10, 2, division));
+        console.log(operation(10, 2, mod));
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Async</title>
+    <style>
+        * {
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .name {
+            background-color: aqua;
+            margin: 10px;
+
+        }
+
+        .email {
+            background-color: aquamarine;
+            margin: 10px;
+
+        }
+
+        .container {
+            background-color: blueviolet;
+            height: 150px;
+            width: 500px;
+        }
+
+        .city {
+            background-color: pink;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JS ASYNC</h2>
+    <div id="container"></div>
+    <script>
+        // async function hello() {
+        //     return "Hello,Async!";
+        // }
+        // console.log(hello())
+        // hello().then((value) => console.log(valu e));
+        // hello().then(console.log);
+        let options = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+
+        };
+
+        letpostOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer token_name"
+
+            },
+            body: {}//JSON.stringify({}),
+        }
+
+        async function fetchData(url, options) {
+            console.log("starting fetch call...");
+            let response = await fetch(url);
+            let data = await response.json();
+            console.log(data);
+            console.log("End of the call...");
+            return data;
+        }
+        // fetchData("https://dogapi.dog/api/v2/breeds").then((value) =>
+        //     console.log(value)
+        // );
+        fetchData("https://jsonplaceholder.typicode.com/users/1").then((value) => {
+            let container = document.getElementById("container");
+            let divcontainer = document.createElement("div");
+            let name = document.createElement("h3")
+            let email = document.createElement("P");
+            let city = document.createElement("p")
+
+            divcontainer.classList.add("container");
+            name.classList.add("name");
+            email.classList.add("email");
+            city.classList.add("city");
+
+            name.textContent = `Name:${value.name}`;
+            email.textContent = `email:${value.email}`;
+            city.textContent = `city:${value.address.city}`;
+
+            divcontainer.append(name);
+            divcontainer.append(email);
+            divcontainer.append(city);
+            container.append(divcontainer);
+        }
+        );
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

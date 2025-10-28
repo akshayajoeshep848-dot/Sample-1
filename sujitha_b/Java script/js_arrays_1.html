@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays</title>
+</head>
+
+<body>
+    <h1>Arrays</h1>
+    <script>
+        let emptyArrays = [];
+        let fruits = ["Apple", "Banana", "Cherry"];
+        let numbers = [1, 2, 3, 4, 5];
+        let mixedArrays = [10, "Hello", true, { name: "Alice" }, [6, 7]];
+
+        console.log(fruits[0]);
+        console.log(fruits.length);
+        console.log(mixedArrays[3].name);
+
+
+        let student = {
+            name: "Ntr",
+            age: 21,
+            college: "Chalapathi eng college ",
+            id: '411',
+            address: {
+                line1: "H.No 234,",
+                line2: "Jubliee hills road no 29",
+                city: "Hyderabad",
+                state: "Telangana",
+                pincode: 500034,
+            },
+            movies: ["devara", "War2", "temper", "janatha garage"],
+            awards: [
+                {
+                    name: "Best dancer",
+                    type: "",
+                    year: 1996,
+                    movie: ""
+                },
+                {
+                    name: "Best actor",
+                    type: "Nandi award",
+                    year: 2016,
+                    movie: "nanna ki prematho",
+                },
+                {
+                    name: "Best actor",
+                    type: "Siima awards",
+                    year: 2007,
+                    movie: "Simhadri",
+                },
+            ],
+        };
+        console.log(student.college);
+        console.log(student.movies[0]);
+        console.log(student.awards[0].name);
+
+        //create an array using constructor
+        let arr1 = new Array();  // this will create aan empty array
+        let arr2 = new Array("apple", "banana", "cherry");
+        let arr3 = new Array(4);
+        arr2.push("pineapple");
+        arr2.pop();
+
+        arr2.reverse();
+
+
+        //print arrays
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr2.push);
+        console.log(arr2.reverse);
+
+        console.log(arr3[1]);
+
+
+
+        arr3[0] = "Kalakandh";
+        // console.log(arr3);
+        // console.log(arr3[0]);
+        arr3[1] = "laddu";
+        arr3[2] = "rasagulla";
+        arr3[3] = "mysorepak";
+
+        console.log(arr3[0]);
+        console.log(arr3[1]);
+        console.log(arr3[2]);
+        console.log(arr3[3]);
+
+        let name = "sujitha";
+        console.log(name);
+        console.log(name.split("").reverse().join(""));
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

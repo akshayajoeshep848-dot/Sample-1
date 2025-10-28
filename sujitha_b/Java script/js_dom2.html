@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selecting dom elements</title>
+</head>
+
+<body>
+    <h1 id="head-1">Selecting Dom Elements</h1>
+    <div id="div-1"></div>
+
+
+    <script>
+        //write a function to print sum of the two numbers in html
+        let num1 = Number(prompt("enter the first number"));
+        let num2 = Number(prompt("enter the second number"));
+
+        function sum(a, b) {
+            return a + b;
+        }
+
+        let div1 = document.getElementById("div-1");
+        div1.innerText = sum(num1, num2);
+    </script>
+
+</body>
+
+</html>

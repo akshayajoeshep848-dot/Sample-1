@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>position property</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            background-color: antiquewhite;
+        }
+
+        .div {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .div1 {
+            background-color: aqua;
+            position: static;
+        }
+
+        .div2 {
+            background-color: blueviolet;
+            position: relative;
+            top: -110px;
+            left: 110px;
+        }
+
+        .div3 {
+            background-color: burlywood;
+            position: relative;
+            left: 220px;
+            top: -220px;
+
+
+        }
+
+        .div4 {
+            background-color: palevioletred;
+            position: relative;
+            left: 330px;
+            top: -330px;
+        }
+
+        .div5 {
+            background-color: greenyellow;
+            position: relative;
+            left: 440px;
+            top: -440px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div div1">items1</div>
+        <div class="div div2">items2</div>
+        <div class="div div3">items3</div>
+        <div class="div div4">items4</div>
+        <div class="div div5">items5</div>
+    </div>
+</body>
+
+</html>

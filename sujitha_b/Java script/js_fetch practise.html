@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Cat types</h1>
+    <div class="container"></div>
+
+    <script>
+        let catDataArray = [];
+        let data = fetch("https://api.thecatapi.com/v1/images/0XYvRd7oD")
+            .then((data) => data.json())
+            .then((value) => {
+                console.log(value);
+                let array = value.breeds;
+                console.log(array);
+
+                let container = document.querySelector(".container");
+                array.forEach((cat) => {
+                    let catContainer = document.createElement("div");
+                    let catbreed = document.createElement("h3");
+                    let catbreedDescription = document.createElement("p");
+
+                    catbreed.textContent = cat.name;
+                    catbreedDescription.textContent = cat.description;
+
+
+                    catContainer.append(catbreed);
+                    catContainer.append(catbreedDescription);
+                    container.append(catContainer);
+
+
+                });
+            });
+    </script>
+
+</body>
+
+</html>

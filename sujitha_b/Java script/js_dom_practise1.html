@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Query selector</title>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2">
+    </div>
+    <div id="div3"></div>
+
+    <div id="div5"></div>
+
+    <script>
+        let div_1 = document.getElementById("div1");
+        console.log(div_1.innerText);
+        div_1.innerText = "Sujitha";
+        console.log(div_1.innerText);
+        div_1.innerHTML = "<p>This is a para</p>";
+        console.log(div_1.innerHTML);
+        div_1.style.color = "red";
+        div_1.style.backgroundColor = "aqua";
+        div_1.style.fontFamily = "Arial ";
+        div_1.style.padding = "5px ";
+        div_1.style.textAlign = "center ";
+        div_1.style.margin = "5px ";
+
+        let div_2 = document.getElementById("div2");
+        div_2.innerHTML = `<input type="text" placeholder="suji">`;
+
+        let div_3 = document.getElementById("div2");
+        console.log(div_2.innerText);
+        div_3.innerText = "Javascript";
+        console.log(div_3.innerText);
+        div_3.style.color = "green";
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

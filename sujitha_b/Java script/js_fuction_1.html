@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    <script>
+
+        //function declartion
+        function greet(name) {
+            console.log(`Hello,${name}`);
+        }
+        //function call
+        greet("John");
+        greet(10);
+
+        //variable hoisting is used while compling
+
+
+        // write a function to dispaly if a user elgible to vote based on age
+        function elgibletovote(age) {
+            age < 18
+                ? console.log("not elgible to vote")
+                : console.log("elgible to vote");
+        }
+        elgibletovote(18);
+        // fullname("pawan", "kalayn", "konidela");
+
+        //write a fuction to print full name
+
+        function fullname(firstName, middlename, lastname) {
+            console.log(` full name is:${firstName} ${middlename} ${lastname}`);
+        }
+        fullname("pawan", "kalayn", "konidela");
+
+        var a = 10;
+        elgibletovote(a);
+
+        //writw a function to print numbers from 1 to n
+
+        function printpositiveintegers(positiveinteger) {
+            console.log(`start of function`);
+            let i = 1;
+
+            while (i <= positiveinteger) {
+                console.log(`${i}`);
+                i++;
+
+            }
+            console.log(`end of function`);
+
+        }
+        printpositiveintegers(a);
+        printpositiveintegers(5);
+
+        // write a function to print n factorial
+
+        function fact(positiveinteger) {
+            console.log(`positveinteger: ${positiveinteger}`)
+            let factorial = 1;
+            for (i = 1; i <= positiveinteger; i++); {
+                factorial *= i;
+            }
+            console.log(factorial)
+        }
+        fact(5);
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

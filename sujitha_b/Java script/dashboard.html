@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 10px;
+
+        }
+
+        #first {
+            width: 500px;
+
+        }
+
+        #second {
+            width: 500px;
+            margin-top: 10px;
+
+        }
+
+        #third {
+            width: 200px;
+        }
+
+        #pre {
+            position: relative;
+            left: 250px;
+            top: -30px;
+        }
+
+        #cal {
+            position: relative;
+            top: -30px;
+            width: 200px;
+        }
+
+        #med {
+            position: relative;
+            top: -30px;
+            width: 200px;
+        }
+
+        .task {
+            background-color: beige;
+            width: 650px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="head">TASK DASHBOARD</h1>
+    <p>Stay organised,get things done</p>
+    <div class="task">
+        <label for="first"></label>
+        <input type="text" id="first" name="first" placeholder="Task Title(eg.,finish project report)" /><br>
+        <label for="second"></label>
+        <input type="text" id="second" name="second" placeholder="Add a description" />
+        <p>Due Date(optional)</p>
+        <p id="pre">Priority</p>
+        <label for="third"></label>
+        <input id="cal" type="date" id="third" name="third" placeholder="dd-mm-yyyy">
+
+        <label for="four"></label>
+        <input id="med" type="four" id="four" name="four" placeholder="Medium">
+    </div>
+    <script>
+        let head = document.getElementById("head");
+        head.innerText = "TASK DASHBOARD"
+
+        let first = document.getElementById("first");
+        let second = document.getElementById("second");
+        let third = document.getElementById("third");
+        let four = document.getElementById("four")
+
+        first.addEventListener("change", (event) => {
+            console.log(event.target.value)
+        });
+
+        second.addEventListener("change", (event) => {
+            console.log(event.target.value)
+        });
+
+
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>loops</title>
+</head>
+
+<body>
+    <h1>Js Loops</h1>
+    <script>
+        //print numbers from 0 to 10
+        for (let i = 0; i <= 10; i = i + 1) {
+            console.log(i);
+        }
+
+        //print positive even numbers till 10
+        for (let i = 1; i <= 10; i = i + 2) {
+            console.log(i, i + 1);
+        }
+
+        // for loop print the multiples of 5 upto 625
+        for (let i = 5; i <= 625; i = i + 5) {
+            console.log(i + 5);
+        }
+
+        // calculate sum of all numbers from 1 to 50
+        let sum = 0;
+        for (let i = 1; i <= 50; i++) {
+            sum += i;
+        }
+
+        // array of consecutive numbers
+        // arr1 = [1, 2, 3, 4, 5]
+        // sum = 0;
+        // for (let i = 0; 1 < array.length; i++) {
+        //     sum = sum + arr[i]
+        //     console.log(first)
+        // }
+
+        // print of prime numbers
+
+        let num = Number(prompt("enter a  positive number"));
+        let isprime = true;
+        if (n <= 0) {
+            isprime = fale;
+        } else if (n == 1) {
+            isprime = false;
+        } else if (n == 2) {
+            isprime = true;
+        } else if (n % 2 == 0) {
+            isprime = false;
+        } else {
+            for (let i = 3; i <= Math.floor(n ** 0.5);) i += 2;
+            if (n % 1 == 0) {
+                isprime = false;
+
+            }
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

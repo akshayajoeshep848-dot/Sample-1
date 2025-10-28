@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="head">MY TO_DO LIST</h1>
+        <label for=first></label>
+        <input type="text" id="first" name="first" placeholder="Add a new task...." />
+        <label for="second"></label>
+        <input type="text" id="second" name="second" placeholder="Duration(e.g.,30m)" />
+        <button id="btn">ADD</button>
+
+    </div>
+    <script>
+        let head = document.getElementById("head");
+        head.innerText = "MY TO_DO LIST";
+        head.style.color = "#7f66ff";
+
+        let first = document.getElementById("first");
+        let second = document.getElementById("second");
+
+        first.addEventListener("change", (event) => {
+            console.log(event.target.value)
+        });
+
+        second.addEventListener("change", (event) => {
+            console.log(event.target.value)
+        });
+
+        let button = document.getElementById("btn");
+        button.innerText = "ADD";
+        button.style.backgroundColor = "#7f66ff";
+        button.style.color = "White";
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

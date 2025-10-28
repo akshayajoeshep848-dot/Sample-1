@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Promise</title>
+</head>
+
+<body>
+    <h1>JS PROMISE</h1>
+    <script>
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const success = Math.random() > 0.3;
+                if (success) {
+                    resolve("Successful");
+                } else {
+                    reject("Failure");
+                }
+            }, 2000);
+        });
+
+
+
+
+
+
+        console.log(promise);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #calci {
+            background-color: goldenrod;
+            height: 200px;
+            width: 30%;
+            text-align: center;
+
+
+        }
+
+        #btn {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+
+<body>
+    <!-- <div class="container"> -->
+    <div id="calci">
+        <h1>BMI Calculator</h1>
+        <div>
+            <label for="weight">weight</label>
+            <input type="number" id="weight" placeholder="Enter weight " />
+        </div>
+        <br>
+        <div>
+            <label for="height">height</label>
+            <input type="number" id="height" placeholder="Enter height " />
+        </div>
+        <br>
+        <button id="btn">Click me</button>
+    </div>
+
+    <script>
+        let weight = document.getElementById("weight");
+        let height = document.getElementById("height");
+        let fmobj = {};
+        let button = document.getElementById("btn");
+
+        button.addEventListener("click", (event) => {
+            fmobj[`${height.name}`] = height.value;
+            fmobj[`${weight.name}`] = weight.value;
+
+            let height1 = height.value / 100;
+            let height2 = height1 * height1;
+            let calc = weight.value / height2;
+            console.log(calc);
+
+            document.body.append(calc);
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

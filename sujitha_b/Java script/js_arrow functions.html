@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+    <h1>Aroow Functions</h1>
+    <button onclick="addTwoNumbers(10,10)">calculate</button>
+    <button onclick="sum1(20,10)">calculate</button>
+    <script>
+        //arrow function means simple syntax or simple function
+
+        //regular function
+        function addTwonumbers(a, b) {
+            console.log(a + b);
+        }
+        //function expression
+        let sum = function (a, b) {
+            return a + b;
+        };
+        //arrow function
+        let addnumbers = (a, b) => a + b;
+        console.log(addTwonumbers(10, 10));
+
+        // write an arrow function to multiply 2 numbers
+        let multiply = (a, b) => a * b;
+        console.log(multiply(10, 4));
+
+        //write an arrow function to find square root of number
+        let square = (a) => a ** 0.5;
+        console.log(square(49));
+
+        //write a function print in console and return sum of two numbers
+        let sum1 = (a, b) => {
+            console.log(a + b);
+            return a + b;
+        }
+    </script>
+
+</body>
+
+</html>

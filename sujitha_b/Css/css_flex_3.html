@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>flex item properties</title>
+    <style>
+        .flex-container {
+            display: flex;
+            background-color: aqua;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .flex-item {
+            background-color: brown;
+            color: aliceblue;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            place-content: center;
+            flex-basis: 300px;
+
+        }
+
+        .flex-item-1 {
+            /* flex-basis: 300px;
+            flex-grow: 1;
+            flex-shrink: 1; */
+            flex: 1 1 300px;
+        }
+
+        .flex-item-2 {
+            /* flex-basis: 300px;
+            flex-grow: 2;
+            flex-shrink: 2; */
+            flex: 2 2 300px;
+        }
+
+        .flex-item-3 {
+            flex: 3 3 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Flex Item Properties</h1>
+    <div class="flex-container">
+        <div class="flex-item flex-item-1">Item1</div>
+        <div class="flex-item flex-item-2">Item2</div>
+        <div class="flex-item flex-item-3">Item3</div>
+    </div>
+
+</body>
+
+</html>

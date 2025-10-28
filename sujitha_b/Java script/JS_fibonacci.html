@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js fibonacci series</title>
+</head>
+
+<body>
+    <h1>fibonacci series</h1>
+    <script>
+        //write a fuction to print nth fibonacci number
+        let nthfibNumber = function fib(n) {
+            let nthvalue = 0;
+            if (n <= 0) {
+                return;
+            } else if (n == 1) {
+                return 0;
+            } else if (n == 2) {
+                return 1;
+            } else {
+                return fib(n - 1) + fib(n - 2);
+            }
+        };
+        console.log(nthfibNumber(10));
+
+
+    </script>
+
+</body>
+
+</html>

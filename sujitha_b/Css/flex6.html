@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex container 6</title>
+    <style>
+        * {
+            margin: 5px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .start {
+            height: 80vh;
+            width: 80vh;
+
+        }
+
+        .main {
+            background-color: aqua;
+            height: 10%;
+        }
+
+        .main1 {
+            height: 50%;
+            display: flex;
+        }
+
+        .right {
+
+            display: flex;
+            flex-direction: column;
+            flex: 4;
+        }
+
+
+
+        .left {
+
+            display: flex;
+            flex-direction: column;
+            flex: 6;
+        }
+
+        .Hero {
+            background-color: blueviolet;
+            flex: 4;
+
+        }
+
+        .sidebar {
+            background-color: green;
+            flex: 6;
+        }
+
+        .Maincontent {
+            background-color: orange;
+            flex: 7;
+        }
+
+        .extracontent {
+            background-color: gray;
+            flex: 4;
+        }
+
+        .main2 {
+            display: flex;
+            height: 15%;
+        }
+
+        .relatedimages {
+            background-color: green;
+            flex: 10;
+        }
+
+        .relatedposts {
+            background-color: pink;
+            flex: 4;
+        }
+
+        .main3 {
+            background-color: orange;
+            height: 10%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="start">
+        <div class="main">Header</div>
+        <div class="main1">
+            <div class="right">
+                <div class="Hero">Hero</div>
+                <div class="sidebar">Sidebar</div>
+            </div>
+            <div class="left">
+                <div class="Maincontent">main content</div>
+                <div class="extracontent">extracontent</div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="relatedimages">related images</div>
+            <div class="relatedposts">related posts</div>
+        </div>
+        <div class="main3">footer</div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS rest operators</title>
+</head>
+
+<body>
+    <h1>JS REST OPERATOR</h1>
+    <p>crate an array of parameters</p>
+    <script>
+        let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let sum = function (a = 0, b = 0, ...c) {
+            console.log(c);
+            let s = 0;
+            for (let i = 0; i < c.length; i++) {
+                s += c[i];
+            }
+            return s + a + b;
+        };
+        console.log(sum(3, 4, 5, 6));
+        console.log(sum());
+        console.log(sum(...a));
+    </script>
+
+</body>
+
+</html>

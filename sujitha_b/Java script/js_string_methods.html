@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string methods</title>
+</head>
+
+<body>
+    <h1>STRING METHODS</h1>
+    <script>
+        let str = "Hello, World";
+        console.log(str.charAt(0) == "H");
+        console.log(str.charAt(9));
+
+        //include method
+        const sentence = "the quick brown fox jumps over the lazy dog.";
+        console.log(sentence.includes("fox"));
+
+        //replace method
+        const greeting = "Hello ,World!";
+        const newgreeting = greeting.replace("World", "Universe");
+        console.log(newgreeting);
+
+        //substring
+        const str1 = "Javascript";
+        const sub = str1.substring(4, 10);
+        const sub1 = str1.substring(9);
+
+        console.log(sub);
+        console.log(sub1);
+
+        //toLowercase
+        const uppercaseText = "HELLO WORLD";
+        const lowercaseText = uppercaseText.toLowerCase();
+        console.log(lowercaseText)
+
+        //length property
+        const text = "Hello World!";
+        console.log(text.length);
+
+        //charAt
+        const greeting1 = "Sujitha";
+        console.log(greeting1.charAt(3));
+
+        //concat
+
+        const string1 = "Hello";
+        const string2 = "World";
+        const result = string1.concat(" ", string2, "!");
+        console.log(result);
+
+        //includes
+
+        const sentence1 = "A quick brown fox jumps over the lazy dog.";
+        console.log(sentence1.includes("fox"));
+
+        //indexof
+
+        const text1 = "Hello world,welcome to the universe.";
+        console.log(text1.indexOf("world"));
+
+        //lastIndexOf
+
+        const text2 = "The cat and the dogs are friends.";
+        console.log(text2.lastIndexOf("the"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

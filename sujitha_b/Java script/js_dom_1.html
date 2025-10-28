@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM 1</title>
+</head>
+
+<body>
+    <h1 id="head-1">Selecting Dom Elements</h1>
+    <div id="div-1"></div>
+    <input type="text" id="in-1" value="sujitha" />
+
+    <script>
+        let head1 = document.getElementById("head-1");
+        // console.log(head1.innerText);
+        head.innerText = "Hello";
+
+        let div1 = document.getElementById("div-1");
+        // console.log(div1);
+        div1.innerHTML = "<p>This is a para</p>"
+
+        let input1 = document.getElementById("in-1");
+        console.log(input.value)
+
+
+
+
+        //     let heading = document.createElement('h1');
+        //     console.log('Node Type of h1:', heading.nodeType);
+
+        //     let text = document.createTextNode('Hello');
+        //     console.log('NodeType of text:', text.nodeType);
+
+        //     let comment = document.createComment('This is a comment');
+        //     console.log('Node type of comment:', comment.nodeType);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARRAY SPLICE</title>
+</head>
+
+<body>
+    <h1>JS ARRAY SPLICE</h1>
+    <script>
+        let fruits = [
+            "apple",
+            "banana",
+            "kiwi",
+            "orange",
+            "mango",
+            "watermelon",
+            "guava",
+            "pineapple",
+        ];
+        console.log(fruits);
+        //removing elements
+        //first argument - index
+        //second argument - no of elements
+        let copy1 = fruits.splice(0, 2, "Dragon Fruit", "Papaya",);
+        console.log(copy1);
+        console.log(fruits);
+
+        let numbers = [1, 2, 3, 4, 5, 7, 8];
+        console.log(numbers)
+        let copy = numbers.splice(5, 0, 6);
+        // console.log(copy);
+        console.log(numbers);
+
+        let arr = [1, 2, 3, 4, 5];
+        console.log(arr)
+        let copy2 = arr.splice(3, 1, 40);
+        // console.log(copy)
+        console.log(arr);
+
+        let nmbr = [10, 20, 30, 40, 50];
+        console.log(nmbr)
+        let copy3 = nmbr.splice(2, 2);
+        console.log(nmbr);
+
+        let arr1 = ["c", "d", "e"];
+        console.log(arr1)
+        let copy4 = arr1.splice(0, 0, "a", "b");
+        console.log(arr1)
+
+        let arr2 = ["apple", "banana", "orange", "pear"];
+        console.log(arr2)
+        let copy5 = arr2.splice(1, 2, "grape", "kiwi");
+        console.log(arr2)
+
+        //concat
+
+        const array1 = ["a", "b"];
+        const array2 = ["c", "d"];
+        const combined = array1.concat(array2);
+        console.log(combined);
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

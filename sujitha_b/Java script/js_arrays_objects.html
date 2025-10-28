@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects &arrays</title>
+</head>
+
+<body>
+    <h1>Object</h1>
+    <script>
+        // <!-- <button onclick="dog.bark()">bark</button>
+        // <button onclick="dog.walk()">walk</button>
+        // <button onclick="dog.run()">run</button>
+        // <button onclick="dog.shakehand()">shakehand</button>
+
+
+        //     const person = {
+        //         // firstName: "prabhas",
+        //         // last_name: "Uppalapati"
+        //         name: "Uppalapati prabhas",
+        //         age: 25,
+        //         isStudent: true,
+        //         greet: function () {
+        //             return `Hello,my name is${this.name}`;
+        //         },
+        //     };
+        //     //do notation
+        //     // console.log(person.firstName);
+        //     // console.log(person.last_name);
+        //     console.log(person.name);
+        //     console.log(person.age);
+        //     console.log(person.isStudent);
+        //     console.log(person.greet());
+
+        //     // //[]bracket notation
+        //     // console.log(person["firstName"]); -->
+        //     <!-- console.log(person["name"]);
+        //     console.log(person["age"]);
+        //     console.log(person["isStudent"]);
+        //     console.log(person["greet"]());
+
+        //     //create an object called dog
+        //     //name,breed,color,age,gender.pet id
+        //     // const dog = {
+        //     //     name: "Rufus",
+        //     //     breed: "Germen sheperd",
+        //     //     age: 5,
+        //     //     gender: "Male",
+        //     //     color: "white",
+        //     //     petId: 4567,
+        //     //     bark: function () {
+        //     //         console.log(`${this.name} is barking`);
+
+        //     //     },
+        //     //     walk: function () {
+        //     //         console.log(`${this.name} is walking`);
+        //     //     },
+        //     //     run: function () {
+        //     //         console.log(`${this.name} is running`);
+        //     //     },
+        //     //     shakehand: function () {
+        //     //         console.log(`${this.name} is shaking hand`);
+        //     //     },
+        //     //     smell: function () {
+        //     //         return `${this.name} is smelt your feet fainted`;
+        //     //     },
+        //     //     color: function () {
+        //     //         return `${this.name} is white color`;
+        //     //     },
+        //     //     petId: function () {
+        //     //         return `${this.name} Id is 4567`;
+        //     //     },
+        //     // };
+        //     // // console.log(dog.walk());
+        //     // // console.log(dog.run());
+        //     // // console.log(dog.shakehand());
+        //     // // console.log(dog.smell());
+        //     // // console.log(dog.color());
+        //     // // console.log(dog.petId());
+
+
+        //create an object address
+        //MIG-87,First floor road no.1,Kphb phase-1,
+        //Beside AED hospitals Hyderabad - 500072
+
+        const address = {
+            address_line1: "MIG_87",
+            address_line2: "First Floor, Road No. 1",
+            address_line3: "Kphb phase-1",
+            landmarkl: "Beside AED hospital",
+            state: "Telangana",
+            pincode: 500072,
+
+            getAddress: function () {
+                console.log(`${this.address_line1},${this.address_line2},${this.address_line3}`);
+            }
+
+        };
+        address.getAddress();
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

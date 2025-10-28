@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Js Conditionals</title>
+</head>
+
+<body>
+    <h1>Js Conditional</h1>
+    <script>
+        let age = prompt("please enter your age");
+        console.log(typeof age);
+        if (age < 0) {
+            console.log("please enter a valid age");
+        }
+        else if (age >= 0 && age < 18) {
+            console.log("you are not elgible to vote")
+        }
+        else if (age >= 18 && age < 21) {
+            console.log("you are elgible for  vote and  not marriage");
+        }
+
+
+        else if (age > 21) {
+            console.log("you are eligible to marriage ");
+        }
+        else {
+            console.log("you are both elgible  to vote and geting married")
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

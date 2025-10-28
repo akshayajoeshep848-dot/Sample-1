@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1"> Js Events Listeners</h1>
+    <div>
+        <label for="firstname">firstname</label>
+        <input id="firstname" type="text" name="firstname" />
+    </div>
+    <div>
+        <label for="lastname">lastname</label>
+        <input id="lastname" type="text" name="lastname" />
+
+    </div>
+    <button id="button">Click me</button>
+    <input type="text" id="input">
+    <script>
+        let button = document.getElementById("button");
+        let h1 = document.getElementById("h1");
+        let formObject = {};
+        let firstname = document.getElementById("firstname");
+        let lastname = document.getElementById("lastname");
+
+        // button.addEventListener("click", (event) => {
+        //     formObject[`$input.name}`] = input.value;
+        //     console.log(formObject);
+        // }
+
+
+        button.addEventListener("click", (event) => {
+            formObject[`${input.name}`] = input.value;
+            console.log(formObject);
+        });
+
+        button.onclick = function (event) {
+            console.log(`button is beling clicked`);
+        };
+
+        function onClick() {
+            console.log(`Button is clicked`);
+
+        }
+
+        button.addEventListener("click", (event) => {
+            formObject[`${firstname.name}`] = first.value;
+            formObject[`${lastname.name}`] = last.value;
+            console.log(formObject);
+        })
+
+        button.addEventListener("click", (event) => console.log(event.type));
+
+        // button.addEventListener("click", (event) => console.log(event.target));
+
+        // button.addEventListener("click", (event) => console.log(event.timeStamp));
+        //mouseover event
+        // h1.addEventListener("mouseover", (event) => {
+        //     event.target.style.backgroundColor = "aqua";
+        //     event.target.style.borderRadius = "5px";
+
+        // });
+
+        // //mouseout event
+        // h1.addEventListener("mouseout", (event) => {
+        //     event.target.style.backgroundColor = "white";
+        // });
+
+        // let input = document.getElementById("input");
+        // input.addEventListener("Keypress", (event) => console.log(event.target.style.backgroundColor = "pink"));
+
+        firstname.addEventListener("keydown", (event) =>
+            console.log(event.key, event, code)
+        );
+    </script>
+
+</body>
+
+</html>

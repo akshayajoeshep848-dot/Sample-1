@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operator</title>
+</head>
+
+<body>
+
+    <h1>Spread Operator</h1>
+    <!-- in copying arrays there are shallow copy(it means it copies the first layer) -->
+    <script>
+        let arr = [1, 2, 3, 4];
+        console.log(...arr);
+
+        let arr1 = [1, 2,];
+        let arr2 = [3, 4];
+        console.log(...arr1, ...arr2);
+
+        //copying Arrays(shallow copy)
+        const orginalArray = [1, 2, { key: 'value' }];
+        const copiedArray = [...orginalArray];
+        console.log(copiedArray);
+        console.log(orginalArray === copiedArray);
+        console.log(orginalArray[2] === copiedArray[2]);
+
+        copiedArray[0] = 99;
+        copiedArray[2].key = 'new value';
+        console.log(orginalArray);
+        console.log(copiedArray);
+
+        //copying objects (shallow copy)
+        let orginalObject = { a: 1, b: { c: 2 } };
+        let copiedObject = { ...orginalObject };
+
+        copiedObject.a = 2;
+        copiedObject.b.c = 5;
+        console.log("orginalObject", orginalObject);
+        console.log("copiedObject", copiedObject);
+
+        //merging arrays 
+        const arr3 = [1, 2, 3];
+        const arr4 = [3, 4, 5];
+        const arr5 = [5, 6, 7];
+
+        const mergedArray = [...arr3, ...arr4, ...arr5];
+        console.log(mergedArray);
+
+        //merging objects
+        const objA = { x: 1, y: 2 };
+        const objB = { y: 3, z: 4 };
+        const objC = { a: 5 };
+
+        const mergingObject = { ...objA, ...objB, ...objC };
+        console.log(mergingObject);
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</htm

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ja dom examples</title>
+</head>
+
+<body>
+    <h1>Vegetables</h1>
+    <div class="container">
+        <div class="items item-1">item1</div>
+        <div class="items item-2">item2</div>
+        <div class="items item-3">item3</div>
+        <div class="items item-4">item4</div>
+        <div class="items item-5">item5</div>
+        <div class="items item-6">item6</div>
+        <div class="items item-7">item7</div>
+        <div class="items item-8">item8</div>
+        <div class="items item-9">item9</div>
+    </div>
+    <button onclick="getVegetables(itemArray,Vegetables)">Vegetables</button>
+    <button onclick="getVegetables(itemArray,Fruits)">Fruits</button>
+
+
+
+    <script>
+        let fruits = ["apple", "banana", "grapes", "guava", "orange"];
+        let vegetables = ["Vankaya", "bendakaya", "dondakaya", "chikkudukaya", "Dosakaya", "sorakaya", "beerakay", "kakkarkaya", "potakaya"];
+
+        // let VegetableCollection = document.getElementsByClassName("items");
+        // console.log(VegetableCollection);
+        // let VegetableArray = Array.from(VegetableCollection);
+        // console.log(VegetableArray);
+
+        // let FruitsCollection = document.getElementsByClassName("items");
+        // console.log(FruitsCollection);
+        // let FruitsArray = Array.from(FruitsCollection);
+        // console.log(FruitsArray);
+
+        // function getFruits(arr1, arr2) {
+        //     VegetableArray.forEach((element, index) => (element.innerText = arr2[index]));
+        // }
+
+        let itemCollection = document.getElementsByClassName("items");
+        let itemArray = Array.from(itemCollection);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

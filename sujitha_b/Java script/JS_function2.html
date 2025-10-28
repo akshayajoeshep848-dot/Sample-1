@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>js fuctions with return statements</h1>
+    <script>
+        // WRITE A FUNCTION TO RETURN SUM OF TWO NUMBERS
+        function addTwoNumbers(num1, num2) {
+            let sum = num1 + num2;
+            return sum;
+        }
+        console.log(addTwoNumbers(10, 20));
+
+        let sum = addTwoNumbers(20, 40);
+        console.log(sum);
+
+        //WRITE A FUNCTION TO MULTIPLY THREE NUMBERS 
+        function multiplyNumbers(num1, num2, num3) {
+            return num1 * num2 * num3;
+        }
+        let value = multiplyNumbers(8, 4, 5);
+        console.log(value);
+        console.log(multiplyNumbers(2, 4, 6));
+
+        //Write a function to return a boolean
+        //take 2 numbers,return true if a>b
+        //else false
+        // function compareTwoNums(num1, num2) {
+        //     if (num1 > num2) {
+        //         console.log(true)
+        //     } else {
+        //         console.log(false)
+        //     }
+        // }
+        // let boolean = Twonums(10, 20);
+        // console.log(TwoNums);
+        // console.log(TwoNums(10, 20));
+
+
+        //fuction expression it defined a function as a part of an expression
+        //write a  function expression to add two numbers 
+        let multiply = function (a, b) {
+            return a * b;
+        }
+        console.log(multiply(10, 4));
+
+        //write a function to return factorial value
+        function factorialValue(n) {
+            let factorial = 1;
+            for (let i = 1; i <= n; i++) {
+                factorial *= i;
+            }
+            return factorial;
+        }
+        console.log(factorialValue(5));
+
+        //Recursion - using/calling same function inside a function
+        //f(n) = n*f(n-1)
+        //     =n * n-1 * f(n -2)...
+
+        let factorial = function fac(n) {
+            if (n == 1 || n == 0) {
+                return 1;
+            } else if (n > 1) {
+                return n * fac(n - 1);
+            } else {
+                return undefined;
+            }
+
+        };
+        console.log(factorial(s));
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

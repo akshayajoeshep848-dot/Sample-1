@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Quotes Display Example</title>
+    <style>
+        .quote-box {
+            background-color: rgb(46, 139, 75);
+            width: 500px;
+            margin: 40px;
+            padding: 10px;
+            font-size: 30px;
+            font-style: italic;
+            color: peachpuff;
+        }
+
+        .author {
+            border: 1px solid;
+            background-color: palevioletred;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: rgb(130, 180, 238);
+            position: relative;
+            right: -150px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quote-box">
+        <blockquote id="quoteText">Click the button to display a quote!</blockquote>
+        <p class="author" id="quoteAuthor"></p>
+        <button class="btn" onclick="displayQuote()">Show New Quote</button>
+    </div>
+
+    <script>
+        const quotes = [
+            { text: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+            { text: "Don’t let yesterday take up too much of today.", author: "Will Rogers" },
+            { text: "It’s not whether you get knocked down, it’s whether you get up.", author: "Vince Lombardi" },
+            { text: "If you are working on something exciting, it will keep you motivated.", author: "Steve Jobs" },
+            { text: "Success is walking from failure to failure with no loss of enthusiasm.", author: "Winston Churchill" },
+            { text: "The harder you work for something, the greater you’ll feel when you achieve it.", author: "Anonymous" },
+            { text: "Dream bigger. Do bigger.", author: "Anonymous" },
+            { text: "Don’t watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+            { text: "Push yourself, because no one else is going to do it for you.", author: "Anonymous" },
+            { text: "Sometimes later becomes never. Do it now.", author: "Anonymous" }
+        ];
+
+        function displayQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+
+            document.getElementById("quoteText").innerText = `"${quote.text}"`;
+            document.getElementById("quoteAuthor").innerText = ` ${quote.author}`;
+        }
+    </script>
+
+</body>
+
+</html>
