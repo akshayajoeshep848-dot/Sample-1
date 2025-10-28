@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid task-3</title>
+    <style>
+        body{
+             background-color: rgb(182, 241, 222);
+            margin: 0px;
+        }
+        .parent{
+            margin: 10px;
+            height: 570px;
+            display: grid;
+            gap: 20px;
+            grid-template-rows: 1fr 4fr 1fr;
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas:
+            "header header" 
+            "aside article"
+            "footer footer"
+        }
+      .child{
+        color: rgb(245, 247, 249);
+        text-align: center;
+        place-content: center;
+      }
+      .child_1{
+        background-color: rgb(29, 192, 183);
+        grid-area:header;
+      }
+      .child_2{
+        grid-area: aside;
+       background-color: rgb(12, 205, 12);
+      }
+      .child_3{
+        grid-area: article;
+        background-color: rgb(253, 166, 4);
+       
+      }
+      .child_4{
+        grid-area: footer;
+         background-color: rgb(29, 192, 183);
+      }
+      .box{
+         display: flex;
+         position: relative;
+         top: 80px;
+         justify-content: space-evenly;
+        
+        gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    .child1,.child2,.child3{
+       
+        place-content: center;
+         background-color: rgb(124, 83, 5);
+        height: 150px;
+        width: 150px;
+    }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child child_1">Header1</div>
+        <div class="child child_2">Aside</div>
+            <div class="child child_3">Article
+        <div class="box"> 
+            <div  class="child1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mo1-1RPPCSd54lH3fcOeOWM1wRHxEZ3C1A&s" height="150px" width="150px">
+                </div>
+            <div class="child2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mo1-1RPPCSd54lH3fcOeOWM1wRHxEZ3C1A&s" height="150" width="150px">
+            </div>
+            <div class="child3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mo1-1RPPCSd54lH3fcOeOWM1wRHxEZ3C1A&s" width="150px">
+            </div>
+            </div>
+        </div>
+        <div class="child child_4">Footer</div>
+    </div>
+</body>
+</html>

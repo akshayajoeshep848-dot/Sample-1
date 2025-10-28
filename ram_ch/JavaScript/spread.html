@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spread operator </h1>
+    <script>
+        let arr = [1,2,3,4];
+        console.log(...arr);
+        let arr2 = [2,3,4,]
+
+
+
+        function sum(a,b,c){
+            return a+b+c;
+        }
+        const numbers = [10,20,30];
+        console.log(sum(...numbers));
+
+
+        const array1 = [1,2];
+        const array  = [3,4];
+  //shallow original array
+
+
+//   const originalArray = [1,2,{ key: `value`}];
+//   const copiedArray = [...originalArray];
+
+//   console.log(copiedArray );
+//   console.log(originalArray === copiedArray);
+//   console.log(originalArray[2] === copiedArray);
+
+
+//   copiedArray[0] = 99;
+//   copiedArray[2].key = `new value`  ;
+  
+//   console.log(originalArray);
+//   console.log(copiedArray);
+
+//shallow copied obj
+
+// let originalObject = {a: 1, b:{c:2}};
+// let copiedObject = {...originalOblject};
+
+
+// console.log("originalObject",originalObject);
+// console.log("copiedObject",copiedObject);
+
+// copiediobject.a = 2;
+
+
+// let originalObject = {a:1 , b:{c:2}};
+// let copiedObject = {...originalObject};
+
+// console.log("originalObject",originalObject);
+// console.log("copiedObject",copiedObject);
+
+// copiedObject.a = 2;
+
+
+
+//merging two arrays
+
+// let arr1 = [1,2,3];
+// let arr2 = [3,4,5];
+// let arr3 = [5,6,7]
+// let mergedArray = [...arr1, ...arr2, ...arr3];
+// console.log(mergedArray);
+
+
+
+
+
+// let arr1 = [2,4,5];
+// let arr2 = [7,6,3];
+// let arr3 = [9,4,5];
+
+// let mergedArray =[...arr1,...arr2,...arr3];
+// console.log(mergedArray);
+
+
+//merging object
+
+// let objA = { x: 1, y:2};
+// let objB = { x: 3, y:4};
+// let objC = { a: 5};
+
+
+// let mergedObj = [...objA,...objB,...objC];
+// console.log(mergedObj);
+
+
+// function sum(...numbers) {
+//   console.log(numbers);  // all arguments become an array
+//   let total = 0;
+//   for (let num of numbers) {
+//     total += num;
+//   }
+//   return total;
+// }
+
+// console.log(sum(1, 2, 3));    
+// console.log(sum(10, 20, 30, 40));
+
+
+
+function greet(greeting, ...names) {
+  return `${greeting} ${names.join(", ")}`;
+}
+
+console.log(greet("Hello", "Ram", "Ravi", "Sita"));
+
+
+
+
+
+
+    </script>
+</body>
+</html>

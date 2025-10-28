@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Function</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .container {
+            background-color: rgb(201, 255, 196);
+            padding: 5px 10px;
+            border-radius: 10px;
+            width: 500px;
+
+        }
+
+        .container p {
+            padding: 10px;
+            background-color: rgb(255, 250, 192);
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            font-size: 18px;
+            background: bisque;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="fetching">Fetch Details</button>
+    <div class="container">
+        <p id="name"></p>
+        <p id="user-name"></p>
+        <p id="email"></p>
+        <p id="address"></p>
+        <p id="phone"></p>
+        <p id="website"></p>
+    </div>
+
+    <!-- An async function is a function that implicitly returns a Promise . 
+     This syntax is a syntactic sugar over promises, designed to improve readability and simplify chaining asynchronous operations.? -->
+
+    <script>
+
+
+        let Btn = document.getElementById("fetching")
+
+
+        Btn.onclick = function () {
+            fetch("https://jsonplaceholder.typicode.com/users/1")
+                .then((data) => data.json())
+                .then((user) => {
+                    console.log(user);
+                    let Name = document.getElementById("name");
+                    let UserName = document.getElementById("user-name");
+                    let Email = document.getElementById("email")
+                    let Address = document.getElementById("address")
+                    let Phone = document.getElementById('phone')
+                    let Website = document.getElementById('website')
+
+
+                    //assign
+                    Name.textContent = `Name : ${user.name}`;
+                    UserName.textContent = `UserName : ${user.username}`;
+                    Email.textContent =` Email : ${user.email}`;
+                    Address.textContent =` Address : ${user.address.street}`
+                    Phone.textContent = `Phone Number : ${user.phone}`
+                    Website.textContent = `Website : ${user.website}`
+                });
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //-----------------------------------------------------------
+
+        // fetch("").then((value)=>{
+        //     let container = document.getElementById("container")
+        //     let name = document.createElement('p');
+        //     let email = document.createElement('p');
+
+
+
+        //     name.classList.add("name")
+        //     email.classList.add("email")
+
+        //     name.textContent=Name: ${value.name}
+        // })
+
+
+
+
+
+
+
+
+
+
+
+        // async function fetchData(url) {
+        //     console.log("starting fetch call..");
+        //     let response = await fetch(url);
+        //     let data = await response.json()
+        //     console.log("End Fetch call..")
+        //     return data;
+        // }
+
+
+        // fetchData("https://jsonplaceholder.typicode.com/users/1").then(console.log)
+        // fetchData("https://dogapi.dog/api/v2/breeds").then(console.log)
+
+        // async function hello() {
+        //     return "Hello, Async";
+        // }
+        // console.log(hello()) //promises
+        // hello().then((value) => console.log(value)); // full code
+        // hello().then(console.log); // short-cut
+
+    </script>
+</body>
+
+</html>

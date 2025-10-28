@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Create 5 Elements & Fetch innerText</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; padding: 20px; }
+    #container > p { margin: 6px 0; padding: 8px; border-radius: 6px; box-shadow: 0 0 0 1px rgba(0,0,0,0.05); }
+    pre { background:#f7f7f7; padding:10px; border-radius:6px; }
+    button { margin-right:8px; padding:8px 12px; border-radius:6px; }
+  </style>
+</head>
+<body>
+  <h1>Create 5 elements & read their innerText (Demo)</h1>
+
+  <div>
+    <button id="createBtn">Create 5 elements</button>
+    <button id="readBtn">Read innerText</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <section id="container" aria-live="polite" style="margin-top:16px;"></section>
+
+  <h2>Collected innerText</h2>
+  <pre id="output">(no data yet)</pre>
+
+  <script>
+    // Example texts we'll put into 5 elements
+    const texts = [
+      'First item — hello world',
+      'Second item — JavaScript',
+      'Third item — innerText demo',
+      'Fourth item — DOM manipulation',
+      'Fifth item — done!'
+    ];
+
+    const container = document.getElementById('container');
+    const output = document.getElementById('output');
+    const createBtn = document.getElementById('createBtn');
+    const readBtn = document.getElementById('readBtn');
+    const clearBtn = document.getElementById('clearBtn');
+
+    // Create 5 paragraph elements and append them to #container
+    function createFiveElements() {
+      // clear first
+      container.innerHTML = '';
+
+      for (let i = 0; i < 5; i++) {
+        const p = document.createElement('p');
+        p.id = `item-${i+1}`; // give each one an id
+        p.textContent = texts[i];
+        // you can also set innerHTML if you need markup, but textContent is safer
+        container.appendChild(p);
+      }
+
+      output.textContent = '(created 5 elements)';
+    }
+
+    // Read innerText of every child inside #container
+    function readInnerTextAll() {
+      // Option A: select all <p> inside the container
+      const nodes = container.querySelectorAll('p');
+      const values = Array.from(nodes).map(n => n.innerText);
+
+      // Show result
+      if (values.length === 0) {
+        output.textContent = '(no elements to read, click "Create 5 elements")';
+      } else {
+        output.textContent = values.join('\n');
+        // also log to console
+        console.log('Collected innerText values:', values);
+      }
+    }
+   
+    // Clear demo
+    function clearAll() {
+      container.innerHTML = '';
+      output.textContent = '(cleared)';
+    }
+
+    // Event handlers
+    createBtn.addEventListener('click', createFiveElements);
+    readBtn.addEventListener('click', readInnerTextAll);
+    clearBtn.addEventListener('click', clearAll);
+
+    // Optional: create automatically on load
+    // createFiveElements();
+  </script>
+</body>
+</html>
+ 

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style-type: none;
+
+        }
+        li::before{
+content: "\2B50";
+padding:10px
+        }
+        li::after{
+            content: "\1F4Ab";
+        }
+        .burger-menu{
+            content: "";
+            position: absolute;
+            transform: translateY(7px);
+            background-color: black;
+            width: 10px;
+            height: 4px;
+
+        }
+
+        
+        .burger-menu::before{
+            content: "";
+            position: absolute;
+            transform: translateY(7px);
+            background-color: black;
+            width: 20px;
+            height: 4px;
+
+        }
+        .burger-menu::after{
+            content: "";
+            position: absolute;
+            transform: translateY(-7px);
+            background-color: black;
+            width: 20px;
+            height: 4px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>CSS pseudo elements</h1>
+   <! <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <div class="burger-menu">
+
+    </div>
+</body>
+</html>

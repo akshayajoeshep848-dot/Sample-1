@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.parent{
+    background-color: antiquewhite;
+    display: grid;
+    gap: 4px;
+    height: 50vh;
+    grid-template-columns: 2rf 3rf 7rf 8rf 100px;
+    grid-template-rows:1rf 9rf 3rf ;
+    grid-template-areas: 
+    "header header header"
+    "sidenav main main"
+    "footer footer footer"
+
+
+}
+.child{
+    background-color: brown;
+    height: 100px;
+    color: yellow;
+}
+.child-1{
+    grid-area: header;
+    width: 470px;
+    height: 70px;
+
+
+}
+.child-2{
+    grid-area: na;
+    height: 100px;
+}
+.child-3{
+grid-area: main;
+}
+.child-4{
+    grid-area:sidenav;
+}
+
+
+
+    </style>
+</head>
+<body>
+
+        <div class="parent">
+        <div>
+        <div class="child child-1 ">child-1</div>
+        </div>
+        <div class="child child-2 ">child-2</div>
+        <div class="child child-3 ">child-3</div>
+        <div class="child child-4 ">child-4</div>
+        <div class="child child-8 ">child-</div>
+        <div class="child child- ">child-4</div>
+        </div>
+</body>
+</html>

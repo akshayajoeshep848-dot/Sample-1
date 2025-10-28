@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM create an element</title>
+</head>
+<body>
+    <h1>JS DOM document.createElement() method</h1>
+    <div class="container"></div>
+    <script>
+        let heading2 = document.createElement("h2");
+        heading2.innerText ="h2 created by createElement method";
+        let container = document.getElementById("container");
+        container.append(heading2);
+
+        //creating  list element
+
+        let orderedList = document.createElement("ol");
+
+        // let listItem = document.createElement("li");
+        // listItem1.innerText = "Item 1";
+        // orderList.append(listItem);
+        // document.body.append(orderedList);
+        
+        // // document.body.append(heading2);
+        function getItems(arr){}
+        for (let i = 0; i<fruitsLength; i++){
+        listItems = document.createElement("li");
+        listItem.innerText = `Item ${i+1}`;
+        orderedList.append(listItem);
+
+        }
+
+
+
+        document.body.append(orderedList);
+
+
+    </script>
+</body>
+</html>

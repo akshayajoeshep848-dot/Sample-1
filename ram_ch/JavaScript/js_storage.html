@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storage JS</title>
+</head>
+<body>
+     <script>
+        //console.log(localStorage);
+
+        //let userName = 'Abhishek Sharma';
+       // localStorage.setItem('userName',userName);
+        //console.log(localStorage);
+        localStorage.setItem("userName","Abhishek Sharma");
+        console.log(localStorage);
+        let user = localStorage.getItem("userName");
+        localStorage.removeItem("userName");
+        console.log(localStorage);
+
+
+        let arr = [1,2,3,4,5];
+        localStorage.setItem("array", JSON.stringify(arr));
+        console.log(localStorage);
+        let returnArr = JSON.parse(localStorage.getItem("array"));
+        console.log(Array.isArray(returnArr));
+
+
+        //set object
+
+        let student = {
+            name:"Abhishek Sharma",
+            age:"21",
+            college:"PACE INSTITUTE OF TECHNOLOLGY AND SCIENCES"
+
+        };
+
+        localStorage.setItem("student ",student);
+        console.log(localStorage);
+        let returnStudent
+
+
+
+
+
+
+
+
+
+     </script>
+</body>
+</html>

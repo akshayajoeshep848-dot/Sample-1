@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css posithion 2</title>
+    <style>
+        .parent{
+            background-color: blue;
+            height: 400px;
+            width: 700px;
+            margin: 0px;
+            position: relative;
+        }
+        .child{
+            background-color: pink;
+            height: 100px;
+            width: 10px;
+            place-content: center;
+            text-align: center;
+        }
+        .child-1{
+            background-color: green;
+            position:absolute;
+
+            bottom: 10px;
+            left: 10px;
+            width: 100px;
+
+        }
+        .child-2{
+background-color: yellow;
+height: 100px;
+width: 100px;
+position: absolute;
+bottom: 10px;
+left: 199px;
+        }
+        .child-3{
+            position: relative;
+            border-color: brown;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            right: 300px;
+            bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS position 2</h1>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+         
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My To-Do List</title>
+<style>
+  body { font-family: Arial, sans-serif;
+     background: #f9f9f9;
+      display: flex;
+       justify-content: center;
+        margin-top: 50px; 
+      }
+  .container {
+     background: white;
+      padding: 20px;
+       border-radius: 10px;
+        width: 400px;
+         box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  h2 { 
+    color: #6c48f0;
+     text-align: center;
+     }
+  input, button { 
+    padding: 10px;
+     border: 1px solid #ddd;
+      border-radius: 5px; 
+    }
+  input { 
+    width: 45%;
+     margin-right: 5px;
+     }
+  button {
+     background: #6c48f0;
+     color: white;
+      cursor: pointer; }
+  ul {
+     list-style: none;
+      padding: 0;
+       margin-top: 20px; }
+  li {
+     background: #f2f2f2;
+      padding: 10px;
+       border-radius: 8px;
+        margin-bottom: 8px;
+         display: flex; 
+         justify-content: space-between;
+          align-items: center; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h2>📝 My To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Add a new task...">
+    <input type="text" id="durationInput" placeholder="Duration (e.g., 1 hour)">
+    <button id="addBtn">Add</button>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js">
+    document.getElementById("addBtn").addEventListener("click", function() {
+  const taskInput = document.getElementById("taskInput");
+  const durationInput = document.getElementById("durationInput");
+  const taskList = document.getElementById("taskList");
+
+  const taskText = taskInput.value.trim();
+  const durationText = durationInput.value.trim();
+
+  if (taskText === "") {
+    alert("Please enter a task!");
+    return;
+  }
+
+  // Create list item
+  const li = document.createElement("li");
+
+  // Task text
+  const taskSpan = document.createElement("span");
+  taskSpan.textContent = taskText + (durationText ? ` (${durationText})` : "");
+
+  // Delete button
+  const delBtn = document.createElement("button");
+  delBtn.textContent = "❌";
+  delBtn.style.border = "none";
+  delBtn.style.background = "transparent";
+  delBtn.style.cursor = "pointer";
+
+  delBtn.addEventListener("click", function() {
+    taskList.removeChild(li);
+  });
+
+  li.appendChild(taskSpan);
+  li.appendChild(delBtn);
+  taskList.appendChild(li);
+
+  // Clear inputs
+  taskInput.value = "";
+  durationInput.value = "";
+});
+
+  </script>
+</body>
+</html>

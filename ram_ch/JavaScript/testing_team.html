@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h3>Testing team</h3>
+    <div>
+      <button onclick="testing_team.test_manager.getdetails()">
+        Test Manager
+      </button>
+      <button onclick="testing_team.test_manager.work()">
+        Test Manager Work
+      </button>
+      <button onclick="testing_team.test_lead.getdetails()">Test Lead</button>
+      <button onclick="testing_team.test_lead.work()">Test Lead work</button>
+      <button onclick="testing_team.Manual_Tester.getdetails()">
+        Manual Tester
+      </button>
+      <button onclick="testing_team.Manual_Tester.work()">
+        Manual Tester work
+      </button>
+      <button onclick="testing_team.Automation_Tester.getdetails()">
+        Automation Tester
+      </button>
+      <button onclick="testing_team.Automation_Tester.work()">
+        Automation Tester work
+      </button>
+    </div>
+    <script>
+     const testing_team = {
+        test_manager: {
+          name: "ramesh",
+          experience: 10,
+          skills: ["Test Planning", "Risk Management", "Team Leadership"],
+          work: function () {
+            console.log(
+             ` ${this.name} oversees the entire testing process and manages the team.`
+            );
+          },
+          getdetails: function () {
+            console.log(
+              `${this.name} is UI/UX designer,experience is ${this.experience} years, skills are ${this.skills}`
+            );
+          },
+        },
+        test_lead: {
+          name: "Kumar",
+          experience: 7,
+          skills: [
+            "Test Coordination",
+            "Test Case Design",
+            "Progress Monitoring",
+          ],
+          work: function () {
+            console.log(
+              `${this.name} coordinates daily testing activities and assigns tasks.`
+            );
+          },
+          getdetails: function () {
+            console.log(
+              `${this.name} is UI/UX designer,experience is ${this.experience} years, skills are ${this.skills}`
+            );
+          },
+        },
+        Manual_Tester: {
+          name: "Rakesh",
+          role: "Manual Tester",
+          experience: 4,
+          skills: [
+            "Test Case Execution",
+            "Defect Reporting",
+            "Usability Testing",
+          ],
+          work: function () {
+            console.log(
+              `${this.name} executes manual test cases and reports defects.`);
+          },
+          getdetails: function () {
+            console.log(
+              `${this.name} is UI/UX designer,experience is ${this.experience} years, skills are ${this.skills}`
+            );
+          },
+        },
+        Automation_Tester: {
+          name: "Chotu",
+          experience: 5,
+          skills: ["Test Automation", "Selenium", "CI/CD"],
+          work: function () {
+            console.log(
+              `${this.name} develops and runs automated test scripts.`
+            );
+          },
+          getdetails: function () {
+            console.log(
+              `${this.name} is UI/UX designer,experience is ${this.experience} years, skills are ${this.skills}`
+            );
+          },
+        },
+      };
+
+
+    //   console.log(developmnet_team.tester.name);
+    //   console.log(developmnet_team.tester.experience);
+    //   console.log(developmnet_team.tester.skills);
+    //   console.log(developmnet_team.tester.getdetails());
+    //   console.log(developmnet_team.tester.work());
+
+     </script>
+</body>
+</html>

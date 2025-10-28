@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_position</title>
+    <style>
+        .parent{
+            color: rgb(207, 133, 36);
+            background-color: rgb(120, 121, 120);
+        }
+
+        
+        .child1{
+            color: rgb(122, 154, 183);
+            vertical-align: baseline solid white;
+            margin-top: 400px;
+            /* border: 1px solid rgb(9, 6, 6); */
+            background-color: antiquewhite;
+            height: 100px;
+            width: 200px;
+            place-content: center;
+            position: relative;
+            bottom: 50px;
+            left: 98px;
+            text-align: center;
+            border-bottom: 20px;
+            border-top-left-radius: 60px;
+            border-bottom-left-radius: 60px;
+        }
+
+
+        .child2{
+            color: rgb(55, 122, 181);
+
+            /* border: 1px solid rgb(8, 6, 6); */
+            background-color:antiquewhite;
+            height: 100px;
+            width: 790px;
+            place-content: center;
+            text-align: center;
+            position: relative;
+            bottom:150px;
+            left: 220px;
+
+
+        }.child3{
+            color: rgb(125, 160, 190);
+            /* border: 1px solid rgb(6, 6, 6); */
+            background-color:antiquewhite;
+            height: 100px;
+            width: 200px;
+            place-content: center;
+            text-align: center;
+            position:relative;
+            bottom:250px;
+            left: 950px;
+            border-top-right-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PROPERTIES</h1>
+  
+
+    <div class="parent">
+        <div class="child1 child-1">child-1</div>
+        <div class="child2 child-2">child 2</div>
+        <div class="child3 child-3">child 3</div>
+    </div>
+</body>
+</html>

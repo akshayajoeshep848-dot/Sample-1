@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classes</title>
+    <style>
+        p{
+            color: yellow;
+            border: 10px solid green;
+            box-shadow: 4px 4px 7px 7px rgb(97, 97, 93);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        p:hover{
+            color: red;
+            border: 9px solid green blue;
+            box-shadow: 4px 4px 7px 7px rgb(255, 17, 0);
+            
+            border-radius: 10px;
+            transform: scale(1.07) ;
+        }
+        button{
+           background-color: rgb(248, 4, 4);
+           border: none;
+           color: white;
+           box-shadow: 14px 14px 14px 14px lightgray;
+           padding: 10px;
+           background: linear-gradient(left-top to right solid red );
+
+        }
+        button:hover{
+            transform:scale(1.05) skew(20deg,10deg);
+        }
+        button:active{
+            transform: translate(2px,2px);
+        }
+        .form{
+            padding: 20px;
+            border: 2px solid lightgreen;
+        }
+        input{
+          border: 2px solid rgb(37, 50, 161);   
+        }
+        input:focus{
+            border: 1px solid rgb(240, 24, 42);
+        }
+        .input:form{
+            border: 3px solid lightskyblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Css Pseudo classes</h1>
+    
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, unde consectetur numquam iure provident fuga esse dolor voluptas libero. Eos ut soluta, quasi incidunt ea iusto tenetur nesciunt sint assumenda perspiciatis distinctio. Voluptas distinctio veritatis officiis magni deserunt voluptates quis dolores. Recusandae praesentium fugiat itaque, asperiores repellat ut nisi aliquid veniam deleniti quisquam, est illo, esse necessitatibus suscipit ratione obcaecati. Eius quo aut atque laborum est. Velit nihil officiis consequatur.</p>
+     <button>submit</button>
+     <div class="form">
+     <lable for="fn">
+        First name:
+     </lable>
+     <input type="text" id="fn"/>
+     </div>
+     <div class="form">
+        <a href="https://logicwhile.com/about.php" />LOGIC WHILE</a>
+     </div>
+
+</body>
+
+</html>

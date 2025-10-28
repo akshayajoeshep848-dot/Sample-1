@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-tas-2</title>
+    <style>
+        body{
+            margin: 10px;
+            padding: 0px;
+        }
+        .parent{
+            height: 570px;
+            display: grid;
+            gap: 10px;
+            background-color: white;
+            grid-template-columns: 1fr 4fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-template-areas: 
+            "header header header"
+            "adds article article"
+            "nav article article"
+            "nav footer footer";
+        }
+        .child{
+           
+            color: white;
+            background-color: rgb(120, 194, 9);
+            place-content: center;
+            text-align: center;
+        }
+        .child_1{
+            grid-area: header;
+        }
+        .child_2{
+            grid-area: adds;
+        }
+         .child_3{
+            grid-area:article;
+        }
+         .child_4{
+            grid-area:nav;
+        }
+        .child_5{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child child_1">HEADER</div>
+        <div class="child child_2">ADDS</div>
+        <div class="child child_3">ARTICLE</div>
+        <div class="child child_4">NAV</div>
+        <div class="child child_5">FOOTER</div>
+    </div>
+</body>
+</html>

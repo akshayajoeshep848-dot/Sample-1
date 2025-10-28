@@ -1,0 +1,18 @@
+""" #Test case1                 #Test case2
+mnt=float(input()) #499.0                      #amnt=501.0
+if amnt<=500:       #499.0>500=>False           #501.0>500=>True
+    amnt=amnt-100   #print 499.0                #amnt=
+if amnt>500:        
+    print(amnt-100)""" 
+
+
+
+
+
+
+
+mnt=float(input())                                                 #499.0                      #amnt=501.0
+if amnt<=500:                                                      #499.0>500=>False           #501.0>500=>True
+    amnt=amnt-100                                                   #print 499.0                #amnt=
+if amnt>500:        
+    print(amnt-100)""" 

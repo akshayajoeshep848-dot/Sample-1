@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS specificity </title>
+    <style>
+        #fn-2{
+            border: 4px solid green;
+        }
+        input[type="password"]{
+border: 3px solid rgb(255, 3, 3);
+height: 100px;
+
+        }
+       .first_name{
+border: 4px solid brown;
+        }
+    </style>
+</head>
+<body>
+    <h1>Css specificty</h1>
+    <input type="text" class="first_name" id="fn-1" />
+    <input type="date" class="first_name" id="fn-2" />s
+    <input type="email" class="first_name" id="fn-3" />
+    <input type="password" class="first_name" id="fn-4" />
+    <input type="tel" class="first_name" id="fn-5" />
+</body>
+</html>

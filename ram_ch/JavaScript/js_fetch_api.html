@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch api</title>
+</head>
+<style>
+    .container{
+        background-color: aqua;
+        width: 80vw;
+        margin: 0 auto;
+        padding: 20px;
+        box-shadow: 0px 0px 10px 10px lightgray;
+        text-align: center;
+        justify-content: center;
+      display: flex;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>list of dogs breed</h1>
+    </div>
+    <script>
+        let dogsDataArray = []
+
+
+        let response = fetch("https://dogapi.dog/api/v2/breeds")
+            .then((data) => data.json())
+            .then((value) => {
+                console.log(value.data)
+                let array = (value.data);
+
+                array.forEach(dog => {
+                    let container = document.querySelector(".container")
+                    let dogContainer = document.createElement("div")
+                    let dogbreed = document.createElement('h3')
+                    let dogbreedDescription = document.createElement("p")
+
+                    //assigning the values
+
+                    dogbreed.textContent = dog.attributes.name;
+                    dogbreedDescription.textContent = dog.attributes.description;
+
+                    dogContainer.append(dogbreed);
+                    dogContainer.append(dogbreedDescription)
+                    container.appendChild(dogContainer);
+                });
+            })
+
+            .catch((error) => console.log(error))
+            console.log("dogsDataArray",dogsDataArray);
+
+    </script>
+</body>
+
+</html>

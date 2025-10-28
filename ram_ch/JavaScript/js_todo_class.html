@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TODO class list</h1>
+    <form action="submit" class="conatiner"></form>
+    <div class="display-list"></div>
+    <script>
+        let container = document.querySelector(".conatiner");
+
+        let taskItem = document.querySelector("input");
+        let duration =document.querySelector("input");
+        let add= document.createElement("button");
+        let display =document.querySelector(".display-list");
+        let taskObject ={};
+        let taskArray ={};
+
+        //set classes
+         taskItem.classList.add("task");
+         duration.classList.add("duration");
+         add.classList.add("a");
+         add.textContent ="Add" ;
+
+
+         //set attribute to input
+         taskItem.setAttribute("type","text")
+    
+
+
+
+
+
+     //add eventListener add
+     container.addEventListener("submit",(event)=>{
+        event.preventDefault();
+        taskArray.push(taskObject);
+        console.log(taskArray);
+        container.reset();
+
+        taskArray.forEach(task) =>{
+            let parentDiv()
+        }
+     }
+    )
+
+    </script>
+</body>
+</html>

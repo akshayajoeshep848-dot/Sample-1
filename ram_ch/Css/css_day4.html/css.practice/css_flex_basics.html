@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS flex basics</title>
+    <style>
+        .parent{
+            background-color: aquamarine;
+            height: 50vh;
+            display: flex;
+          /*  gap: 10px;
+*/
+        }
+    .child{
+        
+        height: 100px;
+
+       
+    }
+  .child-1  {
+flex-basis: 100px;
+flex-shrink: 1;
+flex-grow: 3;
+background-color: blue;
+
+
+    }
+  .child-2  {
+    flex-basis: 100px;
+    flex-shrink: 2;
+    flex-grow: 2;
+    background-color: brown;
+
+    }
+    .child-3{
+        background-color: papayawhip;
+        flex-basis:200px ;
+        flex-grow:1;
+    } 
+      </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child child-1">child-1</div>
+        <div class="child child-2">child-2</div>
+        <div class="child child-3">child-3</div>
+    </div>
+</body>
+</html>

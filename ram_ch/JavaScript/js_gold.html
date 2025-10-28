@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Leaderboard</title>
+</head>
+<body>
+  <h2>🏆 Game Leaderboard</h2>
+  <ul id="leaderboard"></ul>
+
+  <script>
+    // Simple list of game scores
+    const highScores = [
+      { rank: 1, user: "ACE", score: 95000 },
+      { rank: 2, user: "GMR", score: 87200 },
+      { rank: 3, user: "LUX", score: 84500 },
+      { rank: 4, user: "ZEN", score: 79900 },
+      { rank: 5, user: "FOX", score: 77000 },
+    ];
+
+    const leaderboard = document.getElementById("leaderboard");
+
+    // Display each player as a list item
+    highScores.forEach(entry => {
+      const li = document.createElement("li");
+      li.textContent = `#${entry.rank} — ${entry.user}: ${entry.score} points`;
+      leaderboard.appendChild(li);
+    });
+    console.log("highestscore",highScores);
+  </script>
+</body>
+</html>

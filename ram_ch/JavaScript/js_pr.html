@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js to list </title>
+    <style>
+        body{
+            font-family: arial,sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+
+
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+    }
+        h2{
+            margin-bottom: 20px;
+            color: #333;
+
+        }
+        lable{
+            display: block;
+            text-align: left;
+            color: #555;
+            font-weight: bold;
+
+        }
+           input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+          button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+        .save-btn{
+            background-color: #007bff;
+
+        }
+        .save-btn:hover{
+            background-color: #0056b3;
+
+        }
+        .clear-btn{
+            background-color: #dc3545;
+        }
+        .clear-btn:hover{
+            background-color: #b02a37;
+
+        }
+        
+        
+    </style>
+</head>
+<body>
+      <div class="container">
+        <h2>My Info</h2>
+        <form id="userForm">
+            <label for="name">Name:</label>
+            
+            <input type="text" id="name" placeholder="enter your Name">
+
+            <lable for="email">Email:</lable>
+            <input type="text" id="email"  placeholder="enter your email">
+
+
+            <button type="button" class="save-btn" id="saveBtn">Save to browser</button>
+            <button type="button" class="clear-btn" id="clear-Btn">Clear Save browser</button>
+
+
+        </form>
+
+
+      </div>
+    <script>
+            let nameInput = document.getElementById('name');
+            let emailInput = document.getElementById('email');
+            let saveBtn = document.getElementById('saveBtn');
+            let clearBtn = document.getElementById('clearBtn');
+
+            window.addEventListener('load',() =>{
+                let savedName = localStorage.getItem('name');
+                let savedEmail = localStorage.getItem('email');
+
+                if (savedName) nameInput.value = savedName;
+                if (savedEmail) emailInput.value =savedEmail;
+                });
+
+                //save data local storage
+
+                saveBtn.addEventListener('click', ()=>{
+                    localStorage.setItem('name',nameInput.value);
+                    localStorage.setItem('email',emailInput.value);
+                    alert('Data saved to browser');
+
+                }
+
+             );
+
+
+             //.Clear data
+
+             clearBtn.addEventListener('click',()=>{
+                localStorage.removeItem('name');
+                localStorage.removeItem('email');
+                 nameInput.value = '';
+                 emailInput.value = '';
+
+                alert('Saved data cleared!');
+
+             }
+            );
+
+            
+    </script>
+</body>
+</html>

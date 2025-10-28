@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Select Dropdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    section {
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      width: 300px;
+    }
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    h2 {
+      color: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+  <section>
+    <h2>Select Your Country</h2>
+    <select id="countrySelect">
+      <option value="">-- Choose a country --</option>
+    </select>
+  </section>
+
+  <script>
+    // Data array (flat objects)
+    const countryOptions = [
+      { value: "us", label: "United States" },
+      { value: "ca", label: "Canada" },
+      { value: "mx", label: "Mexico" },
+      { value: "gb", label: "United Kingdom" },
+    ];
+
+    // Reference to the select element
+    const selectElement = document.getElementById("countrySelect");
+
+    // Dynamically add options to the select dropdown
+    countryOptions.forEach(country => {
+      const option = document.createElement("option");
+      option.value = country.value;
+      option.textContent = country.label;
+      selectElement.appendChild(option);
+    });
+  </script>
+
+</body>
+</html>

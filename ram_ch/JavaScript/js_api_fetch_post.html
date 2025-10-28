@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Async Function</title>
+    <style>
+        :root{
+            background-color: green;
+            width: 500px;
+            padding: 10px;
+            margin: 10px;
+        }
+        .container{
+            background-color: chocolate;
+            width: 500px;
+            padding: var(--padding);
+        }
+        .name{
+            background-color:blueviolet;
+            
+        }
+        .email{
+            background-color: blue;
+        }
+        .password{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Js Async Function</h1>
+    <div id="container"></div>
+    <script>
+
+        let options = {
+            method: "GET",
+            Headers: {
+                "Content-type": "applications/json",
+            },
+        };
+
+        let postOptions = {
+            method: "POST",
+            headers: {
+               "Content-type": "applications/json",
+            }
+        }
+        async function fetchData(url) {
+            console.log("starting fetch call...")
+            let response = await fetch(url);
+            let breeds = await response.json();
+            console.log(breeds);
+            console.log("End fetch call..");
+            return breeds;
+        }
+
+       // fetchData("https://dogapi.dog/api/v2/breeds").then((value) => 
+       // console.log(value)
+       // );
+      fetchData("https://jsonplaceholder.typicode.com/users/1").then((value) => { 
+       let container = document.getElementById("container");
+       let name = document.createElement("p");
+       let email = document.createElement("p");
+
+       name.classList.add("name");
+       email.classList.add("email");
+       password.classList.add("password");
+
+       name.textContent = 'Name: ${value.name:}';
+       email.textContent = 'email: ${value.email:}';
+       password.textContent = 'password: ${value.password:}';
+
+       container.appendChild(name);
+       container.appendChild(email);
+       container.appendChild(password);
+        });
+    </script>
+</body>
+</html>

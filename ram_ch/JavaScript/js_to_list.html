@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Persistent Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      margin-bottom: 5px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .save-btn {
+      background-color: #007bff;
+    }
+
+    .save-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .clear-btn {
+      background-color: #dc3545;
+    }
+
+    .clear-btn:hover {
+      background-color: #b02a37;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>My Info</h2>
+    <form id="userForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" />
+
+      <button type="button" class="save-btn" id="saveBtn">Save to Browser</button>
+      <button type="button" class="clear-btn" id="clearBtn">Clear Saved Data</button>
+    </form>
+  </div>
+
+  <script>
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const saveBtn = document.getElementById('saveBtn');
+    const clearBtn = document.getElementById('clearBtn');
+
+    // Restore saved data on page load
+    window.addEventListener('load', () => {
+      const savedName = localStorage.getItem('name');
+      const savedEmail = localStorage.getItem('email');
+      if (savedName) nameInput.value = savedName;
+      if (savedEmail) emailInput.value = savedEmail;
+    });
+
+    // Save data to localStorage
+    saveBtn.addEventListener('click', () => {
+      localStorage.setItem('name', nameInput.value);
+      localStorage.setItem('email', emailInput.value);
+      alert('Data saved to browser!');
+    });
+
+    // Clear saved data
+    clearBtn.addEventListener('click', () => {
+      localStorage.removeItem('name');
+      localStorage.removeItem('email');
+      nameInput.value = '';
+      emailInput.value = '';
+      alert('Saved data cleared!');
+    });
+  </script>
+
+</body>
+</html>
