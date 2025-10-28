@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid: 1fr 1fr 1fr / repeat(3, minmax(200px, 1fr));
+            /* grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; */
+            height: 100vh;
+            gap: 10px;
+
+
+            grid-template-areas:
+                "header . sidenav"
+                ". content ."
+                "footer . right";
+        }
+
+        .grid-item {
+            background-color: aqua;
+        }
+
+        .grid-items1 {
+            grid-area: header;
+        }
+
+        .grid-items2 {
+            grid-area: sidenav;
+        }
+
+        .grid-items3 {
+            grid-area: content;
+        }
+
+        .grid-items4 {
+            grid-area: footer;
+        }
+
+        .grid-items5 {
+            grid-area: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-items1">Header</div>
+        <div class="grid-item grid-items2">header</div>
+        <div class="grid-item grid-items3">content</div>
+        <div class="grid-item grid-items4">Footer</div>
+        <div class="grid-item grid-items5">Footer</div>
+    </div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid {
+            display: grid;
+            /* grid: repeat(16, 1fr)/repeat(6, 1fr); */
+            grid-template-columns: repeat(16, 85px);
+            grid-template-rows: repeat(6, 50px);
+            height: 100vh;
+            gap: 10px;
+            grid-template-areas:
+                "esc f1 f2 f3 f4 f5 f6 f7 f8 f9 f10 f11 f12 prtscr insert delete"
+                "plus one two three four five six seven eight nine zero minus equalto backspace backspace backspace"
+                "tab tab tab q w e r t y u i o p openbracket closebracket slash"
+                "capslock capslock a s d f g h j k l colon comma enter enter enter"
+                "shift-a shift-a z x c v b n m greaterthan lessthan questionmark shift-b shift-b shift-b shift-b"
+                "ctrl-a fn windows alt-a space space space space space space space alt-b ctrl-b pageup arrow pagedown";
+        }
+
+        .grids {
+            background-color: black;
+            color: white;
+        }
+
+        .item1 {
+            grid-area: esc;
+        }
+
+        .item2 {
+            grid-area: f1;
+        }
+
+        .item3 {
+            grid-area: f2;
+        }
+
+        .item4 {
+            grid-area: f3;
+        }
+
+        .item5 {
+            grid-area: f4;
+        }
+
+        .item6 {
+            grid-area: f5;
+        }
+
+        .item7 {
+            grid-area: f6;
+        }
+
+        .item8 {
+            grid-area: f7;
+        }
+
+        .item9 {
+            grid-area: f8;
+        }
+
+        .item10 {
+            grid-area: f9;
+        }
+
+        .item11 {
+            grid-area: f10;
+        }
+
+        .item12 {
+            grid-area: f11;
+        }
+
+        .item13 {
+            grid-area: f12;
+        }
+
+        .item14 {
+            grid-area: prtscr;
+        }
+
+        .item15 {
+            grid-area: insert;
+        }
+
+        .item16 {
+            grid-area: delete;
+        }
+
+        .item17 {
+            grid-area: plus;
+        }
+
+        .item18 {
+            grid-area: one;
+        }
+
+        .item19 {
+            grid-area: two;
+        }
+
+        .item20 {
+            grid-area: three;
+        }
+
+        .item21 {
+            grid-area: four;
+        }
+
+        .item22 {
+            grid-area: five;
+        }
+
+        .item23 {
+            grid-area: six;
+        }
+
+        .item24 {
+            grid-area: seven;
+        }
+
+        .item25 {
+            grid-area: eight;
+        }
+
+        .item26 {
+            grid-area: nine;
+        }
+
+        .item27 {
+            grid-area: zero;
+        }
+
+        .item28 {
+            grid-area: minus;
+        }
+
+        .item29 {
+            grid-area: equalto;
+        }
+
+        .item30 {
+            grid-area: backspace;
+        }
+
+        .item31 {
+            grid-area: tab;
+        }
+
+        .item32 {
+            grid-area: q;
+        }
+
+        .item33 {
+            grid-area: w;
+        }
+
+        .item34 {
+            grid-area: e;
+        }
+
+        .item35 {
+            grid-area: r;
+        }
+
+        .item36 {
+            grid-area: t;
+        }
+
+        .item37 {
+            grid-area: y;
+        }
+
+        .item38 {
+            grid-area: u;
+        }
+
+        .item39 {
+            grid-area: i;
+        }
+
+        .item40 {
+            grid-area: o;
+        }
+
+        .item41 {
+            grid-area: p;
+        }
+
+        .item42 {
+            grid-area: openbracket;
+        }
+
+        .item43 {
+            grid-area: closebracket;
+        }
+
+        .item44 {
+            grid-area: slash;
+        }
+
+
+        .item45 {
+            grid-area: capslock;
+        }
+
+        .item46 {
+            grid-area: a;
+        }
+
+        .item47 {
+            grid-area: s;
+        }
+
+        .item48 {
+            grid-area: d;
+        }
+
+        .item49 {
+            grid-area: f;
+        }
+
+        .item50 {
+            grid-area: g;
+        }
+
+        .item51 {
+            grid-area: h;
+        }
+
+        .item52 {
+            grid-area: j;
+        }
+
+        .item53 {
+            grid-area: k;
+        }
+
+        .item54 {
+            grid-area: l;
+        }
+
+        .item55 {
+            grid-area: colon;
+        }
+
+        .item56 {
+            grid-area: comma;
+        }
+
+        .item57 {
+            grid-area: enter;
+        }
+
+        .item58 {
+            grid-area: shift-a;
+        }
+
+        .item59 {
+            grid-area: z;
+        }
+
+        .item60 {
+            grid-area: x;
+        }
+
+        .item61 {
+            grid-area: c;
+        }
+
+        .item62 {
+            grid-area: v;
+        }
+
+        .item63 {
+            grid-area: b;
+        }
+
+        .item64 {
+            grid-area: n;
+        }
+
+        .item65 {
+            grid-area: m;
+        }
+
+        .item66 {
+            grid-area: greaterthan;
+        }
+
+        .item67 {
+            grid-area: lessthan;
+        }
+
+        .item68 {
+            grid-area: questionmark;
+        }
+
+        .item69 {
+            grid-area: shift-b;
+        }
+
+        .item70 {
+            grid-area: ctrl-a;
+        }
+
+        .item71 {
+            grid-area: fn;
+        }
+
+        .item72 {
+            grid-area: windows;
+        }
+
+        .item73 {
+            grid-area: alt-a;
+        }
+
+        .item74 {
+            grid-area: space;
+        }
+
+        .item75 {
+            grid-area: alt-b;
+        }
+
+        .item76 {
+            grid-area: ctrl-b;
+        }
+
+        .item77 {
+            grid-area: pageup;
+        }
+
+        .item78 {
+            grid-area: arrow;
+        }
+
+        .item79 {
+            grid-area: pagedown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="grids item1">esc</div>
+        <div class="grids item2">f1</div>
+        <div class="grids item3">f2</div>
+        <div class="grids item4">f3</div>
+        <div class="grids item5">f4</div>
+        <div class="grids item6">f5</div>
+        <div class="grids item7">f6</div>
+        <div class="grids item8">f7</div>
+        <div class="grids item9">f8</div>
+        <div class="grids item10">f9</div>
+        <div class="grids item11">f10</div>
+        <div class="grids item12">f11</div>
+        <div class="grids item13">f12</div>
+        <div class="grids item14">prtsrc</div>
+        <div class="grids item15">insert</div>
+        <div class="grids item16">delete</div>
+        <div class="grids item17">plus</div>
+        <div class="grids item18">one</div>
+        <div class="grids item19">two</div>
+        <div class="grids item20">three</div>
+        <div class="grids item21">four</div>
+        <div class="grids item22">five</div>
+        <div class="grids item23">six</div>
+        <div class="grids item24">seven</div>
+        <div class="grids item25">eight</div>
+        <div class="grids item26">nine</div>
+        <div class="grids item27">zero</div>
+        <div class="grids item28">minus</div>
+        <div class="grids item29">equalto</div>
+        <div class="grids item30">backspace</div>
+        <div class="grids item31">tab</div>
+        <div class="grids item32">q</div>
+        <div class="grids item33">w</div>
+        <div class="grids item34">e</div>
+        <div class="grids item35">r</div>
+        <div class="grids item36">t</div>
+        <div class="grids item37">y</div>
+        <div class="grids item38">u</div>
+        <div class="grids item39">i</div>
+        <div class="grids item40">o</div>
+        <div class="grids item41">p</div>
+        <div class="grids item42">openbracket</div>
+        <div class="grids item43">closebracket</div>
+        <div class="grids item44">slash</div>
+        <div class="grids item45">capslock</div>
+        <div class="grids item46">a</div>
+        <div class="grids item47">s</div>
+        <div class="grids item48">d</div>
+        <div class="grids item49">f</div>
+        <div class="grids item50">g</div>
+        <div class="grids item51">h</div>
+        <div class="grids item52">j</div>
+        <div class="grids item53">k</div>
+        <div class="grids item54">l</div>
+        <div class="grids item55">colon</div>
+        <div class="grids item56">comma</div>
+        <div class="grids item57">enter</div>
+        <div class="grids item58">shift-a</div>
+        <div class="grids item59">z</div>
+        <div class="grids item60">x</div>
+        <div class="grids item61">c</div>
+        <div class="grids item62">v</div>
+        <div class="grids item63">b</div>
+        <div class="grids item64">n</div>
+        <div class="grids item65">m</div>
+        <div class="grids item66">greaterthan</div>
+        <div class="grids item67">lessthan</div>
+        <div class="grids item68">questionmark</div>
+        <div class="grids item69">shift-b</div>
+        <div class="grids item70">ctrl-a</div>
+        <div class="grids item71">fn</div>
+        <div class="grids item72">windows</div>
+        <div class="grids item73">alt-a</div>
+        <div class="grids item74">space</div>
+        <div class="grids item75">alt-b</div>
+        <div class="grids item76">ctrl-b</div>
+        <div class="grids item77">pageup</div>
+        <div class="grids item78">arrow</div>
+        <div class="grids item79">pagedown</div>
+    </div>
+</body>
+
+</html>

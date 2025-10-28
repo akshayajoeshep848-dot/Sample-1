@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grids {
+            display: grid;
+            grid: repeat(5, 1fr)/repeat(5, 1fr);
+            height: 100vh;
+            gap: 10px;
+            grid-template-areas:
+                "grid-item1 grid-item1 grid-item1 grid-item1  grid-item2"
+                "grid-item8 grid-item3 grid-item3 grid-item4  grid-item2"
+                "grid-item8 grid-item6 grid-item5 grid-item4  grid-item2"
+                "grid-item8 grid-item6 grid-item7 grid-item7  grid-item2"
+                "grid-item8  grid-item9  grid-item9  grid-item9 grid-item9";
+        }
+
+        .grid {
+            background-color: aquamarine;
+        }
+
+        .grid1 {
+            grid-area: grid-item1;
+        }
+
+        .grid2 {
+            grid-area: grid-item2;
+        }
+
+        .grid3 {
+            grid-area: grid-item3;
+        }
+
+        .grid4 {
+            grid-area: grid-item4;
+        }
+
+        .grid5 {
+            grid-area: grid-item5;
+            text-align: center;
+            place-content: center;
+            font-size: 50px;
+            background-color: greenyellow;
+        }
+
+        .grid6 {
+            grid-area: grid-item6;
+        }
+
+        .grid7 {
+            grid-area: grid-item7;
+        }
+
+        .grid8 {
+            grid-area: grid-item8;
+        }
+
+        .grid9 {
+            grid-area: grid-item9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grids">
+        <div class="grid grid1">grid-item1</div>
+        <div class="grid grid2">grid-item2</div>
+        <div class="grid grid3">grid-item3</div>
+        <div class="grid grid4">grid-item4</div>
+        <div class="grid grid5">logic while</div>
+        <div class="grid grid6">grid-item6</div>
+        <div class="grid grid7">grid-item7</div>
+        <div class="grid grid8">grid-item8</div>
+        <div class="grid grid9">grid-item9</div>
+    </div>
+</body>
+
+</html>

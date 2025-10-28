@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JS Array slice</h1>
+    <script>
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+        // no arguments or parameters
+        let copy = numbers.slice();
+        console.log(`numbers`, numbers);
+        console.log("copy", copy);
+        // with arguments or parameters =>start index,end index
+        // starting index is included but endng index is not included 
+        let copy1 = numbers.slice(2, 6);
+        console.log(copy1);
+
+
+        let copy2 = numbers.slice(2);
+        console.log(copy2);
+    </script>
+</body>
+
+</html>

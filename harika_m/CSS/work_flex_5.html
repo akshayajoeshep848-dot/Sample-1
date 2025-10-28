@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            height: 100vh;
+            width: 100vh;
+        }
+
+        .items1 {
+            height: 8%;
+            background-color: aqua;
+            text-align: center;
+            place-content: center;
+        }
+
+        .middle {
+            height: 40%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .items2 {
+            flex: 1;
+            height: 50%;
+            background-color: bisque;
+            text-align: center;
+            place-content: center;
+        }
+
+        .items3 {
+            flex: 1;
+            height: 50%;
+            background-color: greenyellow;
+            text-align: center;
+            place-content: center;
+        }
+
+        .right {
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .items4 {
+            flex: 2;
+            height: 50%;
+            background-color: gold;
+            text-align: center;
+            place-content: center;
+        }
+
+        .items5 {
+            flex: 1;
+            height: 50%;
+            background-color: gray;
+            text-align: center;
+            place-content: center;
+        }
+
+        .third {
+            display: flex;
+            height: 10%;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .items6 {
+            flex: 2;
+            background-color: green;
+            text-align: center;
+            place-content: center;
+        }
+
+        .items7 {
+            flex: 1;
+            background-color: plum;
+            text-align: center;
+            place-content: center;
+        }
+
+        .items8 {
+            height: 8%;
+            margin-top: 10px;
+            background-color: orange;
+            text-align: center;
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="items1">Header</div>
+        <div class="middle">
+            <div class="left">
+                <div class="items2">Hero</div>
+                <div class="items3">Sidebar</div>
+            </div>
+            <div class="right">
+                <div class="items4">Main content</div>
+                <div class="items5">Extra content</div>
+            </div>
+        </div>
+        <div class="third">
+            <div class="items6">Related images</div>
+            <div class="items7">Related posts</div>
+        </div>
+        <div class="items8">Footer</div>
+    </div>
+</body>
+
+</html>

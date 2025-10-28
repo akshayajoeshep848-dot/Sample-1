@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1">JS Event Listener </h1>
+    <button id="div">click me</button>
+    <input type="text" placeholder="Enter name" id="input" name="firstname">
+
+    <script>
+        let button = document.getElementById("div");
+        let formObject = {};
+
+        // button.addEventListener("click", onclick);
+        // function onclick(event) {
+        //     console.log(`Button is clicked`);
+        // }
+
+
+        button.addEventListener("click", (event) => console.log("button clicked"));
+        button.addEventListener("click", (event) => console.log(event.type));
+        button.addEventListener("click", (event) => console.log(event.target));
+        button.addEventListener("click", (event) => console.log(event.timeStamp));
+
+
+        button.addEventListener("mouseover", (event) => console.log(event.target.style.backgroundColor = "aqua"));
+
+        button.addEventListener("click", (event) => {
+            formObject[`${input.name}`] = input.value;
+            console.log(formObject);
+        });
+
+
+
+
+        // button.onclick = function (event) {
+        //     console.log(`button is being clicked`);
+        // };
+
+
+        // function onClick() {
+        //         console.log(`button is clicked`);
+        //     };
+
+
+
+        let h1 = document.getElementById("h1");
+        h1.addEventListener("mouseover", (event) => console.log(event.target.style.backgroundColor = "aqua"));
+        h1.addEventListener("mouseout", (event) => console.log(event.target.style.backgroundColor = "white"));
+
+
+        let input = document.getElementById("input");
+        // input.addEventListener("keypress", (event) => console.log(event.target.style.backgroundColor = "pink"));
+        input.addEventListener("keypress", (event) => console.log(event.target.value));
+        input.addEventListener("keypress", (event) => console.log(event.key, event.code));
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+   <head>
+
+     
+   </head>
+    <body>
+      <iframe width="704" height="396" src="https://www.youtube.com/embed/4J8GJPuINDU" title="Dear Nanna Web Series Episode-1 | Prasad Tony |Viharika ||Volga Originals" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <hr>
+     <h1>heading1</h1>
+     <h2>heading2</h2>
+     <h3>heading3</h3>
+     <h4>headng4</h4>
+     <h5>heading5</h5>
+     <h6>heading6</h6>
+    <hr>
+   <h1>different tags</h1>
+<div>
+  <p>this is a paragraph</p>
+  <b>hello</b>
+<strong>everyone</strong>
+<p>logic while institute</p>
+<br>
+<p>nri institute of technology</p>
+<i>this is italic</i><br>
+<em>this is also italic</em><br>
+<mark>this is for highlightening</mark><br>
+<small>this is a small text</small><br>
+<del>this is a strike</del><br>
+<ins>what is this do</ins>
+<p>sub will do subscript H<sub>2</sub>O</p>
+<p>sup tag  will do supercript Y<SUP>4</SUP></P>
+<h2>pre tag</h2>
+<pre>the line start in 5seconds.
+        hi </pre>
+  <pre style="background-color:green;">
+    # Program to check if a number is prime or not
+
+num = 29
+
+# To take input from the user
+#num = int(input("Enter a number: "))
+
+# define a flag variable
+flag = False
+
+if num == 0 or num == 1:
+    print(num, "is not a prime number")
+elif num > 1:
+    # check for factors
+    for i in range(2, num):
+        if (num % i) == 0:
+            # if factor is found, set flag to True
+            flag = True
+            # break out of loop
+            break
+
+    # check if flag is True
+    if flag:
+        print(num, "is not a prime number")
+    else:
+        print(num, "is a prime number")
+   </pre>
+   <pre><code style="background-color:blue;">
+       # Program to display the Fibonacci sequence up to n-th term
+
+nterms = int(input("How many terms? "))
+
+# first two terms
+n1, n2 = 0, 1
+count = 0
+
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Please enter a positive integer")
+# if there is only one term, return n1
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+# generate fibonacci sequence
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
+   </code></pre>
+
+</div>
+   </body>
+</html>

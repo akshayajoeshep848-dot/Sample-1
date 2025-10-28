@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item-1 {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FILE</h1>
+    <div class="container"></div>
+    <script>
+        const todoList = [
+            { id: 1, task: "Buy groceries", isComplete: false },
+            { id: 2, task: "Finish project report", isComplete: false },
+            { id: 3, task: "Call the dentist", isComplete: true },
+        ];
+
+        let container = document.querySelector(".container");
+        todoList.forEach((items) => {
+            let item1 = document.createElement("div");
+            let item2 = document.createElement("h3");
+            let item3 = document.createElement("p");
+            let item4 = document.createElement("p");
+
+            item2.textContent = items.id;
+            item3.textContent = items.task;
+            item4.textContent = `${items.isComplete ? "completed" : "not completed"}`;
+
+            item1.classList.add("item-1");
+
+            item1.append(item2);
+            item1.append(item3);
+            item1.append(item4);
+            container.append(item1);
+        });
+    </script>
+</body>
+
+</html>

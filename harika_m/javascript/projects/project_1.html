@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            position: relative;
+            background-color: aqua;
+            height: 400px;
+            width: 800px;
+            left: 350px;
+        }
+
+        .tet {
+            position: relative;
+            background-color: bisque;
+            height: 100px;
+            width: 600px;
+            bottom: -50px;
+            left: 80px;
+            text-align: center;
+            place-content: center;
+            border-radius: 10px;
+        }
+
+        .auth {
+            position: relative;
+            background-color: bisque;
+            height: 50px;
+            width: 600px;
+            bottom: -100px;
+            left: 80px;
+            text-align: center;
+            place-content: center;
+            border-radius: 10px;
+
+        }
+
+        #button {
+            position: relative;
+            bottom: -130px;
+            left: 300px;
+            padding: 20px;
+        }
+
+        .heading {
+            position: relative;
+            place-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Random Quote Generator</h1>
+    <div id="container"></div>
+
+    <button id="button"></button>
+    <script>
+        const quotes = [
+            { quote: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+            { quote: "Don't let yesterday take up too much of today.", author: "Will Rogers" },
+            { quote: "It's not whether you get knocked down, it's whether you get up.", author: "Vince Lombardi" },
+            { quote: "If you are working on something exciting, it will keep you motivated.", author: "Steve Jobs" },
+            { quote: "Success is not in what you have, but who you are.", author: "Bo Bennett" },
+            { quote: "Hard times create strong men.", author: "G. Michael Hopf" },
+            { quote: "Your time is limited, don’t waste it living someone else’s life.", author: "Steve Jobs" },
+            { quote: "The harder you work for something, the greater you’ll feel when you achieve it.", author: "Unknown" },
+            { quote: "Dream bigger. Do bigger.", author: "Unknown" },
+            { quote: "Don’t watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+            { quote: "Great things never come from comfort zones.", author: "Roy T. Bennett" },
+            { quote: "Push yourself, because no one else is going to do it for you.", author: "Unknown" },
+            { quote: "Sometimes later becomes never. Do it now.", author: "Unknown" },
+            { quote: "Success doesn’t just find you. You have to go out and get it.", author: "Unknown" },
+            { quote: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+            { quote: "Don’t stop when you’re tired. Stop when you’re done.", author: "Marilyn Monroe" },
+            { quote: "Wake up with determination. Go to bed with satisfaction.", author: "George Horace Lorimer" },
+            { quote: "Little things make big days.", author: "Isabel Marant" },
+            { quote: "Do something today that your future self will thank you for.", author: "Sean Patrick Flanery" },
+            { quote: "It always seems impossible until it’s done.", author: "Nelson Mandela" }
+        ];
+
+
+        let container = document.getElementById("container");
+
+        let space = document.createElement("div");
+        let quotation = document.createElement("p");
+        let author = document.createElement("p");
+        let button = document.getElementById("button");
+        button.textContent = "New Quote";
+
+
+        quotation.classList.add("tet");
+        author.classList.add("auth");
+
+        space.append(quotation);
+        space.append(author);
+        space.append(button);
+        container.append(space);
+
+        function randomQuotes() {
+            const type = Math.floor(Math.random() * quotes.length);
+            const index = quotes[type];
+
+            quotation.textContent = `Quote: ${index.quote}`;
+            author.textContent = ` Author: ${index.author}`;
+        };
+
+        button.addEventListener("click", randomQuotes);
+
+        randomQuotes();
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>heading1</h1>
+
+    <div id="div">this is a paragraph</div>
+
+    <ul id="ul">
+        <li id="li1">item1</li>
+        <li id="li2">item2</li>
+        <li id="li3">item3</li>
+        <li id="li4">item4</li>
+        <li id="li5">item5</li>
+    </ul>
+    <script>
+
+        let div = document.getElementById("div");
+        div.textContent = `<p>myself harika</p>`;
+
+
+
+        let anchor = document.createElement("a");
+        anchor.setAttribute("href", "https://www.google.com");
+        anchor.textContent = "google";
+        div.append(anchor);
+
+        let anchor1 = document.createElement("a");
+        anchor.getAttribute("href", "https://www.nriit.ac.in");
+
+
+
+
+        let ul = document.getElementById("ul");
+        console.log(ul.parentNode);
+        console.log(ul.childNodes);
+        console.log(ul.children);
+        console.log(ul.firstChild);
+        console.log(ul.lastChild);
+        console.log(ul.firstElementChild);
+        console.log(ul.lastElementChild);
+        console.log(ul.previousSibling);
+        console.log(ul.nextSibling);
+        console.log(ul.previousElementSibling);
+        console.log(ul.nextElementSibling);
+
+
+        ul.firstElementChild.style.backgroundColor = "green";
+        ul.children[1].style.backgroundColor = "aqua";
+        ul.children[2].style.backgroundColor = "pink";
+        ul.children[3].style.backgroundColor = "violet";
+        ul.children[4].style.backgroundColor = "red";
+
+    </script>
+
+</body>
+
+</html>

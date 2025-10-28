@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>questions</h1>
+    <script>
+
+        // Problem 1: Simple Calculator
+        // Problem Statement:
+        // Take two numbers and an operator (+, -, *, /, %) as input and print the result.
+
+        // let num1 = Number(prompt("Enter the number"));
+        // let num2 = Number(prompt("Enter the number"));
+        // let sum1 = num1 + num2;
+        // console.log(sum1)
+
+        // let sum2 = num1 - num2;
+        // console.log(sum2)
+
+        // let sum3 = num1 * num2;
+        // console.log(sum3);
+
+        // let sum4 = num1 / num2;
+        // console.log(sum4)
+
+        // let sum5 = num1 % num2;
+        // console.log(sum5)
+
+
+
+        // Problem 2: Leap Year Checker (without if)
+        // Problem Statement:
+        // Check if a year is a leap year using only logical and arithmetic operators. (Optional: avoid using if)
+
+        // let num = prompt("Enter the year")
+        // switch (true) {
+        //     case num % 400 == 0:
+        //         console.log("century leapyear");
+        //         break;
+        //     case num % 100 == 0:
+        //         console.log(" Not a century leapyear");
+        //         break;
+        //     case num % 4 == 0:
+        //         console.log("leap year");
+        //         break;
+        //     default:
+        //         console.log("nonleapyear");
+        // }
+
+
+        // if (year % 4 == 0) {
+        //     if (year % 400 == 0) {
+        //         console.log("century leap year");
+        //     } else if (year % 100 != 0) {
+        //         console.log("leap year");
+        //     } else {
+        //         console.log("leap year");
+        //     }
+        // } else {
+        //     console.log("not a leap year");
+        // }
+
+
+
+
+        // Problem 3: Sum of Digits of a 3-digit Number
+        //  Problem Statement:
+        // Take a 3-digit number and print the sum of its digits using arithmetic operators.
+
+        // let dgt = Number(prompt("Enter the number"));
+        // let dgt1 = Math.floor(dgt / 100);
+        // let dgt2 = Math.floor((dgt / 10) % 10);
+        // let dgt3 = Math.floor(dgt % 10);
+        // sum = dgt1 + dgt2 + dgt3;
+        // console.log(sum);
+        // (or)
+        let str = prompt("Enter the number");
+        let sum = 0;
+        let num = Number(str)
+        for (let i = 0; i < str.length; i++) {
+            sum = sum + (num % 10);
+            num = num / 10;
+            num = Math.floor(num);
+        }
+        console.log(`sum of digits of given number${str}=${sum}`);
+
+        // let price = prompt("Enter the price");
+        // if (price == 2000 || price == 5000) {
+
+
+        // }
+
+
+    </script>
+</body>
+
+</html>

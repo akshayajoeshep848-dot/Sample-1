@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container {
+            background-color: black;
+            color: aliceblue;
+            display: flex;
+            /* gap: 10px; */
+            justify-content: space-between;
+            padding: 20px;
+
+        }
+
+        .button {
+            display: flex;
+            gap: 15px;
+        }
+
+        .container {
+            display: flex;
+            gap: 15px;
+
+        }
+
+        .para1::before {
+            content: "\25C9";
+        }
+
+        .para6 {
+            background-color: blanchedalmond;
+            color: blue;
+            padding: 3px;
+        }
+
+        .para7 {
+            background-color: aliceblue;
+            color: red;
+            padding: 3px;
+        }
+
+        .flex-container2 {
+            display: flex;
+            background-color: blue;
+            margin-top: 5px;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        .container2 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .logo1::before {
+            content: "\25C9";
+        }
+
+        .logo5 {
+            background-image: url("images/linkedin.png");
+            background-position: relative;
+            height: 20px;
+            width: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .logo6 {
+            background-image: url("images/facebook2.png");
+            background-position: relative;
+            height: 20px;
+            width: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .logo7 {
+            background-image: url("images/twitter.png");
+            height: 20px;
+            width: 20px;
+            background-position: relative;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .logo8 {
+            background-image: url("images/instagram.png");
+            background-position: relative;
+            height: 20px;
+            width: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .flex-container3 {
+            background-color: rgb(61, 179, 61);
+            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .container3 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .button1 {
+            background-color: blue;
+            color: aliceblue;
+            padding: 3px;
+        }
+
+        .navbar6 {
+            background-image: url("images/search.png");
+            background-position: relative;
+            height: 20px;
+            width: 20px;
+            background-size: contain;
+        }
+
+        .navbar7 {
+            background-image: url("images/cart.png");
+            background-position: relative;
+            height: 20px;
+            width: 20px;
+            background-size: contain;
+        }
+
+        .navbar1::before {
+            content: "\25C9";
+        }
+
+        .flex-container4 {
+            display: flex;
+            background-color: red;
+            margin-top: 5px;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        .container4 {
+            display: flex;
+            gap: 25px;
+        }
+
+        .link2 {
+            background-image: url("images/facebook2.png");
+            height: 15px;
+            width: 15px;
+            background-position: relative;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .link4 {
+            background-image: url("images/twitter.png");
+            height: 15px;
+            width: 15px;
+            background-position: relative;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .link6 {
+            background-image: url("images/instagram.png");
+            height: 15px;
+            width: 15px;
+            background-position: relative;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        .link1::before {
+            content: "\25C9";
+        }
+
+        .smart1 {
+            display: flex;
+            gap: 4px;
+        }
+
+        .smart2 {
+            display: flex;
+            gap: 4px;
+        }
+
+        .smart3 {
+            display: flex;
+            gap: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>nav-bar</h1>
+    <div class="flex-container">
+        <div class="container">
+            <div class="para1">Miri UI</div>
+            <div class="para2">Home</div>
+            <div class="para3">Templates</div>
+            <div class="para4">Pages</div>
+            <div class="para5">Elements</div>
+        </div>
+        <div class="button">
+            <div class="para6">Buynow</div>
+            <div class="para7">Discover</div>
+        </div>
+    </div>
+
+    <div class="flex-container2">
+
+        <div class="logo1">Miri UI</div>
+        <div class="container2">
+            <div class="logo2">Home</div>
+            <div class="logo3">Templates</div>
+            <div class="logo4">Pages</div>
+            <div class="logo5"></div>
+            <div class="logo6"></div>
+            <div class="logo7"></div>
+            <div class="logo8"></div>
+        </div>
+    </div>
+
+    <div class="flex-container3">
+        <div class="navbar1">Miri UI</div>
+        <div class="container3">
+            <div class="navbar2">Home</div>
+            <div class="navbar3">Templates</div>
+            <div class="navbar4">Pages</div>
+            <div class="button1">Signin</div>
+            <div class="navbar6"></div>
+            <div class="navbar7"></div>
+        </div>
+    </div>
+
+    <div class="flex-container4">
+        <div class="link1">Miri UI</div>
+        <div class="container4">
+            <div class="smart1">
+                <div class="link2"></div>
+                <div class="link3">Facebook</div>
+            </div>
+            <div class="smart2">
+                <div class="link4"></div>
+                <div class="link5">Twitter</div>
+            </div>
+            <div class="smart3">
+                <div class="link6"></div>
+                <div class="link7">Instagram</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

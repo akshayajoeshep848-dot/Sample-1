@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- spread definition:
+    spread syntax allows an iterable(like an array or an string) to be expanded in places where zero or more arguments(for function calls) or elements
+    (for array literals) are expected. -->
+
+    <h1>JS Spread operator</h1>
+    <script>
+        let arr = [1, 2, 3, 4];
+        console.log(...arr)
+
+        let arr2 = [...arr];
+        console.log(arr2)
+
+        function sum(a, b, c) {
+            return a + b + c;
+        }
+        const numbers = [10, 20, 30];
+        console.log(sum(...numbers));
+
+
+        let arr3 = [1, 2, 3, 4];
+        let arr4 = [5, 6, 7, 8];
+        const combined = [...arr3, ...arr4];
+        console.log(combined);
+
+
+        // copying arrays(shallow copy)
+        const originalArray = ["1", "2", { key: 'value' }];
+        const copiedArray = [...originalArray];
+        console.log(copiedArray);
+        console.log(originalArray === copiedArray);
+        console.log(originalArray[2] === copiedArray[2]);
+
+        copiedArray[0] = 99;
+        console.log(originalArray);
+        console.log(copiedArray)
+
+        copiedArray[2].key = 'new value';
+        console.log(originalArray)
+        console.log(copiedArray)
+
+
+        // shallow copy of objects.
+        let originalObject = { a: 1, b: { c: 2 } };
+        let copiedObject = { ...originalObject };
+        console.log("originalObject", originalObject);
+        console.log("copiedObject", copiedObject);
+
+        copiedObject.a = 2;
+        copiedObject.b.c = 5;
+        console.log("originalObject", originalObject);
+        console.log("copiedObject", copiedObject);
+
+
+
+        // merging arrays
+        const arr1 = [1, 2, 3];
+        const arr5 = [3, 4, 5];
+        const arr6 = [5, 6, 7];
+        const mergedArray = [...arr1, ...arr5, ...arr6];
+        console.log(mergedArray);
+
+
+        // merging objects
+        const obja = { x: 1, y: 2["z: 7"] };
+        const objb = { y: 3, x: 5 };
+        const objc = { a: 8, };
+        const mergedObject = { ...obja, ...objb, ...objc };
+        console.log(mergedObject)
+
+
+        // spreading a string into an array of characters.
+        const greeting = "hello";
+        const chars = [...greeting];
+        console.log(chars)
+
+    </script>
+</body>
+
+</html>

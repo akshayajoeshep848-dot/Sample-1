@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>datatypes</h1>
+    <script>
+        let age = 10;
+        let firstName = "harika";
+        let lastName = `maddu`;
+        let bool = true;
+        let unDefined = undefined;
+        let sym = Symbol();
+
+        let fullName1 = firstName + " " + lastName;
+        let fullName2 = `${firstName} ${lastName}`;
+
+        console.log(fullName1);
+        console.log("fullName:", fullName2);
+
+        console.log(`my age is ${age}`);
+        console.log("age:", age)
+        console.log("firstName:", firstName);
+        console.log(bool);
+        console.log(unDefined);
+        console.log(sym);
+
+
+        //template literal
+        console.log(`my name is ${firstName} ${lastName} my age is ${10}`);
+        //string concatenation
+        console.log("My name is " + firstName + " " + lastName + ",and my age is " + age);
+        //comma seperatd values 
+        console.log("My name is", firstName, lastName, ",and my age is", age);
+
+
+        let address1 = "roadno2";
+        let address2 = "phase1";
+        let address3 = "hyderabad";
+
+        console.log(`I am in ${address1} in ${address2} in ${address3}`);
+        console.log("my hostel is in " + address1 + " " + address2 + "in", address3);
+        console.log("my hostel is in", address1, address2, ",in", address3);
+
+        console.log("typeof address1:", typeof address1);
+        console.log(typeof fullName1);
+
+
+    </script>
+</body>
+
+</html>

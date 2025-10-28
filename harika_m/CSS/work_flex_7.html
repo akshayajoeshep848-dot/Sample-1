@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            height: 120vh;
+            /* width: 100vh; */
+        }
+
+        .items1 {
+            height: 10%;
+            background-color: aquamarine;
+            text-align: center;
+            place-content: center;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .items2 {
+            height: 10%;
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            place-content: center;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        .middle {
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .card1 {
+            height: 90%;
+            border: 1px solid;
+            position: relative;
+            width: 20%;
+            margin-top: 20px;
+        }
+
+        .top {
+            height: 10vh;
+            position: relative;
+            background-color: red;
+            text-align: center;
+            place-content: center;
+        }
+
+        .middle1 {
+            position: relative;
+            bottom: -20px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .button {
+            position: relative;
+            border: 1px solid;
+            width: 300px;
+            top: 50px;
+            left: 15px;
+            padding: 20px;
+            text-align: center;
+            background-color: red;
+        }
+
+        .items3 {
+            background-color: aquamarine;
+            height: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="items1">CSS Responsive</div>
+        <div class="items2">Flexbox Cards</div>
+        <div class="middle">
+            <div class="card1">
+                <div class="top">
+                    <h1>React</h1>
+                </div>
+                <div class="middle1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, reiciendis. Natus sed
+                        distinctio, ipsa explicabo quibusdam, laboriosam, impedit molestiae illum velit sapiente
+                        perferendis
+                        eius. Voluptatem hic perferendis consequatur ut deserunt.</p>
+                </div>
+                <h3 class="button">Read More</h3>
+            </div>
+
+            <div class="card1">
+                <div class="top">
+                    <h1>Vue</h1>
+                </div>
+                <div class="middle1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, reiciendis. Natus sed
+                        distinctio, ipsa explicabo quibusdam, laboriosam, impedit molestiae illum velit sapiente
+                        perferendis
+                        eius. Voluptatem hic perferendis consequatur ut deserunt.</p>
+                </div>
+                <h3 class="button">Read More</h3>
+            </div>
+
+            <div class="card1">
+                <div class="top">
+                    <h1>Angular</h1>
+                </div>
+                <div class="middle1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, reiciendis. Natus sed
+                        distinctio, ipsa explicabo quibusdam, laboriosam, impedit molestiae illum velit sapiente
+                        perferendis
+                        eius. Voluptatem hic perferendis consequatur ut deserunt.</p>
+                </div>
+                <h3 class="button">Read More</h3>
+            </div>
+
+            <div class="card1">
+                <div class="top">
+                    <h1>JQuery</h1>
+                </div>
+                <div class="middle1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia, reiciendis. Natus sed
+                        distinctio, ipsa explicabo quibusdam, laboriosam, impedit molestiae illum velit sapiente
+                        perferendis
+                        eius. Voluptatem hic perferendis consequatur ut deserunt.</p>
+                </div>
+                <h3 class="button">Read More</h3>
+            </div>
+
+        </div>
+        <div class="items3"></div>
+    </div>
+</body>
+
+</html>

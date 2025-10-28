@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>objects</h1>
+    <button onclick="dog.bark()">bark</button>
+    <button onclick="dog.walk()">walk</button>
+    <hr />
+    <button onclick="dog.run()">run</button>
+    <button onclick="dog.bite()">Bite</button>
+    <button onclick="dog.shakehand()">shakehand</button>
+    <button onclick="dog.smell()">smell</button>
+    <script>
+        const person = {
+            first_name: "maddu",
+            lastName: "Harika",
+            name: 'Harika',
+            age: 20,
+            isstudent: true,
+            greet: function () {
+                return `Hello,my name is ${this.name}`;
+            }
+        }
+
+        // dot notation
+        // console.log(person.first_name)
+        // console.log(person.lastName)
+        // console.log(person.name);
+        // console.log(person.age)
+        // console.log(person.isstudent)
+        // console.log(person.greet())
+
+
+        // [] bracket notation
+        // console.log(person["name"])
+        // console.log(person["age"])
+        // console.log(person["isstudent"])
+        // console.log(person["greet"]())
+
+
+
+        // create an object called dog
+        const dog = {
+            name: "kushi",
+            color: "white",
+            age: 1,
+            gender: "male",
+            petid: 1234,
+            bark: function () {
+                console.log(`${this.name} is barking`);
+                return `${this.name} is barking`;
+            },
+            walk: function () {
+                console.log(`${this.name} is walking`);
+                return `${this.name} is walking`;
+            },
+            run: function () {
+                console.log(`${this.name} is running`)
+                return `${this.name} is running`;
+            },
+            bite: function () {
+                console.log(`${this.name} is biting a boy`);
+                return `${this.name} is biting a boy`;
+            },
+            shakehand: function () {
+                console.log(`${this.name} is shaking hand`)
+                return `${this.name} is shaking hand`;
+            },
+            smell: function () {
+                console.log(`${this.name} is smelling`)
+                return `${this.name} is smelling`;
+            },
+            eat: function () {
+                return `${this.name} is eating`;
+            },
+            sleep: function () {
+                return `${this.name} is sleeping`;
+            },
+            rollover: function () {
+                return `${this.name} is rollovering`;
+            },
+            sit: function () {
+                return `${this.name} sat on the bench`;
+            },
+            liedown: function () {
+                return `${this.name} is lieddown`;
+            },
+            getsodafromfridge: function () {
+                return `${this.name} is getting soda from fridge`;
+            },
+            wag: function (person) {
+                return `${this.name} is wagging its tail by getting ${person}`;
+            },
+        };
+        // console.log(dog.bark());
+        // console.log(dog.walk());
+        // console.log(dog.smell());
+        // console.log(dog.bite());
+        // console.log(dog.shakehand());
+        // console.log(dog.sit());
+        // console.log(dog.getsodafromfridge());
+        // console.log(dog.liedown());
+        // console.log(dog.wag(person.lastName));
+
+
+
+        const address = {
+            address_line1: "MIG-87",
+            address_line2: "First floor,Road No.1",
+            address_line3: "KPHB Phase-1",
+            landmark: "beside AED hospital",
+            city: "Hyd",
+            state: "Telangana",
+            pincode: 500072,
+
+            getAddress: function () {
+                return `${this.address_line1} ${this.address_line2} ${this.address_line3} ${this.landmark} ${this.city} ${this.state} ${this.pincode}`;
+            },
+        };
+        console.log(address.getaddress());
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dashboard {
+            /* background-color: rgb(200, 196, 196); */
+            height: 50vh;
+            display: flex;
+            gap: 100px;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .middle1 {
+            position: relative;
+            margin-top: -15px;
+            color: gray;
+        }
+
+        .one {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+
+        }
+
+        .radius1 {
+            display: flex;
+            position: relative;
+
+            height: 40px;
+            width: 40px;
+            border: 1px solid beige;
+            border-radius: 50%;
+            background-image: url("images/bargraph.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: rgb(210, 206, 206);
+            place-content: center;
+            bottom: -5px;
+            left: 4px;
+        }
+
+        .photo1 {
+            position: relative;
+            border: 1px solid beige;
+            height: 50px;
+            width: 50px;
+            top: -8px;
+            border-radius: 50%;
+            left: 200px;
+            top: -60px;
+
+            background-color: bisque;
+        }
+
+        .second {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .middle2 {
+            position: relative;
+            margin-top: -15px;
+            color: gray;
+        }
+
+        .radius2 {
+            display: flex;
+            position: relative;
+
+            height: 40px;
+            width: 40px;
+            border: 1px solid beige;
+            border-radius: 50%;
+            background-image: url("images/manicon.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: rgb(210, 206, 206);
+            place-content: center;
+            bottom: -5px;
+            left: 4px;
+        }
+
+        .photo2 {
+            position: relative;
+            border: 1px solid beige;
+            height: 50px;
+            width: 50px;
+            top: -8px;
+            border-radius: 50%;
+            left: 200px;
+            top: -60px;
+            ;
+            background-color: bisque;
+        }
+
+        .third {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .middle3 {
+            position: relative;
+            margin-top: -15px;
+            color: gray;
+        }
+
+        .radius3 {
+            display: flex;
+            position: relative;
+
+            height: 40px;
+            width: 40px;
+            border: 1px solid beige;
+            border-radius: 50%;
+            background-image: url("images/dollaricon");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: rgb(210, 206, 206);
+            place-content: center;
+            bottom: -5px;
+            left: 4px;
+        }
+
+        .photo3 {
+            position: relative;
+            border: 1px solid beige;
+            height: 50px;
+            width: 50px;
+            top: -8px;
+            border-radius: 50%;
+            left: 200px;
+            top: -60px;
+            ;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="one">
+            <h4>TOTAL REVENUE</h4>
+            <p class="middle1"> Previous month vs this months</p>
+            <h2>$5,900.00</h2>
+            <p><span style="color: green;">55% </span><span style="color: gray;">Higher</span></p>
+            <div class="photo1">
+                <div class="radius1"></div>
+            </div>
+        </div>
+
+
+        <div class="second">
+            <h4>NEW EMPLOYEES</h4>
+            <p class="middle2">Employees joined this month</p>
+            <h2>15</h2>
+            <p><span style="color: green;">5% </span><span style="color: gray;">increased</span></p>
+            <div class="photo2">
+                <div class="radius2"></div>
+            </div>
+        </div>
+
+
+        <div class="third">
+            <h4>TOTAL EXPENSES</h4>
+            <P class="middle3">Previous month vs this months</P>
+            <h2>$8,500</h2>
+            <p><span style="color: red;">12%</span> <span style="color: gray;">Decreased</span></p>
+            <div class="photo3">
+                <div class="radius3"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // class Pet {
+        //     constructor(type, name) {
+        //         this.type = type;
+        //         this.name = name;
+        //     }
+        //     eat() {
+        //         console.log(`${this.name} is eating`);
+        //     }
+        //     drink() {
+        //         console.log(`${this.name} is drinking`);
+        //     }
+        // }
+
+        // class Dog extends Pet {
+        //     constructor(type, name, breed) {
+        //         super(type, name);
+        //         this.breed = breed;
+        //     }
+        // }
+
+        // let dog1 = new Dog("Dog", "chimtu", "oorakukka");
+        // console.log(dog1.type);
+        // console.log(dog1.name);
+        // console.log(dog1.breed);
+        // dog1.eat();
+        // dog1.drink();
+
+
+
+        class Car {
+            constructor(make, model) {
+                this.make = make;
+                this.model = model;
+            }
+        }
+
+        let car1 = new Car("things", "suzuki");
+        console.log(car1.make);
+        console.log(car1.model);
+
+
+        // class Dog {
+        //     constructor(name, age, breed = "mutt") {
+        //         this.name = name;
+        //         this.age = age;
+        //         this.breed = mutt;
+        //     }
+
+        // }
+
+        // let dog1 = new Dog("nancy", "5");
+        // console.log(dog1.name);
+        // console.log(dog1.age);
+        // console.log(dog1.breed);
+
+
+
+        class Vehicle {
+            constructor(name, color) {
+                this.name = name;
+                this.color = color;
+            }
+        }
+
+        class Motorcycle extends Vehicle {
+            constructor(name, color, model) {
+                super(name, color);
+                this.model = model;
+            }
+        }
+
+        let vehicle1 = new Motorcycle("motorcycle", "black", "cycle");
+        console.log(vehicle1.name);
+        console.log(vehicle1.color);
+        console.log(vehicle1.model);
+
+    </script>
+</body>
+
+</html>

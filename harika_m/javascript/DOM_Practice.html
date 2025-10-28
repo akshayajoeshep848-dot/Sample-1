@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body>
+    <h1 id="head-1">Dom Practice</h1>
+    <div id="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, ex.</div>
+    <div class="div2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur sint non alias deleniti id
+        doloremque voluptas consequuntur dolor, corrupti aut?</div>
+    <script>
+        let head = document.getElementById("head-1");
+        console.log(head);
+        head.innerHTML = "<p>this is a para</p>";
+
+
+        let num1 = document.querySelector("#div1");
+        console.log(num1);
+        num1.innerText = "text-1";
+        num1.style.color = "blue";
+        num1.style.backgroundColor = "orange";
+        num1.style.fontSize = "80px";
+        num1.style.padding = "20px";
+        num1.style.margin = "20px";
+        num1.style.boxShadow = "3px 3px 3px 3px green";
+
+
+
+        let num2 = document.querySelector(".div2");
+        console.log(num2);
+        num2.innerText = "text-2";
+        num2.style.color = "red";
+        num2.style.backgroundColor = "violet";
+        num2.style.fontSize = "50px";
+        num2.style.padding = "10px";
+        num2.style.boxShadow = "5px 5px 5px 5px black inset";
+        num2.style.margin = "10px";
+
+
+
+
+    </script>
+</body>
+
+</html>

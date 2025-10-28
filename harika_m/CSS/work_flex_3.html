@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            height: 100vh;
+            width: 100vh;
+        }
+
+        .items1 {
+            background-color: orange;
+            height: 15%;
+            text-align: center;
+            place-content: center;
+        }
+
+        .second {
+            display: flex;
+            gap: 10px;
+            height: 20%;
+            margin-top: 10px;
+
+        }
+
+        .items2 {
+            background-color: blueviolet;
+            flex: 2;
+            text-align: center;
+            place-content: center;
+        }
+
+        .menu {
+            display: flex;
+            flex: 1;
+            gap: 10px;
+            flex-direction: column;
+
+        }
+
+        .items3 {
+            background-color: aqua;
+            height: 50%;
+            flex: 1;
+            text-align: center;
+            place-content: center;
+        }
+
+        .third {
+            display: flex;
+            gap: 10px;
+            height: 15%;
+            margin-top: 10px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .items5,
+        .items4 {
+            flex: 1;
+            background-color: blueviolet;
+            gap: 10px;
+            place-content: center;
+        }
+
+        .fourth {
+            display: flex;
+            height: 15%;
+            margin-top: 10px;
+            gap: 10px;
+        }
+
+        .items7,
+        .items8,
+        .items9 {
+            flex: 1;
+            background-color: blueviolet;
+            text-align: center;
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="items1">Flex-container</div>
+        <div class="second">
+            <div class="items2">Flex-item1</div>
+            <div class="menu">
+                <div class="items3">flex-item1</div>
+                <div class="items3">flex-item2</div>
+            </div>
+        </div>
+        <div class="third">
+            <div class="items4">flex-item1</div>
+            <div class="items5">flex-item2</div>
+        </div>
+        <div class="fourth">
+            <div class="items7">flex-item1</div>
+            <div class="items8">flex-item2</div>
+            <div class="items9">flex-item3</div>
+        </div>
+    </div>
+</body>
+
+</html>

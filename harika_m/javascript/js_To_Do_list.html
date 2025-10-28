@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h1 id="heading"></h1>
+            <label for="first"></label>
+            <input type="text" id="first" name="first" placeholder="Add a new task...." />
+            <label for="second"></label>
+            <input type="text" id="second" name="second" placeholder="Duration(e.g.,30m)" />
+            <button id="btn"></button>
+        </div>
+
+
+    </div>
+    <script>
+        let taskArray = [];
+        let displayList = [];
+        let taskObject = {};
+
+        let head = document.getElementById("heading");
+        head.innerText = "My To-Do List";
+        head.style.color = "blue";
+
+
+        let first = document.getElementById("first");
+        first.addEventListener("change", (event) => {
+            taskObject[event.target.name] = event.target.value;
+            console.log(taskObject);
+
+            first.style.border = "2px solid gray";
+            first.style.borderRadius = "5px";
+            first.style.padding = "5px";
+
+        });
+
+        let second = document.getElementById("second");
+        second.addEventListener("change", (event) => {
+            taskObject[event.target.name] = event.target.value;
+            console.log(taskObject);
+
+
+            second.style.border = "2px solid gray";
+            second.style.borderRadius = "5px";
+            second.style.padding = "5px";
+        });
+
+        let button = document.getElementById("btn");
+        button.addEventListener("submit", (event) => {
+            event.preventDefault();
+            taskObject[event.target.name] = event.target.value;
+            console.log(taskObject);
+            button.textContent = "Add";
+            // button.style.backgroundColor = "blue";
+            // button.style.color = "white";
+            // button.style.borderRadius = "5px";
+            // button.style.padding = "5px"
+
+
+        });
+
+
+
+        taskArray.forEach(task => {
+            let parentDiv = document.createElement("div");
+            let taskDiv = document.createElement("div");
+            let DurationDiv = document.createElement("div");
+
+            parentDiv.classList.add("task-div");
+
+            taskDiv.textContent = task.task;
+            DurationDiv.textContent = task.duration;
+            parentDiv.appendChild(taskDiv);
+            parentDiv.appendChild(DurationDiv);
+            displayList.appendChild(parentDiv);
+
+        });
+    </script>
+</body>
+
+</html>

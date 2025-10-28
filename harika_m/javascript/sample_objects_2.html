@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button:hover {
+            background-color: aqua;
+        }
+
+        button:active {
+            transform: translate(10px, 10px);
+            box-shadow: 2px 2px 2px 2px red inset;
+            rotate: 180deg;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Objects</h1>
+    <h2>TEAM</h2>
+    <button onclick="team.project_manager.role1()">project manager</button>
+    <button onclick="team.team_leader.role2()">Team Leader</button>
+    <button onclick="team.senior_developer.role3()">Senior Developer</button>
+    <button onclick="team.junior_developer.role4()">Junior Developer</button>
+    <button onclick="team.business_analyst.role5()">Business Analyst</button>
+    <button onclick="team.tester.role6()">Tester</button>
+    <hr />
+    <h2>TESTER</h2>
+    <button onclick="tester.project_manager.role1()">project manager</button>
+    <button onclick="tester.team_leader.role2()">team leader</button>
+    <button onclick="tester.senior_tester.role3()">senior developer</button>
+    <button onclick="tester.junior_tester.role4()">junior developer</button>
+    <hr />
+    <h2>STUDENT</h2>
+    <button onclick="student.studentdetails()">student</button>
+    <hr />
+    <h2>Employee Details</h2>
+    <button onclick="employee.employeedetails()">Employee details</button>
+    <script>
+        const team = {
+            project_manager: {
+                name: "sai",
+                id: 1234,
+                role1: function () {
+                    console.log(`${this.name} is leading a project-manager`);
+                },
+            },
+            team_leader: {
+                name: "anshu",
+                id: 2345,
+                role2: function () {
+                    console.log(`${this.name} is leading a team leader`);
+                },
+            },
+            senior_developer: {
+                name: "harini",
+                id: 3456,
+                role3: function () {
+                    console.log(`${this.name} is leading a senior developer`);
+                },
+            },
+            junior_developer: {
+                name: "hasini",
+                id: 4567,
+                role4: function () {
+                    console.log(`${this.name} is leading a junior developer`);
+                },
+            },
+            business_analyst: {
+                name: "priya",
+                id: 6789,
+                role5: function () {
+                    console.log(`${this.name} is leading a business analyst`);
+                },
+            },
+            tester: {
+                name: "kowshik",
+                id: 9087,
+                role6: function () {
+                    console.log(`${this.name} is a leading a tester`);
+                },
+            },
+
+        };
+        team.project_manager.role1();
+        team.team_leader.role2();
+        team.senior_developer.role3();
+        team.junior_developer.role4();
+        team.business_analyst.role5();
+        team.tester.role6();
+
+
+
+        const tester = {
+            project_manager: {
+                name: "ammu",
+                id: 2349,
+                role1: function () {
+                    console.log(`${this.name} is leading a project-manager`);
+                },
+            },
+            team_leader: {
+                name: "bhanu",
+                id: 5894,
+                role2: function () {
+                    console.log(`${this.name} is a leading a team leader`);
+                },
+            },
+            senior_tester: {
+                name: "siri",
+                id: 2873,
+                role3: function () {
+                    console.log(`${this.name} is leading a senior tester`);
+                },
+            },
+            junior_tester: {
+                name: "reena",
+                id: 2876,
+                role4: function () {
+                    console.log(`${this.name} is leading a junior tester`);
+                },
+            },
+        };
+        tester.project_manager.role1();
+        tester.team_leader.role2();
+        tester.senior_tester.role3();
+        tester.junior_tester.role4();
+
+
+        const student = {
+            name: "Harika",
+            age: 20,
+            college: "NRIIT",
+            clgID: 1234,
+            village: "Gurazala",
+            dist: "Palnadu",
+            state: "Andhra Pradesh",
+            pincode: 522415,
+            studentdetails: function () {
+                console.log(`My name is ${this.name} and my age is ${this.age} My college name is ${this.college} and collegeID is ${this.clgID}
+My village name is${this.village}, 
+                 ${this.dist},
+                 ${this.state},${this.pincode}`);
+            },
+        };
+        student.studentdetails();
+
+
+
+        const employee = {
+            name: "kowshik",
+            age: 25,
+            role: "software developer",
+            id: 2345,
+            salary: 40000,
+            company: "Infosys",
+            employeedetails: function () {
+                console.log(`Employee name is ${this.name} and his age is ${this.age} and he is a ${this.role} his employeeID is ${this.id} and his salary is ${this.salary} and he worked in ${this.company}`);
+            },
+        };
+        employee.employeedetails();
+    </script>
+</body>
+
+</html>

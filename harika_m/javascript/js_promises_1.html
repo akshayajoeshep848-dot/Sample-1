@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS PROMISe</title>
+</head>
+
+<body>
+    <h1>JS PROMISE</h1>
+    <script>
+        // let myPromise = Promise.resolve("success");
+        // let myPromise2 = Promise.reject("failure");
+        // console.log(myPromise);
+        // myPromise.then((Response) => console.log(Response));
+        // myPromise2.catch((error) => console.log(error));
+
+
+        let p1 = Promise.resolve("success");
+        let p2 = 34
+        let p3 = new Promise((resolve, reject) => {
+            const success = true;
+            // console.log(success);
+            setTimeout(() => {
+                success ? resolve("successfull") : reject("failure");
+            }, 2000);
+        });
+
+        Promise.all([p1, p2, p3]).then((values) => console.log(values)).catch((error) => console.log(error));
+    </script>
+</body>
+
+</html>

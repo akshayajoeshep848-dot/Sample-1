@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditions 1</title>
+</head>
+
+<body>
+    <h1>upsc age validation</h1>
+    <script>
+        // student applying for upsc exam
+        // 1.what category are you?
+        // 2.what is your age?
+        // conditions
+        // general-21 to 32
+        // sc/st-21to 37
+        // obc-21 to 35
+        // pd-2 to 42
+        let category = prompt("enter your category");
+        let age = prompt("enter your age");
+        if (category == "general") {
+            console.log(`you are in ${category} category`);
+        } else if (category == "sc" || category == "st") {
+            console.log(`you are in ${category} category`);
+        }
+        //    age verification block
+        if (age < 0 || age > 140) {
+            console.log("enter a valid age");
+        } else if (age >= 0 && age < 21) {
+            console.log("you are not eligible for upsc exam");
+        } else if (age >= 21 && age < 32) {
+            console.log("you are eligible to write upsc exam");
+        } else {
+            console.log()
+        }
+    </script>
+</body>
+
+</html>

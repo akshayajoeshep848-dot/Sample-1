@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            background-image: url("images/teddy.jpg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: grid;
+            grid-template-columns: 1fr 8fr 2fr;
+            grid-template-rows: 1fr 8fr 1fr;
+            height: 100vh;
+
+            grid-template-areas:
+                "header header header"
+                "sidenav content ."
+                "footer footer footer"
+        }
+
+        .grid-item {
+            background-color: blueviolet;
+            border-radius: 10px;
+            border: 5px solid;
+            background-color: transparent;
+        }
+
+        .grid-item1 {
+            grid-area: header;
+        }
+
+        .grid-item2 {
+            grid-area: sidenav;
+        }
+
+        .grid-item3 {
+            grid-area: content;
+
+        }
+
+        .grid-item4 {
+            grid-area: footer;
+        }
+
+        /* .grid-item5{
+            grid-area: rightnav;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item1">header </div>
+        <div class="grid-item grid-item3">sidenav</div>
+        <div class="grid-item grid-item2">content</div>
+
+        <div class="grid-item grid-item4">right</div>
+        <div class="grid-item grid-item5">footer</div>
+
+    </div>
+</body>
+
+</html>

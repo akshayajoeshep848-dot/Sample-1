@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            background-color: blueviolet;
+            padding: 10px;
+        }
+
+        .para {
+            background-color: aqua;
+            height: 100px;
+            width: 300px;
+            text-align: center;
+            place-content: center;
+
+        }
+
+        .para1 {
+            /* flex-basis: 300px;
+            flex-grow: 1;
+            flex-shrink: 1; */
+            flex: 1 1 300px;
+
+        }
+
+        .para2 {
+            /* flex-basis: 300px;
+            flex-grow: 2;
+            flex-shrink: 2; */
+            flex: 2 2 300px;
+        }
+
+        .para3 {
+            /* flex-basis: 300px;
+            flex-grow: 3;
+            flex-shrink: 3; */
+            flex: 3 3 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>flex-basis</h1>
+    <div class="flex-container">
+        <div class="para para1">item1</div>
+        <div class="para para2">item2</div>
+        <div class="para para3">item3</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            height: 100vh;
+            width: 100vh;
+        }
+
+        .items1 {
+            height: 8%;
+            background-color: aqua;
+            text-align: center;
+            place-content: center;
+        }
+
+        .items2 {
+            height: 8%;
+            background-color: greenyellow;
+            margin-top: 10px;
+            text-align: center;
+            place-content: center;
+        }
+
+        .middle {
+            height: 25%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .items3 {
+            flex: 1;
+            background-color: gold;
+            text-align: center;
+            place-content: center;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            flex: 2;
+
+            gap: 10px;
+        }
+
+        .items4 {
+            flex: 1;
+            height: 50%;
+            background-color: blue;
+            text-align: center;
+            place-content: center;
+        }
+
+        .items6 {
+            background-color: aqua;
+            margin-top: 10px;
+            height: 8%;
+            text-align: center;
+            place-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div class="items1">Header</div>
+        <div class="items2">Navigation</div>
+        <div class="middle">
+            <div class="items3">Aside</div>
+            <div class="right">
+                <div class="items4">Content</div>
+                <div class="items4">Section</div>
+            </div>
+        </div>
+        <div class="items6">Footer</div>
+    </div>
+</body>
+
+</html>

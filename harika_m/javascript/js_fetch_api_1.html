@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: aqua;
+            width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .dog-container {
+            border: 1px solid red;
+            padding: 10px;
+        }
+
+        .dog-breed {
+            /* background-color: antiquewhite; */
+            margin-top: 0px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>API</h1>
+    <div class="container"></div>
+    <script>
+        let dogsDataArray = [];
+        let Response = fetch("https://dogapi.dog/api/v2/breeds")
+            // console.log(Response);
+            .then((data) => data.json())
+            // .then((value) => console.log(value))
+            // .then((value) => console.log(value.data))
+            // .then((value) => console.log(value.data[0]))
+            // .then((value) => console.log(value.data[0].type));
+
+            .then((value) => {
+                console.log(value.data);
+                let array = value.data;
+                console.log(array);
+
+
+                let container = document.querySelector(".container");
+                array.forEach((dog) => {
+                    let dogContainer = document.createElement("div");
+                    let dogBreed = document.createElement("h3");
+                    let dogDescription = document.createElement("p");
+
+                    // set classes
+                    dogContainer.classList.add("dog-container");
+                    dogBreed.classList.add("dog-breed");
+                    dogDescription.classList.add("dog-description");
+
+                    // assign values
+                    dogBreed.textContent = dog.attributes.name;
+                    dogDescription.textContent = dog.attributes.description;
+
+                    dogContainer.append(dogBreed);
+                    dogContainer.append(dogDescription);
+                    container.append(dogContainer);
+                });
+            });
+
+
+    </script>
+</body>
+
+</html>

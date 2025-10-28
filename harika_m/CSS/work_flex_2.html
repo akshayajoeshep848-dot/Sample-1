@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .main {
+            height: 80vh;
+            width: 100vh;
+            background-color: gray;
+        }
+
+        .top {
+            background-color: rgb(115, 94, 239);
+            height: 20%;
+            gap: 10px;
+        }
+
+
+        .second {
+            display: flex;
+            background-color: red;
+            height: 40%;
+            margin-top: 20px;
+
+            gap: 10px;
+        }
+
+        .divleft {
+            flex: 1;
+        }
+
+        .right {
+            flex: 3;
+            display: flex;
+            background-color: sandybrown;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .divleft,
+        .right {
+            gap: 10px;
+            background-color: rgb(182, 170, 100);
+        }
+
+        .right_top {
+            height: 50%;
+            background-color: rgb(44, 44, 111);
+        }
+
+        .right_bottom {
+            display: flex;
+            gap: 10px;
+            background-color: green;
+            height: 50%;
+            flex: 1;
+        }
+
+        .div {
+            gap: 20px;
+            background-color: blue;
+            flex: 1;
+            color: antiquewhite;
+        }
+
+        .bottom {
+            background-color: rgb(115, 94, 239);
+            height: 30%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">Header</div>
+        <div class="second">
+            <div class="divleft">side bar</div>
+            <div class="right">
+                <div class="right_top">content1</div>
+                <div class="right_bottom">
+                    <div class="div">content2</div>
+                    <div class="div">content3</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bottom">footer
+
+        </div>
+    </div>
+
+</body>
+
+</html>

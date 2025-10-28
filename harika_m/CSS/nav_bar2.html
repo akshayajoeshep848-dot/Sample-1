@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container1 {
+            display: flex;
+            background-color: antiquewhite;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .container1 {
+            display: flex;
+            gap: 10px;
+        }
+
+        .para1 {
+            content: "";
+            height: 20px;
+            width: 5px;
+            background-color: blue;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .para2 {
+            content: "";
+            height: 20px;
+            width: 5px;
+            background-color: red;
+            position: relative;
+            border-radius: 10px;
+            margin-left: 5px;
+
+        }
+
+        .para3 {
+            content: "";
+            height: 20px;
+            width: 5px;
+            background-color: green;
+            position: relative;
+            border-radius: 10px;
+            margin-left: 5px;
+        }
+
+        .container {
+            display: flex;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .button {
+            background-color: red;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        .flex-container2 {
+            display: flex;
+            background-color: antiquewhite;
+            margin-top: 10px;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        .container2 {
+            display: flex;
+            gap: 4px;
+        }
+
+        .logo4 {
+            font-weight: bold;
+        }
+
+        .container3 {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button1 {
+            background-color: blue;
+            color: antiquewhite;
+            padding: 5px;
+        }
+
+        .flex-container3 {
+            background-color: bisque;
+            display: flex;
+            margin-top: 10px;
+            justify-content: space-evenly;
+            padding: 10px;
+        }
+
+        .container4 {
+            content: "";
+            height: 5px;
+            width: 20px;
+            background-color: black;
+            margin-left: -200px;
+            border-radius: 10px;
+            position: relative;
+            left: 20px;
+            bottom: -10px;
+
+        }
+
+        .container4::before {
+            content: "";
+            height: 5px;
+            width: 20px;
+            background-color: black;
+            position: absolute;
+            top: -10px
+        }
+
+        .container4::after {
+            content: "";
+            height: 5px;
+            width: 20px;
+            background-color: black;
+            position: absolute;
+            bottom: -10px;
+        }
+
+        .container5 {
+            display: flex;
+
+        }
+
+        .container6 {
+            background-image: url("images/search.png");
+            height: 20px;
+            width: 20px;
+            background-position: relative;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+
+        .mark5 {
+            font-weight: bold;
+        }
+
+        .flex-container4 {
+            background-color: bisque;
+            display: flex;
+            margin-top: 10px;
+            padding: 10px;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        .container7 {
+            display: flex;
+            gap: 5px;
+        }
+
+        .link9 {
+            content: "\25CF";
+            background-position: relative;
+            background-color: aqua;
+            display: flex;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>NAVIGATION</h1>
+    <div class="flex-container1">
+        <div class="container">
+            <div class="para1"></div>
+            <div class="para2"></div>
+            <div class="para3"></div>
+            <div class="para4">LEAD</div>
+        </div>
+        <div class="container1">
+            <div class="para5">Overview</div>
+            <div class="para6">Pages</div>
+            <div class="para7">Resources</div>
+            <div class="para8">Docs</div>
+            <div class="button">Buy Now</div>
+        </div>
+    </div>
+
+
+    <div class="flex-container2">
+        <div class="container2">
+            <div class="para1"></div>
+            <div class="para2"></div>
+            <div class="para3"></div>
+            <div class="logo4">LEAD</div>
+            <div class="logo5">Overview</div>
+            <div class="logo6">Pages</div>
+            <div class="logo7">Resources</div>
+            <div class="logo8">Docs</div>
+        </div>
+        <div class="container3">
+            <div class="logo9">signin</div>
+            <div class="button1">buy now</div>
+        </div>
+    </div>
+
+
+    <div class="flex-container3">
+        <div class="container4">
+            <div class="mark1"></div>
+        </div>
+        <div class="container5">
+            <div class="para1"></div>
+            <div class="para2"></div>
+            <div class="para3"></div>
+            <div class="mark5">LEAD</div>
+        </div>
+        <div class="container6">
+            <div class="mark6"></div>
+        </div>
+    </div>
+
+    <div class="flex-container4">
+        <div class="container7">
+            <div class="para1"></div>
+            <div class="para2"></div>
+            <div class="para3"></div>
+            <div class="link4">LEAD</div>
+            <div class="link5">Overview</div>
+            <div class="link6">Pages</div>
+            <div class="link7">Resources</div>
+            <div class="link8">Docs</div>
+            <div class="link9"></div>
+            <div class="link10"></div>
+            <div class="link11"></div>
+        </div>
+        <div class="container8">
+            <div class="link12"></div>
+            <div class="link13">Buy now</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

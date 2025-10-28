@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>ARRAYS</h1>
+    <script>
+        let emptyArray = [];
+        let fruits = ["apple", "Banana", "Cherry"];
+
+        let numbers = [1, 2, 3, 4, 5];
+        let mixedArray = [10, "Hello", true, { name: "Alice" }, [6, 7]];
+
+        console.log(fruits[2]);
+        console.log(mixedArray[3].name);
+        console.log(mixedArray[2])
+        console.log(mixedArray[4][0])
+        console.log(mixedArray[3]["name"])
+        console.log(fruits)
+
+
+        let student = {
+            name: "reena",
+            age: 21,
+            college: "NRIIT",
+            id: "0469",
+            address: {
+                line1: "H.NO 553",
+                line2: "Jubliee Hills road no 29",
+                city: "Hyd",
+                state: "Telangana",
+                pincode: 500034,
+            },
+            movies: ["Devara", "War-2", "Temper", "Janatha garage"],
+            awards: [
+                {
+                    name: "Best Dancer",
+                    type: "",
+                    year: 1996,
+                    movie: "",
+                },
+                {
+                    name: "Best Actor",
+                    type: "Nandi Awards",
+                    year: 2016,
+                    movie: ["Nanna ki prematho", "Rakhi", "RRR"],
+                },
+                {
+                    name: "Best Actor",
+                    type: "SIMA Awards",
+                    year: 2007,
+                    movie: "Simhadri",
+                },
+            ],
+        };
+        console.log(student.movies[0]);
+        console.log(student.awards[0].name);
+        console.log(student.length);
+        console.log(student.address)
+        console.log(student.awards[1].movie[1]);
+
+
+        // create array using constructor
+        let arr1 = new Array();
+        let arr2 = new Array("Apple", "Banana", "Cherry");
+        let arr3 = new Array(4);
+
+        console.log(arr1[1])
+        console.log(arr2)
+        console.log(arr3)
+
+        arr3[0] = "bread halwa";
+        console.log(arr3);
+        console.log(arr3[0])
+        console.log(arr3[1])
+
+
+
+
+        let veg = ["tamoto", "mirchi", "cabbage"];
+        veg.push("brinjal");
+        console.log(veg)
+
+
+        veg.pop();
+        console.log(veg);
+
+        veg.unshift("mango");
+        console.log(veg)
+
+        veg.shift();
+        console.log(veg);
+
+        const queue = ['task1', 'task2', 'task3'];
+        const nextTask = queue.shift();
+        console.log(queue, nextTask);
+
+        let name = ["h", "a", "r", "i", "k", "a"];
+        name.reverse();
+        console.log(name);
+        console.log(name.join(""));
+
+        let name1 = "kowshik";
+        console.log(name1);
+        console.log(name1.split("").reverse().join(""))
+
+
+        let name2 = "maheshbabu";
+        console.log(name2.split(""));
+    </script>
+</body>
+
+</html>

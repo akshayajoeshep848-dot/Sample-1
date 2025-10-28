@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JS DOM document.createElement() method</h1>
+    <div id="container"></div>
+    <button id="btn1" onclick="getItems(fruits)">get Fruits</button>
+    <button id="btn2" onclick="getItems(veg)">get Vegetables</button>
+    <script>
+        let fruits = [
+            "apple",
+            "banana",
+            "pineapple",
+            "sapota",
+            "papaya",
+            "custard apple",
+            "mango",
+            "guava",
+            "kiwi",
+            "pomegranate",
+        ];
+        let veg = [
+            "dosakaya",
+            "potlakaya",
+            "sorakaya",
+            "beerakaya",
+            "dondakaya",
+            "munnagakaya",
+            "vankaya",
+            "bendakaya",
+            "gummadikaya",
+            "chikkudikaya",
+        ];
+
+
+        // creating h1 element
+        let heading2 = document.createElement("h2");
+        heading2.innerText = "create Element Method";
+        // document.body.append(heading2);
+        let container = document.getElementById("container");
+        container.append(heading2);
+
+
+        // create list element
+        let orderedList = document.createElement("ol");
+        // let listItem1 = document.createElement("li");
+        // listItem1.innerText = "item1";
+        // let listItem2 = document.createElement("li");
+        // listItem2.innerText = "item2";
+
+        // orderedList.append(listItem1);
+        // orderedList.append(listItem2);
+
+        // document.body.append(orderedList);
+
+
+        // write a for loop to create 5 li elements and append
+        // for (i = 0; i < 5; i++) {
+        //     let itemList = document.createElement("li");
+        //     itemList.innerText = `item ${i + 1}`;
+        //     orderedList.append(itemList);
+        // }
+
+        // document.body.append(orderedList);
+
+        // for (i = 0; i < fruits.length; i++) {
+        //     let itemList = document.createElement("li");
+        //     itemList.innerText = fruits[i];
+        //     orderedList.append(itemList);
+        // }
+
+        // document.body.append(orderedList);
+
+        // for (i = 0; i < veg.length; i++) {
+        //     let itemList = document.createElement("li");
+        //     itemList.innerText = veg[i];
+        //     orderedList.append(itemList);
+        // }
+
+        // document.body.append(orderedList);
+
+        //convert in function 
+        function getItems(arr) {
+            for (i = 0; i < arr.length; i++) {
+                let itemList = document.createElement("li");
+                itemList.innerText = arr[i];
+                orderedList.append(itemList);
+            }
+        }
+        // getItems(fruits);
+        // getItems(veg);
+        document.body.append(orderedList);
+    </script>
+</body>
+
+</html>

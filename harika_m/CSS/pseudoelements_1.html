@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo elements</title>
+    <style>
+        /* p {
+            color: blue;
+        } */
+
+        /* p::before {
+            content: "\2764";
+            color: red;
+        } */
+
+        ul {
+            list-style-type: none;
+        }
+
+        li::before {
+            content: "\01F3B2";
+            padding-right: 10px;
+        }
+
+        li::after {
+            content: "\1F44d";
+            padding-left: 10px;
+        }
+
+        .menu {
+            height: 5px;
+            width: 20px;
+            background-color: aqua;
+            border-radius: 10px;
+            position: relative;
+
+        }
+
+        /* .menu::before {
+            content: "";
+            position: absolute;
+            top: -8px;
+            height: 5px;
+            width: 10px;
+            background-color:blue;
+            border-radius: 10px;
+
+        }
+        .menu::after{
+            content: "";
+            position: absolute;
+            top: 8px;
+            height: 5px;
+            width: 20px;
+            background-color: aqua;
+            border-radius: 10px;
+
+        } */
+
+        .menu::before,
+        .menu::after {
+            content: "";
+            position: absolute;
+            height: 5px;
+            width: 20px;
+            background-color: rgb(243, 52, 52);
+            border-radius: 10px;
+        }
+
+        .menu::before {
+            top: -8px;
+            width: 20px;
+            background-color: blue;
+        }
+
+        .menu::after {
+            top: 8px;
+
+        }
+
+        .para1 {
+            color: brown;
+        }
+
+        .para1::first-letter {
+            font-size: 40px;
+            background-color: blanchedalm ond;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .para1::first-line {
+            color: blueviolet;
+            background-color: aqua;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .para1::selection {
+            background-color: gold;
+
+        }
+
+        input::placeholder {
+            color: red;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>pseuo elements</h1>
+    <p>this is a para</p>
+    <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+        <li>item 5</li>
+    </ul>
+    <div class="menu"></div>
+    <p class="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio nesciunt, unde autem nihil
+        quaerat ullam fugit officia, optio ipsum, sed sapiente dignissimos quod cumque molestias! In quaerat quis
+        cupiditate officia.</p>
+    <label for="fn">first name:</label>
+    <input type="text" placeholder="enter your first name" />
+</body>
+
+</html>

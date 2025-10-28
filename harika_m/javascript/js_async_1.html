@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div-container {
+            background-color: bisque;
+            padding: 10px;
+
+        }
+
+        .div-heading {
+            background-color: aqua;
+            padding: 10px;
+        }
+
+        .div-description {
+            background-color: aqua;
+            padding: 10px;
+        }
+
+        .address {
+            background-color: aqua;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Async/Await</h1>
+    <div id="container"> </div>
+    <script>
+        // async function hello() {
+        //     return "hello,Async!";
+        // }
+
+        // console.log(hello());
+        // hello().then(console.log);
+        // hello().then((value) => console.log(value));
+
+
+        // async function fetchData() {
+        //     console.log("starting fetch call....");
+        //     let response = await fetch("https://dogapi.dog/api/v2/breeds");
+        //     let breeds = await response.json();
+        //     console.log(breeds);
+        //     console.log("end fetch call...");
+        //     return breeds;
+        // }
+
+        // fetchData().then(console.log);
+        // fetchData().then((value) => console.log(value));
+
+        let options = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        };
+
+        let postOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorisation": "Bearer token_name"
+            },
+            body: {}
+            //   json.stringfy({})
+        }
+
+
+
+        async function fetchData(url, options) {
+            console.log("starting fetch call....");
+            let response = await fetch(url);
+            let data = await response.json();
+            console.log(data);
+            console.log("end fetch call...");
+            return data;
+        }
+
+
+        // fetchData("https://dogapi.dog/api/v2/breeds").then((value) => console.log(value));
+        fetchData("https://jsonplaceholder.typicode.com/users/1", options).then((value) => {
+            ;
+            let container = document.getElementById("container");
+            // container.forEach((value) => {
+            let divContainer = document.createElement("div");
+            let divHeading = document.createElement("h3");
+            let divDescription = document.createElement("p");
+            let address = document.createElement("p");
+
+            divContainer.classList.add("div-container");
+            divHeading.classList.add("div-heading");
+            divDescription.classList.add("div-description");
+            address.classList.add("address");
+
+            divHeading.textContent = `Name: ${value.name}`;
+            divDescription.textContent = `Email:${value.email}`;
+            address.textContent = `City:${value.address.city}`;
+
+            divContainer.append(divHeading);
+            divContainer.append(divDescription);
+            divContainer.append(address);
+            container.append(divContainer);
+        });
+
+    </script>
+</body>
+
+</html>

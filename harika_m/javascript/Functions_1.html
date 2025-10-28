@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- function:
+    a function is a set of statements that performs a task or calculates a value. to use a function,
+    you must define it somewhere in the scope from which you wish to call it.
+    key benefits of using functios:
+    1)reusability:write a code once and use it multiples times.
+    2)modularity:break down complex problems into smaller,managebale pieces.
+    3)readability:make code easier to understand by giving descriptive names to blocks of logic. -->
+
+    <!-- function declaration -->
+    <!-- a function declaration defines a named function.is starts with the function keyword,followed by the function
+         name,a list of parameters enclosed in paranthesis,and a block of code(the function body) enclosed in curly braces. -->
+    <script>
+        function greet(name) {
+            console.log(`Hello,${name}`);
+        }
+
+        // calling thefunction
+        greet("Alice");
+        greet("Bob");
+
+
+
+
+
+
+        // write a function to display if a user eligile to vote based on their age.
+        function eligible(age) {
+            age < 18 ? console.log("not eligible to vote") : console.log("eligble to vote");
+
+        }
+        eligible(a);
+
+        function eligible(age) {
+            if (age < 18) {
+                console.log("not eligible to vote")
+            } else {
+                console.log("eligible to vote")
+            }
+        }
+        eligible(20);
+
+
+        // hoisting:you can define a function anywhere you can print in the first.
+        // variable hoisting is important.:while compiling painavi anni undefined aihi,daani kinda line nunchi value assign aidhi.
+        // take 3 parameters and print full name
+        function fullname(firstname, middlename, lastname) {
+            console.log(`full name is ${firstname} ${middlename} ${lastname}`);
+        }
+        fullname("pawan", "kalyan", "konidela")
+
+
+        var a = 10;
+        eligible(a);
+
+
+        // write a function to print a numbers 1 to 10.
+        function numbers(positiveintegers) {
+            console.log(`start of the function`);
+            let i = 1;
+            while (i <= positiveintegers) {
+
+                console.log(`${i}`);
+                i++;
+            }
+            console.log(`end of the function`)
+        }
+        numbers(a)
+        numbers(15);
+
+
+        function numbers(positiveintegers) {
+            for (i = 1; i <= positiveintegers; i++) {
+                console.log(i);
+            }
+        }
+        numbers(20)
+
+
+        // write a function to print n factorial.
+        function factorial(number) {
+            let sum = 1;
+            for (let i = 1; i <= number; i++) {
+                sum = sum * i;
+                // console.log(sum);
+            }
+            console.log(sum);
+        }
+        factorial(5);
+
+
+    </script>
+</body>
+
+</html>

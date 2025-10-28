@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- callback:it is a regular function passed as an argument to another function,which is then invoked inside the outer function to complete some 
+     kind of routine or action.callbacks are fundamental to asynchronous programming in js,allowing coding to continue running while waiting for
+     operations like i/o ,timers,or network requests to complete.
+     understanding callback:
+     a callback function is simply function that it is called as after another function has finished executing.this pattern is especially useful for
+     when dealing with operations like that take an unknown amount of time,such as reading files,making HTTP requests,or quering databases.-->
+
+
+
+    <!-- callback function has 2 functions
+      they are main function and callback function
+      main function is called as higher order function. -->
+    <script>
+        function greet(name, callback) {
+            console.log("Hello," + name + "!");
+            callback();
+        }
+        function sayGoodbye() {
+            console.log("Goodbye!");
+        }
+        greet("Alice", sayGoodbye);
+
+
+        // example-2
+
+        function operation(num1, num2, oper) {
+            console.log(`you have given ${num1},${num2}`);
+            oper(num1, num2);
+        }
+
+        function sum(num1, num2) {
+            console.log(num1 + num2);
+        }
+
+        function sub(num1, num2) {
+            console.log(num1 - num2);
+        }
+
+
+        function multiply(num1, num2) {
+            console.log(num1 * num2);
+        }
+
+
+        function division(num1, num2) {
+            console.log(num1 / num2);
+        }
+
+        operation(10, 2, sum);
+        operation(10, 2, sub);
+        operation(10, 2, multiply);
+        operation(10, 2, division);
+
+    </script>
+</body>
+
+</html>
