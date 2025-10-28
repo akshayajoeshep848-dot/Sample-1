@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title> 
+    <style>
+        /* child selector*/
+        div > p{
+            color:blue;
+        }
+        /* descendent selector*/
+        ul li{
+            color: aqua;
+            background-color:red;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+        }
+        h2 + P{
+            color: aqua;
+        }
+        
+        h1 ~ p{
+            color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>para5</p>
+        <h1>Heading1</h1>
+        <p>para1</p>
+        <p>para2</p>
+        <h2>Heading2</h2>
+        <p>para3</p> 
+        
+    </div>
+    <p>para1 
+        <ul> 
+            <li>sub para1</li>
+            <li>sub para2</li>
+            <li>sub para3</li>
+            
+        </ul>
+        <p>para</p>
+        <p>pa</p>
+        <p>pa</p>
+        <p>pa</p>
+    </p>
+    <section>section 1
+            <ul>
+                <li>sub selection1</li>
+                <li>sub selection2</li>
+            </ul>
+        <p>section 2</p>
+        <p>section 3</p>
+        <p>section 4</p>
+        <p>section 5</p>
+        <p>section 6</p>
+        <p>section 7</p>
+        <p>section 8</p>
+        <p>section 9</p>
+        <p>section 10</p>
+    </section>
+    <item>item1
+        <ul>
+            <li>subitem1 </li>
+            <li>subitem2</li>
+        </ul>
+        <p>item2</p>
+        <p>item3</p>
+        <p>item4</p>
+        <p>item5</p>
+    </item>
+</body>
+</html>

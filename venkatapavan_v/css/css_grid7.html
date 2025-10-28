@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns:  repeat(4,2fr);
+            grid-template-rows: 1fr repeat(3,2fr);
+            height: 80vh;
+            gap: 10px;
+        }
+        .grid-item{
+            background-color: beige;
+            
+        }
+        .grid-item1{
+            grid-column-start: 1;
+            grid-column-end:5 ;
+            grid-row-start: 1;
+             grid-row-end: 1;
+             background-color: aqua;
+             place-content: center;
+             text-align: center;
+        }
+                .grid-item2{
+            grid-column-start: 1;
+            grid-column-end:2 ;
+            grid-row-start: 2;
+             grid-row-end: 5;
+             background-color: aqua;
+             text-align: center;
+        }
+                .grid-item3{
+            grid-column-start: 2;
+            grid-column-end:5 ;
+            grid-row-start: 2;
+             grid-row-end: 3;
+             background-color: aqua;
+             text-align: center;
+        }
+            .grid-item4{
+            grid-column-start: 2;
+            grid-column-end:3 ;
+            grid-row-start: 3;
+             grid-row-end: 4;
+             background-color: aqua;
+             text-align: center;
+        }
+           .grid-item5{
+            grid-column-start: 3;
+            grid-column-end:4 ;
+            grid-row-start: 3;
+             grid-row-end: 4;
+             background-color: aqua;
+             text-align: center;
+        }
+        .grid-item6{
+            grid-column-start: 4;
+            grid-column-end:5 ;
+            grid-row-start: 3;
+             grid-row-end: 4;
+             background-color: aqua;
+             text-align: center;
+        }
+        .grid-item7{
+            grid-column-start: 2;
+            grid-column-end:5;
+            grid-row-start: 4;
+             grid-row-end: 5;
+             background-color: aqua;
+             text-align: center;
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item1">NAVBAR</div>
+        <div class="grid-item grid-item2">SIDEBAR</div>
+        <div class="grid-item grid-item3">MAIN</div>
+        <div class="grid-item grid-item4">CONTENT 1</div>
+        <div class="grid-item grid-item5">CONTENT 2</div>
+        <div class="grid-item grid-item6">CONTENT 3</div>
+        <div class="grid-item grid-item7">FOOTER</div>
+    </div>
+</body>
+</html>

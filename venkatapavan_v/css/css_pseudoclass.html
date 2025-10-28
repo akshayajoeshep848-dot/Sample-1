@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo classes</title>
+    <style>
+        p{
+            background-color: aqua;
+            width: 100px;
+            padding: 20px;
+            border: 1px solid lightsalmon;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 3px 3px 5px 5px rgb(228,227,227);
+            font-size: 30px;
+            font-style: italic;
+        }
+        /* change state when user does mouseover action*/
+        p:hover{
+            background-color: blueviolet;
+            color: white;
+            box-shadow: 13px 13px 5px 5px rgb(228,227,227);
+            font-style: normal ;
+        }
+        /* change state when user click on the element*/
+                p:active{
+            background-color:brown;
+            color: white;
+            box-shadow: 13px 13px 5px 5px rgb(228,227,227);
+            font-style: normal ;
+            transform:scale(0.9) ;
+            transform: translate(10px,10px);
+                }
+            a:link{
+                font-size: 30px;
+                color:green;
+                text-decoration: none;
+            }
+            a:visited{
+                color:red;
+                font-size: 16px;
+            }
+    </style>
+</head>
+<body>
+    <h1>Pseudo class</h1>
+    <p>Para</p>
+    <a href="https://www.ajio.com">Logicwhile</a>
+</body>
+</html>

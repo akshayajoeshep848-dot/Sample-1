@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Search{
+            background-color: blanchedalmond;
+            width: 300px;
+            border-radius: 10px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="Search" id="Search" placeholder="Enter photo name">
+    <script>
+        let search=document.getElementById("Search")
+        async function fetchdata(url){
+            let response=await fetch(url);
+            let data=await response.json();
+            console.log(data);
+            return data;
+        }
+         fetchdata("https://api.unsplash.com/photos/random?client_id=cV4tQcO3UiJju_K4IrgEb_XmVYWmiO33gZ4dk4db7Uw")
+    </script>
+</body>
+</html>

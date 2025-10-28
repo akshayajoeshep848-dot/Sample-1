@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JS Array Splices</h1>
+    <script>
+        // removing elements
+        // first element=index
+        // second element=number of elements. 
+
+        let fruits = ["apple", "banana", "mango", "pineapple", "guava", "lemon", "sapota"];
+        let copy1 = fruits.splice(4, 2, "dragonfruit", "papaya", "pomegranate");
+        console.log(copy1);
+        console.log(fruits);
+
+        let copy2 = fruits.splice(-2, 1);
+        console.log(copy2);
+        console.log(fruits);
+    </script>
+</body>
+
+</html>

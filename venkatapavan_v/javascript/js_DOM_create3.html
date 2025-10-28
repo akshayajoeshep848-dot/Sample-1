@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+<body>
+    <!-- getElementByClassName -->
+    <!-- <div class="container">
+        <div class="menu-item menu-item-1"> Menu ITem 1</div>
+        <div class="menu-item menu-item-2"> Menu ITem 2 </div>
+        <div class="menu-item menu-item-3"> Menu ITem 3 </div>
+        <div class="menu-item menu-item-4"> Menu ITem 4</div>
+    </div>
+    <script>
+        let menuItems = document.getElementsByClassName("menu-item");
+        console.log(Array.isArray(menuItems)); // edhi manam endhuku rastam ante adhi array naa kaadha ani check cheyatam kosam and edhi array kaadhu but array laa behave chestadhi
+        console.log(menuItems)
+        console.log(Array.isArray(Array.from(menuItems)));
+        console.log(Array.from(menuItems));
+
+        let menuItemsArray=Array.from(menuItems);
+        menuItemsArray.forEach((item) =>(item.innerText = "Hello"))
+
+    </script> -->
+
+
+     <!-- getElementsByTagName -->
+       <div class="container">
+        <p>this is para1</p>
+        <p>this is para2</p>
+        <p>this is para3</p>
+        <p>this is para4</p>
+      </div> 
+      <script>
+         let paraItems=document.getElementsByTagName("p"); 
+         let arr=["Pavan","Kalyan","Madhav","Hussain"]
+        let actorsArray=[
+            {
+                name:"Prabhas",
+                profession:"Actor",
+                movies:["Bahubali","Mirchi"],
+
+            },{
+                name:"N.T.R",
+                profession:"Actor, Entreprenuer",
+                movies:["aadhi","Temper"]
+            },{
+                name:"Sai Pallavi",
+                profession:"Actor,Doctor",
+                movies:["Fida","Love story"]
+            },{
+                name:"Anushka Shetty",
+                profession:"Actor,Modelling",
+                movies:["Billa","Arundathi"]
+            }
+        ]
+        Array.from(paraItems).forEach((element,index) =>{
+             element.innerText=`Actor Name:${actorsArray[index].profession}`;
+        });
+      </script>
+</body>
+</html>

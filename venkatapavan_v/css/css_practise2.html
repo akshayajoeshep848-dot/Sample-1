@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 70vh;
+            width:100vh;
+            margin: 5px;
+        }
+
+        .row1{
+            height: 10%;
+            width: 107%;
+            background-color: blueviolet;
+            text-align: center;
+            font-size: 30px;
+            padding: 10px;
+            border: 8px solid black;
+            color: white;
+        }
+        .main2{
+            display: flex;
+            height:90%;
+            width: 122%;
+            gap: 5px;
+        }
+        .row2{
+            height: 93%;
+            width:20%;
+            margin: 10px;
+              margin-left: 10px;
+            background-color: aqua;
+            border:8px solid black; 
+            font-size: 30px;
+           place-content: center;
+            text-align: center;
+            color: white;
+        }
+        .main3{
+
+          height: 90%;
+           width:100%;
+        }
+    .main4{
+          display: flex;
+     /* flex-direction: column;
+    gap: 5px; */
+    } 
+    .main3{
+        
+        flex-direction: column;
+        gap:70px;
+    }
+    /* .row3,.main4{
+        flex:1;
+        flex-direction: column;
+    } */
+    .row5,.row6{
+        
+        flex: 1;
+        flex-direction: column;
+    }
+    .row7{
+             height: 10%;
+            background-color: blueviolet;
+            text-align: center;
+            font-size: 30px;
+            padding: 10px;
+            border: 8px solid black;
+            width: 107%;
+            color: white;
+    }
+    .row3{
+        background-color: blue;
+        height: 45%;
+        width: 89%;
+        font-size: 30px ;
+        text-align: center;
+        margin: 10px;
+        gap:10px;
+        margin-left: -3px;
+         border: 8px solid black;
+         place-content: center;
+         color: white;
+
+    }
+    .row5,.row6{
+        flex: 2;
+        border: 8px solid black;
+        flex-direction: column;
+        background-color: aqua;
+        
+    }
+    .main4{
+           display: flex;
+    gap: 10px;
+    height: 55%;
+    width: 90%;
+
+    margin-right: 20px;
+    }
+    .row5,.row6{
+            flex: 1;
+    background-color: blue;
+    font-size: 30px;
+    text-align: center;
+    place-content: center;
+    color: white;
+
+   }
+    
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="row1">header</div>
+        <div class="main2">
+            <div class="row2">sidebar</div>
+            <div class="main3">
+                <div class="row3">Content-1</div>
+                <div class="main4">
+                    <div class="row5">Content-2</div>
+                    <div class="row6">Content-3</div>
+                </div>
+            </div>
+        </div>
+<div class="row7">footer</div>
+    </div>
+</body>
+</html>

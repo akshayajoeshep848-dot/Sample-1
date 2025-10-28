@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            display: flex;
+            background-color: aqua;
+           /* flex-direction: column;*/
+            gap:10px; 
+            padding: 20px
+            
+        }
+        .flex-item{
+            background-color: brown;
+            color: black;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+            place-content: center;
+            flex-basis: 200px;
+        }
+        .flex-item-1{
+            /*flex-basis: 300px;
+            flex-grow: 1;
+            flex-shrink:1*/
+            flex:1 1 300px;
+        }
+           .flex-item-2{
+           /* flex-basis: 300px;
+            flex-grow: 2;
+            flex-shrink: 2;*/
+            flex:2 1 400px;
+        }  
+         .flex-item-3{
+           /* flex-basis: 300px;
+            flex-grow: 3;
+            flex-shrink: 3;*/
+            flex: 3 1 500px;
+        }
+    </style>
+
+</head>
+<body>
+    
+ <h1>Flex Item Properties</h1>
+<div class ="flex-container">
+    <div class ="flex-item flex-item-1">item-1</div>
+       <div class ="flex-item flex-item-2">item-2</div>
+          <div class ="flex-item flex-item-3">item-3</div>
+</div>
+</body>
+</html>

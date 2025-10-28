@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS EVENT LISTENER</h1>
+    <button id="button">click Me</button> 
+    <input id="input" type="text" name="firstname">
+    <script>
+           let button=document.getElementById("button");
+           button.addEventlistner("click",onclick)
+           function onclick(event){
+            console.log(`Button is clicked`);
+           }
+
+           let input=document.getElementById("input");
+           let formObject={};
+           button.addEventListener("click",(event) => {
+            formObject[`{input.name}]={input.value}`]
+           });
+    </script>
+</body>
+</html>

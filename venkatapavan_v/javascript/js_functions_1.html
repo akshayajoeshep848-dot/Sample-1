@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function greet(name){
+        //     console.log(`hello,${name}!`);
+        //     greet("pavan");
+        //     greet("venkat");
+        // }
+
+
+
+        // write a function to display if user is eligible to vote based on age
+        // function vote(age){
+            
+        //     if (age<=18 ){
+        //         console.log("eligible to vote");
+        //     }else {
+        //         console.log("not eligible to vote");
+        //     }
+        // }
+        // vote(18);
+        
+
+        // write a function to print full name
+    //     function fullname(first_name,middle_name){
+    //         console.log(` your full name is:${first_name} ${middle_name}`)
+    //     }
+    //  fullname("pavan","vankayalapati");
+
+
+
+    // write a function to print 1 to 10
+// function printPositiveIntegers(positiveintegers){
+//     let i =1;
+//     while(i<=positiveintegers){
+//         console.log(`${i}`);
+//         i++;
+//     }
+// }
+// printPositiveIntegers(25);
+
+
+
+
+
+// //write  a function to print n factorial
+// function printfactorials(positiveinteger){
+//     let factorial=1;
+//     for (i=1;i<=positiveinteger;i++){
+//     factorial *=i;
+//     }
+//     console.log(`factorial of ${positiveinteger} is ${factorial}`)
+
+// }
+// printfactorials(3);
+
+
+
+
+// // write a function to add two numbers bu using return statements
+// function addTwoNumbers(num1,num2){
+//     let sum=num1+num2;
+//     return sum;
+// }
+
+// console.log(addTwoNumbers(10,20));
+
+
+
+ // write a function to multipy two numbers bu using return statements
+// function multipliedTwonumbers(num1,num2,num3){
+//     let multipy=num1*num2*num3;
+//     return multipy;
+// }
+
+// console.log(multipliedTwonumbers(10,20,30));
+
+
+
+// write a function to print boolean value
+// function booleanvalue(a,b){
+//     return a>b;
+// }
+// console.log(booleanvalue(20,10))
+//another method
+// function booleanvalue(a,b){
+//     if (a>b){
+//         console.log(true);
+//     }else{
+//      console.log(false)   
+//     }
+// }
+// booleanvalue(20,10);
+
+
+// write a function expression for multiplication of two numbers
+// let multiply=function(a,b){
+//     return a*b
+// }
+// let product=multiply(20,40);
+// console.log(product)
+
+
+
+
+// function recursion
+// let factorial = function fac(n){
+//     if(n==1 || n==0){
+//         return 1;
+//     }else if (n>1){
+//         return n * fac(n-1);
+//     }else{
+//         return undefined;
+//     }
+// };
+
+// console.log(factorial(5));
+
+
+
+//  write a function to print n-th fibonacci number
+let nthFibNumber = function fib(n){
+    let nthValue=0;
+    if(n <=0){
+        return;
+    }else if(n==1){
+        return 0;
+
+    }else if(n==2){
+         return 1;
+    } else{
+        return fib(n-1)+fib(n-2);
+    }
+};
+console.log(nthFibNumber(10))
+
+
+    </script>
+</body>
+</html>

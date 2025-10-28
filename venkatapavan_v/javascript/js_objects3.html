@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+            font-weight: bolder;
+            background-color: blueviolet;
+            border-radius: 10PX;
+            
+        }
+    </style>
+</head>
+<body>
+    <button  onclick="console.log(student.greet())">STUDENT</button>
+<script>
+    const student={
+        name:"Pavan",
+        age:21,
+        QUalification:"CSE",
+        place:"Karamchedu",
+        Roll :"Y21CSM053",
+        Passed_out_year: 2025,
+        greet:function() {
+        return ` The student name is ${this.name}  and his age is ${this.age}  ,his Qualification is ${this.QUalification} and his roll number is ${this.Roll} and he is from ${this.place}.`
+        },
+    };
+    console.log(student.greet())
+</script>    
+</body>
+</html>

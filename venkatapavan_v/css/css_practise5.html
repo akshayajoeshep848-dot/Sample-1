@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex display</title>
+    <style>
+        .main1{
+            height: 430px;
+            width: 700px;
+            background-color: darkslategray;
+              padding-top: 30px;
+              display: flex;
+            
+        }
+        .row1{
+            height: 400px;
+            width: 350px;
+            background-color: aquamarine;
+            margin-Left: 30px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .row2{
+            height: 100px;
+            width:350px;
+            background-color: aquamarine;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .main3{
+            display: flex;
+        }
+        .row3,.row4{
+            flex: 1;
+            height: 150px;
+            width: 90px;
+            background-color: aquamarine;
+            margin-left: 20px;
+            margin-top: 20px;
+            
+
+        }
+         .row4{
+            margin-right: 20px;
+        } 
+        .row5{
+        height: 110px;
+            width:350px;
+            background-color: aquamarine;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+            
+<body>
+    <div class="main1">
+        <div class="row1">Flexbox</div>
+        <div class="main2">
+        <div class="row2"></div>
+        <div class="main3">
+            <div class="row3"></div>
+            <div class="row4"></div>
+        </div>
+         <div class="row5"></div>
+        </div>
+    </div>
+
+</body>
+</html>

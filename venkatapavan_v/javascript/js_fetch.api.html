@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: rgb(220, 222, 225);
+            width: 80vw;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 10px brown;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .dog-container {
+            border: 1px solid rgb(211, 0, 0);
+            padding: 10px;
+        }
+
+        .dogbreedDescription {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>dog types</h1>
+    <div class="container"></div>
+    <script>
+        let data = fetch("https://dogapi.dog/api/v2/breeds")
+        
+            .then((data) => data.json())
+            .then((value) => {
+                let array = value.data;
+                console.log(array);
+
+
+                let container = document.querySelector(".container");
+                array.forEach((dog) => {
+                    let dogContainer = document.createElement("div");
+                    let dogbreed = document.createElement("h3");
+                    let dogbreedDescription = document.createElement("p");
+
+                    //set classes
+                    dogContainer.classList.add("dog-container");
+                    dogbreed.classList.add("dog-breed");
+                    dogbreedDescription.classList.add("dog-description");
+
+                    //assign values
+
+                    dogbreed.textContent = dog.attributes.name;
+                    dogbreedDescription.textContent = dog.attributes.description;
+
+
+                    dogContainer.append(dogbreed);
+                    dogContainer.append(dogbreedDescription);
+                    container.appendChild(dogContainer);
+                });
+            })
+            .catch((error) => console.log(error))
+
+    </script>
+
+</body>
+
+
+</html>

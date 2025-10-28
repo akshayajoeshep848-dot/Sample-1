@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div class="item child-node1">Item1</div>
+    <div class="item child-node2">Item2</div>
+    <div class="item child-node3">Item3</div>
+    <div class="item child-node4">Item4</div>
+    <div class="item child-node5">Item5</div>
+</div>
+<button onclick="getitems(itemarray,vegetables)">Get Vegetables</button>
+<button onclick="getitems(itemarray,fruits)">Get Fruits</button>
+    <script>
+        // let fruits=["apple","Banana","kiwi","orange","Mango"];
+        // let fruitsCollection=document.getElementsByClassName("item");
+        // console.log(fruitsCollection);
+        // let fruitsArray=Array.from(fruitsCollection);
+        // console.log(fruitsArray);
+        // fruitsArray.forEach(
+        //     (htmlElement,index) =>(htmlElement.innerText=fruits[index])
+        // );
+
+        // let vegetables=["Capsicum","Bell pepper","Cucumber","Carrot","Beetroot"];
+        // let vegetablescollection=document.getElementsByClassName("item");
+        // let veg=Array.from(vegetablescollection);
+        // function getFruits(veg){
+        // veg.forEach(
+        //     (pavan,index)=>(pavan.innerText=vegetables[index])
+        // );
+        // }
+
+         let fruits=["apple","Banana","kiwi","orange","Mango"];
+         let vegetables=["Capsicum","Bell pepper","Cucumber","Carrot","Beetroot"];
+         let itemcollection=document.getElementsByClassName("item");
+         let itemarray=Array.from(itemcollection);
+         function getItems(arr1,arr2){
+            arr1.forEach((e,i)=>{
+                console.log(e.innerText);
+                e.innerText=arr2[i];
+                console.log(e.innerText);
+            });
+         }
+
+    </script>
+</body>]
+</html>
+]
+

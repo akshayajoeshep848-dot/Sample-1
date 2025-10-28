@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css position absolute</title>
+    <style>
+        .grid-container{
+            position: relative;
+            background-color: blue;
+            height: 50vh; 
+        }
+        .grid-item{
+            height: 100px;
+            width: 100px;
+        }
+        .grid-item1{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: aqua;
+            z-index: 1;
+        }
+        .grid-item2{
+            position: absolute;
+            right: 0px;
+            top:0px;
+            background-color:red;
+        }
+        .grid-item3{
+            position: fixed;
+            background-color: brown;
+            top: 40px;
+            right: 40px;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item1">Item1</div>
+        <div class="grid-item grid-item2">Item2</div>
+        <div class="grid-item grid-item3">Item3</div>
+    </div>
+</body>
+</html>

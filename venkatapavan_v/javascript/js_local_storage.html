@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+
+    Local Storage:
+    -> Key-Values:Data is stored as string key-values pairs.
+    ->Persistent:Data remains in the browser even after the browser is closed and reopened.
+    ->origin-scoped:Data is tied to the domain that created it.
+    ->Limited Size:Typically 5MB to 10MB per origin-scoped
+
+
+    **When to Use Local Storage?
+    ->User Preferences:Storing theme settings,language preferences,or UI layouts.
+    ->Offline Data:Caching small amount of data for offline access
+    ->Remembering User Input:Persisting form data across page reloads.
+    ->Client-Side Caching:Storing frequently accessed,non-sensitive data to reduce network requests. 
+    <script>
+        // console.log(localStorage)
+
+        //for one name
+        let userName="Pavan Chowdhary";
+        localStorage.setItem("userName",userName);// local storage ki name estunam
+        console.log(localStorage);
+
+        let user = localStorage.getItem("userName");// local storage nunchi name ni thechukuntunam
+        console.log(user);
+
+        localStorage.removeItem("userName");// remove pavan chowdhary from local storage
+        console.log(localStorage);
+
+
+        // if we have multiple names
+        let arr=[1,2,3,4,5];
+        localStorage.setItem("array",JSON.stringify(arr));
+        console.log(localStorage);
+        let returnArr=JSON.parse(localStorage.getItem("array"));
+        console.log(returnArr);
+
+
+        //set object
+        let student={
+            name:"Vasu",
+            age:35,
+            college:"Chalapathi"
+        };
+        localStorage.setItem("Student",JSON.stringify(student));
+        console.log(localStorage);
+        let returnStudent=localStorage.getItem("student");
+        console.log(JSON.parse(returnStudent));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let person={
+        //     name:"NTR",
+        //     age:42,
+        //     location:"Hyderabad",
+        //     eat:() =>console.log(`${this.name} is eating`),
+        //     walk:function(){
+        //         console.log(`${this.name} is walking`)
+        //     }
+            
+        // };
+        // person.eat();
+        // person.walk();
+
+
+
+        //1.Default binding method: e method loo manam madhyalo em context evvanappudu,for this keyword ki
+    //   function greet(){
+    //     console.log(this)// window(browser) or global(Node)
+    //   } 
+    //   greet()
+        //in strict mode:undefined
+        //no context-this refers to window object
+
+
+
+
+        //2.implict binding:
+        // let person={
+        //     name:"NTR",
+        //     age:42,
+        //     location:"Hyderabad",
+        //     walk(){
+        //         //this is implicit binding of "this"
+        //         console.log(`${this.name} is walking`)
+        //     },
+        //     eat:function(){
+        //         //this is implicit binding of "this"
+        //         console.log(`${this.name} is eating`)
+        //     },
+        //     sleep:() =>{
+        //         //this is undefined
+        //         console.log(`${this.name} is sleeping`)
+        //     }
+            
+        // };
+        // person.walk();
+        // person.eat();
+        // person.sleep();
+       
+
+
+        //3.explicit binding:
+        function greet(){
+            console.log(`Hello,${this.name}`);
+        }
+        const alice={name:"pavan"};
+        greet.call(alice); // here we use "call()" to call the functon
+    </script>
+</body>
+</html>

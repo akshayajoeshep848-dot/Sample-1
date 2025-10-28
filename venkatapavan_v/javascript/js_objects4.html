@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+            font-weight: bolder;
+            background-color: blueviolet;
+            border-radius: 10PX;
+            
+        }
+    </style>
+</head>
+<body>
+    <button  onclick="console.log(employee.greed())">Employee</button>
+<script>
+   const employee={
+    name : "Pavan",
+    age:25,
+    Company :"TCS",
+    Place:"Hyderabad",
+    id:"TCS12667",
+    Role:"Software Developer",
+    greed:function(){
+        return ` The employee name is ${this.name} and his age is ${this.age} and he works in ${this.Company} , he lives in${this.Place} his id is ${this.id} and his role is ${this.Role} `
+    },
+   };
+   console.log(employee.greed())
+</script>    
+</body>
+</html>

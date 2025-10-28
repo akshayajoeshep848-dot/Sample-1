@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        // class() loo types
+        //1.the constructor()method:
+        // class person{
+        //     constructor(name,age){
+        //         this.name=name;
+        //         this.age=age;
+        //     }
+        //     greet(){
+        //         console.log( `Hi,my name is ${this.name}`);
+        //     }
+        // }
+        // let Person=new person("pavan",21);// we use "new" keyword to call a class()
+        // console.log(Person.name);
+        // console.log(Person.age);
+        // Person.greet();
+
+        // let Person2=new person("kalyan",22);
+        // Person2.greet();
+
+
+
+        class car{
+            constructor(make,model){
+                this.make=make;
+                this.model=model;
+            }
+        }
+        let Cars=new car(" Mercedes benz",20);
+        console.log(Cars.make);
+        console.log(Cars.model);
+
+
+       class Dog{
+        constructor(name,breed="mutt"){
+            this.name=name;
+            this.breed=breed;
+        }
+        
+       }
+       const dog1=new Dog("max","mutt");
+       console.log(dog1.name)
+       console.log(dog1.breed)
+
+
+       
+       class vehicle{
+        constructor(name,cost){
+            this.name=name;
+            this.cost=cost;
+        }
+       }
+       class motorcycle extends vehicle{
+        constructor(name,cost,year){
+            super(name,cost);
+            this.year=year;
+        }
+       }
+       let Motorcycle=new motorcycle("car","1 crore",2019);
+       console.log(Motorcycle.name);
+       console.log(Motorcycle.cost);
+       console.log(Motorcycle.year);
+       
+
+    </script>
+</body>
+</html>

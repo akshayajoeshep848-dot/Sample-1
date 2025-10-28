@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item{
+        background-color: aqua;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 20px;
+        width: 200px;
+        font-size: 20px;
+        align-items: center;
+        }
+        span{
+            background-color: blue;
+            padding: 10px;
+        
+        }
+        .item{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+        <h2 id="head-1">PAVAN</h2>
+<div class="container">
+    <div class="item child-node1">Item1</div>
+    <div class="item child-node2">Item2</div>
+    <div class="item child-node3">Item3</div>
+    <div class="item child-node4">Item4</div>
+    <div class="item child-node5">Item5</div>
+</div>
+    <script>
+    //      let head = document.getElementById("head-1"); // head1 ane variable pakkana innertext or innerHtml ivvakapothe object kanipisthadhi console lo.
+    //    console.log(head.innerText);
+    //     head.innerText = "Hello";
+
+    // let list=document.getElementsByClassName("item");
+    // let listarray=Array.from(list);
+    // listarray.forEach((element) =>(element.style.backgroundColor="aqua"));
+
+    let fruits=[
+        {
+            name:"Apple",
+            quantity:10,
+        },
+        {
+            name:"mango",
+            quantity:15,
+        },
+        {
+            name:"kiwis",
+            quantity:20,
+        },
+        {
+            name:"pears",
+            quantity:18,
+        },
+        {
+            name:"leechi",
+            quantity:16,
+        },
+    ];
+
+    let listitems=document.querySelectorAll(".item");
+    listitems.forEach((element,index) =>{
+        element.innerHTML=` ${fruits[index].name} <span>${fruits[index].quantity}` 
+        })
+    </script>
+</body>
+</html>

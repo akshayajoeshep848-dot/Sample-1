@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Objects</title>
+</head>
+<body>
+    <h1>JS Objects</h1>
+    <button onclick="dog.walk()">Walk</button>
+    <script>
+        const person = {
+            name:'pavan',
+            age :21,
+            isStudent:true,
+            greet:function(){
+                return ` Hello,my name is ${this.name}`;
+            }
+
+        };
+
+        // how to access object
+    // 1.dot notation:
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person.isStudent)
+    console.log(person.greet())
+
+    // 2.[] bracket notation:
+    console.log(person["name"]);
+    console.log(person["age"]);
+    console.log(person["isStudent"]);
+    console.log(person["greet"]())
+
+
+
+    // create an object called dog
+    // name,breed,color,age,gender,petID
+    const dog={
+        name:"Leo",
+        breed: "German sherpard" ,
+        color:"black and white",
+        age:6,
+        gender:"Male",
+        petID:123567,
+        bark:function(){
+            return `${this.name} is barking`;
+        },
+        walk:function(){
+            console.log(`${this.name} is walking`);
+        },
+                run:function(){
+            return `${this.name} is running`;
+        },
+                shakehand:function(){
+            return `${this.name} is shaking hand`;
+        },
+                eat:function(){
+            return `${this.name} is eating`;
+        },
+                sleep:function(){
+            return `${this.name} is sleeping`;
+        },
+                rollover:function(){
+            return `${this.name} is rolling over`;
+        },
+                smell:function(){
+            return `${this.name} is smelling`;
+        },
+                sit:function(){
+            return `${this.name} is sat`;
+        },
+                liedown:function(){
+            return `${this.name} is lied down`;
+        },
+                bite:function(person){
+            return `${this.name} is biting ${person}`;
+        }
+
+      }
+// dot notation:
+console.log(dog.name);
+console.log(dog.breed);
+console.log(dog.color);
+console.log(dog.age);
+console.log(dog.gender);
+console.log(dog.petID);
+console.log(dog.bark())
+console.log(dog.walk())
+console.log(dog.bite(person.name))
+
+
+// create object address
+const address={
+    address_line1 : "MIG-87",
+    address_line2 : "First floor,Road No.1",
+    address_line3: "KPHB Phase-1",
+    landmark:"Beside AED Hospital",
+    city : "Hyderabad",
+    state : "Telangana",
+    pincode :500072,
+    getAddress:function(){
+        console.log(`${this.address_line1},  ${this.address_line2},  ${this.address_line3} , ${this.landmark} ,${this.city}, ${this.state}, ${this.pincode}`)
+    }
+
+}
+console.log(address.getAddress())
+
+        
+    </script>
+</body>
+</html>

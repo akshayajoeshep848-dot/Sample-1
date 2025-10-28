@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            height: 100px;
+            background-color: bisque;
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+            /* place-content: center; */
+        }
+    </style>
+
+</head>
+<body>
+<div id="container"></div>
+    <!-- <h1>Async Function</h1>
+    An async function is a function that implicitly returns a promise,this syntax is a syntatic sugar over promises,designed to improve readability and simplify changing asynchronous operation.
+<br>
+<br>
+    **The await keyword**:
+    The await keyword is only valid inside async functions and is used to pause the execution of the function until the promise it awaits resolves or rejects.It allows writing asynchronous code that looks synchronous. -->
+     
+
+   <!-- **what is an api?**
+    An API(Applicatipn Programming Interface),it is a set of rules or protocols that allows different software applications to communicate with each other
+
+    TYPES OF API:
+    REST(Representational State transfer):It uses HTTP Protocol
+    SOAP(simple object access protocol)
+    GraphQL
+
+
+    HTTP Methods:
+    Method          Purpose
+    GET       ---    Retrieve data
+    POST      ---    Create new data
+    PUT       ---    Update existing data
+    DELETE    ---    Remove data -->
+
+
+    **API Request and Response Structure**:
+    Request: An API request typically consists of
+    ->URL(End point):The Address where then API is accessed
+    ->Method:The HTTP method (GET,POST,etc)
+    ->Headers:Metadata such as authentication tokens or content type
+    ->Body:Data sent to the server
+     <script>
+        // async function hello(){
+        //     return "Hello, Async!";
+        // }
+        // hello().then((value)=> console.log(value));
+        // hello().then(console.log);  // edhi shortcut pai dhaniki
+
+
+
+
+    //    async function fetchdata(url){
+    //     let response=await fetch(url);
+    //     let data=await response.json();//javascript object notation
+    //     console.log(data)
+    //     return data;
+    //    }
+       
+    //    fetchdata("https://jsonplaceholder.typicode.com/users/1").then((value)=>{
+    //     let pavan=document.getElementById("container");
+    //     let name=document.createElement("p");
+    //     let email=document.createElement("p");
+    //     let address=document.createElement("p");
+
+    //     name.classList.add("name");
+    //     email.classList.add("email");
+    //     address.classList.add("address");
+
+    //     name.textContent=`Name:${value.name}`;
+    //     email.textContent=`E-mail:${value.email}`;
+    //     address.textContent=`Address:${value.address.street}`;
+
+    //     pavan.appendChild(name);
+    //     pavan.appendChild(email);
+    //     pavan.appendChild(address);
+
+    //    })
+
+
+
+       let options={
+        method:"GET",
+        headers:{
+            "Content-Type":"application/json",
+        },
+        body:{}
+       };
+
+       let postOptions={
+        method:"POST",
+        headers:{
+          "Content-Type":"application/json",
+          "Authorization":"Bearer token_name"
+  
+        },
+        body:{}
+       }
+
+    
+
+        async function fetchdata(url,options){
+        let response=await fetch(url);
+        let data=await response.json();//javascript object notation
+        console.log(data)
+        return data;
+       }
+    </script> 
+</body>
+</html>

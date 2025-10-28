@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Listners</title>
+    <style>
+        .head {
+            background-color: bisque;
+            border: 2px solid red;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .head-1 {
+            border: 5px ridge grey;
+            padding: 20px;
+            background-color: yellow;
+        }
+        .para-1{
+            background-color: aqua;
+            border-radius: 10px;
+            padding: 10px;
+            border: 3px solid greenyellow;
+            box-shadow: 2px 2px 2px 2px red;
+        }
+        .para{
+           background-color: blue; 
+           border-radius: 20px;
+           padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="Submit" id="form">
+    <h1 id="head">JS Event Listners</h1>
+    <p id="para">This is para</p>
+    <input type="text" name="firstname" id="firstname">
+    <input type="text" name="lastname" id="lastname">
+    <button id="add">Add</button>
+    </form>
+    <script>
+        let head = document.getElementById("head");
+        let para=document.getElementById("para");
+        let firstname = document.getElementById("firstname")
+        let lastname = document.getElementById('lastname');
+        let form = document.getElementById("form")
+        let add = document.getElementById("add");
+        let obj = {};
+        //Mouse events
+        add.addEventListener("click",(event) =>{
+            obj[firstname.name]=firstname.value
+            obj[lastname.name]=lastname.value
+            console.log(obj)
+        })
+        
+        head.addEventListener("mouseover" , (event) => {
+            head.innerText = "pavan"
+            head.classList = "head"
+        })
+        head.addEventListener("mouseout", (event) => {
+            head.innerText = "venkata"
+            head.classList = "head-1"
+        })  
+        para.addEventListener("mouseup",(event) =>{
+            para.innerText="Vankayalapati"
+            para.classList="para-1"
+        })
+        para.addEventListener("mousedown",(event) =>{
+            para.innerText="Vasu"
+            para.classList="para"
+        })
+        //  keyboard Events
+        firstname.addEventListener("keydown", (event) => {
+            console.log(event.key, event.code)
+        })
+        lastname.addEventListener("keyup", (event) => {
+            console.log(event.key, event.code)
+        })
+        // lastname.addEventListener("keypress", (event) => {
+            //     console.log(event.key, event.code)
+            // })
+            
+            // form Events
+            form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            obj[firstname.name] = firstname.value
+            obj[lastname.name] = lastname.value
+            console.log(obj);
+            obj = {};
+            console.log("submit Succesfully")
+            form.reset();
+            console.log(obj)
+        })
+    </script>
+</body>
+</html>

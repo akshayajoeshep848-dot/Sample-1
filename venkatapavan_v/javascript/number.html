@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Numbers</title>
+</head>
+<body>
+    <h1>JS Numbers</h1>
+    <script>
+        let age1 = 45;
+        let age2 = 45.5;
+        let infinity = 1/0;
+        let neginfinity = -1/0;
+        let age3 = "fourty five";
+        let str = age1 + age3;
+        let notAnumber = age1 - age3;
+        let bigNumber= 1e40;
+        
+ 
+        let crores = 10_00_00_000.0;
+        let billion = 1_000_000_000;
+
+        let sum = crores + billion;
+        console.log("sum:", sum);
+
+    
+        console.log("bigNumber:", bigNumber)
+        console.log("not A number:",notAnumber);
+        console.log(typeof notAnumber);
+        console.log("age1:",typeof age1,"\nvalue:",age1);
+        console.log("age2:",typeof age2,"value:",age2);
+        console.log(infinity);
+        console.log(neginfinity);
+        console.log(str);
+    </script>
+</body>
+
+</html>

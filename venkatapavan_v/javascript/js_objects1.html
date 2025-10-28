@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+            font-weight: bolder;
+            color: aqua;
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <h1>Team Members</h1>
+    <button onclick="console.log(team.project_Manager.work())">Project Manager</button><br><br>
+    <button onclick="console.log(team.Team_leader.work())">Team Leader</button><br><br>
+    <button onclick="console.log(team.Senior_developer.work())">Senior Developer</button><br><br>
+    <button onclick="console.log(team.Junior_developer.work())">Junior Developer</button><br><br>
+    <button onclick="console.log(team.Bussiness_Analyst.work())">Bussiness Analyst</button>
+    <script>
+       const team={
+         project_Manager:{name:"Manoj", 
+         Age:45,
+         id:25678,
+          role:"Project Manager",
+          work:function(){
+            return` ${this.name} is a project Manager and his age is${this.Age} and his id is ${this.id}`
+          }
+        },
+         Team_leader:{name:"Pavan", 
+         Age:25,
+         id:2569,
+          role:"Team Leader",
+          work:function(){
+            return` ${this.name} is Team leader and his age is${this.Age} and his id is ${this.id}`
+          }
+        },
+         Senior_developer:{name:"Hussain", 
+         Age:35,
+         id:256978,
+          role:"Senior Developer",
+          work:function(){
+            return` ${this.name} is Senior Developer and his age is${this.Age} and his id is ${this.id}`
+          }
+        },
+        Junior_developer:{name:"Ganga", 
+         Age:25,
+         id:12378,
+          role:"Junior Developer",
+          work:function(){
+            return` ${this.name} is junior Developer and his age is${this.Age} and his id is ${this.id}`
+          }
+
+        },
+         Bussiness_Analyst:{name:"Venkat", 
+         Age:29,
+         id:12378,
+          role:"Bussiness Analyst",
+          work:function(){
+            return` ${this.name} is Business Analyst and his age is${this.Age} and his id is ${this.id}`
+          }
+
+        },
+
+       };
+       console.log(team.project_Manager.work())
+        console.log(team.Team_leader.work())
+         console.log(team.Senior_developer.work())
+         console.log(team.Junior_developer.work())
+ console.log(team.Bussiness_Analyst.work())
+    </script>
+</body>
+</html>

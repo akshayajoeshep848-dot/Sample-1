@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(16,90px);
+            grid-template-rows: 30px repeat(5,50px);
+            gap: 10px;
+        }
+        .grid-item{
+            color: black;
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.534);
+            
+        }
+        .middle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .grid-item78 {
+            height: 25px;
+        }
+        .grid-item79 {
+            height: 25px;
+        }
+        .grid-item1{
+               grid-column-start:1 ;
+            grid-column-end: 2;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+          .grid-item2{
+             grid-column-start:2 ;
+            grid-column-end: 3;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item3{
+               grid-column-start:3 ;
+            grid-column-end: 4;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item4{
+               grid-column-start:4 ;
+            grid-column-end: 5;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item5{
+               grid-column-start:5;
+            grid-column-end: 6;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item6{
+               grid-column-start:6 ;
+            grid-column-end: 7;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item7{
+               grid-column-start:7 ;
+            grid-column-end: 8;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item8{
+               grid-column-start:8 ;
+            grid-column-end: 9;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item9{
+               grid-column-start:9 ;
+            grid-column-end: 10;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item10{
+               grid-column-start:10;
+            grid-column-end: 11;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item11{
+               grid-column-start:11 ;
+            grid-column-end: 12;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item12{
+               grid-column-start:12 ;
+            grid-column-end: 13;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item13{
+               grid-column-start:13 ;
+            grid-column-end: 14;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item14{
+               grid-column-start:14;
+            grid-column-end: 15;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item15{
+               grid-column-start:15 ;
+            grid-column-end: 16;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item16{
+               grid-column-start:16 ;
+            grid-column-end: 17;
+            grid-row-start:1 ;
+            grid-row-end:2 ;
+        }
+        .grid-item17{
+               grid-column-start:1 ;
+            grid-column-end: 2;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item18{
+               grid-column-start:2 ;
+            grid-column-end: 3;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item19{
+               grid-column-start:3 ;
+            grid-column-end: 4;
+            grid-row-start:2 ;
+            grid-row-end:3;
+        }
+        .grid-item20{
+               grid-column-start:4 ;
+            grid-column-end: 5;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item21{
+               grid-column-start:5;
+            grid-column-end: 6;
+            grid-row-start:2 ;
+            grid-row-end:3;
+        }
+        .grid-item22{
+               grid-column-start:6 ;
+            grid-column-end: 7;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item23{
+               grid-column-start:7 ;
+            grid-column-end: 8;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item24{
+               grid-column-start:8 ;
+            grid-column-end: 9;
+            grid-row-start:2 ;
+            grid-row-end:3;
+        }
+        .grid-item25{
+               grid-column-start:9;
+            grid-column-end: 10;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item26{
+               grid-column-start:10 ;
+            grid-column-end: 11;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item27{
+               grid-column-start:11 ;
+            grid-column-end:12;
+            grid-row-start:2 ;
+            grid-row-end:3;
+        }
+        .grid-item28{
+               grid-column-start:12 ;
+            grid-column-end: 13;
+            grid-row-start:2 ;
+            grid-row-end:3;
+        }
+        .grid-item29{
+               grid-column-start:13;
+            grid-column-end: 14;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item30{
+               grid-column-start:14;
+            grid-column-end: 17;
+            grid-row-start:2 ;
+            grid-row-end:3 ;
+        }
+        .grid-item31{
+               grid-column-start:1 ;
+            grid-column-end: 4;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item32{
+               grid-column-start:4 ;
+            grid-column-end: 5;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item33{
+               grid-column-start:5 ;
+            grid-column-end: 6;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item34{
+               grid-column-start:6 ;
+            grid-column-end: 7;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item35{
+               grid-column-start:7 ;
+            grid-column-end: 8;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item36{
+               grid-column-start:8 ;
+            grid-column-end: 9;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item37{
+               grid-column-start:9 ;
+            grid-column-end: 10;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        } 
+        .grid-item38{
+               grid-column-start:10 ;
+            grid-column-end: 11;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item39{
+               grid-column-start:11;
+            grid-column-end: 12;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item40{
+               grid-column-start:12 ;
+            grid-column-end: 13;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item41{
+               grid-column-start:13 ;
+            grid-column-end: 14;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item42{
+               grid-column-start:14 ;
+            grid-column-end: 15;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item43{
+               grid-column-start:15 ;
+            grid-column-end: 16;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item44{
+               grid-column-start:16 ;
+            grid-column-end: 17;
+            grid-row-start:3 ;
+            grid-row-end:4 ;
+        }
+         .grid-item45{
+               grid-column-start:1 ;
+            grid-column-end: 3;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item46{
+               grid-column-start:3 ;
+            grid-column-end: 4;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item47{
+               grid-column-start:4 ;
+            grid-column-end: 5;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item48{
+               grid-column-start:5 ;
+            grid-column-end: 6;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item49{
+               grid-column-start:6 ;
+            grid-column-end: 7;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item50{
+               grid-column-start:7;
+            grid-column-end: 8;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item51{
+               grid-column-start:8 ;
+            grid-column-end: 9;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item52{
+               grid-column-start:9 ;
+            grid-column-end: 10;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item53{
+               grid-column-start:10 ;
+            grid-column-end: 11;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item54{
+               grid-column-start:11 ;
+            grid-column-end: 12;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item55{
+               grid-column-start:12 ;
+            grid-column-end: 13;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item56{
+               grid-column-start:13 ;
+            grid-column-end: 14;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item57{
+               grid-column-start:14 ;
+            grid-column-end: 17;
+            grid-row-start:4 ;
+            grid-row-end:5 ;
+        }
+        .grid-item58{
+               grid-column-start:1 ;
+            grid-column-end: 3;
+            grid-row-start:5 ;
+            grid-row-end:6;
+        }
+        .grid-item59{
+               grid-column-start:3 ;
+            grid-column-end: 4;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item60{
+               grid-column-start:4 ;
+            grid-column-end: 5;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item61{
+               grid-column-start:5 ;
+            grid-column-end: 6;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item62{
+               grid-column-start:6 ;
+            grid-column-end: 7;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item63{
+               grid-column-start:7 ;
+            grid-column-end: 8;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item64{
+               grid-column-start:8 ;
+            grid-column-end: 9;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item65{
+               grid-column-start:9 ;
+            grid-column-end: 10;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item66{
+               grid-column-start:10 ;
+            grid-column-end: 11;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item67{
+               grid-column-start:11 ;
+            grid-column-end: 12;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item68{
+               grid-column-start:12;
+            grid-column-end: 13;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item69{
+               grid-column-start:13 ;
+            grid-column-end: 17;
+            grid-row-start:5 ;
+            grid-row-end:6 ;
+        }
+        .grid-item70{
+               grid-column-start:1;
+            grid-column-end: 2;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+        .grid-item71{
+               grid-column-start:2 ;
+            grid-column-end: 3;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+        .grid-item72{
+               grid-column-start:3 ;
+            grid-column-end: 4;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+        .grid-item73{
+               grid-column-start:4 ;
+            grid-column-end: 5;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+        .grid-item74{
+               grid-column-start:5;
+            grid-column-end: 12;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+        .grid-item75{
+               grid-column-start:12 ;
+            grid-column-end: 13;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+        .grid-item76{
+               grid-column-start:13 ;
+            grid-column-end: 14;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+        .grid-item77{
+               grid-column-start:14 ;
+            grid-column-end: 15;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+        /* .grid-item78{
+               grid-column-start:15 ;
+            grid-column-end: 16;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        } */
+        .grid-item80{
+               grid-column-start:16 ;
+            grid-column-end: 17;
+            grid-row-start:6 ;
+            grid-row-end:7 ;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item1">esc</div>
+        <div class="grid-item grid-item2">f1</div>
+        <div class="grid-item grid-item3">f2</div>
+        <div class="grid-item grid-item4">f3</div>
+        <div class="grid-item grid-item5">f4</div>
+        <div class="grid-item grid-item6">f5</div>
+        <div class="grid-item grid-item7">f6</div>
+        <div class="grid-item grid-item8">f7</div>
+        <div class="grid-item grid-item9">f8</div>
+        <div class="grid-item grid-item10">f9</div>
+        <div class="grid-item grid-item11">f10</div>
+        <div class="grid-item grid-item12">f11</div>
+        <div class="grid-item grid-item13">f12</div>
+        <div class="grid-item grid-item14">prt src</div>
+        <div class="grid-item grid-item15">insert</div>
+        <div class="grid-item grid-item16">delete</div>
+        <div class="grid-item grid-item17">plus</div>
+        <div class="grid-item grid-item18">1</div>
+        <div class="grid-item grid-item19">2</div>
+        <div class="grid-item grid-item20">3</div>
+        <div class="grid-item grid-item21">4</div>
+        <div class="grid-item grid-item22">5</div>
+        <div class="grid-item grid-item23">6</div>
+        <div class="grid-item grid-item24">7</div>
+        <div class="grid-item grid-item25">8</div>
+        <div class="grid-item grid-item26">9</div>
+        <div class="grid-item grid-item27">0</div>
+        <div class="grid-item grid-item28">-</div>
+        <div class="grid-item grid-item29">+</div>
+        <div class="grid-item grid-item30">backspace</div>
+        <div class="grid-item grid-item31">tab</div>
+        <div class="grid-item grid-item32">q</div>
+        <div class="grid-item grid-item33">w</div>
+        <div class="grid-item grid-item34">e</div>
+        <div class="grid-item grid-item35">r</div>
+        <div class="grid-item grid-item36">t</div>
+        <div class="grid-item grid-item37">y</div>
+        <div class="grid-item grid-item38">u</div>
+        <div class="grid-item grid-item39">i</div>
+        <div class="grid-item grid-item40">o</div>
+        <div class="grid-item grid-item41">p</div>
+        <div class="grid-item grid-item42">[</div>
+        <div class="grid-item grid-item43">]</div>
+        <div class="grid-item grid-item44">slash</div>
+        <div class="grid-item grid-item45">capslock</div>
+        <div class="grid-item grid-item46">a</div>
+        <div class="grid-item grid-item47">s</div>
+        <div class="grid-item grid-item48">d</div>
+        <div class="grid-item grid-item49">f</div>
+        <div class="grid-item grid-item50">g</div>
+        <div class="grid-item grid-item51">h</div>
+        <div class="grid-item grid-item52">j</div>
+        <div class="grid-item grid-item53">k</div>
+        <div class="grid-item grid-item54">l</div>
+        <div class="grid-item grid-item55">:</div>
+        <div class="grid-item grid-item56">"</div>
+        <div class="grid-item grid-item57">enter</div>
+        <div class="grid-item grid-item58">shift</div>
+        <div class="grid-item grid-item59">z</div>
+        <div class="grid-item grid-item60">x</div>
+        <div class="grid-item grid-item61">c</div>
+        <div class="grid-item grid-item62">v</div>
+        <div class="grid-item grid-item63">b</div>
+        <div class="grid-item grid-item64">n</div>
+        <div class="grid-item grid-item65">m</div>
+        <div class="grid-item grid-item66">,</div>
+        <div class="grid-item grid-item67">.</div>
+        <div class="grid-item grid-item68">?</div>
+        <div class="grid-item grid-item69">pause</div>
+        <div class="grid-item grid-item70">ctrl</div>
+        <div class="grid-item grid-item71">fn</div>
+        <div class="grid-item grid-item72">windows</div>
+        <div class="grid-item grid-item73">alt</div>
+        <div class="grid-item grid-item74">space</div>
+        <div class="grid-item grid-item75">alt gr</div>
+        <div class="grid-item grid-item76">ctrl</div>
+        <div class="grid-item grid-item77">pageup</div>
+        <div class="middle">
+            <div class="grid-item grid-item78">arrow</div>
+            <div class="grid-item grid-item79">arrow</div>
+        </div>
+        <div class="grid-item grid-item80">pagedown</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            font-size: 20px;
+            font-weight: bolder;
+            color: aqua;
+            background-color: bisque;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Team Members</h1>
+    <button onclick="console.log(testing.Testing_Manager.work())">Testing Manager</button><br><br>
+    <button onclick="console.log(testing.Testing_Team_Leader.work())">Testing Team Leader</button><br><br>
+    <button onclick="console.log(testing.Senior_Tester.work())">Senior Tester</button><br><br>
+    <button onclick="console.log(testing.Junior_Tester.work())">Junior Tester</button><br><br>
+
+    <script>
+       const testing={
+         Testing_Manager:{name:"Manoj", 
+         Age:45,
+         id:25678,
+          role:"Testing Manager",
+          work:function(){
+            return` ${this.name} is a Testing Manager and his age is${this.Age} and his id is ${this.id}`
+          }
+        },
+         Testing_Team_Leader:{name:"Pavan", 
+         Age:25,
+         id:2569,
+          role:" Testing Team Leader",
+          work:function(){
+            return` ${this.name} is Testing Team leader and his age is${this.Age} and his id is ${this.id}`
+          }
+        },
+         Senior_Tester:{name:"Hussain", 
+         Age:35,
+         id:256978,
+          role:"Senior Tester",
+          work:function(){
+            return` ${this.name} is Senior Tester and his age is${this.Age} and his id is ${this.id}`
+          }
+        },
+        Junior_Tester:{name:"Ganga", 
+         Age:25,
+         id:12378,
+          role:"Junior Tester",
+          work:function(){
+            return` ${this.name} is junior Tester and his age is${this.Age} and his id is ${this.id}`
+          }
+
+        },
+
+       };
+       console.log(testing.Testing_Manager.work())
+        console.log(testing.Testing_Team_Leader.work())
+         console.log(testing.Senior_Tester.work())
+         console.log(testing.Junior_Tester.work())
+
+    </script>
+</body>
+</html>

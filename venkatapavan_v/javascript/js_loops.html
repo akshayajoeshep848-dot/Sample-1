@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JS Loops</h1>
+    <script>
+        // print numbers from 0 to 10
+        for (let i = 0; i <= 10; i = i+1 ){
+            console.log(i);
+        }
+
+        // print only even numbers from 0 to 10
+          for (let i = 0; i <= 10; i = i+2 ){
+            console.log(i);
+        }
+    // print only even numbers from 1 to 10
+          for (let i = 1; i <= 10; i = i+2 ){
+            console.log(i + 1);         
+          }
+            //another Model
+         for (let i = 1; i <= 10; i = i+1 ){
+            console.log(++i);//pre-fix
+        }
+
+        // print odd numbers from 1to 10
+         for (let i = 1; i <= 10; i = i+2 ){
+            console.log(i);
+         }
+         // print multiples of 5 upto 625
+          for (let i = 5; i <= 625; i = i+5){
+            console.log(i);
+          }
+    // sum of integer 1 to 100
+  let sum =0;
+    for (let i=1 ;i<=100; i++){
+        sum = sum+i;
+     
+    }
+    console.log(sum)
+
+    // print a table 
+    let num = 2
+    for (let i =1; i<=20; i++){
+        console.log(` ${num} *${i} = ${num*i}` )
+    }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+margin: 8px;
+        }
+        .main{
+            height: 600px;
+            width: 700px;
+            background-color: aliceblue;
+            border: 5px solid wheat;
+            padding: 20px;
+        }
+        .row1{
+            height: 10%;
+            background-color: aqua;
+            font-size: 30px;
+            color: white;
+            text-align:center;
+            place-content: center;
+            margin-top: 20px;
+            
+        }
+        .row2{
+                 height: 10%;
+            background-color: green;
+            font-size: 30px;
+            color: white;
+            text-align:center;
+            place-content: center;
+            margin-top: 20px;
+        }
+    .main1{
+        margin-top: 20px;
+        display: flex;
+    
+    }
+    .row3{
+        height: 350px;
+        width: 200px;
+        background-color: green;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        place-content: center;
+    }
+    .main2{
+         flex: 1; 
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .row4{
+        background-color: green;
+    height: 160px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    place-content: center;
+    
+    }
+
+        .row5{
+        background-color: blueviolet;
+        height: 160px;
+        font-size: 30px;
+    color: white;
+    text-align: center;
+    place-content: center;
+          
+    }
+    .row6{
+        height: 10%;
+        background-color: aqua;
+        color: white;
+        font-size: 30px;
+        text-align: center;
+        place-content: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="row1">Header</div>
+        <div class="row2"> Navigation</div>
+        <div class="main1">
+            <div class="row3">Aside</div>
+            <div class="main2">
+                <div class="row4">Content</div>
+                <div class="row5">Section</div>
+            </div>
+        </div>
+        <div class="row6">Footer</div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Driving License</h1>
+    <script>
+        let age = prompt("Enter your age");
+        let haslicense = prompt("Enter 'YES' if you have license,'NO' if you don't have license");
+        if(age>=18 && age <=140){
+          if(haslicense=='YES'){
+            console.log("your eligible to drive");
+        }else if(haslicense == 'NO'){
+            console.log("your not eligible to drive(no license)")
+        }else {
+            console.log("invalid input");
+        }
+        }else if (age >=0 && age<18){
+            console.log("not eligible to drive(too young)");
+        }else if(age > 70 && age < 140){
+            console.log("Your too old to drive");
+        }else if(age < 0){
+            console.log("Enter a positive number ")
+        }else {
+            console.log("Enter a valid age");
+        }
+    </script>
+</body>
+</html>

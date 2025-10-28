@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-color:brown;
+        }
+        p:first-of-type{
+            color: var(--primary-color);
+        }
+        li:first-child{
+            background-color: var(--primary-color);
+        }
+        p:nth-of-type(2n+2){
+            background-color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>Mixed List</h1>
+    <ul>
+        <li>Item 1</li>
+        <p>Para 1</p>
+        <li>Item 2</li>
+        <p>Para 2</p>
+        <li>Item 3</li>
+        <p>Para 3</p>
+        <li>Item 4</li>
+        <p>Para 4</p>
+        <li>Item 5</li>
+        <p>Para 5</p>
+    </ul>
+</body>
+</html>

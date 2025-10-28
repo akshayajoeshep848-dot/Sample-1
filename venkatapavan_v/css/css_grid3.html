@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 50px 100px;
+            padding: 10px;
+            background-color: lavenderblush;
+            border: 1px dashed gold;
+            grid-template-areas: 
+            "Row1 Row3"
+            "Row2 Row4"
+            ;
+        }
+        .griditem1{
+            grid-area: Row1;
+        }
+        .grid-item{
+            background-color: yellow;
+            border: 1px solid gold;
+            text-align: center;
+            place-content: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item griditem1">Row1</div>
+        <div class="grid-item griditem2">Row1</div>
+        <div class="grid-item griditem3">Row2</div>
+        <div class="grid-item griditem4">Row2</div>
+    </div>
+</body>
+</html>

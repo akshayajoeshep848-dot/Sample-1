@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header{
+            background-color: aqua;
+            border: 3px solid red;
+            padding: 20px;
+            border-radius: 20px;
+        }
+        .header-1{
+            background-color: green;
+            border: 3px solid brown;
+            padding: 20px;
+            border-radius: 20px;
+        }
+         .head{
+            background-color: yellow;
+            border: 3px solid palevioletred;
+            padding: 20px;
+            border-radius: 20px;
+        }
+         .head-1{
+            background-color: blue;
+            border: 10px solid blueviolet;
+            padding: 20px;
+            border-radius: 20px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">JS EVENTS</h1>
+    <h2 id="head">ADD EVENTS</h2>
+    <form action="Submit" id="form">
+    <input type="text" name="firstname" id="firstname">
+    <input type="text" name="lastname" id="lastname">
+    <button id="click">Click</button>
+    </form>
+    <script>
+     let header=document.getElementById("header")
+     let form=document.getElementById("form")
+     let head=document.getElementById("head")
+     let firstname=document.getElementById("firstname")
+     let lastname=document.getElementById("lastname")
+     let click=document.getElementById("click")
+     let obj={}
+     // Mouse events
+     //1.click
+     //2.mouseover
+     //3.mouseout
+     //4.mouseup
+     //5.mousedown
+
+ click.addEventListener("click",(event) =>{
+        obj[firstname.name]=firstname.value
+        obj[lastname.name]=lastname.value
+        console.log(obj)
+     })
+
+     header.addEventListener("mouseover",(event) =>{
+        header.innerText="Pavan"
+        header.classList="header"
+     })
+
+     header.addEventListener("mouseout",(event) =>{
+        header.innerText="Vankayalapati"
+        header.classList="header-1"
+     })
+
+     head.addEventListener("mouseup",(event) =>{
+        head.innerText="Vasu"
+        head.classList="head"
+     })
+
+     head.addEventListener("mousedown",(event) =>{
+        head.innerText="Vankayalapati"
+        head.classList="head-1"
+     })
+
+
+     //keyboard Events
+     //1.keyup
+     //2.keydown
+     //3.keypress
+     firstname.addEventListener("keyup",(event) =>{
+        console.log(event.key,event.code)
+     })
+
+            lastname.addEventListener("keydown",(event) =>{
+      console.log(event.key,event.code)
+      })
+
+           lastname.addEventListener("keypress",(event) =>{
+         console.log(event.key,event.code)
+     })
+form.addEventListener("submit",(event) =>{
+    event.preventDefault();
+    obj[firstname.name]=firstname.value
+    obj[lastname.name]=lastname.value
+    console.log(obj)
+    obj={}
+    form.reset();
+    console.log(obj)  
+})
+    </script>
+</body>
+</html>    

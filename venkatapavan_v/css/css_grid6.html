@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,1fr);
+            height: 80vh;
+            gap: 10px;
+        }
+        .grid-item1{
+            grid-column-start:1 ;
+            grid-column-end: 2;
+            grid-row-start:1 ;
+            grid-row-end:4 ;
+            background-color: green;
+        }
+        .grid-item2{
+             grid-column-start:2 ;
+            grid-column-end: 4;
+             grid-row-start:1;
+            grid-row-end:2 ;
+            background-color: green;
+    
+        }
+            .grid-item3{
+             grid-column-start:4 ;
+            grid-column-end: 5;
+             grid-row-start:1;
+            grid-row-end:2 ;
+            background-color: red;
+    
+        }
+            .grid-item4{
+             grid-column-start:2 ;
+            grid-column-end: 3;
+             grid-row-start:2;
+            grid-row-end:3 ;
+            background-color:yellow;
+    
+        }
+            .grid-item5{
+             grid-column-start:3 ;
+            grid-column-end: 4;
+             grid-row-start:2;
+            grid-row-end:3 ;
+            background-color:red;
+    
+        }
+                  .grid-item7{
+             grid-column-start:2 ;
+            grid-column-end: 3;
+             grid-row-start:3;
+            grid-row-end:4 ;
+            background-color:red;
+    
+        }
+          .grid-item8{
+             grid-column-start:3 ;
+            grid-column-end: 4;
+             grid-row-start:3;
+            grid-row-end:4 ;
+            background-color:red;
+    
+        }
+                  .grid-item6{
+             grid-column-start:4 ;
+            grid-column-end: 5;
+             grid-row-start:2;
+            grid-row-end:4 ;
+            background-color:yellow;
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item1"></div>
+        <div class="grid-item grid-item2"></div>
+        <div class="grid-item grid-item3"></div>
+        <div class="grid-item grid-item4"></div>
+        <div class="grid-item grid-item5"></div>
+        <div class="grid-item grid-item6"></div>
+        <div class="grid-item grid-item7"></div>
+        <div class="grid-item grid-item8"></div>
+    </div>
+</body>
+</html>

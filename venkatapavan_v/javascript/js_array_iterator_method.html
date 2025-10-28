@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array Iterations</h1>
+    <p>forEach(),map(),filter(),reduce(),some(),every(),find(),and findIndex()</p>
+
+    <h2>forEach</h2>
+    <p>array.forEach(callback)</p>
+
+    <h2>map</h2>
+    <p>it gives a new array</p>
+
+    <h2>filter</h2>
+    <p>it creates a new array with all elements that pass the test impemented by the provided function.</p>
+
+    <h2>reduce</h2>
+    <p>this method executes a reducer function on each element of the array,resulting in a single output value.</p>
+
+    <script>
+        // let array = [1, 2, 3, 4, 5];
+        // array.forEach(print);
+
+        // function print(num, index, arr) {
+        //     console.log(the element at index:${index} is ${num});
+        //     arr[index] = num * num;
+        // }
+        // console.log(array);
+
+        //by using  arrow function 
+        let array = [1, 2, 3, 4, 5];
+        // array.forEach((num, index, arr) => {
+        //     console.log(the element at index:${index} is ${num});
+        //     arr[index] = num * num;
+        // })
+        // console.log(array);
+
+
+        // let array1 = [4, 5, 6, 7];
+        // array1.forEach((num) => console.log(num));
+        // array1.forEach((num) => console.log(num * 2));
+        // array1.forEach((num) => console.log(num * num));
+
+
+
+        // array.forEach((value, index, array) => {
+        //     array[index] = array[index] * 2;
+        //     array[index] = array[index] ** 2;
+        // });
+        // console.log(array);
+
+
+        let newArray = array.map((num) => num * num);
+        console.log(newArray);
+        console.log(array);
+
+        // let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        // let numbers = num.filter((num) => num > 5);
+        // console.log(numbers);
+        // console.log(num);
+
+
+        // const number = [1, 2, 3, 4, 5];
+        // const sum = number.reduce((initialvalue, value) => initialvalue + (initialvalue * value), 1);
+        // console.log(sum)
+
+
+        // let array = [1, 2, 3, 4, , 5];
+        // let arr1 = [1, 2];
+        // let arr2 = [3, 4];
+        // let arr3 = arr2.concat(arr1);
+        // console.log(arr3)
+
+        // let arr4 = arr1.concat(arr2);
+        // console.log(arr4)
+
+
+        // let nestedArray = [[1, 2], [3, 4], [5]];
+        // let flatArray = nestedArray.reduce((initialvalue, currentvalue) => initialvalue.concat(currentvalue), []);
+        // console.log(flatArray);
+
+    </script>
+</body>
+
+</html>

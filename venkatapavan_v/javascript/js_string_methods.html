@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>string methods</h1>
+    <script>
+          let str = "hello, world";
+        console.log(str.charAt(0) == 'h');
+        console.log(str.charAt(9));
+
+        // concat()
+        let greeting = str.concat("!");
+        console.log(greeting);
+
+        // includes
+        const sentence = "the quick brown fox jumps over the lazy dog.";
+        console.log(sentence.includes("the"));
+
+        //replace()
+        const greetings="Hello, World!";
+        const newGreeting=greetings.replace("World","Universe");
+        console.log(newGreeting)
+
+        //substring()
+        // it doesn't accept negative indices
+        const strr="Javascript";
+        const sub=strr.substring(4,10);
+        console.log(sub);
+
+        //toLowercase()
+        // it converts all the characters in a string to lower case
+        
+
+        //toUpperCase()
+        let js="javascript";
+        console.log(js.toUpperCase())
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM CreateElement Method</title>
+</head>
+<body>
+    <h1>JS DOM document.createElement()method</h1>
+    <div id="container"></div>
+    <script>
+        let heading2=document.createElement("h2");
+        heading2.innerText='h2 created by createElement method';
+    //     document.body.append(heading2);//append isthe anniti kante last loo print avthundhi ,because append means last loo print ayyedhi 
+
+
+
+
+    //  let container=document.getElementById("container");
+    //  container.append(heading2);
+
+
+
+
+    // let orderedlist=document.createElement("ol");
+    // let listItem1=document.createElement("li");
+    // listItem1.innerText="Item1";
+    // orderedlist.append(listItem1);
+    // document.body.append(orderedlist);
+    // document.body.style.backgroundColor="aqua";
+
+
+    let orderedlist=document.createElement("ol");
+    for(let i=0;i<5;i++){
+        let listitem=document.createElement("li");
+        listitem.innerText=`Item${i + 1}`;
+        orderedlist.append(listitem);
+    }
+    document.body.append(orderedlist);
+    </script>
+</body>
+</html>
