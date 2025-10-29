@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random code Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: arial;
+            font-family: sans-serif;
+        }
+
+        .container {
+            padding: 25px;
+            box-shadow: 1px 1px 10px gray;
+            width: 600px;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 25px;
+
+        }
+
+        button {
+            background-color: rgb(224, 105, 0);
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        #quote-box {
+            width: 570px;
+            height: auto;
+            background-color: pink;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            place-content: center;
+        }
+
+        #author-name {
+            width: 570px;
+            height: auto;
+            background-color: pink;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            place-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Random Quote Generator</h2>
+        <p id="quote-box"></p>
+        <p id="author-name"></p>
+        <button id="Generate">Generate</button>
+    </div>
+    <script>
+
+        const famousQuotes = [
+            {
+                id: 1,
+                quote: "The only way to do great work is to love what you do.",
+                author: "Steve Jobs"
+            },
+            {
+                id: 2,
+                quote: "Strive not to be a success, but rather to be of value.",
+                author: "Albert Einstein"
+            },
+            {
+                id: 3,
+                quote: "It is during our darkest moments that we must focus to see the light.",
+                author: "Aristotle"
+            },
+            {
+                id: 4,
+                quote: "The future belongs to those who believe in the beauty of their dreams.",
+                author: "Eleanor Roosevelt"
+            },
+            {
+                id: 5,
+                quote: "Do not go where the path may lead, go instead where there is no path and leave a trail.",
+                author: "Ralph Waldo Emerson"
+            },
+            {
+                id: 6,
+                quote: "The best way to predict the future is to create it.",
+                author: "Peter Drucker"
+            },
+            {
+                id: 7,
+                quote: "Our greatest glory is not in never failing, but in rising up every time we fail.",
+                author: "Ralph Waldo Emerson"
+            },
+            {
+                id: 8,
+                quote: "If you want to lift yourself up, lift up someone else.",
+                author: "Booker T. Washington"
+            },
+            {
+                id: 9,
+                quote: "The mind is everything. What you think you become.",
+                author: "Buddha"
+            },
+            {
+                id: 10,
+                quote: "You miss 100% of the shots you don’t take.",
+                author: "Wayne Gretzky"
+            }
+        ];
+
+
+        let QuoteBox = document.getElementById('quote-box')
+        let GenerateBtn = document.getElementById('Generate')
+        let Author = document.getElementById('author-name')
+
+        const RandNumbers = Math.floor(Math.random() * famousQuotes.length);
+
+
+        const RandQuote = famousQuotes[RandNumbers];
+
+
+        QuoteBox.textContent = `${RandQuote.quote}`;
+        Author.textContent = ` ${RandQuote.author}`;
+
+
+
+
+        let Generate = function () {
+
+            const RandNumbers = Math.floor(Math.random() * famousQuotes.length);
+
+
+            const RandQuote = famousQuotes[RandNumbers];
+
+            QuoteBox.textContent = `${RandQuote.quote}`;
+            Author.textContent = ` ${RandQuote.author}`;
+
+        }
+
+
+        GenerateBtn.addEventListener("click", Generate)
+
+
+
+    </script>
+</body>
+
+</html>
