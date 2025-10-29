@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    <h1>ARROW Function means shortest syntax</h1>
+    <button onclick="addtwonumber(10,2)">calculate</button>
+    <button onclick="sum1(10,20)">manoj</button>
+    <script>
+        //regular function
+        function addtwofunction(a,b){
+            return a + b;
+        }
+        // function expression
+        let sum = function(a,b){
+            return a + b;
+        }
+        // arrow function
+        let addnumbers = (a,b) => a + b;
+        // write arrow function two multiple twonumber
+        let multiply = (a,b) => a*b;
+        console.log(multiply(10,3));
+        // write function square root
+        let squareroot = (a) => a**0.5;
+        console.log(squareroot(2))
+        // write function print in console and return sum of two number
+        let sum1 = (a,b) =>{
+            console.log(a+b);
+            return a + b;
+        };
+        
+    </script>
+</body>
+</html>

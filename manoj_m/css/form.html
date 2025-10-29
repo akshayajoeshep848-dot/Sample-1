@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document form</title>
+</head>
+
+<body style="background-color: lightblue;">
+
+    <script>
+        
+        let header = document.createElement("header")
+        header.innerText = "STUDENT REGISTRATION FORM";
+        header.style.backgroundColor="orange";
+        header.style.height="50px";
+        header.style.width="300px";
+        header.style.textAlign="center";
+        header.style.placeContent="center";
+        header.style.border="10px"
+        document.body.append(header);
+        let m = document.createElement("br");
+        document.body.append(m);
+        let m1 = document.createElement("br");
+        document.body.append(m1);
+
+
+        let label = document.createElement("label")
+        label.innerText = "First name:";
+        label.style.backgroundColor = "red";
+        document.body.append(label);
+        let input = document.createElement("input");
+        input.setAttribute("type", "text");
+        input.setAttribute("placeholder", "enter your name");
+        document.body.append(input);
+        let a = document.createElement("br");
+        document.body.append(a);
+        let a1 = document.createElement("br");
+        document.body.append(a1);
+
+        let label1 = document.createElement("label")
+        label1.innerText = "Last Name:";
+        label1.style.backgroundColor ="red";
+        document.body.append(label1);
+        let input1 = document.createElement("input");
+        input1.setAttribute("type", "text");
+        input1.setAttribute("placeholder", "enter your last name");
+        document.body.append(input1)
+        let b = document.createElement("br");
+        document.body.append(b);
+        let b1 = document.createElement("br");
+        document.body.append(b1);
+
+        let label2 = document.createElement("label")
+        label2.innerText = "phone number:";
+        label2.style.backgroundColor="red";
+        document.body.append(label2);
+        let input2 = document.createElement("input");
+        input2.setAttribute("type", "text");
+        input2.setAttribute("placeholder", "enter your mobile number");
+        document.body.append(input2)
+        let c = document.createElement("br");
+        document.body.append(c);
+        let c1 = document.createElement("br");
+        document.body.append(c1);
+
+
+        let label3 = document.createElement("label")
+        label3.innerText = "Email:";
+        label3.style.backgroundColor="red";
+        document.body.append(label3);
+        let input3 = document.createElement("input");
+        input3.setAttribute("type", "text");
+        input3.setAttribute("placeholder", "enter your email");
+        document.body.append(input3)
+        let d = document.createElement("br");
+        document.body.append(d);
+        let d1 = document.createElement("br");
+        document.body.append(d1);
+
+        let label4 = document.createElement("label")
+        label4.innerText = "address:";
+        label4.style.backgroundColor="red";
+        document.body.append(label4);
+        let input4 = document.createElement("input");
+        input4.setAttribute("type", "text");
+        input4.setAttribute("placeholder", "enter your address");
+        document.body.append(input4)
+        let e = document.createElement("br");
+        document.body.append(e);
+        let e1 = document.createElement("br");
+        document.body.append(e1);
+
+        let label5 = document.createElement("label")
+        label5.innerText = "qulification:";
+        label5.style.backgroundColor="red";
+        document.body.append(label5);
+        let input5 = document.createElement("input");
+        input5.setAttribute("type", "text");
+        input5.setAttribute("placeholder", "enter your qulification");
+        document.body.append(input5)
+        let f = document.createElement("br");
+        document.body.append(f);
+        let f1 = document.createElement("br");
+        document.body.append(f1);
+
+        let label6 = document.createElement("label")
+        label6.innerText = "create password:";
+        label6.style.backgroundColor="red";
+        document.body.append(label6);
+        let input6 = document.createElement("input");
+        input6.setAttribute("type", "text");
+        input6.setAttribute("placeholder", "enter your password");
+        document.body.append(input6)
+        let g = document.createElement("br");
+        document.body.append(g);
+        let g1 = document.createElement("br");
+        document.body.append(g1);
+
+        let label7 = document.createElement("label")
+        label7.innerText = "Roll No:";
+        label7.style.backgroundColor="red";
+        document.body.append(label7);
+        let input7 = document.createElement("input");
+        input7.setAttribute("type", "text");
+        input7.setAttribute("placeholder", "enter your roll no");
+        document.body.append(input7)
+        let h = document.createElement("br");
+        document.body.append(h);
+        let h1 = document.createElement("br");
+        document.body.append(h1);
+
+        let label8 = document.createElement("label")
+        label8.innerText = "Date of birth:";
+        label8.style.backgroundColor="red";
+        document.body.append(label8);
+        let input8 = document.createElement("input");
+        input8.setAttribute("type", "date");
+        input8.setAttribute("placeholder", "");
+        document.body.append(input8)
+        let y = document.createElement("br");
+        document.body.append(y);
+        let y1 = document.createElement("br");
+        document.body.append(y1);
+
+
+        let label9 = document.createElement("label");
+        label9.innerText = "Gender :";
+        label9.style.backgroundColor="red";
+        document.body.append(label9);
+        let input9 = document.createElement("input");
+        input9.setAttribute("type", "radio");
+        
+        document.body.append(input9);
+        let label10 = document.createElement("label");
+        label10.innerText = "Male";
+        document.body.append(label10);
+
+        let input10 = document.createElement("input");
+        input10.setAttribute("type", "radio");
+        document.body.append(input10);
+        let label11 = document.createElement("label");
+        label11.innerText = "Female";
+        document.body.append(label11);
+        let z = document.createElement("br");
+        document.body.append(z);
+        let z1 = document.createElement("br");
+        document.body.append(z1);
+
+
+        let label12 = document.createElement("label");
+        label12.innerText = "Select Course";
+        label2.style.backgroundColor="red";
+        document.body.append(label12);
+        let select = document.createElement("select");
+        document.body.append(select);
+        let option = document.createElement("option");
+        option.innerText = "courses";
+        select.append(option);
+        let option1 = document.createElement("option");
+        option1.innerText = "Python";
+        select.append(option1);
+        let option2 = document.createElement("option");
+        option2.innerText = "javascript";
+        select.append(option2);
+        let k = document.createElement("br");
+        document.body.append(k);
+        let k1 = document.createElement("br");
+        document.body.append(k1);
+
+        let label13 = document.createElement("label");
+        label13.innerText = "submit";
+        label3.style.backgroundColor="red";
+        document.body.append(label13);
+
+
+    </script>
+</body>
+
+</html>

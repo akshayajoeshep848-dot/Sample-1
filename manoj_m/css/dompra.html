@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="heading1">hello world</h1>
+    <p>this is a paragraph</p>
+    <div id="div"></div>
+    <ul id="ul">
+        <li id="item item1">item 1</li>
+        <li id="item item2">item 2</li>
+        <li id="item item3">item 3</li>
+        <li id="item item4">item 4</li>
+        <li id="item item5">item 5</li>
+    </ul>
+    <script>
+        let div = document.getElementById("div");
+        let anchor = document.createElement("a");
+        anchor.setAttribute("href","https://www.google.com");
+        anchor.textContent = "GOOGLE";
+        div.append(anchor);
+        //  parentNode-the parent node
+        // childNodes-a nodelist of child nodes(including text nodes)
+        // children-an HTMLCollection of child elements(ignores text nodes)
+        // firstchild/lastchild-first/last child element
+        // nextsibling/previousSibling-adjacent nodes(including text nodes)
+        // nextElementSibling/previousElementSibling-adjacent element nodes
+        let ul = document.getElementById("ul")
+        // console.log(ul.parentNode);
+        // console.log(ul.children);
+        // console.log(ul.childNodes);
+        // console.log(ul.firstElementChild);
+        // console.log(ul.lastElementChild);
+        // console.log(ul.nextElementSibling);
+        // console.log(ul.nextSibling);
+        ul.firstElementChild.style.backgroundColor = "blue";
+        ul.lastElementChild.style.backgroundColor = "red";
+        ul.children[2].style.backgroundColor = "pink";
+        // Create table element
+
+
+
+    </script>
+</body>
+
+</html>

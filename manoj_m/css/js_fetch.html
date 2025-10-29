@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: aquamarine;
+            width: 80vw;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 10px lightgrey;
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(1,3fr);
+        }
+    </style>
+</head>
+<body>
+    <h3>list of dog breeds</h3>
+    <div class="container"></div>
+    <script>
+        let dogDataArray = [];
+        let response = fetch("https://dogapi.dog/api/v2/breeds")
+        // .then((data)=>data.json())
+        .then((value)=>
+        {
+            let Array = value.data;
+            console.log(Array);
+            let container = document.querySelector(".container")
+            array.forEach((dog) =>{
+                let dogcontainer = document.createElement("div");
+                let bogbreed = document.createElement("h3");
+                let dogbreeddescription = document.createElement("p");
+
+                // set classes
+                dogcontainer.classList.add('dog-container');
+                dogbreed.classList.add("dog-list");
+
+
+                // assign values
+                dogbreed.textContent = dog.attributes.name;
+                dogbreeddescription.textContent=dog.attributes.description;
+
+                dogcontainer.append(dogbreed);
+                dogcontainer.append(dogbreeddescription);
+                container.appendChild(dogcontainer);
+            });
+        })
+        .catch((error)=>console.log(error))
+        console.log("dogDataArray",dogDataArray);
+    </script>
+</body>
+</html>

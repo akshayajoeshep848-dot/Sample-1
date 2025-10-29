@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu-item menu-item1">menu-items1</div>
+        <div class="menu-item menu-item2">menu-items2</div>
+        <div class="menu-item menu-item3">menu-items3</div>
+        <div class="menu-item menu-item4">menu-items4</div>
+    </div>
+    <div class="para-container">
+        <p>this is a para1</p>
+        <p>this is a para2</p>
+        <p>this is a para3</p>
+        <p>this is a para4</p>
+        <p>this is a para5</p>
+    </div>
+    <div class="button-container">
+        <button class="button-item">Button1</button>
+        <button class="button-item">Button2</button>
+        <button class="button-item">Button3</button>
+        <button class="button-item">Button4</button>
+        <button class="button-item">Button5</button>
+    </div>
+    <script>
+        // let menuitem1 = document.getElementsByClassName("menu-item");
+        // console.log(menuitem1);
+        // console.log(Array.isArray(menuitem1));
+        // console.log(Array.isArray(Array.from(menuitem1)));
+        // console.log(Array.from(menuitem1));
+
+        // let menuItemArray = Array.from(menuitem1);
+        // menuItemArray.forEach((item) =>  (item.innerText = "hello"));
+
+
+        // getElementsByTagName
+
+        let paraitem = document.getElementsByTagName("P");
+        Array.from(paraitem).forEach((item) => (item.innerText = "hi"));
+
+        // let arr = [1, 2, 3, 4, 5];
+        // Array.from(paraitem).forEach((para, index) => (para.innerText = arr[index]));
+
+        // let actorArray = [
+        //     {
+        //         name: "prabhas",
+        //         profession: "acting",
+        //         movies: ["mirchi", "bahubali"],
+        //     }, {
+        //         name: "N.T.R",
+        //         profession: "acting,Entreprenuer",
+        //         movies: ["aadhi", "Temper"],
+        //     }, {
+        //         name: "Sai Pallavi",
+        //         profession: "acting,Doctor",
+        //         movies: ["Fida", "Love Story"],
+        //     }, {
+        //         name: "Anushka Shetty",
+        //         profession: "acting,Modelling",
+        //         movies: ["billa", "arundhathi"],
+        //     },
+        // ];
+        // Array.from(paraitem).forEach((element, index) => (element.innerText = Actor Name:${actorArray[index].name}));
+
+
+
+        // querySelectorAll
+
+        let styleArray = [
+            {
+                name: "click Me",
+                backgroundColor: "blue",
+                borderRadius: "10px",
+                margin: "10px",
+                padding: "10px",
+                boxShadow: "0 0 5px 5px black",
+                color: "white",
+            }, {
+                name: "Button",
+                backgroundColor: "pink",
+                borderRadius: "10px",
+                margin: "10px",
+                padding: "10px",
+                boxShadow: "0 0 5px 5px black",
+                color: "white",
+            }, {
+                name: "register",
+                backgroundColor: "orange",
+                borderRadius: "10px",
+                margin: "10px",
+                padding: "10px",
+                boxShadow: "0 0 5px 5px black",
+                color: "white",
+            }, {
+                name: "login",
+                backgroundColor: "green",
+                borderRadius: "10px",
+                margin: "10px",
+                padding: "10px",
+                boxShadow: "0 0 5px 5px black",
+                color: "white",
+            }, {
+                name: "Apply",
+                backgroundColor: "violet",
+                borderRadius: "10px",
+                margin: "10px",
+                padding: "10px",
+                boxShadow: "0 0 5px 5px black",
+                color: "white",
+            },
+        ];
+
+
+        let buttonitems = document.querySelectorAll(".button-item");
+        buttonitems.forEach((item, index) => {
+            item.innerText = styleArray[index].name;
+            item.style.backgroundColor = styleArray[index].backgroundColor;
+            item.style.borderRadius = styleArray[index].borderRadius;
+            item.style.margin = "10px";
+            item.style.color = "white";
+            item.style.boxShadow = "0 0 5px 5px black";
+            item.style.padding = "10px";
+
+        });
+    </script>
+</body>
+
+</html>

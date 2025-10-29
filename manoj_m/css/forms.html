@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .manoj{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="manoj">
+        <h1>My To Do List</h1>
+        <input type="number" id="weight" name="weight" placeholder="enter weight" />
+    </div>
+    <script>
+        let ramu = document.getElementsByClassName('manoj')
+        console.log(ramu)
+        let label = document.createElement("label");
+        label.innerText="Add a new task....";
+        document.body.append(label);
+        label.style.marginRight="100px"
+        // let a = document.createElement('br')
+        // document.body.append(a);
+          
+
+        let label1 = document.createElement("label1");
+        label1.innerText="Duration(eg..30m)";
+        document.body.append(label1);
+        
+        let a = document.createElement("a");
+        a.innerText="Add";
+        document.body.append(a);
+        a.style.color="blue";
+        a.style.marginRight="10px";
+        let b1 = document.createElement("br");
+        document.body.append(b1);
+
+        let b = document.createElement("b");
+        b.innerText="All";
+        document.body.append(b);
+        b.style.color="blue";
+        b.style.marginRight="10px";
+        let c = document.createElement('c');
+        c.innerText='Active';
+        document.body.append(c);
+        c.style.marginRight="10px";
+        let d = document.createElement('d');
+        d.innerText='Completed';
+        document.body.append(d);
+        d.style.marginRight="10px";
+        let e = document.createElement('e');
+        e.innerText='Clear Completed';
+        document.body.append(e);
+         d.style.marginRight="30px";
+        let e1 = document.createElement('br')
+        document.body.append(e1);
+        let mouni = document.createElement('mouni');
+        mouni.innerText="interview preparation        1hour";
+        document.body.append(mouni);
+    </script>
+</body>
+</html>

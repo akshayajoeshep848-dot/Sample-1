@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a synchronous a wait</title>
+</head>
+<body>
+    // asynchronous await means one buy one excutes inline.
+    <script>
+        // defination async functions : an async function is a function that implicitly returns a promise.this syntax is a syntatic sugar over promises designed to improve readability and simplify chaining a synchronous operations.
+        // async function hello(){
+        //     return "Hello ,Async!";
+        // }
+        // console.log(hello());
+
+        // hello().then((value)=> console.log(value));
+        // hello().then(console.log);
+        async function fetchData(url){
+            console.log("starting fetch call...")
+            let response = await fetch (url);
+            let data = await response.json();
+            console.log(data);
+            console.log("end fetch call...")
+            return data;
+        }
+        fetchData("https://dogapi.dog/api/v2/breeds").then((value)=>console.log(value));
+        fetchData("https://jsonplaceholder.typicode.com/users/1").then((value)=>console.log(value));
+
+        // await keyword: the await keyword is only valid inside async functions and is used to pause the excution of the function until the promise it await resloves or rejects.it allows writing aynchronous code that looks asnchronous.
+        let header = document.createElement("header")
+        header.innerText="name:";
+        document.body.append(header);
+        let input = document.createElement("input");
+        input.setAttribute("type", "text");
+        input.setAttribute("placeholder", "enter your name");
+        document.body.append(input);
+        let head1 = document.createElement("br");
+        document.body.append(head1)
+        let head = document.createElement("header")
+        head.innerText="email:";
+        document.body.append(head)
+        let input1 = document.createElement("input");
+        input1.setAttribute("type","text");
+        input1.setAttribute("placeholder","enter your email");
+        document.body.append(input1);
+        let header2 = document.createElement("br");
+        document.body.append(header2);
+        let header1 = document.createElement("header1");
+        header1.innerText="phone";
+        document.body.append(header1);
+        let input2 = document.createElement("input");
+        input2.setAttribute("type","text");
+        input2.setAttribute("placeholder","enter your phone number");
+        document.body.append(input2);
+        let header4 = document.createElement("br");
+        header4.body.append(header4);
+        let header3 = document.createElement("header")
+        header3.innerText="username";
+        document.body.append(header3);
+        let input3 = document.createElement("input");
+        input3.setAttribute("type","text");
+        input3.setAttribute("placeholder","enter your username");
+        document.body.append(input3)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js arrow</title>
+</head>
+
+<body>
+    <button onclick="console.log(student.greet())">student</button>
+    <script>
+        const student = {
+            name: 'manoj',
+            college: 'Aliet',
+            rollno: '21HP1A0442',
+            year: 'finalyear',
+            gender: 'male',
+            greet: function () {
+                return `Hello, my name is ${this.name}and this college is${this.college}and rollno${this.rollno}iam studying ${this.year} gender${this.gender}`
+            },
+        };
+        console.log(student.name);
+        console.log(student.college);
+        console.log(student.rollno);
+        console.log(student.year);
+        console.log(student.gender);
+
+    </script>
+</body>
+
+</html>

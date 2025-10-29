@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing developer</title>
+</head>
+<body>
+    <h1>testing developer</h1>
+    <button onclick="console.log(product_manager.greet())">product_manager</button><br><br>
+    <button onclick="console.log(team_leader.greet())">team_leader</button><br><br>
+    <button onclick="console.log(senior_testing.greet())">senior_testing</button><br><br>
+     <button onclick="console.log(junior_testing.greet())">junior_testing</button><br><br>
+    <script>
+    
+        const product_manager ={
+            name:'ravi ',
+            age:'29 ',
+            gender:'male  ',
+            work:'productmanager ',
+            employeeid:'4567 ',
+            greet:function(){
+                return `Hello, my name is ${this.name}and age${this.age}gender ${this.gender} work${this.work}employeeid${this.employeeid}`
+            },
+
+        } ;
+        console.log(product_manager.name);
+        console.log(product_manager.age);
+        console.log(product_manager.gender);
+        console.log(product_manager.work);
+        console.log(product_manager.employeeid);
+        const team_leader = {
+            name:'rajesh',
+            age:'30',
+            gender:'male',
+            work:'team_leader',
+            employeeid:'12345',
+            greet:function(){
+                return `Hello,my name is ${this.name}and age is ${this.age}gender ${this.gender}work${this.work}employeeid${this.employeeid}`
+            },
+        };
+        console.log(team_leader.name);
+        console.log(team_leader.age);
+        console.log(team_leader.gender);
+        console.log(team_leader.work);
+        const senior_testing = {
+            name:'sanjay',
+            age:'33',
+            gender:'male',
+            work:'developer',
+            employeeid:'12345',
+            greet:function(){
+                return `Hello,my name is ${this.name}and age is ${this.age}gender ${this.gender}work${this.work}employeeid${this.employeeid}`
+            },
+
+        };
+        console.log(senior_testing.name);
+        console.log(senior_testing.age);
+        console.log(senior_testing.gender);
+        console.log(senior_testing.work);
+        console.log(senior_testing.employeeid);
+        const junior_testing = {
+            name:'sairam',
+            age:'33',
+            gender:'male',
+            work:'developer',
+            employeeid:'12345',
+            greet:function(){
+                return `Hello,my name is ${this.name}and age is ${this.age}gender ${this.gender}work${this.work}employeeid${this.employeeid}`
+            },
+
+        };
+        console.log(junior_testing.name);
+        console.log(junior_testing.age);
+        console.log(junior_testing.gender);
+        console.log(junior_testing.work);
+        console.log(junior_testing.employeeid);
+    </script>
+</body>
+</html>

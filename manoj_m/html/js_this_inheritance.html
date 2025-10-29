@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js this</title>
+</head>
+
+<body>
+    <script>
+        // this function
+        // this is detremined at call time not definition time
+        // its value depends on how the funiction is called
+        // it strict mode global this is undefined
+        // arrow functions do not their own this binding.
+        // let person = {
+        //     name: 'raviteja',
+        //     age: 23,
+        //     location: "hyderabad",
+        //     walk: () => console.log(`${this.name}is walking`),
+        //     eat: function () {
+        //         console.log(`${this.name}is eating`)
+        //     }
+        // }
+        // person.eat()
+        // person.walk()
+        // 1.default binding defination:when called with no context this refer to global binding
+        // "use strict";
+        // function obj() {
+        //     console.log(this);
+        //     this.alert('hi');   
+        // }
+        // obj();
+        // implicit binding of 'this'
+        // let person = {
+        //     name: 'raviteja',
+        //     age: 23,
+        //     location: "hyderabad",
+        //     sleep (){
+        //         // this is implicit binding of 'this'
+        //         console.log(`${this.name}is sleeping`);
+        //     }, 
+        //     // this is undefined
+        //     walk: () => console.log(`${this.name}is walking`),
+        //     eat: function () {
+        //        // this is implicit binding of this
+        //         console.log(`${this.name}is eating`)
+        //     }
+        // }
+        // obj();
+        // explicit binding defination:when using call,apply
+        // function greet (){
+        //     console.log(`hello,${this.name}`)
+        // }
+        // const alice = { name:"alice"};
+        // greet.call(alice);
+
+
+       // class are two types 1)model 2)property
+       // class names are typically written in pascalcase
+       // constructor() method:
+       //the constructor() method is a special method for creating and initializing an object created with a class.
+    //    class  person {
+    //     constructor(name,age){
+    //         this.name = name;
+    //         this.age = age;
+    //     }
+    //    greet(){
+    //     console.log(`hi my name is ${this.name}`);
+    //    }
+    // }
+    //    let manoj = new person("manoj",23);
+    //    console.log(manoj.name);
+    //    console.log(manoj.age);
+    //    manoj.greet();
+
+    // let person2 = new person("allu arjun",41);
+    // person2.greet();
+//     class pet {
+//         constructor(pettype,name){
+//             this.pettype = pettype;
+//             this.name = name;
+//         }
+    
+//     eat(){
+//         console.log(`${this.name} is eating`)
+//     }
+// }
+//     class dog extends pet{
+//         constructor(type,name,breed){
+//             super(type,name);
+//             this.breed = breed;
+//         }
+//     }
+//     let dog1 = new dog("dog","chimtu","oorakukka");
+//     console.log(dog1.pettype);
+//     console.log(dog1.name);
+//     console.log(dog1.breed);
+//     dog1.eat();
+// class car{
+//     constructor(make,model){
+//        this.make =make;
+//        this.model=model; 
+//     }
+//     greet(){
+//          console.log(`hi my name is ${this.make}`);
+//         }
+// }
+// let manoj = new car("bmw",1995);
+//    console.log(manoj.make);
+//    console.log(manoj.model);
+//    manoj.greet();
+     
+//    class dog{
+//     constructor(name,breed = "mutt"){
+//         this.name = name;
+//         this.breed = breed;
+//     }
+//     greet(){
+//         console.log(`${this.name} is this ravi friend`)
+//     }
+//    }
+//    let manoj = new dog("mutt");
+//    console.log(manoj.dog);
+//    console.log(manoj.dog);
+//    manoj.greet();
+
+
+   class vehicle{
+    constructor(vehicle,motorcylce){
+        this.vehicle = vechicle;
+        this.motorcycle = motorcycle;
+    }
+   }
+     class vehicle extends motorcylce{
+        constructor(vehicle,motorcycle){
+            super(vehicle,motorcycle);
+             this.motorcycle = motorcycle;
+         }
+        }
+   let car = new vehicle("puluser",125)
+   console.log(car.vehicle);
+   console.log(car.motorcycle);
+   vehicle.car()
+   //get,set,static,keywords private fileds/properties encapsulation,abstraction,polymorphism async/wait
+    </script>
+</body>
+
+</html>

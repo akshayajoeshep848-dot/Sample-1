@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>development team</title>
+</head>
+<body>
+    <h1>development team</h1>
+    <button onclick="console.log(product_manager.greet())">product_manager</button><br><br>
+    <button onclick="console.log(team_leader.greet())">team_leader</button><br><br>
+    <button onclick="console.log(developer.greet())">developer</button><br><br>
+    <button onclick="console.log(senior_softwaredeveloper.greet())">senior_softwaredeveloper</button><br><br>
+    <button onclick="console.log(junior_softwaredeveloper.greet())">junior_softwaredeveloper</button><br><br>
+    <script>
+        const product_manager ={
+            name:'pavan ',
+            age:'45 ',
+            gender:'male  ',
+            work:'productmanager ',
+            employeeid:'12345 ',
+            greet:function(){
+                return `Hello, my name is ${this.name}and age${this.age}gender ${this.gender} work${this.work}employeeid${this.employeeid}`
+            },
+
+        } ;
+        console.log(product_manager.name);
+        console.log(product_manager.age);
+        console.log(product_manager.gender);
+        console.log(product_manager.work);
+        console.log(product_manager.employeeid);
+        const team_leader = {
+            name:'rohit',
+            age:'30',
+            gender:'male',
+            work:'team_leader',
+            employeeid:'12345',
+            greet:function(){
+                return `Hello,my name is ${this.name}and age is ${this.age}gender ${this.gender}work${this.work}employeeid${this.employeeid}`
+            },
+        };
+        console.log(team_leader.name);
+        console.log(team_leader.age);
+        console.log(team_leader.gender);
+        console.log(team_leader.work);
+        const developer = {
+            name:'yaswanth',
+            age:'33',
+            gender:'male',
+            work:'developer',
+            employeeid:'12345',
+            greet:function(){
+                return `Hello,my name is ${this.name}and age is ${this.age}gender ${this.gender}work${this.work}employeeid${this.employeeid}`
+            },
+
+        };
+        console.log(developer.name);
+        console.log(developer.age);
+        console.log(developer.gender);
+        console.log(developer.work);
+        console.log(developer.employeeid);
+        const senior_softwaredeveloper = {
+            name:'ramakrishna   ',
+            age:'35',
+            gender:'male',
+            work:'senior_software',
+            employeeid:'1456',
+             greet:function(){
+                return `Hello,my name is ${this.name}and age is ${this.age}gender ${this.gender}work${this.work}employeeid${this.employeeid}`
+            },
+
+        };
+         console.log(senior_softwaredeveloper.name);
+        console.log(senior_softwaredeveloper.age);
+        console.log(senior_softwaredeveloper.gender);
+        console.log(senior_softwaredeveloper.work);
+        console.log(senior_softwaredeveloper.employeeid);
+        const junior_softwaredeveloper = {
+            name:'ramakrishna   ',
+            age:'35',
+            gender:'male',
+            work:'senior_software',
+            employeeid:'19876',
+             greet:function(){
+                return `Hello,my name is ${this.name}and age is ${this.age}gender ${this.gender}work${this.work}employeeid${this.employeeid}`
+            },
+
+        };
+         console.log(junior_softwaredeveloper.name);
+        console.log(junior_softwaredeveloper.age);
+        console.log(junior_softwaredeveloper.gender);
+        console.log(junior_softwaredeveloper.work);
+        console.log(junior_softwaredeveloper.employeeid);
+        
+    </script>
+</body>
+</html>

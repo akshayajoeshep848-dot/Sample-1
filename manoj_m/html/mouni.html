@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Dashboard</title>
+    
+</head>
+<body>
+    <div class="manu">
+    <h1>Task Dashboard</h1>
+    <h3>stay organized,get things done</h3>
+    </div>
+    <script>
+        let label = document.createElement("label");
+        label.innerText = "";
+        document.body.append(label);
+        let input = document.createElement('input');
+        input.setAttribute("text","type");
+        input.setAttribute("placeholder","Task Title (eg.,Finish project report)");
+        document.body.append(input);
+        input.style.borderBottomColor="black";
+        input.style.padding="10px";
+        let m = document.createElement("br");
+        document.body.append(m);
+        let m1 = document.createElement("br");
+        document.body.append(m1)
+        
+
+        let label1 = document.createElement("label1");
+        label1.innerText="";
+        document.body.append(label1);
+        let input1 = document.createElement("input");
+        input1.setAttribute("text","type");
+        input1.setAttribute("placeholder","Add a description(optional)");
+        document.body.append(input1)
+        input1.style.borderBottomColor="black";
+        input1.style.padding="10px";
+        let n = document.createElement("br");
+        document.body.append(n);
+        let n1 = document.createElement("br");
+        document.body.append(n1)
+        
+        let label2 = document.createElement("label");
+        label2.innerText="Due Date (optial)";
+        document.body.append(label2);
+        let k = document.createElement("br");
+        document.body.append(k);
+        let input2 = document.createElement("input");
+        input2.setAttribute("type","date");
+        input2.setAttribute("placeholder","");
+        document.body.append(input2);
+        let s = document.createElement("br");
+        document.body.append(s);
+        let s1 = document.createElement("br");
+        document.body.append(s1)
+
+        let label3 = document.createElement("label");
+        label3.innerText="priority";
+        document.body.append(label3);
+        let k1 = document.createElement("br");
+        document.body.append(k1);
+        let input3 = document.createElement("input");
+        input3.setAttribute("text","type");
+        input3.setAttribute("placeholder","medium");
+        document.body.append(input3);
+        let s2 = document.createElement("br");
+        document.body.append(s2);
+        let s3 = document.createElement("br");
+        document.body.append(s3)
+        
+        let label4 = document.createElement("label");
+        label4.innerText="";
+        document.body.append(label);
+        let input4= document.createElement("input");
+        input4.setAttribute("text","type");
+        input4.setAttribute("placeholder","+Add Task");
+        document.body.append(input4);
+        input4.style.borderBottomColor="black";
+        input4.style.padding="10px";
+        input4.style.background="lightblue";
+        input4.style.color="white";
+    </script>
+</body>
+</html>
