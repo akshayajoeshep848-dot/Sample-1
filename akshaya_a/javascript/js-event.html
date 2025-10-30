@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event</title>
+</head>
+<body>
+    <h1 id="h1">EVENTS</h1>
+    <button id="button" >click me</button>
+    <div>
+<label for="firstname">first name</label>
+<input type="text" id="firstname"  >
+</div>
+<div>
+    <label for="lastname" >last name</label>
+    <input type="text" id="lastname"  >
+</div>
+  <script>
+    //events:
+    //js dom 
+    //eevnt types:
+    //mouse events:click,dbclick,mousedown,mousup,mouse move,mouseover,mouswout
+    //keyword events:keydown,keyup,keypress
+    //form events:sudmit,change,fouce,blur
+    //window events:load,resize,scroll,unload
+    //clipbord events:copy cut paste
+
+    //event listner:
+   // eventholder evenlisiner is a function that runs when the event occurs on the elemnts
+  
+  
+//   let button=document.getElementById("button")
+  
+
+//   button.onclick=function(event){
+//     console.log(`button is being clicked`)
+//   }
+//    button.addEventListener("click",onClick)//button.addeventlisner("click",(event)=>clg(button clicked)
+//      function onClick(){
+//         console.log(`button is clicked`)
+// //      }
+// let button=document.getElementById("button")
+//  button.addEventListener("click",(event)=>console.log(`{${input.name}:${input.value}}`))
+//mouseover
+//   let h1=document.getElementById("h1")
+// h1.addEventListener("mouseover",(event) =>{
+//   event.target.style.color="pink"
+//   event.target.style.backgroundColor="blue"
+// });
+// //mouseout event
+// h1.addEventListener("mouseout",(event) =>{
+//   event.target.style.color="pink"
+//   event.target.style.backgroundColor="blue"
+// });
+
+// let lor=document.getElementById("input")
+// lor.addEventListener("keypress",(event)=>{
+   
+//     lor.style.color="blue"
+//     lor.style.backgroundColor="pink"
+// })
+// lor.addEventListener("keydown",(event)=>{
+//    console.log(event.target.value)
+//     lor.style.color="pink"
+//     lor.style.backgroundColor="blue"
+// })
+let button=document.getElementById("button");
+let firstname=document.getElementById("firstname")
+let lastname=document.getElementById("lastname")
+let formObject={}
+    button.addEventListener("click",(event)=>{
+        formObject[`${firstname.name}`]=firstname.value;
+        formObject[`${lastname.name}`]=lastname.value;
+        console.log(formObject)
+    })
+
+  </script> 
+</body>
+</html>

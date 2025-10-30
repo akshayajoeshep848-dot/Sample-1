@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async-await </title>
+    <style>
+        :root{
+           /* --background-color: cadetblue; */
+           --width:500px;
+           --margin:10px;
+           --height:300px;
+           --padding:10px;
+
+        }
+        #conatiner{
+            width: 300px;
+            color: crimson;
+            background-color: darkcyan;
+            height: 150px;
+            padding: 10px;
+            margin: 10px;
+            border: 2px solid lightslategrey;
+            box-shadow: 0px 0px 5px 4px black;
+            border-radius: 5px;
+        }
+        .name{
+            background-color:darkviolet;
+            color: cyan;
+            width: 100px;
+            height: 30px;
+            box-shadow: 0 0 5px 5px papayawhip;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 6px;
+
+        }
+        .email{
+            width: 150px;
+            height: 30px;
+            box-shadow: 0 0 5px 5px rgb(213, 255, 249);
+            margin: 10px;
+            padding: 10px;
+            color: coral;
+            background-color: gold;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Asynchroces</h1>
+    <div id="conatiner"></div>
+    <script>
+        //an asyny function is a function that implicitly returns a promise this syntax is a syntactic
+        //sugr over promises desigend to improve readableity and simplefiy chaning asnchrounous operator
+        // async function hello() {
+        //     return "helo, Asynch!";
+        // }
+        // console.log(hello())
+        // // hello().then((value)=>console.log(value));
+        // hello().then(console.log)
+
+        //the await keyword
+        //only vaild inside asyn functiobn and is used to pause the execution of the function 
+
+let option={
+            medthod:"GET",
+            headers:{
+                "Content-Type":"application/json",
+            }
+        };
+        let postOptions={
+            method:"POST",
+            headers:{
+                "Content-Type":"applecation/json",
+                "Authorization":"Bearer token_name"
+            },
+            body:{}//json.stringify({})
+        }
+
+        async function fetchData(url) {
+            console.log("starting fetch data call....")
+            // let response=await fetch("https://dogapi.dog/api/v2/breeds");
+            let response=await fetch(url);
+            let data =await response.json();
+            // console.log(data)
+            // console.log(breeds)
+             
+            // return breed;
+            return data;
+        }
+
+        fetchData("https://jsonplaceholder.typicode.com/users/1").then((value)=>console.log(value))
+        // fetchData("https://dogapi.dog/api/v2/breeds").then((value)=>console.log(value))
+        console.log("end fetch data call....")
+        // fetchData().then((value)=>console.log(value))
+
+        let conatiner=document.getElementById("conatiner")
+        let name=document.createElement("p")
+        let email=document.createElement("p")
+       conatiner.appendChild(name);
+       conatiner.appendChild(email)
+        name.textContent="Akshaya"
+        email.textContent="akahaya@gmail.com"
+
+        name.classList.add("name")
+        email.classList.add("email")
+
+
+        
+    </script>
+</body>
+</html>

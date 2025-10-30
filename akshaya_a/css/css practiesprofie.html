@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Transactions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      display: flex;
+      /* justify-content: center; */
+      padding: 30px;
+      box-shadow: 2px 2px 12px 2px gray;
+      width:300px;
+      height: 400px;
+     align-items: center;
+     }
+     
+
+    .transaction {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 15px 0;
+    }
+    .user {
+      display: flex;
+      align-items: center;
+    }
+    .user img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 13px;
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+    }
+    .details span:first-child {
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .details span:last-child {
+      font-size: 12px;
+      color:gray;
+    }
+    .amount {
+      text-align: right;
+    }
+    .amount span {
+      display:block;
+    }
+    .up {
+      color: green;
+      font-weight: bold;
+    }
+    .down {
+      color: red;
+      font-weight: bold;
+    }
+    .date {
+      font-size: 12px;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <div >
+    <h2>RECENT TRANSACTIONS</h2>
+    <p style="color: gray;">Projects where development work is on completion</p>
+
+    <div class="transaction">
+      <div class="user">
+        <img src="./csspractice5.jpg" alt="">
+        <div class="details">
+          <span>Flicker</span>
+          <span>App improvement</span>
+        </div>
+      </div>
+      <div class="amount">
+        <span class="up">$45.234 </span>
+        <span class="date">12 Jan 2020</span>
+      </div>
+    </div>
+
+     <div class="transaction"> 
+      <div class="user">
+        <img src="./csspractice2.jpg" alt="">
+        <div class="details">
+          <span>Intoxica</span>
+          <span>Milestone</span>
+        </div>
+      </div>
+      <div class="amount">
+        <span class="down">$23.452 </span>
+        <span class="date">23 Jan 2020</span>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="user">
+        <img src="./csspractice1.jpg">
+        <div class="details">
+          <span>Digiwatt</span>
+          <span>Sales executive</span>
+        </div>
+      </div>
+      <div class="amount">
+        <span class="down">$78.001 </span>
+        <span class="date">4 Apr 2020</span>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="user">
+        <img src="./csspractice6.jpg" alt="">
+        <div class="details">
+          <span>Flicker</span>
+          <span>Milestone2</span>
+        </div>
+      </div>
+      <div class="amount">
+        <span class="up">$37.285 </span>
+        <span class="date">4 Apr 2020</span>
+      </div>
+    </div>
+
+    <div class="transaction">
+      <div class="user">
+        <img src="./csspractice4.jpg" alt="">
+        <div class="details">
+          <span>Flicker</span>
+          <span>App improvement</span>
+        </div>
+      </div>
+      <div class="amount">
+        <span class="down">$25.341 </span>
+        <span class="date">4 Apr 2020</span>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

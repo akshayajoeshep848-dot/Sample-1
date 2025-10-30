@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Asynchronus</title>
+</head>
+<body>
+    <h1>JS Asynchronus</h1>
+    <script>
+        // handler is an callback function
+        // console.log("start");
+        // // console.log("middle")   // for synchronus
+        // setTimeout(() =>console.log("middle"), 2000);   // for asynchronus
+        // console.log("end");
+
+
+        function getPizza (callback) {
+            console.log("ordering Pizza");
+            setTimeout(() => {
+                console.log("Pizza has Arrived");
+                callback();   
+            }, 2000);
+        }
+
+        function doDishes () {
+            console.log("Washing Dishes...");
+        }
+
+        getPizza(doDishes);
+        console.log("Watching Instagram while I wait...");
+    </script>
+</body>
+</html>

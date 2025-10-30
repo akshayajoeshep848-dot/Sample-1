@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid work</title>
+    <style>
+    .con1{
+        
+       display: grid;
+       grid:1fr 1fr 1fr/repet(3,maxmin(200px,1fr));
+     width: 300px;
+     height: 300px;
+        grid-template-areas: 
+        "header.  sidebar"
+        "  .    content ."
+         "footer. leftitem";
+         text-align: center;
+
+    }
+    .it{
+        background-color: deeppink;
+    }
+    .it1{
+        grid-area: header;
+    }
+    .it2{
+        grid-area: sidebar;
+    }
+    .it3{
+        grid-area: content;
+    }
+    .it4{
+        grid-area: footer;
+    }
+    .it5{
+        grid-area: leftitem;
+    }
+    </style>
+</head>
+<body>
+    <h1>Grid</h1>
+<div class="con1">
+<div class="it1 it">item1</div>
+<div class=" it2 it">item2</div>
+<div class=" it3 it">item3</div>
+<div class=" it4 it">item4</div>
+<div class=" it5 it">item5</div>
+</div>
+</body>
+</html>

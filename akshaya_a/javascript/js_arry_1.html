@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array types</h1>
+
+<!-- Array methods 
+ push(),pop(),shift(),unshift(),reverse(),slice(),splice(),foreach(),map(),reduce(),filter(),array.form
+ Array.isArray,concat -->
+
+
+
+    <script>
+
+
+
+
+        // let emptyArray =[];
+        // let fruits =["apple", "banana", "cheery" ]//array of string
+        // let numbers=[1,2,3,4,5];//array of numbers
+        // let mixedarray=[10,"helo",true,{name:"alice"},[6,7]];//array of mixed data types
+        // console.log( fruits.length,fruits[2]);
+        // console.log(mixedarray.length,mixedarray[3].name);
+        // console.log(mixedarray[4][0])
+
+      let student={
+        name:"Ntr",
+        age:35,
+        college:"bec",
+        id:'5415',
+        address:{
+            line1:" H.no 553, ",
+            line2:"jublee hils road no29",
+            city:"hyderbad",
+            state:"telengana",
+            pincode:500034,
+
+        },
+        movies:["devara","war2","temper",],
+        awards:[{
+           name:"best dancer",
+           type:"",
+           year:2013,
+           movies:""
+        },
+        {
+           name:"best actor",
+           type:"nandi award",
+           year:2013,
+           movies:"nana ki prematho"
+        },
+        {
+           name:"best singer",
+           type:"",
+           year:2023,
+           movies:"ramayavastavaya"
+        }
+    ]
+      }
+
+    //   console.log( student.movies[0],student.movies[1]);
+    //   console.log( student.address);
+    //   console.log(student.awards[0].name)
+    //   console.log(student.movies[1])
+      //create array using constrstor
+      let arr1=new Array();//this will create empty array
+
+      let fruits=  ["apple","banana","cheery"];
+      fruits.push("mango","papaya");
+      // console.log(fruits)
+      let fruit1=["apple","banana","papaya"]
+      fruit1.unshift("cherry");
+      // console.log(fruit1);
+      fruit2=["apple","banana","cheery"];
+      fruit2.shift("apple","banana");
+      // console.log(fruit2);
+      fruit3=["apple","banana","cherry","mango"];
+      fruit3.reverse("cherry");
+      // console.log(fruit3)
+      fruit4=['apple','banana','cheery','mango'];
+      fruit4.pop();
+      // console.log(fruit4)
+      
+      let arr3=new Array(4);
+      
+      let name="akshaya";
+      // console.log(name.split("").reverse().join(""));
+      let name2="prabas";
+      for (let i=0;i<name.lenght;i++){
+        // console.log(name.split("").shift().join(""))
+      }
+      // console.log(name2);
+
+
+      
+      
+      //print arrays
+    //   console.log(arr1);
+    //   console.log(arr2);
+    //    console.log(arr3);
+    //   console.log(arr3[1]);
+    //   arr3[0]="kalakand";
+    //   arr3[1]="kaju laddu";
+     
+    //join:
+    let word=['helo','Akshaya'];
+     
+    let jo=word.join('').split('').reverse().join();
+console.log( typeof jo, jo)  
+ let num=[1,2,3,4,5]
+ nm=num.join(",")
+ console.log(typeof nm,  nm)    
+    </script>
+</body>
+</html>

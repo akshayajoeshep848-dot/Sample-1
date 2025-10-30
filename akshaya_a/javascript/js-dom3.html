@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <body>
+ <div class="div">conainer
+    <div class="elements fruit"> fruit1</div>
+    <div class="elements fruit"> fruit2</div>
+    <div class="elements  fruit"> fruit3</div>
+    <div class="elements  fruit"> fruit4</div>
+    <div class="elements  fruit"> fruit5</div> 
+     <button onclick="getfruits(fruitsArray,fruits)">getfruits</button>
+    <div class="div">
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <div class="elemnt-vegtables">vetables</div>
+      <button onlick="getvegtables(vegArray,vegtables)">get vegtables</button>
+    </div>
+    <script>
+      
+      
+      let fruits=['apple','banana','cherry','papaya','dragon','watermelon']
+        let fruitscollection=document.getElementsByClassName("elements")
+      console.log(fruitscollection)
+    let fruitsArray=  Array.from(fruitscollection)
+     fruitsArray.forEach((element,index)=>(element.innerText=fruits[index]))
+     console.log(fruitsArray)
+
+  function getfruits(arr1,arr2){
+ arr1.forEach((element,index)=>(element.innerText=arr2[index]))
+ arr1.forEach((element,index)=>(element.style.color="red"))
+ arr1.forEach((element,index)=>(element.style.backgroundColor="blue"))
+  arr1.forEach((element,index)=>(element.style.padding="10px"))
+  arr1.forEach((element,index)=>(element.style.margin="10px"))
+  arr1.forEach((element,index)=>(element.style.width="100px"))
+ }
+let vegtables=['tomato','ladysfinger','dondakay','beetroot','carrot','berkay','sorkay','cabbge','califlover','potato']
+let vegcollection=document.getElementsByClassName("elemnt-vegtables")
+let vegArray=Array.from(vegcollection)
+vegArray.forEach((element,index)=>(element.innerText=vegtables[index]))
+console.log(vegArray)
+function getvegtables(arr1,arr2){
+ arr1.forEach((element,index)=>(element.innerText=arr2[index]))
+arr1.forEach((element,index)=>(element.style.color="pink"))
+ arr1.forEach((element,index)=>(element.style.backgroundColor="aqua"))
+  arr1.forEach((element,index)=>(element.style.padding="10px"))
+  arr1.forEach((element,index)=>(element.style.margin="10px"))
+  arr1.forEach((element,index)=>(element.style.width="100px"))
+}
+
+    </script>
+ </div>
+</body>
+</html>

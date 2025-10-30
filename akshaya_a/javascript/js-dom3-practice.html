@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>object in dom</title>
+  <button onclick="getitems()">vegtables</button>
+  <button onclick="getitem(fruit)">fruits</button>
+</head>
+
+<body>
+
+  <script>
+
+let fruit=[
+  'papaya',
+  'apple',
+  'banan',
+  'cherry',
+  'grape',
+  'watermwlon'
+]
+
+let orderList=document.createElement("ol")
+function getitem(fruit){
+for(let i=0;i<fruit.length;i++){
+  itemlist=document.createElement("li");
+  itemlist.innerText=fruit[i];
+  orderList.append(itemlist)
+  itemlist.style.color="pink"
+  itemlist.style.backgroundColor="blue"
+  itemlist.style.width="200px"
+  itemlist.style.margin="10px"
+  itemlist.style.textAlign="center"
+}
+}
+document.body.append(orderList)
+
+
+
+    let vegtables = [
+      'potato',
+      'lemon',
+      'tomato',
+      'chilli',
+      'cucumber',
+      'snakegrourd'
+    ]
+
+
+    let orderlist = document.createElement('ol');
+    function getitems(vegetables) {
+
+      for(let i = 0; i < vegtables.length; i++) {
+        let listItem = document.createElement("li")
+        listItem.innerText = vegtables[i];
+        orderlist.append(listItem);
+      }
+       listItem.style.backgroundColor="pink"
+       listItem.style.color="skyblue"
+       listItem.style.margin="10px"
+       listItem.style.width="200px"
+       listItem.style.textAlign="center"
+
+
+    }
+    // getitems(vegetables)
+    document.body.append(orderlist)
+  </script>
+</body>
+
+</html>

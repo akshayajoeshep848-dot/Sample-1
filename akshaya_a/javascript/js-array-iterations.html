@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array iteration</title>
+</head>
+<body>
+    <h1>array iterations</h1>
+    <script>
+        //for each();map() ;filter() ;reduce() ;some() ;every() ;find() ;and findindex().
+        //h2{foreach} array.foreach(callback)
+    //  let array=[1,2,3,4,5];
+    //  array.forEach(print);
+    //  function print(num,index,arr){
+    //     console.log(`the elemnet at index: ${index} is ${num}`)
+    //     arr[index]=index*2;
+    //     arr[num]=index*index;
+    //  }
+    //  console.log(array)
+
+                    //for each():
+
+    // let array=[1,3,4,6,3]
+//     //  console.log(array);
+//       array.forEach((value,index,array) =>{
+
+//     //  (array[index]=index**2)
+//       (array[index]=value*2)
+//       (array[index]=value*0.5)
+//     //   (array[value]=value*2)
+//       console.log(array);
+//       }) 
+     
+                            //map()
+//    let newarray= array.map((num) =>  num*2);
+    //  console.log(newarray) ;
+    //  console.log(array) 
+//map gives array:new array
+
+
+
+    
+    //filter
+//     let num=[1,2,3,4,5,6,7]
+//     let even=num.filter((num)=> num%2!==0);
+
+// console.log(num)
+
+        let number=[1,2,3,4,5]
+        // number.forEach((array)=> console.log(number))
+            
+       //void returns undefind
+        
+
+
+
+                       // reduce()
+    let num=[1,2,3,4]   ;
+    let sum=num.reduce((accumlater,current)=>accumlater+current)  
+    // console.log(sum*sum)  
+
+
+                        //flattening an array
+
+                //let nestarrat=[[1,2],[3,4][5,6],[7]]
+               //let flatarray=nestedarray.reduce((iv,cv)=>iv.concat(cv),[]) ;
+               //console.log(flatarray)
+
+    //  let arra1=[[1,2],[3,4],[5,6]] ;
+    //  let arra2=arra1.reduce(
+    //     (value,index)=>value.concat(index),[])
+    //  console.log(arra2)
+    //  let arra2 =[2,4,6,]
+    //  let arra3=[1,4,33,2] 
+    //  let arra4=[]                
+    
+
+    let nums=[1,2,3,4,5]
+    // console.log(nums)
+    // console.log(nums.toString())
+
+
+    //creating  array
+    //array constructor:new array
+
+    //concat: returns a new array by merging two or more arrays the orginal array are not modifid
+    let array1=['a','b',['e',['o'],'f'],['g','h'],['i']]
+    let array2=['c','d']
+        
+        let array3=array2.concat('e');
+
+        console.log(array3)
+
+     //flatten array
+     console.log(array1)
+     let flatArray=array1.reduce(
+        (intialvalue,currentvalue)=>intialvalue.concat(currentvalue),
+     []
+    );
+    console.log(flatArray)
+    // let   con=array1.concat(array2)
+    // let con1=array2.concat(array1)
+    // console.log(con)
+    // console.log(con1)
+
+    
+
+    </script>
+</body>
+</html>

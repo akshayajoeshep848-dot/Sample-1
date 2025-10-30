@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes 1</title>
+</head>
+</body>
+
+    <ul id="ul">
+        unorderlist
+        <li id="li-1">item 1</li>
+        <li id="li-2">item 2</li>
+        <li id="li-3">item 3</li>
+        <li id="li-4">item 4</li>
+    </ul>
+    <div id="div"></div>
+    <script>
+
+
+let div=document.getElementById("div");
+// div.textContent="hiii"
+let ancore=document.createElement("a");
+ancore.setAttribute("href","https://www.google.com");
+ancore.textContent="google";
+
+div.append(ancore);
+        //propertes to navigate the tree
+        let ul=document.getElementById("ul")
+    //    console.log(ul.parentNode);// the parent node
+    //     console.log(ul.childNodes);//a nodelist of child nodes(includeing text nodes)
+    //     console.log(ul.children);//an htmlcollection of child elements(ignores text nodes)
+    //     console.log(ul.firstChild);
+    //     console.log(ul.lastChild);//child nodes
+    //     console.log(ul.firstElementChild);
+    //     console.log(ul.lastElementChild);//childelements
+    //     console.log(ul.previousSibling);
+    //     console.log(ul.nextSibling);//adacent nodes(including next nodes)
+    //     console.log(ul.previousElementSibling);//adjcent element node
+    //     console.log(ul.nextElementSibling);//adjecent element nodes
+    ul.firstElementChild.style.backgroundColor="blue"
+     ul.lastElementChild.style.backgroundColor="blue"
+     ul.children[2].innerText="hello"
+     ul
+     ul.children[3].style.color="pink"
+    </script>
+</body>
+</html>

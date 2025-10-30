@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selecting dom elementts</title>
+</head>
+<body>
+    <h1 id="head-1">selecting dom elemnts</h1>
+    <div id="div-1"></div> 
+
+    <div id="div1">Lorem ipsum dolor sit amet.</div><br>
+    <div class="div2"> Lorem ipsum dolor sit amet.</div><br>
+
+    <input type="text" id="in1"  value="AKSHAYA">
+    <script>
+      
+        let head1=document.getElementById("head-1");
+        console.log(head1.innerText);
+        head1.innerText="hello"
+        // console.log(head1)
+
+        // let div1=document.getElementById("div-1")
+        // console.log(div1)
+        // div1.innerHTML="<p>this is p tag <p/>"
+
+            let input1=document.getElementById("in1");
+           
+            // console.log(input1.value)
+
+
+            //write a fun to print sum of 2num in html
+
+            // let nm= Number(  prompt("enter 1 num"))
+            // let nm2= Number( prompt("enter 2 num"))
+            // function sum(a,b){
+            //     return a+b;
+
+            // }
+            // let div1=document.getElementById("div-1")
+            // div1.innerText=sum(nm,nm2);
+
+            //doucmnet .query selector
+            let div1=document.querySelector("#div1")
+            console.log(div1.innerHTML)
+            div1.innerText='this is id  selector'
+            div1.style  .color="green"
+            div1.style.backgroundColor="brown"
+
+            let div2=document.querySelector(".div2")
+            console.log(div2.innerText)
+            div2.innerText='this is class seclocter'
+            div2.style.color="blue"
+            div2.style.backgroundColor="pink"
+
+
+
+
+        //example with an elenmt
+        // let hed=document.createElement('h1');
+        // console.log('node typeof h1',hed.nodeType);
+
+        //example 
+        // let hea=documnent.createTextNode('hello');
+        // console.log('node type of text:',hea.nodeType);
+
+        // let comment=document.createcommont('this is a comment')
+        // console.log('node type of comment:',comment.nodetype);
+
+    </script>
+</body>
+</html>

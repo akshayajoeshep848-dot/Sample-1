@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absoult position</title>
+    <style>
+        .parent{
+            position: relative;
+            background-color: dodgerblue;
+            height:50vh;
+            z-index: -2;
+        }
+        .elemnt{
+            height:100px;
+            width:90px;
+        }
+        .elements1{
+            position: absolute; 
+            top:-10px;
+            left:250px;
+            background-color: hotpink;
+            z-index: 1;
+        }
+         .elements2{
+            
+         background-color: darkgreen;
+          position:absolute;
+          right:10px;
+          bottom: 90px;
+          
+        }
+        .elements3{
+            position: absolute;
+            left:300px;
+            z-index: -1;
+            background-color: greenyellow;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>absoulte postion</h1>
+    <div class="parent">
+        <div class="elemnt elements1">elements 1</div>
+        <div class="elemnt elements2">elements 2</div>
+        <div class="elemnt elements3">elements 3</div>
+    </div>
+</body>
+</html>

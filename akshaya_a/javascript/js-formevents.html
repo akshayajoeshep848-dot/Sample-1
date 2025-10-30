@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form events</title>
+</head>
+<body>
+    <h1>Regesterform</h1>
+    <button type="submit" id="btn">Sudmit</button>
+    <button type="reset" id="btn">Reset</button>
+    <form action="submit" id="form"></form>
+         <label for="firstname" id="label1" >Firstname:</label>
+        <input type="text" id="firstname" name="firstname">
+        <label for="lastname" id="label2">Lastname:</label>
+        <input type="text" id="lastname" name="lastname">
+   <select name="gender" id="gender">
+<option value="Female">Gender</option>
+<option value="Male">Male</option>
+<option>Female</option>
+
+   </select>
+    <script>
+        //input 
+        let button=document.getElementById("btn")
+       let formObject={}
+       let formArray=[]
+let firstname=document.getElementById("firstname")
+
+firstname.addEventListener("change",(event)=>{
+    console.log(event.target.value)
+    formObject[event.target.name]=event.target.value;
+    console.log(formObject)
+})
+
+firstname.addEventListener("focus",(event)=>{
+    event.target.style.backgroundColor="blue"
+    // event.target.style.color="green"
+    event.target.style.border="5px solid yellow"
+    // event.target.style.borderRaduis="5px"
+    event.target.style.padding="5px"
+
+});
+firstname.addEventListener("blur",(event)=>{
+event.target.style.color="red"
+event.target.style.backgroundColor="auqa"
+})
+
+
+let lastname=document.getElementById("lastname")
+lastname.addEventListener("change",(event)=>{
+    console.log(event.target.value)
+    formObject[event.target.name]=event.target.value;
+    console.log(formObject)
+})
+let gender=document.getElementById("gender")
+gender.addEventListener("change",(event)=>{
+console.log(event.target.value)
+formObject[event.target.name]=event.target.value;
+console.log(formObject)
+})
+
+
+//form
+let form=document.getElementById("form")
+form.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    console.log("sudmited")
+    formOject()
+    formArray()
+    console.log(formArray)
+    form.reset();
+})
+form.addEventListener("reset",(event)=>{
+    console.log("reset the form")
+  
+    form.reset();
+})
+
+
+    
+
+
+    </script>
+</body>
+</html>

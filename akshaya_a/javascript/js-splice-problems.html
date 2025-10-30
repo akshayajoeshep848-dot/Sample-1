@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js splice prctices</title>
+</head>
+<body>
+    <h1>js-splice-practice</h1>
+    <script>
+        //remove an element
+        let  list=[1,2,3,4,5]
+        rev= list.splice(2,1);
+        // console.log(rev)
+        // console.log(list)
+        //add element add6 b/w 5&7
+        let num=[1,2,3,4,5,7,8]
+        add=num.splice(5,0,6)
+        console.log(add);
+        console.log(num)
+
+        //replace 4 with 40
+        let number=[1,2,3,4,5]
+        rep=number.splice(3,1,40)
+        console.log(number)
+
+        //remove elemnt 20,30
+        let ele=[10,20,30,40,50]
+        rev=ele.splice(2,2)
+        console.log(ele)
+
+
+        // add a &b 
+        let alp=["c","d","e"]
+    add=alp.splice(0,0,"a","b")
+    console.log(alp)
+
+
+
+    //: Replace banana and orange with grape and kiwi in the array ['apple', 'banana', 'orange', 'pear'].
+        let fruit=['apple','banana','orange','pear']
+        replac=fruit.splice(1,2,'grape','kiwa')
+        console.log(fruit)
+
+
+        // Remove the last element from the array ['one', 'two', 'three']
+        let arr=['one','two','three']
+        nm=arr.splice(-1,1)
+        console.log(arr)
+
+
+        //Remove all elements from index 2 to the end of the array [1, 2, 3, 4, 5]
+        let ind=[1,2,3,4,5]
+        re=ind.splice(2)
+        console.log(ind)
+
+        // Add d at the end of the array ['a', 'b', 'c'] without using push()
+    </script>
+    <script>
+        let arr1=["a","b","c"]
+        array=arr1.splice(2,0,"d")
+        console.log(array)
+
+    </script>
+</body>
+</html>

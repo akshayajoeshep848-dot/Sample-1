@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data types of js</title>
+</head>
+<body>
+    <h1>Js datatypes</h1>
+    <script>
+       
+        let age =22; 
+        let bool=true;
+        let unDefined =undefined;
+        let firstname="akshaya";
+        let lastname=`bheemala`;
+        let sym =Symbol();
+         
+        console.log( "firstname:", typeof firstname);
+        console.log(  " bool:", typeof bool);
+        console.log("unDefined:", typeof unDefined);
+        console.log( "sym:", typeof sym);
+        console.log("lastname:", lastname);
+        console.log("age:", typeof age);
+        //template literal
+        console.log(`my name is ${firstname}${lastname}, and my age ${age}`);
+        //string concatentation
+        console.log("my name is "+  firstname+" "   +lastname+",and my age",age);
+        //comma separtated values
+        console.log("my name is",firstname,lastname, "and my age is",age);
+        let fullname1=firstname+" "+lastname;
+        let fullname2=`${firstname} ${lastname}`;
+       
+         console.log("firstname:", typeof fullname1);
+         console.log("lastname:", typeof fullname2);
+
+         let address1="havya womens pg";
+         let address2="roadnum3,kphb phase 1,";
+         let address3="kukatpally,hyderabad,telngana";
+         console.log("string concatation:" ,  address1, " " +" ",  address2 +" ", address3); 
+         console.log("templet literal:", `${address1} ${address2} ${address3}`);
+
+
+    </script>
+    
+</body>
+</html>

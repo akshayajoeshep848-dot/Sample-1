@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC age validation</title>
+</head>
+<body>
+    <h1>UPSC age validation</h1>
+    <script>
+        //general 21to32
+        //sc/st 21 to 37
+        //obc  21 to 35
+        //pd 21 to 42
+        
+        let caste=prompt("enter your valid caste")
+        let age=prompt("enter your valid age")
+        if (caste=="general" ){
+
+            console.log(` you are in ${caste}  caste`);
+            if (age<0|| age>140){
+                console.log("enter your valid age");
+
+            }else if(age>=0 && age <21){
+console.log("you can write exam")
+            }else if(age>=21 && age<=32){
+
+            }console.log("you are  not elibile to write exam");
+        
+        } else{
+             console.log(`you have excedted your age limit for ${caste} caste`);
+        }
+         if(caste =="sc"|| caste =="st"){
+             console.log(` you are in ${caste}  caste`);
+            if (age<0|| age>140){
+                console.log("enter your valid age");
+
+            }else if(age>=0 && age <21){
+console.log("you are eliblibe to write exam")
+            }else if(age>=21 && age<=37){
+
+            }console.log("you are  not elibile to write exam");
+        
+        } else{
+             console.log(`you have excedted your age limit for ${caste} caste`);
+console.log(`your are  ${caste} caste` );
+        } if( caste=="obc"){
+             console.log(`your are in ${caste} caste`);
+            if (age<0|| age>140){
+                console.log("enter your valid age");
+
+            }else if(age>=0 && age <21){
+console.log("you are eliblibe")
+            }else if(age>=21 && age<=35){
+
+            }console.log("you are  not elibile to write exam");
+        
+        } else{
+             console.log(`you have excedted your age limit for ${caste} caste`);
+
+        } if (caste=="pd"){
+            console.log(`you are in ${ caste} caste`);
+            if (age<0|| age>140){
+                console.log("enter your valid age");
+
+            }else if(age>=0 && age <21){
+console.log("you are eliblible")
+            }else if(age>=21 && age<=42){
+
+            }console.log("you are not elibile to write exam");
+        
+        } else{
+             console.log(`you have excedted your age limit for ${caste} caste`);
+        }
+        
+    </script>
+</body>
+</html>

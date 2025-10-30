@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element</title>
+</head>
+<body>
+    <h1>dom.js.createElement()method</h1>
+    <div id="container"></div>
+
+
+    <script>
+
+//         //document.createElement()
+//         //methods of html
+//         //append any item last we add
+
+//         //create h1 element
+//         let heading2=document.createElement("h2");
+//         heading2.innerText='h2 created by createElemnet method';
+//         document.body.append(heading2);
+
+//         let container=document.getElementById("container");
+//         container.append(heading2)
+
+//         //creating list element
+//         //append bottom to top
+//         let orderlist=document.createElement("ol")
+//         let listitem1=document.createElement("li")
+//         listitem1.innerText='item1';
+//         orderlist.append(listitem1);
+//         document.body.append(orderlist)
+// //styling
+//         document.body.style.backgroundColor=" blue"
+//         document.body.style.color="gold"
+// //crate 5elemnts 5times:
+// //write a for loop to create 5li element and append
+// let orderList=document.createElement("ol")
+// for(let i=0;i<5;i++){
+//     let listItem=document.createElement("li")
+//     listItem.innerText=`Item ${i+1}`;
+//     orderList.append(listItem);
+
+// }
+// document.body.append(orderList)
+
+
+
+let fruits=[
+    "apple",
+    "banana",
+    "cheery",
+    "papaya",
+    "watermwlon",
+    "kiwa",
+    "sapota",
+    "mango",
+    "orange",
+    "lemon"
+]
+let orderList=document.createElement("ol")
+function getitems(arr){
+
+    for(let i=0;i<arr.length;i++){
+    let listItem=document.createElement("li")
+    listItem.innerText=arr[i];
+    orderList.append(listItem);
+  }
+}
+getitems(fruits);
+document.body.append(orderList);
+
+
+
+let vegtables=[
+    'dondakay',
+    'ladys finger',
+    'potato',
+    'kakarkay',
+    'sorkay',
+    'brkay',
+    'tomato',
+    'chickudukay',
+    'potalay',
+    'doskay'
+]
+function getitems(arr1){
+ 
+ for (let i=0;i<arr1.length;i++){
+    let orderList=document.createElement("ol")
+    let listItem =document.createElement('li');
+   listItem.innerText=arr1[i];
+   listItem.style.color="pink"
+   orderList.append(listItem)
+ }
+ }
+ getitems(vegtables);
+ document.body.append(orderList);
+ 
+
+
+
+
+
+
+    </script>
+</body>
+</html>

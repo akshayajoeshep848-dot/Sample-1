@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>examplet</title>
+</head>
+<body>
+    <h1>examples</h1>
+    <script>
+        //check if a person age >18
+        //then check if they have license
+        //has -> print eligible to drive
+        // dont have license -> not eligible to drive(no license)
+        //age<18 -> print -> not eligible to drive (to young)
+    let age=prompt("enter age")
+    let lics=prompt("enter 'yes' if you have licesence or 'no' if you dont have licences ")
+    if(age>=18 && age<=70){
+        if(lics=='yes'){
+            console.log("elibilbe to drive");
+        }else if(lics=='no'){
+            console.log("not eliblible to drive");
+        }else{
+            console.log("invalid");
+        }
+    }else if(age>=0 && age <18){
+            console.log("not eligible to drive")
+    }else if(age>70 && age<140){
+        console.log("you are to old to drive so dont drive")
+    }else {
+        console.log("enter valid age")
+    }
+
+    //check ug or pg
+    //check year 4 or 2
+    //1year -10%,15%,20%
+    //2year -10%,15%,22%
+    //3year -10%,15%,25%
+    //4year -20%,25%,30%
+    //if pass%
+
+    //check if pass %
+    //70-80 -10%
+    //80-90 -15%
+    //90-100 -25%
+   
+    </script>
+</body>
+</html>

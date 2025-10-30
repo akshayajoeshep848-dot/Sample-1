@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form event function</title>
+</head>
+<body>
+    <h1>form for events</h1>
+    <button id="button">clickme</button>
+
+    <div>
+        <label for="firstname" >Firstname</label>
+        <input type="text" id="firstname">
+    </div>
+    <div>
+        <label for="lastname">Lastname</label>
+        <input type="text" id="lastname">
+    </div><br>
+    <div>
+        <label for="email"> Email :</label>
+        <input type="email" id="email">
+    </div><br>
+    <div>
+        <label for="contact">Contact</label>
+        <input type="number" id="contact">
+    </div><br>
+    <div>
+        <label for="age">Age</label>
+        <input type="number" id="age">
+    </div>
+
+    
+    <script>
+        let button=document.getElementById("button")
+        let label1=document.getElementById("firstname")
+        let label2=document.getElementById("lastname")
+        let label3=document.getElementById("email")
+        let label4=document.getElementById("contact")
+        let label5=document.getElementById("age")
+        let formObject={}
+        button.addEventListener("click",(event)=>{
+             formObject[`${firstname.name}`]=firstname.value;
+        formObject[`${lastname.name}`]=lastname.value;
+        formObject[`${email.name}`]=email.valu;
+        formObject[`${contact.name}`]=contact.value;
+        formObject[`${age.name}`]=age.value;
+        console.log(formObject)
+        })
+    </script>
+</body>
+</html>

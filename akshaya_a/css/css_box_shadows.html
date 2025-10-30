@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css box shadow</title>
+    <style>
+        div{
+            background-color:aqua;
+            padding: 20px;
+            width: 200px;
+            height: 20px;
+            text-align:center;
+            border:3px double darkorange;
+            box-shadow:20px 10px 10px 5px green
+
+        }
+        div:hover{
+            box-shadow: 5px 5px 5px 10px palegreen ;
+        }
+        div:active{
+            transform: scale(0.90) translate3d(10px 5px);
+        }
+        .ak{
+            background-color: rgb(29, 7, 168);
+            color: magenta;
+            border:3px double rgb(245, 255, 249);
+            border-radius: 30px  30px 80px 0px;
+            box-shadow: 5px 5px 10px purple;
+            margin:100px 30px 50px 40px;
+            padding: 20px 30px 10px 10px;
+        }
+        .ak:hover{
+            box-shadow: 0px 0px 30px 40px blue;
+            border: 3px  solid peachpuff;
+        }
+        .ak:active{
+            transform: matrix3d(50px);
+        }
+        .bk{
+            background-color: burlywood;
+            color: crimson;
+            box-shadow:20px 10px 20px 10px;
+            border:3px  dotted chocolate;
+            padding: 10px 20px 30px ;
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+element
+</div>
+<p class="ak">this is akshaya im from thiruvuru and im  recently completed my graduation  at budampadu in the stream of artifitial inteligence and data science</p>
+
+<p  class="bk">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit illo commodi culpa quos, hic provident sunt maiores ut totam voluptate?</p>
+</body>
+</html>

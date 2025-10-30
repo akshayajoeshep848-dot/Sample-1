@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>templet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+       
+       
+       .di{
+         background-color: rgb(9, 9, 9);
+            color: antiquewhite;
+            width: 600px;
+            height: 50px;
+            display: flex;
+            justify-content:space-around;
+        
+            justify-items: end;
+            text-align: center;
+            place-content: center;
+            gap:20px;
+       }
+         .di::before{
+            content: "\2609";
+            place-content: center;
+            justify-items: first baseline;
+            justify-content: start;
+         }   
+        
+        
+       
+        .b1{
+            background-color: white;
+            color: aqua;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            place-content: center;
+            border-radius: 5px;
+        }
+        .du{
+            background-color: rgb(226, 43, 64);
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            place-content: center;
+            border-radius: 5px;
+        }
+        
+       
+        
+        
+        .di2{
+            background-color: rgb(49, 49, 237);
+            color: antiquewhite;
+            width: 600px;
+            height: 50px;
+            display: flex;
+           
+            gap:3px;
+            
+            
+            place-content: center;
+        }
+        .t{
+            position: relative;
+            right:150px
+            
+        }
+        .t::before{
+            content: "\2609";
+
+        }
+            
+        
+        
+        .di3{
+            background-color: aqua;
+            width: 600px;
+            height: 60px;
+            text-align: center;
+            place-content: center;
+            display: flex;
+          gap:30px;
+          color: white;
+         
+          
+        }
+        
+             
+           .di3::before{
+            content: "\2609";
+            place-content: center;
+            position: relative;
+            right:60px;
+            
+           } 
+        
+        .mw{
+            position: relative;
+            right:90px;
+            top:5px;
+        }
+        .s{
+            background-color: aqua;
+            color: white;
+            height: 30px;
+            box-decoration-break:none;
+            text-align: center;
+            place-content: center;
+            border:none;
+            
+        }
+        .si{
+             width: 100px;
+            height: 30px;
+            text-align: center;
+            place-content: center;
+            border-radius: 5px;
+            color: antiquewhite;
+            background-color: blue;
+            margin: 0px 0px 0px 0px;
+        }
+        
+        .di4{
+            background-color: rgb(239, 15, 67);
+          width:600px;
+            height: 60px;
+            text-align: center; 
+            /* place-content: center; */
+            display: flex;
+          gap:30px;
+          color: white; 
+         
+        }
+        .di4::before{
+            content: "\2609";
+            position: relative;
+            top:20px;
+            
+
+        }
+        .t{
+            position: relative;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>navigation</h1>
+    <div class="di">
+    <p class="m">Miri
+        UI
+    </p>
+    
+   <p > home &nbsp;
+    templet &nbsp;
+    pages &nbsp;
+    Elements</p> &nbsp;
+    <p class="b1">Buynow</p> 
+    <p class="du">Discover</p>
+</div><br><br>
+<div class="di2">
+     <p class="t">Miri
+        UI
+    </p>
+    
+   <p> home &nbsp;
+    templets &nbsp;
+    pages &nbsp;
+    Elements</p>
+
+</div><br><br>
+<div class="di3">
+    <p class="mw">
+        Miri
+        UI
+    </p>
+    
+    <p>home</p>
+    
+       <select class="s">
+        <option> templet</option>
+        <optgroup label="ces"></optgroup>
+        
+    </select>
+       <select class="s">
+        <option> pages</option>
+        <optgroup label="ces"></optgroup>
+        
+    </select>
+    <p class="si">sigin</p>
+    
+</div><br>
+<div class="di4">
+<p> Miri UI</p>
+
+</div>
+</body>
+</html>

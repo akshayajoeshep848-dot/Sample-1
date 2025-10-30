@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hsptl form</title>
+    <style>
+      .button{
+        margin: 0px;
+        place-content: center;
+        position: relative;
+       left:70px;
+       top:40px;
+       color: rgb(13, 0, 255);
+       border: none;
+       border-radius: 5px;
+       background-color: darkgray;
+       
+      }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <script>
+        //create form
+        let div= document.getElementById("main")
+        // body.append(div)
+        div.style.height="690px"
+        div.style.width="500px"
+        div.style.border="3px solid aqua"
+        div.style.borderRadius="5px"
+        div.style.boxShadow="2px 2px 5px 2px"
+        div.style.margin="20px 10px 20px 10px"
+        div.style.padding="20px"
+        div.style.backgroundColor="lightpink"
+        let head=document.createElement("h2")
+        div.append(head)
+        head.textContent="New Patient Admit form"
+        // head.style.backgroundColor="pink"
+        head.style.color="darkblue"
+        head.style.width="300px"
+        head.style.padding="10px"
+        head.style.margin="10px"
+
+    let he=document.createElement("hr")
+    div.append(he)
+
+        //inp1
+        let label1=document.createElement("label")
+        div.append(label1)
+        
+        label1.textContent="Patient Name:"
+         let gap=document.createElement("br")
+         div.append(gap)
+        let inp1=document.createElement("input")
+        // inp1.placeholder="enter name"
+        div.append(inp1)
+      label1.style.color="blue"
+      label1.style.fontSize="large"
+       inp1.style.backgroundColor="aqua"
+       inp1.style.border="none"
+       inp1.style.borderRadius="5px"
+    //    inp1.style.fontSize="large"
+       inp1.style.padding="5px"
+     inp1.setAttribute("id","label1")
+       //inp2
+       let gap2=document.createElement("br")
+      div.append(gap2)
+       let gap4=document.createElement("br")
+      div.append(gap4)
+       let label2=document.createElement("label")
+       label2.textContent="Register check Id:"
+       div.append(label2)
+      label2.style.fontSize="large"
+        label2.style.color="blue"
+        let gap3=document.createElement("br")
+        div.append(gap3)
+        let inp2=document.createElement("input")
+        div.append(inp2)
+       inp2.style.padding="5px"
+        inp2.style.backgroundColor="aqua"
+        inp2.style.border="none"
+      inp2.style.borderRadius="5px"
+
+        let gap5=document.createElement("br")
+        div.append(gap5)
+        let gap6=document.createElement("br")
+        div.append(gap6)
+        //inp3
+        let label3=document.createElement("label")
+        div.append(label3)
+        label3.textContent="Health Care Number:"
+        label3.style.color="blue"
+        label3.style.fontSize="large"
+        let gap7=document.createElement("br")
+        div.append(gap7)
+
+        let inp3=document.createElement("input")
+        div.append(inp3)
+        inp3.style.border="none"
+        inp3.style.backgroundColor="aqua"
+        inp3.style.padding="5px"
+      inp3.style.borderRadius="5px"
+        //inp4
+let gap8=document.createElement("br")
+div.append(gap8)
+let gap9=document.createElement("br")
+div.append(gap9)
+let lable4=document.createElement("label")
+div.append(lable4)
+lable4.textContent="Registeration Date:"
+lable4.style.color="blue"
+lable4.style.fontSize="large"
+let gap10=document.createElement("br")
+div.append(gap10)
+let inp4=document.createElement("input")
+div.append(inp4)
+inp4.setAttribute("type","date")
+inp4.style.border="none"
+inp4.style.backgroundColor="aqua"
+inp4.style.color="white"
+inp4.style.padding="5px"
+inp4.style.borderRadius="5px"
+
+let gap11=document.createElement("br")
+div.append(gap11)
+let gap12=document.createElement("br")
+div.append(gap12)
+//inp5
+let label5=document.createElement("label")
+div.append(label5)
+label5.textContent="Registation Time:"
+label5.style.color="blue"
+label5.style.fontSize="large"
+let gap13=document.createElement("br")
+div.append(gap13)
+let inp5=document.createElement("input")
+div.append(inp5)
+inp5.setAttribute("type","time")
+inp5.style.backgroundColor="aqua"
+inp5.style.color="white"
+inp5.style.padding="5px"
+inp5.style.border="none"
+inp5.style.borderRadius="5px"
+
+//inp6
+
+let gap14=document.createElement("br")
+div.append(gap14)
+let gap15=document.createElement("br")
+div.append(gap15)
+let age=document.createElement("label")
+div.append(age)
+age.textContent="Patient Age:"
+age.style.fontSize="large"
+age.style.color="blue"
+let gap18=document.createElement("br")
+div.append(gap18)
+let inp6=document.createElement("input")
+div.append(inp6)
+inp6.style.border="none"
+inp6.style.backgroundColor="aqua"
+inp6.style.borderRadius="5px"
+inp6.style.padding="5px"
+
+//inp7
+let gap24=document.createElement("br")
+div.append(gap24)
+let gap25=document.createElement("br")
+div.append(gap25)
+let address=document.createElement("label")
+div.append(address)
+address.textContent="Address:"
+address.style.color="blue"
+address.style.fontSize="large"
+ let gap20=document.createElement("br")
+ div.append(gap20)
+let inp7=document.createElement("input")
+div.append(inp7)
+inp7.setAttribute("id","address")
+inp7.style.backgroundColor="aqua"
+inp7.style.border="none"
+inp7.style.borderRadius="5px"
+inp7.style.padding="15px"
+
+//inp8
+let gap90=document.createElement("br")
+div.append(gap90)
+let gap99=document.createElement("br")
+div.append(gap99)
+let gender=document.createElement("label")
+div.append(gender)
+gender.textContent="Gender:"
+gender.style.color="blue"
+gender.style.fontSize="large"
+let fe=document.createElement("input")
+div.append(fe)
+fe.setAttribute("type","radio")
+let fem=document.createElement("label")
+div.append(fem)
+fem.textContent="Female"
+fem.style.color="blue"
+fe.setAttribute("name","ma")
+let mal=document.createElement("input")
+div.append(mal)
+mal.setAttribute("type","radio")
+let ma=document.createElement("label")
+div.append(ma)
+ma.textContent="Male"
+ma.style.margin="5px"
+ma.style.color="blue"
+mal.setAttribute("name","ma")
+ma.classList="inp8"
+
+let gap0=document.createElement("br")
+div.append(gap0)
+let gap111=document.createElement("br")
+div.append(gap111)
+//inp9
+let con=document.createElement("label")
+div.append(con)
+con.textContent="Contact:"
+con.style.color="blue"
+con.style.fontSize="large"
+let gap00=document.createElement("br")
+div.append(gap00)
+
+let inp9=document.createElement("input")
+inp9.style.backgroundColor="aqua"
+inp9.style.border="none"
+inp9.style.padding="5px"
+inp9.style.borderRadius="5px"
+div.append(inp9)
+inp9.setAttribute("type","number")
+
+//sudmit
+let label=document.createElement("button")
+div.append(label)
+label.textContent="Sudmit"
+label.style.padding="10px 30px 10px 30px"
+label.classList="button"
+    </script>
+</body>
+</html>

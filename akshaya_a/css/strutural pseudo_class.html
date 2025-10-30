@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strutral pseudo_classes</title>
+    <style>
+            
+            
+         
+          
+        h1{
+            background-color: var(--primary-color);
+            color: indianred;
+            border-radius: var(--border-radius);
+             width: 110px;
+            height: 60px;
+        }
+        h1:hover{
+            background-color: darkmagenta;
+            color: darkorange;
+            box-shadow: var(--box-shadow);
+           
+        }
+        h1:active{
+            background-color: chartreuse;
+            color: fuchsia;
+            cursor: sw-resize;
+        }
+         p{
+            color: var(--primary-color);
+        } 
+         .e1{
+            color: chartreuse;
+            background-color: crimson;
+        } 
+        li:first-child{
+            background-color: blue;
+        }
+           li:hover{
+            background-color: midnightblue;
+            color: red;
+           }
+
+         
+         li:last-child{
+            background-color: blue;
+         }
+         li:nth-child(odd){
+            background-color: hotpink;
+
+         }
+        li:nth-child(even){
+            background-color: lawngreen;
+        }
+li{
+    width: 200px;
+    height: 30px;
+    padding: 20px;
+    margin: 30px;
+}
+
+    </style>
+
+
+    
+
+</head>
+<body>
+    <h1>heading</h1> 
+     <p class="e1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ipsa?</p> 
+     <ul>
+        <li>items 1</li>
+        <li>items 2</li>
+        <li>items 3</li>
+        <li>items 4</li>
+        <li>items 5</li>
+        <li>items 6</li>
+        <li>items 7</li>
+        <li>items 8</li>
+        <li>items 9</li>
+        <li>items 10</li>
+    </ul> 
+    
+
+</body>
+</html>

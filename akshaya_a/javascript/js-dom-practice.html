@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js dom practice</title>
+</head>
+<body>
+    <h1 id="head-1">selecting document</h1>
+    <div class="div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, dicta?</div>
+    <div id="div2">Lorem ipsum dolor sit amet.</div>
+    <script>
+ let heading=document.getElementById("head-1")
+ console.log(heading.innerText)
+ heading.innerText="hello world"
+
+
+ 
+        let div=document.querySelector(".div1")
+        console.log(div)    
+        div.style.color="blue"
+        div.style.backgroundColor="red"
+        div.style.padding="10px"
+        div.style.textalig
+
+
+        let div2=document.querySelector("#div2")
+        console.log(div2)
+        div2.style.border="2px solid black"
+        div2.style.backgroundColor="lightgreen"
+        div2.style.color="pink"
+        div2.style.height="200px"
+        div2.style.width="300px"
+        div2.style.boxShadow ="2px 2px 2px 2px limegreen"
+        div2.style.textAlign="center"
+        div2.style.placeContent="center"
+        div2.style.borderRadius="15px"
+    
+    </script>
+</body>
+</html>

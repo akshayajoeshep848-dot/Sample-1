@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-elemnts</title>
+    <style>
+.para{
+color:darkgreen
+}
+.para::first-letter{
+    font-size: xx-large;
+    background-color: rgb(197, 120, 120);
+    padding: 5px;
+}
+.para::first-line{
+    background-color: rgb(206, 152, 163);
+    color: rgb(132, 6, 170);
+}
+.para::selection{
+    background-color: coral;
+}
+.para::checkmark{
+    color: gold;
+}
+input::placeholder{
+    color: rgb(200, 82, 69);
+    font-size-adjust: inherit;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 10px 20px 30px 40px;
+    margin: 10px 20px 30px 40px;
+
+
+}
+
+input:hover{
+    
+    cursor: grabbing;
+    background-color:darkred;
+}
+
+
+        /* p{
+    color: chartreuse;
+}
+   
+p::before{
+    content: "\002A";
+    color: blue;
+}
+p::before{
+    content: "\2728";
+    color: rgb(62, 0, 100);
+}
+p::before{
+    content: "\2051";
+     background-color: darkblue; 
+}
+p::before{
+    content:"\2729";
+    color: hotpink;
+}
+ul{
+    list-style-type: none;
+
+}ul ::before{
+    content: "\1F48F";
+    color: crimson;
+    padding-right: 10px;
+}
+ul  ::after{
+    content: "\1F48F";
+    padding-left: 10px;
+} */
+
+
+/* .menu{
+    height: 5px;
+    width: 20px;
+    background-color: darkblue;
+    border-radius: 5px;
+    position: relative;
+    top:5px;   
+}
+.menu::after,
+.menu::before{
+
+    height: 5px;
+    width: 20px;
+    background-color: darkblue;
+    border-radius: 5px;
+    position: absolute;
+     /* top:15px;      */  
+
+
+ </style>
+  
+</head>
+<body>
+    <h1>pseudo-elemnts</h1>
+    <!-- <p>para &midast;&nbsp;&midast; </p>
+    <ul>
+        <li>items 1</li>
+        <li>items 2</li>
+        <li>items 3</li>
+        <li>items 4</li>
+        <li>items 5</li>
+    </ul>
+    <div class="menu"></div> -->
+    <!-- <div class="cross"></div> -->
+     <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium, commodi.</p>
+     <lable>name:</lable>
+     <input type="text" placeholder="enter name">
+</body>
+</html>

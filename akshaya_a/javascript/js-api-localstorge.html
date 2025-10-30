@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>API&LOCAL STORAGE</h1>
+    <script>
+        //api
+        //is set of rules and protocals that allows different software applications to communcation with each other
+        //in the contex of web development, apis often refers to web APIs that enable interaction b/w client and server
+        //what is an api:
+        //at its core, api defines how requestts for data or services should be made, and what response can be  expected it 
+        //abstartct underlingg implementation and exponses only objects or actions the developer needs
+        //types of AAPAIs:
+        //REST:representational state transefer: httpmedthos:    get:post:put:delete
+        //SOAP:simple object access protocal:
+        //grapql
+
+
+        //Api request response structer:
+        //url:the address where the api is accessed
+        //method: the http medthod:get post
+        //headers:metadata such as authentication tokens or content type
+        //body:data sent to the server
+        // console.log(localStorage)
+        // let username='akshaya'
+        // localStorage.setItem('username',"akshaya")
+        // console.log(localStorage);
+        // let user=localStorage.getItem("username")
+        // console.log(user)
+        // localStorage.removeItem("username")
+        // console.log(localStorage)
+
+    //     //set array
+    //     let arr=[1,2,3,4,5]
+    //     localStorage.setItem('array',JSON.stringify(arr));
+    //     console.log(localStorage)
+    //     // console.log(arr)
+    //    let returnarr=JSON.parse(localStorage.getItem("array"));
+    //    console.log( typeof returnarr)
+    //console.log(Array.isArray(returnarr))
+
+
+    //set object
+    let student={
+        name:"akshaya",
+        age:21,
+        college:"st marys"
+    };
+    localStorage.setItem("student",JSON.stringify(student))
+    console.log(localStorage)
+   let retrun=localStorage.getItem("student")
+   console.log(JSON.parse(retrun))
+//    localStorage.clear()/
+    </script>
+</body>
+</html>

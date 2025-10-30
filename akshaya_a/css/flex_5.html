@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex5</title>
+    <style>
+        div{
+            display:flex;
+            gap:25px;
+            flex-direction: column;
+
+        }
+        .he{
+            background-color: rgb(127, 189, 255);
+            color: antiquewhite;
+            place-content: center;
+            text-align: center;
+            height:40px;
+            width: 400px;
+        }
+        .aa2{
+            display:flex;
+        flex-direction: row;
+        /* justify-content: flex-end; */
+        /* justify-items: end; */
+        }
+        .as{
+            background-color: chartreuse;
+            width: 200px;
+            height: 300px;
+             color: antiquewhite;
+            place-content: center;
+            text-align: center;
+        }
+       
+        .im3{
+            display: flex;
+            justify-content: space-around;
+            flex-direction:row;
+            /* justify-items: flex-end; */
+            background-color: chocolate;
+            height: 300px;
+            width:300px;
+             justify-items: center;
+             align-items: flex-end;
+             gap:20px
+
+        }
+.ar{
+    color: aliceblue;
+    /* place-content: center; */
+    /* text-align: center; */
+    position:relative;
+    top:-105px;
+    left:100px
+   
+}
+.im{
+    background-color:coral;
+    color: antiquewhite;
+    width: 100px;
+    height:100px;
+    place-content: center;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div> 
+    <div class="he">Header </div>
+    <div class="aa2">
+    <div class="as"> aside</div>
+     
+    <div class="im3">
+    <div class="ar">artical</div>
+    <div class="im"> image1</div>
+    <div class="im ">image2 </div>
+    <div class="im">image3 </div></div></div></div><br>
+    <div class="he">footer</div>
+    </div>
+</body>
+</html>

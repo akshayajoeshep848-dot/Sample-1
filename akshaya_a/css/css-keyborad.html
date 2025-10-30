@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard</title>
+    <style>
+      body{
+        width: 1150px;
+        padding: 10px 20px 10px 0px;
+       
+      }
+      .container{
+        display: grid;
+        grid-template-columns: repeat(16,51px);
+        grid-template-rows: repeat(6,50px);
+        background-color: black;
+        color: aliceblue;
+        gap:20px;
+        
+        justify-content:left;
+
+      }
+      .item{
+        border: 1px solid ;
+        border-radius: 5px;
+        box-shadow: 2px 2px 2px inset;
+        place-content: right;
+        text-align: center;
+
+
+      }
+      .item1{
+        grid-area: 1/1/2/2;
+         height: 30px;
+        width: 60px;
+      }
+      .item2{
+        grid-area: 1/2/1/3;
+         height: 30px;
+        width: 60px;
+      }
+      .item3{
+        grid-area: 1/3/2/4;
+         height: 30px;
+        width: 60px;
+      }
+      .item4{
+        grid-area: 1/4/2/5;
+         height: 30px;
+        width: 60px;
+      }
+      .item5{
+        grid-area: 1/5/2/6;
+         height: 30px;
+        width: 60px;
+      }
+      .item6{
+        grid-area: 1/6/2/7;
+        height: 30px;
+        width: 60px;
+      }
+      .item7{
+        grid-area: 1/7/2/8;
+         height: 30px;
+        width: 60px;
+      }
+      .item8{
+        grid-area: 1/8/2/9;
+         height: 30px;
+        width: 60px;
+      }
+      .item9{
+        grid-area: 1/9/2/10;
+         height: 30px;
+        width: 60px;
+      }
+      .item10{
+        grid-area: 1/10/2/11;
+         height: 30px;
+        width: 60px;
+      }
+      .item11{
+        grid-area: 1/11/2/12;
+         height: 30px;
+        width: 60px;
+      }
+      .item12{
+        grid-area: 1/12/2/13;
+         height: 30px;
+        width: 60px;
+      }
+      .item13{
+        grid-area: 1/13/2/14;
+         height: 30px;
+        width: 60px;
+      }
+    .item14{
+      grid-area: 1/14/2/15;
+       height: 30px;
+        width: 60px;
+    }
+    .item15{
+      grid-area: 1/15/2/16;
+       height: 30px;
+        width: 60px;
+    }
+    .item16{
+      grid-area: 1/16/2/17;
+       height: 30px;
+        width: 60px;
+    }
+    .item17{
+      grid-area: 2/1/2/2;
+
+    }
+    .item18{
+      grid-area: 2/2/2/2;
+    }
+    .item19{
+      grid-area: 2/3/2/3;
+    }
+    .item20{
+      grid-area: 2/4/2/4;
+    }
+    .item21{
+      grid-area: 2/5/2/5;
+    }
+    .item22{
+      grid-area: 2/6/2/6;
+    }
+    .item23{
+      grid-area: 2/7/2/7;
+    }
+    .item24{
+      grid-area: 2/8/2/8;
+    }
+    .item25{
+      grid-area: 2/9/2/9;
+    }
+    .item26{
+      grid-area: 2/10/2/10;
+    }
+    .item27{
+      grid-area: 2/11/2/11;
+    }
+    .item28{
+      grid-area: 2/12/2/12;
+    }
+    .item29{
+      grid-area: 2/13/2/13;
+    }
+    .item30{
+      grid-area: 2/14/2/16;
+    }
+    .item31{
+      grid-area: 3/1/3/3;
+    }
+   .item32{
+    grid-area: 3/3/3/3;
+   }
+   .item33{
+    grid-area: 3/4/3/4;
+   }
+   .item34{
+    grid-area: 3/5/3/5;
+   }
+   .item35{
+    grid-area: 3/6/3/6;
+   }
+   .item36{
+    grid-area: 3/7/3/7;
+   }
+   .item37{
+    grid-area: 3/8/3/8;
+   }
+   .item38{
+    grid-area: 3/9/3/9;
+   }
+   .item39{
+    grid-area: 3/10/3/10;
+   }
+   .item40{
+    grid-area: 3/11/3/11;
+   }
+   .item41{
+    grid-area: 3/12/3/12;
+   }
+   .item42{
+    grid-area: 3/13/3/13;
+   }
+   .item43{
+    grid-area: 3/14/3/14;
+   }
+   .item44{
+    grid-area: 3/15/3/15;
+   }
+   .item45{
+    grid-area: 4/1/4/3;
+   }
+   .item46{
+    grid-area: 4/3/4/4;
+   }
+   .item47{
+    grid-area: 4/4/4/5;
+   }
+   .item48{
+    grid-area: 4/5/4/6;
+   }
+   .item49{
+    grid-area: 4/6/4/7;
+   }
+   .item50{
+    grid-area: 4/7/4/8;
+   }
+   .item51{
+    grid-area: 4/8/4/9;
+   }
+   .item52{
+    grid-area: 4/9/4/10;
+   }
+   .item53{
+    grid-area: 4/10/4/11;
+   }
+   .item54{
+    grid-area: 4/11/4/12;
+   }
+   .item55{
+    grid-area: 4/12/4/13;
+   }
+   .item56{
+    grid-area: 4/13/4/14;
+   }
+   .item57{
+    grid-area: 4/14/4/17;
+   }
+   .item58{
+    grid-area: 5/1/5/4;
+   }
+   .item59{
+    grid-area: 5/4/5/5;
+   }
+   .item60{
+    grid-area: 5/5/5/6;
+   }
+   .item61{
+    grid-area: 5/6/5/7;
+   }
+   .item62{
+    grid-area: 5/7/5/8;
+   }
+   .item63{
+    grid-area: 5/8/5/9;
+   }
+   .item64{
+    grid-area: 5/9/5/10;
+   }
+   .item65{
+    grid-area: 5/10/5/11;
+   }
+   .item66{
+    grid-area: 5/11/5/12;
+   }
+   .item67{
+    grid-area: 5/12/5/13;
+   }
+   .item68{
+    grid-area: 5/13/5/14;
+   }
+   .item69{
+    grid-area: 5/14/5/17;
+   }
+   .item70{
+    grid-area: 6/1/6/1;
+   }
+   .item71{
+    grid-area: 6/2/6/2;
+   }
+   .item72{
+    grid-area: 6/3/6/3;
+   }
+   .item73{
+    grid-area: 6/4/6/4;
+   }
+   .item74{
+    grid-area: 6/5/6/11;
+   }
+   .item75{
+    grid-area: 6/12/6/13;
+   }
+   .item76{
+    grid-area: 6/13/6/14;
+   }
+   .item77{
+    grid-area: 6/14/6/15;
+   }
+   .item78{
+    grid-area: 6/15/6/16;
+     height: 30px;
+        width: 60px;
+   }
+   .item79{
+    grid-area: 7/13/7/14;
+   }
+   .item80{
+    grid-area: 6/16/6/17;
+    width: 50px;
+   
+   }
+  
+  
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item item1"> Esc</div>
+    <div class="item item2"> F1</div>
+    <div class="item item3"> F2</div>
+    <div class="item item4"> F3</div>
+    <div class="item item5"> F4</div>
+    <div class="item item6"> F5</div>
+    <div class="item item7"> F6</div>
+    <div class="item item8"> F7</div>
+    <div class="item item9"> F8</div>
+    <div class="item item10"> F9</div>
+    <div class="item item11"> F10</div>
+    <div class="item item12"> F11</div>
+    <div class="item item13"> F12</div>
+    <div class="item item14"> PrtScr</div>
+    <div class="item item15"> Insert</div>
+    <div class="item item16"> Delete</div>
+    <div class="item item17"> `</div>
+    <div class="item item18"> 1</div>
+    <div class="item item19"> 2</div>
+    <div class="item item20"> 3</div>
+    <div class="item item21"> 4</div>
+    <div class="item item22"> 5</div>
+    <div class="item item23"> 6</div>
+    <div class="item item24"> 7</div>
+    <div class="item item25"> 8</div>
+    <div class="item item26"> 9</div>
+    <div class="item item27"> 0</div>
+    <div class="item item28"> -</div>
+    <div class="item item29"> =</div>
+    <div class="item item30"> Backspace</div>
+    <div class="item item31"> Tab</div>
+    <div class="item item32"> Q</div>
+    <div class="item item33"> W</div>
+    <div class="item item34">E</div>
+    <div class="item item35"> R</div>
+    <div class="item item36"> T</div>
+    <div class="item item37">Y </div>
+    <div class="item item38"> U</div>
+    <div class="item item39"> I</div>
+    <div class="item item40">O</div>
+    <div class="item item41">P </div>
+    <div class="item item42"> [</div>
+    <div class="item item43">] </div>
+    <div class="item item44"> \</div>
+    <div class="item item45"> CAPS LOCK</div>
+    <div class="item item46"> A</div>
+    <div class="item item47"> S</div>
+    <div class="item item48"> D</div>
+    <div class="item item49"> F</div>
+    <div class="item item50"> G</div>
+    <div class="item item51"> H</div>
+    <div class="item item52"> J</div>
+    <div class="item item53"> K</div>
+    <div class="item item54"> L</div>
+    <div class="item item55">:</div>
+    <div class="item item56"> "</div>
+    <div class="item item57">ENTER</div>
+    <div class="item item58"> Shift</div>
+    <div class="item item59"> Z</div>
+    <div class="item item60">X</div>
+    <div class="item item61"> C</div>
+    <div class="item item62">V</div>
+    <div class="item item63">B</div>
+    <div class="item item64"> N</div>
+    <div class="item item65"> M</div>
+    <div class="item item66">,</div>
+    <div class="item item67"> .</div>
+    <div class="item item68"> /</div>
+    <div class="item item69"> Shift</div>
+    <div class="item item70"> Ctrl</div>
+    <div class="item item71"> Fn</div>
+    <div class="item item72"> </div>
+    <div class="item item73"> Alt</div>
+    <div class="item item74"> </div>
+    <div class="item item75"> </div>
+    <div class="item item76">   Alt</div>
+    <div class="item item77"> Ctrl</div>
+    <div class="item item78"> pageup</div>
+    <div class="item item79"></div>
+    <div class="item item80"> page <br>down</div>
+    <div class=" item item81">home</div>
+    <div class=" item item82"></div>
+    <div class=" item item83">end</div>
+    
+
+    
+    
+    </div>
+</con>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operator</title>
+</head>
+<body>
+    <h1>sperad opperator</h1>
+    <!-- 
+        //spread syntax an iterable to be expanded in places where zero or more arguments or elemnts or key-values paris are expected
+        let arr=[1,2,3,4,5];
+        console.log(...arr);
+        let arr2=[...arr];
+        console.log(arr2);
+        //write a function to add a 3 numbrers sum
+        function sum(a,b,c){
+            return a+b+c;
+
+        }
+        let num=[10,20,30];
+        console.log(sum(...num))
+//write a function spread array into arguments for concatentation or other
+//when used in a function call,spread syntax "spreads" the elemnts of an array or iterable into individual argumnets 
+//shallow copy :it only copys the first layer copy and
+//  all are second third layers reference lins lo store cheskuntaa
+//what is shallow copy what is deep copy
+        let orig=[1,2,{key:'value'}];
+          
+        let copi=[...orig];
+        // console.log(copi);
+        // console.log(orig===copi);
+        // console.log(orig[2]===copi[2]);
+        copi[0]=99;
+        copi[2].key='new value';
+        // console.log(orig)
+        // console.log(copi)
+        //coping shallow copy of objects
+        let orginal={a:1,b:{c:2}};
+        // let copy={...orginal};
+        // console.log("original object",orginal)
+        // console.log("copy obect",copy);
+        
+        copy.a=2;
+        // copy.b.c=5;
+        // console.log("original object",orginal)
+        // console.log("copy obect",copy); -->
+        <script>
+        //mergeing array 
+        let a=[1,2,3];
+        let b=[3,4,5];
+        let c=[5,6,7];
+        let mergedArray=[...a,...b,...c];
+        console.log(mergedArray)
+
+        //marging objects
+        let obj={x:1,y:2};
+        let obj2={y:3,z:4};
+        let obj3={a:5};
+        let mergedObject={...obj,...obj2,...obj3}
+        console.log(mergedObject);
+
+        //spreading a string into an array of characters
+        let str="hello";
+        let char=[...greting]
+    </script>
+</body>
+</html>

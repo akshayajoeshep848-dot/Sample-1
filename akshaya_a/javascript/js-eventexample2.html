@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+    <style>
+        #input{
+            padding: 10px;
+            border:2px solid rgba(144, 164, 190, 0.932);
+            width: 200px;
+            border-radius: 15px;
+            height:20px;
+        }
+        #input2{
+             padding: 10px;
+            border:2px solid rgba(137, 158, 184, 0.932);
+            width: 200px;
+            border-radius: 15px;
+            height:20px;
+
+        }
+        #add{
+            /* background-color: rgb(101, 83, 217); */
+            width: 80px;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            position: relative;
+            left: 20px;
+            border: none;
+
+        }
+        #main{
+            width:600px;
+            height: 400px;
+            border: 2px solid lightgrey;
+            box-shadow: 5px 5px 5px 10px lemonchiffon;
+            margin: 10px;
+            padding: 10px;
+        }
+        #head{
+            place-content: center;
+            text-align: center;
+            color: rgb(75, 75, 155);
+        }
+        #all{
+            width: 90px;
+            height: 40px;
+            border-radius: 5px;
+            /* background-color: rgb(62, 62, 142); */
+            color:white;
+            border: none;
+
+        }
+        #active{
+           width: 90px;
+            height: 40px;
+            border-radius: 5px;
+            /* background-color: rgb(62, 62, 142); */
+            color: white; 
+            border: none; 
+        }
+        #complete{
+           width: 90px;
+            height: 40px;
+            border-radius: 5px;
+           /* background-color: rgba(255, 255, 255, 0.804); */
+           color:white;  
+            border: none;  
+        }
+        #clear{
+            padding: 10px;
+            margin: 20px;
+            position: relative;
+            left: 150px;
+            width: 90px;
+            height: 40px;
+            border-radius: 5px;
+           background-color: rgb(62, 62, 142); 
+            color: white; 
+            border: none; 
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <div id="main">
+        <h1 id="head">MY TO-DO LIST</h1>
+   
+<div>
+  <input type="text" id="input"  placeholder="Add a new task...">
+  <input type="text" id="input2" placeholder="Duration(eg..,30m.)">
+ <button  id="add">Add</button> 
+  </div> 
+<br>
+<div>
+<button id="all">All</button>&nbsp;&nbsp;&nbsp;
+<button id="active">Active</button>&nbsp;&nbsp;
+<button id="complete">Completed</button>&nbsp;&nbsp;
+<button id="clear">Clear</button>
+</div>
+
+
+
+</div>
+    <script>
+let div=document.getElementById("main")
+let input=document.getElementById("input")
+input.addEventListener("mouseover",(event)=>{
+    event.target.style.padding="10px"
+    event.target.style.width="200px"
+    event.target.style.color="white"
+   event.target.style.borderRadius="15px"
+   event.target.style.backgroundColor="rgb(101, 83, 217)"
+})
+ input.addEventListener("blur",(event)=>{
+     event.target.style.padding="10px"
+     event.target.style.width="200px"
+event.target.style.color="white"
+    
+ })
+input2=document.getElementById("input2")
+input2.addEventListener("mouseover",(event)=>{
+    event.target.style.padding="10px"
+    event.target.style.color="white"
+    event.target.style.backgroundColor="rgb(101, 83, 217)"
+
+})
+let ul=document.createElement("ul")
+main.append(ul)
+add=document.getElementById("add")
+add.addEventListener("click",(event)=>{
+ event.target.style.color="white"
+  event.target.style.backgroundColor="rgb(101, 83, 217)"
+//   let li=document.createElement("li")
+//   li.innerHTML=input.value
+//   ul.append(li)
+//   input.value=""
+  if(input.value===""){
+    alert("please remove")
+  }else{
+   let li=document.createElement("li")
+  li.innerHTML=input.value
+  ul.append(li)
+  input.value=""
+  input2.value=""
+  }
+})
+
+clear=document.getElementById("clear")
+clear.addEventListener("reset",(event)=>{})
+clear.value=""
+
+
+all=document.getElementById("all")
+all.addEventListener("click",(event)=>{
+    event.target.style.backgroundColor="rgb(101, 83, 217)"
+    event.target.color="white"
+    event.target.border="none"
+
+})
+active=document.getElementById("active")
+active.addEventListener("click",(event)=>{
+    event.target.style.backgroundColor="rgb(101, 83, 217)"
+    event.target.style.color="white"
+    event.target.border="none"
+})
+compelet=document.getElementById("complete")
+ compelet.addEventListener("click",(event)=>{
+     event.target.style.backgroundColor="rgb(101, 83, 217)"
+    event.target.style.color="white"
+    event.target.style.border="none"
+})
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promeses2</title>
+</head>
+<body>
+    promise2
+    <script>
+        let myPromise=Promise.resolve("Success");
+        let myPromise2=Promise.reject("Failure");
+        let myPromise3=new Promise((resolve,reject)=>{
+            const success=Math.random>0.7;
+            setTimeout(()=>{
+                success ?resolve("successfull") :reject("failure");
+            },2000);
+        })
+        Promise.all([myPromise,myPromise2,myPromise3])
+          .then((value)=>console.log(values))
+          .catch((error)=>console.log(error))
+
+
+        // console.log(myPromise);
+        // myPromise.then((Response)=>console.log(Response));
+        // myPromise2.then((resolve,reject)=>console.log(new Error("reject")))
+    </script>
+</body>
+</html>

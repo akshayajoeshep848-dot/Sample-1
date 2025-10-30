@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quote Generator</title>
+</head>
+<body>
+
+ <div id="main">
+        <div id="container"></div>
+        <h1 id="head">Random Code Generator</h1>
+        <label for="quote" class="name">Quotation:</label>
+        <p id="quote"></p>
+        <label for="author" class="name">Name of author:</label>
+        <p id="author"></p>
+        <button id="button">Quote Generator <i class='far fa-hand-point-right'></i></button>
+    </div>
+
+    <script>
+        let main = document.getElementById("main");
+        let quote = document.getElementById("quote");
+        let authorName = document.getElementById("author")
+        let container = document.getElementById("container");
+        let head = document.getElementById("head")
+        let button = document.getElementById("button");
+
+        const quotes = [
+            { quote: "The best way to get started is to quit talking and begin doing.", author: "Walt Disney" },
+            { quote: "Don’t let yesterday take up too much of today.", author: "Will Rogers" },
+            { quote: "It’s not whether you get knocked down, it’s whether you get up.", author: "Vince Lombardi" },
+            { quote: "If you are working on something exciting, it will keep you motivated.", author: "Steve Jobs" },
+            { quote: "Success is not in what you have, but who you are.", author: "Bo Bennett" },
+            { quote: "Your time is limited, so don’t waste it living someone else’s life.", author: "Steve Jobs" },
+            { quote: "Dream big and dare to fail.", author: "Norman Vaughan" },
+            { quote: "Believe you can and you’re halfway there.", author: "Theodore Roosevelt" },
+            { quote: "Act as if what you do makes a difference. It does.", author: "William James" },
+            { quote: "Keep your face always toward the sunshine—and shadows will fall behind you.", author: "Walt Whitman" },
+            { quote: "What you get by achieving your goals is not as important as what you become by achieving them.", author: "Zig Ziglar" },
+            { quote: "Happiness is not by chance, but by choice.", author: "Jim Rohn" },
+            { quote: "If opportunity doesn’t knock, build a door.", author: "Milton Berle" },
+            { quote: "Don’t watch the clock; do what it does. Keep going.", author: "Sam Levenson" },
+            { quote: "Everything you can imagine is real.", author: "Pablo Picasso" },
+            { quote: "Do what you can, with what you have, where you are.", author: "Theodore Roosevelt" },
+            { quote: "Turn your wounds into wisdom.", author: "Oprah Winfrey" },
+            { quote: "It always seems impossible until it’s done.", author: "Nelson Mandela" },
+            { quote: "The secret of getting ahead is getting started.", author: "Mark Twain" },
+            { quote: "You miss 100% of the shots you don’t take.", author: "Wayne Gretzky" }
+        ];
+            // let quotations = quotes * Math.random;
+
+        button.addEventListener("click", function() {
+            const random = Math.floor(Math.random() * quotes.length);
+            const randomquote = quotes[random];
+            quote.textContent = `${randomquote.quote}`
+            authorName.textContent = `${randomquote.author}`
+        })
+
+    </script>
+</body>
+</html>

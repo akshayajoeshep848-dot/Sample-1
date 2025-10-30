@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo classes</title>
+    <style>
+    p{
+         background-color: rgb(99, 160, 95);
+        width: 100px;
+        padding: 20px;
+        border: 1px solid brown;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 3px 2px 5px 3px rgb(0, 255, 85); 
+    } 
+     /* p:hover{
+        background-color: darkgreen;
+        color: darkorange;
+        box-shadow: 2px 13px 4px 12px rgb(230, 36, 6);
+        border: 2px double powderblue; 
+    } */
+    p:active{
+        background-color: darkviolet;
+        color: ivory;
+        box-shadow: 2px 2px 3px 1px powderblue;
+        border: 2px dotted black;
+        cursor: crosshair;
+    }
+
+    
+    a:link {
+        color: indianred;
+        text-decoration-line: overline;
+        font-size: 20px;
+    }
+    a:visited{
+        color: forestgreen;
+        font-size: 10px;
+        text-decoration: double;
+    }
+    #fn{
+        border: 1px solid rgb(14, 239, 52);
+        /* border:2px double rgb(217, 25, 25) */
+
+    }
+    #fn:focus{
+        border: 1px double rgb(217, 25, 25);
+        padding: 1px;
+        margin: 20px;
+    }
+
+        </style>
+</head>
+<body>
+    <h1>pseudo classes</h1>
+    <p>para</p>
+    <a href="./box practices.html" target="_blank">logicwhile</a>
+    <br>
+    <label for="fn"> first name:</label>
+    <input type="text" id="fn">&nbsp;<br>  &nbsp;  <br> 
+    <!-- <input type="text" id="fn">&nbsp;<br>  &nbsp;    -->
+    <label for="ln"> last name:</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" id="ln">
+</body>
+</html>

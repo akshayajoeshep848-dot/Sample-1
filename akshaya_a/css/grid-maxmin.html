@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>minmax</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid: 1fr 10fr 1fr/100px 1fr minmax(200px,1fr);
+            /* grid-template-columns: 100px 1fr minmax(200px,1fr); */
+            /* grid-template-rows: 1fr 10fr 1fr; */
+            gap:10px;
+            grid-template-areas: 
+            " header header header "
+            "sidebar content content"
+            "footer footer footer";
+            /* place-content: center; */
+            text-align: center;
+        }
+        .griditems{
+            background-color: aqua;
+        }
+        .item1{
+            grid-area: header;
+        }
+        .item2{
+            grid-area: sidebar;
+        }
+        .item3{
+            grid-area: content;
+        }
+        .item4{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <h1>grid minmax</h1>
+    <div class="grid-container">
+        <div class="griditems item1 " >grid item 1</div>
+        <div class="griditems item2"> grid item2</div>
+        <div class="griditems item3">  grid item3</div>
+        <div class="griditems item4"> grid item 4</div>
+      
+        
+    </div>
+</body>
+</html>

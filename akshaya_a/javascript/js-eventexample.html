@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS BMI Calculator</title>
+    <style>
+        #age{
+           width:100px;
+          padding:6px;
+          border:none;
+            border-radius: 5px;
+        }
+        #span{
+            display: flex;
+            gap:30px
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="div">
+    <h1 id="head"></h1>
+   
+<div id="span"><span id="us">Us units </span>  
+  <span id="me"> Metric units</span>
+    <span id="on">Other Units</span>
+    
+</div>
+<br>
+<div id="agee">
+    <label for="age" id="ageS">Age:</label>
+    <input type="text" id="age" name="age">
+   <label for="ages" id="ages">Ages:2-120</label> 
+</div>
+
+<br>
+<div id="ge">
+    <label for="gender" id="gender">Gender:</label>
+    <input type="radio" id="female" name="fem">
+    <label for="femae" id="male">Male</label>
+    <input type="radio" id="female" name="fem">
+    <label for="female">Female</label>
+
+
+</div>
+<br>
+    <div>
+    <label for="weight">Weight:</label>
+    <input type="number" name="weight" id="weight" placeholder="kg"></div>
+    <br>
+    <div>
+    <label for="height">Height:</label>
+    <input type="number" name="height", id="height" placeholder="cm" ></div><br>
+        <div>
+    <button id="button">Calculate</button></div>
+    
+ 
+</div>
+    <script>
+        let head = document.getElementById("head")
+        head.textContent = "BMI Calculator";
+        let span=document.getElementById("span");
+        let us=document.getElementById("us")
+        us.addEventListener("mouseover",(event)=>{
+             event.target.style.color="darkblue"
+   event.target.style.backgroundColor="yellow"
+   event.target.style.fontSize="larger"
+        })
+        let age=document.getElementById("age");
+        age.addEventListener("keypress",(event)=>{
+           event.target.style.backgroundColor="pink";
+           event.target.style.color="blue"
+        })
+        let on=document.getElementById("on")
+        on.addEventListener("mouseover",(event)=>{
+            event.target.style.color="darkblue"
+            event.target.style.fontSize="larger"
+            event.target.style.backgroundColor="yellow"
+        })
+        let gender=document.getElementById("ge");
+        let weight = document.getElementById("weight");
+        weight.addEventListener("mouseout",(event)=>{
+            event.target.style.color="red"
+            event.target.style.backgroundColor="aqua"
+            event.target.style.border="none"
+            event.target.style.borderRadius="3px"
+            event.target.style.width="80px"
+            event.target.style.padding="5px"
+        })
+          let height = document.getElementById("height");
+          height.addEventListener("mouseout",(event)=>{
+            event.target.style.color="red"
+            event.target.style.backgroundColor="aqua"
+            event.target.style.border="none"
+            event.target.style.borderRadius="3px"
+            event.target.style.width="80px"
+            event.target.style.padding="5px"
+          })
+        let button = document.getElementById("button");
+       
+
+
+        let emobj = {};
+        
+        button.addEventListener("click", (event) =>{
+        emobj[`${weight.name}`] = weight.value;
+        emobj[`${height.name}`] = height.value;
+
+        let hght = height.value/100;
+        let heig = hght * hght ;
+        let bmi = weight.value / heig;
+        // document.body.append(bmi)
+        div.append(bmi)
+    //    console.log(bmi)
+    });
+div.style.backgroundColor="gray";
+div.style.height="350px";
+div.style.width="300px";
+div.style.padding="25px 20px 10px 20px"
+div.style.border="2px solid white"
+div.style.borderRadius="5px"
+div.style.boxShadow="10px 5px 10px 5px gray"; 
+div.style.margin="15px";
+div.style.color="darkgreen"
+age.classList="age"
+  
+
+        
+
+    </script>
+</body>
+</html>
+
+
+
+
+ 

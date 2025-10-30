@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY INFO</title>
+    <style>
+        #name {
+            padding: 5px 20px 5px 20px;
+        }
+
+        #email {
+            padding: 5px 20px 5px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1 id="head">My Info</h1>
+        <label for="name" >NAME:</label><br>
+        <input type="text" id="name"><br><br>
+        <label for="email">EMAIL:</label><br>
+        <input type="email" id="email"><br><br>
+        <button id="save">Save to Browser</button><br><br>
+        <button id="clear">Clear saved Data</button>
+
+    </div>
+    <script>
+
+        let main = document.getElementById("main")
+        let head = document.getElementById("head")
+        let name = document.getElementById("name")
+        let email = document.getElementById("email")
+        let save = document.getElementById("save")
+        let clear = document.getElementById("clear")
+
+        //append
+        // document.body.append(main)
+        //eventliseners
+        save.addEventListener("click", () => {
+            // let div=document.createElement("div")
+            // div.textContent=name.value
+            // document.body.append(div)
+            localStorage.setItem("name", name.value)
+            console.log(localStorage)
+            localStorage.setItem("email", email.value)
+            console.log(localStorage)
+        })
+        window.addEventListener("DomContentLoaded", () => {
+            const savename = localStorage.getItem("name");
+            const saveemail = localStorage.getItem("email");
+            name.value = savename;
+            email.value = saveemail;
+        });
+
+        clear.addEventListener("click", () => {
+            localStorage.removeItem("name")
+            localStorage.removeItem("email")
+        })
+
+        // clear.addEventListener("reset", () => { })
+
+        //styling
+        save.style.backgroundColor = "blue"
+        save.style.color = "white"
+        save.style.border = "none"
+        save.style.padding = "10px 50px 10px 50px"
+        clear.style.backgroundColor = "red"
+        clear.style.color = "white"
+        clear.style.border = "none"
+        clear.style.padding = "10px 50px 10px 50px"
+        main.style.width = "400px"
+        main.style.height = "400px"
+        main.style.border = "2px solid gray"
+        main.style.boxShadow = "2px 2px 10px 10px lightgray "
+        main.style.padding = "10px"
+        main.style.margin = "10px"
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js sring methods</h1>
+    <script>
+        //charAt :
+        let str="hello ,world"
+        console.log(str.charAt(0))
+        console.log(str.charAt(1))
+        console.log(str.charAt(2))
+        
+                //concat
+        let str1="hello,world"      
+
+        let greeting=str1.concat("!")
+        console.log(greeting)
+
+        //includes()
+        let sen='the quick brown fox jumps over the lazy dog.'
+        console.log(sen.includes('fox'));
+
+        //replace()
+        let gree="hello,world!";
+       let  newgret=gree.replace("world!","universe")
+       console.log(newgret)
+        
+
+       //substring():method is simlay to slice,but it doesnt accept negative indices it extracts charaters between two specified indices
+       let str2="javascript"
+       let sub=str2.substring(4);
+
+       console.log(sub)
+
+       //toLowercase():method converts all the characters in a string to lower
+       let low="HELLO,WORLD"
+       let lowr=low.toLocaleLowerCase();
+       console.log(lowr)
+
+       //toUppercase()
+        let upp="hello,javascript"
+        uppr=upp.toUpperCase();
+        console.log(uppr)
+
+//replace(),spilt(),join(),trim()
+    
+    </script>
+</body>
+</html>
